@@ -1,0 +1,4 @@
+name: iosx-yaml
+runtime: yaml
+config:
+resources: {}
