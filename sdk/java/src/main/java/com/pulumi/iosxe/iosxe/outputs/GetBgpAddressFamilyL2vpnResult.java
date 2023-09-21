@@ -13,7 +13,15 @@ import javax.annotation.Nullable;
 public final class GetBgpAddressFamilyL2vpnResult {
     private String afName;
     private String asn;
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
 
     private GetBgpAddressFamilyL2vpnResult() {}
@@ -23,9 +31,17 @@ public final class GetBgpAddressFamilyL2vpnResult {
     public String asn() {
         return this.asn;
     }
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }

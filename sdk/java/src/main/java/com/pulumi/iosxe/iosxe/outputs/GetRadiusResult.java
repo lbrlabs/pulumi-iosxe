@@ -13,61 +13,157 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetRadiusResult {
+    /**
+     * @return UDP port for RADIUS accounting server (default is 1813)
+     * 
+     */
     private Integer accountingPort;
+    /**
+     * @return UDP port for RADIUS authentication server (default is 1812)
+     * 
+     */
     private Integer authenticationPort;
+    /**
+     * @return Do not test accounting ports of the servers.
+     * 
+     */
     private Boolean automateTesterIgnoreAcctPort;
+    /**
+     * @return Send a packet to verify the server status
+     * 
+     */
     private Boolean automateTesterProbeOnConfig;
     private String automateTesterUsername;
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
+    /**
+     * @return IPv4 address or Hostname for radius server
+     * 
+     */
     private String ipv4Address;
     private String key;
+    /**
+     * @return Name for the radius server configuration
+     * 
+     */
     private String name;
+    /**
+     * @return The UNENCRYPTED (cleartext) server key
+     * 
+     */
     private String pacKey;
+    /**
+     * @return 0 - Specifies an UNENCRYPTED key will follow 6 - Specifies an ENCRYPTED key will follow 7 - Specifies HIDDEN key will follow
+     * 
+     */
     private String pacKeyEncryption;
+    /**
+     * @return Number of retries to active server (overrides default)
+     * 
+     */
     private Integer retransmit;
+    /**
+     * @return Time to wait for a RADIUS server to reply (overrides default)
+     * 
+     */
     private Integer timeout;
 
     private GetRadiusResult() {}
+    /**
+     * @return UDP port for RADIUS accounting server (default is 1813)
+     * 
+     */
     public Integer accountingPort() {
         return this.accountingPort;
     }
+    /**
+     * @return UDP port for RADIUS authentication server (default is 1812)
+     * 
+     */
     public Integer authenticationPort() {
         return this.authenticationPort;
     }
+    /**
+     * @return Do not test accounting ports of the servers.
+     * 
+     */
     public Boolean automateTesterIgnoreAcctPort() {
         return this.automateTesterIgnoreAcctPort;
     }
+    /**
+     * @return Send a packet to verify the server status
+     * 
+     */
     public Boolean automateTesterProbeOnConfig() {
         return this.automateTesterProbeOnConfig;
     }
     public String automateTesterUsername() {
         return this.automateTesterUsername;
     }
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
+    /**
+     * @return IPv4 address or Hostname for radius server
+     * 
+     */
     public String ipv4Address() {
         return this.ipv4Address;
     }
     public String key() {
         return this.key;
     }
+    /**
+     * @return Name for the radius server configuration
+     * 
+     */
     public String name() {
         return this.name;
     }
+    /**
+     * @return The UNENCRYPTED (cleartext) server key
+     * 
+     */
     public String pacKey() {
         return this.pacKey;
     }
+    /**
+     * @return 0 - Specifies an UNENCRYPTED key will follow 6 - Specifies an ENCRYPTED key will follow 7 - Specifies HIDDEN key will follow
+     * 
+     */
     public String pacKeyEncryption() {
         return this.pacKeyEncryption;
     }
+    /**
+     * @return Number of retries to active server (overrides default)
+     * 
+     */
     public Integer retransmit() {
         return this.retransmit;
     }
+    /**
+     * @return Time to wait for a RADIUS server to reply (overrides default)
+     * 
+     */
     public Integer timeout() {
         return this.timeout;
     }

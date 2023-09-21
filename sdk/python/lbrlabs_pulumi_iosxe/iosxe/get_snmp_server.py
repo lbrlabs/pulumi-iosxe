@@ -477,41 +477,65 @@ class GetSnmpServerResult:
     @property
     @pulumi.getter(name="chassisId")
     def chassis_id(self) -> str:
+        """
+        String to uniquely identify this chassis
+        """
         return pulumi.get(self, "chassis_id")
 
     @property
     @pulumi.getter
     def contact(self) -> str:
+        """
+        Text for mib object sysContact
+        """
         return pulumi.get(self, "contact")
 
     @property
     @pulumi.getter
     def contexts(self) -> Sequence['outputs.GetSnmpServerContextResult']:
+        """
+        Create/Delete a context apart from default
+        """
         return pulumi.get(self, "contexts")
 
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
     @pulumi.getter(name="enableInforms")
     def enable_informs(self) -> bool:
+        """
+        Enable SNMP Informs
+        """
         return pulumi.get(self, "enable_informs")
 
     @property
     @pulumi.getter(name="enableLoggingGetop")
     def enable_logging_getop(self) -> bool:
+        """
+        Enable SNMP GET Operation logging
+        """
         return pulumi.get(self, "enable_logging_getop")
 
     @property
     @pulumi.getter(name="enableLoggingSetop")
     def enable_logging_setop(self) -> bool:
+        """
+        Enable SNMP SET Operation logging
+        """
         return pulumi.get(self, "enable_logging_setop")
 
     @property
     @pulumi.getter(name="enableTraps")
     def enable_traps(self) -> bool:
+        """
+        Enable SNMP Traps
+        """
         return pulumi.get(self, "enable_traps")
 
     @property
@@ -527,6 +551,9 @@ class GetSnmpServerResult:
     @property
     @pulumi.getter(name="enableTrapsBgpCbgp2")
     def enable_traps_bgp_cbgp2(self) -> bool:
+        """
+        Enable BGP MIBv2 traps
+        """
         return pulumi.get(self, "enable_traps_bgp_cbgp2")
 
     @property
@@ -542,11 +569,17 @@ class GetSnmpServerResult:
     @property
     @pulumi.getter(name="enableTrapsBulkstatCollection")
     def enable_traps_bulkstat_collection(self) -> bool:
+        """
+        Enable Data-Collection-MIB Collection notifications
+        """
         return pulumi.get(self, "enable_traps_bulkstat_collection")
 
     @property
     @pulumi.getter(name="enableTrapsBulkstatTransfer")
     def enable_traps_bulkstat_transfer(self) -> bool:
+        """
+        Enable Data-Collection-MIB Transfer notifications
+        """
         return pulumi.get(self, "enable_traps_bulkstat_transfer")
 
     @property
@@ -582,11 +615,17 @@ class GetSnmpServerResult:
     @property
     @pulumi.getter(name="enableTrapsConfig")
     def enable_traps_config(self) -> bool:
+        """
+        Enable SNMP config traps
+        """
         return pulumi.get(self, "enable_traps_config")
 
     @property
     @pulumi.getter(name="enableTrapsConfigCopy")
     def enable_traps_config_copy(self) -> bool:
+        """
+        Enable SNMP config-copy traps
+        """
         return pulumi.get(self, "enable_traps_config_copy")
 
     @property
@@ -597,16 +636,25 @@ class GetSnmpServerResult:
     @property
     @pulumi.getter(name="enableTrapsCpuThreshold")
     def enable_traps_cpu_threshold(self) -> bool:
+        """
+        Allow CPU utilization threshold violation traps
+        """
         return pulumi.get(self, "enable_traps_cpu_threshold")
 
     @property
     @pulumi.getter(name="enableTrapsDhcp")
     def enable_traps_dhcp(self) -> bool:
+        """
+        Enable SNMP dhcp traps
+        """
         return pulumi.get(self, "enable_traps_dhcp")
 
     @property
     @pulumi.getter(name="enableTrapsEigrp")
     def enable_traps_eigrp(self) -> bool:
+        """
+        Enable SNMP EIGRP traps
+        """
         return pulumi.get(self, "enable_traps_eigrp")
 
     @property
@@ -617,46 +665,73 @@ class GetSnmpServerResult:
     @property
     @pulumi.getter(name="enableTrapsEntity")
     def enable_traps_entity(self) -> bool:
+        """
+        Enable SNMP entity traps
+        """
         return pulumi.get(self, "enable_traps_entity")
 
     @property
     @pulumi.getter(name="enableTrapsEntityDiagBootUpFail")
     def enable_traps_entity_diag_boot_up_fail(self) -> bool:
+        """
+        Enable SNMP ceDiagBootUpFailedNotif traps
+        """
         return pulumi.get(self, "enable_traps_entity_diag_boot_up_fail")
 
     @property
     @pulumi.getter(name="enableTrapsEntityDiagHmTestRecover")
     def enable_traps_entity_diag_hm_test_recover(self) -> bool:
+        """
+        Enable SNMP ceDiagHMTestRecoverNotif traps
+        """
         return pulumi.get(self, "enable_traps_entity_diag_hm_test_recover")
 
     @property
     @pulumi.getter(name="enableTrapsEntityDiagHmThreshReached")
     def enable_traps_entity_diag_hm_thresh_reached(self) -> bool:
+        """
+        Enable SNMP ceDiagHMThresholdReachedNotif traps
+        """
         return pulumi.get(self, "enable_traps_entity_diag_hm_thresh_reached")
 
     @property
     @pulumi.getter(name="enableTrapsEntityDiagScheduledTestFail")
     def enable_traps_entity_diag_scheduled_test_fail(self) -> bool:
+        """
+        Enable SNMP ceDiagScheduledTestFailedNotif traps
+        """
         return pulumi.get(self, "enable_traps_entity_diag_scheduled_test_fail")
 
     @property
     @pulumi.getter(name="enableTrapsEntityPerfThroughputNotif")
     def enable_traps_entity_perf_throughput_notif(self) -> bool:
+        """
+        Enable ENTITY PERFORMANCE MIB throughput traps
+        """
         return pulumi.get(self, "enable_traps_entity_perf_throughput_notif")
 
     @property
     @pulumi.getter(name="enableTrapsEnvmon")
     def enable_traps_envmon(self) -> bool:
+        """
+        Enable SNMP environmental monitor traps
+        """
         return pulumi.get(self, "enable_traps_envmon")
 
     @property
     @pulumi.getter(name="enableTrapsErrdisable")
     def enable_traps_errdisable(self) -> bool:
+        """
+        Enable SNMP errdisable notifications
+        """
         return pulumi.get(self, "enable_traps_errdisable")
 
     @property
     @pulumi.getter(name="enableTrapsEventManager")
     def enable_traps_event_manager(self) -> bool:
+        """
+        Enable SNMP Embedded Event Manager traps
+        """
         return pulumi.get(self, "enable_traps_event_manager")
 
     @property
@@ -667,136 +742,217 @@ class GetSnmpServerResult:
     @property
     @pulumi.getter(name="enableTrapsFlashInsertion")
     def enable_traps_flash_insertion(self) -> bool:
+        """
+        Enable SNMP Flash Insertion notifications
+        """
         return pulumi.get(self, "enable_traps_flash_insertion")
 
     @property
     @pulumi.getter(name="enableTrapsFlashLowspace")
     def enable_traps_flash_lowspace(self) -> bool:
+        """
+        Enable SNMP Flash Lowspace notifications
+        """
         return pulumi.get(self, "enable_traps_flash_lowspace")
 
     @property
     @pulumi.getter(name="enableTrapsFlashRemoval")
     def enable_traps_flash_removal(self) -> bool:
+        """
+        Enable SNMP Flash Removal notifications
+        """
         return pulumi.get(self, "enable_traps_flash_removal")
 
     @property
     @pulumi.getter(name="enableTrapsFlowmon")
     def enable_traps_flowmon(self) -> bool:
+        """
+        Enable SNMP flowmon notifications
+        """
         return pulumi.get(self, "enable_traps_flowmon")
 
     @property
     @pulumi.getter(name="enableTrapsFruCtrl")
     def enable_traps_fru_ctrl(self) -> bool:
+        """
+        Enable SNMP entity FRU control traps
+        """
         return pulumi.get(self, "enable_traps_fru_ctrl")
 
     @property
     @pulumi.getter(name="enableTrapsHsrp")
     def enable_traps_hsrp(self) -> bool:
+        """
+        Enable SNMP HSRP traps
+        """
         return pulumi.get(self, "enable_traps_hsrp")
 
     @property
     @pulumi.getter(name="enableTrapsIkePolicyAdd")
     def enable_traps_ike_policy_add(self) -> bool:
+        """
+        Enable IKE Policy add trap
+        """
         return pulumi.get(self, "enable_traps_ike_policy_add")
 
     @property
     @pulumi.getter(name="enableTrapsIkePolicyDelete")
     def enable_traps_ike_policy_delete(self) -> bool:
+        """
+        Enable IKE Policy delete trap
+        """
         return pulumi.get(self, "enable_traps_ike_policy_delete")
 
     @property
     @pulumi.getter(name="enableTrapsIkeTunnelStart")
     def enable_traps_ike_tunnel_start(self) -> bool:
+        """
+        Enable IKE Tunnel start trap
+        """
         return pulumi.get(self, "enable_traps_ike_tunnel_start")
 
     @property
     @pulumi.getter(name="enableTrapsIkeTunnelStop")
     def enable_traps_ike_tunnel_stop(self) -> bool:
+        """
+        Enable IKE Tunnel stop trap
+        """
         return pulumi.get(self, "enable_traps_ike_tunnel_stop")
 
     @property
     @pulumi.getter(name="enableTrapsIpmulticast")
     def enable_traps_ipmulticast(self) -> bool:
+        """
+        Enable SNMP ipmulticast traps
+        """
         return pulumi.get(self, "enable_traps_ipmulticast")
 
     @property
     @pulumi.getter(name="enableTrapsIpsecCryptomapAdd")
     def enable_traps_ipsec_cryptomap_add(self) -> bool:
+        """
+        Enable IPsec Cryptomap add trap
+        """
         return pulumi.get(self, "enable_traps_ipsec_cryptomap_add")
 
     @property
     @pulumi.getter(name="enableTrapsIpsecCryptomapAttach")
     def enable_traps_ipsec_cryptomap_attach(self) -> bool:
+        """
+        Enable IPsec Cryptomap Attach trap
+        """
         return pulumi.get(self, "enable_traps_ipsec_cryptomap_attach")
 
     @property
     @pulumi.getter(name="enableTrapsIpsecCryptomapDelete")
     def enable_traps_ipsec_cryptomap_delete(self) -> bool:
+        """
+        Enable IPsec Cryptomap delete trap
+        """
         return pulumi.get(self, "enable_traps_ipsec_cryptomap_delete")
 
     @property
     @pulumi.getter(name="enableTrapsIpsecCryptomapDetach")
     def enable_traps_ipsec_cryptomap_detach(self) -> bool:
+        """
+        Enable IPsec Cryptomap Detach trap
+        """
         return pulumi.get(self, "enable_traps_ipsec_cryptomap_detach")
 
     @property
     @pulumi.getter(name="enableTrapsIpsecTooManySas")
     def enable_traps_ipsec_too_many_sas(self) -> bool:
+        """
+        Enable IPsec Tunnel Start trap
+        """
         return pulumi.get(self, "enable_traps_ipsec_too_many_sas")
 
     @property
     @pulumi.getter(name="enableTrapsIpsecTunnelStart")
     def enable_traps_ipsec_tunnel_start(self) -> bool:
+        """
+        Enable IPsec Tunnel Start trap
+        """
         return pulumi.get(self, "enable_traps_ipsec_tunnel_start")
 
     @property
     @pulumi.getter(name="enableTrapsIpsecTunnelStop")
     def enable_traps_ipsec_tunnel_stop(self) -> bool:
+        """
+        Enable IPsec Tunnel Stop trap
+        """
         return pulumi.get(self, "enable_traps_ipsec_tunnel_stop")
 
     @property
     @pulumi.getter(name="enableTrapsIpsla")
     def enable_traps_ipsla(self) -> bool:
+        """
+        Enable IPSLA traps traps
+        """
         return pulumi.get(self, "enable_traps_ipsla")
 
     @property
     @pulumi.getter(name="enableTrapsIsis")
     def enable_traps_isis(self) -> bool:
+        """
+        Enable ISIS traps traps
+        """
         return pulumi.get(self, "enable_traps_isis")
 
     @property
     @pulumi.getter(name="enableTrapsLicense")
     def enable_traps_license(self) -> bool:
+        """
+        Enable license traps
+        """
         return pulumi.get(self, "enable_traps_license")
 
     @property
     @pulumi.getter(name="enableTrapsLocalAuth")
     def enable_traps_local_auth(self) -> bool:
+        """
+        Enable SNMP local auth traps
+        """
         return pulumi.get(self, "enable_traps_local_auth")
 
     @property
     @pulumi.getter(name="enableTrapsMacNotificationChange")
     def enable_traps_mac_notification_change(self) -> bool:
+        """
+        Enable SNMP Change traps
+        """
         return pulumi.get(self, "enable_traps_mac_notification_change")
 
     @property
     @pulumi.getter(name="enableTrapsMacNotificationMove")
     def enable_traps_mac_notification_move(self) -> bool:
+        """
+        Enable SNMP Move traps
+        """
         return pulumi.get(self, "enable_traps_mac_notification_move")
 
     @property
     @pulumi.getter(name="enableTrapsMacNotificationThreshold")
     def enable_traps_mac_notification_threshold(self) -> bool:
+        """
+        Enable SNMP Threshold traps
+        """
         return pulumi.get(self, "enable_traps_mac_notification_threshold")
 
     @property
     @pulumi.getter(name="enableTrapsMemoryBufferpeak")
     def enable_traps_memory_bufferpeak(self) -> bool:
+        """
+        Enable SNMP Memory Bufferpeak traps
+        """
         return pulumi.get(self, "enable_traps_memory_bufferpeak")
 
     @property
     @pulumi.getter(name="enableTrapsMplsLdp")
     def enable_traps_mpls_ldp(self) -> bool:
+        """
+        SNMP MPLS label distribution protocol traps
+        """
         return pulumi.get(self, "enable_traps_mpls_ldp")
 
     @property
@@ -817,6 +973,9 @@ class GetSnmpServerResult:
     @property
     @pulumi.getter(name="enableTrapsMsdp")
     def enable_traps_msdp(self) -> bool:
+        """
+        Enable SNMP MSDP traps
+        """
         return pulumi.get(self, "enable_traps_msdp")
 
     @property
@@ -842,91 +1001,145 @@ class GetSnmpServerResult:
     @property
     @pulumi.getter(name="enableTrapsOspfConfigErrors")
     def enable_traps_ospf_config_errors(self) -> bool:
+        """
+        Enable all traps of errors
+        """
         return pulumi.get(self, "enable_traps_ospf_config_errors")
 
     @property
     @pulumi.getter(name="enableTrapsOspfConfigLsa")
     def enable_traps_ospf_config_lsa(self) -> bool:
+        """
+        Enable all traps of lsa
+        """
         return pulumi.get(self, "enable_traps_ospf_config_lsa")
 
     @property
     @pulumi.getter(name="enableTrapsOspfConfigRetransmit")
     def enable_traps_ospf_config_retransmit(self) -> bool:
+        """
+        Enable all traps of retransmit
+        """
         return pulumi.get(self, "enable_traps_ospf_config_retransmit")
 
     @property
     @pulumi.getter(name="enableTrapsOspfConfigStateChange")
     def enable_traps_ospf_config_state_change(self) -> bool:
+        """
+        Enable all traps of state-change
+        """
         return pulumi.get(self, "enable_traps_ospf_config_state_change")
 
     @property
     @pulumi.getter(name="enableTrapsOspfErrorsEnable")
     def enable_traps_ospf_errors_enable(self) -> bool:
+        """
+        Enable all traps of errors
+        """
         return pulumi.get(self, "enable_traps_ospf_errors_enable")
 
     @property
     @pulumi.getter(name="enableTrapsOspfLsaEnable")
     def enable_traps_ospf_lsa_enable(self) -> bool:
+        """
+        Enable all traps of lsa
+        """
         return pulumi.get(self, "enable_traps_ospf_lsa_enable")
 
     @property
     @pulumi.getter(name="enableTrapsOspfNssaTransChange")
     def enable_traps_ospf_nssa_trans_change(self) -> bool:
+        """
+        Nssa translator state changes
+        """
         return pulumi.get(self, "enable_traps_ospf_nssa_trans_change")
 
     @property
     @pulumi.getter(name="enableTrapsOspfRetransmitEnable")
     def enable_traps_ospf_retransmit_enable(self) -> bool:
+        """
+        Enable all traps of retransmit
+        """
         return pulumi.get(self, "enable_traps_ospf_retransmit_enable")
 
     @property
     @pulumi.getter(name="enableTrapsOspfShamlinkInterface")
     def enable_traps_ospf_shamlink_interface(self) -> bool:
+        """
+        Sham link interface state changes
+        """
         return pulumi.get(self, "enable_traps_ospf_shamlink_interface")
 
     @property
     @pulumi.getter(name="enableTrapsOspfShamlinkNeighbor")
     def enable_traps_ospf_shamlink_neighbor(self) -> bool:
+        """
+        Sham link neighbor state changes
+        """
         return pulumi.get(self, "enable_traps_ospf_shamlink_neighbor")
 
     @property
     @pulumi.getter(name="enableTrapsOspfv3ConfigErrors")
     def enable_traps_ospfv3_config_errors(self) -> bool:
+        """
+        Enable all traps of errors
+        """
         return pulumi.get(self, "enable_traps_ospfv3_config_errors")
 
     @property
     @pulumi.getter(name="enableTrapsOspfv3ConfigStateChange")
     def enable_traps_ospfv3_config_state_change(self) -> bool:
+        """
+        Enable all traps of state-change
+        """
         return pulumi.get(self, "enable_traps_ospfv3_config_state_change")
 
     @property
     @pulumi.getter(name="enableTrapsPimInvalidPimMessage")
     def enable_traps_pim_invalid_pim_message(self) -> bool:
+        """
+        Enable invalid pim message trap
+        """
         return pulumi.get(self, "enable_traps_pim_invalid_pim_message")
 
     @property
     @pulumi.getter(name="enableTrapsPimNeighborChange")
     def enable_traps_pim_neighbor_change(self) -> bool:
+        """
+        Enable neighbor change trap
+        """
         return pulumi.get(self, "enable_traps_pim_neighbor_change")
 
     @property
     @pulumi.getter(name="enableTrapsPimRpMappingChange")
     def enable_traps_pim_rp_mapping_change(self) -> bool:
+        """
+        Enable rp mapping change trap
+        """
         return pulumi.get(self, "enable_traps_pim_rp_mapping_change")
 
     @property
     @pulumi.getter(name="enableTrapsPortSecurity")
     def enable_traps_port_security(self) -> bool:
+        """
+        Enable SNMP port security traps
+        """
         return pulumi.get(self, "enable_traps_port_security")
 
     @property
     @pulumi.getter(name="enableTrapsPowerEthernetGroup")
     def enable_traps_power_ethernet_group(self) -> str:
+        """
+        Enable SNMP inline power group based traps
+        """
         return pulumi.get(self, "enable_traps_power_ethernet_group")
 
     @property
     @pulumi.getter(name="enableTrapsPowerEthernetPolice")
     def enable_traps_power_ethernet_police(self) -> bool:
+        """
+        Enable Policing Trap
+        """
         return pulumi.get(self, "enable_traps_power_ethernet_police")
 
     @property
@@ -942,41 +1155,65 @@ class GetSnmpServerResult:
     @property
     @pulumi.getter(name="enableTrapsRf")
     def enable_traps_rf(self) -> bool:
+        """
+        Enable all SNMP traps defined in CISCO-RF-MIB
+        """
         return pulumi.get(self, "enable_traps_rf")
 
     @property
     @pulumi.getter(name="enableTrapsSmartLicense")
     def enable_traps_smart_license(self) -> bool:
+        """
+        Enable smart license traps
+        """
         return pulumi.get(self, "enable_traps_smart_license")
 
     @property
     @pulumi.getter(name="enableTrapsSnmpAuthentication")
     def enable_traps_snmp_authentication(self) -> bool:
+        """
+        Enable authentication trap
+        """
         return pulumi.get(self, "enable_traps_snmp_authentication")
 
     @property
     @pulumi.getter(name="enableTrapsSnmpColdstart")
     def enable_traps_snmp_coldstart(self) -> bool:
+        """
+        Enable coldStart trap
+        """
         return pulumi.get(self, "enable_traps_snmp_coldstart")
 
     @property
     @pulumi.getter(name="enableTrapsSnmpLinkdown")
     def enable_traps_snmp_linkdown(self) -> bool:
+        """
+        Enable linkDown trap
+        """
         return pulumi.get(self, "enable_traps_snmp_linkdown")
 
     @property
     @pulumi.getter(name="enableTrapsSnmpLinkup")
     def enable_traps_snmp_linkup(self) -> bool:
+        """
+        Enable linkUp trap
+        """
         return pulumi.get(self, "enable_traps_snmp_linkup")
 
     @property
     @pulumi.getter(name="enableTrapsSnmpWarmstart")
     def enable_traps_snmp_warmstart(self) -> bool:
+        """
+        Enable warmStart trap
+        """
         return pulumi.get(self, "enable_traps_snmp_warmstart")
 
     @property
     @pulumi.getter(name="enableTrapsStackwise")
     def enable_traps_stackwise(self) -> bool:
+        """
+        Enable SNMP stackwise traps
+        """
         return pulumi.get(self, "enable_traps_stackwise")
 
     @property
@@ -997,6 +1234,9 @@ class GetSnmpServerResult:
     @property
     @pulumi.getter(name="enableTrapsSyslog")
     def enable_traps_syslog(self) -> bool:
+        """
+        Enable SNMP syslog traps
+        """
         return pulumi.get(self, "enable_traps_syslog")
 
     @property
@@ -1007,16 +1247,25 @@ class GetSnmpServerResult:
     @property
     @pulumi.getter(name="enableTrapsTty")
     def enable_traps_tty(self) -> bool:
+        """
+        Enable TCP connection traps
+        """
         return pulumi.get(self, "enable_traps_tty")
 
     @property
     @pulumi.getter(name="enableTrapsUdldLinkFailRpt")
     def enable_traps_udld_link_fail_rpt(self) -> bool:
+        """
+        Enable SNMP cudldpFastHelloLinkFailRptNotification traps
+        """
         return pulumi.get(self, "enable_traps_udld_link_fail_rpt")
 
     @property
     @pulumi.getter(name="enableTrapsUdldStatusChange")
     def enable_traps_udld_status_change(self) -> bool:
+        """
+        Enable SNMP cudldpFastHelloStatusChangeNotification traps
+        """
         return pulumi.get(self, "enable_traps_udld_status_change")
 
     @property
@@ -1062,61 +1311,97 @@ class GetSnmpServerResult:
     @property
     @pulumi.getter
     def hosts(self) -> Sequence['outputs.GetSnmpServerHostResult']:
+        """
+        Specify hosts keyed by (ip-address, community-or-user)
+        """
         return pulumi.get(self, "hosts")
 
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
     @property
     @pulumi.getter(name="ifindexPersist")
     def ifindex_persist(self) -> bool:
+        """
+        Persist interface indices
+        """
         return pulumi.get(self, "ifindex_persist")
 
     @property
     @pulumi.getter
     def location(self) -> str:
+        """
+        Text for mib object sysLocation
+        """
         return pulumi.get(self, "location")
 
     @property
     @pulumi.getter
     def packetsize(self) -> int:
+        """
+        Largest SNMP packet size
+        """
         return pulumi.get(self, "packetsize")
 
     @property
     @pulumi.getter(name="queueLength")
     def queue_length(self) -> int:
+        """
+        Message queue length for each TRAP host
+        """
         return pulumi.get(self, "queue_length")
 
     @property
     @pulumi.getter(name="snmpCommunities")
     def snmp_communities(self) -> Sequence['outputs.GetSnmpServerSnmpCommunityResult']:
+        """
+        Enable SNMP; set community string and access privs
+        """
         return pulumi.get(self, "snmp_communities")
 
     @property
     @pulumi.getter(name="sourceInterfaceInformsFortyGigabitEthernet")
     def source_interface_informs_forty_gigabit_ethernet(self) -> str:
+        """
+        Forty GigabitEthernet
+        """
         return pulumi.get(self, "source_interface_informs_forty_gigabit_ethernet")
 
     @property
     @pulumi.getter(name="sourceInterfaceInformsGigabitEthernet")
     def source_interface_informs_gigabit_ethernet(self) -> str:
+        """
+        GigabitEthernet IEEE 802.3z
+        """
         return pulumi.get(self, "source_interface_informs_gigabit_ethernet")
 
     @property
     @pulumi.getter(name="sourceInterfaceInformsHundredGigE")
     def source_interface_informs_hundred_gig_e(self) -> str:
+        """
+        Hundred GigabitEthernet
+        """
         return pulumi.get(self, "source_interface_informs_hundred_gig_e")
 
     @property
     @pulumi.getter(name="sourceInterfaceInformsLoopback")
     def source_interface_informs_loopback(self) -> int:
+        """
+        Loopback interface
+        """
         return pulumi.get(self, "source_interface_informs_loopback")
 
     @property
     @pulumi.getter(name="sourceInterfaceInformsPortChannel")
     def source_interface_informs_port_channel(self) -> int:
+        """
+        Ethernet Channel of interfaces
+        """
         return pulumi.get(self, "source_interface_informs_port_channel")
 
     @property
@@ -1127,36 +1412,57 @@ class GetSnmpServerResult:
     @property
     @pulumi.getter(name="sourceInterfaceInformsTenGigabitEthernet")
     def source_interface_informs_ten_gigabit_ethernet(self) -> str:
+        """
+        Ten Gigabit Ethernet
+        """
         return pulumi.get(self, "source_interface_informs_ten_gigabit_ethernet")
 
     @property
     @pulumi.getter(name="sourceInterfaceInformsVlan")
     def source_interface_informs_vlan(self) -> int:
+        """
+        Iosxr Vlans
+        """
         return pulumi.get(self, "source_interface_informs_vlan")
 
     @property
     @pulumi.getter(name="sourceInterfaceTrapsFortyGigabitEthernet")
     def source_interface_traps_forty_gigabit_ethernet(self) -> str:
+        """
+        Forty GigabitEthernet
+        """
         return pulumi.get(self, "source_interface_traps_forty_gigabit_ethernet")
 
     @property
     @pulumi.getter(name="sourceInterfaceTrapsGigabitEthernet")
     def source_interface_traps_gigabit_ethernet(self) -> str:
+        """
+        GigabitEthernet IEEE 802.3z
+        """
         return pulumi.get(self, "source_interface_traps_gigabit_ethernet")
 
     @property
     @pulumi.getter(name="sourceInterfaceTrapsHundredGigE")
     def source_interface_traps_hundred_gig_e(self) -> str:
+        """
+        Hundred GigabitEthernet
+        """
         return pulumi.get(self, "source_interface_traps_hundred_gig_e")
 
     @property
     @pulumi.getter(name="sourceInterfaceTrapsLoopback")
     def source_interface_traps_loopback(self) -> int:
+        """
+        Loopback interface
+        """
         return pulumi.get(self, "source_interface_traps_loopback")
 
     @property
     @pulumi.getter(name="sourceInterfaceTrapsPortChannel")
     def source_interface_traps_port_channel(self) -> int:
+        """
+        Ethernet Channel of interfaces
+        """
         return pulumi.get(self, "source_interface_traps_port_channel")
 
     @property
@@ -1167,41 +1473,65 @@ class GetSnmpServerResult:
     @property
     @pulumi.getter(name="sourceInterfaceTrapsTenGigabitEthernet")
     def source_interface_traps_ten_gigabit_ethernet(self) -> str:
+        """
+        Ten Gigabit Ethernet
+        """
         return pulumi.get(self, "source_interface_traps_ten_gigabit_ethernet")
 
     @property
     @pulumi.getter(name="sourceInterfaceTrapsVlan")
     def source_interface_traps_vlan(self) -> int:
+        """
+        Iosxr Vlans
+        """
         return pulumi.get(self, "source_interface_traps_vlan")
 
     @property
     @pulumi.getter(name="systemShutdown")
     def system_shutdown(self) -> bool:
+        """
+        Enable use of the SNMP reload command
+        """
         return pulumi.get(self, "system_shutdown")
 
     @property
     @pulumi.getter(name="trapSourceFortyGigabitEthernet")
     def trap_source_forty_gigabit_ethernet(self) -> str:
+        """
+        Forty GigabitEthernet
+        """
         return pulumi.get(self, "trap_source_forty_gigabit_ethernet")
 
     @property
     @pulumi.getter(name="trapSourceGigabitEthernet")
     def trap_source_gigabit_ethernet(self) -> str:
+        """
+        GigabitEthernet IEEE 802.3z
+        """
         return pulumi.get(self, "trap_source_gigabit_ethernet")
 
     @property
     @pulumi.getter(name="trapSourceHundredGigE")
     def trap_source_hundred_gig_e(self) -> str:
+        """
+        Hundred GigabitEthernet
+        """
         return pulumi.get(self, "trap_source_hundred_gig_e")
 
     @property
     @pulumi.getter(name="trapSourceLoopback")
     def trap_source_loopback(self) -> int:
+        """
+        Loopback interface
+        """
         return pulumi.get(self, "trap_source_loopback")
 
     @property
     @pulumi.getter(name="trapSourcePortChannel")
     def trap_source_port_channel(self) -> int:
+        """
+        Ethernet Channel of interfaces
+        """
         return pulumi.get(self, "trap_source_port_channel")
 
     @property
@@ -1212,16 +1542,25 @@ class GetSnmpServerResult:
     @property
     @pulumi.getter(name="trapSourceTenGigabitEthernet")
     def trap_source_ten_gigabit_ethernet(self) -> str:
+        """
+        Ten Gigabit Ethernet
+        """
         return pulumi.get(self, "trap_source_ten_gigabit_ethernet")
 
     @property
     @pulumi.getter(name="trapSourceVlan")
     def trap_source_vlan(self) -> int:
+        """
+        Iosxr Vlans
+        """
         return pulumi.get(self, "trap_source_vlan")
 
     @property
     @pulumi.getter
     def views(self) -> Sequence['outputs.GetSnmpServerViewResult']:
+        """
+        Define an SNMPv2 MIB view
+        """
         return pulumi.get(self, "views")
 
 
@@ -1386,7 +1725,19 @@ class AwaitableGetSnmpServerResult(GetSnmpServerResult):
 def get_snmp_server(device: Optional[str] = None,
                     opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetSnmpServerResult:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the SNMP Server configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_snmp_server()
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -1550,6 +1901,18 @@ def get_snmp_server(device: Optional[str] = None,
 def get_snmp_server_output(device: Optional[pulumi.Input[Optional[str]]] = None,
                            opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSnmpServerResult]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the SNMP Server configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_snmp_server()
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     ...

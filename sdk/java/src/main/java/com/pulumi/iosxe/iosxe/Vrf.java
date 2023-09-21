@@ -26,6 +26,92 @@ import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the VRF configuration.
+ * 
+ * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.Vrf;
+ * import com.pulumi.iosxe.iosxe.VrfArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.VrfIpv4RouteTargetExportArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.VrfIpv4RouteTargetExportStitchingArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.VrfIpv4RouteTargetImportArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.VrfIpv4RouteTargetImportStitchingArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.VrfIpv6RouteTargetExportArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.VrfIpv6RouteTargetExportStitchingArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.VrfIpv6RouteTargetImportArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.VrfIpv6RouteTargetImportStitchingArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.VrfRouteTargetExportArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.VrfRouteTargetImportArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Vrf(&#34;example&#34;, VrfArgs.builder()        
+ *             .addressFamilyIpv4(true)
+ *             .addressFamilyIpv6(true)
+ *             .description(&#34;VRF22 description&#34;)
+ *             .ipv4RouteTargetExports(VrfIpv4RouteTargetExportArgs.builder()
+ *                 .value(&#34;22:22&#34;)
+ *                 .build())
+ *             .ipv4RouteTargetExportStitchings(VrfIpv4RouteTargetExportStitchingArgs.builder()
+ *                 .value(&#34;22:22&#34;)
+ *                 .build())
+ *             .ipv4RouteTargetImports(VrfIpv4RouteTargetImportArgs.builder()
+ *                 .value(&#34;22:22&#34;)
+ *                 .build())
+ *             .ipv4RouteTargetImportStitchings(VrfIpv4RouteTargetImportStitchingArgs.builder()
+ *                 .value(&#34;22:22&#34;)
+ *                 .build())
+ *             .ipv6RouteTargetExports(VrfIpv6RouteTargetExportArgs.builder()
+ *                 .value(&#34;22:22&#34;)
+ *                 .build())
+ *             .ipv6RouteTargetExportStitchings(VrfIpv6RouteTargetExportStitchingArgs.builder()
+ *                 .value(&#34;22:22&#34;)
+ *                 .build())
+ *             .ipv6RouteTargetImports(VrfIpv6RouteTargetImportArgs.builder()
+ *                 .value(&#34;22:22&#34;)
+ *                 .build())
+ *             .ipv6RouteTargetImportStitchings(VrfIpv6RouteTargetImportStitchingArgs.builder()
+ *                 .value(&#34;22:22&#34;)
+ *                 .build())
+ *             .rd(&#34;22:22&#34;)
+ *             .routeTargetExports(VrfRouteTargetExportArgs.builder()
+ *                 .stitching(false)
+ *                 .value(&#34;22:22&#34;)
+ *                 .build())
+ *             .routeTargetImports(VrfRouteTargetImportArgs.builder()
+ *                 .stitching(false)
+ *                 .value(&#34;22:22&#34;)
+ *                 .build())
+ *             .vpnId(&#34;22:22&#34;)
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/vrf:Vrf example &#34;Cisco-IOS-XE-native:native/vrf/definition=VRF22&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/vrf:Vrf")
 public class Vrf extends com.pulumi.resources.CustomResource {
     /**

@@ -9,9 +9,17 @@ import java.util.Objects;
 
 @CustomType
 public final class GetVrfIpv6RouteTargetImport {
+    /**
+     * @return Value
+     * 
+     */
     private String value;
 
     private GetVrfIpv6RouteTargetImport() {}
+    /**
+     * @return Value
+     * 
+     */
     public String value() {
         return this.value;
     }

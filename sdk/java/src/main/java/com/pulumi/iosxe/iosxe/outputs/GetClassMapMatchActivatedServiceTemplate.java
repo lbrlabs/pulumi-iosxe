@@ -9,9 +9,17 @@ import java.util.Objects;
 
 @CustomType
 public final class GetClassMapMatchActivatedServiceTemplate {
+    /**
+     * @return Enter service name
+     * 
+     */
     private String serviceName;
 
     private GetClassMapMatchActivatedServiceTemplate() {}
+    /**
+     * @return Enter service name
+     * 
+     */
     public String serviceName() {
         return this.serviceName;
     }

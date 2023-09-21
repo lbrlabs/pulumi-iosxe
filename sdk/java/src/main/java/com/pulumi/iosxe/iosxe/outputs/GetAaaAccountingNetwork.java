@@ -9,17 +9,41 @@ import java.util.Objects;
 
 @CustomType
 public final class GetAaaAccountingNetwork {
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
+    /**
+     * @return Use Server-group
+     * 
+     */
     private String startStopGroup1;
+    /**
+     * @return Use Server-group
+     * 
+     */
     private String startStopGroup2;
 
     private GetAaaAccountingNetwork() {}
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
+    /**
+     * @return Use Server-group
+     * 
+     */
     public String startStopGroup1() {
         return this.startStopGroup1;
     }
+    /**
+     * @return Use Server-group
+     * 
+     */
     public String startStopGroup2() {
         return this.startStopGroup2;
     }

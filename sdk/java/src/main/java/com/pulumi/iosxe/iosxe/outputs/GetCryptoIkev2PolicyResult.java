@@ -14,37 +14,85 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetCryptoIkev2PolicyResult {
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
+    /**
+     * @return Local address
+     * 
+     */
     private List<String> matchAddressLocalIps;
     private String matchFvrf;
+    /**
+     * @return Any fvrf
+     * 
+     */
     private Boolean matchFvrfAny;
+    /**
+     * @return inbound only for controller
+     * 
+     */
     private Boolean matchInboundOnly;
     private String name;
+    /**
+     * @return Specify Proposal
+     * 
+     */
     private List<GetCryptoIkev2PolicyProposal> proposals;
 
     private GetCryptoIkev2PolicyResult() {}
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
+    /**
+     * @return Local address
+     * 
+     */
     public List<String> matchAddressLocalIps() {
         return this.matchAddressLocalIps;
     }
     public String matchFvrf() {
         return this.matchFvrf;
     }
+    /**
+     * @return Any fvrf
+     * 
+     */
     public Boolean matchFvrfAny() {
         return this.matchFvrfAny;
     }
+    /**
+     * @return inbound only for controller
+     * 
+     */
     public Boolean matchInboundOnly() {
         return this.matchInboundOnly;
     }
     public String name() {
         return this.name;
     }
+    /**
+     * @return Specify Proposal
+     * 
+     */
     public List<GetCryptoIkev2PolicyProposal> proposals() {
         return this.proposals;
     }

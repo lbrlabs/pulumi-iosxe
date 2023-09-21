@@ -60,56 +60,89 @@ class GetBfdResult:
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
     @property
     @pulumi.getter(name="ipv4BothVrfs")
     def ipv4_both_vrfs(self) -> Sequence['outputs.GetBfdIpv4BothVrfResult']:
+        """
+        IPv4 Address Family with vrf
+        """
         return pulumi.get(self, "ipv4_both_vrfs")
 
     @property
     @pulumi.getter(name="ipv4WithDstVrfs")
     def ipv4_with_dst_vrfs(self) -> Sequence['outputs.GetBfdIpv4WithDstVrfResult']:
+        """
+        IPv4 Address Family with vrf
+        """
         return pulumi.get(self, "ipv4_with_dst_vrfs")
 
     @property
     @pulumi.getter(name="ipv4WithSrcVrfs")
     def ipv4_with_src_vrfs(self) -> Sequence['outputs.GetBfdIpv4WithSrcVrfResult']:
+        """
+        IPv4 Address Family with vrf
+        """
         return pulumi.get(self, "ipv4_with_src_vrfs")
 
     @property
     @pulumi.getter(name="ipv4WithoutVrfs")
     def ipv4_without_vrfs(self) -> Sequence['outputs.GetBfdIpv4WithoutVrfResult']:
+        """
+        IPv4 Address Family with vrf
+        """
         return pulumi.get(self, "ipv4_without_vrfs")
 
     @property
     @pulumi.getter(name="ipv6WithBothVrfs")
     def ipv6_with_both_vrfs(self) -> Sequence['outputs.GetBfdIpv6WithBothVrfResult']:
+        """
+        IPv6 Address Family with vrf
+        """
         return pulumi.get(self, "ipv6_with_both_vrfs")
 
     @property
     @pulumi.getter(name="ipv6WithDstVrfs")
     def ipv6_with_dst_vrfs(self) -> Sequence['outputs.GetBfdIpv6WithDstVrfResult']:
+        """
+        IPv6 Address Family with vrf
+        """
         return pulumi.get(self, "ipv6_with_dst_vrfs")
 
     @property
     @pulumi.getter(name="ipv6WithSrcVrfs")
     def ipv6_with_src_vrfs(self) -> Sequence['outputs.GetBfdIpv6WithSrcVrfResult']:
+        """
+        IPv6 Address Family with vrf
+        """
         return pulumi.get(self, "ipv6_with_src_vrfs")
 
     @property
     @pulumi.getter(name="ipv6WithoutVrfs")
     def ipv6_without_vrfs(self) -> Sequence['outputs.GetBfdIpv6WithoutVrfResult']:
+        """
+        IPv6 Address Family with vrf
+        """
         return pulumi.get(self, "ipv6_without_vrfs")
 
     @property
     @pulumi.getter(name="slowTimers")
     def slow_timers(self) -> int:
+        """
+        Value in ms to use for slow timers
+        """
         return pulumi.get(self, "slow_timers")
 
 
@@ -135,7 +168,19 @@ class AwaitableGetBfdResult(GetBfdResult):
 def get_bfd(device: Optional[str] = None,
             opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetBfdResult:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the BFD configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_bfd()
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -160,6 +205,18 @@ def get_bfd(device: Optional[str] = None,
 def get_bfd_output(device: Optional[pulumi.Input[Optional[str]]] = None,
                    opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetBfdResult]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the BFD configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_bfd()
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     ...

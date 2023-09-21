@@ -15,9 +15,17 @@ public final class GetInterfaceOspfv3Args extends com.pulumi.resources.InvokeArg
 
     public static final GetInterfaceOspfv3Args Empty = new GetInterfaceOspfv3Args();
 
+    /**
+     * A device name from the provider configuration.
+     * 
+     */
     @Import(name="device")
     private @Nullable Output<String> device;
 
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<Output<String>> device() {
         return Optional.ofNullable(this.device);
     }
@@ -29,9 +37,17 @@ public final class GetInterfaceOspfv3Args extends com.pulumi.resources.InvokeArg
         return this.name;
     }
 
+    /**
+     * Interface type
+     * 
+     */
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Interface type
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -62,11 +78,23 @@ public final class GetInterfaceOspfv3Args extends com.pulumi.resources.InvokeArg
             $ = new GetInterfaceOspfv3Args(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param device A device name from the provider configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder device(@Nullable Output<String> device) {
             $.device = device;
             return this;
         }
 
+        /**
+         * @param device A device name from the provider configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder device(String device) {
             return device(Output.of(device));
         }
@@ -80,11 +108,23 @@ public final class GetInterfaceOspfv3Args extends com.pulumi.resources.InvokeArg
             return name(Output.of(name));
         }
 
+        /**
+         * @param type Interface type
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Interface type
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

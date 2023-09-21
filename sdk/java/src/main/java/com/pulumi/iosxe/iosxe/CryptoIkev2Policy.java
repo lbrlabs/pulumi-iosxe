@@ -17,6 +17,51 @@ import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the Crypto IKEv2 Policy configuration.
+ * 
+ * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.CryptoIkev2Policy;
+ * import com.pulumi.iosxe.iosxe.CryptoIkev2PolicyArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.CryptoIkev2PolicyProposalArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new CryptoIkev2Policy(&#34;example&#34;, CryptoIkev2PolicyArgs.builder()        
+ *             .matchAddressLocalIps(&#34;1.2.3.4&#34;)
+ *             .matchFvrfAny(true)
+ *             .proposals(CryptoIkev2PolicyProposalArgs.builder()
+ *                 .proposals(&#34;proposal123&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/cryptoIkev2Policy:CryptoIkev2Policy example &#34;Cisco-IOS-XE-native:native/crypto/Cisco-IOS-XE-crypto:ikev2/policy=policy1&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/cryptoIkev2Policy:CryptoIkev2Policy")
 public class CryptoIkev2Policy extends com.pulumi.resources.CustomResource {
     /**

@@ -10,17 +10,41 @@ import java.util.Objects;
 
 @CustomType
 public final class GetOspfNeighbor {
+    /**
+     * @return OSPF cost for point-to-multipoint neighbor
+     * 
+     */
     private Integer cost;
+    /**
+     * @return Neighbor address
+     * 
+     */
     private String ip;
+    /**
+     * @return OSPF priority of non-broadcast neighbor
+     * 
+     */
     private Integer priority;
 
     private GetOspfNeighbor() {}
+    /**
+     * @return OSPF cost for point-to-multipoint neighbor
+     * 
+     */
     public Integer cost() {
         return this.cost;
     }
+    /**
+     * @return Neighbor address
+     * 
+     */
     public String ip() {
         return this.ip;
     }
+    /**
+     * @return OSPF priority of non-broadcast neighbor
+     * 
+     */
     public Integer priority() {
         return this.priority;
     }

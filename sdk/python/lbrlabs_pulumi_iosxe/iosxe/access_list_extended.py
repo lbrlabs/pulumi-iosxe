@@ -119,7 +119,14 @@ class AccessListExtended(pulumi.CustomResource):
                  name: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
-        Create a AccessListExtended resource with the given unique name, props, and options.
+        This resource can manage the Access List Extended configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/accessListExtended:AccessListExtended example "Cisco-IOS-XE-native:native/ip/access-list/Cisco-IOS-XE-acl:extended=EACL1"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] device: A device name from the provider configuration.
@@ -131,7 +138,14 @@ class AccessListExtended(pulumi.CustomResource):
                  args: Optional[AccessListExtendedArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a AccessListExtended resource with the given unique name, props, and options.
+        This resource can manage the Access List Extended configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/accessListExtended:AccessListExtended example "Cisco-IOS-XE-native:native/ip/access-list/Cisco-IOS-XE-acl:extended=EACL1"
+        ```
+
         :param str resource_name: The name of the resource.
         :param AccessListExtendedArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

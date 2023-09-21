@@ -10,13 +10,29 @@ import java.util.Objects;
 
 @CustomType
 public final class GetVrfRouteTargetImport {
+    /**
+     * @return VXLAN route target set
+     * 
+     */
     private Boolean stitching;
+    /**
+     * @return Value
+     * 
+     */
     private String value;
 
     private GetVrfRouteTargetImport() {}
+    /**
+     * @return VXLAN route target set
+     * 
+     */
     public Boolean stitching() {
         return this.stitching;
     }
+    /**
+     * @return Value
+     * 
+     */
     public String value() {
         return this.value;
     }

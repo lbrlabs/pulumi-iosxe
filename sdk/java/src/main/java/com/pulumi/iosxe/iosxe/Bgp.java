@@ -16,6 +16,49 @@ import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the BGP configuration.
+ * 
+ * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.Bgp;
+ * import com.pulumi.iosxe.iosxe.BgpArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Bgp(&#34;example&#34;, BgpArgs.builder()        
+ *             .asn(&#34;65000&#34;)
+ *             .defaultIpv4Unicast(false)
+ *             .logNeighborChanges(true)
+ *             .routerIdLoopback(100)
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/bgp:Bgp example &#34;Cisco-IOS-XE-native:native/router/Cisco-IOS-XE-bgp:bgp=65000&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/bgp:Bgp")
 public class Bgp extends com.pulumi.resources.CustomResource {
     @Export(name="asn", refs={String.class}, tree="[0]")

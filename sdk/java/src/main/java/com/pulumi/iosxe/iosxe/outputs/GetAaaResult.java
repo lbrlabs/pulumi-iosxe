@@ -16,37 +16,101 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetAaaResult {
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return Radius server-group definition
+     * 
+     */
     private List<GetAaaGroupServerRadius> groupServerRadii;
+    /**
+     * @return Tacacs+ server-group definition
+     * 
+     */
     private List<GetAaaGroupServerTacacsplus> groupServerTacacspluses;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
+    /**
+     * @return Enable NEW access control commands and functions.(Disables OLD commands.)
+     * 
+     */
     private Boolean newModel;
+    /**
+     * @return Local server profile for RFC 3576 support
+     * 
+     */
     private Boolean serverRadiusDynamicAuthor;
+    /**
+     * @return Specify a RADIUS client
+     * 
+     */
     private List<GetAaaServerRadiusDynamicAuthorClient> serverRadiusDynamicAuthorClients;
+    /**
+     * @return AAA Session ID
+     * 
+     */
     private String sessionId;
 
     private GetAaaResult() {}
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return Radius server-group definition
+     * 
+     */
     public List<GetAaaGroupServerRadius> groupServerRadii() {
         return this.groupServerRadii;
     }
+    /**
+     * @return Tacacs+ server-group definition
+     * 
+     */
     public List<GetAaaGroupServerTacacsplus> groupServerTacacspluses() {
         return this.groupServerTacacspluses;
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
+    /**
+     * @return Enable NEW access control commands and functions.(Disables OLD commands.)
+     * 
+     */
     public Boolean newModel() {
         return this.newModel;
     }
+    /**
+     * @return Local server profile for RFC 3576 support
+     * 
+     */
     public Boolean serverRadiusDynamicAuthor() {
         return this.serverRadiusDynamicAuthor;
     }
+    /**
+     * @return Specify a RADIUS client
+     * 
+     */
     public List<GetAaaServerRadiusDynamicAuthorClient> serverRadiusDynamicAuthorClients() {
         return this.serverRadiusDynamicAuthorClients;
     }
+    /**
+     * @return AAA Session ID
+     * 
+     */
     public String sessionId() {
         return this.sessionId;
     }

@@ -9,9 +9,17 @@ import java.util.Objects;
 
 @CustomType
 public final class GetLoggingIpv4HostVrfTransportTransportUdpPort {
+    /**
+     * @return Specify the UDP port number (default=514)
+     * 
+     */
     private Integer portNumber;
 
     private GetLoggingIpv4HostVrfTransportTransportUdpPort() {}
+    /**
+     * @return Specify the UDP port number (default=514)
+     * 
+     */
     public Integer portNumber() {
         return this.portNumber;
     }

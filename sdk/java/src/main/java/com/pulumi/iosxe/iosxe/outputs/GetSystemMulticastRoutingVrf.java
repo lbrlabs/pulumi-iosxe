@@ -10,10 +10,18 @@ import java.util.Objects;
 
 @CustomType
 public final class GetSystemMulticastRoutingVrf {
+    /**
+     * @return Distributed multicast switching
+     * 
+     */
     private Boolean distributed;
     private String vrf;
 
     private GetSystemMulticastRoutingVrf() {}
+    /**
+     * @return Distributed multicast switching
+     * 
+     */
     public Boolean distributed() {
         return this.distributed;
     }

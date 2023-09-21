@@ -801,7 +801,40 @@ class Vtp(pulumi.CustomResource):
                  version: Optional[pulumi.Input[int]] = None,
                  __props__=None):
         """
-        Create a Vtp resource with the given unique name, props, and options.
+        This resource can manage the VTP configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.Vtp("example",
+            domain="TESTDOMAIN",
+            file="TEST",
+            interface="Gi1/0/1",
+            mode_client_mst=True,
+            mode_client_unknown=True,
+            mode_client_vlan=True,
+            mode_off_mst=True,
+            mode_off_vlan=True,
+            mode_server_mst=True,
+            mode_server_unknown=True,
+            mode_server_vlan=True,
+            mode_transparent_mst=True,
+            mode_transparent_unknown=True,
+            mode_transparent_vlan=True,
+            password="test123",
+            password_hidden=True,
+            version=3)
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/vtp:Vtp example "Cisco-IOS-XE-native:native/vtp"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] delete_mode: Configure behavior when deleting/destroying the resource. Either delete the entire object (YANG container) being
@@ -837,7 +870,40 @@ class Vtp(pulumi.CustomResource):
                  args: Optional[VtpArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a Vtp resource with the given unique name, props, and options.
+        This resource can manage the VTP configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.Vtp("example",
+            domain="TESTDOMAIN",
+            file="TEST",
+            interface="Gi1/0/1",
+            mode_client_mst=True,
+            mode_client_unknown=True,
+            mode_client_vlan=True,
+            mode_off_mst=True,
+            mode_off_vlan=True,
+            mode_server_mst=True,
+            mode_server_unknown=True,
+            mode_server_vlan=True,
+            mode_transparent_mst=True,
+            mode_transparent_unknown=True,
+            mode_transparent_vlan=True,
+            password="test123",
+            password_hidden=True,
+            version=3)
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/vtp:Vtp example "Cisco-IOS-XE-native:native/vtp"
+        ```
+
         :param str resource_name: The name of the resource.
         :param VtpArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

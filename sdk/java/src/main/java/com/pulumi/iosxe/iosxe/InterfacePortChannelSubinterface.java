@@ -20,6 +20,79 @@ import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the Interface Port Channel Subinterface configuration.
+ * 
+ * ## Example Usage
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.InterfacePortChannelSubinterface;
+ * import com.pulumi.iosxe.iosxe.InterfacePortChannelSubinterfaceArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.InterfacePortChannelSubinterfaceHelperAddressArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.InterfacePortChannelSubinterfaceIpv6AddressArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.InterfacePortChannelSubinterfaceIpv6LinkLocalAddressArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new InterfacePortChannelSubinterface(&#34;example&#34;, InterfacePortChannelSubinterfaceArgs.builder()        
+ *             .arpTimeout(2147)
+ *             .description(&#34;My Interface Description&#34;)
+ *             .encapsulationDot1qVlanId(666)
+ *             .helperAddresses(InterfacePortChannelSubinterfaceHelperAddressArgs.builder()
+ *                 .address(&#34;10.10.10.10&#34;)
+ *                 .global(false)
+ *                 .build())
+ *             .ipAccessGroupIn(&#34;1&#34;)
+ *             .ipAccessGroupInEnable(true)
+ *             .ipAccessGroupOut(&#34;1&#34;)
+ *             .ipAccessGroupOutEnable(true)
+ *             .ipProxyArp(false)
+ *             .ipRedirects(false)
+ *             .ipUnreachables(false)
+ *             .ipv4Address(&#34;192.0.2.2&#34;)
+ *             .ipv4AddressMask(&#34;255.255.255.0&#34;)
+ *             .ipv6AddressDhcp(true)
+ *             .ipv6Addresses(InterfacePortChannelSubinterfaceIpv6AddressArgs.builder()
+ *                 .eui_64(true)
+ *                 .prefix(&#34;2003:DB8::/32&#34;)
+ *                 .build())
+ *             .ipv6Enable(true)
+ *             .ipv6LinkLocalAddresses(InterfacePortChannelSubinterfaceIpv6LinkLocalAddressArgs.builder()
+ *                 .address(&#34;fe80::9656:d028:8652:66b8&#34;)
+ *                 .link_local(true)
+ *                 .build())
+ *             .ipv6Mtu(1300)
+ *             .ipv6NdRaSuppressAll(true)
+ *             .shutdown(false)
+ *             .vrfForwarding(&#34;VRF1&#34;)
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/interfacePortChannelSubinterface:InterfacePortChannelSubinterface example &#34;Cisco-IOS-XE-native:native/interface/Port-channel-subinterface/Port-channel=10.666&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/interfacePortChannelSubinterface:InterfacePortChannelSubinterface")
 public class InterfacePortChannelSubinterface extends com.pulumi.resources.CustomResource {
     /**

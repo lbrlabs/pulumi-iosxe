@@ -407,7 +407,14 @@ class Dot1x(pulumi.CustomResource):
                  test_timeout: Optional[pulumi.Input[int]] = None,
                  __props__=None):
         """
-        Create a Dot1x resource with the given unique name, props, and options.
+        This resource can manage the Dot1x configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/dot1x:Dot1x example "Cisco-IOS-XE-native:native/dot1x"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[bool] auth_fail_eapol: Send EAPOL-Success on successful auth-fail Authorization
@@ -431,7 +438,14 @@ class Dot1x(pulumi.CustomResource):
                  args: Optional[Dot1xArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a Dot1x resource with the given unique name, props, and options.
+        This resource can manage the Dot1x configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/dot1x:Dot1x example "Cisco-IOS-XE-native:native/dot1x"
+        ```
+
         :param str resource_name: The name of the resource.
         :param Dot1xArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

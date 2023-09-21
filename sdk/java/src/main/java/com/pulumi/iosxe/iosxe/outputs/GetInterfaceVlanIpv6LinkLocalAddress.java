@@ -11,12 +11,20 @@ import java.util.Objects;
 @CustomType
 public final class GetInterfaceVlanIpv6LinkLocalAddress {
     private String address;
+    /**
+     * @return Use link-local address
+     * 
+     */
     private Boolean linkLocal;
 
     private GetInterfaceVlanIpv6LinkLocalAddress() {}
     public String address() {
         return this.address;
     }
+    /**
+     * @return Use link-local address
+     * 
+     */
     public Boolean linkLocal() {
         return this.linkLocal;
     }

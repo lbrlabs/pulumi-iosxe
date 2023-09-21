@@ -859,7 +859,47 @@ class Service(pulumi.CustomResource):
                  timestamps_log_uptime: Optional[pulumi.Input[bool]] = None,
                  __props__=None):
         """
-        Create a Service resource with the given unique name, props, and options.
+        This resource can manage the Service configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.Service("example",
+            call_home=True,
+            compress_config=True,
+            dhcp=True,
+            pad=True,
+            password_encryption=True,
+            password_recovery=True,
+            sequence_numbers=True,
+            tcp_keepalives_in=True,
+            tcp_keepalives_out=True,
+            timestamps=True,
+            timestamps_debug=True,
+            timestamps_debug_datetime=True,
+            timestamps_debug_datetime_localtime=True,
+            timestamps_debug_datetime_msec=True,
+            timestamps_debug_datetime_show_timezone=True,
+            timestamps_debug_datetime_year=True,
+            timestamps_debug_uptime=True,
+            timestamps_log=True,
+            timestamps_log_datetime=True,
+            timestamps_log_datetime_localtime=True,
+            timestamps_log_datetime_msec=True,
+            timestamps_log_datetime_show_timezone=True,
+            timestamps_log_datetime_year=True,
+            timestamps_log_uptime=True)
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/service:Service example "Cisco-IOS-XE-native:native/service"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[bool] call_home: Enable call-home service
@@ -895,7 +935,47 @@ class Service(pulumi.CustomResource):
                  args: Optional[ServiceArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a Service resource with the given unique name, props, and options.
+        This resource can manage the Service configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.Service("example",
+            call_home=True,
+            compress_config=True,
+            dhcp=True,
+            pad=True,
+            password_encryption=True,
+            password_recovery=True,
+            sequence_numbers=True,
+            tcp_keepalives_in=True,
+            tcp_keepalives_out=True,
+            timestamps=True,
+            timestamps_debug=True,
+            timestamps_debug_datetime=True,
+            timestamps_debug_datetime_localtime=True,
+            timestamps_debug_datetime_msec=True,
+            timestamps_debug_datetime_show_timezone=True,
+            timestamps_debug_datetime_year=True,
+            timestamps_debug_uptime=True,
+            timestamps_log=True,
+            timestamps_log_datetime=True,
+            timestamps_log_datetime_localtime=True,
+            timestamps_log_datetime_msec=True,
+            timestamps_log_datetime_show_timezone=True,
+            timestamps_log_datetime_year=True,
+            timestamps_log_uptime=True)
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/service:Service example "Cisco-IOS-XE-native:native/service"
+        ```
+
         :param str resource_name: The name of the resource.
         :param ServiceArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

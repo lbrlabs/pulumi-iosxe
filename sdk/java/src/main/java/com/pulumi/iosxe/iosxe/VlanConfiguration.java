@@ -15,6 +15,48 @@ import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the VLAN Configuration configuration.
+ * 
+ * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.VlanConfiguration;
+ * import com.pulumi.iosxe.iosxe.VlanConfigurationArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new VlanConfiguration(&#34;example&#34;, VlanConfigurationArgs.builder()        
+ *             .evpnInstance(123)
+ *             .evpnInstanceVni(10123)
+ *             .vlanId(123)
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/vlanConfiguration:VlanConfiguration example &#34;Cisco-IOS-XE-native:native/vlan/Cisco-IOS-XE-vlan:configuration=123&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/vlanConfiguration:VlanConfiguration")
 public class VlanConfiguration extends com.pulumi.resources.CustomResource {
     /**

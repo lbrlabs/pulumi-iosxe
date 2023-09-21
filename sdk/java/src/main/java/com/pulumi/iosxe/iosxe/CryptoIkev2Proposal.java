@@ -15,6 +15,57 @@ import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the Crypto IKEv2 Proposal configuration.
+ * 
+ * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.CryptoIkev2Proposal;
+ * import com.pulumi.iosxe.iosxe.CryptoIkev2ProposalArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new CryptoIkev2Proposal(&#34;example&#34;, CryptoIkev2ProposalArgs.builder()        
+ *             .encryptionAesGcm256(true)
+ *             .groupFifteen(true)
+ *             .groupFourteen(true)
+ *             .groupNineteen(true)
+ *             .groupOne(true)
+ *             .groupSixteen(true)
+ *             .groupTwenty(true)
+ *             .groupTwentyFour(true)
+ *             .groupTwentyOne(true)
+ *             .groupTwo(true)
+ *             .integritySha1(true)
+ *             .prfSha1(true)
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/cryptoIkev2Proposal:CryptoIkev2Proposal example &#34;Cisco-IOS-XE-native:native/crypto/Cisco-IOS-XE-crypto:ikev2/proposal=PROPOSAL1&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/cryptoIkev2Proposal:CryptoIkev2Proposal")
 public class CryptoIkev2Proposal extends com.pulumi.resources.CustomResource {
     /**

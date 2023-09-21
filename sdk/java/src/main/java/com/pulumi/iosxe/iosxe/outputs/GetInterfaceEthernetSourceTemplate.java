@@ -10,10 +10,18 @@ import java.util.Objects;
 
 @CustomType
 public final class GetInterfaceEthernetSourceTemplate {
+    /**
+     * @return merge option of binding
+     * 
+     */
     private Boolean merge;
     private String templateName;
 
     private GetInterfaceEthernetSourceTemplate() {}
+    /**
+     * @return merge option of binding
+     * 
+     */
     public Boolean merge() {
         return this.merge;
     }

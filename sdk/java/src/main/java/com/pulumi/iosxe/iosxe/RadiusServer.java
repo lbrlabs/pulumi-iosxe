@@ -17,6 +17,54 @@ import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the Radius Server configuration.
+ * 
+ * ## Example Usage
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.RadiusServer;
+ * import com.pulumi.iosxe.iosxe.RadiusServerArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.RadiusServerAttributeArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new RadiusServer(&#34;example&#34;, RadiusServerArgs.builder()        
+ *             .attributes(RadiusServerAttributeArgs.builder()
+ *                 .attribute_31_parameters(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
+ *                 .number(&#34;31&#34;)
+ *                 .build())
+ *             .deadCriteriaTime(5)
+ *             .deadCriteriaTries(3)
+ *             .deadtime(3)
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/radiusServer:RadiusServer example &#34;Cisco-IOS-XE-native:native/radius-server&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/radiusServer:RadiusServer")
 public class RadiusServer extends com.pulumi.resources.CustomResource {
     /**

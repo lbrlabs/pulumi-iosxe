@@ -9,13 +9,29 @@ import java.util.Objects;
 
 @CustomType
 public final class GetInterfaceNveVniVrf {
+    /**
+     * @return VNI range or instance between 4096-16777215, example: 6010-6030 or 7115
+     * 
+     */
     private String vniRange;
+    /**
+     * @return Specify a particular VRF
+     * 
+     */
     private String vrf;
 
     private GetInterfaceNveVniVrf() {}
+    /**
+     * @return VNI range or instance between 4096-16777215, example: 6010-6030 or 7115
+     * 
+     */
     public String vniRange() {
         return this.vniRange;
     }
+    /**
+     * @return Specify a particular VRF
+     * 
+     */
     public String vrf() {
         return this.vrf;
     }

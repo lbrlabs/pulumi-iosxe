@@ -16,61 +16,161 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetInterfaceLoopbackResult {
+    /**
+     * @return Set ARP cache timeout
+     * 
+     */
     private Integer arpTimeout;
+    /**
+     * @return Interface specific description
+     * 
+     */
     private String description;
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
     private String ipAccessGroupIn;
+    /**
+     * @return inbound packets
+     * 
+     */
     private Boolean ipAccessGroupInEnable;
     private String ipAccessGroupOut;
+    /**
+     * @return outbound packets
+     * 
+     */
     private Boolean ipAccessGroupOutEnable;
+    /**
+     * @return Enable proxy ARP
+     * 
+     */
     private Boolean ipProxyArp;
+    /**
+     * @return Enable sending ICMP Redirect messages
+     * 
+     */
     private Boolean ipRedirects;
+    /**
+     * @return Enable sending ICMP Unreachable messages
+     * 
+     */
     private Boolean ipUnreachables;
     private String ipv4Address;
     private String ipv4AddressMask;
+    /**
+     * @return Insert default route
+     * 
+     */
     private Boolean ipv6AddressAutoconfigDefault;
+    /**
+     * @return Obtain IPv6 address from DHCP server
+     * 
+     */
     private Boolean ipv6AddressDhcp;
     private List<GetInterfaceLoopbackIpv6Address> ipv6Addresses;
+    /**
+     * @return Enable IPv6 on interface
+     * 
+     */
     private Boolean ipv6Enable;
     private List<GetInterfaceLoopbackIpv6LinkLocalAddress> ipv6LinkLocalAddresses;
+    /**
+     * @return Set IPv6 Maximum Transmission Unit
+     * 
+     */
     private Integer ipv6Mtu;
+    /**
+     * @return Suppress all IPv6 RA
+     * 
+     */
     private Boolean ipv6NdRaSuppressAll;
     private Integer name;
+    /**
+     * @return Shutdown the selected interface
+     * 
+     */
     private Boolean shutdown;
+    /**
+     * @return Configure forwarding table
+     * 
+     */
     private String vrfForwarding;
 
     private GetInterfaceLoopbackResult() {}
+    /**
+     * @return Set ARP cache timeout
+     * 
+     */
     public Integer arpTimeout() {
         return this.arpTimeout;
     }
+    /**
+     * @return Interface specific description
+     * 
+     */
     public String description() {
         return this.description;
     }
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
     public String ipAccessGroupIn() {
         return this.ipAccessGroupIn;
     }
+    /**
+     * @return inbound packets
+     * 
+     */
     public Boolean ipAccessGroupInEnable() {
         return this.ipAccessGroupInEnable;
     }
     public String ipAccessGroupOut() {
         return this.ipAccessGroupOut;
     }
+    /**
+     * @return outbound packets
+     * 
+     */
     public Boolean ipAccessGroupOutEnable() {
         return this.ipAccessGroupOutEnable;
     }
+    /**
+     * @return Enable proxy ARP
+     * 
+     */
     public Boolean ipProxyArp() {
         return this.ipProxyArp;
     }
+    /**
+     * @return Enable sending ICMP Redirect messages
+     * 
+     */
     public Boolean ipRedirects() {
         return this.ipRedirects;
     }
+    /**
+     * @return Enable sending ICMP Unreachable messages
+     * 
+     */
     public Boolean ipUnreachables() {
         return this.ipUnreachables;
     }
@@ -80,33 +180,61 @@ public final class GetInterfaceLoopbackResult {
     public String ipv4AddressMask() {
         return this.ipv4AddressMask;
     }
+    /**
+     * @return Insert default route
+     * 
+     */
     public Boolean ipv6AddressAutoconfigDefault() {
         return this.ipv6AddressAutoconfigDefault;
     }
+    /**
+     * @return Obtain IPv6 address from DHCP server
+     * 
+     */
     public Boolean ipv6AddressDhcp() {
         return this.ipv6AddressDhcp;
     }
     public List<GetInterfaceLoopbackIpv6Address> ipv6Addresses() {
         return this.ipv6Addresses;
     }
+    /**
+     * @return Enable IPv6 on interface
+     * 
+     */
     public Boolean ipv6Enable() {
         return this.ipv6Enable;
     }
     public List<GetInterfaceLoopbackIpv6LinkLocalAddress> ipv6LinkLocalAddresses() {
         return this.ipv6LinkLocalAddresses;
     }
+    /**
+     * @return Set IPv6 Maximum Transmission Unit
+     * 
+     */
     public Integer ipv6Mtu() {
         return this.ipv6Mtu;
     }
+    /**
+     * @return Suppress all IPv6 RA
+     * 
+     */
     public Boolean ipv6NdRaSuppressAll() {
         return this.ipv6NdRaSuppressAll;
     }
     public Integer name() {
         return this.name;
     }
+    /**
+     * @return Shutdown the selected interface
+     * 
+     */
     public Boolean shutdown() {
         return this.shutdown;
     }
+    /**
+     * @return Configure forwarding table
+     * 
+     */
     public String vrfForwarding() {
         return this.vrfForwarding;
     }

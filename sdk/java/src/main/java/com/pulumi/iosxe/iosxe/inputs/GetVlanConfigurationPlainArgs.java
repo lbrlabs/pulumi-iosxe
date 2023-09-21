@@ -15,16 +15,32 @@ public final class GetVlanConfigurationPlainArgs extends com.pulumi.resources.In
 
     public static final GetVlanConfigurationPlainArgs Empty = new GetVlanConfigurationPlainArgs();
 
+    /**
+     * A device name from the provider configuration.
+     * 
+     */
     @Import(name="device")
     private @Nullable String device;
 
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
 
+    /**
+     * VLAN ID List Eg. 1-10,15
+     * 
+     */
     @Import(name="vlanId", required=true)
     private Integer vlanId;
 
+    /**
+     * @return VLAN ID List Eg. 1-10,15
+     * 
+     */
     public Integer vlanId() {
         return this.vlanId;
     }
@@ -54,11 +70,23 @@ public final class GetVlanConfigurationPlainArgs extends com.pulumi.resources.In
             $ = new GetVlanConfigurationPlainArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param device A device name from the provider configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder device(@Nullable String device) {
             $.device = device;
             return this;
         }
 
+        /**
+         * @param vlanId VLAN ID List Eg. 1-10,15
+         * 
+         * @return builder
+         * 
+         */
         public Builder vlanId(Integer vlanId) {
             $.vlanId = vlanId;
             return this;

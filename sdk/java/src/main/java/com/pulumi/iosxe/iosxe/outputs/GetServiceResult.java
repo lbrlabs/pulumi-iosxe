@@ -12,109 +12,317 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetServiceResult {
+    /**
+     * @return Enable call-home service
+     * 
+     */
     private Boolean callHome;
+    /**
+     * @return Compress the configuration file
+     * 
+     */
     private Boolean compressConfig;
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return Enable DHCP server and relay agent
+     * 
+     */
     private Boolean dhcp;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
+    /**
+     * @return Enable PAD commands
+     * 
+     */
     private Boolean pad;
+    /**
+     * @return Encrypt system passwords
+     * 
+     */
     private Boolean passwordEncryption;
+    /**
+     * @return Enable password recovery
+     * 
+     */
     private Boolean passwordRecovery;
+    /**
+     * @return Stamp logger messages with a sequence number
+     * 
+     */
     private Boolean sequenceNumbers;
+    /**
+     * @return Generate keepalives on idle incoming network connections
+     * 
+     */
     private Boolean tcpKeepalivesIn;
+    /**
+     * @return Generate keepalives on idle outgoing network connections
+     * 
+     */
     private Boolean tcpKeepalivesOut;
+    /**
+     * @return Timestamp debug/log messages
+     * 
+     */
     private Boolean timestamps;
+    /**
+     * @return Timestamp debug messages
+     * 
+     */
     private Boolean timestampsDebug;
+    /**
+     * @return Timestamp with date and time
+     * 
+     */
     private Boolean timestampsDebugDatetime;
+    /**
+     * @return Use local time zone for timestamps
+     * 
+     */
     private Boolean timestampsDebugDatetimeLocaltime;
+    /**
+     * @return Include milliseconds in timestamp
+     * 
+     */
     private Boolean timestampsDebugDatetimeMsec;
+    /**
+     * @return Add time zone information to timestamp
+     * 
+     */
     private Boolean timestampsDebugDatetimeShowTimezone;
+    /**
+     * @return Include year in timestamp
+     * 
+     */
     private Boolean timestampsDebugDatetimeYear;
+    /**
+     * @return Timestamp with system uptime
+     * 
+     */
     private Boolean timestampsDebugUptime;
+    /**
+     * @return Timestamp log messages
+     * 
+     */
     private Boolean timestampsLog;
+    /**
+     * @return Timestamp with date and time
+     * 
+     */
     private Boolean timestampsLogDatetime;
+    /**
+     * @return Use local time zone for timestamps
+     * 
+     */
     private Boolean timestampsLogDatetimeLocaltime;
+    /**
+     * @return Include milliseconds in timestamp
+     * 
+     */
     private Boolean timestampsLogDatetimeMsec;
+    /**
+     * @return Add time zone information to timestamp
+     * 
+     */
     private Boolean timestampsLogDatetimeShowTimezone;
+    /**
+     * @return Include year in timestamp
+     * 
+     */
     private Boolean timestampsLogDatetimeYear;
+    /**
+     * @return Timestamp with system uptime
+     * 
+     */
     private Boolean timestampsLogUptime;
 
     private GetServiceResult() {}
+    /**
+     * @return Enable call-home service
+     * 
+     */
     public Boolean callHome() {
         return this.callHome;
     }
+    /**
+     * @return Compress the configuration file
+     * 
+     */
     public Boolean compressConfig() {
         return this.compressConfig;
     }
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return Enable DHCP server and relay agent
+     * 
+     */
     public Boolean dhcp() {
         return this.dhcp;
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
+    /**
+     * @return Enable PAD commands
+     * 
+     */
     public Boolean pad() {
         return this.pad;
     }
+    /**
+     * @return Encrypt system passwords
+     * 
+     */
     public Boolean passwordEncryption() {
         return this.passwordEncryption;
     }
+    /**
+     * @return Enable password recovery
+     * 
+     */
     public Boolean passwordRecovery() {
         return this.passwordRecovery;
     }
+    /**
+     * @return Stamp logger messages with a sequence number
+     * 
+     */
     public Boolean sequenceNumbers() {
         return this.sequenceNumbers;
     }
+    /**
+     * @return Generate keepalives on idle incoming network connections
+     * 
+     */
     public Boolean tcpKeepalivesIn() {
         return this.tcpKeepalivesIn;
     }
+    /**
+     * @return Generate keepalives on idle outgoing network connections
+     * 
+     */
     public Boolean tcpKeepalivesOut() {
         return this.tcpKeepalivesOut;
     }
+    /**
+     * @return Timestamp debug/log messages
+     * 
+     */
     public Boolean timestamps() {
         return this.timestamps;
     }
+    /**
+     * @return Timestamp debug messages
+     * 
+     */
     public Boolean timestampsDebug() {
         return this.timestampsDebug;
     }
+    /**
+     * @return Timestamp with date and time
+     * 
+     */
     public Boolean timestampsDebugDatetime() {
         return this.timestampsDebugDatetime;
     }
+    /**
+     * @return Use local time zone for timestamps
+     * 
+     */
     public Boolean timestampsDebugDatetimeLocaltime() {
         return this.timestampsDebugDatetimeLocaltime;
     }
+    /**
+     * @return Include milliseconds in timestamp
+     * 
+     */
     public Boolean timestampsDebugDatetimeMsec() {
         return this.timestampsDebugDatetimeMsec;
     }
+    /**
+     * @return Add time zone information to timestamp
+     * 
+     */
     public Boolean timestampsDebugDatetimeShowTimezone() {
         return this.timestampsDebugDatetimeShowTimezone;
     }
+    /**
+     * @return Include year in timestamp
+     * 
+     */
     public Boolean timestampsDebugDatetimeYear() {
         return this.timestampsDebugDatetimeYear;
     }
+    /**
+     * @return Timestamp with system uptime
+     * 
+     */
     public Boolean timestampsDebugUptime() {
         return this.timestampsDebugUptime;
     }
+    /**
+     * @return Timestamp log messages
+     * 
+     */
     public Boolean timestampsLog() {
         return this.timestampsLog;
     }
+    /**
+     * @return Timestamp with date and time
+     * 
+     */
     public Boolean timestampsLogDatetime() {
         return this.timestampsLogDatetime;
     }
+    /**
+     * @return Use local time zone for timestamps
+     * 
+     */
     public Boolean timestampsLogDatetimeLocaltime() {
         return this.timestampsLogDatetimeLocaltime;
     }
+    /**
+     * @return Include milliseconds in timestamp
+     * 
+     */
     public Boolean timestampsLogDatetimeMsec() {
         return this.timestampsLogDatetimeMsec;
     }
+    /**
+     * @return Add time zone information to timestamp
+     * 
+     */
     public Boolean timestampsLogDatetimeShowTimezone() {
         return this.timestampsLogDatetimeShowTimezone;
     }
+    /**
+     * @return Include year in timestamp
+     * 
+     */
     public Boolean timestampsLogDatetimeYear() {
         return this.timestampsLogDatetimeYear;
     }
+    /**
+     * @return Timestamp with system uptime
+     * 
+     */
     public Boolean timestampsLogUptime() {
         return this.timestampsLogUptime;
     }

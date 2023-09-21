@@ -539,7 +539,14 @@ class Pim(pulumi.CustomResource):
                  ssm_range: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
-        Create a Pim resource with the given unique name, props, and options.
+        This resource can manage the PIM configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/pim:Pim example "Cisco-IOS-XE-native:native/ip/pim"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[bool] autorp: Configure AutoRP global operations
@@ -567,7 +574,14 @@ class Pim(pulumi.CustomResource):
                  args: Optional[PimArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a Pim resource with the given unique name, props, and options.
+        This resource can manage the PIM configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/pim:Pim example "Cisco-IOS-XE-native:native/ip/pim"
+        ```
+
         :param str resource_name: The name of the resource.
         :param PimArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

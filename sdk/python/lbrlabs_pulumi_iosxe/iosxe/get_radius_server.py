@@ -45,31 +45,49 @@ class GetRadiusServerResult:
     @property
     @pulumi.getter
     def attributes(self) -> Sequence['outputs.GetRadiusServerAttributeResult']:
+        """
+        Customize selected radius attributes
+        """
         return pulumi.get(self, "attributes")
 
     @property
     @pulumi.getter(name="deadCriteriaTime")
     def dead_criteria_time(self) -> int:
+        """
+        The time during which no properly formed response must be received from the RADIUS server
+        """
         return pulumi.get(self, "dead_criteria_time")
 
     @property
     @pulumi.getter(name="deadCriteriaTries")
     def dead_criteria_tries(self) -> int:
+        """
+        The number of times the router must fail to receive a response from the radius server to mark it as dead
+        """
         return pulumi.get(self, "dead_criteria_tries")
 
     @property
     @pulumi.getter
     def deadtime(self) -> int:
+        """
+        Time to stop using a server that does not respond
+        """
         return pulumi.get(self, "deadtime")
 
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
 
@@ -90,7 +108,19 @@ class AwaitableGetRadiusServerResult(GetRadiusServerResult):
 def get_radius_server(device: Optional[str] = None,
                       opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetRadiusServerResult:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Radius Server configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_radius_server()
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -110,6 +140,18 @@ def get_radius_server(device: Optional[str] = None,
 def get_radius_server_output(device: Optional[pulumi.Input[Optional[str]]] = None,
                              opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetRadiusServerResult]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Radius Server configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_radius_server()
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     ...

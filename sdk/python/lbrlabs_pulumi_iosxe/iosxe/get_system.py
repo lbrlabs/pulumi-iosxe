@@ -81,76 +81,121 @@ class GetSystemResult:
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
     @pulumi.getter
     def hostname(self) -> str:
+        """
+        Set system's network name
+        """
         return pulumi.get(self, "hostname")
 
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
     @property
     @pulumi.getter(name="ipDomainLookup")
     def ip_domain_lookup(self) -> bool:
+        """
+        Enable IP Domain Name System hostname translation
+        """
         return pulumi.get(self, "ip_domain_lookup")
 
     @property
     @pulumi.getter(name="ipDomainName")
     def ip_domain_name(self) -> str:
+        """
+        Define the default domain name
+        """
         return pulumi.get(self, "ip_domain_name")
 
     @property
     @pulumi.getter(name="ipMulticastRouting")
     def ip_multicast_routing(self) -> bool:
+        """
+        Enable IP multicast forwarding
+        """
         return pulumi.get(self, "ip_multicast_routing")
 
     @property
     @pulumi.getter(name="ipMulticastRoutingDistributed")
     def ip_multicast_routing_distributed(self) -> bool:
+        """
+        Distributed multicast switching
+        """
         return pulumi.get(self, "ip_multicast_routing_distributed")
 
     @property
     @pulumi.getter(name="ipRouting")
     def ip_routing(self) -> bool:
+        """
+        Enable or disable IP routing
+        """
         return pulumi.get(self, "ip_routing")
 
     @property
     @pulumi.getter(name="ipSourceRoute")
     def ip_source_route(self) -> bool:
+        """
+        Process packets with source routing header options
+        """
         return pulumi.get(self, "ip_source_route")
 
     @property
     @pulumi.getter(name="ipv6UnicastRouting")
     def ipv6_unicast_routing(self) -> bool:
+        """
+        Enable unicast routing
+        """
         return pulumi.get(self, "ipv6_unicast_routing")
 
     @property
     @pulumi.getter(name="loginDelay")
     def login_delay(self) -> int:
+        """
+        Set delay between successive fail login
+        """
         return pulumi.get(self, "login_delay")
 
     @property
     @pulumi.getter(name="loginOnFailure")
     def login_on_failure(self) -> bool:
+        """
+        Set options for failed login attempt
+        """
         return pulumi.get(self, "login_on_failure")
 
     @property
     @pulumi.getter(name="loginOnFailureLog")
     def login_on_failure_log(self) -> bool:
+        """
+        Generate syslogs on failure logins
+        """
         return pulumi.get(self, "login_on_failure_log")
 
     @property
     @pulumi.getter(name="loginOnSuccess")
     def login_on_success(self) -> bool:
+        """
+        Set options for successful login attempt
+        """
         return pulumi.get(self, "login_on_success")
 
     @property
     @pulumi.getter(name="loginOnSuccessLog")
     def login_on_success_log(self) -> bool:
+        """
+        Generate syslogs on successful logins
+        """
         return pulumi.get(self, "login_on_success_log")
 
     @property
@@ -161,11 +206,17 @@ class GetSystemResult:
     @property
     @pulumi.getter(name="multicastRoutingSwitch")
     def multicast_routing_switch(self) -> bool:
+        """
+        Enable IP multicast forwarding, some XE devices use this option instead of `multicast_routing`.
+        """
         return pulumi.get(self, "multicast_routing_switch")
 
     @property
     @pulumi.getter(name="multicastRoutingVrfs")
     def multicast_routing_vrfs(self) -> Sequence['outputs.GetSystemMulticastRoutingVrfResult']:
+        """
+        Select VPN Routing/Forwarding instance
+        """
         return pulumi.get(self, "multicast_routing_vrfs")
 
 
@@ -198,7 +249,19 @@ class AwaitableGetSystemResult(GetSystemResult):
 def get_system(device: Optional[str] = None,
                opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetSystemResult:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the System configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_system()
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -230,6 +293,18 @@ def get_system(device: Optional[str] = None,
 def get_system_output(device: Optional[pulumi.Input[Optional[str]]] = None,
                       opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSystemResult]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the System configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_system()
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     ...

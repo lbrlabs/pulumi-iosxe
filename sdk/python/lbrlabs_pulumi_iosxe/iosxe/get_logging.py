@@ -96,11 +96,17 @@ class GetLoggingResult:
     @property
     @pulumi.getter(name="bufferedSeverity")
     def buffered_severity(self) -> str:
+        """
+        Logging severity level
+        """
         return pulumi.get(self, "buffered_severity")
 
     @property
     @pulumi.getter(name="bufferedSize")
     def buffered_size(self) -> int:
+        """
+        Logging buffer size
+        """
         return pulumi.get(self, "buffered_size")
 
     @property
@@ -111,11 +117,17 @@ class GetLoggingResult:
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
     @pulumi.getter
     def facility(self) -> str:
+        """
+        Facility parameter for syslog messages
+        """
         return pulumi.get(self, "facility")
 
     @property
@@ -146,11 +158,17 @@ class GetLoggingResult:
     @property
     @pulumi.getter(name="historySize")
     def history_size(self) -> int:
+        """
+        Set history table size
+        """
         return pulumi.get(self, "history_size")
 
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
     @property
@@ -181,11 +199,17 @@ class GetLoggingResult:
     @property
     @pulumi.getter(name="originIdName")
     def origin_id_name(self) -> str:
+        """
+        Define a unique text string as ID
+        """
         return pulumi.get(self, "origin_id_name")
 
     @property
     @pulumi.getter(name="originIdType")
     def origin_id_type(self) -> str:
+        """
+        Use origin hostname/ip/ipv6 as ID
+        """
         return pulumi.get(self, "origin_id_type")
 
     @property
@@ -196,11 +220,17 @@ class GetLoggingResult:
     @property
     @pulumi.getter(name="sourceInterfacesVrves")
     def source_interfaces_vrves(self) -> Sequence['outputs.GetLoggingSourceInterfacesVrfResult']:
+        """
+        Specify interface and vrf for source address in logging transactions
+        """
         return pulumi.get(self, "source_interfaces_vrves")
 
     @property
     @pulumi.getter
     def trap(self) -> bool:
+        """
+        Set trap server logging level
+        """
         return pulumi.get(self, "trap")
 
     @property
@@ -243,7 +273,19 @@ class AwaitableGetLoggingResult(GetLoggingResult):
 def get_logging(device: Optional[str] = None,
                 opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetLoggingResult:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Logging configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_logging()
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -280,6 +322,18 @@ def get_logging(device: Optional[str] = None,
 def get_logging_output(device: Optional[pulumi.Input[Optional[str]]] = None,
                        opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetLoggingResult]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Logging configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_logging()
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     ...

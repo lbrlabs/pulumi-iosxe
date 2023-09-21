@@ -13,217 +13,601 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetErrdisableResult {
+    /**
+     * @return Enable error detection on all cases
+     * 
+     */
     private Boolean detectCauseAll;
+    /**
+     * @return Enable error detection for arp inspection
+     * 
+     */
     private Boolean detectCauseArpInspection;
+    /**
+     * @return Enable error detection on bpdu-guard
+     * 
+     */
     private Boolean detectCauseBpduguard;
+    /**
+     * @return Enable error detection on dhcp-rate-limit
+     * 
+     */
     private Boolean detectCauseDhcpRateLimit;
+    /**
+     * @return Enable error detection on dtp-flapping
+     * 
+     */
     private Boolean detectCauseDtpFlap;
+    /**
+     * @return Enable error detection on gbic-invalid
+     * 
+     */
     private Boolean detectCauseGbicInvalid;
+    /**
+     * @return Enable error detection for inline-power
+     * 
+     */
     private Boolean detectCauseInlinePower;
+    /**
+     * @return Enable timer to recover from l2protocol-tunnel error disable state
+     * 
+     */
     private Boolean detectCauseL2ptguard;
+    /**
+     * @return Enable error detection on linkstate-flapping
+     * 
+     */
     private Boolean detectCauseLinkFlap;
+    /**
+     * @return Enable error detection on loopback
+     * 
+     */
     private Boolean detectCauseLoopback;
+    /**
+     * @return Enable error detection on loop detect
+     * 
+     */
     private Boolean detectCauseLoopdetect;
     private Boolean detectCauseMlacpMinlink;
+    /**
+     * @return Enable error detection on pagp-flapping
+     * 
+     */
     private Boolean detectCausePagpFlap;
+    /**
+     * @return Enable error detection on PPPoE IA rate-limit
+     * 
+     */
     private Boolean detectCausePppoeIaRateLimit;
+    /**
+     * @return Shutdown vlan on 802.1x-guard violation
+     * 
+     */
     private Boolean detectCauseSecurityViolationShutdownVlan;
+    /**
+     * @return Enable error detection on SFP config mismatch
+     * 
+     */
     private Boolean detectCauseSfpConfigMismatch;
+    /**
+     * @return Enable error detection on small_frame
+     * 
+     */
     private Boolean detectCauseSmallFrame;
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return maximum flaps allowed before setting to errdisable
+     * 
+     */
     private Integer flapSettingCauseDtpFlapMaxFlaps;
+    /**
+     * @return time period the flaps are counted
+     * 
+     */
     private Integer flapSettingCauseDtpFlapTime;
+    /**
+     * @return maximum flaps allowed before setting to errdisable
+     * 
+     */
     private Integer flapSettingCauseLinkFlapMaxFlaps;
+    /**
+     * @return time period the flaps are counted
+     * 
+     */
     private Integer flapSettingCauseLinkFlapTime;
+    /**
+     * @return maximum flaps allowed before setting to errdisable
+     * 
+     */
     private Integer flapSettingCausePagpFlapMaxFlaps;
+    /**
+     * @return time period the flaps are counted
+     * 
+     */
     private Integer flapSettingCausePagpFlapTime;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
+    /**
+     * @return Enable timer to recover from all error causes
+     * 
+     */
     private Boolean recoveryCauseAll;
+    /**
+     * @return Enable timer to recover from arp inspection error disable state
+     * 
+     */
     private Boolean recoveryCauseArpInspection;
+    /**
+     * @return Enable timer to recover from BPDU Guard error
+     * 
+     */
     private Boolean recoveryCauseBpduguard;
+    /**
+     * @return (STP)  Enable timer to recover from channel misconfiguration error
+     * 
+     */
     private Boolean recoveryCauseChannelMisconfig;
+    /**
+     * @return Enable timer to recover from dhcp-rate-limit error
+     * 
+     */
     private Boolean recoveryCauseDhcpRateLimit;
+    /**
+     * @return Enable timer to recover from dtp-flap error
+     * 
+     */
     private Boolean recoveryCauseDtpFlap;
+    /**
+     * @return Enable timer to recover from invalid GBIC error
+     * 
+     */
     private Boolean recoveryCauseGbicInvalid;
+    /**
+     * @return Enable timer to recover from inline-power error
+     * 
+     */
     private Boolean recoveryCauseInlinePower;
+    /**
+     * @return Enable timer to recover from l2protocol-tunnel error disable state
+     * 
+     */
     private Boolean recoveryCauseL2ptguard;
+    /**
+     * @return Enable timer to recover from link-flap error
+     * 
+     */
     private Boolean recoveryCauseLinkFlap;
     private Boolean recoveryCauseLinkMonitorFailure;
+    /**
+     * @return Enable timer to recover from loopback error
+     * 
+     */
     private Boolean recoveryCauseLoopback;
+    /**
+     * @return Enable timer to recover from loop detect error
+     * 
+     */
     private Boolean recoveryCauseLoopdetect;
+    /**
+     * @return Enable timer to recover from mac limit disable state
+     * 
+     */
     private Boolean recoveryCauseMacLimit;
     private Boolean recoveryCauseMlacpMinlink;
+    /**
+     * @return Enable timer to recover from pagp-flap error
+     * 
+     */
     private Boolean recoveryCausePagpFlap;
+    /**
+     * @return Enable timer to recover from port mode change failure
+     * 
+     */
     private Boolean recoveryCausePortModeFailure;
+    /**
+     * @return Enable timer to recover from PPPoE IA rate-limit error
+     * 
+     */
     private Boolean recoveryCausePppoeIaRateLimit;
+    /**
+     * @return Enable timer to recover from psecure violation error
+     * 
+     */
     private Boolean recoveryCausePsecureViolation;
     private Boolean recoveryCausePsp;
+    /**
+     * @return Enable timer to recover from 802.1x violation error
+     * 
+     */
     private Boolean recoveryCauseSecurityViolation;
+    /**
+     * @return Enable timer to recover from SFP config mismatch error
+     * 
+     */
     private Boolean recoveryCauseSfpConfigMismatch;
+    /**
+     * @return Enable timer to recover from small frame error
+     * 
+     */
     private Boolean recoveryCauseSmallFrame;
+    /**
+     * @return Enable timer to recover from storm-control error
+     * 
+     */
     private Boolean recoveryCauseStormControl;
+    /**
+     * @return Enable timer to recover from udld error
+     * 
+     */
     private Boolean recoveryCauseUdld;
     private Boolean recoveryCauseUnicastFlood;
+    /**
+     * @return Enable timer to recover from vmps shutdown error
+     * 
+     */
     private Boolean recoveryCauseVmps;
+    /**
+     * @return Error disable recovery timer value
+     * 
+     */
     private Integer recoveryInterval;
 
     private GetErrdisableResult() {}
+    /**
+     * @return Enable error detection on all cases
+     * 
+     */
     public Boolean detectCauseAll() {
         return this.detectCauseAll;
     }
+    /**
+     * @return Enable error detection for arp inspection
+     * 
+     */
     public Boolean detectCauseArpInspection() {
         return this.detectCauseArpInspection;
     }
+    /**
+     * @return Enable error detection on bpdu-guard
+     * 
+     */
     public Boolean detectCauseBpduguard() {
         return this.detectCauseBpduguard;
     }
+    /**
+     * @return Enable error detection on dhcp-rate-limit
+     * 
+     */
     public Boolean detectCauseDhcpRateLimit() {
         return this.detectCauseDhcpRateLimit;
     }
+    /**
+     * @return Enable error detection on dtp-flapping
+     * 
+     */
     public Boolean detectCauseDtpFlap() {
         return this.detectCauseDtpFlap;
     }
+    /**
+     * @return Enable error detection on gbic-invalid
+     * 
+     */
     public Boolean detectCauseGbicInvalid() {
         return this.detectCauseGbicInvalid;
     }
+    /**
+     * @return Enable error detection for inline-power
+     * 
+     */
     public Boolean detectCauseInlinePower() {
         return this.detectCauseInlinePower;
     }
+    /**
+     * @return Enable timer to recover from l2protocol-tunnel error disable state
+     * 
+     */
     public Boolean detectCauseL2ptguard() {
         return this.detectCauseL2ptguard;
     }
+    /**
+     * @return Enable error detection on linkstate-flapping
+     * 
+     */
     public Boolean detectCauseLinkFlap() {
         return this.detectCauseLinkFlap;
     }
+    /**
+     * @return Enable error detection on loopback
+     * 
+     */
     public Boolean detectCauseLoopback() {
         return this.detectCauseLoopback;
     }
+    /**
+     * @return Enable error detection on loop detect
+     * 
+     */
     public Boolean detectCauseLoopdetect() {
         return this.detectCauseLoopdetect;
     }
     public Boolean detectCauseMlacpMinlink() {
         return this.detectCauseMlacpMinlink;
     }
+    /**
+     * @return Enable error detection on pagp-flapping
+     * 
+     */
     public Boolean detectCausePagpFlap() {
         return this.detectCausePagpFlap;
     }
+    /**
+     * @return Enable error detection on PPPoE IA rate-limit
+     * 
+     */
     public Boolean detectCausePppoeIaRateLimit() {
         return this.detectCausePppoeIaRateLimit;
     }
+    /**
+     * @return Shutdown vlan on 802.1x-guard violation
+     * 
+     */
     public Boolean detectCauseSecurityViolationShutdownVlan() {
         return this.detectCauseSecurityViolationShutdownVlan;
     }
+    /**
+     * @return Enable error detection on SFP config mismatch
+     * 
+     */
     public Boolean detectCauseSfpConfigMismatch() {
         return this.detectCauseSfpConfigMismatch;
     }
+    /**
+     * @return Enable error detection on small_frame
+     * 
+     */
     public Boolean detectCauseSmallFrame() {
         return this.detectCauseSmallFrame;
     }
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return maximum flaps allowed before setting to errdisable
+     * 
+     */
     public Integer flapSettingCauseDtpFlapMaxFlaps() {
         return this.flapSettingCauseDtpFlapMaxFlaps;
     }
+    /**
+     * @return time period the flaps are counted
+     * 
+     */
     public Integer flapSettingCauseDtpFlapTime() {
         return this.flapSettingCauseDtpFlapTime;
     }
+    /**
+     * @return maximum flaps allowed before setting to errdisable
+     * 
+     */
     public Integer flapSettingCauseLinkFlapMaxFlaps() {
         return this.flapSettingCauseLinkFlapMaxFlaps;
     }
+    /**
+     * @return time period the flaps are counted
+     * 
+     */
     public Integer flapSettingCauseLinkFlapTime() {
         return this.flapSettingCauseLinkFlapTime;
     }
+    /**
+     * @return maximum flaps allowed before setting to errdisable
+     * 
+     */
     public Integer flapSettingCausePagpFlapMaxFlaps() {
         return this.flapSettingCausePagpFlapMaxFlaps;
     }
+    /**
+     * @return time period the flaps are counted
+     * 
+     */
     public Integer flapSettingCausePagpFlapTime() {
         return this.flapSettingCausePagpFlapTime;
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
+    /**
+     * @return Enable timer to recover from all error causes
+     * 
+     */
     public Boolean recoveryCauseAll() {
         return this.recoveryCauseAll;
     }
+    /**
+     * @return Enable timer to recover from arp inspection error disable state
+     * 
+     */
     public Boolean recoveryCauseArpInspection() {
         return this.recoveryCauseArpInspection;
     }
+    /**
+     * @return Enable timer to recover from BPDU Guard error
+     * 
+     */
     public Boolean recoveryCauseBpduguard() {
         return this.recoveryCauseBpduguard;
     }
+    /**
+     * @return (STP)  Enable timer to recover from channel misconfiguration error
+     * 
+     */
     public Boolean recoveryCauseChannelMisconfig() {
         return this.recoveryCauseChannelMisconfig;
     }
+    /**
+     * @return Enable timer to recover from dhcp-rate-limit error
+     * 
+     */
     public Boolean recoveryCauseDhcpRateLimit() {
         return this.recoveryCauseDhcpRateLimit;
     }
+    /**
+     * @return Enable timer to recover from dtp-flap error
+     * 
+     */
     public Boolean recoveryCauseDtpFlap() {
         return this.recoveryCauseDtpFlap;
     }
+    /**
+     * @return Enable timer to recover from invalid GBIC error
+     * 
+     */
     public Boolean recoveryCauseGbicInvalid() {
         return this.recoveryCauseGbicInvalid;
     }
+    /**
+     * @return Enable timer to recover from inline-power error
+     * 
+     */
     public Boolean recoveryCauseInlinePower() {
         return this.recoveryCauseInlinePower;
     }
+    /**
+     * @return Enable timer to recover from l2protocol-tunnel error disable state
+     * 
+     */
     public Boolean recoveryCauseL2ptguard() {
         return this.recoveryCauseL2ptguard;
     }
+    /**
+     * @return Enable timer to recover from link-flap error
+     * 
+     */
     public Boolean recoveryCauseLinkFlap() {
         return this.recoveryCauseLinkFlap;
     }
     public Boolean recoveryCauseLinkMonitorFailure() {
         return this.recoveryCauseLinkMonitorFailure;
     }
+    /**
+     * @return Enable timer to recover from loopback error
+     * 
+     */
     public Boolean recoveryCauseLoopback() {
         return this.recoveryCauseLoopback;
     }
+    /**
+     * @return Enable timer to recover from loop detect error
+     * 
+     */
     public Boolean recoveryCauseLoopdetect() {
         return this.recoveryCauseLoopdetect;
     }
+    /**
+     * @return Enable timer to recover from mac limit disable state
+     * 
+     */
     public Boolean recoveryCauseMacLimit() {
         return this.recoveryCauseMacLimit;
     }
     public Boolean recoveryCauseMlacpMinlink() {
         return this.recoveryCauseMlacpMinlink;
     }
+    /**
+     * @return Enable timer to recover from pagp-flap error
+     * 
+     */
     public Boolean recoveryCausePagpFlap() {
         return this.recoveryCausePagpFlap;
     }
+    /**
+     * @return Enable timer to recover from port mode change failure
+     * 
+     */
     public Boolean recoveryCausePortModeFailure() {
         return this.recoveryCausePortModeFailure;
     }
+    /**
+     * @return Enable timer to recover from PPPoE IA rate-limit error
+     * 
+     */
     public Boolean recoveryCausePppoeIaRateLimit() {
         return this.recoveryCausePppoeIaRateLimit;
     }
+    /**
+     * @return Enable timer to recover from psecure violation error
+     * 
+     */
     public Boolean recoveryCausePsecureViolation() {
         return this.recoveryCausePsecureViolation;
     }
     public Boolean recoveryCausePsp() {
         return this.recoveryCausePsp;
     }
+    /**
+     * @return Enable timer to recover from 802.1x violation error
+     * 
+     */
     public Boolean recoveryCauseSecurityViolation() {
         return this.recoveryCauseSecurityViolation;
     }
+    /**
+     * @return Enable timer to recover from SFP config mismatch error
+     * 
+     */
     public Boolean recoveryCauseSfpConfigMismatch() {
         return this.recoveryCauseSfpConfigMismatch;
     }
+    /**
+     * @return Enable timer to recover from small frame error
+     * 
+     */
     public Boolean recoveryCauseSmallFrame() {
         return this.recoveryCauseSmallFrame;
     }
+    /**
+     * @return Enable timer to recover from storm-control error
+     * 
+     */
     public Boolean recoveryCauseStormControl() {
         return this.recoveryCauseStormControl;
     }
+    /**
+     * @return Enable timer to recover from udld error
+     * 
+     */
     public Boolean recoveryCauseUdld() {
         return this.recoveryCauseUdld;
     }
     public Boolean recoveryCauseUnicastFlood() {
         return this.recoveryCauseUnicastFlood;
     }
+    /**
+     * @return Enable timer to recover from vmps shutdown error
+     * 
+     */
     public Boolean recoveryCauseVmps() {
         return this.recoveryCauseVmps;
     }
+    /**
+     * @return Error disable recovery timer value
+     * 
+     */
     public Integer recoveryInterval() {
         return this.recoveryInterval;
     }

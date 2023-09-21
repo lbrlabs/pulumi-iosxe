@@ -17,105 +17,297 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetServiceTemplateResult {
+    /**
+     * @return Enter a value between 1 and 1073741823
+     * 
+     */
     private Integer absoluteTimer;
+    /**
+     * @return Access list to be applied
+     * 
+     */
     private List<GetServiceTemplateAccessGroup> accessGroups;
+    /**
+     * @return Enter a description
+     * 
+     */
     private String description;
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return pre-authentication
+     * 
+     */
     private String dnsAclPreauth;
+    /**
+     * @return Enter a value between 1 and 65535
+     * 
+     */
     private Integer ianctivityTimer;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
+    /**
+     * @return ARP probe
+     * 
+     */
     private Boolean inactivityTimerProbe;
+    /**
+     * @return Interface template to be applied
+     * 
+     */
     private List<GetServiceTemplateInterfaceTemplate> interfaceTemplates;
+    /**
+     * @return Set the link security policy
+     * 
+     */
     private String linksecPolicy;
+    /**
+     * @return mdns policy to be applied
+     * 
+     */
     private String mdnsServicePolicy;
+    /**
+     * @return Specify a template name (maximum 48 characters)
+     * 
+     */
     private String name;
+    /**
+     * @return Append client Mac Address in redirect URL
+     * 
+     */
     private String redirectAppendClientMac;
+    /**
+     * @return Append switch Mac Address in redirect URL
+     * 
+     */
     private String redirectAppendSwitchMac;
+    /**
+     * @return Specify a valid URL
+     * 
+     */
     private String redirectUrl;
+    /**
+     * @return Specify the access list name
+     * 
+     */
     private String redirectUrlMatchAcl;
     private String redirectUrlMatchAction;
+    /**
+     * @return Configure input Qos policy
+     * 
+     */
     private String servicePolicyQosInput;
+    /**
+     * @return Configure output Qos policy
+     * 
+     */
     private String servicePolicyQosOutput;
+    /**
+     * @return SGT tag
+     * 
+     */
     private Integer sgt;
+    /**
+     * @return tag name
+     * 
+     */
     private List<GetServiceTemplateTag> tags;
+    /**
+     * @return tunnel profile name
+     * 
+     */
     private String tunnelCapwapName;
+    /**
+     * @return Vlan to be applied
+     * 
+     */
     private Integer vlan;
+    /**
+     * @return Vnid to be applied
+     * 
+     */
     private String vnid;
+    /**
+     * @return Critical voice vlan
+     * 
+     */
     private Boolean voiceVlan;
 
     private GetServiceTemplateResult() {}
+    /**
+     * @return Enter a value between 1 and 1073741823
+     * 
+     */
     public Integer absoluteTimer() {
         return this.absoluteTimer;
     }
+    /**
+     * @return Access list to be applied
+     * 
+     */
     public List<GetServiceTemplateAccessGroup> accessGroups() {
         return this.accessGroups;
     }
+    /**
+     * @return Enter a description
+     * 
+     */
     public String description() {
         return this.description;
     }
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return pre-authentication
+     * 
+     */
     public String dnsAclPreauth() {
         return this.dnsAclPreauth;
     }
+    /**
+     * @return Enter a value between 1 and 65535
+     * 
+     */
     public Integer ianctivityTimer() {
         return this.ianctivityTimer;
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
+    /**
+     * @return ARP probe
+     * 
+     */
     public Boolean inactivityTimerProbe() {
         return this.inactivityTimerProbe;
     }
+    /**
+     * @return Interface template to be applied
+     * 
+     */
     public List<GetServiceTemplateInterfaceTemplate> interfaceTemplates() {
         return this.interfaceTemplates;
     }
+    /**
+     * @return Set the link security policy
+     * 
+     */
     public String linksecPolicy() {
         return this.linksecPolicy;
     }
+    /**
+     * @return mdns policy to be applied
+     * 
+     */
     public String mdnsServicePolicy() {
         return this.mdnsServicePolicy;
     }
+    /**
+     * @return Specify a template name (maximum 48 characters)
+     * 
+     */
     public String name() {
         return this.name;
     }
+    /**
+     * @return Append client Mac Address in redirect URL
+     * 
+     */
     public String redirectAppendClientMac() {
         return this.redirectAppendClientMac;
     }
+    /**
+     * @return Append switch Mac Address in redirect URL
+     * 
+     */
     public String redirectAppendSwitchMac() {
         return this.redirectAppendSwitchMac;
     }
+    /**
+     * @return Specify a valid URL
+     * 
+     */
     public String redirectUrl() {
         return this.redirectUrl;
     }
+    /**
+     * @return Specify the access list name
+     * 
+     */
     public String redirectUrlMatchAcl() {
         return this.redirectUrlMatchAcl;
     }
     public String redirectUrlMatchAction() {
         return this.redirectUrlMatchAction;
     }
+    /**
+     * @return Configure input Qos policy
+     * 
+     */
     public String servicePolicyQosInput() {
         return this.servicePolicyQosInput;
     }
+    /**
+     * @return Configure output Qos policy
+     * 
+     */
     public String servicePolicyQosOutput() {
         return this.servicePolicyQosOutput;
     }
+    /**
+     * @return SGT tag
+     * 
+     */
     public Integer sgt() {
         return this.sgt;
     }
+    /**
+     * @return tag name
+     * 
+     */
     public List<GetServiceTemplateTag> tags() {
         return this.tags;
     }
+    /**
+     * @return tunnel profile name
+     * 
+     */
     public String tunnelCapwapName() {
         return this.tunnelCapwapName;
     }
+    /**
+     * @return Vlan to be applied
+     * 
+     */
     public Integer vlan() {
         return this.vlan;
     }
+    /**
+     * @return Vnid to be applied
+     * 
+     */
     public String vnid() {
         return this.vnid;
     }
+    /**
+     * @return Critical voice vlan
+     * 
+     */
     public Boolean voiceVlan() {
         return this.voiceVlan;
     }

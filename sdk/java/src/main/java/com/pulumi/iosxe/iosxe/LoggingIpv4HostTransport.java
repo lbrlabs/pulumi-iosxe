@@ -18,6 +18,59 @@ import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the Logging IPv4 Host Transport configuration.
+ * 
+ * ## Example Usage
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.LoggingIpv4HostTransport;
+ * import com.pulumi.iosxe.iosxe.LoggingIpv4HostTransportArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.LoggingIpv4HostTransportTransportTcpPortArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.LoggingIpv4HostTransportTransportTlsPortArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.LoggingIpv4HostTransportTransportUdpPortArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new LoggingIpv4HostTransport(&#34;example&#34;, LoggingIpv4HostTransportArgs.builder()        
+ *             .ipv4Host(&#34;2.2.2.2&#34;)
+ *             .transportTcpPorts(LoggingIpv4HostTransportTransportTcpPortArgs.builder()
+ *                 .port_number(10001)
+ *                 .build())
+ *             .transportTlsPorts(LoggingIpv4HostTransportTransportTlsPortArgs.builder()
+ *                 .port_number(10002)
+ *                 .build())
+ *             .transportUdpPorts(LoggingIpv4HostTransportTransportUdpPortArgs.builder()
+ *                 .port_number(10000)
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/loggingIpv4HostTransport:LoggingIpv4HostTransport example &#34;Cisco-IOS-XE-native:native/logging/host/ipv4-host-transport-list=2.2.2.2&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/loggingIpv4HostTransport:LoggingIpv4HostTransport")
 public class LoggingIpv4HostTransport extends com.pulumi.resources.CustomResource {
     /**

@@ -15,9 +15,17 @@ public final class GetLoggingIpv4HostVrfTransportArgs extends com.pulumi.resourc
 
     public static final GetLoggingIpv4HostVrfTransportArgs Empty = new GetLoggingIpv4HostVrfTransportArgs();
 
+    /**
+     * A device name from the provider configuration.
+     * 
+     */
     @Import(name="device")
     private @Nullable Output<String> device;
 
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<Output<String>> device() {
         return Optional.ofNullable(this.device);
     }
@@ -29,9 +37,17 @@ public final class GetLoggingIpv4HostVrfTransportArgs extends com.pulumi.resourc
         return this.ipv4Host;
     }
 
+    /**
+     * Set VRF option
+     * 
+     */
     @Import(name="vrf", required=true)
     private Output<String> vrf;
 
+    /**
+     * @return Set VRF option
+     * 
+     */
     public Output<String> vrf() {
         return this.vrf;
     }
@@ -62,11 +78,23 @@ public final class GetLoggingIpv4HostVrfTransportArgs extends com.pulumi.resourc
             $ = new GetLoggingIpv4HostVrfTransportArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param device A device name from the provider configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder device(@Nullable Output<String> device) {
             $.device = device;
             return this;
         }
 
+        /**
+         * @param device A device name from the provider configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder device(String device) {
             return device(Output.of(device));
         }
@@ -80,11 +108,23 @@ public final class GetLoggingIpv4HostVrfTransportArgs extends com.pulumi.resourc
             return ipv4Host(Output.of(ipv4Host));
         }
 
+        /**
+         * @param vrf Set VRF option
+         * 
+         * @return builder
+         * 
+         */
         public Builder vrf(Output<String> vrf) {
             $.vrf = vrf;
             return this;
         }
 
+        /**
+         * @param vrf Set VRF option
+         * 
+         * @return builder
+         * 
+         */
         public Builder vrf(String vrf) {
             return vrf(Output.of(vrf));
         }

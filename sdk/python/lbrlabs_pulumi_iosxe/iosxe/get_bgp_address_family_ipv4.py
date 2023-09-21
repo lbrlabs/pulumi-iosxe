@@ -61,31 +61,49 @@ class GetBgpAddressFamilyIpv4Result:
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
     @property
     @pulumi.getter(name="ipv4UnicastNetworks")
     def ipv4_unicast_networks(self) -> Sequence['outputs.GetBgpAddressFamilyIpv4Ipv4UnicastNetworkResult']:
+        """
+        Specify a network to announce via BGP
+        """
         return pulumi.get(self, "ipv4_unicast_networks")
 
     @property
     @pulumi.getter(name="ipv4UnicastNetworksMasks")
     def ipv4_unicast_networks_masks(self) -> Sequence['outputs.GetBgpAddressFamilyIpv4Ipv4UnicastNetworksMaskResult']:
+        """
+        Specify a network to announce via BGP
+        """
         return pulumi.get(self, "ipv4_unicast_networks_masks")
 
     @property
     @pulumi.getter(name="ipv4UnicastRedistributeConnected")
     def ipv4_unicast_redistribute_connected(self) -> bool:
+        """
+        Connected
+        """
         return pulumi.get(self, "ipv4_unicast_redistribute_connected")
 
     @property
     @pulumi.getter(name="ipv4UnicastRedistributeStatic")
     def ipv4_unicast_redistribute_static(self) -> bool:
+        """
+        Static routes
+        """
         return pulumi.get(self, "ipv4_unicast_redistribute_static")
 
 
@@ -110,7 +128,20 @@ def get_bgp_address_family_ipv4(af_name: Optional[str] = None,
                                 device: Optional[str] = None,
                                 opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetBgpAddressFamilyIpv4Result:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the BGP Address Family IPv4 configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_bgp_address_family_ipv4(af_name="unicast",
+        asn="65000")
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     __args__ = dict()
     __args__['afName'] = af_name
@@ -136,6 +167,19 @@ def get_bgp_address_family_ipv4_output(af_name: Optional[pulumi.Input[str]] = No
                                        device: Optional[pulumi.Input[Optional[str]]] = None,
                                        opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetBgpAddressFamilyIpv4Result]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the BGP Address Family IPv4 configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_bgp_address_family_ipv4(af_name="unicast",
+        asn="65000")
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     ...

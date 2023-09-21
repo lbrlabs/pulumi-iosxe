@@ -15,6 +15,48 @@ import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the Crypto IPSec Transform Set configuration.
+ * 
+ * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.CryptoIpsecTransformSet;
+ * import com.pulumi.iosxe.iosxe.CryptoIpsecTransformSetArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new CryptoIpsecTransformSet(&#34;example&#34;, CryptoIpsecTransformSetArgs.builder()        
+ *             .esp(&#34;esp-aes&#34;)
+ *             .espHmac(&#34;esp-sha-hmac&#34;)
+ *             .modeTunnel(true)
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/cryptoIpsecTransformSet:CryptoIpsecTransformSet example &#34;Cisco-IOS-XE-native:native/crypto/Cisco-IOS-XE-crypto:ipsec/transform-set=TEST&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/cryptoIpsecTransformSet:CryptoIpsecTransformSet")
 public class CryptoIpsecTransformSet extends com.pulumi.resources.CustomResource {
     /**

@@ -44,31 +44,49 @@ class GetBannerResult:
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
     @pulumi.getter(name="execBanner")
     def exec_banner(self) -> str:
+        """
+        Banner message
+        """
         return pulumi.get(self, "exec_banner")
 
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
     @property
     @pulumi.getter(name="loginBanner")
     def login_banner(self) -> str:
+        """
+        Banner message
+        """
         return pulumi.get(self, "login_banner")
 
     @property
     @pulumi.getter(name="motdBanner")
     def motd_banner(self) -> str:
+        """
+        Banner message
+        """
         return pulumi.get(self, "motd_banner")
 
     @property
     @pulumi.getter(name="promptTimeoutBanner")
     def prompt_timeout_banner(self) -> str:
+        """
+        Banner message
+        """
         return pulumi.get(self, "prompt_timeout_banner")
 
 
@@ -89,7 +107,19 @@ class AwaitableGetBannerResult(GetBannerResult):
 def get_banner(device: Optional[str] = None,
                opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetBannerResult:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Banner configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_banner()
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -109,6 +139,18 @@ def get_banner(device: Optional[str] = None,
 def get_banner_output(device: Optional[pulumi.Input[Optional[str]]] = None,
                       opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetBannerResult]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Banner configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_banner()
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     ...

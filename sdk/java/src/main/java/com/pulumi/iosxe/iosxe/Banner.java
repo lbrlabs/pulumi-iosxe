@@ -14,6 +14,49 @@ import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the Banner configuration.
+ * 
+ * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.Banner;
+ * import com.pulumi.iosxe.iosxe.BannerArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Banner(&#34;example&#34;, BannerArgs.builder()        
+ *             .execBanner(&#34;My Exec Banner&#34;)
+ *             .loginBanner(&#34;My Login Banner&#34;)
+ *             .motdBanner(&#34;My MOTD Banner&#34;)
+ *             .promptTimeoutBanner(&#34;My Prompt-Timeout Banner&#34;)
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/banner:Banner example &#34;Cisco-IOS-XE-native:native/banner&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/banner:Banner")
 public class Banner extends com.pulumi.resources.CustomResource {
     /**

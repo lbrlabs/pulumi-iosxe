@@ -16,6 +16,57 @@ import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the Static Route configuration.
+ * 
+ * ## Example Usage
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.StaticRoute;
+ * import com.pulumi.iosxe.iosxe.StaticRouteArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.StaticRouteNextHopArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new StaticRoute(&#34;example&#34;, StaticRouteArgs.builder()        
+ *             .mask(&#34;255.255.255.255&#34;)
+ *             .nextHops(StaticRouteNextHopArgs.builder()
+ *                 .global(false)
+ *                 .metric(10)
+ *                 .name(&#34;Route1&#34;)
+ *                 .next_hop(&#34;6.6.6.6&#34;)
+ *                 .permanent(true)
+ *                 .tag(100)
+ *                 .build())
+ *             .prefix(&#34;5.5.5.5&#34;)
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/staticRoute:StaticRoute example &#34;Cisco-IOS-XE-native:native/ip/route/ip-route-interface-forwarding-list=5.5.5.5,255.255.255.255&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/staticRoute:StaticRoute")
 public class StaticRoute extends com.pulumi.resources.CustomResource {
     /**

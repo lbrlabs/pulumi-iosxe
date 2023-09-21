@@ -265,7 +265,14 @@ class LoggingIpv6HostVrfTransport(pulumi.CustomResource):
                  vrf: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
-        Create a LoggingIpv6HostVrfTransport resource with the given unique name, props, and options.
+        This resource can manage the Logging IPv6 Host VRF Transport configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/loggingIpv6HostVrfTransport:LoggingIpv6HostVrfTransport example "Cisco-IOS-XE-native:native/logging/host/ipv6/ipv6-host-vrf-transport-list=2001::1,VRF1"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] delete_mode: Configure behavior when deleting/destroying the resource. Either delete the entire object (YANG container) being
@@ -284,7 +291,14 @@ class LoggingIpv6HostVrfTransport(pulumi.CustomResource):
                  args: LoggingIpv6HostVrfTransportArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a LoggingIpv6HostVrfTransport resource with the given unique name, props, and options.
+        This resource can manage the Logging IPv6 Host VRF Transport configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/loggingIpv6HostVrfTransport:LoggingIpv6HostVrfTransport example "Cisco-IOS-XE-native:native/logging/host/ipv6/ipv6-host-vrf-transport-list=2001::1,VRF1"
+        ```
+
         :param str resource_name: The name of the resource.
         :param LoggingIpv6HostVrfTransportArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

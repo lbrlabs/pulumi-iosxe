@@ -11,12 +11,20 @@ import java.util.Objects;
 @CustomType
 public final class GetInterfacePortChannelSubinterfaceIpv6LinkLocalAddress {
     private String address;
+    /**
+     * @return Use link-local address
+     * 
+     */
     private Boolean linkLocal;
 
     private GetInterfacePortChannelSubinterfaceIpv6LinkLocalAddress() {}
     public String address() {
         return this.address;
     }
+    /**
+     * @return Use link-local address
+     * 
+     */
     public Boolean linkLocal() {
         return this.linkLocal;
     }

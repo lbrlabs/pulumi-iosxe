@@ -16,6 +16,55 @@ import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the Policy Map Event configuration.
+ * 
+ * ## Example Usage
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.PolicyMapEvent;
+ * import com.pulumi.iosxe.iosxe.PolicyMapEventArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.PolicyMapEventClassNumberArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new PolicyMapEvent(&#34;example&#34;, PolicyMapEventArgs.builder()        
+ *             .classNumbers(PolicyMapEventClassNumberArgs.builder()
+ *                 .action_numbers(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
+ *                 .class_(&#34;MY_CLASS&#34;)
+ *                 .execution_type(&#34;do-until-failure&#34;)
+ *                 .number(10)
+ *                 .build())
+ *             .eventType(&#34;authentication-success&#34;)
+ *             .matchType(&#34;match-all&#34;)
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/policyMapEvent:PolicyMapEvent example &#34;Cisco-IOS-XE-native:native/policy/Cisco-IOS-XE-policy:policy-map=dot1x_policy/event=authentication-success&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/policyMapEvent:PolicyMapEvent")
 public class PolicyMapEvent extends com.pulumi.resources.CustomResource {
     /**

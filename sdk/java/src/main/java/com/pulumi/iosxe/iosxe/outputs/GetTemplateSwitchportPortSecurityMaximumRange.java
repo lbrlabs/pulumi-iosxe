@@ -10,17 +10,41 @@ import java.util.Objects;
 
 @CustomType
 public final class GetTemplateSwitchportPortSecurityMaximumRange {
+    /**
+     * @return Maximum addresses
+     * 
+     */
     private Integer range;
+    /**
+     * @return Max secure addresses per vlan
+     * 
+     */
     private Boolean vlan;
+    /**
+     * @return access vlan
+     * 
+     */
     private Boolean vlanAccess;
 
     private GetTemplateSwitchportPortSecurityMaximumRange() {}
+    /**
+     * @return Maximum addresses
+     * 
+     */
     public Integer range() {
         return this.range;
     }
+    /**
+     * @return Max secure addresses per vlan
+     * 
+     */
     public Boolean vlan() {
         return this.vlan;
     }
+    /**
+     * @return access vlan
+     * 
+     */
     public Boolean vlanAccess() {
         return this.vlanAccess;
     }

@@ -9,9 +9,17 @@ import java.util.Objects;
 
 @CustomType
 public final class GetServiceTemplateInterfaceTemplate {
+    /**
+     * @return Enter name of interface template
+     * 
+     */
     private String name;
 
     private GetServiceTemplateInterfaceTemplate() {}
+    /**
+     * @return Enter name of interface template
+     * 
+     */
     public String name() {
         return this.name;
     }

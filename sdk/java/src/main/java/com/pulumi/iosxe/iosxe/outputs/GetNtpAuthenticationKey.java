@@ -10,37 +10,93 @@ import java.util.Objects;
 
 @CustomType
 public final class GetNtpAuthenticationKey {
+    /**
+     * @return CMAC-AES-128 (digest length = 128 bits,  key length = [16 or 32] bytes)
+     * 
+     */
     private String cmacAes128;
+    /**
+     * @return Authentication key encryption type
+     * 
+     */
     private Integer encryptionType;
+    /**
+     * @return HMAC-SHA1 (digest length = 160 bits,  key length = [1-32] bytes)
+     * 
+     */
     private String hmacSha1;
+    /**
+     * @return HMAC-SHA2-256 (digest length = 256 bits,  key length = [1-32] bytes)
+     * 
+     */
     private String hmacSha2256;
+    /**
+     * @return MD5 authentication
+     * 
+     */
     private String md5;
     private Integer number;
+    /**
+     * @return SHA1 (digest length = 160 bits,  key length = [1-32] bytes)
+     * 
+     */
     private String sha1;
+    /**
+     * @return SHA-256 (digest length = 256 bits,  key length = [1-32] bytes)
+     * 
+     */
     private String sha2;
 
     private GetNtpAuthenticationKey() {}
+    /**
+     * @return CMAC-AES-128 (digest length = 128 bits,  key length = [16 or 32] bytes)
+     * 
+     */
     public String cmacAes128() {
         return this.cmacAes128;
     }
+    /**
+     * @return Authentication key encryption type
+     * 
+     */
     public Integer encryptionType() {
         return this.encryptionType;
     }
+    /**
+     * @return HMAC-SHA1 (digest length = 160 bits,  key length = [1-32] bytes)
+     * 
+     */
     public String hmacSha1() {
         return this.hmacSha1;
     }
+    /**
+     * @return HMAC-SHA2-256 (digest length = 256 bits,  key length = [1-32] bytes)
+     * 
+     */
     public String hmacSha2256() {
         return this.hmacSha2256;
     }
+    /**
+     * @return MD5 authentication
+     * 
+     */
     public String md5() {
         return this.md5;
     }
     public Integer number() {
         return this.number;
     }
+    /**
+     * @return SHA1 (digest length = 160 bits,  key length = [1-32] bytes)
+     * 
+     */
     public String sha1() {
         return this.sha1;
     }
+    /**
+     * @return SHA-256 (digest length = 256 bits,  key length = [1-32] bytes)
+     * 
+     */
     public String sha2() {
         return this.sha2;
     }

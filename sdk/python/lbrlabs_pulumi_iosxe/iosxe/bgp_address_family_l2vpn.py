@@ -164,7 +164,25 @@ class BgpAddressFamilyL2vpn(pulumi.CustomResource):
                  device: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
-        Create a BgpAddressFamilyL2vpn resource with the given unique name, props, and options.
+        This resource can manage the BGP Address Family L2VPN configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.BgpAddressFamilyL2vpn("example",
+            af_name="evpn",
+            asn="65000")
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/bgpAddressFamilyL2vpn:BgpAddressFamilyL2vpn example "Cisco-IOS-XE-native:native/router/Cisco-IOS-XE-bgp:bgp=65000/address-family/no-vrf/l2vpn=evpn"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] af_name: - Choices: `evpn`, `vpls`
@@ -180,7 +198,25 @@ class BgpAddressFamilyL2vpn(pulumi.CustomResource):
                  args: BgpAddressFamilyL2vpnArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a BgpAddressFamilyL2vpn resource with the given unique name, props, and options.
+        This resource can manage the BGP Address Family L2VPN configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.BgpAddressFamilyL2vpn("example",
+            af_name="evpn",
+            asn="65000")
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/bgpAddressFamilyL2vpn:BgpAddressFamilyL2vpn example "Cisco-IOS-XE-native:native/router/Cisco-IOS-XE-bgp:bgp=65000/address-family/no-vrf/l2vpn=evpn"
+        ```
+
         :param str resource_name: The name of the resource.
         :param BgpAddressFamilyL2vpnArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

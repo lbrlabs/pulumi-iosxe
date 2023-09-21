@@ -231,7 +231,27 @@ class Bgp(pulumi.CustomResource):
                  router_id_loopback: Optional[pulumi.Input[int]] = None,
                  __props__=None):
         """
-        Create a Bgp resource with the given unique name, props, and options.
+        This resource can manage the BGP configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.Bgp("example",
+            asn="65000",
+            default_ipv4_unicast=False,
+            log_neighbor_changes=True,
+            router_id_loopback=100)
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/bgp:Bgp example "Cisco-IOS-XE-native:native/router/Cisco-IOS-XE-bgp:bgp=65000"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[bool] default_ipv4_unicast: Activate ipv4-unicast for a peer by default
@@ -249,7 +269,27 @@ class Bgp(pulumi.CustomResource):
                  args: BgpArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a Bgp resource with the given unique name, props, and options.
+        This resource can manage the BGP configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.Bgp("example",
+            asn="65000",
+            default_ipv4_unicast=False,
+            log_neighbor_changes=True,
+            router_id_loopback=100)
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/bgp:Bgp example "Cisco-IOS-XE-native:native/router/Cisco-IOS-XE-bgp:bgp=65000"
+        ```
+
         :param str resource_name: The name of the resource.
         :param BgpArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

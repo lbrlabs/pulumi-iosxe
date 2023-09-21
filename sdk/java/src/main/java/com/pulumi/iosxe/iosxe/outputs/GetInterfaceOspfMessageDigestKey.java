@@ -10,17 +10,41 @@ import java.util.Objects;
 
 @CustomType
 public final class GetInterfaceOspfMessageDigestKey {
+    /**
+     * @return Key ID
+     * 
+     */
     private Integer id;
+    /**
+     * @return The OSPF password (key) (only the first 16 characters are used)
+     * 
+     */
     private String md5AuthKey;
+    /**
+     * @return Encryption type (0 for not yet encrypted, 7 for proprietary)
+     * 
+     */
     private Integer md5AuthType;
 
     private GetInterfaceOspfMessageDigestKey() {}
+    /**
+     * @return Key ID
+     * 
+     */
     public Integer id() {
         return this.id;
     }
+    /**
+     * @return The OSPF password (key) (only the first 16 characters are used)
+     * 
+     */
     public String md5AuthKey() {
         return this.md5AuthKey;
     }
+    /**
+     * @return Encryption type (0 for not yet encrypted, 7 for proprietary)
+     * 
+     */
     public Integer md5AuthType() {
         return this.md5AuthType;
     }

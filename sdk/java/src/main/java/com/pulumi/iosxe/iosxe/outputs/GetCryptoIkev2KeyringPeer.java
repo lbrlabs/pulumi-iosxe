@@ -9,13 +9,45 @@ import java.util.Objects;
 
 @CustomType
 public final class GetCryptoIkev2KeyringPeer {
+    /**
+     * @return Specify a description of this peer
+     * 
+     */
     private String description;
+    /**
+     * @return Hostname of peer
+     * 
+     */
     private String hostname;
+    /**
+     * @return IP address
+     * 
+     */
     private String identityAddress;
+    /**
+     * @return email Domain Name
+     * 
+     */
     private String identityEmailDomain;
+    /**
+     * @return Specify the name string
+     * 
+     */
     private String identityEmailName;
+    /**
+     * @return email Domain Name
+     * 
+     */
     private String identityFqdnDomain;
+    /**
+     * @return Specify the name string
+     * 
+     */
     private String identityFqdnName;
+    /**
+     * @return proprietary types of identification (ID KEY ID)
+     * 
+     */
     private String identityKeyId;
     private String ipv4Address;
     private String ipv4Mask;
@@ -29,27 +61,59 @@ public final class GetCryptoIkev2KeyringPeer {
     private String preSharedKeyRemoteEncryption;
 
     private GetCryptoIkev2KeyringPeer() {}
+    /**
+     * @return Specify a description of this peer
+     * 
+     */
     public String description() {
         return this.description;
     }
+    /**
+     * @return Hostname of peer
+     * 
+     */
     public String hostname() {
         return this.hostname;
     }
+    /**
+     * @return IP address
+     * 
+     */
     public String identityAddress() {
         return this.identityAddress;
     }
+    /**
+     * @return email Domain Name
+     * 
+     */
     public String identityEmailDomain() {
         return this.identityEmailDomain;
     }
+    /**
+     * @return Specify the name string
+     * 
+     */
     public String identityEmailName() {
         return this.identityEmailName;
     }
+    /**
+     * @return email Domain Name
+     * 
+     */
     public String identityFqdnDomain() {
         return this.identityFqdnDomain;
     }
+    /**
+     * @return Specify the name string
+     * 
+     */
     public String identityFqdnName() {
         return this.identityFqdnName;
     }
+    /**
+     * @return proprietary types of identification (ID KEY ID)
+     * 
+     */
     public String identityKeyId() {
         return this.identityKeyId;
     }

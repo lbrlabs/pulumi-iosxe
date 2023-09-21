@@ -16,6 +16,49 @@ import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the UDLD configuration.
+ * 
+ * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.Udld;
+ * import com.pulumi.iosxe.iosxe.UdldArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Udld(&#34;example&#34;, UdldArgs.builder()        
+ *             .aggressive(true)
+ *             .enable(true)
+ *             .messageTime(77)
+ *             .recoveryInterval(8640)
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/udld:Udld example &#34;Cisco-IOS-XE-native:native/udld&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/udld:Udld")
 public class Udld extends com.pulumi.resources.CustomResource {
     /**

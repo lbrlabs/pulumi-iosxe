@@ -15,6 +15,53 @@ import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the SNMP Server User configuration.
+ * 
+ * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.SnmpServerUser;
+ * import com.pulumi.iosxe.iosxe.SnmpServerUserArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new SnmpServerUser(&#34;example&#34;, SnmpServerUserArgs.builder()        
+ *             .grpname(&#34;GROUP1&#34;)
+ *             .username(&#34;USER1&#34;)
+ *             .v3AuthAlgorithm(&#34;sha&#34;)
+ *             .v3AuthPassword(&#34;Cisco123&#34;)
+ *             .v3AuthPrivAesAccessAclName(&#34;ACL123&#34;)
+ *             .v3AuthPrivAesAccessIpv6Acl(&#34;V6ACL1&#34;)
+ *             .v3AuthPrivAesAlgorithm(&#34;128&#34;)
+ *             .v3AuthPrivAesPassword(&#34;Cisco123&#34;)
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/snmpServerUser:SnmpServerUser example &#34;Cisco-IOS-XE-native:native/snmp-server/Cisco-IOS-XE-snmp:user/names=USER1,GROUP1&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/snmpServerUser:SnmpServerUser")
 public class SnmpServerUser extends com.pulumi.resources.CustomResource {
     /**

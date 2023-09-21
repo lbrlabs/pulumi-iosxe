@@ -275,1221 +275,14797 @@ import com.pulumi.iosxe.iosxe.outputs.GetVtpResult;
 import java.util.concurrent.CompletableFuture;
 
 public final class IosxeFunctions {
+    /**
+     * This data source can read the AAA configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetAaaArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getAaa();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetAaaResult> getAaa() {
         return getAaa(GetAaaArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the AAA configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetAaaArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getAaa();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetAaaResult> getAaaPlain() {
         return getAaaPlain(GetAaaPlainArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the AAA configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetAaaArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getAaa();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetAaaResult> getAaa(GetAaaArgs args) {
         return getAaa(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the AAA configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetAaaArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getAaa();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetAaaResult> getAaaPlain(GetAaaPlainArgs args) {
         return getAaaPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the AAA configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetAaaArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getAaa();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetAaaResult> getAaa(GetAaaArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getAaa:getAaa", TypeShape.of(GetAaaResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the AAA configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetAaaArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getAaa();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetAaaResult> getAaaPlain(GetAaaPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getAaa:getAaa", TypeShape.of(GetAaaResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the AAA Accounting configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetAaaAccountingArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getAaaAccounting();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetAaaAccountingResult> getAaaAccounting() {
         return getAaaAccounting(GetAaaAccountingArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the AAA Accounting configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetAaaAccountingArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getAaaAccounting();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetAaaAccountingResult> getAaaAccountingPlain() {
         return getAaaAccountingPlain(GetAaaAccountingPlainArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the AAA Accounting configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetAaaAccountingArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getAaaAccounting();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetAaaAccountingResult> getAaaAccounting(GetAaaAccountingArgs args) {
         return getAaaAccounting(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the AAA Accounting configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetAaaAccountingArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getAaaAccounting();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetAaaAccountingResult> getAaaAccountingPlain(GetAaaAccountingPlainArgs args) {
         return getAaaAccountingPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the AAA Accounting configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetAaaAccountingArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getAaaAccounting();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetAaaAccountingResult> getAaaAccounting(GetAaaAccountingArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getAaaAccounting:getAaaAccounting", TypeShape.of(GetAaaAccountingResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the AAA Accounting configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetAaaAccountingArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getAaaAccounting();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetAaaAccountingResult> getAaaAccountingPlain(GetAaaAccountingPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getAaaAccounting:getAaaAccounting", TypeShape.of(GetAaaAccountingResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the AAA Authentication configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetAaaAuthenticationArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getAaaAuthentication();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetAaaAuthenticationResult> getAaaAuthentication() {
         return getAaaAuthentication(GetAaaAuthenticationArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the AAA Authentication configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetAaaAuthenticationArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getAaaAuthentication();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetAaaAuthenticationResult> getAaaAuthenticationPlain() {
         return getAaaAuthenticationPlain(GetAaaAuthenticationPlainArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the AAA Authentication configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetAaaAuthenticationArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getAaaAuthentication();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetAaaAuthenticationResult> getAaaAuthentication(GetAaaAuthenticationArgs args) {
         return getAaaAuthentication(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the AAA Authentication configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetAaaAuthenticationArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getAaaAuthentication();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetAaaAuthenticationResult> getAaaAuthenticationPlain(GetAaaAuthenticationPlainArgs args) {
         return getAaaAuthenticationPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the AAA Authentication configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetAaaAuthenticationArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getAaaAuthentication();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetAaaAuthenticationResult> getAaaAuthentication(GetAaaAuthenticationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getAaaAuthentication:getAaaAuthentication", TypeShape.of(GetAaaAuthenticationResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the AAA Authentication configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetAaaAuthenticationArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getAaaAuthentication();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetAaaAuthenticationResult> getAaaAuthenticationPlain(GetAaaAuthenticationPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getAaaAuthentication:getAaaAuthentication", TypeShape.of(GetAaaAuthenticationResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the AAA Authorization configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetAaaAuthorizationArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getAaaAuthorization();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetAaaAuthorizationResult> getAaaAuthorization() {
         return getAaaAuthorization(GetAaaAuthorizationArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the AAA Authorization configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetAaaAuthorizationArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getAaaAuthorization();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetAaaAuthorizationResult> getAaaAuthorizationPlain() {
         return getAaaAuthorizationPlain(GetAaaAuthorizationPlainArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the AAA Authorization configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetAaaAuthorizationArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getAaaAuthorization();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetAaaAuthorizationResult> getAaaAuthorization(GetAaaAuthorizationArgs args) {
         return getAaaAuthorization(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the AAA Authorization configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetAaaAuthorizationArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getAaaAuthorization();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetAaaAuthorizationResult> getAaaAuthorizationPlain(GetAaaAuthorizationPlainArgs args) {
         return getAaaAuthorizationPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the AAA Authorization configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetAaaAuthorizationArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getAaaAuthorization();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetAaaAuthorizationResult> getAaaAuthorization(GetAaaAuthorizationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getAaaAuthorization:getAaaAuthorization", TypeShape.of(GetAaaAuthorizationResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the AAA Authorization configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetAaaAuthorizationArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getAaaAuthorization();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetAaaAuthorizationResult> getAaaAuthorizationPlain(GetAaaAuthorizationPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getAaaAuthorization:getAaaAuthorization", TypeShape.of(GetAaaAuthorizationResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Access List Extended configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetAccessListExtendedArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getAccessListExtended(GetAccessListExtendedArgs.builder()
+     *             .name(&#34;EACL1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetAccessListExtendedResult> getAccessListExtended(GetAccessListExtendedArgs args) {
         return getAccessListExtended(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Access List Extended configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetAccessListExtendedArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getAccessListExtended(GetAccessListExtendedArgs.builder()
+     *             .name(&#34;EACL1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetAccessListExtendedResult> getAccessListExtendedPlain(GetAccessListExtendedPlainArgs args) {
         return getAccessListExtendedPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Access List Extended configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetAccessListExtendedArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getAccessListExtended(GetAccessListExtendedArgs.builder()
+     *             .name(&#34;EACL1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetAccessListExtendedResult> getAccessListExtended(GetAccessListExtendedArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getAccessListExtended:getAccessListExtended", TypeShape.of(GetAccessListExtendedResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Access List Extended configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetAccessListExtendedArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getAccessListExtended(GetAccessListExtendedArgs.builder()
+     *             .name(&#34;EACL1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetAccessListExtendedResult> getAccessListExtendedPlain(GetAccessListExtendedPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getAccessListExtended:getAccessListExtended", TypeShape.of(GetAccessListExtendedResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Access List Standard configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetAccessListStandardArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getAccessListStandard(GetAccessListStandardArgs.builder()
+     *             .name(&#34;SACL1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetAccessListStandardResult> getAccessListStandard(GetAccessListStandardArgs args) {
         return getAccessListStandard(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Access List Standard configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetAccessListStandardArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getAccessListStandard(GetAccessListStandardArgs.builder()
+     *             .name(&#34;SACL1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetAccessListStandardResult> getAccessListStandardPlain(GetAccessListStandardPlainArgs args) {
         return getAccessListStandardPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Access List Standard configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetAccessListStandardArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getAccessListStandard(GetAccessListStandardArgs.builder()
+     *             .name(&#34;SACL1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetAccessListStandardResult> getAccessListStandard(GetAccessListStandardArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getAccessListStandard:getAccessListStandard", TypeShape.of(GetAccessListStandardResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Access List Standard configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetAccessListStandardArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getAccessListStandard(GetAccessListStandardArgs.builder()
+     *             .name(&#34;SACL1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetAccessListStandardResult> getAccessListStandardPlain(GetAccessListStandardPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getAccessListStandard:getAccessListStandard", TypeShape.of(GetAccessListStandardResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the ARP configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetArpArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getArp();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetArpResult> getArp() {
         return getArp(GetArpArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the ARP configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetArpArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getArp();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetArpResult> getArpPlain() {
         return getArpPlain(GetArpPlainArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the ARP configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetArpArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getArp();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetArpResult> getArp(GetArpArgs args) {
         return getArp(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the ARP configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetArpArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getArp();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetArpResult> getArpPlain(GetArpPlainArgs args) {
         return getArpPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the ARP configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetArpArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getArp();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetArpResult> getArp(GetArpArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getArp:getArp", TypeShape.of(GetArpResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the ARP configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetArpArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getArp();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetArpResult> getArpPlain(GetArpPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getArp:getArp", TypeShape.of(GetArpResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Banner configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBannerArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBanner();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetBannerResult> getBanner() {
         return getBanner(GetBannerArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Banner configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBannerArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBanner();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetBannerResult> getBannerPlain() {
         return getBannerPlain(GetBannerPlainArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Banner configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBannerArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBanner();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetBannerResult> getBanner(GetBannerArgs args) {
         return getBanner(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Banner configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBannerArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBanner();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetBannerResult> getBannerPlain(GetBannerPlainArgs args) {
         return getBannerPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Banner configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBannerArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBanner();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetBannerResult> getBanner(GetBannerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getBanner:getBanner", TypeShape.of(GetBannerResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Banner configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBannerArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBanner();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetBannerResult> getBannerPlain(GetBannerPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getBanner:getBanner", TypeShape.of(GetBannerResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the BFD configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBfdArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBfd();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetBfdResult> getBfd() {
         return getBfd(GetBfdArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the BFD configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBfdArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBfd();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetBfdResult> getBfdPlain() {
         return getBfdPlain(GetBfdPlainArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the BFD configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBfdArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBfd();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetBfdResult> getBfd(GetBfdArgs args) {
         return getBfd(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the BFD configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBfdArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBfd();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetBfdResult> getBfdPlain(GetBfdPlainArgs args) {
         return getBfdPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the BFD configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBfdArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBfd();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetBfdResult> getBfd(GetBfdArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getBfd:getBfd", TypeShape.of(GetBfdResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the BFD configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBfdArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBfd();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetBfdResult> getBfdPlain(GetBfdPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getBfd:getBfd", TypeShape.of(GetBfdResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the BFD Template Multi Hop configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBfdTemplateMultiHopArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBfdTemplateMultiHop(GetBfdTemplateMultiHopArgs.builder()
+     *             .name(&#34;T11&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetBfdTemplateMultiHopResult> getBfdTemplateMultiHop(GetBfdTemplateMultiHopArgs args) {
         return getBfdTemplateMultiHop(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the BFD Template Multi Hop configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBfdTemplateMultiHopArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBfdTemplateMultiHop(GetBfdTemplateMultiHopArgs.builder()
+     *             .name(&#34;T11&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetBfdTemplateMultiHopResult> getBfdTemplateMultiHopPlain(GetBfdTemplateMultiHopPlainArgs args) {
         return getBfdTemplateMultiHopPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the BFD Template Multi Hop configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBfdTemplateMultiHopArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBfdTemplateMultiHop(GetBfdTemplateMultiHopArgs.builder()
+     *             .name(&#34;T11&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetBfdTemplateMultiHopResult> getBfdTemplateMultiHop(GetBfdTemplateMultiHopArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getBfdTemplateMultiHop:getBfdTemplateMultiHop", TypeShape.of(GetBfdTemplateMultiHopResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the BFD Template Multi Hop configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBfdTemplateMultiHopArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBfdTemplateMultiHop(GetBfdTemplateMultiHopArgs.builder()
+     *             .name(&#34;T11&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetBfdTemplateMultiHopResult> getBfdTemplateMultiHopPlain(GetBfdTemplateMultiHopPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getBfdTemplateMultiHop:getBfdTemplateMultiHop", TypeShape.of(GetBfdTemplateMultiHopResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the BFD Template Single Hop configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBfdTemplateSingleHopArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBfdTemplateSingleHop(GetBfdTemplateSingleHopArgs.builder()
+     *             .name(&#34;SH-TEMPLATE-1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetBfdTemplateSingleHopResult> getBfdTemplateSingleHop(GetBfdTemplateSingleHopArgs args) {
         return getBfdTemplateSingleHop(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the BFD Template Single Hop configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBfdTemplateSingleHopArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBfdTemplateSingleHop(GetBfdTemplateSingleHopArgs.builder()
+     *             .name(&#34;SH-TEMPLATE-1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetBfdTemplateSingleHopResult> getBfdTemplateSingleHopPlain(GetBfdTemplateSingleHopPlainArgs args) {
         return getBfdTemplateSingleHopPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the BFD Template Single Hop configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBfdTemplateSingleHopArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBfdTemplateSingleHop(GetBfdTemplateSingleHopArgs.builder()
+     *             .name(&#34;SH-TEMPLATE-1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetBfdTemplateSingleHopResult> getBfdTemplateSingleHop(GetBfdTemplateSingleHopArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getBfdTemplateSingleHop:getBfdTemplateSingleHop", TypeShape.of(GetBfdTemplateSingleHopResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the BFD Template Single Hop configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBfdTemplateSingleHopArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBfdTemplateSingleHop(GetBfdTemplateSingleHopArgs.builder()
+     *             .name(&#34;SH-TEMPLATE-1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetBfdTemplateSingleHopResult> getBfdTemplateSingleHopPlain(GetBfdTemplateSingleHopPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getBfdTemplateSingleHop:getBfdTemplateSingleHop", TypeShape.of(GetBfdTemplateSingleHopResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the BGP configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBgpArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBgp(GetBgpArgs.builder()
+     *             .asn(&#34;65000&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetBgpResult> getBgp(GetBgpArgs args) {
         return getBgp(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the BGP configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBgpArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBgp(GetBgpArgs.builder()
+     *             .asn(&#34;65000&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetBgpResult> getBgpPlain(GetBgpPlainArgs args) {
         return getBgpPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the BGP configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBgpArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBgp(GetBgpArgs.builder()
+     *             .asn(&#34;65000&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetBgpResult> getBgp(GetBgpArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getBgp:getBgp", TypeShape.of(GetBgpResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the BGP configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBgpArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBgp(GetBgpArgs.builder()
+     *             .asn(&#34;65000&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetBgpResult> getBgpPlain(GetBgpPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getBgp:getBgp", TypeShape.of(GetBgpResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the BGP Address Family IPv4 configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBgpAddressFamilyIpv4Args;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBgpAddressFamilyIpv4(GetBgpAddressFamilyIpv4Args.builder()
+     *             .afName(&#34;unicast&#34;)
+     *             .asn(&#34;65000&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetBgpAddressFamilyIpv4Result> getBgpAddressFamilyIpv4(GetBgpAddressFamilyIpv4Args args) {
         return getBgpAddressFamilyIpv4(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the BGP Address Family IPv4 configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBgpAddressFamilyIpv4Args;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBgpAddressFamilyIpv4(GetBgpAddressFamilyIpv4Args.builder()
+     *             .afName(&#34;unicast&#34;)
+     *             .asn(&#34;65000&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetBgpAddressFamilyIpv4Result> getBgpAddressFamilyIpv4Plain(GetBgpAddressFamilyIpv4PlainArgs args) {
         return getBgpAddressFamilyIpv4Plain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the BGP Address Family IPv4 configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBgpAddressFamilyIpv4Args;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBgpAddressFamilyIpv4(GetBgpAddressFamilyIpv4Args.builder()
+     *             .afName(&#34;unicast&#34;)
+     *             .asn(&#34;65000&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetBgpAddressFamilyIpv4Result> getBgpAddressFamilyIpv4(GetBgpAddressFamilyIpv4Args args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getBgpAddressFamilyIpv4:getBgpAddressFamilyIpv4", TypeShape.of(GetBgpAddressFamilyIpv4Result.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the BGP Address Family IPv4 configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBgpAddressFamilyIpv4Args;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBgpAddressFamilyIpv4(GetBgpAddressFamilyIpv4Args.builder()
+     *             .afName(&#34;unicast&#34;)
+     *             .asn(&#34;65000&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetBgpAddressFamilyIpv4Result> getBgpAddressFamilyIpv4Plain(GetBgpAddressFamilyIpv4PlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getBgpAddressFamilyIpv4:getBgpAddressFamilyIpv4", TypeShape.of(GetBgpAddressFamilyIpv4Result.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the BGP Address Family IPv4 VRF configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBgpAddressFamilyIpv4VrfArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBgpAddressFamilyIpv4Vrf(GetBgpAddressFamilyIpv4VrfArgs.builder()
+     *             .afName(&#34;unicast&#34;)
+     *             .asn(&#34;65000&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetBgpAddressFamilyIpv4VrfResult> getBgpAddressFamilyIpv4Vrf(GetBgpAddressFamilyIpv4VrfArgs args) {
         return getBgpAddressFamilyIpv4Vrf(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the BGP Address Family IPv4 VRF configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBgpAddressFamilyIpv4VrfArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBgpAddressFamilyIpv4Vrf(GetBgpAddressFamilyIpv4VrfArgs.builder()
+     *             .afName(&#34;unicast&#34;)
+     *             .asn(&#34;65000&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetBgpAddressFamilyIpv4VrfResult> getBgpAddressFamilyIpv4VrfPlain(GetBgpAddressFamilyIpv4VrfPlainArgs args) {
         return getBgpAddressFamilyIpv4VrfPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the BGP Address Family IPv4 VRF configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBgpAddressFamilyIpv4VrfArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBgpAddressFamilyIpv4Vrf(GetBgpAddressFamilyIpv4VrfArgs.builder()
+     *             .afName(&#34;unicast&#34;)
+     *             .asn(&#34;65000&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetBgpAddressFamilyIpv4VrfResult> getBgpAddressFamilyIpv4Vrf(GetBgpAddressFamilyIpv4VrfArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getBgpAddressFamilyIpv4Vrf:getBgpAddressFamilyIpv4Vrf", TypeShape.of(GetBgpAddressFamilyIpv4VrfResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the BGP Address Family IPv4 VRF configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBgpAddressFamilyIpv4VrfArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBgpAddressFamilyIpv4Vrf(GetBgpAddressFamilyIpv4VrfArgs.builder()
+     *             .afName(&#34;unicast&#34;)
+     *             .asn(&#34;65000&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetBgpAddressFamilyIpv4VrfResult> getBgpAddressFamilyIpv4VrfPlain(GetBgpAddressFamilyIpv4VrfPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getBgpAddressFamilyIpv4Vrf:getBgpAddressFamilyIpv4Vrf", TypeShape.of(GetBgpAddressFamilyIpv4VrfResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the BGP Address Family IPv6 configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBgpAddressFamilyIpv6Args;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBgpAddressFamilyIpv6(GetBgpAddressFamilyIpv6Args.builder()
+     *             .afName(&#34;unicast&#34;)
+     *             .asn(&#34;65000&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetBgpAddressFamilyIpv6Result> getBgpAddressFamilyIpv6(GetBgpAddressFamilyIpv6Args args) {
         return getBgpAddressFamilyIpv6(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the BGP Address Family IPv6 configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBgpAddressFamilyIpv6Args;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBgpAddressFamilyIpv6(GetBgpAddressFamilyIpv6Args.builder()
+     *             .afName(&#34;unicast&#34;)
+     *             .asn(&#34;65000&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetBgpAddressFamilyIpv6Result> getBgpAddressFamilyIpv6Plain(GetBgpAddressFamilyIpv6PlainArgs args) {
         return getBgpAddressFamilyIpv6Plain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the BGP Address Family IPv6 configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBgpAddressFamilyIpv6Args;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBgpAddressFamilyIpv6(GetBgpAddressFamilyIpv6Args.builder()
+     *             .afName(&#34;unicast&#34;)
+     *             .asn(&#34;65000&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetBgpAddressFamilyIpv6Result> getBgpAddressFamilyIpv6(GetBgpAddressFamilyIpv6Args args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getBgpAddressFamilyIpv6:getBgpAddressFamilyIpv6", TypeShape.of(GetBgpAddressFamilyIpv6Result.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the BGP Address Family IPv6 configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBgpAddressFamilyIpv6Args;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBgpAddressFamilyIpv6(GetBgpAddressFamilyIpv6Args.builder()
+     *             .afName(&#34;unicast&#34;)
+     *             .asn(&#34;65000&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetBgpAddressFamilyIpv6Result> getBgpAddressFamilyIpv6Plain(GetBgpAddressFamilyIpv6PlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getBgpAddressFamilyIpv6:getBgpAddressFamilyIpv6", TypeShape.of(GetBgpAddressFamilyIpv6Result.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the BGP Address Family IPv6 VRF configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBgpAddressFamilyIpv6VrfArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBgpAddressFamilyIpv6Vrf(GetBgpAddressFamilyIpv6VrfArgs.builder()
+     *             .afName(&#34;unicast&#34;)
+     *             .asn(&#34;65000&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetBgpAddressFamilyIpv6VrfResult> getBgpAddressFamilyIpv6Vrf(GetBgpAddressFamilyIpv6VrfArgs args) {
         return getBgpAddressFamilyIpv6Vrf(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the BGP Address Family IPv6 VRF configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBgpAddressFamilyIpv6VrfArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBgpAddressFamilyIpv6Vrf(GetBgpAddressFamilyIpv6VrfArgs.builder()
+     *             .afName(&#34;unicast&#34;)
+     *             .asn(&#34;65000&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetBgpAddressFamilyIpv6VrfResult> getBgpAddressFamilyIpv6VrfPlain(GetBgpAddressFamilyIpv6VrfPlainArgs args) {
         return getBgpAddressFamilyIpv6VrfPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the BGP Address Family IPv6 VRF configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBgpAddressFamilyIpv6VrfArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBgpAddressFamilyIpv6Vrf(GetBgpAddressFamilyIpv6VrfArgs.builder()
+     *             .afName(&#34;unicast&#34;)
+     *             .asn(&#34;65000&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetBgpAddressFamilyIpv6VrfResult> getBgpAddressFamilyIpv6Vrf(GetBgpAddressFamilyIpv6VrfArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getBgpAddressFamilyIpv6Vrf:getBgpAddressFamilyIpv6Vrf", TypeShape.of(GetBgpAddressFamilyIpv6VrfResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the BGP Address Family IPv6 VRF configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBgpAddressFamilyIpv6VrfArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBgpAddressFamilyIpv6Vrf(GetBgpAddressFamilyIpv6VrfArgs.builder()
+     *             .afName(&#34;unicast&#34;)
+     *             .asn(&#34;65000&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetBgpAddressFamilyIpv6VrfResult> getBgpAddressFamilyIpv6VrfPlain(GetBgpAddressFamilyIpv6VrfPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getBgpAddressFamilyIpv6Vrf:getBgpAddressFamilyIpv6Vrf", TypeShape.of(GetBgpAddressFamilyIpv6VrfResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the BGP Address Family L2VPN configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBgpAddressFamilyL2vpnArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBgpAddressFamilyL2vpn(GetBgpAddressFamilyL2vpnArgs.builder()
+     *             .afName(&#34;evpn&#34;)
+     *             .asn(&#34;65000&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetBgpAddressFamilyL2vpnResult> getBgpAddressFamilyL2vpn(GetBgpAddressFamilyL2vpnArgs args) {
         return getBgpAddressFamilyL2vpn(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the BGP Address Family L2VPN configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBgpAddressFamilyL2vpnArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBgpAddressFamilyL2vpn(GetBgpAddressFamilyL2vpnArgs.builder()
+     *             .afName(&#34;evpn&#34;)
+     *             .asn(&#34;65000&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetBgpAddressFamilyL2vpnResult> getBgpAddressFamilyL2vpnPlain(GetBgpAddressFamilyL2vpnPlainArgs args) {
         return getBgpAddressFamilyL2vpnPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the BGP Address Family L2VPN configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBgpAddressFamilyL2vpnArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBgpAddressFamilyL2vpn(GetBgpAddressFamilyL2vpnArgs.builder()
+     *             .afName(&#34;evpn&#34;)
+     *             .asn(&#34;65000&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetBgpAddressFamilyL2vpnResult> getBgpAddressFamilyL2vpn(GetBgpAddressFamilyL2vpnArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getBgpAddressFamilyL2vpn:getBgpAddressFamilyL2vpn", TypeShape.of(GetBgpAddressFamilyL2vpnResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the BGP Address Family L2VPN configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBgpAddressFamilyL2vpnArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBgpAddressFamilyL2vpn(GetBgpAddressFamilyL2vpnArgs.builder()
+     *             .afName(&#34;evpn&#34;)
+     *             .asn(&#34;65000&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetBgpAddressFamilyL2vpnResult> getBgpAddressFamilyL2vpnPlain(GetBgpAddressFamilyL2vpnPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getBgpAddressFamilyL2vpn:getBgpAddressFamilyL2vpn", TypeShape.of(GetBgpAddressFamilyL2vpnResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the BGP IPv4 Unicast Neighbor configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBgpIpv4UnicastNeighborArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBgpIpv4UnicastNeighbor(GetBgpIpv4UnicastNeighborArgs.builder()
+     *             .asn(&#34;65000&#34;)
+     *             .ip(&#34;3.3.3.3&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetBgpIpv4UnicastNeighborResult> getBgpIpv4UnicastNeighbor(GetBgpIpv4UnicastNeighborArgs args) {
         return getBgpIpv4UnicastNeighbor(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the BGP IPv4 Unicast Neighbor configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBgpIpv4UnicastNeighborArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBgpIpv4UnicastNeighbor(GetBgpIpv4UnicastNeighborArgs.builder()
+     *             .asn(&#34;65000&#34;)
+     *             .ip(&#34;3.3.3.3&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetBgpIpv4UnicastNeighborResult> getBgpIpv4UnicastNeighborPlain(GetBgpIpv4UnicastNeighborPlainArgs args) {
         return getBgpIpv4UnicastNeighborPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the BGP IPv4 Unicast Neighbor configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBgpIpv4UnicastNeighborArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBgpIpv4UnicastNeighbor(GetBgpIpv4UnicastNeighborArgs.builder()
+     *             .asn(&#34;65000&#34;)
+     *             .ip(&#34;3.3.3.3&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetBgpIpv4UnicastNeighborResult> getBgpIpv4UnicastNeighbor(GetBgpIpv4UnicastNeighborArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getBgpIpv4UnicastNeighbor:getBgpIpv4UnicastNeighbor", TypeShape.of(GetBgpIpv4UnicastNeighborResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the BGP IPv4 Unicast Neighbor configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBgpIpv4UnicastNeighborArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBgpIpv4UnicastNeighbor(GetBgpIpv4UnicastNeighborArgs.builder()
+     *             .asn(&#34;65000&#34;)
+     *             .ip(&#34;3.3.3.3&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetBgpIpv4UnicastNeighborResult> getBgpIpv4UnicastNeighborPlain(GetBgpIpv4UnicastNeighborPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getBgpIpv4UnicastNeighbor:getBgpIpv4UnicastNeighbor", TypeShape.of(GetBgpIpv4UnicastNeighborResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the BGP IPv4 Unicast VRF Neighbor configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBgpIpv4UnicastVrfNeighborArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBgpIpv4UnicastVrfNeighbor(GetBgpIpv4UnicastVrfNeighborArgs.builder()
+     *             .asn(&#34;65000&#34;)
+     *             .ip(&#34;3.3.3.3&#34;)
+     *             .vrf(&#34;VRF1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetBgpIpv4UnicastVrfNeighborResult> getBgpIpv4UnicastVrfNeighbor(GetBgpIpv4UnicastVrfNeighborArgs args) {
         return getBgpIpv4UnicastVrfNeighbor(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the BGP IPv4 Unicast VRF Neighbor configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBgpIpv4UnicastVrfNeighborArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBgpIpv4UnicastVrfNeighbor(GetBgpIpv4UnicastVrfNeighborArgs.builder()
+     *             .asn(&#34;65000&#34;)
+     *             .ip(&#34;3.3.3.3&#34;)
+     *             .vrf(&#34;VRF1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetBgpIpv4UnicastVrfNeighborResult> getBgpIpv4UnicastVrfNeighborPlain(GetBgpIpv4UnicastVrfNeighborPlainArgs args) {
         return getBgpIpv4UnicastVrfNeighborPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the BGP IPv4 Unicast VRF Neighbor configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBgpIpv4UnicastVrfNeighborArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBgpIpv4UnicastVrfNeighbor(GetBgpIpv4UnicastVrfNeighborArgs.builder()
+     *             .asn(&#34;65000&#34;)
+     *             .ip(&#34;3.3.3.3&#34;)
+     *             .vrf(&#34;VRF1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetBgpIpv4UnicastVrfNeighborResult> getBgpIpv4UnicastVrfNeighbor(GetBgpIpv4UnicastVrfNeighborArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getBgpIpv4UnicastVrfNeighbor:getBgpIpv4UnicastVrfNeighbor", TypeShape.of(GetBgpIpv4UnicastVrfNeighborResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the BGP IPv4 Unicast VRF Neighbor configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBgpIpv4UnicastVrfNeighborArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBgpIpv4UnicastVrfNeighbor(GetBgpIpv4UnicastVrfNeighborArgs.builder()
+     *             .asn(&#34;65000&#34;)
+     *             .ip(&#34;3.3.3.3&#34;)
+     *             .vrf(&#34;VRF1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetBgpIpv4UnicastVrfNeighborResult> getBgpIpv4UnicastVrfNeighborPlain(GetBgpIpv4UnicastVrfNeighborPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getBgpIpv4UnicastVrfNeighbor:getBgpIpv4UnicastVrfNeighbor", TypeShape.of(GetBgpIpv4UnicastVrfNeighborResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the BGP IPv6 Unicast Neighbor configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBgpIpv6UnicastNeighborArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBgpIpv6UnicastNeighbor(GetBgpIpv6UnicastNeighborArgs.builder()
+     *             .asn(&#34;65000&#34;)
+     *             .ip(&#34;3.3.3.3&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetBgpIpv6UnicastNeighborResult> getBgpIpv6UnicastNeighbor(GetBgpIpv6UnicastNeighborArgs args) {
         return getBgpIpv6UnicastNeighbor(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the BGP IPv6 Unicast Neighbor configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBgpIpv6UnicastNeighborArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBgpIpv6UnicastNeighbor(GetBgpIpv6UnicastNeighborArgs.builder()
+     *             .asn(&#34;65000&#34;)
+     *             .ip(&#34;3.3.3.3&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetBgpIpv6UnicastNeighborResult> getBgpIpv6UnicastNeighborPlain(GetBgpIpv6UnicastNeighborPlainArgs args) {
         return getBgpIpv6UnicastNeighborPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the BGP IPv6 Unicast Neighbor configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBgpIpv6UnicastNeighborArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBgpIpv6UnicastNeighbor(GetBgpIpv6UnicastNeighborArgs.builder()
+     *             .asn(&#34;65000&#34;)
+     *             .ip(&#34;3.3.3.3&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetBgpIpv6UnicastNeighborResult> getBgpIpv6UnicastNeighbor(GetBgpIpv6UnicastNeighborArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getBgpIpv6UnicastNeighbor:getBgpIpv6UnicastNeighbor", TypeShape.of(GetBgpIpv6UnicastNeighborResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the BGP IPv6 Unicast Neighbor configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBgpIpv6UnicastNeighborArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBgpIpv6UnicastNeighbor(GetBgpIpv6UnicastNeighborArgs.builder()
+     *             .asn(&#34;65000&#34;)
+     *             .ip(&#34;3.3.3.3&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetBgpIpv6UnicastNeighborResult> getBgpIpv6UnicastNeighborPlain(GetBgpIpv6UnicastNeighborPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getBgpIpv6UnicastNeighbor:getBgpIpv6UnicastNeighbor", TypeShape.of(GetBgpIpv6UnicastNeighborResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the BGP L2VPN EVPN Neighbor configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBgpL2vpnEvpnNeighborArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBgpL2vpnEvpnNeighbor(GetBgpL2vpnEvpnNeighborArgs.builder()
+     *             .asn(&#34;65000&#34;)
+     *             .ip(&#34;3.3.3.3&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetBgpL2vpnEvpnNeighborResult> getBgpL2vpnEvpnNeighbor(GetBgpL2vpnEvpnNeighborArgs args) {
         return getBgpL2vpnEvpnNeighbor(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the BGP L2VPN EVPN Neighbor configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBgpL2vpnEvpnNeighborArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBgpL2vpnEvpnNeighbor(GetBgpL2vpnEvpnNeighborArgs.builder()
+     *             .asn(&#34;65000&#34;)
+     *             .ip(&#34;3.3.3.3&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetBgpL2vpnEvpnNeighborResult> getBgpL2vpnEvpnNeighborPlain(GetBgpL2vpnEvpnNeighborPlainArgs args) {
         return getBgpL2vpnEvpnNeighborPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the BGP L2VPN EVPN Neighbor configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBgpL2vpnEvpnNeighborArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBgpL2vpnEvpnNeighbor(GetBgpL2vpnEvpnNeighborArgs.builder()
+     *             .asn(&#34;65000&#34;)
+     *             .ip(&#34;3.3.3.3&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetBgpL2vpnEvpnNeighborResult> getBgpL2vpnEvpnNeighbor(GetBgpL2vpnEvpnNeighborArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getBgpL2vpnEvpnNeighbor:getBgpL2vpnEvpnNeighbor", TypeShape.of(GetBgpL2vpnEvpnNeighborResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the BGP L2VPN EVPN Neighbor configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBgpL2vpnEvpnNeighborArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBgpL2vpnEvpnNeighbor(GetBgpL2vpnEvpnNeighborArgs.builder()
+     *             .asn(&#34;65000&#34;)
+     *             .ip(&#34;3.3.3.3&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetBgpL2vpnEvpnNeighborResult> getBgpL2vpnEvpnNeighborPlain(GetBgpL2vpnEvpnNeighborPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getBgpL2vpnEvpnNeighbor:getBgpL2vpnEvpnNeighbor", TypeShape.of(GetBgpL2vpnEvpnNeighborResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the BGP Neighbor configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBgpNeighborArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBgpNeighbor(GetBgpNeighborArgs.builder()
+     *             .asn(&#34;65000&#34;)
+     *             .ip(&#34;3.3.3.3&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetBgpNeighborResult> getBgpNeighbor(GetBgpNeighborArgs args) {
         return getBgpNeighbor(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the BGP Neighbor configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBgpNeighborArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBgpNeighbor(GetBgpNeighborArgs.builder()
+     *             .asn(&#34;65000&#34;)
+     *             .ip(&#34;3.3.3.3&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetBgpNeighborResult> getBgpNeighborPlain(GetBgpNeighborPlainArgs args) {
         return getBgpNeighborPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the BGP Neighbor configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBgpNeighborArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBgpNeighbor(GetBgpNeighborArgs.builder()
+     *             .asn(&#34;65000&#34;)
+     *             .ip(&#34;3.3.3.3&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetBgpNeighborResult> getBgpNeighbor(GetBgpNeighborArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getBgpNeighbor:getBgpNeighbor", TypeShape.of(GetBgpNeighborResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the BGP Neighbor configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetBgpNeighborArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getBgpNeighbor(GetBgpNeighborArgs.builder()
+     *             .asn(&#34;65000&#34;)
+     *             .ip(&#34;3.3.3.3&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetBgpNeighborResult> getBgpNeighborPlain(GetBgpNeighborPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getBgpNeighbor:getBgpNeighbor", TypeShape.of(GetBgpNeighborResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the CDP configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetCdpArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getCdp();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetCdpResult> getCdp() {
         return getCdp(GetCdpArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the CDP configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetCdpArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getCdp();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetCdpResult> getCdpPlain() {
         return getCdpPlain(GetCdpPlainArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the CDP configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetCdpArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getCdp();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetCdpResult> getCdp(GetCdpArgs args) {
         return getCdp(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the CDP configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetCdpArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getCdp();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetCdpResult> getCdpPlain(GetCdpPlainArgs args) {
         return getCdpPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the CDP configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetCdpArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getCdp();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetCdpResult> getCdp(GetCdpArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getCdp:getCdp", TypeShape.of(GetCdpResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the CDP configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetCdpArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getCdp();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetCdpResult> getCdpPlain(GetCdpPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getCdp:getCdp", TypeShape.of(GetCdpResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Class Map configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetClassMapArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getClassMap(GetClassMapArgs.builder()
+     *             .name(&#34;CM1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetClassMapResult> getClassMap(GetClassMapArgs args) {
         return getClassMap(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Class Map configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetClassMapArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getClassMap(GetClassMapArgs.builder()
+     *             .name(&#34;CM1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetClassMapResult> getClassMapPlain(GetClassMapPlainArgs args) {
         return getClassMapPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Class Map configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetClassMapArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getClassMap(GetClassMapArgs.builder()
+     *             .name(&#34;CM1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetClassMapResult> getClassMap(GetClassMapArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getClassMap:getClassMap", TypeShape.of(GetClassMapResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Class Map configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetClassMapArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getClassMap(GetClassMapArgs.builder()
+     *             .name(&#34;CM1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetClassMapResult> getClassMapPlain(GetClassMapPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getClassMap:getClassMap", TypeShape.of(GetClassMapResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Clock configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetClockArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getClock();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetClockResult> getClock() {
         return getClock(GetClockArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Clock configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetClockArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getClock();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetClockResult> getClockPlain() {
         return getClockPlain(GetClockPlainArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Clock configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetClockArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getClock();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetClockResult> getClock(GetClockArgs args) {
         return getClock(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Clock configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetClockArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getClock();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetClockResult> getClockPlain(GetClockPlainArgs args) {
         return getClockPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Clock configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetClockArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getClock();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetClockResult> getClock(GetClockArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getClock:getClock", TypeShape.of(GetClockResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Clock configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetClockArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getClock();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetClockResult> getClockPlain(GetClockPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getClock:getClock", TypeShape.of(GetClockResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Crypto IKEv2 configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetCryptoIkev2Args;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getCryptoIkev2();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetCryptoIkev2Result> getCryptoIkev2() {
         return getCryptoIkev2(GetCryptoIkev2Args.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Crypto IKEv2 configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetCryptoIkev2Args;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getCryptoIkev2();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetCryptoIkev2Result> getCryptoIkev2Plain() {
         return getCryptoIkev2Plain(GetCryptoIkev2PlainArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Crypto IKEv2 configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetCryptoIkev2Args;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getCryptoIkev2();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetCryptoIkev2Result> getCryptoIkev2(GetCryptoIkev2Args args) {
         return getCryptoIkev2(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Crypto IKEv2 configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetCryptoIkev2Args;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getCryptoIkev2();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetCryptoIkev2Result> getCryptoIkev2Plain(GetCryptoIkev2PlainArgs args) {
         return getCryptoIkev2Plain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Crypto IKEv2 configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetCryptoIkev2Args;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getCryptoIkev2();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetCryptoIkev2Result> getCryptoIkev2(GetCryptoIkev2Args args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getCryptoIkev2:getCryptoIkev2", TypeShape.of(GetCryptoIkev2Result.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Crypto IKEv2 configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetCryptoIkev2Args;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getCryptoIkev2();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetCryptoIkev2Result> getCryptoIkev2Plain(GetCryptoIkev2PlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getCryptoIkev2:getCryptoIkev2", TypeShape.of(GetCryptoIkev2Result.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Crypto IKEv2 Keyring configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetCryptoIkev2KeyringArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getCryptoIkev2Keyring(GetCryptoIkev2KeyringArgs.builder()
+     *             .name(&#34;keyring1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetCryptoIkev2KeyringResult> getCryptoIkev2Keyring(GetCryptoIkev2KeyringArgs args) {
         return getCryptoIkev2Keyring(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Crypto IKEv2 Keyring configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetCryptoIkev2KeyringArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getCryptoIkev2Keyring(GetCryptoIkev2KeyringArgs.builder()
+     *             .name(&#34;keyring1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetCryptoIkev2KeyringResult> getCryptoIkev2KeyringPlain(GetCryptoIkev2KeyringPlainArgs args) {
         return getCryptoIkev2KeyringPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Crypto IKEv2 Keyring configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetCryptoIkev2KeyringArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getCryptoIkev2Keyring(GetCryptoIkev2KeyringArgs.builder()
+     *             .name(&#34;keyring1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetCryptoIkev2KeyringResult> getCryptoIkev2Keyring(GetCryptoIkev2KeyringArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getCryptoIkev2Keyring:getCryptoIkev2Keyring", TypeShape.of(GetCryptoIkev2KeyringResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Crypto IKEv2 Keyring configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetCryptoIkev2KeyringArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getCryptoIkev2Keyring(GetCryptoIkev2KeyringArgs.builder()
+     *             .name(&#34;keyring1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetCryptoIkev2KeyringResult> getCryptoIkev2KeyringPlain(GetCryptoIkev2KeyringPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getCryptoIkev2Keyring:getCryptoIkev2Keyring", TypeShape.of(GetCryptoIkev2KeyringResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Crypto IKEv2 Policy configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetCryptoIkev2PolicyArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getCryptoIkev2Policy(GetCryptoIkev2PolicyArgs.builder()
+     *             .name(&#34;policy1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetCryptoIkev2PolicyResult> getCryptoIkev2Policy(GetCryptoIkev2PolicyArgs args) {
         return getCryptoIkev2Policy(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Crypto IKEv2 Policy configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetCryptoIkev2PolicyArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getCryptoIkev2Policy(GetCryptoIkev2PolicyArgs.builder()
+     *             .name(&#34;policy1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetCryptoIkev2PolicyResult> getCryptoIkev2PolicyPlain(GetCryptoIkev2PolicyPlainArgs args) {
         return getCryptoIkev2PolicyPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Crypto IKEv2 Policy configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetCryptoIkev2PolicyArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getCryptoIkev2Policy(GetCryptoIkev2PolicyArgs.builder()
+     *             .name(&#34;policy1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetCryptoIkev2PolicyResult> getCryptoIkev2Policy(GetCryptoIkev2PolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getCryptoIkev2Policy:getCryptoIkev2Policy", TypeShape.of(GetCryptoIkev2PolicyResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Crypto IKEv2 Policy configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetCryptoIkev2PolicyArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getCryptoIkev2Policy(GetCryptoIkev2PolicyArgs.builder()
+     *             .name(&#34;policy1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetCryptoIkev2PolicyResult> getCryptoIkev2PolicyPlain(GetCryptoIkev2PolicyPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getCryptoIkev2Policy:getCryptoIkev2Policy", TypeShape.of(GetCryptoIkev2PolicyResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Crypto IKEv2 Profile configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetCryptoIkev2ProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getCryptoIkev2Profile(GetCryptoIkev2ProfileArgs.builder()
+     *             .name(&#34;profile1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetCryptoIkev2ProfileResult> getCryptoIkev2Profile(GetCryptoIkev2ProfileArgs args) {
         return getCryptoIkev2Profile(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Crypto IKEv2 Profile configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetCryptoIkev2ProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getCryptoIkev2Profile(GetCryptoIkev2ProfileArgs.builder()
+     *             .name(&#34;profile1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetCryptoIkev2ProfileResult> getCryptoIkev2ProfilePlain(GetCryptoIkev2ProfilePlainArgs args) {
         return getCryptoIkev2ProfilePlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Crypto IKEv2 Profile configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetCryptoIkev2ProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getCryptoIkev2Profile(GetCryptoIkev2ProfileArgs.builder()
+     *             .name(&#34;profile1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetCryptoIkev2ProfileResult> getCryptoIkev2Profile(GetCryptoIkev2ProfileArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getCryptoIkev2Profile:getCryptoIkev2Profile", TypeShape.of(GetCryptoIkev2ProfileResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Crypto IKEv2 Profile configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetCryptoIkev2ProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getCryptoIkev2Profile(GetCryptoIkev2ProfileArgs.builder()
+     *             .name(&#34;profile1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetCryptoIkev2ProfileResult> getCryptoIkev2ProfilePlain(GetCryptoIkev2ProfilePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getCryptoIkev2Profile:getCryptoIkev2Profile", TypeShape.of(GetCryptoIkev2ProfileResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Crypto IKEv2 Proposal configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetCryptoIkev2ProposalArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getCryptoIkev2Proposal(GetCryptoIkev2ProposalArgs.builder()
+     *             .name(&#34;PROPOSAL1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetCryptoIkev2ProposalResult> getCryptoIkev2Proposal(GetCryptoIkev2ProposalArgs args) {
         return getCryptoIkev2Proposal(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Crypto IKEv2 Proposal configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetCryptoIkev2ProposalArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getCryptoIkev2Proposal(GetCryptoIkev2ProposalArgs.builder()
+     *             .name(&#34;PROPOSAL1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetCryptoIkev2ProposalResult> getCryptoIkev2ProposalPlain(GetCryptoIkev2ProposalPlainArgs args) {
         return getCryptoIkev2ProposalPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Crypto IKEv2 Proposal configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetCryptoIkev2ProposalArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getCryptoIkev2Proposal(GetCryptoIkev2ProposalArgs.builder()
+     *             .name(&#34;PROPOSAL1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetCryptoIkev2ProposalResult> getCryptoIkev2Proposal(GetCryptoIkev2ProposalArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getCryptoIkev2Proposal:getCryptoIkev2Proposal", TypeShape.of(GetCryptoIkev2ProposalResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Crypto IKEv2 Proposal configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetCryptoIkev2ProposalArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getCryptoIkev2Proposal(GetCryptoIkev2ProposalArgs.builder()
+     *             .name(&#34;PROPOSAL1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetCryptoIkev2ProposalResult> getCryptoIkev2ProposalPlain(GetCryptoIkev2ProposalPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getCryptoIkev2Proposal:getCryptoIkev2Proposal", TypeShape.of(GetCryptoIkev2ProposalResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Crypto IPSec Profile configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetCryptoIpsecProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getCryptoIpsecProfile(GetCryptoIpsecProfileArgs.builder()
+     *             .name(&#34;vpn200&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetCryptoIpsecProfileResult> getCryptoIpsecProfile(GetCryptoIpsecProfileArgs args) {
         return getCryptoIpsecProfile(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Crypto IPSec Profile configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetCryptoIpsecProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getCryptoIpsecProfile(GetCryptoIpsecProfileArgs.builder()
+     *             .name(&#34;vpn200&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetCryptoIpsecProfileResult> getCryptoIpsecProfilePlain(GetCryptoIpsecProfilePlainArgs args) {
         return getCryptoIpsecProfilePlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Crypto IPSec Profile configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetCryptoIpsecProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getCryptoIpsecProfile(GetCryptoIpsecProfileArgs.builder()
+     *             .name(&#34;vpn200&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetCryptoIpsecProfileResult> getCryptoIpsecProfile(GetCryptoIpsecProfileArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getCryptoIpsecProfile:getCryptoIpsecProfile", TypeShape.of(GetCryptoIpsecProfileResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Crypto IPSec Profile configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetCryptoIpsecProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getCryptoIpsecProfile(GetCryptoIpsecProfileArgs.builder()
+     *             .name(&#34;vpn200&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetCryptoIpsecProfileResult> getCryptoIpsecProfilePlain(GetCryptoIpsecProfilePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getCryptoIpsecProfile:getCryptoIpsecProfile", TypeShape.of(GetCryptoIpsecProfileResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Crypto IPSec Transform Set configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetCryptoIpsecTransformSetArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getCryptoIpsecTransformSet(GetCryptoIpsecTransformSetArgs.builder()
+     *             .name(&#34;TEST&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetCryptoIpsecTransformSetResult> getCryptoIpsecTransformSet(GetCryptoIpsecTransformSetArgs args) {
         return getCryptoIpsecTransformSet(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Crypto IPSec Transform Set configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetCryptoIpsecTransformSetArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getCryptoIpsecTransformSet(GetCryptoIpsecTransformSetArgs.builder()
+     *             .name(&#34;TEST&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetCryptoIpsecTransformSetResult> getCryptoIpsecTransformSetPlain(GetCryptoIpsecTransformSetPlainArgs args) {
         return getCryptoIpsecTransformSetPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Crypto IPSec Transform Set configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetCryptoIpsecTransformSetArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getCryptoIpsecTransformSet(GetCryptoIpsecTransformSetArgs.builder()
+     *             .name(&#34;TEST&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetCryptoIpsecTransformSetResult> getCryptoIpsecTransformSet(GetCryptoIpsecTransformSetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getCryptoIpsecTransformSet:getCryptoIpsecTransformSet", TypeShape.of(GetCryptoIpsecTransformSetResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Crypto IPSec Transform Set configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetCryptoIpsecTransformSetArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getCryptoIpsecTransformSet(GetCryptoIpsecTransformSetArgs.builder()
+     *             .name(&#34;TEST&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetCryptoIpsecTransformSetResult> getCryptoIpsecTransformSetPlain(GetCryptoIpsecTransformSetPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getCryptoIpsecTransformSet:getCryptoIpsecTransformSet", TypeShape.of(GetCryptoIpsecTransformSetResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the CTS configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetCtsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getCts();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetCtsResult> getCts() {
         return getCts(GetCtsArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the CTS configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetCtsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getCts();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetCtsResult> getCtsPlain() {
         return getCtsPlain(GetCtsPlainArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the CTS configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetCtsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getCts();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetCtsResult> getCts(GetCtsArgs args) {
         return getCts(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the CTS configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetCtsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getCts();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetCtsResult> getCtsPlain(GetCtsPlainArgs args) {
         return getCtsPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the CTS configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetCtsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getCts();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetCtsResult> getCts(GetCtsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getCts:getCts", TypeShape.of(GetCtsResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the CTS configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetCtsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getCts();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetCtsResult> getCtsPlain(GetCtsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getCts:getCts", TypeShape.of(GetCtsResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the DHCP configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetDhcpArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getDhcp();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetDhcpResult> getDhcp() {
         return getDhcp(GetDhcpArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the DHCP configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetDhcpArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getDhcp();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetDhcpResult> getDhcpPlain() {
         return getDhcpPlain(GetDhcpPlainArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the DHCP configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetDhcpArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getDhcp();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetDhcpResult> getDhcp(GetDhcpArgs args) {
         return getDhcp(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the DHCP configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetDhcpArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getDhcp();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetDhcpResult> getDhcpPlain(GetDhcpPlainArgs args) {
         return getDhcpPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the DHCP configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetDhcpArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getDhcp();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetDhcpResult> getDhcp(GetDhcpArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getDhcp:getDhcp", TypeShape.of(GetDhcpResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the DHCP configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetDhcpArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getDhcp();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetDhcpResult> getDhcpPlain(GetDhcpPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getDhcp:getDhcp", TypeShape.of(GetDhcpResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Dot1x configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetDot1xArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getDot1x();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetDot1xResult> getDot1x() {
         return getDot1x(GetDot1xArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Dot1x configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetDot1xArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getDot1x();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetDot1xResult> getDot1xPlain() {
         return getDot1xPlain(GetDot1xPlainArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Dot1x configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetDot1xArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getDot1x();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetDot1xResult> getDot1x(GetDot1xArgs args) {
         return getDot1x(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Dot1x configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetDot1xArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getDot1x();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetDot1xResult> getDot1xPlain(GetDot1xPlainArgs args) {
         return getDot1xPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Dot1x configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetDot1xArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getDot1x();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetDot1xResult> getDot1x(GetDot1xArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getDot1x:getDot1x", TypeShape.of(GetDot1xResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Dot1x configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetDot1xArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getDot1x();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetDot1xResult> getDot1xPlain(GetDot1xPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getDot1x:getDot1x", TypeShape.of(GetDot1xResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Errdisable configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetErrdisableArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getErrdisable();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetErrdisableResult> getErrdisable() {
         return getErrdisable(GetErrdisableArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Errdisable configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetErrdisableArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getErrdisable();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetErrdisableResult> getErrdisablePlain() {
         return getErrdisablePlain(GetErrdisablePlainArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Errdisable configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetErrdisableArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getErrdisable();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetErrdisableResult> getErrdisable(GetErrdisableArgs args) {
         return getErrdisable(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Errdisable configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetErrdisableArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getErrdisable();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetErrdisableResult> getErrdisablePlain(GetErrdisablePlainArgs args) {
         return getErrdisablePlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Errdisable configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetErrdisableArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getErrdisable();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetErrdisableResult> getErrdisable(GetErrdisableArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getErrdisable:getErrdisable", TypeShape.of(GetErrdisableResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Errdisable configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetErrdisableArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getErrdisable();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetErrdisableResult> getErrdisablePlain(GetErrdisablePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getErrdisable:getErrdisable", TypeShape.of(GetErrdisableResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the EVPN configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetEvpnArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getEvpn();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetEvpnResult> getEvpn() {
         return getEvpn(GetEvpnArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the EVPN configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetEvpnArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getEvpn();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetEvpnResult> getEvpnPlain() {
         return getEvpnPlain(GetEvpnPlainArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the EVPN configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetEvpnArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getEvpn();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetEvpnResult> getEvpn(GetEvpnArgs args) {
         return getEvpn(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the EVPN configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetEvpnArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getEvpn();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetEvpnResult> getEvpnPlain(GetEvpnPlainArgs args) {
         return getEvpnPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the EVPN configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetEvpnArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getEvpn();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetEvpnResult> getEvpn(GetEvpnArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getEvpn:getEvpn", TypeShape.of(GetEvpnResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the EVPN configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetEvpnArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getEvpn();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetEvpnResult> getEvpnPlain(GetEvpnPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getEvpn:getEvpn", TypeShape.of(GetEvpnResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the EVPN Instance configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetEvpnInstanceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getEvpnInstance(GetEvpnInstanceArgs.builder()
+     *             .evpnInstanceNum(10)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetEvpnInstanceResult> getEvpnInstance(GetEvpnInstanceArgs args) {
         return getEvpnInstance(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the EVPN Instance configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetEvpnInstanceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getEvpnInstance(GetEvpnInstanceArgs.builder()
+     *             .evpnInstanceNum(10)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetEvpnInstanceResult> getEvpnInstancePlain(GetEvpnInstancePlainArgs args) {
         return getEvpnInstancePlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the EVPN Instance configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetEvpnInstanceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getEvpnInstance(GetEvpnInstanceArgs.builder()
+     *             .evpnInstanceNum(10)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetEvpnInstanceResult> getEvpnInstance(GetEvpnInstanceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getEvpnInstance:getEvpnInstance", TypeShape.of(GetEvpnInstanceResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the EVPN Instance configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetEvpnInstanceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getEvpnInstance(GetEvpnInstanceArgs.builder()
+     *             .evpnInstanceNum(10)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetEvpnInstanceResult> getEvpnInstancePlain(GetEvpnInstancePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getEvpnInstance:getEvpnInstance", TypeShape.of(GetEvpnInstanceResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Interface Ethernet configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetInterfaceEthernetArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getInterfaceEthernet(GetInterfaceEthernetArgs.builder()
+     *             .name(&#34;3&#34;)
+     *             .type(&#34;GigabitEthernet&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetInterfaceEthernetResult> getInterfaceEthernet(GetInterfaceEthernetArgs args) {
         return getInterfaceEthernet(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Interface Ethernet configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetInterfaceEthernetArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getInterfaceEthernet(GetInterfaceEthernetArgs.builder()
+     *             .name(&#34;3&#34;)
+     *             .type(&#34;GigabitEthernet&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetInterfaceEthernetResult> getInterfaceEthernetPlain(GetInterfaceEthernetPlainArgs args) {
         return getInterfaceEthernetPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Interface Ethernet configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetInterfaceEthernetArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getInterfaceEthernet(GetInterfaceEthernetArgs.builder()
+     *             .name(&#34;3&#34;)
+     *             .type(&#34;GigabitEthernet&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetInterfaceEthernetResult> getInterfaceEthernet(GetInterfaceEthernetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getInterfaceEthernet:getInterfaceEthernet", TypeShape.of(GetInterfaceEthernetResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Interface Ethernet configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetInterfaceEthernetArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getInterfaceEthernet(GetInterfaceEthernetArgs.builder()
+     *             .name(&#34;3&#34;)
+     *             .type(&#34;GigabitEthernet&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetInterfaceEthernetResult> getInterfaceEthernetPlain(GetInterfaceEthernetPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getInterfaceEthernet:getInterfaceEthernet", TypeShape.of(GetInterfaceEthernetResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Interface Loopback configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetInterfaceLoopbackArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getInterfaceLoopback(GetInterfaceLoopbackArgs.builder()
+     *             .name(100)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetInterfaceLoopbackResult> getInterfaceLoopback(GetInterfaceLoopbackArgs args) {
         return getInterfaceLoopback(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Interface Loopback configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetInterfaceLoopbackArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getInterfaceLoopback(GetInterfaceLoopbackArgs.builder()
+     *             .name(100)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetInterfaceLoopbackResult> getInterfaceLoopbackPlain(GetInterfaceLoopbackPlainArgs args) {
         return getInterfaceLoopbackPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Interface Loopback configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetInterfaceLoopbackArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getInterfaceLoopback(GetInterfaceLoopbackArgs.builder()
+     *             .name(100)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetInterfaceLoopbackResult> getInterfaceLoopback(GetInterfaceLoopbackArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getInterfaceLoopback:getInterfaceLoopback", TypeShape.of(GetInterfaceLoopbackResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Interface Loopback configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetInterfaceLoopbackArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getInterfaceLoopback(GetInterfaceLoopbackArgs.builder()
+     *             .name(100)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetInterfaceLoopbackResult> getInterfaceLoopbackPlain(GetInterfaceLoopbackPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getInterfaceLoopback:getInterfaceLoopback", TypeShape.of(GetInterfaceLoopbackResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Interface MPLS configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetInterfaceMplsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getInterfaceMpls(GetInterfaceMplsArgs.builder()
+     *             .name(&#34;1&#34;)
+     *             .type(&#34;Loopback&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetInterfaceMplsResult> getInterfaceMpls(GetInterfaceMplsArgs args) {
         return getInterfaceMpls(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Interface MPLS configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetInterfaceMplsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getInterfaceMpls(GetInterfaceMplsArgs.builder()
+     *             .name(&#34;1&#34;)
+     *             .type(&#34;Loopback&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetInterfaceMplsResult> getInterfaceMplsPlain(GetInterfaceMplsPlainArgs args) {
         return getInterfaceMplsPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Interface MPLS configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetInterfaceMplsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getInterfaceMpls(GetInterfaceMplsArgs.builder()
+     *             .name(&#34;1&#34;)
+     *             .type(&#34;Loopback&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetInterfaceMplsResult> getInterfaceMpls(GetInterfaceMplsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getInterfaceMpls:getInterfaceMpls", TypeShape.of(GetInterfaceMplsResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Interface MPLS configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetInterfaceMplsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getInterfaceMpls(GetInterfaceMplsArgs.builder()
+     *             .name(&#34;1&#34;)
+     *             .type(&#34;Loopback&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetInterfaceMplsResult> getInterfaceMplsPlain(GetInterfaceMplsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getInterfaceMpls:getInterfaceMpls", TypeShape.of(GetInterfaceMplsResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Interface NVE configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetInterfaceNveArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getInterfaceNve(GetInterfaceNveArgs.builder()
+     *             .name(1)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetInterfaceNveResult> getInterfaceNve(GetInterfaceNveArgs args) {
         return getInterfaceNve(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Interface NVE configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetInterfaceNveArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getInterfaceNve(GetInterfaceNveArgs.builder()
+     *             .name(1)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetInterfaceNveResult> getInterfaceNvePlain(GetInterfaceNvePlainArgs args) {
         return getInterfaceNvePlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Interface NVE configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetInterfaceNveArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getInterfaceNve(GetInterfaceNveArgs.builder()
+     *             .name(1)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetInterfaceNveResult> getInterfaceNve(GetInterfaceNveArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getInterfaceNve:getInterfaceNve", TypeShape.of(GetInterfaceNveResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Interface NVE configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetInterfaceNveArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getInterfaceNve(GetInterfaceNveArgs.builder()
+     *             .name(1)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetInterfaceNveResult> getInterfaceNvePlain(GetInterfaceNvePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getInterfaceNve:getInterfaceNve", TypeShape.of(GetInterfaceNveResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Interface OSPF configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetInterfaceOspfArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getInterfaceOspf(GetInterfaceOspfArgs.builder()
+     *             .name(&#34;1&#34;)
+     *             .type(&#34;Loopback&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetInterfaceOspfResult> getInterfaceOspf(GetInterfaceOspfArgs args) {
         return getInterfaceOspf(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Interface OSPF configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetInterfaceOspfArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getInterfaceOspf(GetInterfaceOspfArgs.builder()
+     *             .name(&#34;1&#34;)
+     *             .type(&#34;Loopback&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetInterfaceOspfResult> getInterfaceOspfPlain(GetInterfaceOspfPlainArgs args) {
         return getInterfaceOspfPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Interface OSPF configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetInterfaceOspfArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getInterfaceOspf(GetInterfaceOspfArgs.builder()
+     *             .name(&#34;1&#34;)
+     *             .type(&#34;Loopback&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetInterfaceOspfResult> getInterfaceOspf(GetInterfaceOspfArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getInterfaceOspf:getInterfaceOspf", TypeShape.of(GetInterfaceOspfResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Interface OSPF configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetInterfaceOspfArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getInterfaceOspf(GetInterfaceOspfArgs.builder()
+     *             .name(&#34;1&#34;)
+     *             .type(&#34;Loopback&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetInterfaceOspfResult> getInterfaceOspfPlain(GetInterfaceOspfPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getInterfaceOspf:getInterfaceOspf", TypeShape.of(GetInterfaceOspfResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Interface OSPFv3 configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetInterfaceOspfv3Args;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getInterfaceOspfv3(GetInterfaceOspfv3Args.builder()
+     *             .name(&#34;1&#34;)
+     *             .type(&#34;Loopback&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetInterfaceOspfv3Result> getInterfaceOspfv3(GetInterfaceOspfv3Args args) {
         return getInterfaceOspfv3(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Interface OSPFv3 configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetInterfaceOspfv3Args;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getInterfaceOspfv3(GetInterfaceOspfv3Args.builder()
+     *             .name(&#34;1&#34;)
+     *             .type(&#34;Loopback&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetInterfaceOspfv3Result> getInterfaceOspfv3Plain(GetInterfaceOspfv3PlainArgs args) {
         return getInterfaceOspfv3Plain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Interface OSPFv3 configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetInterfaceOspfv3Args;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getInterfaceOspfv3(GetInterfaceOspfv3Args.builder()
+     *             .name(&#34;1&#34;)
+     *             .type(&#34;Loopback&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetInterfaceOspfv3Result> getInterfaceOspfv3(GetInterfaceOspfv3Args args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getInterfaceOspfv3:getInterfaceOspfv3", TypeShape.of(GetInterfaceOspfv3Result.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Interface OSPFv3 configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetInterfaceOspfv3Args;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getInterfaceOspfv3(GetInterfaceOspfv3Args.builder()
+     *             .name(&#34;1&#34;)
+     *             .type(&#34;Loopback&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetInterfaceOspfv3Result> getInterfaceOspfv3Plain(GetInterfaceOspfv3PlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getInterfaceOspfv3:getInterfaceOspfv3", TypeShape.of(GetInterfaceOspfv3Result.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Interface PIM configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetInterfacePimArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getInterfacePim(GetInterfacePimArgs.builder()
+     *             .name(&#34;100&#34;)
+     *             .type(&#34;Loopback&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetInterfacePimResult> getInterfacePim(GetInterfacePimArgs args) {
         return getInterfacePim(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Interface PIM configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetInterfacePimArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getInterfacePim(GetInterfacePimArgs.builder()
+     *             .name(&#34;100&#34;)
+     *             .type(&#34;Loopback&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetInterfacePimResult> getInterfacePimPlain(GetInterfacePimPlainArgs args) {
         return getInterfacePimPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Interface PIM configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetInterfacePimArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getInterfacePim(GetInterfacePimArgs.builder()
+     *             .name(&#34;100&#34;)
+     *             .type(&#34;Loopback&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetInterfacePimResult> getInterfacePim(GetInterfacePimArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getInterfacePim:getInterfacePim", TypeShape.of(GetInterfacePimResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Interface PIM configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetInterfacePimArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getInterfacePim(GetInterfacePimArgs.builder()
+     *             .name(&#34;100&#34;)
+     *             .type(&#34;Loopback&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetInterfacePimResult> getInterfacePimPlain(GetInterfacePimPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getInterfacePim:getInterfacePim", TypeShape.of(GetInterfacePimResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Interface Port Channel configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetInterfacePortChannelArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getInterfacePortChannel(GetInterfacePortChannelArgs.builder()
+     *             .name(10)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetInterfacePortChannelResult> getInterfacePortChannel(GetInterfacePortChannelArgs args) {
         return getInterfacePortChannel(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Interface Port Channel configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetInterfacePortChannelArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getInterfacePortChannel(GetInterfacePortChannelArgs.builder()
+     *             .name(10)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetInterfacePortChannelResult> getInterfacePortChannelPlain(GetInterfacePortChannelPlainArgs args) {
         return getInterfacePortChannelPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Interface Port Channel configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetInterfacePortChannelArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getInterfacePortChannel(GetInterfacePortChannelArgs.builder()
+     *             .name(10)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetInterfacePortChannelResult> getInterfacePortChannel(GetInterfacePortChannelArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getInterfacePortChannel:getInterfacePortChannel", TypeShape.of(GetInterfacePortChannelResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Interface Port Channel configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetInterfacePortChannelArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getInterfacePortChannel(GetInterfacePortChannelArgs.builder()
+     *             .name(10)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetInterfacePortChannelResult> getInterfacePortChannelPlain(GetInterfacePortChannelPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getInterfacePortChannel:getInterfacePortChannel", TypeShape.of(GetInterfacePortChannelResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Interface Port Channel Subinterface configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetInterfacePortChannelSubinterfaceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getInterfacePortChannelSubinterface(GetInterfacePortChannelSubinterfaceArgs.builder()
+     *             .name(&#34;10.666&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetInterfacePortChannelSubinterfaceResult> getInterfacePortChannelSubinterface(GetInterfacePortChannelSubinterfaceArgs args) {
         return getInterfacePortChannelSubinterface(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Interface Port Channel Subinterface configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetInterfacePortChannelSubinterfaceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getInterfacePortChannelSubinterface(GetInterfacePortChannelSubinterfaceArgs.builder()
+     *             .name(&#34;10.666&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetInterfacePortChannelSubinterfaceResult> getInterfacePortChannelSubinterfacePlain(GetInterfacePortChannelSubinterfacePlainArgs args) {
         return getInterfacePortChannelSubinterfacePlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Interface Port Channel Subinterface configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetInterfacePortChannelSubinterfaceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getInterfacePortChannelSubinterface(GetInterfacePortChannelSubinterfaceArgs.builder()
+     *             .name(&#34;10.666&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetInterfacePortChannelSubinterfaceResult> getInterfacePortChannelSubinterface(GetInterfacePortChannelSubinterfaceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getInterfacePortChannelSubinterface:getInterfacePortChannelSubinterface", TypeShape.of(GetInterfacePortChannelSubinterfaceResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Interface Port Channel Subinterface configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetInterfacePortChannelSubinterfaceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getInterfacePortChannelSubinterface(GetInterfacePortChannelSubinterfaceArgs.builder()
+     *             .name(&#34;10.666&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetInterfacePortChannelSubinterfaceResult> getInterfacePortChannelSubinterfacePlain(GetInterfacePortChannelSubinterfacePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getInterfacePortChannelSubinterface:getInterfacePortChannelSubinterface", TypeShape.of(GetInterfacePortChannelSubinterfaceResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Interface Switchport configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetInterfaceSwitchportArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getInterfaceSwitchport(GetInterfaceSwitchportArgs.builder()
+     *             .name(&#34;1/0/3&#34;)
+     *             .type(&#34;GigabitEthernet&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetInterfaceSwitchportResult> getInterfaceSwitchport(GetInterfaceSwitchportArgs args) {
         return getInterfaceSwitchport(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Interface Switchport configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetInterfaceSwitchportArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getInterfaceSwitchport(GetInterfaceSwitchportArgs.builder()
+     *             .name(&#34;1/0/3&#34;)
+     *             .type(&#34;GigabitEthernet&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetInterfaceSwitchportResult> getInterfaceSwitchportPlain(GetInterfaceSwitchportPlainArgs args) {
         return getInterfaceSwitchportPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Interface Switchport configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetInterfaceSwitchportArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getInterfaceSwitchport(GetInterfaceSwitchportArgs.builder()
+     *             .name(&#34;1/0/3&#34;)
+     *             .type(&#34;GigabitEthernet&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetInterfaceSwitchportResult> getInterfaceSwitchport(GetInterfaceSwitchportArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getInterfaceSwitchport:getInterfaceSwitchport", TypeShape.of(GetInterfaceSwitchportResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Interface Switchport configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetInterfaceSwitchportArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getInterfaceSwitchport(GetInterfaceSwitchportArgs.builder()
+     *             .name(&#34;1/0/3&#34;)
+     *             .type(&#34;GigabitEthernet&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetInterfaceSwitchportResult> getInterfaceSwitchportPlain(GetInterfaceSwitchportPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getInterfaceSwitchport:getInterfaceSwitchport", TypeShape.of(GetInterfaceSwitchportResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Interface Tunnel configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetInterfaceTunnelArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getInterfaceTunnel(GetInterfaceTunnelArgs.builder()
+     *             .name(90)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetInterfaceTunnelResult> getInterfaceTunnel(GetInterfaceTunnelArgs args) {
         return getInterfaceTunnel(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Interface Tunnel configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetInterfaceTunnelArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getInterfaceTunnel(GetInterfaceTunnelArgs.builder()
+     *             .name(90)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetInterfaceTunnelResult> getInterfaceTunnelPlain(GetInterfaceTunnelPlainArgs args) {
         return getInterfaceTunnelPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Interface Tunnel configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetInterfaceTunnelArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getInterfaceTunnel(GetInterfaceTunnelArgs.builder()
+     *             .name(90)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetInterfaceTunnelResult> getInterfaceTunnel(GetInterfaceTunnelArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getInterfaceTunnel:getInterfaceTunnel", TypeShape.of(GetInterfaceTunnelResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Interface Tunnel configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetInterfaceTunnelArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getInterfaceTunnel(GetInterfaceTunnelArgs.builder()
+     *             .name(90)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetInterfaceTunnelResult> getInterfaceTunnelPlain(GetInterfaceTunnelPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getInterfaceTunnel:getInterfaceTunnel", TypeShape.of(GetInterfaceTunnelResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Interface VLAN configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetInterfaceVlanArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getInterfaceVlan(GetInterfaceVlanArgs.builder()
+     *             .name(10)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetInterfaceVlanResult> getInterfaceVlan(GetInterfaceVlanArgs args) {
         return getInterfaceVlan(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Interface VLAN configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetInterfaceVlanArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getInterfaceVlan(GetInterfaceVlanArgs.builder()
+     *             .name(10)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetInterfaceVlanResult> getInterfaceVlanPlain(GetInterfaceVlanPlainArgs args) {
         return getInterfaceVlanPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Interface VLAN configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetInterfaceVlanArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getInterfaceVlan(GetInterfaceVlanArgs.builder()
+     *             .name(10)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetInterfaceVlanResult> getInterfaceVlan(GetInterfaceVlanArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getInterfaceVlan:getInterfaceVlan", TypeShape.of(GetInterfaceVlanResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Interface VLAN configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetInterfaceVlanArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getInterfaceVlan(GetInterfaceVlanArgs.builder()
+     *             .name(10)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetInterfaceVlanResult> getInterfaceVlanPlain(GetInterfaceVlanPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getInterfaceVlan:getInterfaceVlan", TypeShape.of(GetInterfaceVlanResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Line configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetLineArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getLine();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetLineResult> getLine() {
         return getLine(GetLineArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Line configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetLineArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getLine();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetLineResult> getLinePlain() {
         return getLinePlain(GetLinePlainArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Line configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetLineArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getLine();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetLineResult> getLine(GetLineArgs args) {
         return getLine(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Line configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetLineArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getLine();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetLineResult> getLinePlain(GetLinePlainArgs args) {
         return getLinePlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Line configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetLineArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getLine();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetLineResult> getLine(GetLineArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getLine:getLine", TypeShape.of(GetLineResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Line configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetLineArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getLine();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetLineResult> getLinePlain(GetLinePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getLine:getLine", TypeShape.of(GetLineResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Logging configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetLoggingArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getLogging();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetLoggingResult> getLogging() {
         return getLogging(GetLoggingArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Logging configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetLoggingArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getLogging();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetLoggingResult> getLoggingPlain() {
         return getLoggingPlain(GetLoggingPlainArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Logging configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetLoggingArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getLogging();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetLoggingResult> getLogging(GetLoggingArgs args) {
         return getLogging(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Logging configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetLoggingArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getLogging();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetLoggingResult> getLoggingPlain(GetLoggingPlainArgs args) {
         return getLoggingPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Logging configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetLoggingArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getLogging();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetLoggingResult> getLogging(GetLoggingArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getLogging:getLogging", TypeShape.of(GetLoggingResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Logging configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetLoggingArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getLogging();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetLoggingResult> getLoggingPlain(GetLoggingPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getLogging:getLogging", TypeShape.of(GetLoggingResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Logging IPv4 Host Transport configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetLoggingIpv4HostTransportArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getLoggingIpv4HostTransport(GetLoggingIpv4HostTransportArgs.builder()
+     *             .ipv4Host(&#34;2.2.2.2&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetLoggingIpv4HostTransportResult> getLoggingIpv4HostTransport(GetLoggingIpv4HostTransportArgs args) {
         return getLoggingIpv4HostTransport(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Logging IPv4 Host Transport configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetLoggingIpv4HostTransportArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getLoggingIpv4HostTransport(GetLoggingIpv4HostTransportArgs.builder()
+     *             .ipv4Host(&#34;2.2.2.2&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetLoggingIpv4HostTransportResult> getLoggingIpv4HostTransportPlain(GetLoggingIpv4HostTransportPlainArgs args) {
         return getLoggingIpv4HostTransportPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Logging IPv4 Host Transport configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetLoggingIpv4HostTransportArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getLoggingIpv4HostTransport(GetLoggingIpv4HostTransportArgs.builder()
+     *             .ipv4Host(&#34;2.2.2.2&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetLoggingIpv4HostTransportResult> getLoggingIpv4HostTransport(GetLoggingIpv4HostTransportArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getLoggingIpv4HostTransport:getLoggingIpv4HostTransport", TypeShape.of(GetLoggingIpv4HostTransportResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Logging IPv4 Host Transport configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetLoggingIpv4HostTransportArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getLoggingIpv4HostTransport(GetLoggingIpv4HostTransportArgs.builder()
+     *             .ipv4Host(&#34;2.2.2.2&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetLoggingIpv4HostTransportResult> getLoggingIpv4HostTransportPlain(GetLoggingIpv4HostTransportPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getLoggingIpv4HostTransport:getLoggingIpv4HostTransport", TypeShape.of(GetLoggingIpv4HostTransportResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Logging IPv4 Host VRF Transport configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetLoggingIpv4HostVrfTransportArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getLoggingIpv4HostVrfTransport(GetLoggingIpv4HostVrfTransportArgs.builder()
+     *             .ipv4Host(&#34;2.2.2.2&#34;)
+     *             .vrf(&#34;VRF1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetLoggingIpv4HostVrfTransportResult> getLoggingIpv4HostVrfTransport(GetLoggingIpv4HostVrfTransportArgs args) {
         return getLoggingIpv4HostVrfTransport(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Logging IPv4 Host VRF Transport configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetLoggingIpv4HostVrfTransportArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getLoggingIpv4HostVrfTransport(GetLoggingIpv4HostVrfTransportArgs.builder()
+     *             .ipv4Host(&#34;2.2.2.2&#34;)
+     *             .vrf(&#34;VRF1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetLoggingIpv4HostVrfTransportResult> getLoggingIpv4HostVrfTransportPlain(GetLoggingIpv4HostVrfTransportPlainArgs args) {
         return getLoggingIpv4HostVrfTransportPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Logging IPv4 Host VRF Transport configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetLoggingIpv4HostVrfTransportArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getLoggingIpv4HostVrfTransport(GetLoggingIpv4HostVrfTransportArgs.builder()
+     *             .ipv4Host(&#34;2.2.2.2&#34;)
+     *             .vrf(&#34;VRF1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetLoggingIpv4HostVrfTransportResult> getLoggingIpv4HostVrfTransport(GetLoggingIpv4HostVrfTransportArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getLoggingIpv4HostVrfTransport:getLoggingIpv4HostVrfTransport", TypeShape.of(GetLoggingIpv4HostVrfTransportResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Logging IPv4 Host VRF Transport configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetLoggingIpv4HostVrfTransportArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getLoggingIpv4HostVrfTransport(GetLoggingIpv4HostVrfTransportArgs.builder()
+     *             .ipv4Host(&#34;2.2.2.2&#34;)
+     *             .vrf(&#34;VRF1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetLoggingIpv4HostVrfTransportResult> getLoggingIpv4HostVrfTransportPlain(GetLoggingIpv4HostVrfTransportPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getLoggingIpv4HostVrfTransport:getLoggingIpv4HostVrfTransport", TypeShape.of(GetLoggingIpv4HostVrfTransportResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Logging IPv6 Host Transport configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetLoggingIpv6HostTransportArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getLoggingIpv6HostTransport(GetLoggingIpv6HostTransportArgs.builder()
+     *             .ipv6Host(&#34;2001::1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetLoggingIpv6HostTransportResult> getLoggingIpv6HostTransport(GetLoggingIpv6HostTransportArgs args) {
         return getLoggingIpv6HostTransport(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Logging IPv6 Host Transport configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetLoggingIpv6HostTransportArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getLoggingIpv6HostTransport(GetLoggingIpv6HostTransportArgs.builder()
+     *             .ipv6Host(&#34;2001::1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetLoggingIpv6HostTransportResult> getLoggingIpv6HostTransportPlain(GetLoggingIpv6HostTransportPlainArgs args) {
         return getLoggingIpv6HostTransportPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Logging IPv6 Host Transport configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetLoggingIpv6HostTransportArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getLoggingIpv6HostTransport(GetLoggingIpv6HostTransportArgs.builder()
+     *             .ipv6Host(&#34;2001::1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetLoggingIpv6HostTransportResult> getLoggingIpv6HostTransport(GetLoggingIpv6HostTransportArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getLoggingIpv6HostTransport:getLoggingIpv6HostTransport", TypeShape.of(GetLoggingIpv6HostTransportResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Logging IPv6 Host Transport configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetLoggingIpv6HostTransportArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getLoggingIpv6HostTransport(GetLoggingIpv6HostTransportArgs.builder()
+     *             .ipv6Host(&#34;2001::1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetLoggingIpv6HostTransportResult> getLoggingIpv6HostTransportPlain(GetLoggingIpv6HostTransportPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getLoggingIpv6HostTransport:getLoggingIpv6HostTransport", TypeShape.of(GetLoggingIpv6HostTransportResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Logging IPv6 Host VRF Transport configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetLoggingIpv6HostVrfTransportArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getLoggingIpv6HostVrfTransport(GetLoggingIpv6HostVrfTransportArgs.builder()
+     *             .ipv6Host(&#34;2001::1&#34;)
+     *             .vrf(&#34;VRF1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetLoggingIpv6HostVrfTransportResult> getLoggingIpv6HostVrfTransport(GetLoggingIpv6HostVrfTransportArgs args) {
         return getLoggingIpv6HostVrfTransport(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Logging IPv6 Host VRF Transport configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetLoggingIpv6HostVrfTransportArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getLoggingIpv6HostVrfTransport(GetLoggingIpv6HostVrfTransportArgs.builder()
+     *             .ipv6Host(&#34;2001::1&#34;)
+     *             .vrf(&#34;VRF1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetLoggingIpv6HostVrfTransportResult> getLoggingIpv6HostVrfTransportPlain(GetLoggingIpv6HostVrfTransportPlainArgs args) {
         return getLoggingIpv6HostVrfTransportPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Logging IPv6 Host VRF Transport configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetLoggingIpv6HostVrfTransportArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getLoggingIpv6HostVrfTransport(GetLoggingIpv6HostVrfTransportArgs.builder()
+     *             .ipv6Host(&#34;2001::1&#34;)
+     *             .vrf(&#34;VRF1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetLoggingIpv6HostVrfTransportResult> getLoggingIpv6HostVrfTransport(GetLoggingIpv6HostVrfTransportArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getLoggingIpv6HostVrfTransport:getLoggingIpv6HostVrfTransport", TypeShape.of(GetLoggingIpv6HostVrfTransportResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Logging IPv6 Host VRF Transport configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetLoggingIpv6HostVrfTransportArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getLoggingIpv6HostVrfTransport(GetLoggingIpv6HostVrfTransportArgs.builder()
+     *             .ipv6Host(&#34;2001::1&#34;)
+     *             .vrf(&#34;VRF1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetLoggingIpv6HostVrfTransportResult> getLoggingIpv6HostVrfTransportPlain(GetLoggingIpv6HostVrfTransportPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getLoggingIpv6HostVrfTransport:getLoggingIpv6HostVrfTransport", TypeShape.of(GetLoggingIpv6HostVrfTransportResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the MDT Subscription configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetMdtSubscriptionArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getMdtSubscription(GetMdtSubscriptionArgs.builder()
+     *             .subscriptionId(101)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetMdtSubscriptionResult> getMdtSubscription(GetMdtSubscriptionArgs args) {
         return getMdtSubscription(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the MDT Subscription configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetMdtSubscriptionArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getMdtSubscription(GetMdtSubscriptionArgs.builder()
+     *             .subscriptionId(101)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetMdtSubscriptionResult> getMdtSubscriptionPlain(GetMdtSubscriptionPlainArgs args) {
         return getMdtSubscriptionPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the MDT Subscription configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetMdtSubscriptionArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getMdtSubscription(GetMdtSubscriptionArgs.builder()
+     *             .subscriptionId(101)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetMdtSubscriptionResult> getMdtSubscription(GetMdtSubscriptionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getMdtSubscription:getMdtSubscription", TypeShape.of(GetMdtSubscriptionResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the MDT Subscription configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetMdtSubscriptionArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getMdtSubscription(GetMdtSubscriptionArgs.builder()
+     *             .subscriptionId(101)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetMdtSubscriptionResult> getMdtSubscriptionPlain(GetMdtSubscriptionPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getMdtSubscription:getMdtSubscription", TypeShape.of(GetMdtSubscriptionResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the MSDP configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetMsdpArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getMsdp();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetMsdpResult> getMsdp() {
         return getMsdp(GetMsdpArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the MSDP configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetMsdpArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getMsdp();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetMsdpResult> getMsdpPlain() {
         return getMsdpPlain(GetMsdpPlainArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the MSDP configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetMsdpArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getMsdp();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetMsdpResult> getMsdp(GetMsdpArgs args) {
         return getMsdp(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the MSDP configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetMsdpArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getMsdp();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetMsdpResult> getMsdpPlain(GetMsdpPlainArgs args) {
         return getMsdpPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the MSDP configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetMsdpArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getMsdp();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetMsdpResult> getMsdp(GetMsdpArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getMsdp:getMsdp", TypeShape.of(GetMsdpResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the MSDP configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetMsdpArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getMsdp();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetMsdpResult> getMsdpPlain(GetMsdpPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getMsdp:getMsdp", TypeShape.of(GetMsdpResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the MSDP VRF configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetMsdpVrfArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getMsdpVrf(GetMsdpVrfArgs.builder()
+     *             .vrf(&#34;VRF1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetMsdpVrfResult> getMsdpVrf(GetMsdpVrfArgs args) {
         return getMsdpVrf(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the MSDP VRF configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetMsdpVrfArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getMsdpVrf(GetMsdpVrfArgs.builder()
+     *             .vrf(&#34;VRF1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetMsdpVrfResult> getMsdpVrfPlain(GetMsdpVrfPlainArgs args) {
         return getMsdpVrfPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the MSDP VRF configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetMsdpVrfArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getMsdpVrf(GetMsdpVrfArgs.builder()
+     *             .vrf(&#34;VRF1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetMsdpVrfResult> getMsdpVrf(GetMsdpVrfArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getMsdpVrf:getMsdpVrf", TypeShape.of(GetMsdpVrfResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the MSDP VRF configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetMsdpVrfArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getMsdpVrf(GetMsdpVrfArgs.builder()
+     *             .vrf(&#34;VRF1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetMsdpVrfResult> getMsdpVrfPlain(GetMsdpVrfPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getMsdpVrf:getMsdpVrf", TypeShape.of(GetMsdpVrfResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the NTP configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetNtpArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getNtp();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetNtpResult> getNtp() {
         return getNtp(GetNtpArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the NTP configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetNtpArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getNtp();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetNtpResult> getNtpPlain() {
         return getNtpPlain(GetNtpPlainArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the NTP configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetNtpArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getNtp();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetNtpResult> getNtp(GetNtpArgs args) {
         return getNtp(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the NTP configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetNtpArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getNtp();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetNtpResult> getNtpPlain(GetNtpPlainArgs args) {
         return getNtpPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the NTP configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetNtpArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getNtp();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetNtpResult> getNtp(GetNtpArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getNtp:getNtp", TypeShape.of(GetNtpResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the NTP configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetNtpArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getNtp();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetNtpResult> getNtpPlain(GetNtpPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getNtp:getNtp", TypeShape.of(GetNtpResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the OSPF configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetOspfArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getOspf(GetOspfArgs.builder()
+     *             .processId(1)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetOspfResult> getOspf(GetOspfArgs args) {
         return getOspf(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the OSPF configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetOspfArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getOspf(GetOspfArgs.builder()
+     *             .processId(1)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetOspfResult> getOspfPlain(GetOspfPlainArgs args) {
         return getOspfPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the OSPF configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetOspfArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getOspf(GetOspfArgs.builder()
+     *             .processId(1)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetOspfResult> getOspf(GetOspfArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getOspf:getOspf", TypeShape.of(GetOspfResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the OSPF configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetOspfArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getOspf(GetOspfArgs.builder()
+     *             .processId(1)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetOspfResult> getOspfPlain(GetOspfPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getOspf:getOspf", TypeShape.of(GetOspfResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the OSPF VRF configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetOspfVrfArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getOspfVrf(GetOspfVrfArgs.builder()
+     *             .processId(2)
+     *             .vrf(&#34;VRF1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetOspfVrfResult> getOspfVrf(GetOspfVrfArgs args) {
         return getOspfVrf(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the OSPF VRF configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetOspfVrfArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getOspfVrf(GetOspfVrfArgs.builder()
+     *             .processId(2)
+     *             .vrf(&#34;VRF1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetOspfVrfResult> getOspfVrfPlain(GetOspfVrfPlainArgs args) {
         return getOspfVrfPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the OSPF VRF configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetOspfVrfArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getOspfVrf(GetOspfVrfArgs.builder()
+     *             .processId(2)
+     *             .vrf(&#34;VRF1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetOspfVrfResult> getOspfVrf(GetOspfVrfArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getOspfVrf:getOspfVrf", TypeShape.of(GetOspfVrfResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the OSPF VRF configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetOspfVrfArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getOspfVrf(GetOspfVrfArgs.builder()
+     *             .processId(2)
+     *             .vrf(&#34;VRF1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetOspfVrfResult> getOspfVrfPlain(GetOspfVrfPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getOspfVrf:getOspfVrf", TypeShape.of(GetOspfVrfResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the PIM configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetPimArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getPim();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetPimResult> getPim() {
         return getPim(GetPimArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the PIM configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetPimArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getPim();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetPimResult> getPimPlain() {
         return getPimPlain(GetPimPlainArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the PIM configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetPimArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getPim();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetPimResult> getPim(GetPimArgs args) {
         return getPim(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the PIM configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetPimArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getPim();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetPimResult> getPimPlain(GetPimPlainArgs args) {
         return getPimPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the PIM configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetPimArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getPim();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetPimResult> getPim(GetPimArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getPim:getPim", TypeShape.of(GetPimResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the PIM configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetPimArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getPim();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetPimResult> getPimPlain(GetPimPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getPim:getPim", TypeShape.of(GetPimResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the PIM VRF configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetPimVrfArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getPimVrf(GetPimVrfArgs.builder()
+     *             .vrf(&#34;VRF1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetPimVrfResult> getPimVrf(GetPimVrfArgs args) {
         return getPimVrf(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the PIM VRF configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetPimVrfArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getPimVrf(GetPimVrfArgs.builder()
+     *             .vrf(&#34;VRF1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetPimVrfResult> getPimVrfPlain(GetPimVrfPlainArgs args) {
         return getPimVrfPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the PIM VRF configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetPimVrfArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getPimVrf(GetPimVrfArgs.builder()
+     *             .vrf(&#34;VRF1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetPimVrfResult> getPimVrf(GetPimVrfArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getPimVrf:getPimVrf", TypeShape.of(GetPimVrfResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the PIM VRF configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetPimVrfArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getPimVrf(GetPimVrfArgs.builder()
+     *             .vrf(&#34;VRF1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetPimVrfResult> getPimVrfPlain(GetPimVrfPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getPimVrf:getPimVrf", TypeShape.of(GetPimVrfResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Policy Map configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetPolicyMapArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getPolicyMap(GetPolicyMapArgs.builder()
+     *             .name(&#34;dot1x_policy&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetPolicyMapResult> getPolicyMap(GetPolicyMapArgs args) {
         return getPolicyMap(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Policy Map configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetPolicyMapArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getPolicyMap(GetPolicyMapArgs.builder()
+     *             .name(&#34;dot1x_policy&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetPolicyMapResult> getPolicyMapPlain(GetPolicyMapPlainArgs args) {
         return getPolicyMapPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Policy Map configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetPolicyMapArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getPolicyMap(GetPolicyMapArgs.builder()
+     *             .name(&#34;dot1x_policy&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetPolicyMapResult> getPolicyMap(GetPolicyMapArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getPolicyMap:getPolicyMap", TypeShape.of(GetPolicyMapResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Policy Map configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetPolicyMapArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getPolicyMap(GetPolicyMapArgs.builder()
+     *             .name(&#34;dot1x_policy&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetPolicyMapResult> getPolicyMapPlain(GetPolicyMapPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getPolicyMap:getPolicyMap", TypeShape.of(GetPolicyMapResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Policy Map Event configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetPolicyMapEventArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getPolicyMapEvent(GetPolicyMapEventArgs.builder()
+     *             .eventType(&#34;authentication-success&#34;)
+     *             .name(&#34;dot1x_policy&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetPolicyMapEventResult> getPolicyMapEvent(GetPolicyMapEventArgs args) {
         return getPolicyMapEvent(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Policy Map Event configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetPolicyMapEventArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getPolicyMapEvent(GetPolicyMapEventArgs.builder()
+     *             .eventType(&#34;authentication-success&#34;)
+     *             .name(&#34;dot1x_policy&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetPolicyMapEventResult> getPolicyMapEventPlain(GetPolicyMapEventPlainArgs args) {
         return getPolicyMapEventPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Policy Map Event configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetPolicyMapEventArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getPolicyMapEvent(GetPolicyMapEventArgs.builder()
+     *             .eventType(&#34;authentication-success&#34;)
+     *             .name(&#34;dot1x_policy&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetPolicyMapEventResult> getPolicyMapEvent(GetPolicyMapEventArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getPolicyMapEvent:getPolicyMapEvent", TypeShape.of(GetPolicyMapEventResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Policy Map Event configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetPolicyMapEventArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getPolicyMapEvent(GetPolicyMapEventArgs.builder()
+     *             .eventType(&#34;authentication-success&#34;)
+     *             .name(&#34;dot1x_policy&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetPolicyMapEventResult> getPolicyMapEventPlain(GetPolicyMapEventPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getPolicyMapEvent:getPolicyMapEvent", TypeShape.of(GetPolicyMapEventResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Prefix List configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetPrefixListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getPrefixList();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetPrefixListResult> getPrefixList() {
         return getPrefixList(GetPrefixListArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Prefix List configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetPrefixListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getPrefixList();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetPrefixListResult> getPrefixListPlain() {
         return getPrefixListPlain(GetPrefixListPlainArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Prefix List configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetPrefixListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getPrefixList();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetPrefixListResult> getPrefixList(GetPrefixListArgs args) {
         return getPrefixList(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Prefix List configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetPrefixListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getPrefixList();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetPrefixListResult> getPrefixListPlain(GetPrefixListPlainArgs args) {
         return getPrefixListPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Prefix List configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetPrefixListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getPrefixList();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetPrefixListResult> getPrefixList(GetPrefixListArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getPrefixList:getPrefixList", TypeShape.of(GetPrefixListResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Prefix List configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetPrefixListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getPrefixList();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetPrefixListResult> getPrefixListPlain(GetPrefixListPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getPrefixList:getPrefixList", TypeShape.of(GetPrefixListResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Radius configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetRadiusArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getRadius(GetRadiusArgs.builder()
+     *             .name(&#34;radius_10.10.15.12&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetRadiusResult> getRadius(GetRadiusArgs args) {
         return getRadius(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Radius configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetRadiusArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getRadius(GetRadiusArgs.builder()
+     *             .name(&#34;radius_10.10.15.12&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetRadiusResult> getRadiusPlain(GetRadiusPlainArgs args) {
         return getRadiusPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Radius configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetRadiusArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getRadius(GetRadiusArgs.builder()
+     *             .name(&#34;radius_10.10.15.12&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetRadiusResult> getRadius(GetRadiusArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getRadius:getRadius", TypeShape.of(GetRadiusResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Radius configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetRadiusArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getRadius(GetRadiusArgs.builder()
+     *             .name(&#34;radius_10.10.15.12&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetRadiusResult> getRadiusPlain(GetRadiusPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getRadius:getRadius", TypeShape.of(GetRadiusResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Radius Server configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetRadiusServerArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getRadiusServer();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetRadiusServerResult> getRadiusServer() {
         return getRadiusServer(GetRadiusServerArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Radius Server configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetRadiusServerArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getRadiusServer();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetRadiusServerResult> getRadiusServerPlain() {
         return getRadiusServerPlain(GetRadiusServerPlainArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Radius Server configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetRadiusServerArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getRadiusServer();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetRadiusServerResult> getRadiusServer(GetRadiusServerArgs args) {
         return getRadiusServer(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Radius Server configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetRadiusServerArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getRadiusServer();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetRadiusServerResult> getRadiusServerPlain(GetRadiusServerPlainArgs args) {
         return getRadiusServerPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Radius Server configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetRadiusServerArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getRadiusServer();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetRadiusServerResult> getRadiusServer(GetRadiusServerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getRadiusServer:getRadiusServer", TypeShape.of(GetRadiusServerResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Radius Server configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetRadiusServerArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getRadiusServer();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetRadiusServerResult> getRadiusServerPlain(GetRadiusServerPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getRadiusServer:getRadiusServer", TypeShape.of(GetRadiusServerResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can retrieve one or more attributes via RESTCONF.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetRestconfArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getRestconf(GetRestconfArgs.builder()
+     *             .path(&#34;Cisco-IOS-XE-native:native/banner/login&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetRestconfResult> getRestconf(GetRestconfArgs args) {
         return getRestconf(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can retrieve one or more attributes via RESTCONF.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetRestconfArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getRestconf(GetRestconfArgs.builder()
+     *             .path(&#34;Cisco-IOS-XE-native:native/banner/login&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetRestconfResult> getRestconfPlain(GetRestconfPlainArgs args) {
         return getRestconfPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can retrieve one or more attributes via RESTCONF.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetRestconfArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getRestconf(GetRestconfArgs.builder()
+     *             .path(&#34;Cisco-IOS-XE-native:native/banner/login&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetRestconfResult> getRestconf(GetRestconfArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getRestconf:getRestconf", TypeShape.of(GetRestconfResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can retrieve one or more attributes via RESTCONF.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetRestconfArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getRestconf(GetRestconfArgs.builder()
+     *             .path(&#34;Cisco-IOS-XE-native:native/banner/login&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetRestconfResult> getRestconfPlain(GetRestconfPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getRestconf:getRestconf", TypeShape.of(GetRestconfResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Route Map configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetRouteMapArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getRouteMap(GetRouteMapArgs.builder()
+     *             .name(&#34;RM1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetRouteMapResult> getRouteMap(GetRouteMapArgs args) {
         return getRouteMap(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Route Map configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetRouteMapArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getRouteMap(GetRouteMapArgs.builder()
+     *             .name(&#34;RM1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetRouteMapResult> getRouteMapPlain(GetRouteMapPlainArgs args) {
         return getRouteMapPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Route Map configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetRouteMapArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getRouteMap(GetRouteMapArgs.builder()
+     *             .name(&#34;RM1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetRouteMapResult> getRouteMap(GetRouteMapArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getRouteMap:getRouteMap", TypeShape.of(GetRouteMapResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Route Map configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetRouteMapArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getRouteMap(GetRouteMapArgs.builder()
+     *             .name(&#34;RM1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetRouteMapResult> getRouteMapPlain(GetRouteMapPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getRouteMap:getRouteMap", TypeShape.of(GetRouteMapResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Service configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetServiceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getService();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetServiceResult> getService() {
         return getService(GetServiceArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Service configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetServiceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getService();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetServiceResult> getServicePlain() {
         return getServicePlain(GetServicePlainArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Service configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetServiceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getService();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetServiceResult> getService(GetServiceArgs args) {
         return getService(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Service configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetServiceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getService();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetServiceResult> getServicePlain(GetServicePlainArgs args) {
         return getServicePlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Service configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetServiceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getService();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getService:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Service configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetServiceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getService();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetServiceResult> getServicePlain(GetServicePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getService:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Service Template configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetServiceTemplateArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getServiceTemplate(GetServiceTemplateArgs.builder()
+     *             .name(&#34;MY_TEMPLATE&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetServiceTemplateResult> getServiceTemplate(GetServiceTemplateArgs args) {
         return getServiceTemplate(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Service Template configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetServiceTemplateArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getServiceTemplate(GetServiceTemplateArgs.builder()
+     *             .name(&#34;MY_TEMPLATE&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetServiceTemplateResult> getServiceTemplatePlain(GetServiceTemplatePlainArgs args) {
         return getServiceTemplatePlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Service Template configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetServiceTemplateArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getServiceTemplate(GetServiceTemplateArgs.builder()
+     *             .name(&#34;MY_TEMPLATE&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetServiceTemplateResult> getServiceTemplate(GetServiceTemplateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getServiceTemplate:getServiceTemplate", TypeShape.of(GetServiceTemplateResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Service Template configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetServiceTemplateArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getServiceTemplate(GetServiceTemplateArgs.builder()
+     *             .name(&#34;MY_TEMPLATE&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetServiceTemplateResult> getServiceTemplatePlain(GetServiceTemplatePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getServiceTemplate:getServiceTemplate", TypeShape.of(GetServiceTemplateResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the SNMP Server configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetSnmpServerArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getSnmpServer();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetSnmpServerResult> getSnmpServer() {
         return getSnmpServer(GetSnmpServerArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the SNMP Server configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetSnmpServerArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getSnmpServer();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetSnmpServerResult> getSnmpServerPlain() {
         return getSnmpServerPlain(GetSnmpServerPlainArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the SNMP Server configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetSnmpServerArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getSnmpServer();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetSnmpServerResult> getSnmpServer(GetSnmpServerArgs args) {
         return getSnmpServer(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the SNMP Server configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetSnmpServerArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getSnmpServer();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetSnmpServerResult> getSnmpServerPlain(GetSnmpServerPlainArgs args) {
         return getSnmpServerPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the SNMP Server configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetSnmpServerArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getSnmpServer();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetSnmpServerResult> getSnmpServer(GetSnmpServerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getSnmpServer:getSnmpServer", TypeShape.of(GetSnmpServerResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the SNMP Server configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetSnmpServerArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getSnmpServer();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetSnmpServerResult> getSnmpServerPlain(GetSnmpServerPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getSnmpServer:getSnmpServer", TypeShape.of(GetSnmpServerResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the SNMP Server Group configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetSnmpServerGroupArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getSnmpServerGroup(GetSnmpServerGroupArgs.builder()
+     *             .name(&#34;GROUP1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetSnmpServerGroupResult> getSnmpServerGroup(GetSnmpServerGroupArgs args) {
         return getSnmpServerGroup(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the SNMP Server Group configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetSnmpServerGroupArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getSnmpServerGroup(GetSnmpServerGroupArgs.builder()
+     *             .name(&#34;GROUP1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetSnmpServerGroupResult> getSnmpServerGroupPlain(GetSnmpServerGroupPlainArgs args) {
         return getSnmpServerGroupPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the SNMP Server Group configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetSnmpServerGroupArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getSnmpServerGroup(GetSnmpServerGroupArgs.builder()
+     *             .name(&#34;GROUP1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetSnmpServerGroupResult> getSnmpServerGroup(GetSnmpServerGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getSnmpServerGroup:getSnmpServerGroup", TypeShape.of(GetSnmpServerGroupResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the SNMP Server Group configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetSnmpServerGroupArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getSnmpServerGroup(GetSnmpServerGroupArgs.builder()
+     *             .name(&#34;GROUP1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetSnmpServerGroupResult> getSnmpServerGroupPlain(GetSnmpServerGroupPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getSnmpServerGroup:getSnmpServerGroup", TypeShape.of(GetSnmpServerGroupResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the SNMP Server User configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetSnmpServerUserArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getSnmpServerUser(GetSnmpServerUserArgs.builder()
+     *             .grpname(&#34;GROUP1&#34;)
+     *             .username(&#34;USER1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetSnmpServerUserResult> getSnmpServerUser(GetSnmpServerUserArgs args) {
         return getSnmpServerUser(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the SNMP Server User configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetSnmpServerUserArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getSnmpServerUser(GetSnmpServerUserArgs.builder()
+     *             .grpname(&#34;GROUP1&#34;)
+     *             .username(&#34;USER1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetSnmpServerUserResult> getSnmpServerUserPlain(GetSnmpServerUserPlainArgs args) {
         return getSnmpServerUserPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the SNMP Server User configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetSnmpServerUserArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getSnmpServerUser(GetSnmpServerUserArgs.builder()
+     *             .grpname(&#34;GROUP1&#34;)
+     *             .username(&#34;USER1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetSnmpServerUserResult> getSnmpServerUser(GetSnmpServerUserArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getSnmpServerUser:getSnmpServerUser", TypeShape.of(GetSnmpServerUserResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the SNMP Server User configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetSnmpServerUserArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getSnmpServerUser(GetSnmpServerUserArgs.builder()
+     *             .grpname(&#34;GROUP1&#34;)
+     *             .username(&#34;USER1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetSnmpServerUserResult> getSnmpServerUserPlain(GetSnmpServerUserPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getSnmpServerUser:getSnmpServerUser", TypeShape.of(GetSnmpServerUserResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Static Route configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetStaticRouteArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getStaticRoute(GetStaticRouteArgs.builder()
+     *             .mask(&#34;255.255.255.255&#34;)
+     *             .prefix(&#34;5.5.5.5&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetStaticRouteResult> getStaticRoute(GetStaticRouteArgs args) {
         return getStaticRoute(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Static Route configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetStaticRouteArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getStaticRoute(GetStaticRouteArgs.builder()
+     *             .mask(&#34;255.255.255.255&#34;)
+     *             .prefix(&#34;5.5.5.5&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetStaticRouteResult> getStaticRoutePlain(GetStaticRoutePlainArgs args) {
         return getStaticRoutePlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Static Route configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetStaticRouteArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getStaticRoute(GetStaticRouteArgs.builder()
+     *             .mask(&#34;255.255.255.255&#34;)
+     *             .prefix(&#34;5.5.5.5&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetStaticRouteResult> getStaticRoute(GetStaticRouteArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getStaticRoute:getStaticRoute", TypeShape.of(GetStaticRouteResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Static Route configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetStaticRouteArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getStaticRoute(GetStaticRouteArgs.builder()
+     *             .mask(&#34;255.255.255.255&#34;)
+     *             .prefix(&#34;5.5.5.5&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetStaticRouteResult> getStaticRoutePlain(GetStaticRoutePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getStaticRoute:getStaticRoute", TypeShape.of(GetStaticRouteResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Static Route VRF configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetStaticRouteVrfArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getStaticRouteVrf(GetStaticRouteVrfArgs.builder()
+     *             .vrf(&#34;VRF1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetStaticRouteVrfResult> getStaticRouteVrf(GetStaticRouteVrfArgs args) {
         return getStaticRouteVrf(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Static Route VRF configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetStaticRouteVrfArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getStaticRouteVrf(GetStaticRouteVrfArgs.builder()
+     *             .vrf(&#34;VRF1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetStaticRouteVrfResult> getStaticRouteVrfPlain(GetStaticRouteVrfPlainArgs args) {
         return getStaticRouteVrfPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Static Route VRF configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetStaticRouteVrfArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getStaticRouteVrf(GetStaticRouteVrfArgs.builder()
+     *             .vrf(&#34;VRF1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetStaticRouteVrfResult> getStaticRouteVrf(GetStaticRouteVrfArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getStaticRouteVrf:getStaticRouteVrf", TypeShape.of(GetStaticRouteVrfResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Static Route VRF configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetStaticRouteVrfArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getStaticRouteVrf(GetStaticRouteVrfArgs.builder()
+     *             .vrf(&#34;VRF1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetStaticRouteVrfResult> getStaticRouteVrfPlain(GetStaticRouteVrfPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getStaticRouteVrf:getStaticRouteVrf", TypeShape.of(GetStaticRouteVrfResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the System configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetSystemArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getSystem();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetSystemResult> getSystem() {
         return getSystem(GetSystemArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the System configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetSystemArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getSystem();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetSystemResult> getSystemPlain() {
         return getSystemPlain(GetSystemPlainArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the System configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetSystemArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getSystem();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetSystemResult> getSystem(GetSystemArgs args) {
         return getSystem(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the System configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetSystemArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getSystem();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetSystemResult> getSystemPlain(GetSystemPlainArgs args) {
         return getSystemPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the System configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetSystemArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getSystem();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetSystemResult> getSystem(GetSystemArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getSystem:getSystem", TypeShape.of(GetSystemResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the System configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetSystemArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getSystem();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetSystemResult> getSystemPlain(GetSystemPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getSystem:getSystem", TypeShape.of(GetSystemResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the TACACS Server configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetTacacsServerArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getTacacsServer(GetTacacsServerArgs.builder()
+     *             .name(&#34;tacacs_10.10.15.13&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetTacacsServerResult> getTacacsServer(GetTacacsServerArgs args) {
         return getTacacsServer(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the TACACS Server configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetTacacsServerArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getTacacsServer(GetTacacsServerArgs.builder()
+     *             .name(&#34;tacacs_10.10.15.13&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetTacacsServerResult> getTacacsServerPlain(GetTacacsServerPlainArgs args) {
         return getTacacsServerPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the TACACS Server configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetTacacsServerArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getTacacsServer(GetTacacsServerArgs.builder()
+     *             .name(&#34;tacacs_10.10.15.13&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetTacacsServerResult> getTacacsServer(GetTacacsServerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getTacacsServer:getTacacsServer", TypeShape.of(GetTacacsServerResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the TACACS Server configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetTacacsServerArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getTacacsServer(GetTacacsServerArgs.builder()
+     *             .name(&#34;tacacs_10.10.15.13&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetTacacsServerResult> getTacacsServerPlain(GetTacacsServerPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getTacacsServer:getTacacsServer", TypeShape.of(GetTacacsServerResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Template configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetTemplateArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getTemplate(GetTemplateArgs.builder()
+     *             .templateName(&#34;TEMP1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetTemplateResult> getTemplate(GetTemplateArgs args) {
         return getTemplate(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Template configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetTemplateArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getTemplate(GetTemplateArgs.builder()
+     *             .templateName(&#34;TEMP1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetTemplateResult> getTemplatePlain(GetTemplatePlainArgs args) {
         return getTemplatePlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Template configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetTemplateArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getTemplate(GetTemplateArgs.builder()
+     *             .templateName(&#34;TEMP1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetTemplateResult> getTemplate(GetTemplateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getTemplate:getTemplate", TypeShape.of(GetTemplateResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Template configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetTemplateArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getTemplate(GetTemplateArgs.builder()
+     *             .templateName(&#34;TEMP1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetTemplateResult> getTemplatePlain(GetTemplatePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getTemplate:getTemplate", TypeShape.of(GetTemplateResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the UDLD configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetUdldArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getUdld();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetUdldResult> getUdld() {
         return getUdld(GetUdldArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the UDLD configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetUdldArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getUdld();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetUdldResult> getUdldPlain() {
         return getUdldPlain(GetUdldPlainArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the UDLD configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetUdldArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getUdld();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetUdldResult> getUdld(GetUdldArgs args) {
         return getUdld(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the UDLD configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetUdldArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getUdld();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetUdldResult> getUdldPlain(GetUdldPlainArgs args) {
         return getUdldPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the UDLD configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetUdldArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getUdld();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetUdldResult> getUdld(GetUdldArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getUdld:getUdld", TypeShape.of(GetUdldResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the UDLD configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetUdldArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getUdld();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetUdldResult> getUdldPlain(GetUdldPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getUdld:getUdld", TypeShape.of(GetUdldResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Username configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetUsernameArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getUsername(GetUsernameArgs.builder()
+     *             .name(&#34;user1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetUsernameResult> getUsername(GetUsernameArgs args) {
         return getUsername(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Username configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetUsernameArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getUsername(GetUsernameArgs.builder()
+     *             .name(&#34;user1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetUsernameResult> getUsernamePlain(GetUsernamePlainArgs args) {
         return getUsernamePlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the Username configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetUsernameArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getUsername(GetUsernameArgs.builder()
+     *             .name(&#34;user1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetUsernameResult> getUsername(GetUsernameArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getUsername:getUsername", TypeShape.of(GetUsernameResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the Username configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetUsernameArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getUsername(GetUsernameArgs.builder()
+     *             .name(&#34;user1&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetUsernameResult> getUsernamePlain(GetUsernamePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getUsername:getUsername", TypeShape.of(GetUsernameResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the VLAN configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetVlanArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getVlan(GetVlanArgs.builder()
+     *             .vlanId(123)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetVlanResult> getVlan(GetVlanArgs args) {
         return getVlan(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the VLAN configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetVlanArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getVlan(GetVlanArgs.builder()
+     *             .vlanId(123)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetVlanResult> getVlanPlain(GetVlanPlainArgs args) {
         return getVlanPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the VLAN configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetVlanArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getVlan(GetVlanArgs.builder()
+     *             .vlanId(123)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetVlanResult> getVlan(GetVlanArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getVlan:getVlan", TypeShape.of(GetVlanResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the VLAN configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetVlanArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getVlan(GetVlanArgs.builder()
+     *             .vlanId(123)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetVlanResult> getVlanPlain(GetVlanPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getVlan:getVlan", TypeShape.of(GetVlanResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the VLAN Access Map configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetVlanAccessMapArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getVlanAccessMap(GetVlanAccessMapArgs.builder()
+     *             .name(&#34;VAM1&#34;)
+     *             .sequence(10)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetVlanAccessMapResult> getVlanAccessMap(GetVlanAccessMapArgs args) {
         return getVlanAccessMap(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the VLAN Access Map configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetVlanAccessMapArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getVlanAccessMap(GetVlanAccessMapArgs.builder()
+     *             .name(&#34;VAM1&#34;)
+     *             .sequence(10)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetVlanAccessMapResult> getVlanAccessMapPlain(GetVlanAccessMapPlainArgs args) {
         return getVlanAccessMapPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the VLAN Access Map configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetVlanAccessMapArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getVlanAccessMap(GetVlanAccessMapArgs.builder()
+     *             .name(&#34;VAM1&#34;)
+     *             .sequence(10)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetVlanAccessMapResult> getVlanAccessMap(GetVlanAccessMapArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getVlanAccessMap:getVlanAccessMap", TypeShape.of(GetVlanAccessMapResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the VLAN Access Map configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetVlanAccessMapArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getVlanAccessMap(GetVlanAccessMapArgs.builder()
+     *             .name(&#34;VAM1&#34;)
+     *             .sequence(10)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetVlanAccessMapResult> getVlanAccessMapPlain(GetVlanAccessMapPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getVlanAccessMap:getVlanAccessMap", TypeShape.of(GetVlanAccessMapResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the VLAN Configuration configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetVlanConfigurationArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getVlanConfiguration(GetVlanConfigurationArgs.builder()
+     *             .vlanId(123)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetVlanConfigurationResult> getVlanConfiguration(GetVlanConfigurationArgs args) {
         return getVlanConfiguration(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the VLAN Configuration configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetVlanConfigurationArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getVlanConfiguration(GetVlanConfigurationArgs.builder()
+     *             .vlanId(123)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetVlanConfigurationResult> getVlanConfigurationPlain(GetVlanConfigurationPlainArgs args) {
         return getVlanConfigurationPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the VLAN Configuration configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetVlanConfigurationArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getVlanConfiguration(GetVlanConfigurationArgs.builder()
+     *             .vlanId(123)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetVlanConfigurationResult> getVlanConfiguration(GetVlanConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getVlanConfiguration:getVlanConfiguration", TypeShape.of(GetVlanConfigurationResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the VLAN Configuration configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetVlanConfigurationArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getVlanConfiguration(GetVlanConfigurationArgs.builder()
+     *             .vlanId(123)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetVlanConfigurationResult> getVlanConfigurationPlain(GetVlanConfigurationPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getVlanConfiguration:getVlanConfiguration", TypeShape.of(GetVlanConfigurationResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the VRF configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetVrfArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getVrf(GetVrfArgs.builder()
+     *             .name(&#34;VRF22&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetVrfResult> getVrf(GetVrfArgs args) {
         return getVrf(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the VRF configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetVrfArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getVrf(GetVrfArgs.builder()
+     *             .name(&#34;VRF22&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetVrfResult> getVrfPlain(GetVrfPlainArgs args) {
         return getVrfPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the VRF configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetVrfArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getVrf(GetVrfArgs.builder()
+     *             .name(&#34;VRF22&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetVrfResult> getVrf(GetVrfArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getVrf:getVrf", TypeShape.of(GetVrfResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the VRF configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetVrfArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getVrf(GetVrfArgs.builder()
+     *             .name(&#34;VRF22&#34;)
+     *             .build());
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetVrfResult> getVrfPlain(GetVrfPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getVrf:getVrf", TypeShape.of(GetVrfResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the VTP configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetVtpArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getVtp();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetVtpResult> getVtp() {
         return getVtp(GetVtpArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the VTP configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetVtpArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getVtp();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetVtpResult> getVtpPlain() {
         return getVtpPlain(GetVtpPlainArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the VTP configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetVtpArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getVtp();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetVtpResult> getVtp(GetVtpArgs args) {
         return getVtp(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the VTP configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetVtpArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getVtp();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetVtpResult> getVtpPlain(GetVtpPlainArgs args) {
         return getVtpPlain(args, InvokeOptions.Empty);
     }
+    /**
+     * This data source can read the VTP configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetVtpArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getVtp();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetVtpResult> getVtp(GetVtpArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("iosxe:iosxe/getVtp:getVtp", TypeShape.of(GetVtpResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * This data source can read the VTP configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.iosxe.iosxe.IosxeFunctions;
+     * import com.pulumi.iosxe.iosxe.inputs.GetVtpArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = IosxeFunctions.getVtp();
+     * 
+     *     }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetVtpResult> getVtpPlain(GetVtpPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("iosxe:iosxe/getVtp:getVtp", TypeShape.of(GetVtpResult.class), args, Utilities.withVersion(options));
     }

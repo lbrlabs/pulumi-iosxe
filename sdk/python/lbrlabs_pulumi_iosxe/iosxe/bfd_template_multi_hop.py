@@ -752,7 +752,29 @@ class BfdTemplateMultiHop(pulumi.CustomResource):
                  name: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
-        Create a BfdTemplateMultiHop resource with the given unique name, props, and options.
+        This resource can manage the BFD Template Multi Hop configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.BfdTemplateMultiHop("example",
+            authentication_md5_keychain="KEYNAME",
+            dampening_half_time=21,
+            dampening_max_suppressing_time=70,
+            dampening_suppress_time=1900,
+            dampening_unsuppress_time=1800,
+            echo=True)
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/bfdTemplateMultiHop:BfdTemplateMultiHop example "Cisco-IOS-XE-native:native/bfd-template/Cisco-IOS-XE-bfd:multi-hop=T11"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] authentication_md5_keychain: keychain name
@@ -784,7 +806,29 @@ class BfdTemplateMultiHop(pulumi.CustomResource):
                  args: Optional[BfdTemplateMultiHopArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a BfdTemplateMultiHop resource with the given unique name, props, and options.
+        This resource can manage the BFD Template Multi Hop configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.BfdTemplateMultiHop("example",
+            authentication_md5_keychain="KEYNAME",
+            dampening_half_time=21,
+            dampening_max_suppressing_time=70,
+            dampening_suppress_time=1900,
+            dampening_unsuppress_time=1800,
+            echo=True)
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/bfdTemplateMultiHop:BfdTemplateMultiHop example "Cisco-IOS-XE-native:native/bfd-template/Cisco-IOS-XE-bfd:multi-hop=T11"
+        ```
+
         :param str resource_name: The name of the resource.
         :param BfdTemplateMultiHopArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

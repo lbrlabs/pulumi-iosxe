@@ -15,9 +15,17 @@ public final class GetInterfacePortChannelPlainArgs extends com.pulumi.resources
 
     public static final GetInterfacePortChannelPlainArgs Empty = new GetInterfacePortChannelPlainArgs();
 
+    /**
+     * A device name from the provider configuration.
+     * 
+     */
     @Import(name="device")
     private @Nullable String device;
 
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
@@ -54,6 +62,12 @@ public final class GetInterfacePortChannelPlainArgs extends com.pulumi.resources
             $ = new GetInterfacePortChannelPlainArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param device A device name from the provider configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder device(@Nullable String device) {
             $.device = device;
             return this;

@@ -1132,7 +1132,14 @@ class BgpIpv4UnicastVrfNeighbor(pulumi.CustomResource):
                  vrf: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
-        Create a BgpIpv4UnicastVrfNeighbor resource with the given unique name, props, and options.
+        This resource can manage the BGP IPv4 Unicast VRF Neighbor configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/bgpIpv4UnicastVrfNeighbor:BgpIpv4UnicastVrfNeighbor example "Cisco-IOS-XE-native:native/router/Cisco-IOS-XE-bgp:bgp=65000/address-family/with-vrf/ipv4=unicast/vrf=VRF1/ipv4-unicast/neighbor=3.3.3.3"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[bool] activate: Enable the address family for this neighbor - Default value: `true`
@@ -1172,7 +1179,14 @@ class BgpIpv4UnicastVrfNeighbor(pulumi.CustomResource):
                  args: BgpIpv4UnicastVrfNeighborArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a BgpIpv4UnicastVrfNeighbor resource with the given unique name, props, and options.
+        This resource can manage the BGP IPv4 Unicast VRF Neighbor configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/bgpIpv4UnicastVrfNeighbor:BgpIpv4UnicastVrfNeighbor example "Cisco-IOS-XE-native:native/router/Cisco-IOS-XE-bgp:bgp=65000/address-family/with-vrf/ipv4=unicast/vrf=VRF1/ipv4-unicast/neighbor=3.3.3.3"
+        ```
+
         :param str resource_name: The name of the resource.
         :param BgpIpv4UnicastVrfNeighborArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

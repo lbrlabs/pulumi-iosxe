@@ -47,16 +47,25 @@ class GetVlanAccessMapResult:
     @property
     @pulumi.getter
     def action(self) -> str:
+        """
+        Take the action
+        """
         return pulumi.get(self, "action")
 
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
     @property
@@ -67,16 +76,25 @@ class GetVlanAccessMapResult:
     @property
     @pulumi.getter(name="matchIpv6Addresses")
     def match_ipv6_addresses(self) -> Sequence[str]:
+        """
+        Match IPv6 address to access control.
+        """
         return pulumi.get(self, "match_ipv6_addresses")
 
     @property
     @pulumi.getter
     def name(self) -> str:
+        """
+        Vlan access map tag
+        """
         return pulumi.get(self, "name")
 
     @property
     @pulumi.getter
     def sequence(self) -> int:
+        """
+        Sequence to insert to/delete from existing vlan access-map entry
+        """
         return pulumi.get(self, "sequence")
 
 
@@ -100,7 +118,22 @@ def get_vlan_access_map(device: Optional[str] = None,
                         sequence: Optional[int] = None,
                         opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetVlanAccessMapResult:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the VLAN Access Map configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_vlan_access_map(name="VAM1",
+        sequence=10)
+    ```
+
+
+    :param str device: A device name from the provider configuration.
+    :param str name: Vlan access map tag
+    :param int sequence: Sequence to insert to/delete from existing vlan access-map entry
     """
     __args__ = dict()
     __args__['device'] = device
@@ -125,6 +158,21 @@ def get_vlan_access_map_output(device: Optional[pulumi.Input[Optional[str]]] = N
                                sequence: Optional[pulumi.Input[int]] = None,
                                opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetVlanAccessMapResult]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the VLAN Access Map configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_vlan_access_map(name="VAM1",
+        sequence=10)
+    ```
+
+
+    :param str device: A device name from the provider configuration.
+    :param str name: Vlan access map tag
+    :param int sequence: Sequence to insert to/delete from existing vlan access-map entry
     """
     ...

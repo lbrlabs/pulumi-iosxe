@@ -62,36 +62,57 @@ class GetInterfacePimResult:
     @property
     @pulumi.getter
     def bfd(self) -> bool:
+        """
+        Configure BFD
+        """
         return pulumi.get(self, "bfd")
 
     @property
     @pulumi.getter
     def border(self) -> bool:
+        """
+        Border of PIM domain
+        """
         return pulumi.get(self, "border")
 
     @property
     @pulumi.getter(name="bsrBorder")
     def bsr_border(self) -> bool:
+        """
+        Border of PIM domain
+        """
         return pulumi.get(self, "bsr_border")
 
     @property
     @pulumi.getter(name="denseMode")
     def dense_mode(self) -> bool:
+        """
+        Enable PIM dense-mode operation
+        """
         return pulumi.get(self, "dense_mode")
 
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
     @pulumi.getter(name="drPriority")
     def dr_priority(self) -> int:
+        """
+        PIM router DR priority
+        """
         return pulumi.get(self, "dr_priority")
 
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
     @property
@@ -102,21 +123,33 @@ class GetInterfacePimResult:
     @property
     @pulumi.getter
     def passive(self) -> bool:
+        """
+        Enable PIM passive interface operation
+        """
         return pulumi.get(self, "passive")
 
     @property
     @pulumi.getter(name="sparseDenseMode")
     def sparse_dense_mode(self) -> bool:
+        """
+        Enable PIM sparse-dense-mode operation
+        """
         return pulumi.get(self, "sparse_dense_mode")
 
     @property
     @pulumi.getter(name="sparseMode")
     def sparse_mode(self) -> bool:
+        """
+        Enable PIM sparse-mode operation
+        """
         return pulumi.get(self, "sparse_mode")
 
     @property
     @pulumi.getter
     def type(self) -> str:
+        """
+        Interface type
+        """
         return pulumi.get(self, "type")
 
 
@@ -145,7 +178,21 @@ def get_interface_pim(device: Optional[str] = None,
                       type: Optional[str] = None,
                       opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetInterfacePimResult:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Interface PIM configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_interface_pim(name="100",
+        type="Loopback")
+    ```
+
+
+    :param str device: A device name from the provider configuration.
+    :param str type: Interface type
     """
     __args__ = dict()
     __args__['device'] = device
@@ -175,6 +222,20 @@ def get_interface_pim_output(device: Optional[pulumi.Input[Optional[str]]] = Non
                              type: Optional[pulumi.Input[str]] = None,
                              opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetInterfacePimResult]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Interface PIM configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_interface_pim(name="100",
+        type="Loopback")
+    ```
+
+
+    :param str device: A device name from the provider configuration.
+    :param str type: Interface type
     """
     ...

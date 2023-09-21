@@ -96,21 +96,33 @@ class GetInterfaceLoopbackResult:
     @property
     @pulumi.getter(name="arpTimeout")
     def arp_timeout(self) -> int:
+        """
+        Set ARP cache timeout
+        """
         return pulumi.get(self, "arp_timeout")
 
     @property
     @pulumi.getter
     def description(self) -> str:
+        """
+        Interface specific description
+        """
         return pulumi.get(self, "description")
 
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
     @property
@@ -121,6 +133,9 @@ class GetInterfaceLoopbackResult:
     @property
     @pulumi.getter(name="ipAccessGroupInEnable")
     def ip_access_group_in_enable(self) -> bool:
+        """
+        inbound packets
+        """
         return pulumi.get(self, "ip_access_group_in_enable")
 
     @property
@@ -131,21 +146,33 @@ class GetInterfaceLoopbackResult:
     @property
     @pulumi.getter(name="ipAccessGroupOutEnable")
     def ip_access_group_out_enable(self) -> bool:
+        """
+        outbound packets
+        """
         return pulumi.get(self, "ip_access_group_out_enable")
 
     @property
     @pulumi.getter(name="ipProxyArp")
     def ip_proxy_arp(self) -> bool:
+        """
+        Enable proxy ARP
+        """
         return pulumi.get(self, "ip_proxy_arp")
 
     @property
     @pulumi.getter(name="ipRedirects")
     def ip_redirects(self) -> bool:
+        """
+        Enable sending ICMP Redirect messages
+        """
         return pulumi.get(self, "ip_redirects")
 
     @property
     @pulumi.getter(name="ipUnreachables")
     def ip_unreachables(self) -> bool:
+        """
+        Enable sending ICMP Unreachable messages
+        """
         return pulumi.get(self, "ip_unreachables")
 
     @property
@@ -161,11 +188,17 @@ class GetInterfaceLoopbackResult:
     @property
     @pulumi.getter(name="ipv6AddressAutoconfigDefault")
     def ipv6_address_autoconfig_default(self) -> bool:
+        """
+        Insert default route
+        """
         return pulumi.get(self, "ipv6_address_autoconfig_default")
 
     @property
     @pulumi.getter(name="ipv6AddressDhcp")
     def ipv6_address_dhcp(self) -> bool:
+        """
+        Obtain IPv6 address from DHCP server
+        """
         return pulumi.get(self, "ipv6_address_dhcp")
 
     @property
@@ -176,6 +209,9 @@ class GetInterfaceLoopbackResult:
     @property
     @pulumi.getter(name="ipv6Enable")
     def ipv6_enable(self) -> bool:
+        """
+        Enable IPv6 on interface
+        """
         return pulumi.get(self, "ipv6_enable")
 
     @property
@@ -186,11 +222,17 @@ class GetInterfaceLoopbackResult:
     @property
     @pulumi.getter(name="ipv6Mtu")
     def ipv6_mtu(self) -> int:
+        """
+        Set IPv6 Maximum Transmission Unit
+        """
         return pulumi.get(self, "ipv6_mtu")
 
     @property
     @pulumi.getter(name="ipv6NdRaSuppressAll")
     def ipv6_nd_ra_suppress_all(self) -> bool:
+        """
+        Suppress all IPv6 RA
+        """
         return pulumi.get(self, "ipv6_nd_ra_suppress_all")
 
     @property
@@ -201,11 +243,17 @@ class GetInterfaceLoopbackResult:
     @property
     @pulumi.getter
     def shutdown(self) -> bool:
+        """
+        Shutdown the selected interface
+        """
         return pulumi.get(self, "shutdown")
 
     @property
     @pulumi.getter(name="vrfForwarding")
     def vrf_forwarding(self) -> str:
+        """
+        Configure forwarding table
+        """
         return pulumi.get(self, "vrf_forwarding")
 
 
@@ -244,7 +292,19 @@ def get_interface_loopback(device: Optional[str] = None,
                            name: Optional[int] = None,
                            opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetInterfaceLoopbackResult:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Interface Loopback configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_interface_loopback(name=100)
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -283,6 +343,18 @@ def get_interface_loopback_output(device: Optional[pulumi.Input[Optional[str]]] 
                                   name: Optional[pulumi.Input[int]] = None,
                                   opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetInterfaceLoopbackResult]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Interface Loopback configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_interface_loopback(name=100)
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     ...

@@ -142,7 +142,14 @@ class StaticRoute(pulumi.CustomResource):
                  prefix: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
-        Create a StaticRoute resource with the given unique name, props, and options.
+        This resource can manage the Static Route configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/staticRoute:StaticRoute example "Cisco-IOS-XE-native:native/ip/route/ip-route-interface-forwarding-list=5.5.5.5,255.255.255.255"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] device: A device name from the provider configuration.
@@ -154,7 +161,14 @@ class StaticRoute(pulumi.CustomResource):
                  args: StaticRouteArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a StaticRoute resource with the given unique name, props, and options.
+        This resource can manage the Static Route configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/staticRoute:StaticRoute example "Cisco-IOS-XE-native:native/ip/route/ip-route-interface-forwarding-list=5.5.5.5,255.255.255.255"
+        ```
+
         :param str resource_name: The name of the resource.
         :param StaticRouteArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

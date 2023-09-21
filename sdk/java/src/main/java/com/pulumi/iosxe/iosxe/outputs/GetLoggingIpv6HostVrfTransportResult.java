@@ -15,33 +15,81 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetLoggingIpv6HostVrfTransportResult {
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
     private String ipv6Host;
+    /**
+     * @return Port Number List
+     * 
+     */
     private List<GetLoggingIpv6HostVrfTransportTransportTcpPort> transportTcpPorts;
+    /**
+     * @return Port Number List
+     * 
+     */
     private List<GetLoggingIpv6HostVrfTransportTransportTlsPort> transportTlsPorts;
+    /**
+     * @return Port Number List
+     * 
+     */
     private List<GetLoggingIpv6HostVrfTransportTransportUdpPort> transportUdpPorts;
+    /**
+     * @return Set VRF option
+     * 
+     */
     private String vrf;
 
     private GetLoggingIpv6HostVrfTransportResult() {}
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
     public String ipv6Host() {
         return this.ipv6Host;
     }
+    /**
+     * @return Port Number List
+     * 
+     */
     public List<GetLoggingIpv6HostVrfTransportTransportTcpPort> transportTcpPorts() {
         return this.transportTcpPorts;
     }
+    /**
+     * @return Port Number List
+     * 
+     */
     public List<GetLoggingIpv6HostVrfTransportTransportTlsPort> transportTlsPorts() {
         return this.transportTlsPorts;
     }
+    /**
+     * @return Port Number List
+     * 
+     */
     public List<GetLoggingIpv6HostVrfTransportTransportUdpPort> transportUdpPorts() {
         return this.transportUdpPorts;
     }
+    /**
+     * @return Set VRF option
+     * 
+     */
     public String vrf() {
         return this.vrf;
     }

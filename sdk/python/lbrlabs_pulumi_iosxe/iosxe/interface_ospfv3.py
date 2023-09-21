@@ -338,7 +338,29 @@ class InterfaceOspfv3(pulumi.CustomResource):
                  type: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
-        Create a InterfaceOspfv3 resource with the given unique name, props, and options.
+        This resource can manage the Interface OSPFv3 configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.InterfaceOspfv3("example",
+            cost=1000,
+            network_type_broadcast=False,
+            network_type_non_broadcast=False,
+            network_type_point_to_multipoint=False,
+            network_type_point_to_point=True,
+            type="Loopback")
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/interfaceOspfv3:InterfaceOspfv3 example "Cisco-IOS-XE-native:native/interface/Loopback=1/Cisco-IOS-XE-ospfv3:ospfv3"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[int] cost: Static route cost value of the interface - Range: `1`-`65535`
@@ -361,7 +383,29 @@ class InterfaceOspfv3(pulumi.CustomResource):
                  args: InterfaceOspfv3Args,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a InterfaceOspfv3 resource with the given unique name, props, and options.
+        This resource can manage the Interface OSPFv3 configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.InterfaceOspfv3("example",
+            cost=1000,
+            network_type_broadcast=False,
+            network_type_non_broadcast=False,
+            network_type_point_to_multipoint=False,
+            network_type_point_to_point=True,
+            type="Loopback")
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/interfaceOspfv3:InterfaceOspfv3 example "Cisco-IOS-XE-native:native/interface/Loopback=1/Cisco-IOS-XE-ospfv3:ospfv3"
+        ```
+
         :param str resource_name: The name of the resource.
         :param InterfaceOspfv3Args args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

@@ -18,85 +18,245 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetOspfVrfResult {
+    /**
+     * @return OSPF area parameters
+     * 
+     */
     private List<GetOspfVrfArea> areas;
+    /**
+     * @return Enable BFD on all interfaces
+     * 
+     */
     private Boolean bfdAllInterfaces;
+    /**
+     * @return Distribute a default route
+     * 
+     */
     private Boolean defaultInformationOriginate;
+    /**
+     * @return Always advertise default route
+     * 
+     */
     private Boolean defaultInformationOriginateAlways;
+    /**
+     * @return Set metric of redistributed routes
+     * 
+     */
     private Integer defaultMetric;
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return Administrative distance
+     * 
+     */
     private Integer distance;
+    /**
+     * @return OSPF domain-tag
+     * 
+     */
     private Integer domainTag;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
+    /**
+     * @return Configure LDP automatic configuration
+     * 
+     */
     private Boolean mplsLdpAutoconfig;
+    /**
+     * @return Configure LDP-IGP Synchronization
+     * 
+     */
     private Boolean mplsLdpSync;
+    /**
+     * @return Specify a neighbor router
+     * 
+     */
     private List<GetOspfVrfNeighbor> neighbors;
+    /**
+     * @return Enable routing on an IP network
+     * 
+     */
     private List<GetOspfVrfNetwork> networks;
+    /**
+     * @return Suppress routing updates on all interfaces
+     * 
+     */
     private Boolean passiveInterfaceDefault;
+    /**
+     * @return OSPF topology priority
+     * 
+     */
     private Integer priority;
+    /**
+     * @return Process ID
+     * 
+     */
     private Integer processId;
+    /**
+     * @return Override configured router identifier (peers will reset)
+     * 
+     */
     private String routerId;
+    /**
+     * @return Shutdown the OSPF protocol under the current instance
+     * 
+     */
     private Boolean shutdown;
+    /**
+     * @return Configure IP address summaries
+     * 
+     */
     private List<GetOspfVrfSummaryAddress> summaryAddresses;
+    /**
+     * @return VPN Routing/Forwarding Instance
+     * 
+     */
     private String vrf;
 
     private GetOspfVrfResult() {}
+    /**
+     * @return OSPF area parameters
+     * 
+     */
     public List<GetOspfVrfArea> areas() {
         return this.areas;
     }
+    /**
+     * @return Enable BFD on all interfaces
+     * 
+     */
     public Boolean bfdAllInterfaces() {
         return this.bfdAllInterfaces;
     }
+    /**
+     * @return Distribute a default route
+     * 
+     */
     public Boolean defaultInformationOriginate() {
         return this.defaultInformationOriginate;
     }
+    /**
+     * @return Always advertise default route
+     * 
+     */
     public Boolean defaultInformationOriginateAlways() {
         return this.defaultInformationOriginateAlways;
     }
+    /**
+     * @return Set metric of redistributed routes
+     * 
+     */
     public Integer defaultMetric() {
         return this.defaultMetric;
     }
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return Administrative distance
+     * 
+     */
     public Integer distance() {
         return this.distance;
     }
+    /**
+     * @return OSPF domain-tag
+     * 
+     */
     public Integer domainTag() {
         return this.domainTag;
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
+    /**
+     * @return Configure LDP automatic configuration
+     * 
+     */
     public Boolean mplsLdpAutoconfig() {
         return this.mplsLdpAutoconfig;
     }
+    /**
+     * @return Configure LDP-IGP Synchronization
+     * 
+     */
     public Boolean mplsLdpSync() {
         return this.mplsLdpSync;
     }
+    /**
+     * @return Specify a neighbor router
+     * 
+     */
     public List<GetOspfVrfNeighbor> neighbors() {
         return this.neighbors;
     }
+    /**
+     * @return Enable routing on an IP network
+     * 
+     */
     public List<GetOspfVrfNetwork> networks() {
         return this.networks;
     }
+    /**
+     * @return Suppress routing updates on all interfaces
+     * 
+     */
     public Boolean passiveInterfaceDefault() {
         return this.passiveInterfaceDefault;
     }
+    /**
+     * @return OSPF topology priority
+     * 
+     */
     public Integer priority() {
         return this.priority;
     }
+    /**
+     * @return Process ID
+     * 
+     */
     public Integer processId() {
         return this.processId;
     }
+    /**
+     * @return Override configured router identifier (peers will reset)
+     * 
+     */
     public String routerId() {
         return this.routerId;
     }
+    /**
+     * @return Shutdown the OSPF protocol under the current instance
+     * 
+     */
     public Boolean shutdown() {
         return this.shutdown;
     }
+    /**
+     * @return Configure IP address summaries
+     * 
+     */
     public List<GetOspfVrfSummaryAddress> summaryAddresses() {
         return this.summaryAddresses;
     }
+    /**
+     * @return VPN Routing/Forwarding Instance
+     * 
+     */
     public String vrf() {
         return this.vrf;
     }

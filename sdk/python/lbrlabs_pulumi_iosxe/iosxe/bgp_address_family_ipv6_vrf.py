@@ -191,7 +191,14 @@ class BgpAddressFamilyIpv6Vrf(pulumi.CustomResource):
                  vrfs: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['BgpAddressFamilyIpv6VrfVrfArgs']]]]] = None,
                  __props__=None):
         """
-        Create a BgpAddressFamilyIpv6Vrf resource with the given unique name, props, and options.
+        This resource can manage the BGP Address Family IPv6 VRF configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/bgpAddressFamilyIpv6Vrf:BgpAddressFamilyIpv6Vrf example "Cisco-IOS-XE-native:native/router/Cisco-IOS-XE-bgp:bgp=65000/address-family/with-vrf/ipv6=unicast"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] af_name: - Choices: `flowspec`, `mdt`, `multicast`, `mvpn`, `unicast`
@@ -207,7 +214,14 @@ class BgpAddressFamilyIpv6Vrf(pulumi.CustomResource):
                  args: BgpAddressFamilyIpv6VrfArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a BgpAddressFamilyIpv6Vrf resource with the given unique name, props, and options.
+        This resource can manage the BGP Address Family IPv6 VRF configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/bgpAddressFamilyIpv6Vrf:BgpAddressFamilyIpv6Vrf example "Cisco-IOS-XE-native:native/router/Cisco-IOS-XE-bgp:bgp=65000/address-family/with-vrf/ipv6=unicast"
+        ```
+
         :param str resource_name: The name of the resource.
         :param BgpAddressFamilyIpv6VrfArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

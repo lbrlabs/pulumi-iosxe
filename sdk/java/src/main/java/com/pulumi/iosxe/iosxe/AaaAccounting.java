@@ -19,6 +19,63 @@ import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the AAA Accounting configuration.
+ * 
+ * ## Example Usage
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.AaaAccounting;
+ * import com.pulumi.iosxe.iosxe.AaaAccountingArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.AaaAccountingExecArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.AaaAccountingNetworkArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new AaaAccounting(&#34;example&#34;, AaaAccountingArgs.builder()        
+ *             .execs(AaaAccountingExecArgs.builder()
+ *                 .name(&#34;default&#34;)
+ *                 .start_stop_group1(&#34;T-Group&#34;)
+ *                 .build())
+ *             .identityDefaultStartStopGroup1(&#34;RADIUS-GROUP&#34;)
+ *             .identityDefaultStartStopGroup2(&#34;RADIUS-GROUP2&#34;)
+ *             .identityDefaultStartStopGroup3(&#34;RADIUS-GROUP3&#34;)
+ *             .identityDefaultStartStopGroup4(&#34;RADIUS-GROUP4&#34;)
+ *             .networks(AaaAccountingNetworkArgs.builder()
+ *                 .id(&#34;network1&#34;)
+ *                 .start_stop_group1(&#34;radius&#34;)
+ *                 .start_stop_group2(&#34;tacacs+&#34;)
+ *                 .build())
+ *             .systemGuaranteeFirst(false)
+ *             .updateNewinfoPeriodic(2880)
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/aaaAccounting:AaaAccounting example &#34;Cisco-IOS-XE-native:native/aaa/Cisco-IOS-XE-aaa:accounting&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/aaaAccounting:AaaAccounting")
 public class AaaAccounting extends com.pulumi.resources.CustomResource {
     /**

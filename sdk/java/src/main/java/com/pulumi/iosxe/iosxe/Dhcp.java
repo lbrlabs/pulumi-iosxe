@@ -17,6 +17,54 @@ import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the DHCP configuration.
+ * 
+ * ## Example Usage
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.Dhcp;
+ * import com.pulumi.iosxe.iosxe.DhcpArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.DhcpSnoopingVlanArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Dhcp(&#34;example&#34;, DhcpArgs.builder()        
+ *             .relayInformationOptionDefault(false)
+ *             .relayInformationOptionVpn(true)
+ *             .relayInformationTrustAll(false)
+ *             .snooping(true)
+ *             .snoopingVlans(DhcpSnoopingVlanArgs.builder()
+ *                 .vlan_id(&#34;3-4&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/dhcp:Dhcp example &#34;Cisco-IOS-XE-native:native/ip/dhcp&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/dhcp:Dhcp")
 public class Dhcp extends com.pulumi.resources.CustomResource {
     /**

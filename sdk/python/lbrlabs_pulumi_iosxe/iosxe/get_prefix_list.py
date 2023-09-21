@@ -36,16 +36,25 @@ class GetPrefixListResult:
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
     @property
     @pulumi.getter
     def prefixes(self) -> Sequence['outputs.GetPrefixListPrefixResult']:
+        """
+        Build prefix-lists with name ans seq.no
+        """
         return pulumi.get(self, "prefixes")
 
 
@@ -63,7 +72,19 @@ class AwaitableGetPrefixListResult(GetPrefixListResult):
 def get_prefix_list(device: Optional[str] = None,
                     opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetPrefixListResult:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Prefix List configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_prefix_list()
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -80,6 +101,18 @@ def get_prefix_list(device: Optional[str] = None,
 def get_prefix_list_output(device: Optional[pulumi.Input[Optional[str]]] = None,
                            opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetPrefixListResult]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Prefix List configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_prefix_list()
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     ...

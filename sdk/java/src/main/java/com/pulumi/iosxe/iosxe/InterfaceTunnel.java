@@ -20,6 +20,82 @@ import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the Interface Tunnel configuration.
+ * 
+ * ## Example Usage
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.InterfaceTunnel;
+ * import com.pulumi.iosxe.iosxe.InterfaceTunnelArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.InterfaceTunnelHelperAddressArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.InterfaceTunnelIpv6AddressArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.InterfaceTunnelIpv6LinkLocalAddressArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new InterfaceTunnel(&#34;example&#34;, InterfaceTunnelArgs.builder()        
+ *             .arpTimeout(300)
+ *             .cryptoIpsecDfBit(&#34;clear&#34;)
+ *             .description(&#34;My Interface Description&#34;)
+ *             .helperAddresses(InterfaceTunnelHelperAddressArgs.builder()
+ *                 .address(&#34;10.10.10.10&#34;)
+ *                 .global(false)
+ *                 .vrf(&#34;VRF1&#34;)
+ *                 .build())
+ *             .ipAccessGroupIn(&#34;1&#34;)
+ *             .ipAccessGroupInEnable(true)
+ *             .ipAccessGroupOut(&#34;1&#34;)
+ *             .ipAccessGroupOutEnable(true)
+ *             .ipDhcpRelaySourceInterface(&#34;Loopback100&#34;)
+ *             .ipProxyArp(false)
+ *             .ipRedirects(false)
+ *             .ipUnreachables(false)
+ *             .ipv4Address(&#34;10.1.1.1&#34;)
+ *             .ipv4AddressMask(&#34;255.255.255.0&#34;)
+ *             .ipv6AddressDhcp(true)
+ *             .ipv6Addresses(InterfaceTunnelIpv6AddressArgs.builder()
+ *                 .eui_64(true)
+ *                 .prefix(&#34;2005:DB8::/32&#34;)
+ *                 .build())
+ *             .ipv6Enable(true)
+ *             .ipv6LinkLocalAddresses(InterfaceTunnelIpv6LinkLocalAddressArgs.builder()
+ *                 .address(&#34;fe80::9656:d028:8652:66ba&#34;)
+ *                 .link_local(true)
+ *                 .build())
+ *             .ipv6Mtu(1300)
+ *             .ipv6NdRaSuppressAll(true)
+ *             .shutdown(false)
+ *             .tunnelDestinationIpv4(&#34;2.2.2.2&#34;)
+ *             .vrfForwarding(&#34;VRF1&#34;)
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/interfaceTunnel:InterfaceTunnel example &#34;Cisco-IOS-XE-native:native/interface/Tunnel=90&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/interfaceTunnel:InterfaceTunnel")
 public class InterfaceTunnel extends com.pulumi.resources.CustomResource {
     /**

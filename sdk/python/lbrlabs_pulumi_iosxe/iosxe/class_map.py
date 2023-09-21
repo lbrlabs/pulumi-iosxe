@@ -600,7 +600,14 @@ class ClassMap(pulumi.CustomResource):
                  type: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
-        Create a ClassMap resource with the given unique name, props, and options.
+        This resource can manage the Class Map configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/classMap:ClassMap example "Cisco-IOS-XE-native:native/policy/Cisco-IOS-XE-policy:class-map=CM1"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] description: Class-Map description
@@ -629,7 +636,14 @@ class ClassMap(pulumi.CustomResource):
                  args: ClassMapArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a ClassMap resource with the given unique name, props, and options.
+        This resource can manage the Class Map configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/classMap:ClassMap example "Cisco-IOS-XE-native:native/policy/Cisco-IOS-XE-policy:class-map=CM1"
+        ```
+
         :param str resource_name: The name of the resource.
         :param ClassMapArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

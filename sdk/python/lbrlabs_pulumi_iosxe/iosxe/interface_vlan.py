@@ -1085,7 +1085,14 @@ class InterfaceVlan(pulumi.CustomResource):
                  vrf_forwarding: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
-        Create a InterfaceVlan resource with the given unique name, props, and options.
+        This resource can manage the Interface VLAN configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/interfaceVlan:InterfaceVlan example "Cisco-IOS-XE-native:native/interface/Vlan=10"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[bool] autostate: Enable auto-state determination for VLAN
@@ -1125,7 +1132,14 @@ class InterfaceVlan(pulumi.CustomResource):
                  args: Optional[InterfaceVlanArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a InterfaceVlan resource with the given unique name, props, and options.
+        This resource can manage the Interface VLAN configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/interfaceVlan:InterfaceVlan example "Cisco-IOS-XE-native:native/interface/Vlan=10"
+        ```
+
         :param str resource_name: The name of the resource.
         :param InterfaceVlanArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

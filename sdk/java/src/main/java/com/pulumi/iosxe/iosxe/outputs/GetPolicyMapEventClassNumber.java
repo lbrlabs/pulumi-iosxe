@@ -12,15 +12,31 @@ import java.util.Objects;
 
 @CustomType
 public final class GetPolicyMapEventClassNumber {
+    /**
+     * @return action number, 1 for 1st class, 2 for 2nd...
+     * 
+     */
     private List<GetPolicyMapEventClassNumberActionNumber> actionNumbers;
+    /**
+     * @return The class type this control policy-map triggers upon
+     * 
+     */
     private String class_;
     private String executionType;
     private Integer number;
 
     private GetPolicyMapEventClassNumber() {}
+    /**
+     * @return action number, 1 for 1st class, 2 for 2nd...
+     * 
+     */
     public List<GetPolicyMapEventClassNumberActionNumber> actionNumbers() {
         return this.actionNumbers;
     }
+    /**
+     * @return The class type this control policy-map triggers upon
+     * 
+     */
     public String class_() {
         return this.class_;
     }

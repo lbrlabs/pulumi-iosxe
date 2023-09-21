@@ -15,40 +15,108 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetCryptoIkev2ProfileResult {
+    /**
+     * @return Pre-Shared Key
+     * 
+     */
     private Boolean authenticationLocalPreShare;
+    /**
+     * @return Pre-Shared Key
+     * 
+     */
     private Boolean authenticationRemotePreShare;
+    /**
+     * @return enable config-exchange request
+     * 
+     */
     private Boolean configExchangeRequest;
+    /**
+     * @return Specify a description of this profile
+     * 
+     */
     private String description;
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
     private Integer dpdInterval;
     private String dpdQuery;
     private Integer dpdRetry;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
+    /**
+     * @return address
+     * 
+     */
     private String identityLocalAddress;
+    /**
+     * @return key-id opaque string - proprietary types of identification key-id string
+     * 
+     */
     private String identityLocalKeyId;
+    /**
+     * @return Keyring name
+     * 
+     */
     private String keyringLocal;
     private String matchAddressLocalIp;
     private String matchFvrf;
+    /**
+     * @return Any fvrf
+     * 
+     */
     private Boolean matchFvrfAny;
     private List<GetCryptoIkev2ProfileMatchIdentityRemoteIpv4Address> matchIdentityRemoteIpv4Addresses;
     private List<String> matchIdentityRemoteIpv6Prefixes;
+    /**
+     * @return key-id opaque string
+     * 
+     */
     private List<String> matchIdentityRemoteKeys;
+    /**
+     * @return Match the profile for incoming connections only
+     * 
+     */
     private Boolean matchInboundOnly;
     private String name;
 
     private GetCryptoIkev2ProfileResult() {}
+    /**
+     * @return Pre-Shared Key
+     * 
+     */
     public Boolean authenticationLocalPreShare() {
         return this.authenticationLocalPreShare;
     }
+    /**
+     * @return Pre-Shared Key
+     * 
+     */
     public Boolean authenticationRemotePreShare() {
         return this.authenticationRemotePreShare;
     }
+    /**
+     * @return enable config-exchange request
+     * 
+     */
     public Boolean configExchangeRequest() {
         return this.configExchangeRequest;
     }
+    /**
+     * @return Specify a description of this profile
+     * 
+     */
     public String description() {
         return this.description;
     }
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
@@ -61,15 +129,31 @@ public final class GetCryptoIkev2ProfileResult {
     public Integer dpdRetry() {
         return this.dpdRetry;
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
+    /**
+     * @return address
+     * 
+     */
     public String identityLocalAddress() {
         return this.identityLocalAddress;
     }
+    /**
+     * @return key-id opaque string - proprietary types of identification key-id string
+     * 
+     */
     public String identityLocalKeyId() {
         return this.identityLocalKeyId;
     }
+    /**
+     * @return Keyring name
+     * 
+     */
     public String keyringLocal() {
         return this.keyringLocal;
     }
@@ -79,6 +163,10 @@ public final class GetCryptoIkev2ProfileResult {
     public String matchFvrf() {
         return this.matchFvrf;
     }
+    /**
+     * @return Any fvrf
+     * 
+     */
     public Boolean matchFvrfAny() {
         return this.matchFvrfAny;
     }
@@ -88,9 +176,17 @@ public final class GetCryptoIkev2ProfileResult {
     public List<String> matchIdentityRemoteIpv6Prefixes() {
         return this.matchIdentityRemoteIpv6Prefixes;
     }
+    /**
+     * @return key-id opaque string
+     * 
+     */
     public List<String> matchIdentityRemoteKeys() {
         return this.matchIdentityRemoteKeys;
     }
+    /**
+     * @return Match the profile for incoming connections only
+     * 
+     */
     public Boolean matchInboundOnly() {
         return this.matchInboundOnly;
     }

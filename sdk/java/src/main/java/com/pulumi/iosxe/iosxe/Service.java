@@ -15,6 +15,69 @@ import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the Service configuration.
+ * 
+ * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.Service;
+ * import com.pulumi.iosxe.iosxe.ServiceArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Service(&#34;example&#34;, ServiceArgs.builder()        
+ *             .callHome(true)
+ *             .compressConfig(true)
+ *             .dhcp(true)
+ *             .pad(true)
+ *             .passwordEncryption(true)
+ *             .passwordRecovery(true)
+ *             .sequenceNumbers(true)
+ *             .tcpKeepalivesIn(true)
+ *             .tcpKeepalivesOut(true)
+ *             .timestamps(true)
+ *             .timestampsDebug(true)
+ *             .timestampsDebugDatetime(true)
+ *             .timestampsDebugDatetimeLocaltime(true)
+ *             .timestampsDebugDatetimeMsec(true)
+ *             .timestampsDebugDatetimeShowTimezone(true)
+ *             .timestampsDebugDatetimeYear(true)
+ *             .timestampsDebugUptime(true)
+ *             .timestampsLog(true)
+ *             .timestampsLogDatetime(true)
+ *             .timestampsLogDatetimeLocaltime(true)
+ *             .timestampsLogDatetimeMsec(true)
+ *             .timestampsLogDatetimeShowTimezone(true)
+ *             .timestampsLogDatetimeYear(true)
+ *             .timestampsLogUptime(true)
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/service:Service example &#34;Cisco-IOS-XE-native:native/service&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/service:Service")
 public class Service extends com.pulumi.resources.CustomResource {
     /**

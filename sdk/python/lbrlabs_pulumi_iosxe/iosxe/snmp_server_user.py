@@ -764,7 +764,31 @@ class SnmpServerUser(pulumi.CustomResource):
                  v3_auth_priv_des_password: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
-        Create a SnmpServerUser resource with the given unique name, props, and options.
+        This resource can manage the SNMP Server User configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.SnmpServerUser("example",
+            grpname="GROUP1",
+            username="USER1",
+            v3_auth_algorithm="sha",
+            v3_auth_password="Cisco123",
+            v3_auth_priv_aes_access_acl_name="ACL123",
+            v3_auth_priv_aes_access_ipv6_acl="V6ACL1",
+            v3_auth_priv_aes_algorithm="128",
+            v3_auth_priv_aes_password="Cisco123")
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/snmpServerUser:SnmpServerUser example "Cisco-IOS-XE-native:native/snmp-server/Cisco-IOS-XE-snmp:user/names=USER1,GROUP1"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] delete_mode: Configure behavior when deleting/destroying the resource. Either delete the entire object (YANG container) being
@@ -799,7 +823,31 @@ class SnmpServerUser(pulumi.CustomResource):
                  args: SnmpServerUserArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a SnmpServerUser resource with the given unique name, props, and options.
+        This resource can manage the SNMP Server User configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.SnmpServerUser("example",
+            grpname="GROUP1",
+            username="USER1",
+            v3_auth_algorithm="sha",
+            v3_auth_password="Cisco123",
+            v3_auth_priv_aes_access_acl_name="ACL123",
+            v3_auth_priv_aes_access_ipv6_acl="V6ACL1",
+            v3_auth_priv_aes_algorithm="128",
+            v3_auth_priv_aes_password="Cisco123")
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/snmpServerUser:SnmpServerUser example "Cisco-IOS-XE-native:native/snmp-server/Cisco-IOS-XE-snmp:user/names=USER1,GROUP1"
+        ```
+
         :param str resource_name: The name of the resource.
         :param SnmpServerUserArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

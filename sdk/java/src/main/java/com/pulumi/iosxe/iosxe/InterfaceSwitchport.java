@@ -16,6 +16,57 @@ import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the Interface Switchport configuration.
+ * 
+ * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.InterfaceSwitchport;
+ * import com.pulumi.iosxe.iosxe.InterfaceSwitchportArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new InterfaceSwitchport(&#34;example&#34;, InterfaceSwitchportArgs.builder()        
+ *             .accessVlan(&#34;100&#34;)
+ *             .host(false)
+ *             .modeAccess(false)
+ *             .modeDot1qTunnel(false)
+ *             .modePrivateVlanHost(false)
+ *             .modePrivateVlanPromiscuous(false)
+ *             .modePrivateVlanTrunk(false)
+ *             .modeTrunk(true)
+ *             .nonegotiate(false)
+ *             .trunkAllowedVlans(&#34;100,101&#34;)
+ *             .trunkNativeVlan(100)
+ *             .type(&#34;GigabitEthernet&#34;)
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/interfaceSwitchport:InterfaceSwitchport example &#34;Cisco-IOS-XE-native:native/interface/GigabitEthernet=1/0/3/switchport-config/switchport&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/interfaceSwitchport:InterfaceSwitchport")
 public class InterfaceSwitchport extends com.pulumi.resources.CustomResource {
     @Export(name="accessVlan", refs={String.class}, tree="[0]")

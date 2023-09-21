@@ -87,26 +87,41 @@ class GetCryptoIkev2ProfileResult:
     @property
     @pulumi.getter(name="authenticationLocalPreShare")
     def authentication_local_pre_share(self) -> bool:
+        """
+        Pre-Shared Key
+        """
         return pulumi.get(self, "authentication_local_pre_share")
 
     @property
     @pulumi.getter(name="authenticationRemotePreShare")
     def authentication_remote_pre_share(self) -> bool:
+        """
+        Pre-Shared Key
+        """
         return pulumi.get(self, "authentication_remote_pre_share")
 
     @property
     @pulumi.getter(name="configExchangeRequest")
     def config_exchange_request(self) -> bool:
+        """
+        enable config-exchange request
+        """
         return pulumi.get(self, "config_exchange_request")
 
     @property
     @pulumi.getter
     def description(self) -> str:
+        """
+        Specify a description of this profile
+        """
         return pulumi.get(self, "description")
 
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
@@ -127,21 +142,33 @@ class GetCryptoIkev2ProfileResult:
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
     @property
     @pulumi.getter(name="identityLocalAddress")
     def identity_local_address(self) -> str:
+        """
+        address
+        """
         return pulumi.get(self, "identity_local_address")
 
     @property
     @pulumi.getter(name="identityLocalKeyId")
     def identity_local_key_id(self) -> str:
+        """
+        key-id opaque string - proprietary types of identification key-id string
+        """
         return pulumi.get(self, "identity_local_key_id")
 
     @property
     @pulumi.getter(name="keyringLocal")
     def keyring_local(self) -> str:
+        """
+        Keyring name
+        """
         return pulumi.get(self, "keyring_local")
 
     @property
@@ -157,6 +184,9 @@ class GetCryptoIkev2ProfileResult:
     @property
     @pulumi.getter(name="matchFvrfAny")
     def match_fvrf_any(self) -> bool:
+        """
+        Any fvrf
+        """
         return pulumi.get(self, "match_fvrf_any")
 
     @property
@@ -172,11 +202,17 @@ class GetCryptoIkev2ProfileResult:
     @property
     @pulumi.getter(name="matchIdentityRemoteKeys")
     def match_identity_remote_keys(self) -> Sequence[str]:
+        """
+        key-id opaque string
+        """
         return pulumi.get(self, "match_identity_remote_keys")
 
     @property
     @pulumi.getter(name="matchInboundOnly")
     def match_inbound_only(self) -> bool:
+        """
+        Match the profile for incoming connections only
+        """
         return pulumi.get(self, "match_inbound_only")
 
     @property
@@ -217,7 +253,19 @@ def get_crypto_ikev2_profile(device: Optional[str] = None,
                              name: Optional[str] = None,
                              opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetCryptoIkev2ProfileResult:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Crypto IKEv2 Profile configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_crypto_ikev2_profile(name="profile1")
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -253,6 +301,18 @@ def get_crypto_ikev2_profile_output(device: Optional[pulumi.Input[Optional[str]]
                                     name: Optional[pulumi.Input[str]] = None,
                                     opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetCryptoIkev2ProfileResult]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Crypto IKEv2 Profile configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_crypto_ikev2_profile(name="profile1")
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     ...

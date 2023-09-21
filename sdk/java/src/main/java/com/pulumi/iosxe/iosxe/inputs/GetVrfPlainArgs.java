@@ -14,16 +14,32 @@ public final class GetVrfPlainArgs extends com.pulumi.resources.InvokeArgs {
 
     public static final GetVrfPlainArgs Empty = new GetVrfPlainArgs();
 
+    /**
+     * A device name from the provider configuration.
+     * 
+     */
     @Import(name="device")
     private @Nullable String device;
 
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
 
+    /**
+     * WORD;;VRF name
+     * 
+     */
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return WORD;;VRF name
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -53,11 +69,23 @@ public final class GetVrfPlainArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetVrfPlainArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param device A device name from the provider configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder device(@Nullable String device) {
             $.device = device;
             return this;
         }
 
+        /**
+         * @param name WORD;;VRF name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

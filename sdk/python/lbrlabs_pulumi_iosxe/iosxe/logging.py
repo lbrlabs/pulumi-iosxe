@@ -682,7 +682,14 @@ class Logging(pulumi.CustomResource):
                  trap_severity: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
-        Create a Logging resource with the given unique name, props, and options.
+        This resource can manage the Logging configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/logging:Logging example "Cisco-IOS-XE-native:native/logging"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] buffered_severity: Logging severity level
@@ -706,7 +713,14 @@ class Logging(pulumi.CustomResource):
                  args: Optional[LoggingArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a Logging resource with the given unique name, props, and options.
+        This resource can manage the Logging configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/logging:Logging example "Cisco-IOS-XE-native:native/logging"
+        ```
+
         :param str resource_name: The name of the resource.
         :param LoggingArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

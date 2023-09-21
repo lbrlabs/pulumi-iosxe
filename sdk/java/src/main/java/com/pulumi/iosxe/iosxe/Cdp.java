@@ -18,6 +18,59 @@ import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the CDP configuration.
+ * 
+ * ## Example Usage
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.Cdp;
+ * import com.pulumi.iosxe.iosxe.CdpArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.CdpTlvListArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Cdp(&#34;example&#34;, CdpArgs.builder()        
+ *             .filterTlvList(&#34;TLIST&#34;)
+ *             .holdtime(15)
+ *             .run(true)
+ *             .timer(5)
+ *             .tlvLists(CdpTlvListArgs.builder()
+ *                 .cos(true)
+ *                 .duplex(true)
+ *                 .name(&#34;TLIST&#34;)
+ *                 .trust(true)
+ *                 .version(true)
+ *                 .vtp_mgmt_domain(true)
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/cdp:Cdp example &#34;Cisco-IOS-XE-native:native/cdp&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/cdp:Cdp")
 public class Cdp extends com.pulumi.resources.CustomResource {
     /**

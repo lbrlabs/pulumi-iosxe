@@ -16,6 +16,57 @@ import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the EVPN configuration.
+ * 
+ * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.Evpn;
+ * import com.pulumi.iosxe.iosxe.EvpnArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Evpn(&#34;example&#34;, EvpnArgs.builder()        
+ *             .defaultGatewayAdvertise(true)
+ *             .ipDuplicationLimit(10)
+ *             .ipDuplicationTime(100)
+ *             .loggingPeerState(true)
+ *             .macDuplicationLimit(10)
+ *             .macDuplicationTime(100)
+ *             .replicationTypeIngress(false)
+ *             .replicationTypeMp2mp(false)
+ *             .replicationTypeP2mp(false)
+ *             .replicationTypeStatic(true)
+ *             .routeTargetAutoVni(true)
+ *             .routerIdLoopback(100)
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/evpn:Evpn example &#34;Cisco-IOS-XE-native:native/l2vpn/Cisco-IOS-XE-l2vpn:evpn_cont/evpn&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/evpn:Evpn")
 public class Evpn extends com.pulumi.resources.CustomResource {
     /**

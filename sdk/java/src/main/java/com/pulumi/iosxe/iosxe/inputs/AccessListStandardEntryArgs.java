@@ -17,86 +17,182 @@ public final class AccessListStandardEntryArgs extends com.pulumi.resources.Reso
 
     public static final AccessListStandardEntryArgs Empty = new AccessListStandardEntryArgs();
 
+    /**
+     * Any source prefix
+     * 
+     */
     @Import(name="denyAny")
     private @Nullable Output<Boolean> denyAny;
 
+    /**
+     * @return Any source prefix
+     * 
+     */
     public Optional<Output<Boolean>> denyAny() {
         return Optional.ofNullable(this.denyAny);
     }
 
+    /**
+     * A single source host
+     * 
+     */
     @Import(name="denyHost")
     private @Nullable Output<String> denyHost;
 
+    /**
+     * @return A single source host
+     * 
+     */
     public Optional<Output<String>> denyHost() {
         return Optional.ofNullable(this.denyHost);
     }
 
+    /**
+     * Log matches against this entry
+     * 
+     */
     @Import(name="denyLog")
     private @Nullable Output<Boolean> denyLog;
 
+    /**
+     * @return Log matches against this entry
+     * 
+     */
     public Optional<Output<Boolean>> denyLog() {
         return Optional.ofNullable(this.denyLog);
     }
 
+    /**
+     * Network address prefix
+     * 
+     */
     @Import(name="denyPrefix")
     private @Nullable Output<String> denyPrefix;
 
+    /**
+     * @return Network address prefix
+     * 
+     */
     public Optional<Output<String>> denyPrefix() {
         return Optional.ofNullable(this.denyPrefix);
     }
 
+    /**
+     * Wildcard bits
+     * 
+     */
     @Import(name="denyPrefixMask")
     private @Nullable Output<String> denyPrefixMask;
 
+    /**
+     * @return Wildcard bits
+     * 
+     */
     public Optional<Output<String>> denyPrefixMask() {
         return Optional.ofNullable(this.denyPrefixMask);
     }
 
+    /**
+     * Any source prefix
+     * 
+     */
     @Import(name="permitAny")
     private @Nullable Output<Boolean> permitAny;
 
+    /**
+     * @return Any source prefix
+     * 
+     */
     public Optional<Output<Boolean>> permitAny() {
         return Optional.ofNullable(this.permitAny);
     }
 
+    /**
+     * A single source host
+     * 
+     */
     @Import(name="permitHost")
     private @Nullable Output<String> permitHost;
 
+    /**
+     * @return A single source host
+     * 
+     */
     public Optional<Output<String>> permitHost() {
         return Optional.ofNullable(this.permitHost);
     }
 
+    /**
+     * Log matches against this entry
+     * 
+     */
     @Import(name="permitLog")
     private @Nullable Output<Boolean> permitLog;
 
+    /**
+     * @return Log matches against this entry
+     * 
+     */
     public Optional<Output<Boolean>> permitLog() {
         return Optional.ofNullable(this.permitLog);
     }
 
+    /**
+     * Network address prefix
+     * 
+     */
     @Import(name="permitPrefix")
     private @Nullable Output<String> permitPrefix;
 
+    /**
+     * @return Network address prefix
+     * 
+     */
     public Optional<Output<String>> permitPrefix() {
         return Optional.ofNullable(this.permitPrefix);
     }
 
+    /**
+     * Wildcard bits
+     * 
+     */
     @Import(name="permitPrefixMask")
     private @Nullable Output<String> permitPrefixMask;
 
+    /**
+     * @return Wildcard bits
+     * 
+     */
     public Optional<Output<String>> permitPrefixMask() {
         return Optional.ofNullable(this.permitPrefixMask);
     }
 
+    /**
+     * Access list entry comment
+     * 
+     */
     @Import(name="remark")
     private @Nullable Output<String> remark;
 
+    /**
+     * @return Access list entry comment
+     * 
+     */
     public Optional<Output<String>> remark() {
         return Optional.ofNullable(this.remark);
     }
 
+    /**
+     * - Range: `1`-`2147483647`
+     * 
+     */
     @Import(name="sequence", required=true)
     private Output<Integer> sequence;
 
+    /**
+     * @return - Range: `1`-`2147483647`
+     * 
+     */
     public Output<Integer> sequence() {
         return this.sequence;
     }
@@ -136,110 +232,254 @@ public final class AccessListStandardEntryArgs extends com.pulumi.resources.Reso
             $ = new AccessListStandardEntryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param denyAny Any source prefix
+         * 
+         * @return builder
+         * 
+         */
         public Builder denyAny(@Nullable Output<Boolean> denyAny) {
             $.denyAny = denyAny;
             return this;
         }
 
+        /**
+         * @param denyAny Any source prefix
+         * 
+         * @return builder
+         * 
+         */
         public Builder denyAny(Boolean denyAny) {
             return denyAny(Output.of(denyAny));
         }
 
+        /**
+         * @param denyHost A single source host
+         * 
+         * @return builder
+         * 
+         */
         public Builder denyHost(@Nullable Output<String> denyHost) {
             $.denyHost = denyHost;
             return this;
         }
 
+        /**
+         * @param denyHost A single source host
+         * 
+         * @return builder
+         * 
+         */
         public Builder denyHost(String denyHost) {
             return denyHost(Output.of(denyHost));
         }
 
+        /**
+         * @param denyLog Log matches against this entry
+         * 
+         * @return builder
+         * 
+         */
         public Builder denyLog(@Nullable Output<Boolean> denyLog) {
             $.denyLog = denyLog;
             return this;
         }
 
+        /**
+         * @param denyLog Log matches against this entry
+         * 
+         * @return builder
+         * 
+         */
         public Builder denyLog(Boolean denyLog) {
             return denyLog(Output.of(denyLog));
         }
 
+        /**
+         * @param denyPrefix Network address prefix
+         * 
+         * @return builder
+         * 
+         */
         public Builder denyPrefix(@Nullable Output<String> denyPrefix) {
             $.denyPrefix = denyPrefix;
             return this;
         }
 
+        /**
+         * @param denyPrefix Network address prefix
+         * 
+         * @return builder
+         * 
+         */
         public Builder denyPrefix(String denyPrefix) {
             return denyPrefix(Output.of(denyPrefix));
         }
 
+        /**
+         * @param denyPrefixMask Wildcard bits
+         * 
+         * @return builder
+         * 
+         */
         public Builder denyPrefixMask(@Nullable Output<String> denyPrefixMask) {
             $.denyPrefixMask = denyPrefixMask;
             return this;
         }
 
+        /**
+         * @param denyPrefixMask Wildcard bits
+         * 
+         * @return builder
+         * 
+         */
         public Builder denyPrefixMask(String denyPrefixMask) {
             return denyPrefixMask(Output.of(denyPrefixMask));
         }
 
+        /**
+         * @param permitAny Any source prefix
+         * 
+         * @return builder
+         * 
+         */
         public Builder permitAny(@Nullable Output<Boolean> permitAny) {
             $.permitAny = permitAny;
             return this;
         }
 
+        /**
+         * @param permitAny Any source prefix
+         * 
+         * @return builder
+         * 
+         */
         public Builder permitAny(Boolean permitAny) {
             return permitAny(Output.of(permitAny));
         }
 
+        /**
+         * @param permitHost A single source host
+         * 
+         * @return builder
+         * 
+         */
         public Builder permitHost(@Nullable Output<String> permitHost) {
             $.permitHost = permitHost;
             return this;
         }
 
+        /**
+         * @param permitHost A single source host
+         * 
+         * @return builder
+         * 
+         */
         public Builder permitHost(String permitHost) {
             return permitHost(Output.of(permitHost));
         }
 
+        /**
+         * @param permitLog Log matches against this entry
+         * 
+         * @return builder
+         * 
+         */
         public Builder permitLog(@Nullable Output<Boolean> permitLog) {
             $.permitLog = permitLog;
             return this;
         }
 
+        /**
+         * @param permitLog Log matches against this entry
+         * 
+         * @return builder
+         * 
+         */
         public Builder permitLog(Boolean permitLog) {
             return permitLog(Output.of(permitLog));
         }
 
+        /**
+         * @param permitPrefix Network address prefix
+         * 
+         * @return builder
+         * 
+         */
         public Builder permitPrefix(@Nullable Output<String> permitPrefix) {
             $.permitPrefix = permitPrefix;
             return this;
         }
 
+        /**
+         * @param permitPrefix Network address prefix
+         * 
+         * @return builder
+         * 
+         */
         public Builder permitPrefix(String permitPrefix) {
             return permitPrefix(Output.of(permitPrefix));
         }
 
+        /**
+         * @param permitPrefixMask Wildcard bits
+         * 
+         * @return builder
+         * 
+         */
         public Builder permitPrefixMask(@Nullable Output<String> permitPrefixMask) {
             $.permitPrefixMask = permitPrefixMask;
             return this;
         }
 
+        /**
+         * @param permitPrefixMask Wildcard bits
+         * 
+         * @return builder
+         * 
+         */
         public Builder permitPrefixMask(String permitPrefixMask) {
             return permitPrefixMask(Output.of(permitPrefixMask));
         }
 
+        /**
+         * @param remark Access list entry comment
+         * 
+         * @return builder
+         * 
+         */
         public Builder remark(@Nullable Output<String> remark) {
             $.remark = remark;
             return this;
         }
 
+        /**
+         * @param remark Access list entry comment
+         * 
+         * @return builder
+         * 
+         */
         public Builder remark(String remark) {
             return remark(Output.of(remark));
         }
 
+        /**
+         * @param sequence - Range: `1`-`2147483647`
+         * 
+         * @return builder
+         * 
+         */
         public Builder sequence(Output<Integer> sequence) {
             $.sequence = sequence;
             return this;
         }
 
+        /**
+         * @param sequence - Range: `1`-`2147483647`
+         * 
+         * @return builder
+         * 
+         */
         public Builder sequence(Integer sequence) {
             return sequence(Output.of(sequence));
         }

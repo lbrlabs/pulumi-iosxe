@@ -14,16 +14,32 @@ public final class GetServiceTemplatePlainArgs extends com.pulumi.resources.Invo
 
     public static final GetServiceTemplatePlainArgs Empty = new GetServiceTemplatePlainArgs();
 
+    /**
+     * A device name from the provider configuration.
+     * 
+     */
     @Import(name="device")
     private @Nullable String device;
 
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
 
+    /**
+     * Specify a template name (maximum 48 characters)
+     * 
+     */
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Specify a template name (maximum 48 characters)
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -53,11 +69,23 @@ public final class GetServiceTemplatePlainArgs extends com.pulumi.resources.Invo
             $ = new GetServiceTemplatePlainArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param device A device name from the provider configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder device(@Nullable String device) {
             $.device = device;
             return this;
         }
 
+        /**
+         * @param name Specify a template name (maximum 48 characters)
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

@@ -45,11 +45,17 @@ class GetPolicyMapEventResult:
     @property
     @pulumi.getter(name="classNumbers")
     def class_numbers(self) -> Sequence['outputs.GetPolicyMapEventClassNumberResult']:
+        """
+        class number, 1 for 1st class, 2 for 2nd...
+        """
         return pulumi.get(self, "class_numbers")
 
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
@@ -60,6 +66,9 @@ class GetPolicyMapEventResult:
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
     @property
@@ -70,6 +79,9 @@ class GetPolicyMapEventResult:
     @property
     @pulumi.getter
     def name(self) -> str:
+        """
+        Name of the policy map
+        """
         return pulumi.get(self, "name")
 
 
@@ -92,7 +104,21 @@ def get_policy_map_event(device: Optional[str] = None,
                          name: Optional[str] = None,
                          opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetPolicyMapEventResult:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Policy Map Event configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_policy_map_event(event_type="authentication-success",
+        name="dot1x_policy")
+    ```
+
+
+    :param str device: A device name from the provider configuration.
+    :param str name: Name of the policy map
     """
     __args__ = dict()
     __args__['device'] = device
@@ -116,6 +142,20 @@ def get_policy_map_event_output(device: Optional[pulumi.Input[Optional[str]]] = 
                                 name: Optional[pulumi.Input[str]] = None,
                                 opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetPolicyMapEventResult]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Policy Map Event configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_policy_map_event(event_type="authentication-success",
+        name="dot1x_policy")
+    ```
+
+
+    :param str device: A device name from the provider configuration.
+    :param str name: Name of the policy map
     """
     ...

@@ -18,6 +18,59 @@ import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the Logging IPv6 Host Transport configuration.
+ * 
+ * ## Example Usage
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.LoggingIpv6HostTransport;
+ * import com.pulumi.iosxe.iosxe.LoggingIpv6HostTransportArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.LoggingIpv6HostTransportTransportTcpPortArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.LoggingIpv6HostTransportTransportTlsPortArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.LoggingIpv6HostTransportTransportUdpPortArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new LoggingIpv6HostTransport(&#34;example&#34;, LoggingIpv6HostTransportArgs.builder()        
+ *             .ipv6Host(&#34;2001::1&#34;)
+ *             .transportTcpPorts(LoggingIpv6HostTransportTransportTcpPortArgs.builder()
+ *                 .port_number(10001)
+ *                 .build())
+ *             .transportTlsPorts(LoggingIpv6HostTransportTransportTlsPortArgs.builder()
+ *                 .port_number(10002)
+ *                 .build())
+ *             .transportUdpPorts(LoggingIpv6HostTransportTransportUdpPortArgs.builder()
+ *                 .port_number(10000)
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/loggingIpv6HostTransport:LoggingIpv6HostTransport example &#34;Cisco-IOS-XE-native:native/logging/host/ipv6/ipv6-host-transport-list=2001::1&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/loggingIpv6HostTransport:LoggingIpv6HostTransport")
 public class LoggingIpv6HostTransport extends com.pulumi.resources.CustomResource {
     /**

@@ -170,7 +170,25 @@ class PolicyMap(pulumi.CustomResource):
                  type: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
-        Create a PolicyMap resource with the given unique name, props, and options.
+        This resource can manage the Policy Map configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.PolicyMap("example",
+            subscriber=True,
+            type="control")
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/policyMap:PolicyMap example "Cisco-IOS-XE-native:native/policy/Cisco-IOS-XE-policy:policy-map=dot1x_policy"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] device: A device name from the provider configuration.
@@ -186,7 +204,25 @@ class PolicyMap(pulumi.CustomResource):
                  args: Optional[PolicyMapArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a PolicyMap resource with the given unique name, props, and options.
+        This resource can manage the Policy Map configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.PolicyMap("example",
+            subscriber=True,
+            type="control")
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/policyMap:PolicyMap example "Cisco-IOS-XE-native:native/policy/Cisco-IOS-XE-policy:policy-map=dot1x_policy"
+        ```
+
         :param str resource_name: The name of the resource.
         :param PolicyMapArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

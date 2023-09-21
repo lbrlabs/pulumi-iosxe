@@ -11,29 +11,61 @@ import java.util.Objects;
 
 @CustomType
 public final class GetStaticRouteNextHop {
+    /**
+     * @return Next hop address is global
+     * 
+     */
     private Boolean global;
     private Integer metric;
+    /**
+     * @return Specify name of the next hop
+     * 
+     */
     private String name;
     private String nextHop;
+    /**
+     * @return permanent route
+     * 
+     */
     private Boolean permanent;
+    /**
+     * @return Set tag for this route
+     * 
+     */
     private Integer tag;
 
     private GetStaticRouteNextHop() {}
+    /**
+     * @return Next hop address is global
+     * 
+     */
     public Boolean global() {
         return this.global;
     }
     public Integer metric() {
         return this.metric;
     }
+    /**
+     * @return Specify name of the next hop
+     * 
+     */
     public String name() {
         return this.name;
     }
     public String nextHop() {
         return this.nextHop;
     }
+    /**
+     * @return permanent route
+     * 
+     */
     public Boolean permanent() {
         return this.permanent;
     }
+    /**
+     * @return Set tag for this route
+     * 
+     */
     public Integer tag() {
         return this.tag;
     }

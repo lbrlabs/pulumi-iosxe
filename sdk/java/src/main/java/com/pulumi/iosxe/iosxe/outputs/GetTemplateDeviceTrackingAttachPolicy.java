@@ -10,12 +10,20 @@ import java.util.Objects;
 @CustomType
 public final class GetTemplateDeviceTrackingAttachPolicy {
     private String policyName;
+    /**
+     * @return VLAN IDs of the VLANs for which this policy applies
+     * 
+     */
     private String vlanRange;
 
     private GetTemplateDeviceTrackingAttachPolicy() {}
     public String policyName() {
         return this.policyName;
     }
+    /**
+     * @return VLAN IDs of the VLANs for which this policy applies
+     * 
+     */
     public String vlanRange() {
         return this.vlanRange;
     }

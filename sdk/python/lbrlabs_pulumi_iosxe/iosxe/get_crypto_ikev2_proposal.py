@@ -110,111 +110,177 @@ class GetCryptoIkev2ProposalResult:
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
     @pulumi.getter(name="encryptionAesCbc128")
     def encryption_aes_cbc128(self) -> bool:
+        """
+        AES-CBC-128
+        """
         return pulumi.get(self, "encryption_aes_cbc128")
 
     @property
     @pulumi.getter(name="encryptionAesCbc192")
     def encryption_aes_cbc192(self) -> bool:
+        """
+        AES-CBC-192
+        """
         return pulumi.get(self, "encryption_aes_cbc192")
 
     @property
     @pulumi.getter(name="encryptionAesCbc256")
     def encryption_aes_cbc256(self) -> bool:
+        """
+        AES-CBC-256
+        """
         return pulumi.get(self, "encryption_aes_cbc256")
 
     @property
     @pulumi.getter(name="encryptionAesGcm128")
     def encryption_aes_gcm128(self) -> bool:
+        """
+        Combined-mode,128 bit key,16 byte ICV(Authentication Tag)
+        """
         return pulumi.get(self, "encryption_aes_gcm128")
 
     @property
     @pulumi.getter(name="encryptionAesGcm256")
     def encryption_aes_gcm256(self) -> bool:
+        """
+        Combined-mode,256 bit key,16 byte ICV(Authentication Tag)
+        """
         return pulumi.get(self, "encryption_aes_gcm256")
 
     @property
     @pulumi.getter(name="encryptionEn3des")
     def encryption_en3des(self) -> bool:
+        """
+        3DES
+        """
         return pulumi.get(self, "encryption_en3des")
 
     @property
     @pulumi.getter(name="groupFifteen")
     def group_fifteen(self) -> bool:
+        """
+        DH 3072 MODP
+        """
         return pulumi.get(self, "group_fifteen")
 
     @property
     @pulumi.getter(name="groupFourteen")
     def group_fourteen(self) -> bool:
+        """
+        DH 2048 MODP
+        """
         return pulumi.get(self, "group_fourteen")
 
     @property
     @pulumi.getter(name="groupNineteen")
     def group_nineteen(self) -> bool:
+        """
+        DH 256 ECP
+        """
         return pulumi.get(self, "group_nineteen")
 
     @property
     @pulumi.getter(name="groupOne")
     def group_one(self) -> bool:
+        """
+        DH 768 MODP
+        """
         return pulumi.get(self, "group_one")
 
     @property
     @pulumi.getter(name="groupSixteen")
     def group_sixteen(self) -> bool:
+        """
+        DH 4096 MODP
+        """
         return pulumi.get(self, "group_sixteen")
 
     @property
     @pulumi.getter(name="groupTwenty")
     def group_twenty(self) -> bool:
+        """
+        DH 384 ECP
+        """
         return pulumi.get(self, "group_twenty")
 
     @property
     @pulumi.getter(name="groupTwentyFour")
     def group_twenty_four(self) -> bool:
+        """
+        DH 2048 (256 subgroup) MODP
+        """
         return pulumi.get(self, "group_twenty_four")
 
     @property
     @pulumi.getter(name="groupTwentyOne")
     def group_twenty_one(self) -> bool:
+        """
+        DH 521 ECP
+        """
         return pulumi.get(self, "group_twenty_one")
 
     @property
     @pulumi.getter(name="groupTwo")
     def group_two(self) -> bool:
+        """
+        DH 1024 MODP
+        """
         return pulumi.get(self, "group_two")
 
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
     @property
     @pulumi.getter(name="integrityMd5")
     def integrity_md5(self) -> bool:
+        """
+        Message Digest 5
+        """
         return pulumi.get(self, "integrity_md5")
 
     @property
     @pulumi.getter(name="integritySha1")
     def integrity_sha1(self) -> bool:
+        """
+        Secure Hash Standard
+        """
         return pulumi.get(self, "integrity_sha1")
 
     @property
     @pulumi.getter(name="integritySha256")
     def integrity_sha256(self) -> bool:
+        """
+        Secure Hash Standard 2 (256 bit)
+        """
         return pulumi.get(self, "integrity_sha256")
 
     @property
     @pulumi.getter(name="integritySha384")
     def integrity_sha384(self) -> bool:
+        """
+        Secure Hash Standard 2 (384 bit)
+        """
         return pulumi.get(self, "integrity_sha384")
 
     @property
     @pulumi.getter(name="integritySha512")
     def integrity_sha512(self) -> bool:
+        """
+        Secure Hash Standard 2 (512 bit)
+        """
         return pulumi.get(self, "integrity_sha512")
 
     @property
@@ -225,26 +291,41 @@ class GetCryptoIkev2ProposalResult:
     @property
     @pulumi.getter(name="prfMd5")
     def prf_md5(self) -> bool:
+        """
+        Message Digest 5
+        """
         return pulumi.get(self, "prf_md5")
 
     @property
     @pulumi.getter(name="prfSha1")
     def prf_sha1(self) -> bool:
+        """
+        Secure Hash Standard
+        """
         return pulumi.get(self, "prf_sha1")
 
     @property
     @pulumi.getter(name="prfSha256")
     def prf_sha256(self) -> bool:
+        """
+        Secure Hash Standard 2 (256 bit)
+        """
         return pulumi.get(self, "prf_sha256")
 
     @property
     @pulumi.getter(name="prfSha384")
     def prf_sha384(self) -> bool:
+        """
+        Secure Hash Standard 2 (384 bit)
+        """
         return pulumi.get(self, "prf_sha384")
 
     @property
     @pulumi.getter(name="prfSha512")
     def prf_sha512(self) -> bool:
+        """
+        Secure Hash Standard 2 (512 bit)
+        """
         return pulumi.get(self, "prf_sha512")
 
 
@@ -288,7 +369,19 @@ def get_crypto_ikev2_proposal(device: Optional[str] = None,
                               name: Optional[str] = None,
                               opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetCryptoIkev2ProposalResult:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Crypto IKEv2 Proposal configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_crypto_ikev2_proposal(name="PROPOSAL1")
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -332,6 +425,18 @@ def get_crypto_ikev2_proposal_output(device: Optional[pulumi.Input[Optional[str]
                                      name: Optional[pulumi.Input[str]] = None,
                                      opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetCryptoIkev2ProposalResult]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Crypto IKEv2 Proposal configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_crypto_ikev2_proposal(name="PROPOSAL1")
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     ...

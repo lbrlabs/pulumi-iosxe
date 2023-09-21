@@ -22,6 +22,99 @@ import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the NTP configuration.
+ * 
+ * ## Example Usage
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.Ntp;
+ * import com.pulumi.iosxe.iosxe.NtpArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.NtpAuthenticationKeyArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.NtpPeerVrfArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.NtpPeerArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.NtpServerVrfArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.NtpServerArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Ntp(&#34;example&#34;, NtpArgs.builder()        
+ *             .accessGroupPeerAcl(&#34;SACL1&#34;)
+ *             .accessGroupQueryOnlyAcl(&#34;SACL1&#34;)
+ *             .accessGroupServeAcl(&#34;SACL1&#34;)
+ *             .accessGroupServeOnlyAcl(&#34;SACL1&#34;)
+ *             .authenticate(true)
+ *             .authenticationKeys(NtpAuthenticationKeyArgs.builder()
+ *                 .encryption_type(7)
+ *                 .md5(&#34;060506324F41584B564347&#34;)
+ *                 .number(1)
+ *                 .build())
+ *             .logging(false)
+ *             .master(true)
+ *             .masterStratum(5)
+ *             .passive(false)
+ *             .peerVrfs(NtpPeerVrfArgs.builder()
+ *                 .name(&#34;VRF1&#34;)
+ *                 .peers(NtpPeerVrfPeerArgs.builder()
+ *                     .ipAddress(&#34;5.4.5.6&#34;)
+ *                     .key(1)
+ *                     .prefer(true)
+ *                     .version(2)
+ *                     .build())
+ *                 .build())
+ *             .peers(NtpPeerArgs.builder()
+ *                 .ip_address(&#34;5.2.3.4&#34;)
+ *                 .key(1)
+ *                 .prefer(true)
+ *                 .source(&#34;Loopback1&#34;)
+ *                 .version(2)
+ *                 .build())
+ *             .serverVrfs(NtpServerVrfArgs.builder()
+ *                 .name(&#34;VRF1&#34;)
+ *                 .servers(NtpServerVrfServerArgs.builder()
+ *                     .ipAddress(&#34;3.4.5.6&#34;)
+ *                     .key(1)
+ *                     .prefer(true)
+ *                     .version(2)
+ *                     .build())
+ *                 .build())
+ *             .servers(NtpServerArgs.builder()
+ *                 .ip_address(&#34;1.2.3.4&#34;)
+ *                 .key(1)
+ *                 .prefer(true)
+ *                 .source(&#34;Loopback1&#34;)
+ *                 .version(2)
+ *                 .build())
+ *             .trapSourceLoopback(1)
+ *             .updateCalendar(false)
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/ntp:Ntp example &#34;Cisco-IOS-XE-native:native/ntp&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/ntp:Ntp")
 public class Ntp extends com.pulumi.resources.CustomResource {
     @Export(name="accessGroupPeerAcl", refs={String.class}, tree="[0]")

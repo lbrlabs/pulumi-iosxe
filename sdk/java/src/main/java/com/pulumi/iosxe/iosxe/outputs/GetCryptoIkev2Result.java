@@ -12,17 +12,41 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetCryptoIkev2Result {
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return Enable IKE liveness check for peers
+     * 
+     */
     private Integer dpd;
     private String dpdQuery;
     private Integer dpdRetryInterval;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
+    /**
+     * @return Set NAT keepalive interval
+     * 
+     */
     private Integer natKeepalive;
 
     private GetCryptoIkev2Result() {}
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return Enable IKE liveness check for peers
+     * 
+     */
     public Integer dpd() {
         return this.dpd;
     }
@@ -32,9 +56,17 @@ public final class GetCryptoIkev2Result {
     public Integer dpdRetryInterval() {
         return this.dpdRetryInterval;
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
+    /**
+     * @return Set NAT keepalive interval
+     * 
+     */
     public Integer natKeepalive() {
         return this.natKeepalive;
     }

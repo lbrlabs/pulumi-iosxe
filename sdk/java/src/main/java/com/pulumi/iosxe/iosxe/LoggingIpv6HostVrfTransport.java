@@ -18,6 +18,60 @@ import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the Logging IPv6 Host VRF Transport configuration.
+ * 
+ * ## Example Usage
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.LoggingIpv6HostVrfTransport;
+ * import com.pulumi.iosxe.iosxe.LoggingIpv6HostVrfTransportArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.LoggingIpv6HostVrfTransportTransportTcpPortArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.LoggingIpv6HostVrfTransportTransportTlsPortArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.LoggingIpv6HostVrfTransportTransportUdpPortArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new LoggingIpv6HostVrfTransport(&#34;example&#34;, LoggingIpv6HostVrfTransportArgs.builder()        
+ *             .ipv6Host(&#34;2001::1&#34;)
+ *             .transportTcpPorts(LoggingIpv6HostVrfTransportTransportTcpPortArgs.builder()
+ *                 .port_number(10001)
+ *                 .build())
+ *             .transportTlsPorts(LoggingIpv6HostVrfTransportTransportTlsPortArgs.builder()
+ *                 .port_number(10002)
+ *                 .build())
+ *             .transportUdpPorts(LoggingIpv6HostVrfTransportTransportUdpPortArgs.builder()
+ *                 .port_number(10000)
+ *                 .build())
+ *             .vrf(&#34;VRF1&#34;)
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/loggingIpv6HostVrfTransport:LoggingIpv6HostVrfTransport example &#34;Cisco-IOS-XE-native:native/logging/host/ipv6/ipv6-host-vrf-transport-list=2001::1,VRF1&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/loggingIpv6HostVrfTransport:LoggingIpv6HostVrfTransport")
 public class LoggingIpv6HostVrfTransport extends com.pulumi.resources.CustomResource {
     /**

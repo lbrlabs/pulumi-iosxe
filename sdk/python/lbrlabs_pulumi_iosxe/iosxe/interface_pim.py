@@ -396,7 +396,32 @@ class InterfacePim(pulumi.CustomResource):
                  type: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
-        Create a InterfacePim resource with the given unique name, props, and options.
+        This resource can manage the Interface PIM configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.InterfacePim("example",
+            bfd=False,
+            border=False,
+            bsr_border=False,
+            dense_mode=False,
+            dr_priority=10,
+            passive=False,
+            sparse_dense_mode=False,
+            sparse_mode=True,
+            type="Loopback")
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/interfacePim:InterfacePim example "Cisco-IOS-XE-native:native/interface/Loopback=100/ip/pim"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[bool] bfd: Configure BFD
@@ -419,7 +444,32 @@ class InterfacePim(pulumi.CustomResource):
                  args: InterfacePimArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a InterfacePim resource with the given unique name, props, and options.
+        This resource can manage the Interface PIM configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.InterfacePim("example",
+            bfd=False,
+            border=False,
+            bsr_border=False,
+            dense_mode=False,
+            dr_priority=10,
+            passive=False,
+            sparse_dense_mode=False,
+            sparse_mode=True,
+            type="Loopback")
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/interfacePim:InterfacePim example "Cisco-IOS-XE-native:native/interface/Loopback=100/ip/pim"
+        ```
+
         :param str resource_name: The name of the resource.
         :param InterfacePimArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

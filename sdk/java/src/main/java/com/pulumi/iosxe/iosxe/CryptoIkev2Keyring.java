@@ -16,6 +16,58 @@ import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the Crypto IKEv2 Keyring configuration.
+ * 
+ * ## Example Usage
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.CryptoIkev2Keyring;
+ * import com.pulumi.iosxe.iosxe.CryptoIkev2KeyringArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.CryptoIkev2KeyringPeerArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new CryptoIkev2Keyring(&#34;example&#34;, CryptoIkev2KeyringArgs.builder()        
+ *             .peers(CryptoIkev2KeyringPeerArgs.builder()
+ *                 .description(&#34;My description&#34;)
+ *                 .identity_key_id(&#34;key1&#34;)
+ *                 .ipv4_address(&#34;1.2.3.4&#34;)
+ *                 .ipv4_mask(&#34;255.255.255.248&#34;)
+ *                 .name(&#34;peer1&#34;)
+ *                 .pre_shared_key_local(&#34;cisco123&#34;)
+ *                 .pre_shared_key_local_encryption(&#34;6&#34;)
+ *                 .pre_shared_key_remote(&#34;cisco123&#34;)
+ *                 .pre_shared_key_remote_encryption(&#34;6&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/cryptoIkev2Keyring:CryptoIkev2Keyring example &#34;Cisco-IOS-XE-native:native/crypto/Cisco-IOS-XE-crypto:ikev2/keyring=keyring1&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/cryptoIkev2Keyring:CryptoIkev2Keyring")
 public class CryptoIkev2Keyring extends com.pulumi.resources.CustomResource {
     /**

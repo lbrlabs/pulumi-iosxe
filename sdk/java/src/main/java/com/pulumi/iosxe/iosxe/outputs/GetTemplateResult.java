@@ -18,301 +18,885 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetTemplateResult {
+    /**
+     * @return Enable closed access on port (disabled by default, i.e. open access)
+     * 
+     */
     private Boolean accessSessionClosed;
+    /**
+     * @return Set the control-direction on the interface
+     * 
+     */
     private String accessSessionControlDirection;
+    /**
+     * @return Set the Host mode for authentication on this interface
+     * 
+     */
     private String accessSessionHostMode;
+    /**
+     * @return Interface templates set to sticky
+     * 
+     */
     private Boolean accessSessionInterfaceTemplateSticky;
+    /**
+     * @return Sticky timer value
+     * 
+     */
     private Integer accessSessionInterfaceTemplateStickyTimer;
+    /**
+     * @return Apply template to monitor access sessions on the port
+     * 
+     */
     private Boolean accessSessionMonitor;
+    /**
+     * @return Set the port-control value
+     * 
+     */
     private String accessSessionPortControl;
+    /**
+     * @return Enable or Disable Reauthentication for this port
+     * 
+     */
     private Boolean authenticationPeriodic;
+    /**
+     * @return Enter a value between 1 and 65535
+     * 
+     */
     private Integer authenticationTimerReauthenticateRange;
+    /**
+     * @return Obtain re-authentication timeout value from the server
+     * 
+     */
     private Boolean authenticationTimerReauthenticateServer;
+    /**
+     * @return Supply local configuration for CTS parameters
+     * 
+     */
     private Boolean ctsManual;
+    /**
+     * @return Source Security Group Tag to apply to untagged or non-trusted incoming traffic
+     * 
+     */
     private Integer ctsManualPolicyStaticSgt;
+    /**
+     * @return Trust the Source Group Tags (SGT) that the peer uses for sending
+     * 
+     */
     private Boolean ctsManualPolicyStaticTrusted;
+    /**
+     * @return CTS SGT Propagation configuration
+     * 
+     */
     private Boolean ctsManualPropagateSgt;
+    /**
+     * @return Enable Role-based Access Control enforcement
+     * 
+     */
     private Boolean ctsRoleBasedEnforcement;
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return Configure device-tracking on the interface
+     * 
+     */
     private Boolean deviceTracking;
+    /**
+     * @return policy name for device tracking
+     * 
+     */
     private List<GetTemplateDeviceTrackingAttachPolicy> deviceTrackingAttachPolicies;
+    /**
+     * @return VLAN IDs of the VLANs for which this policy applies
+     * 
+     */
     private String deviceTrackingVlanRange;
+    /**
+     * @return Max No. of Reauthentication Attempts
+     * 
+     */
     private Integer dot1xMaxReauthReq;
+    /**
+     * @return Max No. of Retries
+     * 
+     */
     private Integer dot1xMaxReq;
+    /**
+     * @return Set 802.1x interface pae type
+     * 
+     */
     private String dot1xPae;
+    /**
+     * @return Timeout for supplicant retries
+     * 
+     */
     private Integer dot1xTimeoutTxPeriod;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
+    /**
+     * @return Access control list for IP packets
+     * 
+     */
     private List<GetTemplateIpAccessGroup> ipAccessGroups;
+    /**
+     * @return DHCP snooping rate limit
+     * 
+     */
     private Integer ipDhcpSnoopingLimitRate;
+    /**
+     * @return DHCP Snooping trust config
+     * 
+     */
     private Boolean ipDhcpSnoopingTrust;
+    /**
+     * @return Load interval delay in seconds
+     * 
+     */
     private Integer loadInterval;
+    /**
+     * @return MAC Authentication Bypass Interface Config Commands
+     * 
+     */
     private Boolean mab;
+    /**
+     * @return Use EAP authentication for MAC Auth Bypass
+     * 
+     */
     private Boolean mabEap;
+    /**
+     * @return policy-map name
+     * 
+     */
     private String servicePolicyInput;
+    /**
+     * @return policy-map name
+     * 
+     */
     private String servicePolicyOutput;
+    /**
+     * @return Apply a subscriber control policy to the interface
+     * 
+     */
     private String servicePolicyTypeControlSubscriber;
+    /**
+     * @return Get config from a template
+     * 
+     */
     private String sourceTemplate;
+    /**
+     * @return Enable BPDU guard for this interface
+     * 
+     */
     private Boolean spanningTreeBpduguardEnable;
+    /**
+     * @return Portfast options for the interface
+     * 
+     */
     private Boolean spanningTreePortfast;
+    /**
+     * @return Disable portfast for this interface
+     * 
+     */
     private Boolean spanningTreePortfastDisable;
+    /**
+     * @return Enable portfast edge on the interface
+     * 
+     */
     private Boolean spanningTreePortfastEdge;
+    /**
+     * @return Enable portfast network on the interface
+     * 
+     */
     private Boolean spanningTreePortfastNetwork;
+    /**
+     * @return help
+     * 
+     */
     private Boolean spanningTreeServicePolicy;
+    /**
+     * @return Shutdown this interface if a storm occurs
+     * 
+     */
     private Boolean stormControlActionShutdown;
+    /**
+     * @return Send SNMP trap if a storm occurs
+     * 
+     */
     private Boolean stormControlActionTrap;
+    /**
+     * @return Enter threshold
+     * 
+     */
     private Double stormControlBroadcastLevelBpsThreshold;
+    /**
+     * @return Enter threshold
+     * 
+     */
     private String stormControlBroadcastLevelPpsThreshold;
+    /**
+     * @return Enter threshold
+     * 
+     */
     private Double stormControlBroadcastLevelThreshold;
+    /**
+     * @return Enter threshold
+     * 
+     */
     private Double stormControlMulticastLevelBpsThreshold;
+    /**
+     * @return Enter threshold
+     * 
+     */
     private String stormControlMulticastLevelPpsThreshold;
+    /**
+     * @return Enter threshold
+     * 
+     */
     private Double stormControlMulticastLevelThreshold;
+    /**
+     * @return ARP probe
+     * 
+     */
     private Boolean subscriberAgingInactivityTimerProbe;
+    /**
+     * @return Enter a value between 1 and 65535 in seconds
+     * 
+     */
     private Integer subscriberAgingInactivityTimerValue;
+    /**
+     * @return ARP probe
+     * 
+     */
     private Boolean subscriberAgingProbe;
+    /**
+     * @return VLAN ID of the VLAN when this port is in access mode
+     * 
+     */
     private Integer switchportAccessVlan;
+    /**
+     * @return Block unknown unicast addresses
+     * 
+     */
     private Boolean switchportBlockUnicast;
+    /**
+     * @return Set trunking mode to ACCESS unconditionally
+     * 
+     */
     private Boolean switchportModeAccess;
+    /**
+     * @return Set trunking mode to TRUNK unconditionally
+     * 
+     */
     private Boolean switchportModeTrunk;
+    /**
+     * @return Device will not engage in negotiation protocol on this interface
+     * 
+     */
     private Boolean switchportNonegotiate;
+    /**
+     * @return Security related command
+     * 
+     */
     private Boolean switchportPortSecurity;
+    /**
+     * @return Enable aging for configured secure addresses
+     * 
+     */
     private Boolean switchportPortSecurityAgingStatic;
+    /**
+     * @return Port-security aging time
+     * 
+     */
     private Integer switchportPortSecurityAgingTime;
+    /**
+     * @return Port-security aging type
+     * 
+     */
     private Boolean switchportPortSecurityAgingType;
+    /**
+     * @return Aging based on inactivity time period
+     * 
+     */
     private Boolean switchportPortSecurityAgingTypeInactivity;
     private List<GetTemplateSwitchportPortSecurityMaximumRange> switchportPortSecurityMaximumRanges;
+    /**
+     * @return Security violation protect mode
+     * 
+     */
     private Boolean switchportPortSecurityViolationProtect;
+    /**
+     * @return Security violation restrict mode
+     * 
+     */
     private Boolean switchportPortSecurityViolationRestrict;
+    /**
+     * @return Security violation shutdown mode
+     * 
+     */
     private Boolean switchportPortSecurityViolationShutdown;
+    /**
+     * @return Primary normal range VLAN ID of the private VLAN port association
+     * 
+     */
     private Integer switchportPrivateVlanHostAssociationPrimaryRange;
+    /**
+     * @return Secondary normal range VLAN ID of the private VLAN host port association
+     * 
+     */
     private Integer switchportPrivateVlanHostAssociationSecondaryRange;
+    /**
+     * @return VLAN IDs of the allowed VLANs when this port is in trunking mode
+     * 
+     */
     private String switchportTrunkAllowedVlans;
+    /**
+     * @return all VLANs
+     * 
+     */
     private Boolean switchportTrunkAllowedVlansAll;
+    /**
+     * @return no VLANs
+     * 
+     */
     private Boolean switchportTrunkAllowedVlansNone;
+    /**
+     * @return Set native VLAN tagging state
+     * 
+     */
     private Boolean switchportTrunkNativeVlanTag;
+    /**
+     * @return VLAN ID of the native VLAN when this port is in trunking mode
+     * 
+     */
     private Integer switchportTrunkNativeVlanVlanId;
+    /**
+     * @return Vlan for voice traffic
+     * 
+     */
     private Integer switchportVoiceVlan;
+    /**
+     * @return Template name
+     * 
+     */
     private String templateName;
 
     private GetTemplateResult() {}
+    /**
+     * @return Enable closed access on port (disabled by default, i.e. open access)
+     * 
+     */
     public Boolean accessSessionClosed() {
         return this.accessSessionClosed;
     }
+    /**
+     * @return Set the control-direction on the interface
+     * 
+     */
     public String accessSessionControlDirection() {
         return this.accessSessionControlDirection;
     }
+    /**
+     * @return Set the Host mode for authentication on this interface
+     * 
+     */
     public String accessSessionHostMode() {
         return this.accessSessionHostMode;
     }
+    /**
+     * @return Interface templates set to sticky
+     * 
+     */
     public Boolean accessSessionInterfaceTemplateSticky() {
         return this.accessSessionInterfaceTemplateSticky;
     }
+    /**
+     * @return Sticky timer value
+     * 
+     */
     public Integer accessSessionInterfaceTemplateStickyTimer() {
         return this.accessSessionInterfaceTemplateStickyTimer;
     }
+    /**
+     * @return Apply template to monitor access sessions on the port
+     * 
+     */
     public Boolean accessSessionMonitor() {
         return this.accessSessionMonitor;
     }
+    /**
+     * @return Set the port-control value
+     * 
+     */
     public String accessSessionPortControl() {
         return this.accessSessionPortControl;
     }
+    /**
+     * @return Enable or Disable Reauthentication for this port
+     * 
+     */
     public Boolean authenticationPeriodic() {
         return this.authenticationPeriodic;
     }
+    /**
+     * @return Enter a value between 1 and 65535
+     * 
+     */
     public Integer authenticationTimerReauthenticateRange() {
         return this.authenticationTimerReauthenticateRange;
     }
+    /**
+     * @return Obtain re-authentication timeout value from the server
+     * 
+     */
     public Boolean authenticationTimerReauthenticateServer() {
         return this.authenticationTimerReauthenticateServer;
     }
+    /**
+     * @return Supply local configuration for CTS parameters
+     * 
+     */
     public Boolean ctsManual() {
         return this.ctsManual;
     }
+    /**
+     * @return Source Security Group Tag to apply to untagged or non-trusted incoming traffic
+     * 
+     */
     public Integer ctsManualPolicyStaticSgt() {
         return this.ctsManualPolicyStaticSgt;
     }
+    /**
+     * @return Trust the Source Group Tags (SGT) that the peer uses for sending
+     * 
+     */
     public Boolean ctsManualPolicyStaticTrusted() {
         return this.ctsManualPolicyStaticTrusted;
     }
+    /**
+     * @return CTS SGT Propagation configuration
+     * 
+     */
     public Boolean ctsManualPropagateSgt() {
         return this.ctsManualPropagateSgt;
     }
+    /**
+     * @return Enable Role-based Access Control enforcement
+     * 
+     */
     public Boolean ctsRoleBasedEnforcement() {
         return this.ctsRoleBasedEnforcement;
     }
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return Configure device-tracking on the interface
+     * 
+     */
     public Boolean deviceTracking() {
         return this.deviceTracking;
     }
+    /**
+     * @return policy name for device tracking
+     * 
+     */
     public List<GetTemplateDeviceTrackingAttachPolicy> deviceTrackingAttachPolicies() {
         return this.deviceTrackingAttachPolicies;
     }
+    /**
+     * @return VLAN IDs of the VLANs for which this policy applies
+     * 
+     */
     public String deviceTrackingVlanRange() {
         return this.deviceTrackingVlanRange;
     }
+    /**
+     * @return Max No. of Reauthentication Attempts
+     * 
+     */
     public Integer dot1xMaxReauthReq() {
         return this.dot1xMaxReauthReq;
     }
+    /**
+     * @return Max No. of Retries
+     * 
+     */
     public Integer dot1xMaxReq() {
         return this.dot1xMaxReq;
     }
+    /**
+     * @return Set 802.1x interface pae type
+     * 
+     */
     public String dot1xPae() {
         return this.dot1xPae;
     }
+    /**
+     * @return Timeout for supplicant retries
+     * 
+     */
     public Integer dot1xTimeoutTxPeriod() {
         return this.dot1xTimeoutTxPeriod;
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
+    /**
+     * @return Access control list for IP packets
+     * 
+     */
     public List<GetTemplateIpAccessGroup> ipAccessGroups() {
         return this.ipAccessGroups;
     }
+    /**
+     * @return DHCP snooping rate limit
+     * 
+     */
     public Integer ipDhcpSnoopingLimitRate() {
         return this.ipDhcpSnoopingLimitRate;
     }
+    /**
+     * @return DHCP Snooping trust config
+     * 
+     */
     public Boolean ipDhcpSnoopingTrust() {
         return this.ipDhcpSnoopingTrust;
     }
+    /**
+     * @return Load interval delay in seconds
+     * 
+     */
     public Integer loadInterval() {
         return this.loadInterval;
     }
+    /**
+     * @return MAC Authentication Bypass Interface Config Commands
+     * 
+     */
     public Boolean mab() {
         return this.mab;
     }
+    /**
+     * @return Use EAP authentication for MAC Auth Bypass
+     * 
+     */
     public Boolean mabEap() {
         return this.mabEap;
     }
+    /**
+     * @return policy-map name
+     * 
+     */
     public String servicePolicyInput() {
         return this.servicePolicyInput;
     }
+    /**
+     * @return policy-map name
+     * 
+     */
     public String servicePolicyOutput() {
         return this.servicePolicyOutput;
     }
+    /**
+     * @return Apply a subscriber control policy to the interface
+     * 
+     */
     public String servicePolicyTypeControlSubscriber() {
         return this.servicePolicyTypeControlSubscriber;
     }
+    /**
+     * @return Get config from a template
+     * 
+     */
     public String sourceTemplate() {
         return this.sourceTemplate;
     }
+    /**
+     * @return Enable BPDU guard for this interface
+     * 
+     */
     public Boolean spanningTreeBpduguardEnable() {
         return this.spanningTreeBpduguardEnable;
     }
+    /**
+     * @return Portfast options for the interface
+     * 
+     */
     public Boolean spanningTreePortfast() {
         return this.spanningTreePortfast;
     }
+    /**
+     * @return Disable portfast for this interface
+     * 
+     */
     public Boolean spanningTreePortfastDisable() {
         return this.spanningTreePortfastDisable;
     }
+    /**
+     * @return Enable portfast edge on the interface
+     * 
+     */
     public Boolean spanningTreePortfastEdge() {
         return this.spanningTreePortfastEdge;
     }
+    /**
+     * @return Enable portfast network on the interface
+     * 
+     */
     public Boolean spanningTreePortfastNetwork() {
         return this.spanningTreePortfastNetwork;
     }
+    /**
+     * @return help
+     * 
+     */
     public Boolean spanningTreeServicePolicy() {
         return this.spanningTreeServicePolicy;
     }
+    /**
+     * @return Shutdown this interface if a storm occurs
+     * 
+     */
     public Boolean stormControlActionShutdown() {
         return this.stormControlActionShutdown;
     }
+    /**
+     * @return Send SNMP trap if a storm occurs
+     * 
+     */
     public Boolean stormControlActionTrap() {
         return this.stormControlActionTrap;
     }
+    /**
+     * @return Enter threshold
+     * 
+     */
     public Double stormControlBroadcastLevelBpsThreshold() {
         return this.stormControlBroadcastLevelBpsThreshold;
     }
+    /**
+     * @return Enter threshold
+     * 
+     */
     public String stormControlBroadcastLevelPpsThreshold() {
         return this.stormControlBroadcastLevelPpsThreshold;
     }
+    /**
+     * @return Enter threshold
+     * 
+     */
     public Double stormControlBroadcastLevelThreshold() {
         return this.stormControlBroadcastLevelThreshold;
     }
+    /**
+     * @return Enter threshold
+     * 
+     */
     public Double stormControlMulticastLevelBpsThreshold() {
         return this.stormControlMulticastLevelBpsThreshold;
     }
+    /**
+     * @return Enter threshold
+     * 
+     */
     public String stormControlMulticastLevelPpsThreshold() {
         return this.stormControlMulticastLevelPpsThreshold;
     }
+    /**
+     * @return Enter threshold
+     * 
+     */
     public Double stormControlMulticastLevelThreshold() {
         return this.stormControlMulticastLevelThreshold;
     }
+    /**
+     * @return ARP probe
+     * 
+     */
     public Boolean subscriberAgingInactivityTimerProbe() {
         return this.subscriberAgingInactivityTimerProbe;
     }
+    /**
+     * @return Enter a value between 1 and 65535 in seconds
+     * 
+     */
     public Integer subscriberAgingInactivityTimerValue() {
         return this.subscriberAgingInactivityTimerValue;
     }
+    /**
+     * @return ARP probe
+     * 
+     */
     public Boolean subscriberAgingProbe() {
         return this.subscriberAgingProbe;
     }
+    /**
+     * @return VLAN ID of the VLAN when this port is in access mode
+     * 
+     */
     public Integer switchportAccessVlan() {
         return this.switchportAccessVlan;
     }
+    /**
+     * @return Block unknown unicast addresses
+     * 
+     */
     public Boolean switchportBlockUnicast() {
         return this.switchportBlockUnicast;
     }
+    /**
+     * @return Set trunking mode to ACCESS unconditionally
+     * 
+     */
     public Boolean switchportModeAccess() {
         return this.switchportModeAccess;
     }
+    /**
+     * @return Set trunking mode to TRUNK unconditionally
+     * 
+     */
     public Boolean switchportModeTrunk() {
         return this.switchportModeTrunk;
     }
+    /**
+     * @return Device will not engage in negotiation protocol on this interface
+     * 
+     */
     public Boolean switchportNonegotiate() {
         return this.switchportNonegotiate;
     }
+    /**
+     * @return Security related command
+     * 
+     */
     public Boolean switchportPortSecurity() {
         return this.switchportPortSecurity;
     }
+    /**
+     * @return Enable aging for configured secure addresses
+     * 
+     */
     public Boolean switchportPortSecurityAgingStatic() {
         return this.switchportPortSecurityAgingStatic;
     }
+    /**
+     * @return Port-security aging time
+     * 
+     */
     public Integer switchportPortSecurityAgingTime() {
         return this.switchportPortSecurityAgingTime;
     }
+    /**
+     * @return Port-security aging type
+     * 
+     */
     public Boolean switchportPortSecurityAgingType() {
         return this.switchportPortSecurityAgingType;
     }
+    /**
+     * @return Aging based on inactivity time period
+     * 
+     */
     public Boolean switchportPortSecurityAgingTypeInactivity() {
         return this.switchportPortSecurityAgingTypeInactivity;
     }
     public List<GetTemplateSwitchportPortSecurityMaximumRange> switchportPortSecurityMaximumRanges() {
         return this.switchportPortSecurityMaximumRanges;
     }
+    /**
+     * @return Security violation protect mode
+     * 
+     */
     public Boolean switchportPortSecurityViolationProtect() {
         return this.switchportPortSecurityViolationProtect;
     }
+    /**
+     * @return Security violation restrict mode
+     * 
+     */
     public Boolean switchportPortSecurityViolationRestrict() {
         return this.switchportPortSecurityViolationRestrict;
     }
+    /**
+     * @return Security violation shutdown mode
+     * 
+     */
     public Boolean switchportPortSecurityViolationShutdown() {
         return this.switchportPortSecurityViolationShutdown;
     }
+    /**
+     * @return Primary normal range VLAN ID of the private VLAN port association
+     * 
+     */
     public Integer switchportPrivateVlanHostAssociationPrimaryRange() {
         return this.switchportPrivateVlanHostAssociationPrimaryRange;
     }
+    /**
+     * @return Secondary normal range VLAN ID of the private VLAN host port association
+     * 
+     */
     public Integer switchportPrivateVlanHostAssociationSecondaryRange() {
         return this.switchportPrivateVlanHostAssociationSecondaryRange;
     }
+    /**
+     * @return VLAN IDs of the allowed VLANs when this port is in trunking mode
+     * 
+     */
     public String switchportTrunkAllowedVlans() {
         return this.switchportTrunkAllowedVlans;
     }
+    /**
+     * @return all VLANs
+     * 
+     */
     public Boolean switchportTrunkAllowedVlansAll() {
         return this.switchportTrunkAllowedVlansAll;
     }
+    /**
+     * @return no VLANs
+     * 
+     */
     public Boolean switchportTrunkAllowedVlansNone() {
         return this.switchportTrunkAllowedVlansNone;
     }
+    /**
+     * @return Set native VLAN tagging state
+     * 
+     */
     public Boolean switchportTrunkNativeVlanTag() {
         return this.switchportTrunkNativeVlanTag;
     }
+    /**
+     * @return VLAN ID of the native VLAN when this port is in trunking mode
+     * 
+     */
     public Integer switchportTrunkNativeVlanVlanId() {
         return this.switchportTrunkNativeVlanVlanId;
     }
+    /**
+     * @return Vlan for voice traffic
+     * 
+     */
     public Integer switchportVoiceVlan() {
         return this.switchportVoiceVlan;
     }
+    /**
+     * @return Template name
+     * 
+     */
     public String templateName() {
         return this.templateName;
     }

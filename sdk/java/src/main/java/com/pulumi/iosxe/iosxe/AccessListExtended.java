@@ -16,6 +16,67 @@ import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the Access List Extended configuration.
+ * 
+ * ## Example Usage
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.AccessListExtended;
+ * import com.pulumi.iosxe.iosxe.AccessListExtendedArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.AccessListExtendedEntryArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new AccessListExtended(&#34;example&#34;, AccessListExtendedArgs.builder()        
+ *             .entries(AccessListExtendedEntryArgs.builder()
+ *                 .ace_rule_action(&#34;permit&#34;)
+ *                 .ace_rule_protocol(&#34;tcp&#34;)
+ *                 .ack(true)
+ *                 .destination_host(&#34;10.1.1.1&#34;)
+ *                 .destination_port_range_from(&#34;1000&#34;)
+ *                 .destination_port_range_to(&#34;2000&#34;)
+ *                 .dscp(&#34;46&#34;)
+ *                 .fin(true)
+ *                 .log(true)
+ *                 .psh(true)
+ *                 .remark(&#34;Description&#34;)
+ *                 .rst(true)
+ *                 .sequence(10)
+ *                 .source_port_equal(&#34;1000&#34;)
+ *                 .source_prefix(&#34;10.0.0.0&#34;)
+ *                 .source_prefix_mask(&#34;0.0.0.255&#34;)
+ *                 .syn(true)
+ *                 .urg(true)
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/accessListExtended:AccessListExtended example &#34;Cisco-IOS-XE-native:native/ip/access-list/Cisco-IOS-XE-acl:extended=EACL1&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/accessListExtended:AccessListExtended")
 public class AccessListExtended extends com.pulumi.resources.CustomResource {
     /**

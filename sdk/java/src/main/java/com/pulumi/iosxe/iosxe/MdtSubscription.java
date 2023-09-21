@@ -18,6 +18,58 @@ import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the MDT Subscription configuration.
+ * 
+ * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.MdtSubscription;
+ * import com.pulumi.iosxe.iosxe.MdtSubscriptionArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.MdtSubscriptionReceiverArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new MdtSubscription(&#34;example&#34;, MdtSubscriptionArgs.builder()        
+ *             .encoding(&#34;encode-kvgpb&#34;)
+ *             .filterXpath(&#34;/ios-events-ios-xe-oper:ospf-neighbor-state-change&#34;)
+ *             .receivers(MdtSubscriptionReceiverArgs.builder()
+ *                 .address(&#34;5.6.7.8&#34;)
+ *                 .port(57600)
+ *                 .protocol(&#34;grpc-tcp&#34;)
+ *                 .build())
+ *             .sourceAddress(&#34;1.2.3.4&#34;)
+ *             .sourceVrf(&#34;Mgmt-vrf&#34;)
+ *             .stream(&#34;yang-notif-native&#34;)
+ *             .subscriptionId(101)
+ *             .updatePolicyOnChange(true)
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/mdtSubscription:MdtSubscription example &#34;Cisco-IOS-XE-mdt-cfg:mdt-config-data/mdt-subscription=101&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/mdtSubscription:MdtSubscription")
 public class MdtSubscription extends com.pulumi.resources.CustomResource {
     /**

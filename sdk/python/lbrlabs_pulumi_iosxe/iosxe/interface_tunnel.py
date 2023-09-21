@@ -1250,7 +1250,14 @@ class InterfaceTunnel(pulumi.CustomResource):
                  vrf_forwarding: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
-        Create a InterfaceTunnel resource with the given unique name, props, and options.
+        This resource can manage the Interface Tunnel configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/interfaceTunnel:InterfaceTunnel example "Cisco-IOS-XE-native:native/interface/Tunnel=90"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[int] arp_timeout: Set ARP cache timeout - Range: `0`-`2147483`
@@ -1295,7 +1302,14 @@ class InterfaceTunnel(pulumi.CustomResource):
                  args: Optional[InterfaceTunnelArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a InterfaceTunnel resource with the given unique name, props, and options.
+        This resource can manage the Interface Tunnel configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/interfaceTunnel:InterfaceTunnel example "Cisco-IOS-XE-native:native/interface/Tunnel=90"
+        ```
+
         :param str resource_name: The name of the resource.
         :param InterfaceTunnelArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

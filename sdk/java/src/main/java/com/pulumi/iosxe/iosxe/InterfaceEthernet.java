@@ -21,6 +21,86 @@ import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the Interface Ethernet configuration.
+ * 
+ * ## Example Usage
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.InterfaceEthernet;
+ * import com.pulumi.iosxe.iosxe.InterfaceEthernetArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.InterfaceEthernetHelperAddressArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.InterfaceEthernetIpv6AddressArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.InterfaceEthernetIpv6LinkLocalAddressArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.InterfaceEthernetSourceTemplateArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new InterfaceEthernet(&#34;example&#34;, InterfaceEthernetArgs.builder()        
+ *             .arpTimeout(300)
+ *             .description(&#34;My Interface Description&#34;)
+ *             .helperAddresses(InterfaceEthernetHelperAddressArgs.builder()
+ *                 .address(&#34;10.10.10.10&#34;)
+ *                 .global(false)
+ *                 .vrf(&#34;VRF1&#34;)
+ *                 .build())
+ *             .ipAccessGroupIn(&#34;1&#34;)
+ *             .ipAccessGroupInEnable(true)
+ *             .ipAccessGroupOut(&#34;1&#34;)
+ *             .ipAccessGroupOutEnable(true)
+ *             .ipDhcpRelaySourceInterface(&#34;Loopback100&#34;)
+ *             .ipProxyArp(false)
+ *             .ipRedirects(false)
+ *             .ipUnreachables(false)
+ *             .ipv4Address(&#34;15.1.1.1&#34;)
+ *             .ipv4AddressMask(&#34;255.255.255.252&#34;)
+ *             .ipv6AddressDhcp(true)
+ *             .ipv6Addresses(InterfaceEthernetIpv6AddressArgs.builder()
+ *                 .eui_64(true)
+ *                 .prefix(&#34;2001:DB8::/32&#34;)
+ *                 .build())
+ *             .ipv6Enable(true)
+ *             .ipv6LinkLocalAddresses(InterfaceEthernetIpv6LinkLocalAddressArgs.builder()
+ *                 .address(&#34;fe80::9656:d028:8652:66b6&#34;)
+ *                 .link_local(true)
+ *                 .build())
+ *             .ipv6Mtu(1300)
+ *             .ipv6NdRaSuppressAll(true)
+ *             .shutdown(false)
+ *             .sourceTemplates(InterfaceEthernetSourceTemplateArgs.builder()
+ *                 .merge(false)
+ *                 .template_name(&#34;TEMP1&#34;)
+ *                 .build())
+ *             .spanningTreeLinkType(&#34;point-to-point&#34;)
+ *             .type(&#34;GigabitEthernet&#34;)
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/interfaceEthernet:InterfaceEthernet example &#34;Cisco-IOS-XE-native:native/interface/GigabitEthernet=3&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/interfaceEthernet:InterfaceEthernet")
 public class InterfaceEthernet extends com.pulumi.resources.CustomResource {
     /**

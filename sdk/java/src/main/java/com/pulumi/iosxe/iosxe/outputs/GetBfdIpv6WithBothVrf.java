@@ -9,25 +9,65 @@ import java.util.Objects;
 
 @CustomType
 public final class GetBfdIpv6WithBothVrf {
+    /**
+     * @return Destination IPv6 prefix/len
+     * 
+     */
     private String destIpv6;
+    /**
+     * @return Destination VRF instance name
+     * 
+     */
     private String dstVrf;
+    /**
+     * @return Source IPv6 prefix/len
+     * 
+     */
     private String srcIpv6;
+    /**
+     * @return source VRF instance name
+     * 
+     */
     private String srcVrf;
+    /**
+     * @return BFD template name
+     * 
+     */
     private String templateName;
 
     private GetBfdIpv6WithBothVrf() {}
+    /**
+     * @return Destination IPv6 prefix/len
+     * 
+     */
     public String destIpv6() {
         return this.destIpv6;
     }
+    /**
+     * @return Destination VRF instance name
+     * 
+     */
     public String dstVrf() {
         return this.dstVrf;
     }
+    /**
+     * @return Source IPv6 prefix/len
+     * 
+     */
     public String srcIpv6() {
         return this.srcIpv6;
     }
+    /**
+     * @return source VRF instance name
+     * 
+     */
     public String srcVrf() {
         return this.srcVrf;
     }
+    /**
+     * @return BFD template name
+     * 
+     */
     public String templateName() {
         return this.templateName;
     }

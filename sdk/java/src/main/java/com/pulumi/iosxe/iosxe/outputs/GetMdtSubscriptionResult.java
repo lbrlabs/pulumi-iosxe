@@ -15,49 +15,137 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetMdtSubscriptionResult {
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return Update notification encoding
+     * 
+     */
     private String encoding;
+    /**
+     * @return XPath expression describing the set of objects wanted as part of the subscription
+     * 
+     */
     private String filterXpath;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
+    /**
+     * @return Configuration of receivers of configured subscriptions. Use of this is deprecated. Use mdt-receiver-names instead.
+     * 
+     */
     private List<GetMdtSubscriptionReceiver> receivers;
+    /**
+     * @return The source address for the notifications
+     * 
+     */
     private String sourceAddress;
+    /**
+     * @return Network instance name for the VRF
+     * 
+     */
     private String sourceVrf;
+    /**
+     * @return The name of the event stream being subscribed to
+     * 
+     */
     private String stream;
+    /**
+     * @return Unique subscription identifier.
+     * 
+     */
     private Integer subscriptionId;
+    /**
+     * @return If true, there is no initial update notification with the current value of all the data. NOT CURRENTLY SUPPORTED. If specified, must be false
+     * 
+     */
     private Boolean updatePolicyOnChange;
+    /**
+     * @return Period of update notifications in hundredths of a second
+     * 
+     */
     private Integer updatePolicyPeriodic;
 
     private GetMdtSubscriptionResult() {}
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return Update notification encoding
+     * 
+     */
     public String encoding() {
         return this.encoding;
     }
+    /**
+     * @return XPath expression describing the set of objects wanted as part of the subscription
+     * 
+     */
     public String filterXpath() {
         return this.filterXpath;
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
+    /**
+     * @return Configuration of receivers of configured subscriptions. Use of this is deprecated. Use mdt-receiver-names instead.
+     * 
+     */
     public List<GetMdtSubscriptionReceiver> receivers() {
         return this.receivers;
     }
+    /**
+     * @return The source address for the notifications
+     * 
+     */
     public String sourceAddress() {
         return this.sourceAddress;
     }
+    /**
+     * @return Network instance name for the VRF
+     * 
+     */
     public String sourceVrf() {
         return this.sourceVrf;
     }
+    /**
+     * @return The name of the event stream being subscribed to
+     * 
+     */
     public String stream() {
         return this.stream;
     }
+    /**
+     * @return Unique subscription identifier.
+     * 
+     */
     public Integer subscriptionId() {
         return this.subscriptionId;
     }
+    /**
+     * @return If true, there is no initial update notification with the current value of all the data. NOT CURRENTLY SUPPORTED. If specified, must be false
+     * 
+     */
     public Boolean updatePolicyOnChange() {
         return this.updatePolicyOnChange;
     }
+    /**
+     * @return Period of update notifications in hundredths of a second
+     * 
+     */
     public Integer updatePolicyPeriodic() {
         return this.updatePolicyPeriodic;
     }

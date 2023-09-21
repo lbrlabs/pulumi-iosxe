@@ -18,6 +18,62 @@ import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the Crypto IKEv2 Profile configuration.
+ * 
+ * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.CryptoIkev2Profile;
+ * import com.pulumi.iosxe.iosxe.CryptoIkev2ProfileArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.CryptoIkev2ProfileMatchIdentityRemoteIpv4AddressArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new CryptoIkev2Profile(&#34;example&#34;, CryptoIkev2ProfileArgs.builder()        
+ *             .authenticationLocalPreShare(true)
+ *             .authenticationRemotePreShare(true)
+ *             .configExchangeRequest(false)
+ *             .description(&#34;My description&#34;)
+ *             .dpdInterval(10)
+ *             .dpdQuery(&#34;periodic&#34;)
+ *             .dpdRetry(2)
+ *             .identityLocalKeyId(&#34;key1&#34;)
+ *             .keyringLocal(&#34;test&#34;)
+ *             .matchAddressLocalIp(&#34;1.2.3.4&#34;)
+ *             .matchFvrfAny(true)
+ *             .matchIdentityRemoteIpv4Addresses(CryptoIkev2ProfileMatchIdentityRemoteIpv4AddressArgs.builder()
+ *                 .address(&#34;1.2.3.4&#34;)
+ *                 .mask(&#34;255.255.255.0&#34;)
+ *                 .build())
+ *             .matchIdentityRemoteKeys(&#34;key1&#34;)
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/cryptoIkev2Profile:CryptoIkev2Profile example &#34;Cisco-IOS-XE-native:native/crypto/Cisco-IOS-XE-crypto:ikev2/profile=profile1&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/cryptoIkev2Profile:CryptoIkev2Profile")
 public class CryptoIkev2Profile extends com.pulumi.resources.CustomResource {
     /**

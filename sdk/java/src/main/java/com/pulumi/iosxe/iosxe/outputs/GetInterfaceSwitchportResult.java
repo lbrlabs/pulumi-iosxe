@@ -14,63 +14,155 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetInterfaceSwitchportResult {
     private String accessVlan;
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return Set port host
+     * 
+     */
     private Boolean host;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
+    /**
+     * @return Set trunking mode to ACCESS unconditionally
+     * 
+     */
     private Boolean modeAccess;
+    /**
+     * @return set trunking mode to TUNNEL unconditionally
+     * 
+     */
     private Boolean modeDot1qTunnel;
+    /**
+     * @return Set the mode to private-vlan host
+     * 
+     */
     private Boolean modePrivateVlanHost;
+    /**
+     * @return Set the mode to private-vlan promiscuous
+     * 
+     */
     private Boolean modePrivateVlanPromiscuous;
+    /**
+     * @return Set the mode to private-vlan trunk
+     * 
+     */
     private Boolean modePrivateVlanTrunk;
+    /**
+     * @return Set trunking mode to TRUNK unconditionally
+     * 
+     */
     private Boolean modeTrunk;
     private String name;
+    /**
+     * @return Device will not engage in negotiation protocol on this interface
+     * 
+     */
     private Boolean nonegotiate;
     private String trunkAllowedVlans;
+    /**
+     * @return no VLANs
+     * 
+     */
     private Boolean trunkAllowedVlansNone;
     private Integer trunkNativeVlan;
     private Boolean trunkNativeVlanTag;
+    /**
+     * @return Interface type
+     * 
+     */
     private String type;
 
     private GetInterfaceSwitchportResult() {}
     public String accessVlan() {
         return this.accessVlan;
     }
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return Set port host
+     * 
+     */
     public Boolean host() {
         return this.host;
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
+    /**
+     * @return Set trunking mode to ACCESS unconditionally
+     * 
+     */
     public Boolean modeAccess() {
         return this.modeAccess;
     }
+    /**
+     * @return set trunking mode to TUNNEL unconditionally
+     * 
+     */
     public Boolean modeDot1qTunnel() {
         return this.modeDot1qTunnel;
     }
+    /**
+     * @return Set the mode to private-vlan host
+     * 
+     */
     public Boolean modePrivateVlanHost() {
         return this.modePrivateVlanHost;
     }
+    /**
+     * @return Set the mode to private-vlan promiscuous
+     * 
+     */
     public Boolean modePrivateVlanPromiscuous() {
         return this.modePrivateVlanPromiscuous;
     }
+    /**
+     * @return Set the mode to private-vlan trunk
+     * 
+     */
     public Boolean modePrivateVlanTrunk() {
         return this.modePrivateVlanTrunk;
     }
+    /**
+     * @return Set trunking mode to TRUNK unconditionally
+     * 
+     */
     public Boolean modeTrunk() {
         return this.modeTrunk;
     }
     public String name() {
         return this.name;
     }
+    /**
+     * @return Device will not engage in negotiation protocol on this interface
+     * 
+     */
     public Boolean nonegotiate() {
         return this.nonegotiate;
     }
     public String trunkAllowedVlans() {
         return this.trunkAllowedVlans;
     }
+    /**
+     * @return no VLANs
+     * 
+     */
     public Boolean trunkAllowedVlansNone() {
         return this.trunkAllowedVlansNone;
     }
@@ -80,6 +172,10 @@ public final class GetInterfaceSwitchportResult {
     public Boolean trunkNativeVlanTag() {
         return this.trunkNativeVlanTag;
     }
+    /**
+     * @return Interface type
+     * 
+     */
     public String type() {
         return this.type;
     }

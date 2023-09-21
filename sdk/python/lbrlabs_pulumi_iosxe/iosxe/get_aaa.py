@@ -51,41 +51,65 @@ class GetAaaResult:
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
     @pulumi.getter(name="groupServerRadii")
     def group_server_radii(self) -> Sequence['outputs.GetAaaGroupServerRadiusResult']:
+        """
+        Radius server-group definition
+        """
         return pulumi.get(self, "group_server_radii")
 
     @property
     @pulumi.getter(name="groupServerTacacspluses")
     def group_server_tacacspluses(self) -> Sequence['outputs.GetAaaGroupServerTacacsplusResult']:
+        """
+        Tacacs+ server-group definition
+        """
         return pulumi.get(self, "group_server_tacacspluses")
 
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
     @property
     @pulumi.getter(name="newModel")
     def new_model(self) -> bool:
+        """
+        Enable NEW access control commands and functions.(Disables OLD commands.)
+        """
         return pulumi.get(self, "new_model")
 
     @property
     @pulumi.getter(name="serverRadiusDynamicAuthor")
     def server_radius_dynamic_author(self) -> bool:
+        """
+        Local server profile for RFC 3576 support
+        """
         return pulumi.get(self, "server_radius_dynamic_author")
 
     @property
     @pulumi.getter(name="serverRadiusDynamicAuthorClients")
     def server_radius_dynamic_author_clients(self) -> Sequence['outputs.GetAaaServerRadiusDynamicAuthorClientResult']:
+        """
+        Specify a RADIUS client
+        """
         return pulumi.get(self, "server_radius_dynamic_author_clients")
 
     @property
     @pulumi.getter(name="sessionId")
     def session_id(self) -> str:
+        """
+        AAA Session ID
+        """
         return pulumi.get(self, "session_id")
 
 
@@ -108,7 +132,19 @@ class AwaitableGetAaaResult(GetAaaResult):
 def get_aaa(device: Optional[str] = None,
             opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetAaaResult:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the AAA configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_aaa()
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -130,6 +166,18 @@ def get_aaa(device: Optional[str] = None,
 def get_aaa_output(device: Optional[pulumi.Input[Optional[str]]] = None,
                    opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetAaaResult]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the AAA configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_aaa()
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     ...

@@ -21,49 +21,137 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetBfdResult {
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
+    /**
+     * @return IPv4 Address Family with vrf
+     * 
+     */
     private List<GetBfdIpv4BothVrf> ipv4BothVrfs;
+    /**
+     * @return IPv4 Address Family with vrf
+     * 
+     */
     private List<GetBfdIpv4WithDstVrf> ipv4WithDstVrfs;
+    /**
+     * @return IPv4 Address Family with vrf
+     * 
+     */
     private List<GetBfdIpv4WithSrcVrf> ipv4WithSrcVrfs;
+    /**
+     * @return IPv4 Address Family with vrf
+     * 
+     */
     private List<GetBfdIpv4WithoutVrf> ipv4WithoutVrfs;
+    /**
+     * @return IPv6 Address Family with vrf
+     * 
+     */
     private List<GetBfdIpv6WithBothVrf> ipv6WithBothVrfs;
+    /**
+     * @return IPv6 Address Family with vrf
+     * 
+     */
     private List<GetBfdIpv6WithDstVrf> ipv6WithDstVrfs;
+    /**
+     * @return IPv6 Address Family with vrf
+     * 
+     */
     private List<GetBfdIpv6WithSrcVrf> ipv6WithSrcVrfs;
+    /**
+     * @return IPv6 Address Family with vrf
+     * 
+     */
     private List<GetBfdIpv6WithoutVrf> ipv6WithoutVrfs;
+    /**
+     * @return Value in ms to use for slow timers
+     * 
+     */
     private Integer slowTimers;
 
     private GetBfdResult() {}
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
+    /**
+     * @return IPv4 Address Family with vrf
+     * 
+     */
     public List<GetBfdIpv4BothVrf> ipv4BothVrfs() {
         return this.ipv4BothVrfs;
     }
+    /**
+     * @return IPv4 Address Family with vrf
+     * 
+     */
     public List<GetBfdIpv4WithDstVrf> ipv4WithDstVrfs() {
         return this.ipv4WithDstVrfs;
     }
+    /**
+     * @return IPv4 Address Family with vrf
+     * 
+     */
     public List<GetBfdIpv4WithSrcVrf> ipv4WithSrcVrfs() {
         return this.ipv4WithSrcVrfs;
     }
+    /**
+     * @return IPv4 Address Family with vrf
+     * 
+     */
     public List<GetBfdIpv4WithoutVrf> ipv4WithoutVrfs() {
         return this.ipv4WithoutVrfs;
     }
+    /**
+     * @return IPv6 Address Family with vrf
+     * 
+     */
     public List<GetBfdIpv6WithBothVrf> ipv6WithBothVrfs() {
         return this.ipv6WithBothVrfs;
     }
+    /**
+     * @return IPv6 Address Family with vrf
+     * 
+     */
     public List<GetBfdIpv6WithDstVrf> ipv6WithDstVrfs() {
         return this.ipv6WithDstVrfs;
     }
+    /**
+     * @return IPv6 Address Family with vrf
+     * 
+     */
     public List<GetBfdIpv6WithSrcVrf> ipv6WithSrcVrfs() {
         return this.ipv6WithSrcVrfs;
     }
+    /**
+     * @return IPv6 Address Family with vrf
+     * 
+     */
     public List<GetBfdIpv6WithoutVrf> ipv6WithoutVrfs() {
         return this.ipv6WithoutVrfs;
     }
+    /**
+     * @return Value in ms to use for slow timers
+     * 
+     */
     public Integer slowTimers() {
         return this.slowTimers;
     }

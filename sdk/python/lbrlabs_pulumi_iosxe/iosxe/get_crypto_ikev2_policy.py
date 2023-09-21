@@ -51,16 +51,25 @@ class GetCryptoIkev2PolicyResult:
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
     @property
     @pulumi.getter(name="matchAddressLocalIps")
     def match_address_local_ips(self) -> Sequence[str]:
+        """
+        Local address
+        """
         return pulumi.get(self, "match_address_local_ips")
 
     @property
@@ -71,11 +80,17 @@ class GetCryptoIkev2PolicyResult:
     @property
     @pulumi.getter(name="matchFvrfAny")
     def match_fvrf_any(self) -> bool:
+        """
+        Any fvrf
+        """
         return pulumi.get(self, "match_fvrf_any")
 
     @property
     @pulumi.getter(name="matchInboundOnly")
     def match_inbound_only(self) -> bool:
+        """
+        inbound only for controller
+        """
         return pulumi.get(self, "match_inbound_only")
 
     @property
@@ -86,6 +101,9 @@ class GetCryptoIkev2PolicyResult:
     @property
     @pulumi.getter
     def proposals(self) -> Sequence['outputs.GetCryptoIkev2PolicyProposalResult']:
+        """
+        Specify Proposal
+        """
         return pulumi.get(self, "proposals")
 
 
@@ -109,7 +127,19 @@ def get_crypto_ikev2_policy(device: Optional[str] = None,
                             name: Optional[str] = None,
                             opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetCryptoIkev2PolicyResult:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Crypto IKEv2 Policy configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_crypto_ikev2_policy(name="policy1")
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -133,6 +163,18 @@ def get_crypto_ikev2_policy_output(device: Optional[pulumi.Input[Optional[str]]]
                                    name: Optional[pulumi.Input[str]] = None,
                                    opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetCryptoIkev2PolicyResult]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Crypto IKEv2 Policy configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_crypto_ikev2_policy(name="policy1")
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     ...

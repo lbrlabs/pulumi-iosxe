@@ -597,7 +597,36 @@ class System(pulumi.CustomResource):
                  multicast_routing_vrfs: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemMulticastRoutingVrfArgs']]]]] = None,
                  __props__=None):
         """
-        Create a System resource with the given unique name, props, and options.
+        This resource can manage the System configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.System("example",
+            hostname="ROUTER-1",
+            ip_domain_lookup=False,
+            ip_domain_name="test.com",
+            ip_source_route=False,
+            ipv6_unicast_routing=True,
+            login_delay=10,
+            login_on_failure=True,
+            login_on_failure_log=True,
+            login_on_success=True,
+            login_on_success_log=True,
+            multicast_routing_vrfs=[iosxe.iosxe.SystemMulticastRoutingVrfArgs(
+                vrf="VRF1",
+            )])
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/system:System example "Cisco-IOS-XE-native:native"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] device: A device name from the provider configuration.
@@ -625,7 +654,36 @@ class System(pulumi.CustomResource):
                  args: Optional[SystemArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a System resource with the given unique name, props, and options.
+        This resource can manage the System configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.System("example",
+            hostname="ROUTER-1",
+            ip_domain_lookup=False,
+            ip_domain_name="test.com",
+            ip_source_route=False,
+            ipv6_unicast_routing=True,
+            login_delay=10,
+            login_on_failure=True,
+            login_on_failure_log=True,
+            login_on_success=True,
+            login_on_success_log=True,
+            multicast_routing_vrfs=[iosxe.iosxe.SystemMulticastRoutingVrfArgs(
+                vrf="VRF1",
+            )])
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/system:System example "Cisco-IOS-XE-native:native"
+        ```
+
         :param str resource_name: The name of the resource.
         :param SystemArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

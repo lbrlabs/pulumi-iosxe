@@ -141,16 +141,25 @@ class GetInterfaceTunnelResult:
     @property
     @pulumi.getter(name="arpTimeout")
     def arp_timeout(self) -> int:
+        """
+        Set ARP cache timeout
+        """
         return pulumi.get(self, "arp_timeout")
 
     @property
     @pulumi.getter(name="bfdEcho")
     def bfd_echo(self) -> bool:
+        """
+        Use echo adjunct as bfd detection mechanism
+        """
         return pulumi.get(self, "bfd_echo")
 
     @property
     @pulumi.getter(name="bfdEnable")
     def bfd_enable(self) -> bool:
+        """
+        Enable BFD under the interface
+        """
         return pulumi.get(self, "bfd_enable")
 
     @property
@@ -161,46 +170,73 @@ class GetInterfaceTunnelResult:
     @property
     @pulumi.getter(name="bfdIntervalMinRx")
     def bfd_interval_min_rx(self) -> int:
+        """
+        Minimum receive interval capability
+        """
         return pulumi.get(self, "bfd_interval_min_rx")
 
     @property
     @pulumi.getter(name="bfdIntervalMultiplier")
     def bfd_interval_multiplier(self) -> int:
+        """
+        Multiplier value used to compute holddown
+        """
         return pulumi.get(self, "bfd_interval_multiplier")
 
     @property
     @pulumi.getter(name="bfdLocalAddress")
     def bfd_local_address(self) -> str:
+        """
+        The Source IP address to be used for BFD sessions over this interface.
+        """
         return pulumi.get(self, "bfd_local_address")
 
     @property
     @pulumi.getter(name="bfdTemplate")
     def bfd_template(self) -> str:
+        """
+        BFD template
+        """
         return pulumi.get(self, "bfd_template")
 
     @property
     @pulumi.getter(name="cryptoIpsecDfBit")
     def crypto_ipsec_df_bit(self) -> str:
+        """
+        Handling of encapsulated DF bit.
+        """
         return pulumi.get(self, "crypto_ipsec_df_bit")
 
     @property
     @pulumi.getter
     def description(self) -> str:
+        """
+        Interface specific description
+        """
         return pulumi.get(self, "description")
 
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
     @pulumi.getter(name="helperAddresses")
     def helper_addresses(self) -> Sequence['outputs.GetInterfaceTunnelHelperAddressResult']:
+        """
+        Specify a destination address for UDP broadcasts
+        """
         return pulumi.get(self, "helper_addresses")
 
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
     @property
@@ -211,6 +247,9 @@ class GetInterfaceTunnelResult:
     @property
     @pulumi.getter(name="ipAccessGroupInEnable")
     def ip_access_group_in_enable(self) -> bool:
+        """
+        inbound packets
+        """
         return pulumi.get(self, "ip_access_group_in_enable")
 
     @property
@@ -221,26 +260,41 @@ class GetInterfaceTunnelResult:
     @property
     @pulumi.getter(name="ipAccessGroupOutEnable")
     def ip_access_group_out_enable(self) -> bool:
+        """
+        outbound packets
+        """
         return pulumi.get(self, "ip_access_group_out_enable")
 
     @property
     @pulumi.getter(name="ipDhcpRelaySourceInterface")
     def ip_dhcp_relay_source_interface(self) -> str:
+        """
+        Set source interface for relayed messages
+        """
         return pulumi.get(self, "ip_dhcp_relay_source_interface")
 
     @property
     @pulumi.getter(name="ipProxyArp")
     def ip_proxy_arp(self) -> bool:
+        """
+        Enable proxy ARP
+        """
         return pulumi.get(self, "ip_proxy_arp")
 
     @property
     @pulumi.getter(name="ipRedirects")
     def ip_redirects(self) -> bool:
+        """
+        Enable sending ICMP Redirect messages
+        """
         return pulumi.get(self, "ip_redirects")
 
     @property
     @pulumi.getter(name="ipUnreachables")
     def ip_unreachables(self) -> bool:
+        """
+        Enable sending ICMP Unreachable messages
+        """
         return pulumi.get(self, "ip_unreachables")
 
     @property
@@ -256,11 +310,17 @@ class GetInterfaceTunnelResult:
     @property
     @pulumi.getter(name="ipv6AddressAutoconfigDefault")
     def ipv6_address_autoconfig_default(self) -> bool:
+        """
+        Insert default route
+        """
         return pulumi.get(self, "ipv6_address_autoconfig_default")
 
     @property
     @pulumi.getter(name="ipv6AddressDhcp")
     def ipv6_address_dhcp(self) -> bool:
+        """
+        Obtain IPv6 address from DHCP server
+        """
         return pulumi.get(self, "ipv6_address_dhcp")
 
     @property
@@ -271,6 +331,9 @@ class GetInterfaceTunnelResult:
     @property
     @pulumi.getter(name="ipv6Enable")
     def ipv6_enable(self) -> bool:
+        """
+        Enable IPv6 on interface
+        """
         return pulumi.get(self, "ipv6_enable")
 
     @property
@@ -281,11 +344,17 @@ class GetInterfaceTunnelResult:
     @property
     @pulumi.getter(name="ipv6Mtu")
     def ipv6_mtu(self) -> int:
+        """
+        Set IPv6 Maximum Transmission Unit
+        """
         return pulumi.get(self, "ipv6_mtu")
 
     @property
     @pulumi.getter(name="ipv6NdRaSuppressAll")
     def ipv6_nd_ra_suppress_all(self) -> bool:
+        """
+        Suppress all IPv6 RA
+        """
         return pulumi.get(self, "ipv6_nd_ra_suppress_all")
 
     @property
@@ -296,36 +365,57 @@ class GetInterfaceTunnelResult:
     @property
     @pulumi.getter
     def shutdown(self) -> bool:
+        """
+        Shutdown the selected interface
+        """
         return pulumi.get(self, "shutdown")
 
     @property
     @pulumi.getter(name="tunnelDestinationIpv4")
     def tunnel_destination_ipv4(self) -> str:
+        """
+        ip address or host name
+        """
         return pulumi.get(self, "tunnel_destination_ipv4")
 
     @property
     @pulumi.getter(name="tunnelModeIpsecIpv4")
     def tunnel_mode_ipsec_ipv4(self) -> bool:
+        """
+        over IPv4
+        """
         return pulumi.get(self, "tunnel_mode_ipsec_ipv4")
 
     @property
     @pulumi.getter(name="tunnelProtectionIpsecProfile")
     def tunnel_protection_ipsec_profile(self) -> str:
+        """
+        Determine the ipsec policy profile to use.
+        """
         return pulumi.get(self, "tunnel_protection_ipsec_profile")
 
     @property
     @pulumi.getter(name="tunnelSource")
     def tunnel_source(self) -> str:
+        """
+        source of tunnel packets
+        """
         return pulumi.get(self, "tunnel_source")
 
     @property
     @pulumi.getter
     def unnumbered(self) -> str:
+        """
+        Enable IP processing without an explicit address
+        """
         return pulumi.get(self, "unnumbered")
 
     @property
     @pulumi.getter(name="vrfForwarding")
     def vrf_forwarding(self) -> str:
+        """
+        Configure forwarding table
+        """
         return pulumi.get(self, "vrf_forwarding")
 
 
@@ -379,7 +469,19 @@ def get_interface_tunnel(device: Optional[str] = None,
                          name: Optional[int] = None,
                          opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetInterfaceTunnelResult:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Interface Tunnel configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_interface_tunnel(name=90)
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -433,6 +535,18 @@ def get_interface_tunnel_output(device: Optional[pulumi.Input[Optional[str]]] = 
                                 name: Optional[pulumi.Input[int]] = None,
                                 opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetInterfaceTunnelResult]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Interface Tunnel configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_interface_tunnel(name=90)
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     ...

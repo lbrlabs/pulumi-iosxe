@@ -14,9 +14,17 @@ public final class GetLoggingIpv4HostVrfTransportPlainArgs extends com.pulumi.re
 
     public static final GetLoggingIpv4HostVrfTransportPlainArgs Empty = new GetLoggingIpv4HostVrfTransportPlainArgs();
 
+    /**
+     * A device name from the provider configuration.
+     * 
+     */
     @Import(name="device")
     private @Nullable String device;
 
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
@@ -28,9 +36,17 @@ public final class GetLoggingIpv4HostVrfTransportPlainArgs extends com.pulumi.re
         return this.ipv4Host;
     }
 
+    /**
+     * Set VRF option
+     * 
+     */
     @Import(name="vrf", required=true)
     private String vrf;
 
+    /**
+     * @return Set VRF option
+     * 
+     */
     public String vrf() {
         return this.vrf;
     }
@@ -61,6 +77,12 @@ public final class GetLoggingIpv4HostVrfTransportPlainArgs extends com.pulumi.re
             $ = new GetLoggingIpv4HostVrfTransportPlainArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param device A device name from the provider configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder device(@Nullable String device) {
             $.device = device;
             return this;
@@ -71,6 +93,12 @@ public final class GetLoggingIpv4HostVrfTransportPlainArgs extends com.pulumi.re
             return this;
         }
 
+        /**
+         * @param vrf Set VRF option
+         * 
+         * @return builder
+         * 
+         */
         public Builder vrf(String vrf) {
             $.vrf = vrf;
             return this;

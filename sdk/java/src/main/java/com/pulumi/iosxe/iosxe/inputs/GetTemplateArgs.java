@@ -15,16 +15,32 @@ public final class GetTemplateArgs extends com.pulumi.resources.InvokeArgs {
 
     public static final GetTemplateArgs Empty = new GetTemplateArgs();
 
+    /**
+     * A device name from the provider configuration.
+     * 
+     */
     @Import(name="device")
     private @Nullable Output<String> device;
 
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<Output<String>> device() {
         return Optional.ofNullable(this.device);
     }
 
+    /**
+     * Template name
+     * 
+     */
     @Import(name="templateName", required=true)
     private Output<String> templateName;
 
+    /**
+     * @return Template name
+     * 
+     */
     public Output<String> templateName() {
         return this.templateName;
     }
@@ -54,20 +70,44 @@ public final class GetTemplateArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetTemplateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param device A device name from the provider configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder device(@Nullable Output<String> device) {
             $.device = device;
             return this;
         }
 
+        /**
+         * @param device A device name from the provider configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder device(String device) {
             return device(Output.of(device));
         }
 
+        /**
+         * @param templateName Template name
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateName(Output<String> templateName) {
             $.templateName = templateName;
             return this;
         }
 
+        /**
+         * @param templateName Template name
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateName(String templateName) {
             return templateName(Output.of(templateName));
         }

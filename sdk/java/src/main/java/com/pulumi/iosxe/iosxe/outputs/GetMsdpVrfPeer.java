@@ -11,16 +11,32 @@ import java.util.Objects;
 @CustomType
 public final class GetMsdpVrfPeer {
     private String addr;
+    /**
+     * @return Loopback interface
+     * 
+     */
     private Integer connectSourceLoopback;
+    /**
+     * @return Configured AS number
+     * 
+     */
     private Integer remoteAs;
 
     private GetMsdpVrfPeer() {}
     public String addr() {
         return this.addr;
     }
+    /**
+     * @return Loopback interface
+     * 
+     */
     public Integer connectSourceLoopback() {
         return this.connectSourceLoopback;
     }
+    /**
+     * @return Configured AS number
+     * 
+     */
     public Integer remoteAs() {
         return this.remoteAs;
     }

@@ -240,7 +240,27 @@ class CryptoIkev2(pulumi.CustomResource):
                  nat_keepalive: Optional[pulumi.Input[int]] = None,
                  __props__=None):
         """
-        Create a CryptoIkev2 resource with the given unique name, props, and options.
+        This resource can manage the Crypto IKEv2 configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.CryptoIkev2("example",
+            dpd=10,
+            dpd_query="periodic",
+            dpd_retry_interval=5,
+            nat_keepalive=20)
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/cryptoIkev2:CryptoIkev2 example "Cisco-IOS-XE-native:native/crypto/Cisco-IOS-XE-crypto:ikev2"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] delete_mode: Configure behavior when deleting/destroying the resource. Either delete the entire object (YANG container) being
@@ -259,7 +279,27 @@ class CryptoIkev2(pulumi.CustomResource):
                  args: Optional[CryptoIkev2Args] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a CryptoIkev2 resource with the given unique name, props, and options.
+        This resource can manage the Crypto IKEv2 configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.CryptoIkev2("example",
+            dpd=10,
+            dpd_query="periodic",
+            dpd_retry_interval=5,
+            nat_keepalive=20)
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/cryptoIkev2:CryptoIkev2 example "Cisco-IOS-XE-native:native/crypto/Cisco-IOS-XE-crypto:ikev2"
+        ```
+
         :param str resource_name: The name of the resource.
         :param CryptoIkev2Args args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

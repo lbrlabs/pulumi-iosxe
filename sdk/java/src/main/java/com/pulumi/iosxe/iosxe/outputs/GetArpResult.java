@@ -15,61 +15,173 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetArpResult {
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return Maximum learn entry limit
+     * 
+     */
     private Integer entryLearn;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
+    /**
+     * @return Specify the number of IP addresses to resolve
+     * 
+     */
     private Integer incompleteEntries;
+    /**
+     * @return Specify ARP acl to be applied
+     * 
+     */
     private List<GetArpInspectionFilter> inspectionFilters;
+    /**
+     * @return Number of entries for log buffer
+     * 
+     */
     private Integer inspectionLogBufferEntries;
+    /**
+     * @return Number of entries for log buffer
+     * 
+     */
     private Integer inspectionLogBufferLogsEntries;
+    /**
+     * @return Interval for controlling logging rate
+     * 
+     */
     private Integer inspectionLogBufferLogsInterval;
+    /**
+     * @return Allow 0.0.0.0 sender IP address
+     * 
+     */
     private Boolean inspectionValidateAllowZeros;
+    /**
+     * @return Validate destination MAC address
+     * 
+     */
     private Boolean inspectionValidateDstMac;
+    /**
+     * @return Validate IP addresses
+     * 
+     */
     private Boolean inspectionValidateIp;
+    /**
+     * @return Validate source MAC address
+     * 
+     */
     private Boolean inspectionValidateSrcMac;
+    /**
+     * @return Enable/Disable ARP Inspection on vlans
+     * 
+     */
     private String inspectionVlan;
+    /**
+     * @return Disable proxy ARP on all interfaces
+     * 
+     */
     private Boolean proxyDisable;
 
     private GetArpResult() {}
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return Maximum learn entry limit
+     * 
+     */
     public Integer entryLearn() {
         return this.entryLearn;
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
+    /**
+     * @return Specify the number of IP addresses to resolve
+     * 
+     */
     public Integer incompleteEntries() {
         return this.incompleteEntries;
     }
+    /**
+     * @return Specify ARP acl to be applied
+     * 
+     */
     public List<GetArpInspectionFilter> inspectionFilters() {
         return this.inspectionFilters;
     }
+    /**
+     * @return Number of entries for log buffer
+     * 
+     */
     public Integer inspectionLogBufferEntries() {
         return this.inspectionLogBufferEntries;
     }
+    /**
+     * @return Number of entries for log buffer
+     * 
+     */
     public Integer inspectionLogBufferLogsEntries() {
         return this.inspectionLogBufferLogsEntries;
     }
+    /**
+     * @return Interval for controlling logging rate
+     * 
+     */
     public Integer inspectionLogBufferLogsInterval() {
         return this.inspectionLogBufferLogsInterval;
     }
+    /**
+     * @return Allow 0.0.0.0 sender IP address
+     * 
+     */
     public Boolean inspectionValidateAllowZeros() {
         return this.inspectionValidateAllowZeros;
     }
+    /**
+     * @return Validate destination MAC address
+     * 
+     */
     public Boolean inspectionValidateDstMac() {
         return this.inspectionValidateDstMac;
     }
+    /**
+     * @return Validate IP addresses
+     * 
+     */
     public Boolean inspectionValidateIp() {
         return this.inspectionValidateIp;
     }
+    /**
+     * @return Validate source MAC address
+     * 
+     */
     public Boolean inspectionValidateSrcMac() {
         return this.inspectionValidateSrcMac;
     }
+    /**
+     * @return Enable/Disable ARP Inspection on vlans
+     * 
+     */
     public String inspectionVlan() {
         return this.inspectionVlan;
     }
+    /**
+     * @return Disable proxy ARP on all interfaces
+     * 
+     */
     public Boolean proxyDisable() {
         return this.proxyDisable;
     }

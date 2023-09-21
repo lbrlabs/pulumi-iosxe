@@ -22,6 +22,80 @@ import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the Logging configuration.
+ * 
+ * ## Example Usage
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.Logging;
+ * import com.pulumi.iosxe.iosxe.LoggingArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.LoggingIpv4HostArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.LoggingIpv4VrfHostArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.LoggingIpv6HostArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.LoggingIpv6VrfHostArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.LoggingSourceInterfacesVrfArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Logging(&#34;example&#34;, LoggingArgs.builder()        
+ *             .bufferedSeverity(&#34;informational&#34;)
+ *             .bufferedSize(16000)
+ *             .consoleSeverity(&#34;informational&#34;)
+ *             .facility(&#34;local0&#34;)
+ *             .historySeverity(&#34;informational&#34;)
+ *             .historySize(100)
+ *             .ipv4Hosts(LoggingIpv4HostArgs.builder()
+ *                 .ipv4_host(&#34;1.1.1.1&#34;)
+ *                 .build())
+ *             .ipv4VrfHosts(LoggingIpv4VrfHostArgs.builder()
+ *                 .ipv4_host(&#34;1.1.1.1&#34;)
+ *                 .vrf(&#34;VRF1&#34;)
+ *                 .build())
+ *             .ipv6Hosts(LoggingIpv6HostArgs.builder()
+ *                 .ipv6_host(&#34;2001::1&#34;)
+ *                 .build())
+ *             .ipv6VrfHosts(LoggingIpv6VrfHostArgs.builder()
+ *                 .ipv6_host(&#34;2001::1&#34;)
+ *                 .vrf(&#34;VRF1&#34;)
+ *                 .build())
+ *             .monitorSeverity(&#34;informational&#34;)
+ *             .originIdType(&#34;hostname&#34;)
+ *             .sourceInterface(&#34;Loopback0&#34;)
+ *             .sourceInterfacesVrves(LoggingSourceInterfacesVrfArgs.builder()
+ *                 .interface_name(&#34;Loopback100&#34;)
+ *                 .vrf(&#34;VRF1&#34;)
+ *                 .build())
+ *             .trap(true)
+ *             .trapSeverity(&#34;informational&#34;)
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/logging:Logging example &#34;Cisco-IOS-XE-native:native/logging&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/logging:Logging")
 public class Logging extends com.pulumi.resources.CustomResource {
     /**

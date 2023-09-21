@@ -10,86 +10,222 @@ import java.util.Objects;
 
 @CustomType
 public final class GetAaaAuthenticationLogin {
+    /**
+     * @return Use enable password for authentication.
+     * 
+     */
     private Boolean a1Enable;
+    /**
+     * @return Use Server-group
+     * 
+     */
     private String a1Group;
+    /**
+     * @return Use line password for authentication.
+     * 
+     */
     private Boolean a1Line;
+    /**
+     * @return Use local username authentication.
+     * 
+     */
     private Boolean a1Local;
+    /**
+     * @return NO authentication.
+     * 
+     */
     private Boolean a1None;
+    /**
+     * @return Use enable password for authentication.
+     * 
+     */
     private Boolean a2Enable;
+    /**
+     * @return Use Server-group
+     * 
+     */
     private String a2Group;
+    /**
+     * @return Use line password for authentication.
+     * 
+     */
     private Boolean a2Line;
     private Boolean a2Local;
+    /**
+     * @return NO authentication.
+     * 
+     */
     private Boolean a2None;
+    /**
+     * @return Use enable password for authentication.
+     * 
+     */
     private Boolean a3Enable;
+    /**
+     * @return Use Server-group
+     * 
+     */
     private String a3Group;
+    /**
+     * @return Use line password for authentication.
+     * 
+     */
     private Boolean a3Line;
     private Boolean a3Local;
+    /**
+     * @return NO authentication.
+     * 
+     */
     private Boolean a3None;
+    /**
+     * @return Use enable password for authentication.
+     * 
+     */
     private Boolean a4Enable;
+    /**
+     * @return Use Server-group
+     * 
+     */
     private String a4Group;
+    /**
+     * @return Use line password for authentication.
+     * 
+     */
     private Boolean a4Line;
     private Boolean a4Local;
+    /**
+     * @return NO authentication.
+     * 
+     */
     private Boolean a4None;
     private String name;
 
     private GetAaaAuthenticationLogin() {}
+    /**
+     * @return Use enable password for authentication.
+     * 
+     */
     public Boolean a1Enable() {
         return this.a1Enable;
     }
+    /**
+     * @return Use Server-group
+     * 
+     */
     public String a1Group() {
         return this.a1Group;
     }
+    /**
+     * @return Use line password for authentication.
+     * 
+     */
     public Boolean a1Line() {
         return this.a1Line;
     }
+    /**
+     * @return Use local username authentication.
+     * 
+     */
     public Boolean a1Local() {
         return this.a1Local;
     }
+    /**
+     * @return NO authentication.
+     * 
+     */
     public Boolean a1None() {
         return this.a1None;
     }
+    /**
+     * @return Use enable password for authentication.
+     * 
+     */
     public Boolean a2Enable() {
         return this.a2Enable;
     }
+    /**
+     * @return Use Server-group
+     * 
+     */
     public String a2Group() {
         return this.a2Group;
     }
+    /**
+     * @return Use line password for authentication.
+     * 
+     */
     public Boolean a2Line() {
         return this.a2Line;
     }
     public Boolean a2Local() {
         return this.a2Local;
     }
+    /**
+     * @return NO authentication.
+     * 
+     */
     public Boolean a2None() {
         return this.a2None;
     }
+    /**
+     * @return Use enable password for authentication.
+     * 
+     */
     public Boolean a3Enable() {
         return this.a3Enable;
     }
+    /**
+     * @return Use Server-group
+     * 
+     */
     public String a3Group() {
         return this.a3Group;
     }
+    /**
+     * @return Use line password for authentication.
+     * 
+     */
     public Boolean a3Line() {
         return this.a3Line;
     }
     public Boolean a3Local() {
         return this.a3Local;
     }
+    /**
+     * @return NO authentication.
+     * 
+     */
     public Boolean a3None() {
         return this.a3None;
     }
+    /**
+     * @return Use enable password for authentication.
+     * 
+     */
     public Boolean a4Enable() {
         return this.a4Enable;
     }
+    /**
+     * @return Use Server-group
+     * 
+     */
     public String a4Group() {
         return this.a4Group;
     }
+    /**
+     * @return Use line password for authentication.
+     * 
+     */
     public Boolean a4Line() {
         return this.a4Line;
     }
     public Boolean a4Local() {
         return this.a4Local;
     }
+    /**
+     * @return NO authentication.
+     * 
+     */
     public Boolean a4None() {
         return this.a4None;
     }

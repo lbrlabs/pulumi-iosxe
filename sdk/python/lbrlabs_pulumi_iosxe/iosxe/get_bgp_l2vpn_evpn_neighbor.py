@@ -47,6 +47,9 @@ class GetBgpL2vpnEvpnNeighborResult:
     @property
     @pulumi.getter
     def activate(self) -> bool:
+        """
+        Enable the address family for this neighbor
+        """
         return pulumi.get(self, "activate")
 
     @property
@@ -57,11 +60,17 @@ class GetBgpL2vpnEvpnNeighborResult:
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
     @property
@@ -72,6 +81,9 @@ class GetBgpL2vpnEvpnNeighborResult:
     @property
     @pulumi.getter(name="routeReflectorClient")
     def route_reflector_client(self) -> bool:
+        """
+        Configure a neighbor as Route Reflector client
+        """
         return pulumi.get(self, "route_reflector_client")
 
     @property
@@ -100,7 +112,20 @@ def get_bgp_l2vpn_evpn_neighbor(asn: Optional[str] = None,
                                 ip: Optional[str] = None,
                                 opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetBgpL2vpnEvpnNeighborResult:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the BGP L2VPN EVPN Neighbor configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_bgp_l2vpn_evpn_neighbor(asn="65000",
+        ip="3.3.3.3")
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     __args__ = dict()
     __args__['asn'] = asn
@@ -125,6 +150,19 @@ def get_bgp_l2vpn_evpn_neighbor_output(asn: Optional[pulumi.Input[str]] = None,
                                        ip: Optional[pulumi.Input[str]] = None,
                                        opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetBgpL2vpnEvpnNeighborResult]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the BGP L2VPN EVPN Neighbor configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_bgp_l2vpn_evpn_neighbor(asn="65000",
+        ip="3.3.3.3")
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     ...

@@ -4698,7 +4698,14 @@ class SnmpServer(pulumi.CustomResource):
                  views: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SnmpServerViewArgs']]]]] = None,
                  __props__=None):
         """
-        Create a SnmpServer resource with the given unique name, props, and options.
+        This resource can manage the SNMP Server configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/snmpServer:SnmpServer example "Cisco-IOS-XE-native:native/snmp-server"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] chassis_id: String to uniquely identify this chassis
@@ -4824,7 +4831,14 @@ class SnmpServer(pulumi.CustomResource):
                  args: Optional[SnmpServerArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a SnmpServer resource with the given unique name, props, and options.
+        This resource can manage the SNMP Server configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/snmpServer:SnmpServer example "Cisco-IOS-XE-native:native/snmp-server"
+        ```
+
         :param str resource_name: The name of the resource.
         :param SnmpServerArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

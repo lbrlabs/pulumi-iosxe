@@ -16,13 +16,45 @@ import javax.annotation.Nullable;
 public final class GetDhcpResult {
     private String compatibilitySuboptionLinkSelection;
     private String compatibilitySuboptionServerOverride;
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
+    /**
+     * @return Default option, no vpn
+     * 
+     */
     private Boolean relayInformationOptionDefault;
+    /**
+     * @return Insert VPN sub-options and change the giaddr to the outgoing interface
+     * 
+     */
     private Boolean relayInformationOptionVpn;
+    /**
+     * @return Received DHCP packets may contain relay info option with zero giaddr
+     * 
+     */
     private Boolean relayInformationTrustAll;
+    /**
+     * @return DHCP Snooping
+     * 
+     */
     private Boolean snooping;
+    /**
+     * @return Use configured hostname for remote id
+     * 
+     */
     private Boolean snoopingInformationOptionFormatRemoteIdHostname;
+    /**
+     * @return DHCP Snooping vlan
+     * 
+     */
     private List<GetDhcpSnoopingVlan> snoopingVlans;
 
     private GetDhcpResult() {}
@@ -32,27 +64,59 @@ public final class GetDhcpResult {
     public String compatibilitySuboptionServerOverride() {
         return this.compatibilitySuboptionServerOverride;
     }
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
+    /**
+     * @return Default option, no vpn
+     * 
+     */
     public Boolean relayInformationOptionDefault() {
         return this.relayInformationOptionDefault;
     }
+    /**
+     * @return Insert VPN sub-options and change the giaddr to the outgoing interface
+     * 
+     */
     public Boolean relayInformationOptionVpn() {
         return this.relayInformationOptionVpn;
     }
+    /**
+     * @return Received DHCP packets may contain relay info option with zero giaddr
+     * 
+     */
     public Boolean relayInformationTrustAll() {
         return this.relayInformationTrustAll;
     }
+    /**
+     * @return DHCP Snooping
+     * 
+     */
     public Boolean snooping() {
         return this.snooping;
     }
+    /**
+     * @return Use configured hostname for remote id
+     * 
+     */
     public Boolean snoopingInformationOptionFormatRemoteIdHostname() {
         return this.snoopingInformationOptionFormatRemoteIdHostname;
     }
+    /**
+     * @return DHCP Snooping vlan
+     * 
+     */
     public List<GetDhcpSnoopingVlan> snoopingVlans() {
         return this.snoopingVlans;
     }

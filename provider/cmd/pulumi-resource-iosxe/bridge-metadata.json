@@ -2002,194 +2002,194 @@
     },
     "renames": {
         "resources": {
-            "iosxe:iosxe/aaa:Aaa": "iosxe_aaa",
-            "iosxe:iosxe/aaaAccounting:AaaAccounting": "iosxe_aaa_accounting",
-            "iosxe:iosxe/aaaAuthentication:AaaAuthentication": "iosxe_aaa_authentication",
-            "iosxe:iosxe/aaaAuthorization:AaaAuthorization": "iosxe_aaa_authorization",
-            "iosxe:iosxe/accessListExtended:AccessListExtended": "iosxe_access_list_extended",
-            "iosxe:iosxe/accessListStandard:AccessListStandard": "iosxe_access_list_standard",
-            "iosxe:iosxe/arp:Arp": "iosxe_arp",
-            "iosxe:iosxe/banner:Banner": "iosxe_banner",
-            "iosxe:iosxe/bfd:Bfd": "iosxe_bfd",
-            "iosxe:iosxe/bfdTemplateMultiHop:BfdTemplateMultiHop": "iosxe_bfd_template_multi_hop",
-            "iosxe:iosxe/bfdTemplateSingleHop:BfdTemplateSingleHop": "iosxe_bfd_template_single_hop",
-            "iosxe:iosxe/bgp:Bgp": "iosxe_bgp",
-            "iosxe:iosxe/bgpAddressFamilyIpv4:BgpAddressFamilyIpv4": "iosxe_bgp_address_family_ipv4",
-            "iosxe:iosxe/bgpAddressFamilyIpv4Vrf:BgpAddressFamilyIpv4Vrf": "iosxe_bgp_address_family_ipv4_vrf",
-            "iosxe:iosxe/bgpAddressFamilyIpv6:BgpAddressFamilyIpv6": "iosxe_bgp_address_family_ipv6",
-            "iosxe:iosxe/bgpAddressFamilyIpv6Vrf:BgpAddressFamilyIpv6Vrf": "iosxe_bgp_address_family_ipv6_vrf",
-            "iosxe:iosxe/bgpAddressFamilyL2vpn:BgpAddressFamilyL2vpn": "iosxe_bgp_address_family_l2vpn",
-            "iosxe:iosxe/bgpIpv4UnicastNeighbor:BgpIpv4UnicastNeighbor": "iosxe_bgp_ipv4_unicast_neighbor",
-            "iosxe:iosxe/bgpIpv4UnicastVrfNeighbor:BgpIpv4UnicastVrfNeighbor": "iosxe_bgp_ipv4_unicast_vrf_neighbor",
-            "iosxe:iosxe/bgpIpv6UnicastNeighbor:BgpIpv6UnicastNeighbor": "iosxe_bgp_ipv6_unicast_neighbor",
-            "iosxe:iosxe/bgpL2vpnEvpnNeighbor:BgpL2vpnEvpnNeighbor": "iosxe_bgp_l2vpn_evpn_neighbor",
-            "iosxe:iosxe/bgpNeighbor:BgpNeighbor": "iosxe_bgp_neighbor",
-            "iosxe:iosxe/cdp:Cdp": "iosxe_cdp",
-            "iosxe:iosxe/classMap:ClassMap": "iosxe_class_map",
-            "iosxe:iosxe/clock:Clock": "iosxe_clock",
-            "iosxe:iosxe/cryptoIkev2:CryptoIkev2": "iosxe_crypto_ikev2",
-            "iosxe:iosxe/cryptoIkev2Keyring:CryptoIkev2Keyring": "iosxe_crypto_ikev2_keyring",
-            "iosxe:iosxe/cryptoIkev2Policy:CryptoIkev2Policy": "iosxe_crypto_ikev2_policy",
-            "iosxe:iosxe/cryptoIkev2Profile:CryptoIkev2Profile": "iosxe_crypto_ikev2_profile",
-            "iosxe:iosxe/cryptoIkev2Proposal:CryptoIkev2Proposal": "iosxe_crypto_ikev2_proposal",
-            "iosxe:iosxe/cryptoIpsecProfile:CryptoIpsecProfile": "iosxe_crypto_ipsec_profile",
-            "iosxe:iosxe/cryptoIpsecTransformSet:CryptoIpsecTransformSet": "iosxe_crypto_ipsec_transform_set",
-            "iosxe:iosxe/cts:Cts": "iosxe_cts",
-            "iosxe:iosxe/dhcp:Dhcp": "iosxe_dhcp",
-            "iosxe:iosxe/dot1x:Dot1x": "iosxe_dot1x",
-            "iosxe:iosxe/errdisable:Errdisable": "iosxe_errdisable",
-            "iosxe:iosxe/evpn:Evpn": "iosxe_evpn",
-            "iosxe:iosxe/evpnInstance:EvpnInstance": "iosxe_evpn_instance",
-            "iosxe:iosxe/interfaceEthernet:InterfaceEthernet": "iosxe_interface_ethernet",
-            "iosxe:iosxe/interfaceLoopback:InterfaceLoopback": "iosxe_interface_loopback",
-            "iosxe:iosxe/interfaceMpls:InterfaceMpls": "iosxe_interface_mpls",
-            "iosxe:iosxe/interfaceNve:InterfaceNve": "iosxe_interface_nve",
-            "iosxe:iosxe/interfaceOspf:InterfaceOspf": "iosxe_interface_ospf",
-            "iosxe:iosxe/interfaceOspfv3:InterfaceOspfv3": "iosxe_interface_ospfv3",
-            "iosxe:iosxe/interfacePim:InterfacePim": "iosxe_interface_pim",
-            "iosxe:iosxe/interfacePortChannel:InterfacePortChannel": "iosxe_interface_port_channel",
-            "iosxe:iosxe/interfacePortChannelSubinterface:InterfacePortChannelSubinterface": "iosxe_interface_port_channel_subinterface",
-            "iosxe:iosxe/interfaceSwitchport:InterfaceSwitchport": "iosxe_interface_switchport",
-            "iosxe:iosxe/interfaceTunnel:InterfaceTunnel": "iosxe_interface_tunnel",
-            "iosxe:iosxe/interfaceVlan:InterfaceVlan": "iosxe_interface_vlan",
-            "iosxe:iosxe/line:Line": "iosxe_line",
-            "iosxe:iosxe/logging:Logging": "iosxe_logging",
-            "iosxe:iosxe/loggingIpv4HostTransport:LoggingIpv4HostTransport": "iosxe_logging_ipv4_host_transport",
-            "iosxe:iosxe/loggingIpv4HostVrfTransport:LoggingIpv4HostVrfTransport": "iosxe_logging_ipv4_host_vrf_transport",
-            "iosxe:iosxe/loggingIpv6HostTransport:LoggingIpv6HostTransport": "iosxe_logging_ipv6_host_transport",
-            "iosxe:iosxe/loggingIpv6HostVrfTransport:LoggingIpv6HostVrfTransport": "iosxe_logging_ipv6_host_vrf_transport",
-            "iosxe:iosxe/mdtSubscription:MdtSubscription": "iosxe_mdt_subscription",
-            "iosxe:iosxe/msdp:Msdp": "iosxe_msdp",
-            "iosxe:iosxe/msdpVrf:MsdpVrf": "iosxe_msdp_vrf",
-            "iosxe:iosxe/ntp:Ntp": "iosxe_ntp",
-            "iosxe:iosxe/ospf:Ospf": "iosxe_ospf",
-            "iosxe:iosxe/ospfVrf:OspfVrf": "iosxe_ospf_vrf",
-            "iosxe:iosxe/pim:Pim": "iosxe_pim",
-            "iosxe:iosxe/pimVrf:PimVrf": "iosxe_pim_vrf",
-            "iosxe:iosxe/policyMap:PolicyMap": "iosxe_policy_map",
-            "iosxe:iosxe/policyMapEvent:PolicyMapEvent": "iosxe_policy_map_event",
-            "iosxe:iosxe/prefixList:PrefixList": "iosxe_prefix_list",
-            "iosxe:iosxe/radius:Radius": "iosxe_radius",
-            "iosxe:iosxe/radiusServer:RadiusServer": "iosxe_radius_server",
-            "iosxe:iosxe/restconf:Restconf": "iosxe_restconf",
-            "iosxe:iosxe/routeMap:RouteMap": "iosxe_route_map",
-            "iosxe:iosxe/service:Service": "iosxe_service",
-            "iosxe:iosxe/serviceTemplate:ServiceTemplate": "iosxe_service_template",
-            "iosxe:iosxe/snmpServer:SnmpServer": "iosxe_snmp_server",
-            "iosxe:iosxe/snmpServerGroup:SnmpServerGroup": "iosxe_snmp_server_group",
-            "iosxe:iosxe/snmpServerUser:SnmpServerUser": "iosxe_snmp_server_user",
-            "iosxe:iosxe/staticRoute:StaticRoute": "iosxe_static_route",
-            "iosxe:iosxe/staticRouteVrf:StaticRouteVrf": "iosxe_static_route_vrf",
-            "iosxe:iosxe/system:System": "iosxe_system",
-            "iosxe:iosxe/tacacsServer:TacacsServer": "iosxe_tacacs_server",
-            "iosxe:iosxe/template:Template": "iosxe_template",
-            "iosxe:iosxe/udld:Udld": "iosxe_udld",
-            "iosxe:iosxe/username:Username": "iosxe_username",
-            "iosxe:iosxe/vlan:Vlan": "iosxe_vlan",
-            "iosxe:iosxe/vlanAccessMap:VlanAccessMap": "iosxe_vlan_access_map",
-            "iosxe:iosxe/vlanConfiguration:VlanConfiguration": "iosxe_vlan_configuration",
-            "iosxe:iosxe/vrf:Vrf": "iosxe_vrf",
-            "iosxe:iosxe/vtp:Vtp": "iosxe_vtp"
+            "iosxe:index/aaa:Aaa": "iosxe_aaa",
+            "iosxe:index/aaaAccounting:AaaAccounting": "iosxe_aaa_accounting",
+            "iosxe:index/aaaAuthentication:AaaAuthentication": "iosxe_aaa_authentication",
+            "iosxe:index/aaaAuthorization:AaaAuthorization": "iosxe_aaa_authorization",
+            "iosxe:index/accessListExtended:AccessListExtended": "iosxe_access_list_extended",
+            "iosxe:index/accessListStandard:AccessListStandard": "iosxe_access_list_standard",
+            "iosxe:index/arp:Arp": "iosxe_arp",
+            "iosxe:index/banner:Banner": "iosxe_banner",
+            "iosxe:index/bfd:Bfd": "iosxe_bfd",
+            "iosxe:index/bfdTemplateMultiHop:BfdTemplateMultiHop": "iosxe_bfd_template_multi_hop",
+            "iosxe:index/bfdTemplateSingleHop:BfdTemplateSingleHop": "iosxe_bfd_template_single_hop",
+            "iosxe:index/bgp:Bgp": "iosxe_bgp",
+            "iosxe:index/bgpAddressFamilyIpv4:BgpAddressFamilyIpv4": "iosxe_bgp_address_family_ipv4",
+            "iosxe:index/bgpAddressFamilyIpv4Vrf:BgpAddressFamilyIpv4Vrf": "iosxe_bgp_address_family_ipv4_vrf",
+            "iosxe:index/bgpAddressFamilyIpv6:BgpAddressFamilyIpv6": "iosxe_bgp_address_family_ipv6",
+            "iosxe:index/bgpAddressFamilyIpv6Vrf:BgpAddressFamilyIpv6Vrf": "iosxe_bgp_address_family_ipv6_vrf",
+            "iosxe:index/bgpAddressFamilyL2vpn:BgpAddressFamilyL2vpn": "iosxe_bgp_address_family_l2vpn",
+            "iosxe:index/bgpIpv4UnicastNeighbor:BgpIpv4UnicastNeighbor": "iosxe_bgp_ipv4_unicast_neighbor",
+            "iosxe:index/bgpIpv4UnicastVrfNeighbor:BgpIpv4UnicastVrfNeighbor": "iosxe_bgp_ipv4_unicast_vrf_neighbor",
+            "iosxe:index/bgpIpv6UnicastNeighbor:BgpIpv6UnicastNeighbor": "iosxe_bgp_ipv6_unicast_neighbor",
+            "iosxe:index/bgpL2vpnEvpnNeighbor:BgpL2vpnEvpnNeighbor": "iosxe_bgp_l2vpn_evpn_neighbor",
+            "iosxe:index/bgpNeighbor:BgpNeighbor": "iosxe_bgp_neighbor",
+            "iosxe:index/cdp:Cdp": "iosxe_cdp",
+            "iosxe:index/classMap:ClassMap": "iosxe_class_map",
+            "iosxe:index/clock:Clock": "iosxe_clock",
+            "iosxe:index/cryptoIkev2:CryptoIkev2": "iosxe_crypto_ikev2",
+            "iosxe:index/cryptoIkev2Keyring:CryptoIkev2Keyring": "iosxe_crypto_ikev2_keyring",
+            "iosxe:index/cryptoIkev2Policy:CryptoIkev2Policy": "iosxe_crypto_ikev2_policy",
+            "iosxe:index/cryptoIkev2Profile:CryptoIkev2Profile": "iosxe_crypto_ikev2_profile",
+            "iosxe:index/cryptoIkev2Proposal:CryptoIkev2Proposal": "iosxe_crypto_ikev2_proposal",
+            "iosxe:index/cryptoIpsecProfile:CryptoIpsecProfile": "iosxe_crypto_ipsec_profile",
+            "iosxe:index/cryptoIpsecTransformSet:CryptoIpsecTransformSet": "iosxe_crypto_ipsec_transform_set",
+            "iosxe:index/cts:Cts": "iosxe_cts",
+            "iosxe:index/dhcp:Dhcp": "iosxe_dhcp",
+            "iosxe:index/dot1x:Dot1x": "iosxe_dot1x",
+            "iosxe:index/errdisable:Errdisable": "iosxe_errdisable",
+            "iosxe:index/evpn:Evpn": "iosxe_evpn",
+            "iosxe:index/evpnInstance:EvpnInstance": "iosxe_evpn_instance",
+            "iosxe:index/interfaceEthernet:InterfaceEthernet": "iosxe_interface_ethernet",
+            "iosxe:index/interfaceLoopback:InterfaceLoopback": "iosxe_interface_loopback",
+            "iosxe:index/interfaceMpls:InterfaceMpls": "iosxe_interface_mpls",
+            "iosxe:index/interfaceNve:InterfaceNve": "iosxe_interface_nve",
+            "iosxe:index/interfaceOspf:InterfaceOspf": "iosxe_interface_ospf",
+            "iosxe:index/interfaceOspfv3:InterfaceOspfv3": "iosxe_interface_ospfv3",
+            "iosxe:index/interfacePim:InterfacePim": "iosxe_interface_pim",
+            "iosxe:index/interfacePortChannel:InterfacePortChannel": "iosxe_interface_port_channel",
+            "iosxe:index/interfacePortChannelSubinterface:InterfacePortChannelSubinterface": "iosxe_interface_port_channel_subinterface",
+            "iosxe:index/interfaceSwitchport:InterfaceSwitchport": "iosxe_interface_switchport",
+            "iosxe:index/interfaceTunnel:InterfaceTunnel": "iosxe_interface_tunnel",
+            "iosxe:index/interfaceVlan:InterfaceVlan": "iosxe_interface_vlan",
+            "iosxe:index/line:Line": "iosxe_line",
+            "iosxe:index/logging:Logging": "iosxe_logging",
+            "iosxe:index/loggingIpv4HostTransport:LoggingIpv4HostTransport": "iosxe_logging_ipv4_host_transport",
+            "iosxe:index/loggingIpv4HostVrfTransport:LoggingIpv4HostVrfTransport": "iosxe_logging_ipv4_host_vrf_transport",
+            "iosxe:index/loggingIpv6HostTransport:LoggingIpv6HostTransport": "iosxe_logging_ipv6_host_transport",
+            "iosxe:index/loggingIpv6HostVrfTransport:LoggingIpv6HostVrfTransport": "iosxe_logging_ipv6_host_vrf_transport",
+            "iosxe:index/mdtSubscription:MdtSubscription": "iosxe_mdt_subscription",
+            "iosxe:index/msdp:Msdp": "iosxe_msdp",
+            "iosxe:index/msdpVrf:MsdpVrf": "iosxe_msdp_vrf",
+            "iosxe:index/ntp:Ntp": "iosxe_ntp",
+            "iosxe:index/ospf:Ospf": "iosxe_ospf",
+            "iosxe:index/ospfVrf:OspfVrf": "iosxe_ospf_vrf",
+            "iosxe:index/pim:Pim": "iosxe_pim",
+            "iosxe:index/pimVrf:PimVrf": "iosxe_pim_vrf",
+            "iosxe:index/policyMap:PolicyMap": "iosxe_policy_map",
+            "iosxe:index/policyMapEvent:PolicyMapEvent": "iosxe_policy_map_event",
+            "iosxe:index/prefixList:PrefixList": "iosxe_prefix_list",
+            "iosxe:index/radius:Radius": "iosxe_radius",
+            "iosxe:index/radiusServer:RadiusServer": "iosxe_radius_server",
+            "iosxe:index/restconf:Restconf": "iosxe_restconf",
+            "iosxe:index/routeMap:RouteMap": "iosxe_route_map",
+            "iosxe:index/service:Service": "iosxe_service",
+            "iosxe:index/serviceTemplate:ServiceTemplate": "iosxe_service_template",
+            "iosxe:index/snmpServer:SnmpServer": "iosxe_snmp_server",
+            "iosxe:index/snmpServerGroup:SnmpServerGroup": "iosxe_snmp_server_group",
+            "iosxe:index/snmpServerUser:SnmpServerUser": "iosxe_snmp_server_user",
+            "iosxe:index/staticRoute:StaticRoute": "iosxe_static_route",
+            "iosxe:index/staticRouteVrf:StaticRouteVrf": "iosxe_static_route_vrf",
+            "iosxe:index/system:System": "iosxe_system",
+            "iosxe:index/tacacsServer:TacacsServer": "iosxe_tacacs_server",
+            "iosxe:index/template:Template": "iosxe_template",
+            "iosxe:index/udld:Udld": "iosxe_udld",
+            "iosxe:index/username:Username": "iosxe_username",
+            "iosxe:index/vlan:Vlan": "iosxe_vlan",
+            "iosxe:index/vlanAccessMap:VlanAccessMap": "iosxe_vlan_access_map",
+            "iosxe:index/vlanConfiguration:VlanConfiguration": "iosxe_vlan_configuration",
+            "iosxe:index/vrf:Vrf": "iosxe_vrf",
+            "iosxe:index/vtp:Vtp": "iosxe_vtp"
         },
         "functions": {
-            "iosxe:iosxe/getAaa:getAaa": "iosxe_aaa",
-            "iosxe:iosxe/getAaaAccounting:getAaaAccounting": "iosxe_aaa_accounting",
-            "iosxe:iosxe/getAaaAuthentication:getAaaAuthentication": "iosxe_aaa_authentication",
-            "iosxe:iosxe/getAaaAuthorization:getAaaAuthorization": "iosxe_aaa_authorization",
-            "iosxe:iosxe/getAccessListExtended:getAccessListExtended": "iosxe_access_list_extended",
-            "iosxe:iosxe/getAccessListStandard:getAccessListStandard": "iosxe_access_list_standard",
-            "iosxe:iosxe/getArp:getArp": "iosxe_arp",
-            "iosxe:iosxe/getBanner:getBanner": "iosxe_banner",
-            "iosxe:iosxe/getBfd:getBfd": "iosxe_bfd",
-            "iosxe:iosxe/getBfdTemplateMultiHop:getBfdTemplateMultiHop": "iosxe_bfd_template_multi_hop",
-            "iosxe:iosxe/getBfdTemplateSingleHop:getBfdTemplateSingleHop": "iosxe_bfd_template_single_hop",
-            "iosxe:iosxe/getBgp:getBgp": "iosxe_bgp",
-            "iosxe:iosxe/getBgpAddressFamilyIpv4:getBgpAddressFamilyIpv4": "iosxe_bgp_address_family_ipv4",
-            "iosxe:iosxe/getBgpAddressFamilyIpv4Vrf:getBgpAddressFamilyIpv4Vrf": "iosxe_bgp_address_family_ipv4_vrf",
-            "iosxe:iosxe/getBgpAddressFamilyIpv6:getBgpAddressFamilyIpv6": "iosxe_bgp_address_family_ipv6",
-            "iosxe:iosxe/getBgpAddressFamilyIpv6Vrf:getBgpAddressFamilyIpv6Vrf": "iosxe_bgp_address_family_ipv6_vrf",
-            "iosxe:iosxe/getBgpAddressFamilyL2vpn:getBgpAddressFamilyL2vpn": "iosxe_bgp_address_family_l2vpn",
-            "iosxe:iosxe/getBgpIpv4UnicastNeighbor:getBgpIpv4UnicastNeighbor": "iosxe_bgp_ipv4_unicast_neighbor",
-            "iosxe:iosxe/getBgpIpv4UnicastVrfNeighbor:getBgpIpv4UnicastVrfNeighbor": "iosxe_bgp_ipv4_unicast_vrf_neighbor",
-            "iosxe:iosxe/getBgpIpv6UnicastNeighbor:getBgpIpv6UnicastNeighbor": "iosxe_bgp_ipv6_unicast_neighbor",
-            "iosxe:iosxe/getBgpL2vpnEvpnNeighbor:getBgpL2vpnEvpnNeighbor": "iosxe_bgp_l2vpn_evpn_neighbor",
-            "iosxe:iosxe/getBgpNeighbor:getBgpNeighbor": "iosxe_bgp_neighbor",
-            "iosxe:iosxe/getCdp:getCdp": "iosxe_cdp",
-            "iosxe:iosxe/getClassMap:getClassMap": "iosxe_class_map",
-            "iosxe:iosxe/getClock:getClock": "iosxe_clock",
-            "iosxe:iosxe/getCryptoIkev2:getCryptoIkev2": "iosxe_crypto_ikev2",
-            "iosxe:iosxe/getCryptoIkev2Keyring:getCryptoIkev2Keyring": "iosxe_crypto_ikev2_keyring",
-            "iosxe:iosxe/getCryptoIkev2Policy:getCryptoIkev2Policy": "iosxe_crypto_ikev2_policy",
-            "iosxe:iosxe/getCryptoIkev2Profile:getCryptoIkev2Profile": "iosxe_crypto_ikev2_profile",
-            "iosxe:iosxe/getCryptoIkev2Proposal:getCryptoIkev2Proposal": "iosxe_crypto_ikev2_proposal",
-            "iosxe:iosxe/getCryptoIpsecProfile:getCryptoIpsecProfile": "iosxe_crypto_ipsec_profile",
-            "iosxe:iosxe/getCryptoIpsecTransformSet:getCryptoIpsecTransformSet": "iosxe_crypto_ipsec_transform_set",
-            "iosxe:iosxe/getCts:getCts": "iosxe_cts",
-            "iosxe:iosxe/getDhcp:getDhcp": "iosxe_dhcp",
-            "iosxe:iosxe/getDot1x:getDot1x": "iosxe_dot1x",
-            "iosxe:iosxe/getErrdisable:getErrdisable": "iosxe_errdisable",
-            "iosxe:iosxe/getEvpn:getEvpn": "iosxe_evpn",
-            "iosxe:iosxe/getEvpnInstance:getEvpnInstance": "iosxe_evpn_instance",
-            "iosxe:iosxe/getInterfaceEthernet:getInterfaceEthernet": "iosxe_interface_ethernet",
-            "iosxe:iosxe/getInterfaceLoopback:getInterfaceLoopback": "iosxe_interface_loopback",
-            "iosxe:iosxe/getInterfaceMpls:getInterfaceMpls": "iosxe_interface_mpls",
-            "iosxe:iosxe/getInterfaceNve:getInterfaceNve": "iosxe_interface_nve",
-            "iosxe:iosxe/getInterfaceOspf:getInterfaceOspf": "iosxe_interface_ospf",
-            "iosxe:iosxe/getInterfaceOspfv3:getInterfaceOspfv3": "iosxe_interface_ospfv3",
-            "iosxe:iosxe/getInterfacePim:getInterfacePim": "iosxe_interface_pim",
-            "iosxe:iosxe/getInterfacePortChannel:getInterfacePortChannel": "iosxe_interface_port_channel",
-            "iosxe:iosxe/getInterfacePortChannelSubinterface:getInterfacePortChannelSubinterface": "iosxe_interface_port_channel_subinterface",
-            "iosxe:iosxe/getInterfaceSwitchport:getInterfaceSwitchport": "iosxe_interface_switchport",
-            "iosxe:iosxe/getInterfaceTunnel:getInterfaceTunnel": "iosxe_interface_tunnel",
-            "iosxe:iosxe/getInterfaceVlan:getInterfaceVlan": "iosxe_interface_vlan",
-            "iosxe:iosxe/getLine:getLine": "iosxe_line",
-            "iosxe:iosxe/getLogging:getLogging": "iosxe_logging",
-            "iosxe:iosxe/getLoggingIpv4HostTransport:getLoggingIpv4HostTransport": "iosxe_logging_ipv4_host_transport",
-            "iosxe:iosxe/getLoggingIpv4HostVrfTransport:getLoggingIpv4HostVrfTransport": "iosxe_logging_ipv4_host_vrf_transport",
-            "iosxe:iosxe/getLoggingIpv6HostTransport:getLoggingIpv6HostTransport": "iosxe_logging_ipv6_host_transport",
-            "iosxe:iosxe/getLoggingIpv6HostVrfTransport:getLoggingIpv6HostVrfTransport": "iosxe_logging_ipv6_host_vrf_transport",
-            "iosxe:iosxe/getMdtSubscription:getMdtSubscription": "iosxe_mdt_subscription",
-            "iosxe:iosxe/getMsdp:getMsdp": "iosxe_msdp",
-            "iosxe:iosxe/getMsdpVrf:getMsdpVrf": "iosxe_msdp_vrf",
-            "iosxe:iosxe/getNtp:getNtp": "iosxe_ntp",
-            "iosxe:iosxe/getOspf:getOspf": "iosxe_ospf",
-            "iosxe:iosxe/getOspfVrf:getOspfVrf": "iosxe_ospf_vrf",
-            "iosxe:iosxe/getPim:getPim": "iosxe_pim",
-            "iosxe:iosxe/getPimVrf:getPimVrf": "iosxe_pim_vrf",
-            "iosxe:iosxe/getPolicyMap:getPolicyMap": "iosxe_policy_map",
-            "iosxe:iosxe/getPolicyMapEvent:getPolicyMapEvent": "iosxe_policy_map_event",
-            "iosxe:iosxe/getPrefixList:getPrefixList": "iosxe_prefix_list",
-            "iosxe:iosxe/getRadius:getRadius": "iosxe_radius",
-            "iosxe:iosxe/getRadiusServer:getRadiusServer": "iosxe_radius_server",
-            "iosxe:iosxe/getRestconf:getRestconf": "iosxe_restconf",
-            "iosxe:iosxe/getRouteMap:getRouteMap": "iosxe_route_map",
-            "iosxe:iosxe/getService:getService": "iosxe_service",
-            "iosxe:iosxe/getServiceTemplate:getServiceTemplate": "iosxe_service_template",
-            "iosxe:iosxe/getSnmpServer:getSnmpServer": "iosxe_snmp_server",
-            "iosxe:iosxe/getSnmpServerGroup:getSnmpServerGroup": "iosxe_snmp_server_group",
-            "iosxe:iosxe/getSnmpServerUser:getSnmpServerUser": "iosxe_snmp_server_user",
-            "iosxe:iosxe/getStaticRoute:getStaticRoute": "iosxe_static_route",
-            "iosxe:iosxe/getStaticRouteVrf:getStaticRouteVrf": "iosxe_static_route_vrf",
-            "iosxe:iosxe/getSystem:getSystem": "iosxe_system",
-            "iosxe:iosxe/getTacacsServer:getTacacsServer": "iosxe_tacacs_server",
-            "iosxe:iosxe/getTemplate:getTemplate": "iosxe_template",
-            "iosxe:iosxe/getUdld:getUdld": "iosxe_udld",
-            "iosxe:iosxe/getUsername:getUsername": "iosxe_username",
-            "iosxe:iosxe/getVlan:getVlan": "iosxe_vlan",
-            "iosxe:iosxe/getVlanAccessMap:getVlanAccessMap": "iosxe_vlan_access_map",
-            "iosxe:iosxe/getVlanConfiguration:getVlanConfiguration": "iosxe_vlan_configuration",
-            "iosxe:iosxe/getVrf:getVrf": "iosxe_vrf",
-            "iosxe:iosxe/getVtp:getVtp": "iosxe_vtp"
+            "iosxe:index/getAaa:getAaa": "iosxe_aaa",
+            "iosxe:index/getAaaAccounting:getAaaAccounting": "iosxe_aaa_accounting",
+            "iosxe:index/getAaaAuthentication:getAaaAuthentication": "iosxe_aaa_authentication",
+            "iosxe:index/getAaaAuthorization:getAaaAuthorization": "iosxe_aaa_authorization",
+            "iosxe:index/getAccessListExtended:getAccessListExtended": "iosxe_access_list_extended",
+            "iosxe:index/getAccessListStandard:getAccessListStandard": "iosxe_access_list_standard",
+            "iosxe:index/getArp:getArp": "iosxe_arp",
+            "iosxe:index/getBanner:getBanner": "iosxe_banner",
+            "iosxe:index/getBfd:getBfd": "iosxe_bfd",
+            "iosxe:index/getBfdTemplateMultiHop:getBfdTemplateMultiHop": "iosxe_bfd_template_multi_hop",
+            "iosxe:index/getBfdTemplateSingleHop:getBfdTemplateSingleHop": "iosxe_bfd_template_single_hop",
+            "iosxe:index/getBgp:getBgp": "iosxe_bgp",
+            "iosxe:index/getBgpAddressFamilyIpv4:getBgpAddressFamilyIpv4": "iosxe_bgp_address_family_ipv4",
+            "iosxe:index/getBgpAddressFamilyIpv4Vrf:getBgpAddressFamilyIpv4Vrf": "iosxe_bgp_address_family_ipv4_vrf",
+            "iosxe:index/getBgpAddressFamilyIpv6:getBgpAddressFamilyIpv6": "iosxe_bgp_address_family_ipv6",
+            "iosxe:index/getBgpAddressFamilyIpv6Vrf:getBgpAddressFamilyIpv6Vrf": "iosxe_bgp_address_family_ipv6_vrf",
+            "iosxe:index/getBgpAddressFamilyL2vpn:getBgpAddressFamilyL2vpn": "iosxe_bgp_address_family_l2vpn",
+            "iosxe:index/getBgpIpv4UnicastNeighbor:getBgpIpv4UnicastNeighbor": "iosxe_bgp_ipv4_unicast_neighbor",
+            "iosxe:index/getBgpIpv4UnicastVrfNeighbor:getBgpIpv4UnicastVrfNeighbor": "iosxe_bgp_ipv4_unicast_vrf_neighbor",
+            "iosxe:index/getBgpIpv6UnicastNeighbor:getBgpIpv6UnicastNeighbor": "iosxe_bgp_ipv6_unicast_neighbor",
+            "iosxe:index/getBgpL2vpnEvpnNeighbor:getBgpL2vpnEvpnNeighbor": "iosxe_bgp_l2vpn_evpn_neighbor",
+            "iosxe:index/getBgpNeighbor:getBgpNeighbor": "iosxe_bgp_neighbor",
+            "iosxe:index/getCdp:getCdp": "iosxe_cdp",
+            "iosxe:index/getClassMap:getClassMap": "iosxe_class_map",
+            "iosxe:index/getClock:getClock": "iosxe_clock",
+            "iosxe:index/getCryptoIkev2:getCryptoIkev2": "iosxe_crypto_ikev2",
+            "iosxe:index/getCryptoIkev2Keyring:getCryptoIkev2Keyring": "iosxe_crypto_ikev2_keyring",
+            "iosxe:index/getCryptoIkev2Policy:getCryptoIkev2Policy": "iosxe_crypto_ikev2_policy",
+            "iosxe:index/getCryptoIkev2Profile:getCryptoIkev2Profile": "iosxe_crypto_ikev2_profile",
+            "iosxe:index/getCryptoIkev2Proposal:getCryptoIkev2Proposal": "iosxe_crypto_ikev2_proposal",
+            "iosxe:index/getCryptoIpsecProfile:getCryptoIpsecProfile": "iosxe_crypto_ipsec_profile",
+            "iosxe:index/getCryptoIpsecTransformSet:getCryptoIpsecTransformSet": "iosxe_crypto_ipsec_transform_set",
+            "iosxe:index/getCts:getCts": "iosxe_cts",
+            "iosxe:index/getDhcp:getDhcp": "iosxe_dhcp",
+            "iosxe:index/getDot1x:getDot1x": "iosxe_dot1x",
+            "iosxe:index/getErrdisable:getErrdisable": "iosxe_errdisable",
+            "iosxe:index/getEvpn:getEvpn": "iosxe_evpn",
+            "iosxe:index/getEvpnInstance:getEvpnInstance": "iosxe_evpn_instance",
+            "iosxe:index/getInterfaceEthernet:getInterfaceEthernet": "iosxe_interface_ethernet",
+            "iosxe:index/getInterfaceLoopback:getInterfaceLoopback": "iosxe_interface_loopback",
+            "iosxe:index/getInterfaceMpls:getInterfaceMpls": "iosxe_interface_mpls",
+            "iosxe:index/getInterfaceNve:getInterfaceNve": "iosxe_interface_nve",
+            "iosxe:index/getInterfaceOspf:getInterfaceOspf": "iosxe_interface_ospf",
+            "iosxe:index/getInterfaceOspfv3:getInterfaceOspfv3": "iosxe_interface_ospfv3",
+            "iosxe:index/getInterfacePim:getInterfacePim": "iosxe_interface_pim",
+            "iosxe:index/getInterfacePortChannel:getInterfacePortChannel": "iosxe_interface_port_channel",
+            "iosxe:index/getInterfacePortChannelSubinterface:getInterfacePortChannelSubinterface": "iosxe_interface_port_channel_subinterface",
+            "iosxe:index/getInterfaceSwitchport:getInterfaceSwitchport": "iosxe_interface_switchport",
+            "iosxe:index/getInterfaceTunnel:getInterfaceTunnel": "iosxe_interface_tunnel",
+            "iosxe:index/getInterfaceVlan:getInterfaceVlan": "iosxe_interface_vlan",
+            "iosxe:index/getLine:getLine": "iosxe_line",
+            "iosxe:index/getLogging:getLogging": "iosxe_logging",
+            "iosxe:index/getLoggingIpv4HostTransport:getLoggingIpv4HostTransport": "iosxe_logging_ipv4_host_transport",
+            "iosxe:index/getLoggingIpv4HostVrfTransport:getLoggingIpv4HostVrfTransport": "iosxe_logging_ipv4_host_vrf_transport",
+            "iosxe:index/getLoggingIpv6HostTransport:getLoggingIpv6HostTransport": "iosxe_logging_ipv6_host_transport",
+            "iosxe:index/getLoggingIpv6HostVrfTransport:getLoggingIpv6HostVrfTransport": "iosxe_logging_ipv6_host_vrf_transport",
+            "iosxe:index/getMdtSubscription:getMdtSubscription": "iosxe_mdt_subscription",
+            "iosxe:index/getMsdp:getMsdp": "iosxe_msdp",
+            "iosxe:index/getMsdpVrf:getMsdpVrf": "iosxe_msdp_vrf",
+            "iosxe:index/getNtp:getNtp": "iosxe_ntp",
+            "iosxe:index/getOspf:getOspf": "iosxe_ospf",
+            "iosxe:index/getOspfVrf:getOspfVrf": "iosxe_ospf_vrf",
+            "iosxe:index/getPim:getPim": "iosxe_pim",
+            "iosxe:index/getPimVrf:getPimVrf": "iosxe_pim_vrf",
+            "iosxe:index/getPolicyMap:getPolicyMap": "iosxe_policy_map",
+            "iosxe:index/getPolicyMapEvent:getPolicyMapEvent": "iosxe_policy_map_event",
+            "iosxe:index/getPrefixList:getPrefixList": "iosxe_prefix_list",
+            "iosxe:index/getRadius:getRadius": "iosxe_radius",
+            "iosxe:index/getRadiusServer:getRadiusServer": "iosxe_radius_server",
+            "iosxe:index/getRestconf:getRestconf": "iosxe_restconf",
+            "iosxe:index/getRouteMap:getRouteMap": "iosxe_route_map",
+            "iosxe:index/getService:getService": "iosxe_service",
+            "iosxe:index/getServiceTemplate:getServiceTemplate": "iosxe_service_template",
+            "iosxe:index/getSnmpServer:getSnmpServer": "iosxe_snmp_server",
+            "iosxe:index/getSnmpServerGroup:getSnmpServerGroup": "iosxe_snmp_server_group",
+            "iosxe:index/getSnmpServerUser:getSnmpServerUser": "iosxe_snmp_server_user",
+            "iosxe:index/getStaticRoute:getStaticRoute": "iosxe_static_route",
+            "iosxe:index/getStaticRouteVrf:getStaticRouteVrf": "iosxe_static_route_vrf",
+            "iosxe:index/getSystem:getSystem": "iosxe_system",
+            "iosxe:index/getTacacsServer:getTacacsServer": "iosxe_tacacs_server",
+            "iosxe:index/getTemplate:getTemplate": "iosxe_template",
+            "iosxe:index/getUdld:getUdld": "iosxe_udld",
+            "iosxe:index/getUsername:getUsername": "iosxe_username",
+            "iosxe:index/getVlan:getVlan": "iosxe_vlan",
+            "iosxe:index/getVlanAccessMap:getVlanAccessMap": "iosxe_vlan_access_map",
+            "iosxe:index/getVlanConfiguration:getVlanConfiguration": "iosxe_vlan_configuration",
+            "iosxe:index/getVrf:getVrf": "iosxe_vrf",
+            "iosxe:index/getVtp:getVtp": "iosxe_vtp"
         },
         "renamedProperties": {
-            "iosxe:iosxe/AaaAccountingExec:AaaAccountingExec": {
+            "iosxe:index/AaaAccountingExec:AaaAccountingExec": {
                 "startStopGroup1": "start_stop_group1"
             },
-            "iosxe:iosxe/AaaAccountingNetwork:AaaAccountingNetwork": {
+            "iosxe:index/AaaAccountingNetwork:AaaAccountingNetwork": {
                 "startStopGroup1": "start_stop_group1",
                 "startStopGroup2": "start_stop_group2"
             },
-            "iosxe:iosxe/AaaAuthenticationLogin:AaaAuthenticationLogin": {
+            "iosxe:index/AaaAuthenticationLogin:AaaAuthenticationLogin": {
                 "a1Enable": "a1_enable",
                 "a1Group": "a1_group",
                 "a1Line": "a1_line",
@@ -2211,27 +2211,27 @@
                 "a4Local": "a4_local",
                 "a4None": "a4_none"
             },
-            "iosxe:iosxe/AaaAuthorizationExec:AaaAuthorizationExec": {
+            "iosxe:index/AaaAuthorizationExec:AaaAuthorizationExec": {
                 "a1Group": "a1_group",
                 "a1IfAuthenticated": "a1_if_authenticated",
                 "a1Local": "a1_local",
                 "a2Local": "a2_local"
             },
-            "iosxe:iosxe/AaaAuthorizationNetwork:AaaAuthorizationNetwork": {
+            "iosxe:index/AaaAuthorizationNetwork:AaaAuthorizationNetwork": {
                 "a1Group": "a1_group"
             },
-            "iosxe:iosxe/AaaGroupServerRadius:AaaGroupServerRadius": {
+            "iosxe:index/AaaGroupServerRadius:AaaGroupServerRadius": {
                 "ipRadiusSourceInterfaceLoopback": "ip_radius_source_interface_loopback",
                 "serverNames": "server_names"
             },
-            "iosxe:iosxe/AaaGroupServerTacacsplus:AaaGroupServerTacacsplus": {
+            "iosxe:index/AaaGroupServerTacacsplus:AaaGroupServerTacacsplus": {
                 "serverNames": "server_names"
             },
-            "iosxe:iosxe/AaaServerRadiusDynamicAuthorClient:AaaServerRadiusDynamicAuthorClient": {
+            "iosxe:index/AaaServerRadiusDynamicAuthorClient:AaaServerRadiusDynamicAuthorClient": {
                 "serverKey": "server_key",
                 "serverKeyType": "server_key_type"
             },
-            "iosxe:iosxe/AccessListExtendedEntry:AccessListExtendedEntry": {
+            "iosxe:index/AccessListExtendedEntry:AccessListExtendedEntry": {
                 "aceRuleAction": "ace_rule_action",
                 "aceRuleProtocol": "ace_rule_protocol",
                 "destinationAny": "destination_any",
@@ -2257,7 +2257,7 @@
                 "sourcePrefix": "source_prefix",
                 "sourcePrefixMask": "source_prefix_mask"
             },
-            "iosxe:iosxe/AccessListStandardEntry:AccessListStandardEntry": {
+            "iosxe:index/AccessListStandardEntry:AccessListStandardEntry": {
                 "denyAny": "deny_any",
                 "denyHost": "deny_host",
                 "denyLog": "deny_log",
@@ -2269,110 +2269,110 @@
                 "permitPrefix": "permit_prefix",
                 "permitPrefixMask": "permit_prefix_mask"
             },
-            "iosxe:iosxe/ArpInspectionFilter:ArpInspectionFilter": {
+            "iosxe:index/ArpInspectionFilter:ArpInspectionFilter": {
                 "vlans": "vlan"
             },
-            "iosxe:iosxe/ArpInspectionFilterVlan:ArpInspectionFilterVlan": {
+            "iosxe:index/ArpInspectionFilterVlan:ArpInspectionFilterVlan": {
                 "vlanRange": "vlan_range"
             },
-            "iosxe:iosxe/BfdIpv4BothVrf:BfdIpv4BothVrf": {
+            "iosxe:index/BfdIpv4BothVrf:BfdIpv4BothVrf": {
                 "destIp": "dest_ip",
                 "dstVrf": "dst_vrf",
                 "srcIp": "src_ip",
                 "srcVrf": "src_vrf",
                 "templateName": "template_name"
             },
-            "iosxe:iosxe/BfdIpv4WithDstVrf:BfdIpv4WithDstVrf": {
+            "iosxe:index/BfdIpv4WithDstVrf:BfdIpv4WithDstVrf": {
                 "destIp": "dest_ip",
                 "dstVrf": "dst_vrf",
                 "srcIp": "src_ip",
                 "templateName": "template_name"
             },
-            "iosxe:iosxe/BfdIpv4WithSrcVrf:BfdIpv4WithSrcVrf": {
+            "iosxe:index/BfdIpv4WithSrcVrf:BfdIpv4WithSrcVrf": {
                 "destIp": "dest_ip",
                 "srcIp": "src_ip",
                 "srcVrf": "src_vrf",
                 "templateName": "template_name"
             },
-            "iosxe:iosxe/BfdIpv4WithoutVrf:BfdIpv4WithoutVrf": {
+            "iosxe:index/BfdIpv4WithoutVrf:BfdIpv4WithoutVrf": {
                 "destIp": "dest_ip",
                 "srcIp": "src_ip",
                 "templateName": "template_name"
             },
-            "iosxe:iosxe/BfdIpv6WithBothVrf:BfdIpv6WithBothVrf": {
+            "iosxe:index/BfdIpv6WithBothVrf:BfdIpv6WithBothVrf": {
                 "destIpv6": "dest_ipv6",
                 "dstVrf": "dst_vrf",
                 "srcIpv6": "src_ipv6",
                 "srcVrf": "src_vrf",
                 "templateName": "template_name"
             },
-            "iosxe:iosxe/BfdIpv6WithDstVrf:BfdIpv6WithDstVrf": {
+            "iosxe:index/BfdIpv6WithDstVrf:BfdIpv6WithDstVrf": {
                 "destIpv6": "dest_ipv6",
                 "dstVrf": "dst_vrf",
                 "srcIpv6": "src_ipv6",
                 "templateName": "template_name"
             },
-            "iosxe:iosxe/BfdIpv6WithSrcVrf:BfdIpv6WithSrcVrf": {
+            "iosxe:index/BfdIpv6WithSrcVrf:BfdIpv6WithSrcVrf": {
                 "destIpv6": "dest_ipv6",
                 "srcIpv6": "src_ipv6",
                 "srcVrf": "src_vrf",
                 "templateName": "template_name"
             },
-            "iosxe:iosxe/BfdIpv6WithoutVrf:BfdIpv6WithoutVrf": {
+            "iosxe:index/BfdIpv6WithoutVrf:BfdIpv6WithoutVrf": {
                 "destIpv6": "dest_ipv6",
                 "srcIpv6": "src_ipv6",
                 "templateName": "template_name"
             },
-            "iosxe:iosxe/BgpAddressFamilyIpv4Ipv4UnicastNetwork:BgpAddressFamilyIpv4Ipv4UnicastNetwork": {
+            "iosxe:index/BgpAddressFamilyIpv4Ipv4UnicastNetwork:BgpAddressFamilyIpv4Ipv4UnicastNetwork": {
                 "routeMap": "route_map"
             },
-            "iosxe:iosxe/BgpAddressFamilyIpv4Ipv4UnicastNetworksMask:BgpAddressFamilyIpv4Ipv4UnicastNetworksMask": {
+            "iosxe:index/BgpAddressFamilyIpv4Ipv4UnicastNetworksMask:BgpAddressFamilyIpv4Ipv4UnicastNetworksMask": {
                 "routeMap": "route_map"
             },
-            "iosxe:iosxe/BgpAddressFamilyIpv4VrfVrf:BgpAddressFamilyIpv4VrfVrf": {
+            "iosxe:index/BgpAddressFamilyIpv4VrfVrf:BgpAddressFamilyIpv4VrfVrf": {
                 "ipv4UnicastAdvertiseL2vpnEvpn": "ipv4_unicast_advertise_l2vpn_evpn",
                 "ipv4UnicastNetworks": "ipv4_unicast_networks",
                 "ipv4UnicastNetworksMasks": "ipv4_unicast_networks_mask",
                 "ipv4UnicastRedistributeConnected": "ipv4_unicast_redistribute_connected",
                 "ipv4UnicastRedistributeStatic": "ipv4_unicast_redistribute_static"
             },
-            "iosxe:iosxe/BgpAddressFamilyIpv4VrfVrfIpv4UnicastNetwork:BgpAddressFamilyIpv4VrfVrfIpv4UnicastNetwork": {
+            "iosxe:index/BgpAddressFamilyIpv4VrfVrfIpv4UnicastNetwork:BgpAddressFamilyIpv4VrfVrfIpv4UnicastNetwork": {
                 "routeMap": "route_map"
             },
-            "iosxe:iosxe/BgpAddressFamilyIpv4VrfVrfIpv4UnicastNetworksMask:BgpAddressFamilyIpv4VrfVrfIpv4UnicastNetworksMask": {
+            "iosxe:index/BgpAddressFamilyIpv4VrfVrfIpv4UnicastNetworksMask:BgpAddressFamilyIpv4VrfVrfIpv4UnicastNetworksMask": {
                 "routeMap": "route_map"
             },
-            "iosxe:iosxe/BgpAddressFamilyIpv6Ipv6UnicastNetwork:BgpAddressFamilyIpv6Ipv6UnicastNetwork": {
+            "iosxe:index/BgpAddressFamilyIpv6Ipv6UnicastNetwork:BgpAddressFamilyIpv6Ipv6UnicastNetwork": {
                 "routeMap": "route_map"
             },
-            "iosxe:iosxe/BgpAddressFamilyIpv6VrfVrf:BgpAddressFamilyIpv6VrfVrf": {
+            "iosxe:index/BgpAddressFamilyIpv6VrfVrf:BgpAddressFamilyIpv6VrfVrf": {
                 "ipv6UnicastAdvertiseL2vpnEvpn": "ipv6_unicast_advertise_l2vpn_evpn",
                 "ipv6UnicastNetworks": "ipv6_unicast_networks",
                 "ipv6UnicastRedistributeConnected": "ipv6_unicast_redistribute_connected",
                 "ipv6UnicastRedistributeStatic": "ipv6_unicast_redistribute_static"
             },
-            "iosxe:iosxe/BgpAddressFamilyIpv6VrfVrfIpv6UnicastNetwork:BgpAddressFamilyIpv6VrfVrfIpv6UnicastNetwork": {
+            "iosxe:index/BgpAddressFamilyIpv6VrfVrfIpv6UnicastNetwork:BgpAddressFamilyIpv6VrfVrfIpv6UnicastNetwork": {
                 "routeMap": "route_map"
             },
-            "iosxe:iosxe/BgpIpv4UnicastNeighborRouteMap:BgpIpv4UnicastNeighborRouteMap": {
+            "iosxe:index/BgpIpv4UnicastNeighborRouteMap:BgpIpv4UnicastNeighborRouteMap": {
                 "inOut": "in_out",
                 "routeMapName": "route_map_name"
             },
-            "iosxe:iosxe/BgpIpv4UnicastVrfNeighborRouteMap:BgpIpv4UnicastVrfNeighborRouteMap": {
+            "iosxe:index/BgpIpv4UnicastVrfNeighborRouteMap:BgpIpv4UnicastVrfNeighborRouteMap": {
                 "inOut": "in_out",
                 "routeMapName": "route_map_name"
             },
-            "iosxe:iosxe/BgpIpv6UnicastNeighborRouteMap:BgpIpv6UnicastNeighborRouteMap": {
+            "iosxe:index/BgpIpv6UnicastNeighborRouteMap:BgpIpv6UnicastNeighborRouteMap": {
                 "inOut": "in_out",
                 "routeMapName": "route_map_name"
             },
-            "iosxe:iosxe/CdpTlvList:CdpTlvList": {
+            "iosxe:index/CdpTlvList:CdpTlvList": {
                 "vtpMgmtDomain": "vtp_mgmt_domain"
             },
-            "iosxe:iosxe/ClassMapMatchActivatedServiceTemplate:ClassMapMatchActivatedServiceTemplate": {
+            "iosxe:index/ClassMapMatchActivatedServiceTemplate:ClassMapMatchActivatedServiceTemplate": {
                 "serviceName": "service_name"
             },
-            "iosxe:iosxe/CryptoIkev2KeyringPeer:CryptoIkev2KeyringPeer": {
+            "iosxe:index/CryptoIkev2KeyringPeer:CryptoIkev2KeyringPeer": {
                 "identityAddress": "identity_address",
                 "identityEmailDomain": "identity_email_domain",
                 "identityEmailName": "identity_email_name",
@@ -2389,70 +2389,70 @@
                 "preSharedKeyRemote": "pre_shared_key_remote",
                 "preSharedKeyRemoteEncryption": "pre_shared_key_remote_encryption"
             },
-            "iosxe:iosxe/DhcpSnoopingVlan:DhcpSnoopingVlan": {
+            "iosxe:index/DhcpSnoopingVlan:DhcpSnoopingVlan": {
                 "vlanId": "vlan_id"
             },
-            "iosxe:iosxe/Dot1xCredential:Dot1xCredential": {
+            "iosxe:index/Dot1xCredential:Dot1xCredential": {
                 "anonymousId": "anonymous_id",
                 "passwordType": "password_type",
                 "pkiTrustpoint": "pki_trustpoint",
                 "profileName": "profile_name"
             },
-            "iosxe:iosxe/InterfaceEthernetIpv6Address:InterfaceEthernetIpv6Address": {
+            "iosxe:index/InterfaceEthernetIpv6Address:InterfaceEthernetIpv6Address": {
                 "eui64": "eui_64"
             },
-            "iosxe:iosxe/InterfaceEthernetIpv6LinkLocalAddress:InterfaceEthernetIpv6LinkLocalAddress": {
+            "iosxe:index/InterfaceEthernetIpv6LinkLocalAddress:InterfaceEthernetIpv6LinkLocalAddress": {
                 "linkLocal": "link_local"
             },
-            "iosxe:iosxe/InterfaceEthernetSourceTemplate:InterfaceEthernetSourceTemplate": {
+            "iosxe:index/InterfaceEthernetSourceTemplate:InterfaceEthernetSourceTemplate": {
                 "templateName": "template_name"
             },
-            "iosxe:iosxe/InterfaceLoopbackIpv6Address:InterfaceLoopbackIpv6Address": {
+            "iosxe:index/InterfaceLoopbackIpv6Address:InterfaceLoopbackIpv6Address": {
                 "eui64": "eui_64"
             },
-            "iosxe:iosxe/InterfaceLoopbackIpv6LinkLocalAddress:InterfaceLoopbackIpv6LinkLocalAddress": {
+            "iosxe:index/InterfaceLoopbackIpv6LinkLocalAddress:InterfaceLoopbackIpv6LinkLocalAddress": {
                 "linkLocal": "link_local"
             },
-            "iosxe:iosxe/InterfaceNveVni:InterfaceNveVni": {
+            "iosxe:index/InterfaceNveVni:InterfaceNveVni": {
                 "ingressReplication": "ingress_replication",
                 "ipv4MulticastGroup": "ipv4_multicast_group",
                 "vniRange": "vni_range"
             },
-            "iosxe:iosxe/InterfaceNveVniVrf:InterfaceNveVniVrf": {
+            "iosxe:index/InterfaceNveVniVrf:InterfaceNveVniVrf": {
                 "vniRange": "vni_range"
             },
-            "iosxe:iosxe/InterfaceOspfMessageDigestKey:InterfaceOspfMessageDigestKey": {
+            "iosxe:index/InterfaceOspfMessageDigestKey:InterfaceOspfMessageDigestKey": {
                 "md5AuthKey": "md5_auth_key",
                 "md5AuthType": "md5_auth_type"
             },
-            "iosxe:iosxe/InterfaceOspfProcessIdArea:InterfaceOspfProcessIdArea": {
+            "iosxe:index/InterfaceOspfProcessIdArea:InterfaceOspfProcessIdArea": {
                 "areaId": "area_id"
             },
-            "iosxe:iosxe/InterfacePortChannelIpv6Address:InterfacePortChannelIpv6Address": {
+            "iosxe:index/InterfacePortChannelIpv6Address:InterfacePortChannelIpv6Address": {
                 "eui64": "eui_64"
             },
-            "iosxe:iosxe/InterfacePortChannelIpv6LinkLocalAddress:InterfacePortChannelIpv6LinkLocalAddress": {
+            "iosxe:index/InterfacePortChannelIpv6LinkLocalAddress:InterfacePortChannelIpv6LinkLocalAddress": {
                 "linkLocal": "link_local"
             },
-            "iosxe:iosxe/InterfacePortChannelSubinterfaceIpv6Address:InterfacePortChannelSubinterfaceIpv6Address": {
+            "iosxe:index/InterfacePortChannelSubinterfaceIpv6Address:InterfacePortChannelSubinterfaceIpv6Address": {
                 "eui64": "eui_64"
             },
-            "iosxe:iosxe/InterfacePortChannelSubinterfaceIpv6LinkLocalAddress:InterfacePortChannelSubinterfaceIpv6LinkLocalAddress": {
+            "iosxe:index/InterfacePortChannelSubinterfaceIpv6LinkLocalAddress:InterfacePortChannelSubinterfaceIpv6LinkLocalAddress": {
                 "linkLocal": "link_local"
             },
-            "iosxe:iosxe/InterfaceTunnelIpv6Address:InterfaceTunnelIpv6Address": {
+            "iosxe:index/InterfaceTunnelIpv6Address:InterfaceTunnelIpv6Address": {
                 "eui64": "eui_64"
             },
-            "iosxe:iosxe/InterfaceTunnelIpv6LinkLocalAddress:InterfaceTunnelIpv6LinkLocalAddress": {
+            "iosxe:index/InterfaceTunnelIpv6LinkLocalAddress:InterfaceTunnelIpv6LinkLocalAddress": {
                 "linkLocal": "link_local"
             },
-            "iosxe:iosxe/InterfaceVlanIpv6Address:InterfaceVlanIpv6Address": {
+            "iosxe:index/InterfaceVlanIpv6Address:InterfaceVlanIpv6Address": {
                 "eui64": "eui_64"
             },
-            "iosxe:iosxe/InterfaceVlanIpv6LinkLocalAddress:InterfaceVlanIpv6LinkLocalAddress": {
+            "iosxe:index/InterfaceVlanIpv6LinkLocalAddress:InterfaceVlanIpv6LinkLocalAddress": {
                 "linkLocal": "link_local"
             },
-            "iosxe:iosxe/LineConsole:LineConsole": {
+            "iosxe:index/LineConsole:LineConsole": {
                 "execTimeoutMinutes": "exec_timeout_minutes",
                 "execTimeoutSeconds": "exec_timeout_seconds",
                 "loginAuthentication": "login_authentication",
@@ -2461,7 +2461,7 @@
                 "passwordType": "password_type",
                 "privilegeLevel": "privilege_level"
             },
-            "iosxe:iosxe/LineVty:LineVty": {
+            "iosxe:index/LineVty:LineVty": {
                 "accessClasses": "access_classes",
                 "escapeCharacter": "escape_character",
                 "execTimeoutMinutes": "exec_timeout_minutes",
@@ -2471,88 +2471,88 @@
                 "passwordType": "password_type",
                 "transportPreferredProtocol": "transport_preferred_protocol"
             },
-            "iosxe:iosxe/LineVtyAccessClass:LineVtyAccessClass": {
+            "iosxe:index/LineVtyAccessClass:LineVtyAccessClass": {
                 "accessList": "access_list",
                 "vrfAlso": "vrf_also"
             },
-            "iosxe:iosxe/LoggingIpv4Host:LoggingIpv4Host": {
+            "iosxe:index/LoggingIpv4Host:LoggingIpv4Host": {
                 "ipv4Host": "ipv4_host"
             },
-            "iosxe:iosxe/LoggingIpv4HostTransportTransportTcpPort:LoggingIpv4HostTransportTransportTcpPort": {
+            "iosxe:index/LoggingIpv4HostTransportTransportTcpPort:LoggingIpv4HostTransportTransportTcpPort": {
                 "portNumber": "port_number"
             },
-            "iosxe:iosxe/LoggingIpv4HostTransportTransportTlsPort:LoggingIpv4HostTransportTransportTlsPort": {
+            "iosxe:index/LoggingIpv4HostTransportTransportTlsPort:LoggingIpv4HostTransportTransportTlsPort": {
                 "portNumber": "port_number"
             },
-            "iosxe:iosxe/LoggingIpv4HostTransportTransportUdpPort:LoggingIpv4HostTransportTransportUdpPort": {
+            "iosxe:index/LoggingIpv4HostTransportTransportUdpPort:LoggingIpv4HostTransportTransportUdpPort": {
                 "portNumber": "port_number"
             },
-            "iosxe:iosxe/LoggingIpv4HostVrfTransportTransportTcpPort:LoggingIpv4HostVrfTransportTransportTcpPort": {
+            "iosxe:index/LoggingIpv4HostVrfTransportTransportTcpPort:LoggingIpv4HostVrfTransportTransportTcpPort": {
                 "portNumber": "port_number"
             },
-            "iosxe:iosxe/LoggingIpv4HostVrfTransportTransportTlsPort:LoggingIpv4HostVrfTransportTransportTlsPort": {
+            "iosxe:index/LoggingIpv4HostVrfTransportTransportTlsPort:LoggingIpv4HostVrfTransportTransportTlsPort": {
                 "portNumber": "port_number"
             },
-            "iosxe:iosxe/LoggingIpv4HostVrfTransportTransportUdpPort:LoggingIpv4HostVrfTransportTransportUdpPort": {
+            "iosxe:index/LoggingIpv4HostVrfTransportTransportUdpPort:LoggingIpv4HostVrfTransportTransportUdpPort": {
                 "portNumber": "port_number"
             },
-            "iosxe:iosxe/LoggingIpv4VrfHost:LoggingIpv4VrfHost": {
+            "iosxe:index/LoggingIpv4VrfHost:LoggingIpv4VrfHost": {
                 "ipv4Host": "ipv4_host"
             },
-            "iosxe:iosxe/LoggingIpv6Host:LoggingIpv6Host": {
+            "iosxe:index/LoggingIpv6Host:LoggingIpv6Host": {
                 "ipv6Host": "ipv6_host"
             },
-            "iosxe:iosxe/LoggingIpv6HostTransportTransportTcpPort:LoggingIpv6HostTransportTransportTcpPort": {
+            "iosxe:index/LoggingIpv6HostTransportTransportTcpPort:LoggingIpv6HostTransportTransportTcpPort": {
                 "portNumber": "port_number"
             },
-            "iosxe:iosxe/LoggingIpv6HostTransportTransportTlsPort:LoggingIpv6HostTransportTransportTlsPort": {
+            "iosxe:index/LoggingIpv6HostTransportTransportTlsPort:LoggingIpv6HostTransportTransportTlsPort": {
                 "portNumber": "port_number"
             },
-            "iosxe:iosxe/LoggingIpv6HostTransportTransportUdpPort:LoggingIpv6HostTransportTransportUdpPort": {
+            "iosxe:index/LoggingIpv6HostTransportTransportUdpPort:LoggingIpv6HostTransportTransportUdpPort": {
                 "portNumber": "port_number"
             },
-            "iosxe:iosxe/LoggingIpv6HostVrfTransportTransportTcpPort:LoggingIpv6HostVrfTransportTransportTcpPort": {
+            "iosxe:index/LoggingIpv6HostVrfTransportTransportTcpPort:LoggingIpv6HostVrfTransportTransportTcpPort": {
                 "portNumber": "port_number"
             },
-            "iosxe:iosxe/LoggingIpv6HostVrfTransportTransportTlsPort:LoggingIpv6HostVrfTransportTransportTlsPort": {
+            "iosxe:index/LoggingIpv6HostVrfTransportTransportTlsPort:LoggingIpv6HostVrfTransportTransportTlsPort": {
                 "portNumber": "port_number"
             },
-            "iosxe:iosxe/LoggingIpv6HostVrfTransportTransportUdpPort:LoggingIpv6HostVrfTransportTransportUdpPort": {
+            "iosxe:index/LoggingIpv6HostVrfTransportTransportUdpPort:LoggingIpv6HostVrfTransportTransportUdpPort": {
                 "portNumber": "port_number"
             },
-            "iosxe:iosxe/LoggingIpv6VrfHost:LoggingIpv6VrfHost": {
+            "iosxe:index/LoggingIpv6VrfHost:LoggingIpv6VrfHost": {
                 "ipv6Host": "ipv6_host"
             },
-            "iosxe:iosxe/LoggingSourceInterfacesVrf:LoggingSourceInterfacesVrf": {
+            "iosxe:index/LoggingSourceInterfacesVrf:LoggingSourceInterfacesVrf": {
                 "interfaceName": "interface_name"
             },
-            "iosxe:iosxe/MsdpPeer:MsdpPeer": {
+            "iosxe:index/MsdpPeer:MsdpPeer": {
                 "connectSourceLoopback": "connect_source_loopback",
                 "remoteAs": "remote_as"
             },
-            "iosxe:iosxe/MsdpVrfPeer:MsdpVrfPeer": {
+            "iosxe:index/MsdpVrfPeer:MsdpVrfPeer": {
                 "connectSourceLoopback": "connect_source_loopback",
                 "remoteAs": "remote_as"
             },
-            "iosxe:iosxe/NtpAuthenticationKey:NtpAuthenticationKey": {
+            "iosxe:index/NtpAuthenticationKey:NtpAuthenticationKey": {
                 "cmacAes128": "cmac_aes_128",
                 "encryptionType": "encryption_type",
                 "hmacSha1": "hmac_sha1",
                 "hmacSha2256": "hmac_sha2_256"
             },
-            "iosxe:iosxe/NtpPeer:NtpPeer": {
+            "iosxe:index/NtpPeer:NtpPeer": {
                 "ipAddress": "ip_address"
             },
-            "iosxe:iosxe/NtpPeerVrfPeer:NtpPeerVrfPeer": {
+            "iosxe:index/NtpPeerVrfPeer:NtpPeerVrfPeer": {
                 "ipAddress": "ip_address"
             },
-            "iosxe:iosxe/NtpServer:NtpServer": {
+            "iosxe:index/NtpServer:NtpServer": {
                 "ipAddress": "ip_address"
             },
-            "iosxe:iosxe/NtpServerVrfServer:NtpServerVrfServer": {
+            "iosxe:index/NtpServerVrfServer:NtpServerVrfServer": {
                 "ipAddress": "ip_address"
             },
-            "iosxe:iosxe/OspfArea:OspfArea": {
+            "iosxe:index/OspfArea:OspfArea": {
                 "areaId": "area_id",
                 "authenticationMessageDigest": "authentication_message_digest",
                 "nssaDefaultInformationOriginate": "nssa_default_information_originate",
@@ -2561,7 +2561,7 @@
                 "nssaNoRedistribution": "nssa_no_redistribution",
                 "nssaNoSummary": "nssa_no_summary"
             },
-            "iosxe:iosxe/OspfVrfArea:OspfVrfArea": {
+            "iosxe:index/OspfVrfArea:OspfVrfArea": {
                 "areaId": "area_id",
                 "authenticationMessageDigest": "authentication_message_digest",
                 "nssaDefaultInformationOriginate": "nssa_default_information_originate",
@@ -2570,25 +2570,25 @@
                 "nssaNoRedistribution": "nssa_no_redistribution",
                 "nssaNoSummary": "nssa_no_summary"
             },
-            "iosxe:iosxe/PimRpAddress:PimRpAddress": {
+            "iosxe:index/PimRpAddress:PimRpAddress": {
                 "accessList": "access_list",
                 "rpAddress": "rp_address"
             },
-            "iosxe:iosxe/PimRpCandidate:PimRpCandidate": {
+            "iosxe:index/PimRpCandidate:PimRpCandidate": {
                 "groupList": "group_list"
             },
-            "iosxe:iosxe/PimVrfRpAddress:PimVrfRpAddress": {
+            "iosxe:index/PimVrfRpAddress:PimVrfRpAddress": {
                 "accessList": "access_list",
                 "rpAddress": "rp_address"
             },
-            "iosxe:iosxe/PimVrfRpCandidate:PimVrfRpCandidate": {
+            "iosxe:index/PimVrfRpCandidate:PimVrfRpCandidate": {
                 "groupList": "group_list"
             },
-            "iosxe:iosxe/PolicyMapEventClassNumber:PolicyMapEventClassNumber": {
+            "iosxe:index/PolicyMapEventClassNumber:PolicyMapEventClassNumber": {
                 "actionNumbers": "action_numbers",
                 "executionType": "execution_type"
             },
-            "iosxe:iosxe/PolicyMapEventClassNumberActionNumber:PolicyMapEventClassNumberActionNumber": {
+            "iosxe:index/PolicyMapEventClassNumberActionNumber:PolicyMapEventClassNumberActionNumber": {
                 "activateServiceTemplateConfigServiceTemplate": "activate_service_template_config_service_template",
                 "authenticateUsingMethod": "authenticate_using_method",
                 "authenticateUsingPriority": "authenticate_using_priority",
@@ -2597,19 +2597,19 @@
                 "pauseReauthentication": "pause_reauthentication",
                 "terminateConfig": "terminate_config"
             },
-            "iosxe:iosxe/RadiusServerAttribute:RadiusServerAttribute": {
+            "iosxe:index/RadiusServerAttribute:RadiusServerAttribute": {
                 "accessRequestInclude": "access_request_include",
                 "attribute31Parameters": "attribute_31_parameters",
                 "sendAttributes": "send_attributes"
             },
-            "iosxe:iosxe/RadiusServerAttributeAttribute31Parameter:RadiusServerAttributeAttribute31Parameter": {
+            "iosxe:index/RadiusServerAttributeAttribute31Parameter:RadiusServerAttributeAttribute31Parameter": {
                 "callingStationId": "calling_station_id",
                 "idMacFormat": "id_mac_format",
                 "idMacLuCase": "id_mac_lu_case",
                 "idSendMacOnly": "id_send_mac_only",
                 "idSendNasPortDetail": "id_send_nas_port_detail"
             },
-            "iosxe:iosxe/RouteMapEntry:RouteMapEntry": {
+            "iosxe:index/RouteMapEntry:RouteMapEntry": {
                 "continueSequenceNumber": "continue_sequence_number",
                 "matchAsPaths": "match_as_paths",
                 "matchAsPathsLegacies": "match_as_paths_legacy",
@@ -2705,7 +2705,7 @@
                 "setWeight": "set_weight",
                 "setWeightLegacy": "set_weight_legacy"
             },
-            "iosxe:iosxe/SnmpServerGroupV3Security:SnmpServerGroupV3Security": {
+            "iosxe:index/SnmpServerGroupV3Security:SnmpServerGroupV3Security": {
                 "accessAclName": "access_acl_name",
                 "accessIpv6Acl": "access_ipv6_acl",
                 "accessStandardAcl": "access_standard_acl",
@@ -2716,36 +2716,36 @@
                 "securityLevel": "security_level",
                 "writeNode": "write_node"
             },
-            "iosxe:iosxe/SnmpServerHost:SnmpServerHost": {
+            "iosxe:index/SnmpServerHost:SnmpServerHost": {
                 "communityOrUser": "community_or_user",
                 "ipAddress": "ip_address"
             },
-            "iosxe:iosxe/SnmpServerSnmpCommunity:SnmpServerSnmpCommunity": {
+            "iosxe:index/SnmpServerSnmpCommunity:SnmpServerSnmpCommunity": {
                 "accessListName": "access_list_name"
             },
-            "iosxe:iosxe/SnmpServerView:SnmpServerView": {
+            "iosxe:index/SnmpServerView:SnmpServerView": {
                 "incExl": "inc_exl"
             },
-            "iosxe:iosxe/StaticRouteNextHop:StaticRouteNextHop": {
+            "iosxe:index/StaticRouteNextHop:StaticRouteNextHop": {
                 "nextHop": "next_hop"
             },
-            "iosxe:iosxe/StaticRouteVrfRoute:StaticRouteVrfRoute": {
+            "iosxe:index/StaticRouteVrfRoute:StaticRouteVrfRoute": {
                 "nextHops": "next_hops"
             },
-            "iosxe:iosxe/StaticRouteVrfRouteNextHop:StaticRouteVrfRouteNextHop": {
+            "iosxe:index/StaticRouteVrfRouteNextHop:StaticRouteVrfRouteNextHop": {
                 "nextHop": "next_hop"
             },
-            "iosxe:iosxe/TemplateDeviceTrackingAttachPolicy:TemplateDeviceTrackingAttachPolicy": {
+            "iosxe:index/TemplateDeviceTrackingAttachPolicy:TemplateDeviceTrackingAttachPolicy": {
                 "policyName": "policy_name",
                 "vlanRange": "vlan_range"
             },
-            "iosxe:iosxe/TemplateIpAccessGroup:TemplateIpAccessGroup": {
+            "iosxe:index/TemplateIpAccessGroup:TemplateIpAccessGroup": {
                 "accessList": "access_list"
             },
-            "iosxe:iosxe/TemplateSwitchportPortSecurityMaximumRange:TemplateSwitchportPortSecurityMaximumRange": {
+            "iosxe:index/TemplateSwitchportPortSecurityMaximumRange:TemplateSwitchportPortSecurityMaximumRange": {
                 "vlanAccess": "vlan_access"
             },
-            "iosxe:iosxe/aaa:Aaa": {
+            "iosxe:index/aaa:Aaa": {
                 "groupServerRadii": "group_server_radius",
                 "groupServerTacacspluses": "group_server_tacacsplus",
                 "newModel": "new_model",
@@ -2753,7 +2753,7 @@
                 "serverRadiusDynamicAuthorClients": "server_radius_dynamic_author_clients",
                 "sessionId": "session_id"
             },
-            "iosxe:iosxe/aaaAccounting:AaaAccounting": {
+            "iosxe:index/aaaAccounting:AaaAccounting": {
                 "deleteMode": "delete_mode",
                 "identityDefaultStartStopGroup1": "identity_default_start_stop_group1",
                 "identityDefaultStartStopGroup2": "identity_default_start_stop_group2",
@@ -2762,7 +2762,7 @@
                 "systemGuaranteeFirst": "system_guarantee_first",
                 "updateNewinfoPeriodic": "update_newinfo_periodic"
             },
-            "iosxe:iosxe/aaaAuthentication:AaaAuthentication": {
+            "iosxe:index/aaaAuthentication:AaaAuthentication": {
                 "deleteMode": "delete_mode",
                 "dot1xDefaultA1Group": "dot1x_default_a1_group",
                 "dot1xDefaultA1Local": "dot1x_default_a1_local",
@@ -2773,10 +2773,10 @@
                 "dot1xDefaultA4Group": "dot1x_default_a4_group",
                 "dot1xDefaultA4Local": "dot1x_default_a4_local"
             },
-            "iosxe:iosxe/aaaAuthorization:AaaAuthorization": {
+            "iosxe:index/aaaAuthorization:AaaAuthorization": {
                 "deleteMode": "delete_mode"
             },
-            "iosxe:iosxe/arp:Arp": {
+            "iosxe:index/arp:Arp": {
                 "deleteMode": "delete_mode",
                 "entryLearn": "entry_learn",
                 "incompleteEntries": "incomplete_entries",
@@ -2791,14 +2791,14 @@
                 "inspectionVlan": "inspection_vlan",
                 "proxyDisable": "proxy_disable"
             },
-            "iosxe:iosxe/banner:Banner": {
+            "iosxe:index/banner:Banner": {
                 "deleteMode": "delete_mode",
                 "execBanner": "exec_banner",
                 "loginBanner": "login_banner",
                 "motdBanner": "motd_banner",
                 "promptTimeoutBanner": "prompt_timeout_banner"
             },
-            "iosxe:iosxe/bfd:Bfd": {
+            "iosxe:index/bfd:Bfd": {
                 "deleteMode": "delete_mode",
                 "ipv4BothVrfs": "ipv4_both_vrfs",
                 "ipv4WithDstVrfs": "ipv4_with_dst_vrfs",
@@ -2810,7 +2810,7 @@
                 "ipv6WithoutVrfs": "ipv6_without_vrfs",
                 "slowTimers": "slow_timers"
             },
-            "iosxe:iosxe/bfdTemplateMultiHop:BfdTemplateMultiHop": {
+            "iosxe:index/bfdTemplateMultiHop:BfdTemplateMultiHop": {
                 "authenticationMd5Keychain": "authentication_md5_keychain",
                 "authenticationMeticulousMd5Keychain": "authentication_meticulous_md5_keychain",
                 "authenticationMeticulousSha1keychain": "authentication_meticulous_sha_1keychain",
@@ -2831,7 +2831,7 @@
                 "intervalMillisecondsMinTx": "interval_milliseconds_min_tx",
                 "intervalMillisecondsMultiplier": "interval_milliseconds_multiplier"
             },
-            "iosxe:iosxe/bfdTemplateSingleHop:BfdTemplateSingleHop": {
+            "iosxe:index/bfdTemplateSingleHop:BfdTemplateSingleHop": {
                 "authenticationMd5Keychain": "authentication_md5_keychain",
                 "authenticationMeticulousMd5Keychain": "authentication_meticulous_md5_keychain",
                 "authenticationMeticulousSha1Keychain": "authentication_meticulous_sha_1_keychain",
@@ -2847,13 +2847,13 @@
                 "intervalMillisecondsMinTx": "interval_milliseconds_min_tx",
                 "intervalMillisecondsMultiplier": "interval_milliseconds_multiplier"
             },
-            "iosxe:iosxe/bgp:Bgp": {
+            "iosxe:index/bgp:Bgp": {
                 "defaultIpv4Unicast": "default_ipv4_unicast",
                 "deleteMode": "delete_mode",
                 "logNeighborChanges": "log_neighbor_changes",
                 "routerIdLoopback": "router_id_loopback"
             },
-            "iosxe:iosxe/bgpAddressFamilyIpv4:BgpAddressFamilyIpv4": {
+            "iosxe:index/bgpAddressFamilyIpv4:BgpAddressFamilyIpv4": {
                 "afName": "af_name",
                 "deleteMode": "delete_mode",
                 "ipv4UnicastNetworks": "ipv4_unicast_networks",
@@ -2861,32 +2861,32 @@
                 "ipv4UnicastRedistributeConnected": "ipv4_unicast_redistribute_connected",
                 "ipv4UnicastRedistributeStatic": "ipv4_unicast_redistribute_static"
             },
-            "iosxe:iosxe/bgpAddressFamilyIpv4Vrf:BgpAddressFamilyIpv4Vrf": {
+            "iosxe:index/bgpAddressFamilyIpv4Vrf:BgpAddressFamilyIpv4Vrf": {
                 "afName": "af_name",
                 "deleteMode": "delete_mode"
             },
-            "iosxe:iosxe/bgpAddressFamilyIpv6:BgpAddressFamilyIpv6": {
+            "iosxe:index/bgpAddressFamilyIpv6:BgpAddressFamilyIpv6": {
                 "afName": "af_name",
                 "deleteMode": "delete_mode",
                 "ipv6UnicastNetworks": "ipv6_unicast_networks",
                 "ipv6UnicastRedistributeConnected": "ipv6_unicast_redistribute_connected",
                 "ipv6UnicastRedistributeStatic": "ipv6_unicast_redistribute_static"
             },
-            "iosxe:iosxe/bgpAddressFamilyIpv6Vrf:BgpAddressFamilyIpv6Vrf": {
+            "iosxe:index/bgpAddressFamilyIpv6Vrf:BgpAddressFamilyIpv6Vrf": {
                 "afName": "af_name",
                 "deleteMode": "delete_mode"
             },
-            "iosxe:iosxe/bgpAddressFamilyL2vpn:BgpAddressFamilyL2vpn": {
+            "iosxe:index/bgpAddressFamilyL2vpn:BgpAddressFamilyL2vpn": {
                 "afName": "af_name",
                 "deleteMode": "delete_mode"
             },
-            "iosxe:iosxe/bgpIpv4UnicastNeighbor:BgpIpv4UnicastNeighbor": {
+            "iosxe:index/bgpIpv4UnicastNeighbor:BgpIpv4UnicastNeighbor": {
                 "deleteMode": "delete_mode",
                 "routeMaps": "route_maps",
                 "routeReflectorClient": "route_reflector_client",
                 "sendCommunity": "send_community"
             },
-            "iosxe:iosxe/bgpIpv4UnicastVrfNeighbor:BgpIpv4UnicastVrfNeighbor": {
+            "iosxe:index/bgpIpv4UnicastVrfNeighbor:BgpIpv4UnicastVrfNeighbor": {
                 "clusterId": "cluster_id",
                 "deleteMode": "delete_mode",
                 "disableConnectedCheck": "disable_connected_check",
@@ -2914,18 +2914,18 @@
                 "ttlSecurityHops": "ttl_security_hops",
                 "updateSourceLoopback": "update_source_loopback"
             },
-            "iosxe:iosxe/bgpIpv6UnicastNeighbor:BgpIpv6UnicastNeighbor": {
+            "iosxe:index/bgpIpv6UnicastNeighbor:BgpIpv6UnicastNeighbor": {
                 "deleteMode": "delete_mode",
                 "routeMaps": "route_maps",
                 "routeReflectorClient": "route_reflector_client",
                 "sendCommunity": "send_community"
             },
-            "iosxe:iosxe/bgpL2vpnEvpnNeighbor:BgpL2vpnEvpnNeighbor": {
+            "iosxe:index/bgpL2vpnEvpnNeighbor:BgpL2vpnEvpnNeighbor": {
                 "deleteMode": "delete_mode",
                 "routeReflectorClient": "route_reflector_client",
                 "sendCommunity": "send_community"
             },
-            "iosxe:iosxe/bgpNeighbor:BgpNeighbor": {
+            "iosxe:index/bgpNeighbor:BgpNeighbor": {
                 "clusterId": "cluster_id",
                 "deleteMode": "delete_mode",
                 "disableConnectedCheck": "disable_connected_check",
@@ -2951,11 +2951,11 @@
                 "ttlSecurityHops": "ttl_security_hops",
                 "updateSourceLoopback": "update_source_loopback"
             },
-            "iosxe:iosxe/cdp:Cdp": {
+            "iosxe:index/cdp:Cdp": {
                 "filterTlvList": "filter_tlv_list",
                 "tlvLists": "tlv_lists"
             },
-            "iosxe:iosxe/classMap:ClassMap": {
+            "iosxe:index/classMap:ClassMap": {
                 "matchActivatedServiceTemplates": "match_activated_service_templates",
                 "matchAuthorizationStatusAuthorized": "match_authorization_status_authorized",
                 "matchAuthorizationStatusUnauthorized": "match_authorization_status_unauthorized",
@@ -2968,7 +2968,7 @@
                 "matchResultTypeMethodDot1xMethodTimeout": "match_result_type_method_dot1x_method_timeout",
                 "matchResultTypeMethodMabAuthoritative": "match_result_type_method_mab_authoritative"
             },
-            "iosxe:iosxe/clock:Clock": {
+            "iosxe:index/clock:Clock": {
                 "calendarValid": "calendar_valid",
                 "deleteMode": "delete_mode",
                 "summerTimeDate": "summer_time_date",
@@ -2993,19 +2993,19 @@
                 "summerTimeRecurringStartWeekday": "summer_time_recurring_start_weekday",
                 "summerTimeZone": "summer_time_zone"
             },
-            "iosxe:iosxe/cryptoIkev2:CryptoIkev2": {
+            "iosxe:index/cryptoIkev2:CryptoIkev2": {
                 "deleteMode": "delete_mode",
                 "dpdQuery": "dpd_query",
                 "dpdRetryInterval": "dpd_retry_interval",
                 "natKeepalive": "nat_keepalive"
             },
-            "iosxe:iosxe/cryptoIkev2Policy:CryptoIkev2Policy": {
+            "iosxe:index/cryptoIkev2Policy:CryptoIkev2Policy": {
                 "matchAddressLocalIps": "match_address_local_ip",
                 "matchFvrf": "match_fvrf",
                 "matchFvrfAny": "match_fvrf_any",
                 "matchInboundOnly": "match_inbound_only"
             },
-            "iosxe:iosxe/cryptoIkev2Profile:CryptoIkev2Profile": {
+            "iosxe:index/cryptoIkev2Profile:CryptoIkev2Profile": {
                 "authenticationLocalPreShare": "authentication_local_pre_share",
                 "authenticationRemotePreShare": "authentication_remote_pre_share",
                 "configExchangeRequest": "config_exchange_request",
@@ -3024,7 +3024,7 @@
                 "matchIdentityRemoteKeys": "match_identity_remote_keys",
                 "matchInboundOnly": "match_inbound_only"
             },
-            "iosxe:iosxe/cryptoIkev2Proposal:CryptoIkev2Proposal": {
+            "iosxe:index/cryptoIkev2Proposal:CryptoIkev2Proposal": {
                 "encryptionAesCbc128": "encryption_aes_cbc_128",
                 "encryptionAesCbc192": "encryption_aes_cbc_192",
                 "encryptionAesCbc256": "encryption_aes_cbc_256",
@@ -3051,20 +3051,20 @@
                 "prfSha384": "prf_sha384",
                 "prfSha512": "prf_sha512"
             },
-            "iosxe:iosxe/cryptoIpsecProfile:CryptoIpsecProfile": {
+            "iosxe:index/cryptoIpsecProfile:CryptoIpsecProfile": {
                 "setIsakmpProfileIkev2ProfileIkev2ProfileCaseIkev2Profile": "set_isakmp_profile_ikev2_profile_ikev2_profile_case_ikev2_profile",
                 "setIsakmpProfileIkev2ProfileIsakmpProfileCaseIsakmpProfile": "set_isakmp_profile_ikev2_profile_isakmp_profile_case_isakmp_profile",
                 "setTransformSets": "set_transform_set"
             },
-            "iosxe:iosxe/cryptoIpsecTransformSet:CryptoIpsecTransformSet": {
+            "iosxe:index/cryptoIpsecTransformSet:CryptoIpsecTransformSet": {
                 "espHmac": "esp_hmac",
                 "modeTunnel": "mode_tunnel"
             },
-            "iosxe:iosxe/cts:Cts": {
+            "iosxe:index/cts:Cts": {
                 "authorizationList": "authorization_list",
                 "deleteMode": "delete_mode"
             },
-            "iosxe:iosxe/dhcp:Dhcp": {
+            "iosxe:index/dhcp:Dhcp": {
                 "compatibilitySuboptionLinkSelection": "compatibility_suboption_link_selection",
                 "compatibilitySuboptionServerOverride": "compatibility_suboption_server_override",
                 "deleteMode": "delete_mode",
@@ -3074,7 +3074,7 @@
                 "snoopingInformationOptionFormatRemoteIdHostname": "snooping_information_option_format_remote_id_hostname",
                 "snoopingVlans": "snooping_vlans"
             },
-            "iosxe:iosxe/dot1x:Dot1x": {
+            "iosxe:index/dot1x:Dot1x": {
                 "authFailEapol": "auth_fail_eapol",
                 "criticalEapolConfigBlock": "critical_eapol_config_block",
                 "criticalRecoveryDelay": "critical_recovery_delay",
@@ -3085,7 +3085,7 @@
                 "systemAuthControl": "system_auth_control",
                 "testTimeout": "test_timeout"
             },
-            "iosxe:iosxe/errdisable:Errdisable": {
+            "iosxe:index/errdisable:Errdisable": {
                 "deleteMode": "delete_mode",
                 "detectCauseAll": "detect_cause_all",
                 "detectCauseArpInspection": "detect_cause_arp_inspection",
@@ -3139,7 +3139,7 @@
                 "recoveryCauseVmps": "recovery_cause_vmps",
                 "recoveryInterval": "recovery_interval"
             },
-            "iosxe:iosxe/evpn:Evpn": {
+            "iosxe:index/evpn:Evpn": {
                 "defaultGatewayAdvertise": "default_gateway_advertise",
                 "deleteMode": "delete_mode",
                 "ipDuplicationLimit": "ip_duplication_limit",
@@ -3154,7 +3154,7 @@
                 "routeTargetAutoVni": "route_target_auto_vni",
                 "routerIdLoopback": "router_id_loopback"
             },
-            "iosxe:iosxe/evpnInstance:EvpnInstance": {
+            "iosxe:index/evpnInstance:EvpnInstance": {
                 "evpnInstanceNum": "evpn_instance_num",
                 "vlanBasedAutoRouteTarget": "vlan_based_auto_route_target",
                 "vlanBasedDefaultGatewayAdvertise": "vlan_based_default_gateway_advertise",
@@ -3172,7 +3172,7 @@
                 "vlanBasedRouteTargetExport": "vlan_based_route_target_export",
                 "vlanBasedRouteTargetImport": "vlan_based_route_target_import"
             },
-            "iosxe:iosxe/getAaa:getAaa": {
+            "iosxe:index/getAaa:getAaa": {
                 "groupServerRadii": "group_server_radius",
                 "groupServerTacacspluses": "group_server_tacacsplus",
                 "newModel": "new_model",
@@ -3180,7 +3180,7 @@
                 "serverRadiusDynamicAuthorClients": "server_radius_dynamic_author_clients",
                 "sessionId": "session_id"
             },
-            "iosxe:iosxe/getAaaAccounting:getAaaAccounting": {
+            "iosxe:index/getAaaAccounting:getAaaAccounting": {
                 "identityDefaultStartStopGroup1": "identity_default_start_stop_group1",
                 "identityDefaultStartStopGroup2": "identity_default_start_stop_group2",
                 "identityDefaultStartStopGroup3": "identity_default_start_stop_group3",
@@ -3188,14 +3188,14 @@
                 "systemGuaranteeFirst": "system_guarantee_first",
                 "updateNewinfoPeriodic": "update_newinfo_periodic"
             },
-            "iosxe:iosxe/getAaaAccountingExec:getAaaAccountingExec": {
+            "iosxe:index/getAaaAccountingExec:getAaaAccountingExec": {
                 "startStopGroup1": "start_stop_group1"
             },
-            "iosxe:iosxe/getAaaAccountingNetwork:getAaaAccountingNetwork": {
+            "iosxe:index/getAaaAccountingNetwork:getAaaAccountingNetwork": {
                 "startStopGroup1": "start_stop_group1",
                 "startStopGroup2": "start_stop_group2"
             },
-            "iosxe:iosxe/getAaaAuthentication:getAaaAuthentication": {
+            "iosxe:index/getAaaAuthentication:getAaaAuthentication": {
                 "dot1xDefaultA1Group": "dot1x_default_a1_group",
                 "dot1xDefaultA1Local": "dot1x_default_a1_local",
                 "dot1xDefaultA2Group": "dot1x_default_a2_group",
@@ -3205,7 +3205,7 @@
                 "dot1xDefaultA4Group": "dot1x_default_a4_group",
                 "dot1xDefaultA4Local": "dot1x_default_a4_local"
             },
-            "iosxe:iosxe/getAaaAuthenticationLogin:getAaaAuthenticationLogin": {
+            "iosxe:index/getAaaAuthenticationLogin:getAaaAuthenticationLogin": {
                 "a1Enable": "a1_enable",
                 "a1Group": "a1_group",
                 "a1Line": "a1_line",
@@ -3227,27 +3227,27 @@
                 "a4Local": "a4_local",
                 "a4None": "a4_none"
             },
-            "iosxe:iosxe/getAaaAuthorizationExec:getAaaAuthorizationExec": {
+            "iosxe:index/getAaaAuthorizationExec:getAaaAuthorizationExec": {
                 "a1Group": "a1_group",
                 "a1IfAuthenticated": "a1_if_authenticated",
                 "a1Local": "a1_local",
                 "a2Local": "a2_local"
             },
-            "iosxe:iosxe/getAaaAuthorizationNetwork:getAaaAuthorizationNetwork": {
+            "iosxe:index/getAaaAuthorizationNetwork:getAaaAuthorizationNetwork": {
                 "a1Group": "a1_group"
             },
-            "iosxe:iosxe/getAaaGroupServerRadius:getAaaGroupServerRadius": {
+            "iosxe:index/getAaaGroupServerRadius:getAaaGroupServerRadius": {
                 "ipRadiusSourceInterfaceLoopback": "ip_radius_source_interface_loopback",
                 "serverNames": "server_names"
             },
-            "iosxe:iosxe/getAaaGroupServerTacacsplus:getAaaGroupServerTacacsplus": {
+            "iosxe:index/getAaaGroupServerTacacsplus:getAaaGroupServerTacacsplus": {
                 "serverNames": "server_names"
             },
-            "iosxe:iosxe/getAaaServerRadiusDynamicAuthorClient:getAaaServerRadiusDynamicAuthorClient": {
+            "iosxe:index/getAaaServerRadiusDynamicAuthorClient:getAaaServerRadiusDynamicAuthorClient": {
                 "serverKey": "server_key",
                 "serverKeyType": "server_key_type"
             },
-            "iosxe:iosxe/getAccessListExtendedEntry:getAccessListExtendedEntry": {
+            "iosxe:index/getAccessListExtendedEntry:getAccessListExtendedEntry": {
                 "aceRuleAction": "ace_rule_action",
                 "aceRuleProtocol": "ace_rule_protocol",
                 "destinationAny": "destination_any",
@@ -3273,7 +3273,7 @@
                 "sourcePrefix": "source_prefix",
                 "sourcePrefixMask": "source_prefix_mask"
             },
-            "iosxe:iosxe/getAccessListStandardEntry:getAccessListStandardEntry": {
+            "iosxe:index/getAccessListStandardEntry:getAccessListStandardEntry": {
                 "denyAny": "deny_any",
                 "denyHost": "deny_host",
                 "denyLog": "deny_log",
@@ -3285,7 +3285,7 @@
                 "permitPrefix": "permit_prefix",
                 "permitPrefixMask": "permit_prefix_mask"
             },
-            "iosxe:iosxe/getArp:getArp": {
+            "iosxe:index/getArp:getArp": {
                 "entryLearn": "entry_learn",
                 "incompleteEntries": "incomplete_entries",
                 "inspectionFilters": "inspection_filters",
@@ -3299,19 +3299,19 @@
                 "inspectionVlan": "inspection_vlan",
                 "proxyDisable": "proxy_disable"
             },
-            "iosxe:iosxe/getArpInspectionFilter:getArpInspectionFilter": {
+            "iosxe:index/getArpInspectionFilter:getArpInspectionFilter": {
                 "vlans": "vlan"
             },
-            "iosxe:iosxe/getArpInspectionFilterVlan:getArpInspectionFilterVlan": {
+            "iosxe:index/getArpInspectionFilterVlan:getArpInspectionFilterVlan": {
                 "vlanRange": "vlan_range"
             },
-            "iosxe:iosxe/getBanner:getBanner": {
+            "iosxe:index/getBanner:getBanner": {
                 "execBanner": "exec_banner",
                 "loginBanner": "login_banner",
                 "motdBanner": "motd_banner",
                 "promptTimeoutBanner": "prompt_timeout_banner"
             },
-            "iosxe:iosxe/getBfd:getBfd": {
+            "iosxe:index/getBfd:getBfd": {
                 "ipv4BothVrfs": "ipv4_both_vrfs",
                 "ipv4WithDstVrfs": "ipv4_with_dst_vrfs",
                 "ipv4WithSrcVrfs": "ipv4_with_src_vrfs",
@@ -3322,55 +3322,55 @@
                 "ipv6WithoutVrfs": "ipv6_without_vrfs",
                 "slowTimers": "slow_timers"
             },
-            "iosxe:iosxe/getBfdIpv4BothVrf:getBfdIpv4BothVrf": {
+            "iosxe:index/getBfdIpv4BothVrf:getBfdIpv4BothVrf": {
                 "destIp": "dest_ip",
                 "dstVrf": "dst_vrf",
                 "srcIp": "src_ip",
                 "srcVrf": "src_vrf",
                 "templateName": "template_name"
             },
-            "iosxe:iosxe/getBfdIpv4WithDstVrf:getBfdIpv4WithDstVrf": {
+            "iosxe:index/getBfdIpv4WithDstVrf:getBfdIpv4WithDstVrf": {
                 "destIp": "dest_ip",
                 "dstVrf": "dst_vrf",
                 "srcIp": "src_ip",
                 "templateName": "template_name"
             },
-            "iosxe:iosxe/getBfdIpv4WithSrcVrf:getBfdIpv4WithSrcVrf": {
+            "iosxe:index/getBfdIpv4WithSrcVrf:getBfdIpv4WithSrcVrf": {
                 "destIp": "dest_ip",
                 "srcIp": "src_ip",
                 "srcVrf": "src_vrf",
                 "templateName": "template_name"
             },
-            "iosxe:iosxe/getBfdIpv4WithoutVrf:getBfdIpv4WithoutVrf": {
+            "iosxe:index/getBfdIpv4WithoutVrf:getBfdIpv4WithoutVrf": {
                 "destIp": "dest_ip",
                 "srcIp": "src_ip",
                 "templateName": "template_name"
             },
-            "iosxe:iosxe/getBfdIpv6WithBothVrf:getBfdIpv6WithBothVrf": {
+            "iosxe:index/getBfdIpv6WithBothVrf:getBfdIpv6WithBothVrf": {
                 "destIpv6": "dest_ipv6",
                 "dstVrf": "dst_vrf",
                 "srcIpv6": "src_ipv6",
                 "srcVrf": "src_vrf",
                 "templateName": "template_name"
             },
-            "iosxe:iosxe/getBfdIpv6WithDstVrf:getBfdIpv6WithDstVrf": {
+            "iosxe:index/getBfdIpv6WithDstVrf:getBfdIpv6WithDstVrf": {
                 "destIpv6": "dest_ipv6",
                 "dstVrf": "dst_vrf",
                 "srcIpv6": "src_ipv6",
                 "templateName": "template_name"
             },
-            "iosxe:iosxe/getBfdIpv6WithSrcVrf:getBfdIpv6WithSrcVrf": {
+            "iosxe:index/getBfdIpv6WithSrcVrf:getBfdIpv6WithSrcVrf": {
                 "destIpv6": "dest_ipv6",
                 "srcIpv6": "src_ipv6",
                 "srcVrf": "src_vrf",
                 "templateName": "template_name"
             },
-            "iosxe:iosxe/getBfdIpv6WithoutVrf:getBfdIpv6WithoutVrf": {
+            "iosxe:index/getBfdIpv6WithoutVrf:getBfdIpv6WithoutVrf": {
                 "destIpv6": "dest_ipv6",
                 "srcIpv6": "src_ipv6",
                 "templateName": "template_name"
             },
-            "iosxe:iosxe/getBfdTemplateMultiHop:getBfdTemplateMultiHop": {
+            "iosxe:index/getBfdTemplateMultiHop:getBfdTemplateMultiHop": {
                 "authenticationMd5Keychain": "authentication_md5_keychain",
                 "authenticationMeticulousMd5Keychain": "authentication_meticulous_md5_keychain",
                 "authenticationMeticulousSha1keychain": "authentication_meticulous_sha_1keychain",
@@ -3391,7 +3391,7 @@
                 "intervalMillisecondsMinTx": "interval_milliseconds_min_tx",
                 "intervalMillisecondsMultiplier": "interval_milliseconds_multiplier"
             },
-            "iosxe:iosxe/getBfdTemplateSingleHop:getBfdTemplateSingleHop": {
+            "iosxe:index/getBfdTemplateSingleHop:getBfdTemplateSingleHop": {
                 "authenticationMd5Keychain": "authentication_md5_keychain",
                 "authenticationMeticulousMd5Keychain": "authentication_meticulous_md5_keychain",
                 "authenticationMeticulousSha1Keychain": "authentication_meticulous_sha_1_keychain",
@@ -3407,74 +3407,74 @@
                 "intervalMillisecondsMinTx": "interval_milliseconds_min_tx",
                 "intervalMillisecondsMultiplier": "interval_milliseconds_multiplier"
             },
-            "iosxe:iosxe/getBgp:getBgp": {
+            "iosxe:index/getBgp:getBgp": {
                 "defaultIpv4Unicast": "default_ipv4_unicast",
                 "logNeighborChanges": "log_neighbor_changes",
                 "routerIdLoopback": "router_id_loopback"
             },
-            "iosxe:iosxe/getBgpAddressFamilyIpv4:getBgpAddressFamilyIpv4": {
+            "iosxe:index/getBgpAddressFamilyIpv4:getBgpAddressFamilyIpv4": {
                 "afName": "af_name",
                 "ipv4UnicastNetworks": "ipv4_unicast_networks",
                 "ipv4UnicastNetworksMasks": "ipv4_unicast_networks_mask",
                 "ipv4UnicastRedistributeConnected": "ipv4_unicast_redistribute_connected",
                 "ipv4UnicastRedistributeStatic": "ipv4_unicast_redistribute_static"
             },
-            "iosxe:iosxe/getBgpAddressFamilyIpv4Ipv4UnicastNetwork:getBgpAddressFamilyIpv4Ipv4UnicastNetwork": {
+            "iosxe:index/getBgpAddressFamilyIpv4Ipv4UnicastNetwork:getBgpAddressFamilyIpv4Ipv4UnicastNetwork": {
                 "routeMap": "route_map"
             },
-            "iosxe:iosxe/getBgpAddressFamilyIpv4Ipv4UnicastNetworksMask:getBgpAddressFamilyIpv4Ipv4UnicastNetworksMask": {
+            "iosxe:index/getBgpAddressFamilyIpv4Ipv4UnicastNetworksMask:getBgpAddressFamilyIpv4Ipv4UnicastNetworksMask": {
                 "routeMap": "route_map"
             },
-            "iosxe:iosxe/getBgpAddressFamilyIpv4Vrf:getBgpAddressFamilyIpv4Vrf": {
+            "iosxe:index/getBgpAddressFamilyIpv4Vrf:getBgpAddressFamilyIpv4Vrf": {
                 "afName": "af_name"
             },
-            "iosxe:iosxe/getBgpAddressFamilyIpv4VrfVrf:getBgpAddressFamilyIpv4VrfVrf": {
+            "iosxe:index/getBgpAddressFamilyIpv4VrfVrf:getBgpAddressFamilyIpv4VrfVrf": {
                 "ipv4UnicastAdvertiseL2vpnEvpn": "ipv4_unicast_advertise_l2vpn_evpn",
                 "ipv4UnicastNetworks": "ipv4_unicast_networks",
                 "ipv4UnicastNetworksMasks": "ipv4_unicast_networks_mask",
                 "ipv4UnicastRedistributeConnected": "ipv4_unicast_redistribute_connected",
                 "ipv4UnicastRedistributeStatic": "ipv4_unicast_redistribute_static"
             },
-            "iosxe:iosxe/getBgpAddressFamilyIpv4VrfVrfIpv4UnicastNetwork:getBgpAddressFamilyIpv4VrfVrfIpv4UnicastNetwork": {
+            "iosxe:index/getBgpAddressFamilyIpv4VrfVrfIpv4UnicastNetwork:getBgpAddressFamilyIpv4VrfVrfIpv4UnicastNetwork": {
                 "routeMap": "route_map"
             },
-            "iosxe:iosxe/getBgpAddressFamilyIpv4VrfVrfIpv4UnicastNetworksMask:getBgpAddressFamilyIpv4VrfVrfIpv4UnicastNetworksMask": {
+            "iosxe:index/getBgpAddressFamilyIpv4VrfVrfIpv4UnicastNetworksMask:getBgpAddressFamilyIpv4VrfVrfIpv4UnicastNetworksMask": {
                 "routeMap": "route_map"
             },
-            "iosxe:iosxe/getBgpAddressFamilyIpv6:getBgpAddressFamilyIpv6": {
+            "iosxe:index/getBgpAddressFamilyIpv6:getBgpAddressFamilyIpv6": {
                 "afName": "af_name",
                 "ipv6UnicastNetworks": "ipv6_unicast_networks",
                 "ipv6UnicastRedistributeConnected": "ipv6_unicast_redistribute_connected",
                 "ipv6UnicastRedistributeStatic": "ipv6_unicast_redistribute_static"
             },
-            "iosxe:iosxe/getBgpAddressFamilyIpv6Ipv6UnicastNetwork:getBgpAddressFamilyIpv6Ipv6UnicastNetwork": {
+            "iosxe:index/getBgpAddressFamilyIpv6Ipv6UnicastNetwork:getBgpAddressFamilyIpv6Ipv6UnicastNetwork": {
                 "routeMap": "route_map"
             },
-            "iosxe:iosxe/getBgpAddressFamilyIpv6Vrf:getBgpAddressFamilyIpv6Vrf": {
+            "iosxe:index/getBgpAddressFamilyIpv6Vrf:getBgpAddressFamilyIpv6Vrf": {
                 "afName": "af_name"
             },
-            "iosxe:iosxe/getBgpAddressFamilyIpv6VrfVrf:getBgpAddressFamilyIpv6VrfVrf": {
+            "iosxe:index/getBgpAddressFamilyIpv6VrfVrf:getBgpAddressFamilyIpv6VrfVrf": {
                 "ipv6UnicastAdvertiseL2vpnEvpn": "ipv6_unicast_advertise_l2vpn_evpn",
                 "ipv6UnicastNetworks": "ipv6_unicast_networks",
                 "ipv6UnicastRedistributeConnected": "ipv6_unicast_redistribute_connected",
                 "ipv6UnicastRedistributeStatic": "ipv6_unicast_redistribute_static"
             },
-            "iosxe:iosxe/getBgpAddressFamilyIpv6VrfVrfIpv6UnicastNetwork:getBgpAddressFamilyIpv6VrfVrfIpv6UnicastNetwork": {
+            "iosxe:index/getBgpAddressFamilyIpv6VrfVrfIpv6UnicastNetwork:getBgpAddressFamilyIpv6VrfVrfIpv6UnicastNetwork": {
                 "routeMap": "route_map"
             },
-            "iosxe:iosxe/getBgpAddressFamilyL2vpn:getBgpAddressFamilyL2vpn": {
+            "iosxe:index/getBgpAddressFamilyL2vpn:getBgpAddressFamilyL2vpn": {
                 "afName": "af_name"
             },
-            "iosxe:iosxe/getBgpIpv4UnicastNeighbor:getBgpIpv4UnicastNeighbor": {
+            "iosxe:index/getBgpIpv4UnicastNeighbor:getBgpIpv4UnicastNeighbor": {
                 "routeMaps": "route_maps",
                 "routeReflectorClient": "route_reflector_client",
                 "sendCommunity": "send_community"
             },
-            "iosxe:iosxe/getBgpIpv4UnicastNeighborRouteMap:getBgpIpv4UnicastNeighborRouteMap": {
+            "iosxe:index/getBgpIpv4UnicastNeighborRouteMap:getBgpIpv4UnicastNeighborRouteMap": {
                 "inOut": "in_out",
                 "routeMapName": "route_map_name"
             },
-            "iosxe:iosxe/getBgpIpv4UnicastVrfNeighbor:getBgpIpv4UnicastVrfNeighbor": {
+            "iosxe:index/getBgpIpv4UnicastVrfNeighbor:getBgpIpv4UnicastVrfNeighbor": {
                 "clusterId": "cluster_id",
                 "disableConnectedCheck": "disable_connected_check",
                 "ebgpMultihop": "ebgp_multihop",
@@ -3501,24 +3501,24 @@
                 "ttlSecurityHops": "ttl_security_hops",
                 "updateSourceLoopback": "update_source_loopback"
             },
-            "iosxe:iosxe/getBgpIpv4UnicastVrfNeighborRouteMap:getBgpIpv4UnicastVrfNeighborRouteMap": {
+            "iosxe:index/getBgpIpv4UnicastVrfNeighborRouteMap:getBgpIpv4UnicastVrfNeighborRouteMap": {
                 "inOut": "in_out",
                 "routeMapName": "route_map_name"
             },
-            "iosxe:iosxe/getBgpIpv6UnicastNeighbor:getBgpIpv6UnicastNeighbor": {
+            "iosxe:index/getBgpIpv6UnicastNeighbor:getBgpIpv6UnicastNeighbor": {
                 "routeMaps": "route_maps",
                 "routeReflectorClient": "route_reflector_client",
                 "sendCommunity": "send_community"
             },
-            "iosxe:iosxe/getBgpIpv6UnicastNeighborRouteMap:getBgpIpv6UnicastNeighborRouteMap": {
+            "iosxe:index/getBgpIpv6UnicastNeighborRouteMap:getBgpIpv6UnicastNeighborRouteMap": {
                 "inOut": "in_out",
                 "routeMapName": "route_map_name"
             },
-            "iosxe:iosxe/getBgpL2vpnEvpnNeighbor:getBgpL2vpnEvpnNeighbor": {
+            "iosxe:index/getBgpL2vpnEvpnNeighbor:getBgpL2vpnEvpnNeighbor": {
                 "routeReflectorClient": "route_reflector_client",
                 "sendCommunity": "send_community"
             },
-            "iosxe:iosxe/getBgpNeighbor:getBgpNeighbor": {
+            "iosxe:index/getBgpNeighbor:getBgpNeighbor": {
                 "clusterId": "cluster_id",
                 "disableConnectedCheck": "disable_connected_check",
                 "ebgpMultihop": "ebgp_multihop",
@@ -3543,14 +3543,14 @@
                 "ttlSecurityHops": "ttl_security_hops",
                 "updateSourceLoopback": "update_source_loopback"
             },
-            "iosxe:iosxe/getCdp:getCdp": {
+            "iosxe:index/getCdp:getCdp": {
                 "filterTlvList": "filter_tlv_list",
                 "tlvLists": "tlv_lists"
             },
-            "iosxe:iosxe/getCdpTlvList:getCdpTlvList": {
+            "iosxe:index/getCdpTlvList:getCdpTlvList": {
                 "vtpMgmtDomain": "vtp_mgmt_domain"
             },
-            "iosxe:iosxe/getClassMap:getClassMap": {
+            "iosxe:index/getClassMap:getClassMap": {
                 "matchActivatedServiceTemplates": "match_activated_service_templates",
                 "matchAuthorizationStatusAuthorized": "match_authorization_status_authorized",
                 "matchAuthorizationStatusUnauthorized": "match_authorization_status_unauthorized",
@@ -3563,10 +3563,10 @@
                 "matchResultTypeMethodDot1xMethodTimeout": "match_result_type_method_dot1x_method_timeout",
                 "matchResultTypeMethodMabAuthoritative": "match_result_type_method_mab_authoritative"
             },
-            "iosxe:iosxe/getClassMapMatchActivatedServiceTemplate:getClassMapMatchActivatedServiceTemplate": {
+            "iosxe:index/getClassMapMatchActivatedServiceTemplate:getClassMapMatchActivatedServiceTemplate": {
                 "serviceName": "service_name"
             },
-            "iosxe:iosxe/getClock:getClock": {
+            "iosxe:index/getClock:getClock": {
                 "calendarValid": "calendar_valid",
                 "summerTimeDate": "summer_time_date",
                 "summerTimeDateEndDay": "summer_time_date_end_day",
@@ -3590,12 +3590,12 @@
                 "summerTimeRecurringStartWeekday": "summer_time_recurring_start_weekday",
                 "summerTimeZone": "summer_time_zone"
             },
-            "iosxe:iosxe/getCryptoIkev2:getCryptoIkev2": {
+            "iosxe:index/getCryptoIkev2:getCryptoIkev2": {
                 "dpdQuery": "dpd_query",
                 "dpdRetryInterval": "dpd_retry_interval",
                 "natKeepalive": "nat_keepalive"
             },
-            "iosxe:iosxe/getCryptoIkev2KeyringPeer:getCryptoIkev2KeyringPeer": {
+            "iosxe:index/getCryptoIkev2KeyringPeer:getCryptoIkev2KeyringPeer": {
                 "identityAddress": "identity_address",
                 "identityEmailDomain": "identity_email_domain",
                 "identityEmailName": "identity_email_name",
@@ -3612,13 +3612,13 @@
                 "preSharedKeyRemote": "pre_shared_key_remote",
                 "preSharedKeyRemoteEncryption": "pre_shared_key_remote_encryption"
             },
-            "iosxe:iosxe/getCryptoIkev2Policy:getCryptoIkev2Policy": {
+            "iosxe:index/getCryptoIkev2Policy:getCryptoIkev2Policy": {
                 "matchAddressLocalIps": "match_address_local_ip",
                 "matchFvrf": "match_fvrf",
                 "matchFvrfAny": "match_fvrf_any",
                 "matchInboundOnly": "match_inbound_only"
             },
-            "iosxe:iosxe/getCryptoIkev2Profile:getCryptoIkev2Profile": {
+            "iosxe:index/getCryptoIkev2Profile:getCryptoIkev2Profile": {
                 "authenticationLocalPreShare": "authentication_local_pre_share",
                 "authenticationRemotePreShare": "authentication_remote_pre_share",
                 "configExchangeRequest": "config_exchange_request",
@@ -3636,7 +3636,7 @@
                 "matchIdentityRemoteKeys": "match_identity_remote_keys",
                 "matchInboundOnly": "match_inbound_only"
             },
-            "iosxe:iosxe/getCryptoIkev2Proposal:getCryptoIkev2Proposal": {
+            "iosxe:index/getCryptoIkev2Proposal:getCryptoIkev2Proposal": {
                 "encryptionAesCbc128": "encryption_aes_cbc_128",
                 "encryptionAesCbc192": "encryption_aes_cbc_192",
                 "encryptionAesCbc256": "encryption_aes_cbc_256",
@@ -3663,19 +3663,19 @@
                 "prfSha384": "prf_sha384",
                 "prfSha512": "prf_sha512"
             },
-            "iosxe:iosxe/getCryptoIpsecProfile:getCryptoIpsecProfile": {
+            "iosxe:index/getCryptoIpsecProfile:getCryptoIpsecProfile": {
                 "setIsakmpProfileIkev2ProfileIkev2ProfileCaseIkev2Profile": "set_isakmp_profile_ikev2_profile_ikev2_profile_case_ikev2_profile",
                 "setIsakmpProfileIkev2ProfileIsakmpProfileCaseIsakmpProfile": "set_isakmp_profile_ikev2_profile_isakmp_profile_case_isakmp_profile",
                 "setTransformSets": "set_transform_set"
             },
-            "iosxe:iosxe/getCryptoIpsecTransformSet:getCryptoIpsecTransformSet": {
+            "iosxe:index/getCryptoIpsecTransformSet:getCryptoIpsecTransformSet": {
                 "espHmac": "esp_hmac",
                 "modeTunnel": "mode_tunnel"
             },
-            "iosxe:iosxe/getCts:getCts": {
+            "iosxe:index/getCts:getCts": {
                 "authorizationList": "authorization_list"
             },
-            "iosxe:iosxe/getDhcp:getDhcp": {
+            "iosxe:index/getDhcp:getDhcp": {
                 "compatibilitySuboptionLinkSelection": "compatibility_suboption_link_selection",
                 "compatibilitySuboptionServerOverride": "compatibility_suboption_server_override",
                 "relayInformationOptionDefault": "relay_information_option_default",
@@ -3684,10 +3684,10 @@
                 "snoopingInformationOptionFormatRemoteIdHostname": "snooping_information_option_format_remote_id_hostname",
                 "snoopingVlans": "snooping_vlans"
             },
-            "iosxe:iosxe/getDhcpSnoopingVlan:getDhcpSnoopingVlan": {
+            "iosxe:index/getDhcpSnoopingVlan:getDhcpSnoopingVlan": {
                 "vlanId": "vlan_id"
             },
-            "iosxe:iosxe/getDot1x:getDot1x": {
+            "iosxe:index/getDot1x:getDot1x": {
                 "authFailEapol": "auth_fail_eapol",
                 "criticalEapolConfigBlock": "critical_eapol_config_block",
                 "criticalRecoveryDelay": "critical_recovery_delay",
@@ -3697,13 +3697,13 @@
                 "systemAuthControl": "system_auth_control",
                 "testTimeout": "test_timeout"
             },
-            "iosxe:iosxe/getDot1xCredential:getDot1xCredential": {
+            "iosxe:index/getDot1xCredential:getDot1xCredential": {
                 "anonymousId": "anonymous_id",
                 "passwordType": "password_type",
                 "pkiTrustpoint": "pki_trustpoint",
                 "profileName": "profile_name"
             },
-            "iosxe:iosxe/getErrdisable:getErrdisable": {
+            "iosxe:index/getErrdisable:getErrdisable": {
                 "detectCauseAll": "detect_cause_all",
                 "detectCauseArpInspection": "detect_cause_arp_inspection",
                 "detectCauseBpduguard": "detect_cause_bpduguard",
@@ -3756,7 +3756,7 @@
                 "recoveryCauseVmps": "recovery_cause_vmps",
                 "recoveryInterval": "recovery_interval"
             },
-            "iosxe:iosxe/getEvpn:getEvpn": {
+            "iosxe:index/getEvpn:getEvpn": {
                 "defaultGatewayAdvertise": "default_gateway_advertise",
                 "ipDuplicationLimit": "ip_duplication_limit",
                 "ipDuplicationTime": "ip_duplication_time",
@@ -3770,7 +3770,7 @@
                 "routeTargetAutoVni": "route_target_auto_vni",
                 "routerIdLoopback": "router_id_loopback"
             },
-            "iosxe:iosxe/getEvpnInstance:getEvpnInstance": {
+            "iosxe:index/getEvpnInstance:getEvpnInstance": {
                 "evpnInstanceNum": "evpn_instance_num",
                 "vlanBasedAutoRouteTarget": "vlan_based_auto_route_target",
                 "vlanBasedDefaultGatewayAdvertise": "vlan_based_default_gateway_advertise",
@@ -3788,7 +3788,7 @@
                 "vlanBasedRouteTargetExport": "vlan_based_route_target_export",
                 "vlanBasedRouteTargetImport": "vlan_based_route_target_import"
             },
-            "iosxe:iosxe/getInterfaceEthernet:getInterfaceEthernet": {
+            "iosxe:index/getInterfaceEthernet:getInterfaceEthernet": {
                 "arpTimeout": "arp_timeout",
                 "autoQosClassify": "auto_qos_classify",
                 "autoQosClassifyPolice": "auto_qos_classify_police",
@@ -3841,16 +3841,16 @@
                 "trustDevice": "trust_device",
                 "vrfForwarding": "vrf_forwarding"
             },
-            "iosxe:iosxe/getInterfaceEthernetIpv6Address:getInterfaceEthernetIpv6Address": {
+            "iosxe:index/getInterfaceEthernetIpv6Address:getInterfaceEthernetIpv6Address": {
                 "eui64": "eui_64"
             },
-            "iosxe:iosxe/getInterfaceEthernetIpv6LinkLocalAddress:getInterfaceEthernetIpv6LinkLocalAddress": {
+            "iosxe:index/getInterfaceEthernetIpv6LinkLocalAddress:getInterfaceEthernetIpv6LinkLocalAddress": {
                 "linkLocal": "link_local"
             },
-            "iosxe:iosxe/getInterfaceEthernetSourceTemplate:getInterfaceEthernetSourceTemplate": {
+            "iosxe:index/getInterfaceEthernetSourceTemplate:getInterfaceEthernetSourceTemplate": {
                 "templateName": "template_name"
             },
-            "iosxe:iosxe/getInterfaceLoopback:getInterfaceLoopback": {
+            "iosxe:index/getInterfaceLoopback:getInterfaceLoopback": {
                 "arpTimeout": "arp_timeout",
                 "ipAccessGroupIn": "ip_access_group_in",
                 "ipAccessGroupInEnable": "ip_access_group_in_enable",
@@ -3870,26 +3870,26 @@
                 "ipv6NdRaSuppressAll": "ipv6_nd_ra_suppress_all",
                 "vrfForwarding": "vrf_forwarding"
             },
-            "iosxe:iosxe/getInterfaceLoopbackIpv6Address:getInterfaceLoopbackIpv6Address": {
+            "iosxe:index/getInterfaceLoopbackIpv6Address:getInterfaceLoopbackIpv6Address": {
                 "eui64": "eui_64"
             },
-            "iosxe:iosxe/getInterfaceLoopbackIpv6LinkLocalAddress:getInterfaceLoopbackIpv6LinkLocalAddress": {
+            "iosxe:index/getInterfaceLoopbackIpv6LinkLocalAddress:getInterfaceLoopbackIpv6LinkLocalAddress": {
                 "linkLocal": "link_local"
             },
-            "iosxe:iosxe/getInterfaceNve:getInterfaceNve": {
+            "iosxe:index/getInterfaceNve:getInterfaceNve": {
                 "hostReachabilityProtocolBgp": "host_reachability_protocol_bgp",
                 "sourceInterfaceLoopback": "source_interface_loopback",
                 "vniVrfs": "vni_vrfs"
             },
-            "iosxe:iosxe/getInterfaceNveVni:getInterfaceNveVni": {
+            "iosxe:index/getInterfaceNveVni:getInterfaceNveVni": {
                 "ingressReplication": "ingress_replication",
                 "ipv4MulticastGroup": "ipv4_multicast_group",
                 "vniRange": "vni_range"
             },
-            "iosxe:iosxe/getInterfaceNveVniVrf:getInterfaceNveVniVrf": {
+            "iosxe:index/getInterfaceNveVniVrf:getInterfaceNveVniVrf": {
                 "vniRange": "vni_range"
             },
-            "iosxe:iosxe/getInterfaceOspf:getInterfaceOspf": {
+            "iosxe:index/getInterfaceOspf:getInterfaceOspf": {
                 "deadInterval": "dead_interval",
                 "helloInterval": "hello_interval",
                 "messageDigestKeys": "message_digest_keys",
@@ -3901,27 +3901,27 @@
                 "processIds": "process_ids",
                 "ttlSecurityHops": "ttl_security_hops"
             },
-            "iosxe:iosxe/getInterfaceOspfMessageDigestKey:getInterfaceOspfMessageDigestKey": {
+            "iosxe:index/getInterfaceOspfMessageDigestKey:getInterfaceOspfMessageDigestKey": {
                 "md5AuthKey": "md5_auth_key",
                 "md5AuthType": "md5_auth_type"
             },
-            "iosxe:iosxe/getInterfaceOspfProcessIdArea:getInterfaceOspfProcessIdArea": {
+            "iosxe:index/getInterfaceOspfProcessIdArea:getInterfaceOspfProcessIdArea": {
                 "areaId": "area_id"
             },
-            "iosxe:iosxe/getInterfaceOspfv3:getInterfaceOspfv3": {
+            "iosxe:index/getInterfaceOspfv3:getInterfaceOspfv3": {
                 "networkTypeBroadcast": "network_type_broadcast",
                 "networkTypeNonBroadcast": "network_type_non_broadcast",
                 "networkTypePointToMultipoint": "network_type_point_to_multipoint",
                 "networkTypePointToPoint": "network_type_point_to_point"
             },
-            "iosxe:iosxe/getInterfacePim:getInterfacePim": {
+            "iosxe:index/getInterfacePim:getInterfacePim": {
                 "bsrBorder": "bsr_border",
                 "denseMode": "dense_mode",
                 "drPriority": "dr_priority",
                 "sparseDenseMode": "sparse_dense_mode",
                 "sparseMode": "sparse_mode"
             },
-            "iosxe:iosxe/getInterfacePortChannel:getInterfacePortChannel": {
+            "iosxe:index/getInterfacePortChannel:getInterfacePortChannel": {
                 "arpTimeout": "arp_timeout",
                 "autoQosClassify": "auto_qos_classify",
                 "autoQosClassifyPolice": "auto_qos_classify_police",
@@ -3968,13 +3968,13 @@
                 "trustDevice": "trust_device",
                 "vrfForwarding": "vrf_forwarding"
             },
-            "iosxe:iosxe/getInterfacePortChannelIpv6Address:getInterfacePortChannelIpv6Address": {
+            "iosxe:index/getInterfacePortChannelIpv6Address:getInterfacePortChannelIpv6Address": {
                 "eui64": "eui_64"
             },
-            "iosxe:iosxe/getInterfacePortChannelIpv6LinkLocalAddress:getInterfacePortChannelIpv6LinkLocalAddress": {
+            "iosxe:index/getInterfacePortChannelIpv6LinkLocalAddress:getInterfacePortChannelIpv6LinkLocalAddress": {
                 "linkLocal": "link_local"
             },
-            "iosxe:iosxe/getInterfacePortChannelSubinterface:getInterfacePortChannelSubinterface": {
+            "iosxe:index/getInterfacePortChannelSubinterface:getInterfacePortChannelSubinterface": {
                 "arpTimeout": "arp_timeout",
                 "autoQosClassify": "auto_qos_classify",
                 "autoQosClassifyPolice": "auto_qos_classify_police",
@@ -4018,13 +4018,13 @@
                 "trustDevice": "trust_device",
                 "vrfForwarding": "vrf_forwarding"
             },
-            "iosxe:iosxe/getInterfacePortChannelSubinterfaceIpv6Address:getInterfacePortChannelSubinterfaceIpv6Address": {
+            "iosxe:index/getInterfacePortChannelSubinterfaceIpv6Address:getInterfacePortChannelSubinterfaceIpv6Address": {
                 "eui64": "eui_64"
             },
-            "iosxe:iosxe/getInterfacePortChannelSubinterfaceIpv6LinkLocalAddress:getInterfacePortChannelSubinterfaceIpv6LinkLocalAddress": {
+            "iosxe:index/getInterfacePortChannelSubinterfaceIpv6LinkLocalAddress:getInterfacePortChannelSubinterfaceIpv6LinkLocalAddress": {
                 "linkLocal": "link_local"
             },
-            "iosxe:iosxe/getInterfaceSwitchport:getInterfaceSwitchport": {
+            "iosxe:index/getInterfaceSwitchport:getInterfaceSwitchport": {
                 "accessVlan": "access_vlan",
                 "modeAccess": "mode_access",
                 "modeDot1qTunnel": "mode_dot1q_tunnel",
@@ -4037,7 +4037,7 @@
                 "trunkNativeVlan": "trunk_native_vlan",
                 "trunkNativeVlanTag": "trunk_native_vlan_tag"
             },
-            "iosxe:iosxe/getInterfaceTunnel:getInterfaceTunnel": {
+            "iosxe:index/getInterfaceTunnel:getInterfaceTunnel": {
                 "arpTimeout": "arp_timeout",
                 "bfdEcho": "bfd_echo",
                 "bfdEnable": "bfd_enable",
@@ -4071,13 +4071,13 @@
                 "tunnelSource": "tunnel_source",
                 "vrfForwarding": "vrf_forwarding"
             },
-            "iosxe:iosxe/getInterfaceTunnelIpv6Address:getInterfaceTunnelIpv6Address": {
+            "iosxe:index/getInterfaceTunnelIpv6Address:getInterfaceTunnelIpv6Address": {
                 "eui64": "eui_64"
             },
-            "iosxe:iosxe/getInterfaceTunnelIpv6LinkLocalAddress:getInterfaceTunnelIpv6LinkLocalAddress": {
+            "iosxe:index/getInterfaceTunnelIpv6LinkLocalAddress:getInterfaceTunnelIpv6LinkLocalAddress": {
                 "linkLocal": "link_local"
             },
-            "iosxe:iosxe/getInterfaceVlan:getInterfaceVlan": {
+            "iosxe:index/getInterfaceVlan:getInterfaceVlan": {
                 "bfdEcho": "bfd_echo",
                 "bfdEnable": "bfd_enable",
                 "bfdInterval": "bfd_interval",
@@ -4105,17 +4105,17 @@
                 "ipv6NdRaSuppressAll": "ipv6_nd_ra_suppress_all",
                 "vrfForwarding": "vrf_forwarding"
             },
-            "iosxe:iosxe/getInterfaceVlanIpv6Address:getInterfaceVlanIpv6Address": {
+            "iosxe:index/getInterfaceVlanIpv6Address:getInterfaceVlanIpv6Address": {
                 "eui64": "eui_64"
             },
-            "iosxe:iosxe/getInterfaceVlanIpv6LinkLocalAddress:getInterfaceVlanIpv6LinkLocalAddress": {
+            "iosxe:index/getInterfaceVlanIpv6LinkLocalAddress:getInterfaceVlanIpv6LinkLocalAddress": {
                 "linkLocal": "link_local"
             },
-            "iosxe:iosxe/getLine:getLine": {
+            "iosxe:index/getLine:getLine": {
                 "consoles": "console",
                 "vties": "vty"
             },
-            "iosxe:iosxe/getLineConsole:getLineConsole": {
+            "iosxe:index/getLineConsole:getLineConsole": {
                 "execTimeoutMinutes": "exec_timeout_minutes",
                 "execTimeoutSeconds": "exec_timeout_seconds",
                 "loginAuthentication": "login_authentication",
@@ -4124,7 +4124,7 @@
                 "passwordType": "password_type",
                 "privilegeLevel": "privilege_level"
             },
-            "iosxe:iosxe/getLineVty:getLineVty": {
+            "iosxe:index/getLineVty:getLineVty": {
                 "accessClasses": "access_classes",
                 "escapeCharacter": "escape_character",
                 "execTimeoutMinutes": "exec_timeout_minutes",
@@ -4134,11 +4134,11 @@
                 "passwordType": "password_type",
                 "transportPreferredProtocol": "transport_preferred_protocol"
             },
-            "iosxe:iosxe/getLineVtyAccessClass:getLineVtyAccessClass": {
+            "iosxe:index/getLineVtyAccessClass:getLineVtyAccessClass": {
                 "accessList": "access_list",
                 "vrfAlso": "vrf_also"
             },
-            "iosxe:iosxe/getLogging:getLogging": {
+            "iosxe:index/getLogging:getLogging": {
                 "bufferedSeverity": "buffered_severity",
                 "bufferedSize": "buffered_size",
                 "consoleSeverity": "console_severity",
@@ -4159,82 +4159,82 @@
                 "sourceInterfacesVrves": "source_interfaces_vrf",
                 "trapSeverity": "trap_severity"
             },
-            "iosxe:iosxe/getLoggingIpv4Host:getLoggingIpv4Host": {
+            "iosxe:index/getLoggingIpv4Host:getLoggingIpv4Host": {
                 "ipv4Host": "ipv4_host"
             },
-            "iosxe:iosxe/getLoggingIpv4HostTransport:getLoggingIpv4HostTransport": {
+            "iosxe:index/getLoggingIpv4HostTransport:getLoggingIpv4HostTransport": {
                 "ipv4Host": "ipv4_host",
                 "transportTcpPorts": "transport_tcp_ports",
                 "transportTlsPorts": "transport_tls_ports",
                 "transportUdpPorts": "transport_udp_ports"
             },
-            "iosxe:iosxe/getLoggingIpv4HostTransportTransportTcpPort:getLoggingIpv4HostTransportTransportTcpPort": {
+            "iosxe:index/getLoggingIpv4HostTransportTransportTcpPort:getLoggingIpv4HostTransportTransportTcpPort": {
                 "portNumber": "port_number"
             },
-            "iosxe:iosxe/getLoggingIpv4HostTransportTransportTlsPort:getLoggingIpv4HostTransportTransportTlsPort": {
+            "iosxe:index/getLoggingIpv4HostTransportTransportTlsPort:getLoggingIpv4HostTransportTransportTlsPort": {
                 "portNumber": "port_number"
             },
-            "iosxe:iosxe/getLoggingIpv4HostTransportTransportUdpPort:getLoggingIpv4HostTransportTransportUdpPort": {
+            "iosxe:index/getLoggingIpv4HostTransportTransportUdpPort:getLoggingIpv4HostTransportTransportUdpPort": {
                 "portNumber": "port_number"
             },
-            "iosxe:iosxe/getLoggingIpv4HostVrfTransport:getLoggingIpv4HostVrfTransport": {
+            "iosxe:index/getLoggingIpv4HostVrfTransport:getLoggingIpv4HostVrfTransport": {
                 "ipv4Host": "ipv4_host",
                 "transportTcpPorts": "transport_tcp_ports",
                 "transportTlsPorts": "transport_tls_ports",
                 "transportUdpPorts": "transport_udp_ports"
             },
-            "iosxe:iosxe/getLoggingIpv4HostVrfTransportTransportTcpPort:getLoggingIpv4HostVrfTransportTransportTcpPort": {
+            "iosxe:index/getLoggingIpv4HostVrfTransportTransportTcpPort:getLoggingIpv4HostVrfTransportTransportTcpPort": {
                 "portNumber": "port_number"
             },
-            "iosxe:iosxe/getLoggingIpv4HostVrfTransportTransportTlsPort:getLoggingIpv4HostVrfTransportTransportTlsPort": {
+            "iosxe:index/getLoggingIpv4HostVrfTransportTransportTlsPort:getLoggingIpv4HostVrfTransportTransportTlsPort": {
                 "portNumber": "port_number"
             },
-            "iosxe:iosxe/getLoggingIpv4HostVrfTransportTransportUdpPort:getLoggingIpv4HostVrfTransportTransportUdpPort": {
+            "iosxe:index/getLoggingIpv4HostVrfTransportTransportUdpPort:getLoggingIpv4HostVrfTransportTransportUdpPort": {
                 "portNumber": "port_number"
             },
-            "iosxe:iosxe/getLoggingIpv4VrfHost:getLoggingIpv4VrfHost": {
+            "iosxe:index/getLoggingIpv4VrfHost:getLoggingIpv4VrfHost": {
                 "ipv4Host": "ipv4_host"
             },
-            "iosxe:iosxe/getLoggingIpv6Host:getLoggingIpv6Host": {
+            "iosxe:index/getLoggingIpv6Host:getLoggingIpv6Host": {
                 "ipv6Host": "ipv6_host"
             },
-            "iosxe:iosxe/getLoggingIpv6HostTransport:getLoggingIpv6HostTransport": {
+            "iosxe:index/getLoggingIpv6HostTransport:getLoggingIpv6HostTransport": {
                 "ipv6Host": "ipv6_host",
                 "transportTcpPorts": "transport_tcp_ports",
                 "transportTlsPorts": "transport_tls_ports",
                 "transportUdpPorts": "transport_udp_ports"
             },
-            "iosxe:iosxe/getLoggingIpv6HostTransportTransportTcpPort:getLoggingIpv6HostTransportTransportTcpPort": {
+            "iosxe:index/getLoggingIpv6HostTransportTransportTcpPort:getLoggingIpv6HostTransportTransportTcpPort": {
                 "portNumber": "port_number"
             },
-            "iosxe:iosxe/getLoggingIpv6HostTransportTransportTlsPort:getLoggingIpv6HostTransportTransportTlsPort": {
+            "iosxe:index/getLoggingIpv6HostTransportTransportTlsPort:getLoggingIpv6HostTransportTransportTlsPort": {
                 "portNumber": "port_number"
             },
-            "iosxe:iosxe/getLoggingIpv6HostTransportTransportUdpPort:getLoggingIpv6HostTransportTransportUdpPort": {
+            "iosxe:index/getLoggingIpv6HostTransportTransportUdpPort:getLoggingIpv6HostTransportTransportUdpPort": {
                 "portNumber": "port_number"
             },
-            "iosxe:iosxe/getLoggingIpv6HostVrfTransport:getLoggingIpv6HostVrfTransport": {
+            "iosxe:index/getLoggingIpv6HostVrfTransport:getLoggingIpv6HostVrfTransport": {
                 "ipv6Host": "ipv6_host",
                 "transportTcpPorts": "transport_tcp_ports",
                 "transportTlsPorts": "transport_tls_ports",
                 "transportUdpPorts": "transport_udp_ports"
             },
-            "iosxe:iosxe/getLoggingIpv6HostVrfTransportTransportTcpPort:getLoggingIpv6HostVrfTransportTransportTcpPort": {
+            "iosxe:index/getLoggingIpv6HostVrfTransportTransportTcpPort:getLoggingIpv6HostVrfTransportTransportTcpPort": {
                 "portNumber": "port_number"
             },
-            "iosxe:iosxe/getLoggingIpv6HostVrfTransportTransportTlsPort:getLoggingIpv6HostVrfTransportTransportTlsPort": {
+            "iosxe:index/getLoggingIpv6HostVrfTransportTransportTlsPort:getLoggingIpv6HostVrfTransportTransportTlsPort": {
                 "portNumber": "port_number"
             },
-            "iosxe:iosxe/getLoggingIpv6HostVrfTransportTransportUdpPort:getLoggingIpv6HostVrfTransportTransportUdpPort": {
+            "iosxe:index/getLoggingIpv6HostVrfTransportTransportUdpPort:getLoggingIpv6HostVrfTransportTransportUdpPort": {
                 "portNumber": "port_number"
             },
-            "iosxe:iosxe/getLoggingIpv6VrfHost:getLoggingIpv6VrfHost": {
+            "iosxe:index/getLoggingIpv6VrfHost:getLoggingIpv6VrfHost": {
                 "ipv6Host": "ipv6_host"
             },
-            "iosxe:iosxe/getLoggingSourceInterfacesVrf:getLoggingSourceInterfacesVrf": {
+            "iosxe:index/getLoggingSourceInterfacesVrf:getLoggingSourceInterfacesVrf": {
                 "interfaceName": "interface_name"
             },
-            "iosxe:iosxe/getMdtSubscription:getMdtSubscription": {
+            "iosxe:index/getMdtSubscription:getMdtSubscription": {
                 "filterXpath": "filter_xpath",
                 "sourceAddress": "source_address",
                 "sourceVrf": "source_vrf",
@@ -4242,21 +4242,21 @@
                 "updatePolicyOnChange": "update_policy_on_change",
                 "updatePolicyPeriodic": "update_policy_periodic"
             },
-            "iosxe:iosxe/getMsdp:getMsdp": {
+            "iosxe:index/getMsdp:getMsdp": {
                 "originatorId": "originator_id"
             },
-            "iosxe:iosxe/getMsdpPeer:getMsdpPeer": {
+            "iosxe:index/getMsdpPeer:getMsdpPeer": {
                 "connectSourceLoopback": "connect_source_loopback",
                 "remoteAs": "remote_as"
             },
-            "iosxe:iosxe/getMsdpVrf:getMsdpVrf": {
+            "iosxe:index/getMsdpVrf:getMsdpVrf": {
                 "originatorId": "originator_id"
             },
-            "iosxe:iosxe/getMsdpVrfPeer:getMsdpVrfPeer": {
+            "iosxe:index/getMsdpVrfPeer:getMsdpVrfPeer": {
                 "connectSourceLoopback": "connect_source_loopback",
                 "remoteAs": "remote_as"
             },
-            "iosxe:iosxe/getNtp:getNtp": {
+            "iosxe:index/getNtp:getNtp": {
                 "accessGroupPeerAcl": "access_group_peer_acl",
                 "accessGroupQueryOnlyAcl": "access_group_query_only_acl",
                 "accessGroupServeAcl": "access_group_serve_acl",
@@ -4276,25 +4276,25 @@
                 "trapSourceVlan": "trap_source_vlan",
                 "updateCalendar": "update_calendar"
             },
-            "iosxe:iosxe/getNtpAuthenticationKey:getNtpAuthenticationKey": {
+            "iosxe:index/getNtpAuthenticationKey:getNtpAuthenticationKey": {
                 "cmacAes128": "cmac_aes_128",
                 "encryptionType": "encryption_type",
                 "hmacSha1": "hmac_sha1",
                 "hmacSha2256": "hmac_sha2_256"
             },
-            "iosxe:iosxe/getNtpPeer:getNtpPeer": {
+            "iosxe:index/getNtpPeer:getNtpPeer": {
                 "ipAddress": "ip_address"
             },
-            "iosxe:iosxe/getNtpPeerVrfPeer:getNtpPeerVrfPeer": {
+            "iosxe:index/getNtpPeerVrfPeer:getNtpPeerVrfPeer": {
                 "ipAddress": "ip_address"
             },
-            "iosxe:iosxe/getNtpServer:getNtpServer": {
+            "iosxe:index/getNtpServer:getNtpServer": {
                 "ipAddress": "ip_address"
             },
-            "iosxe:iosxe/getNtpServerVrfServer:getNtpServerVrfServer": {
+            "iosxe:index/getNtpServerVrfServer:getNtpServerVrfServer": {
                 "ipAddress": "ip_address"
             },
-            "iosxe:iosxe/getOspf:getOspf": {
+            "iosxe:index/getOspf:getOspf": {
                 "bfdAllInterfaces": "bfd_all_interfaces",
                 "defaultInformationOriginate": "default_information_originate",
                 "defaultInformationOriginateAlways": "default_information_originate_always",
@@ -4307,7 +4307,7 @@
                 "routerId": "router_id",
                 "summaryAddresses": "summary_addresses"
             },
-            "iosxe:iosxe/getOspfArea:getOspfArea": {
+            "iosxe:index/getOspfArea:getOspfArea": {
                 "areaId": "area_id",
                 "authenticationMessageDigest": "authentication_message_digest",
                 "nssaDefaultInformationOriginate": "nssa_default_information_originate",
@@ -4316,7 +4316,7 @@
                 "nssaNoRedistribution": "nssa_no_redistribution",
                 "nssaNoSummary": "nssa_no_summary"
             },
-            "iosxe:iosxe/getOspfVrf:getOspfVrf": {
+            "iosxe:index/getOspfVrf:getOspfVrf": {
                 "bfdAllInterfaces": "bfd_all_interfaces",
                 "defaultInformationOriginate": "default_information_originate",
                 "defaultInformationOriginateAlways": "default_information_originate_always",
@@ -4331,7 +4331,7 @@
                 "routerId": "router_id",
                 "summaryAddresses": "summary_address"
             },
-            "iosxe:iosxe/getOspfVrfArea:getOspfVrfArea": {
+            "iosxe:index/getOspfVrfArea:getOspfVrfArea": {
                 "areaId": "area_id",
                 "authenticationMessageDigest": "authentication_message_digest",
                 "nssaDefaultInformationOriginate": "nssa_default_information_originate",
@@ -4340,7 +4340,7 @@
                 "nssaNoRedistribution": "nssa_no_redistribution",
                 "nssaNoSummary": "nssa_no_summary"
             },
-            "iosxe:iosxe/getPim:getPim": {
+            "iosxe:index/getPim:getPim": {
                 "autorpListener": "autorp_listener",
                 "bsrCandidateAcceptRpCandidate": "bsr_candidate_accept_rp_candidate",
                 "bsrCandidateLoopback": "bsr_candidate_loopback",
@@ -4354,14 +4354,14 @@
                 "ssmDefault": "ssm_default",
                 "ssmRange": "ssm_range"
             },
-            "iosxe:iosxe/getPimRpAddress:getPimRpAddress": {
+            "iosxe:index/getPimRpAddress:getPimRpAddress": {
                 "accessList": "access_list",
                 "rpAddress": "rp_address"
             },
-            "iosxe:iosxe/getPimRpCandidate:getPimRpCandidate": {
+            "iosxe:index/getPimRpCandidate:getPimRpCandidate": {
                 "groupList": "group_list"
             },
-            "iosxe:iosxe/getPimVrf:getPimVrf": {
+            "iosxe:index/getPimVrf:getPimVrf": {
                 "autorpListener": "autorp_listener",
                 "bsrCandidateAcceptRpCandidate": "bsr_candidate_accept_rp_candidate",
                 "bsrCandidateLoopback": "bsr_candidate_loopback",
@@ -4376,23 +4376,23 @@
                 "ssmDefault": "ssm_default",
                 "ssmRange": "ssm_range"
             },
-            "iosxe:iosxe/getPimVrfRpAddress:getPimVrfRpAddress": {
+            "iosxe:index/getPimVrfRpAddress:getPimVrfRpAddress": {
                 "accessList": "access_list",
                 "rpAddress": "rp_address"
             },
-            "iosxe:iosxe/getPimVrfRpCandidate:getPimVrfRpCandidate": {
+            "iosxe:index/getPimVrfRpCandidate:getPimVrfRpCandidate": {
                 "groupList": "group_list"
             },
-            "iosxe:iosxe/getPolicyMapEvent:getPolicyMapEvent": {
+            "iosxe:index/getPolicyMapEvent:getPolicyMapEvent": {
                 "classNumbers": "class_numbers",
                 "eventType": "event_type",
                 "matchType": "match_type"
             },
-            "iosxe:iosxe/getPolicyMapEventClassNumber:getPolicyMapEventClassNumber": {
+            "iosxe:index/getPolicyMapEventClassNumber:getPolicyMapEventClassNumber": {
                 "actionNumbers": "action_numbers",
                 "executionType": "execution_type"
             },
-            "iosxe:iosxe/getPolicyMapEventClassNumberActionNumber:getPolicyMapEventClassNumberActionNumber": {
+            "iosxe:index/getPolicyMapEventClassNumberActionNumber:getPolicyMapEventClassNumberActionNumber": {
                 "activateServiceTemplateConfigServiceTemplate": "activate_service_template_config_service_template",
                 "authenticateUsingMethod": "authenticate_using_method",
                 "authenticateUsingPriority": "authenticate_using_priority",
@@ -4401,7 +4401,7 @@
                 "pauseReauthentication": "pause_reauthentication",
                 "terminateConfig": "terminate_config"
             },
-            "iosxe:iosxe/getRadius:getRadius": {
+            "iosxe:index/getRadius:getRadius": {
                 "accountingPort": "accounting_port",
                 "authenticationPort": "authentication_port",
                 "automateTesterIgnoreAcctPort": "automate_tester_ignore_acct_port",
@@ -4411,23 +4411,23 @@
                 "pacKey": "pac_key",
                 "pacKeyEncryption": "pac_key_encryption"
             },
-            "iosxe:iosxe/getRadiusServer:getRadiusServer": {
+            "iosxe:index/getRadiusServer:getRadiusServer": {
                 "deadCriteriaTime": "dead_criteria_time",
                 "deadCriteriaTries": "dead_criteria_tries"
             },
-            "iosxe:iosxe/getRadiusServerAttribute:getRadiusServerAttribute": {
+            "iosxe:index/getRadiusServerAttribute:getRadiusServerAttribute": {
                 "accessRequestInclude": "access_request_include",
                 "attribute31Parameters": "attribute_31_parameters",
                 "sendAttributes": "send_attributes"
             },
-            "iosxe:iosxe/getRadiusServerAttributeAttribute31Parameter:getRadiusServerAttributeAttribute31Parameter": {
+            "iosxe:index/getRadiusServerAttributeAttribute31Parameter:getRadiusServerAttributeAttribute31Parameter": {
                 "callingStationId": "calling_station_id",
                 "idMacFormat": "id_mac_format",
                 "idMacLuCase": "id_mac_lu_case",
                 "idSendMacOnly": "id_send_mac_only",
                 "idSendNasPortDetail": "id_send_nas_port_detail"
             },
-            "iosxe:iosxe/getRouteMapEntry:getRouteMapEntry": {
+            "iosxe:index/getRouteMapEntry:getRouteMapEntry": {
                 "continueSequenceNumber": "continue_sequence_number",
                 "matchAsPaths": "match_as_paths",
                 "matchAsPathsLegacies": "match_as_paths_legacy",
@@ -4523,7 +4523,7 @@
                 "setWeight": "set_weight",
                 "setWeightLegacy": "set_weight_legacy"
             },
-            "iosxe:iosxe/getService:getService": {
+            "iosxe:index/getService:getService": {
                 "callHome": "call_home",
                 "compressConfig": "compress_config",
                 "passwordEncryption": "password_encryption",
@@ -4546,7 +4546,7 @@
                 "timestampsLogDatetimeYear": "timestamps_log_datetime_year",
                 "timestampsLogUptime": "timestamps_log_uptime"
             },
-            "iosxe:iosxe/getServiceTemplate:getServiceTemplate": {
+            "iosxe:index/getServiceTemplate:getServiceTemplate": {
                 "absoluteTimer": "absolute_timer",
                 "accessGroups": "access_groups",
                 "dnsAclPreauth": "dns_acl_preauth",
@@ -4565,7 +4565,7 @@
                 "tunnelCapwapName": "tunnel_capwap_name",
                 "voiceVlan": "voice_vlan"
             },
-            "iosxe:iosxe/getSnmpServer:getSnmpServer": {
+            "iosxe:index/getSnmpServer:getSnmpServer": {
                 "chassisId": "chassis_id",
                 "enableInforms": "enable_informs",
                 "enableLoggingGetop": "enable_logging_getop",
@@ -4709,10 +4709,10 @@
                 "trapSourceTenGigabitEthernet": "trap_source_ten_gigabit_ethernet",
                 "trapSourceVlan": "trap_source_vlan"
             },
-            "iosxe:iosxe/getSnmpServerGroup:getSnmpServerGroup": {
+            "iosxe:index/getSnmpServerGroup:getSnmpServerGroup": {
                 "v3Securities": "v3_security"
             },
-            "iosxe:iosxe/getSnmpServerGroupV3Security:getSnmpServerGroupV3Security": {
+            "iosxe:index/getSnmpServerGroupV3Security:getSnmpServerGroupV3Security": {
                 "accessAclName": "access_acl_name",
                 "accessIpv6Acl": "access_ipv6_acl",
                 "accessStandardAcl": "access_standard_acl",
@@ -4723,14 +4723,14 @@
                 "securityLevel": "security_level",
                 "writeNode": "write_node"
             },
-            "iosxe:iosxe/getSnmpServerHost:getSnmpServerHost": {
+            "iosxe:index/getSnmpServerHost:getSnmpServerHost": {
                 "communityOrUser": "community_or_user",
                 "ipAddress": "ip_address"
             },
-            "iosxe:iosxe/getSnmpServerSnmpCommunity:getSnmpServerSnmpCommunity": {
+            "iosxe:index/getSnmpServerSnmpCommunity:getSnmpServerSnmpCommunity": {
                 "accessListName": "access_list_name"
             },
-            "iosxe:iosxe/getSnmpServerUser:getSnmpServerUser": {
+            "iosxe:index/getSnmpServerUser:getSnmpServerUser": {
                 "v3AuthAccessAclName": "v3_auth_access_acl_name",
                 "v3AuthAccessIpv6Acl": "v3_auth_access_ipv6_acl",
                 "v3AuthAccessStandardAcl": "v3_auth_access_standard_acl",
@@ -4750,22 +4750,22 @@
                 "v3AuthPrivDesAccessStandardAcl": "v3_auth_priv_des_access_standard_acl",
                 "v3AuthPrivDesPassword": "v3_auth_priv_des_password"
             },
-            "iosxe:iosxe/getSnmpServerView:getSnmpServerView": {
+            "iosxe:index/getSnmpServerView:getSnmpServerView": {
                 "incExl": "inc_exl"
             },
-            "iosxe:iosxe/getStaticRoute:getStaticRoute": {
+            "iosxe:index/getStaticRoute:getStaticRoute": {
                 "nextHops": "next_hops"
             },
-            "iosxe:iosxe/getStaticRouteNextHop:getStaticRouteNextHop": {
+            "iosxe:index/getStaticRouteNextHop:getStaticRouteNextHop": {
                 "nextHop": "next_hop"
             },
-            "iosxe:iosxe/getStaticRouteVrfRoute:getStaticRouteVrfRoute": {
+            "iosxe:index/getStaticRouteVrfRoute:getStaticRouteVrfRoute": {
                 "nextHops": "next_hops"
             },
-            "iosxe:iosxe/getStaticRouteVrfRouteNextHop:getStaticRouteVrfRouteNextHop": {
+            "iosxe:index/getStaticRouteVrfRouteNextHop:getStaticRouteVrfRouteNextHop": {
                 "nextHop": "next_hop"
             },
-            "iosxe:iosxe/getSystem:getSystem": {
+            "iosxe:index/getSystem:getSystem": {
                 "ipDomainLookup": "ip_domain_lookup",
                 "ipDomainName": "ip_domain_name",
                 "ipMulticastRouting": "ip_multicast_routing",
@@ -4781,10 +4781,10 @@
                 "multicastRoutingSwitch": "multicast_routing_switch",
                 "multicastRoutingVrfs": "multicast_routing_vrfs"
             },
-            "iosxe:iosxe/getTacacsServer:getTacacsServer": {
+            "iosxe:index/getTacacsServer:getTacacsServer": {
                 "addressIpv4": "address_ipv4"
             },
-            "iosxe:iosxe/getTemplate:getTemplate": {
+            "iosxe:index/getTemplate:getTemplate": {
                 "accessSessionClosed": "access_session_closed",
                 "accessSessionControlDirection": "access_session_control_direction",
                 "accessSessionHostMode": "access_session_host_mode",
@@ -4857,25 +4857,25 @@
                 "switchportVoiceVlan": "switchport_voice_vlan",
                 "templateName": "template_name"
             },
-            "iosxe:iosxe/getTemplateDeviceTrackingAttachPolicy:getTemplateDeviceTrackingAttachPolicy": {
+            "iosxe:index/getTemplateDeviceTrackingAttachPolicy:getTemplateDeviceTrackingAttachPolicy": {
                 "policyName": "policy_name",
                 "vlanRange": "vlan_range"
             },
-            "iosxe:iosxe/getTemplateIpAccessGroup:getTemplateIpAccessGroup": {
+            "iosxe:index/getTemplateIpAccessGroup:getTemplateIpAccessGroup": {
                 "accessList": "access_list"
             },
-            "iosxe:iosxe/getTemplateSwitchportPortSecurityMaximumRange:getTemplateSwitchportPortSecurityMaximumRange": {
+            "iosxe:index/getTemplateSwitchportPortSecurityMaximumRange:getTemplateSwitchportPortSecurityMaximumRange": {
                 "vlanAccess": "vlan_access"
             },
-            "iosxe:iosxe/getUdld:getUdld": {
+            "iosxe:index/getUdld:getUdld": {
                 "messageTime": "message_time",
                 "recoveryInterval": "recovery_interval"
             },
-            "iosxe:iosxe/getUsername:getUsername": {
+            "iosxe:index/getUsername:getUsername": {
                 "passwordEncryption": "password_encryption",
                 "secretEncryption": "secret_encryption"
             },
-            "iosxe:iosxe/getVlan:getVlan": {
+            "iosxe:index/getVlan:getVlan": {
                 "privateVlanAssociation": "private_vlan_association",
                 "privateVlanCommunity": "private_vlan_community",
                 "privateVlanIsolated": "private_vlan_isolated",
@@ -4883,17 +4883,17 @@
                 "remoteSpan": "remote_span",
                 "vlanId": "vlan_id"
             },
-            "iosxe:iosxe/getVlanAccessMap:getVlanAccessMap": {
+            "iosxe:index/getVlanAccessMap:getVlanAccessMap": {
                 "matchIpAddresses": "match_ip_address",
                 "matchIpv6Addresses": "match_ipv6_address"
             },
-            "iosxe:iosxe/getVlanConfiguration:getVlanConfiguration": {
+            "iosxe:index/getVlanConfiguration:getVlanConfiguration": {
                 "accessVfi": "access_vfi",
                 "evpnInstance": "evpn_instance",
                 "evpnInstanceVni": "evpn_instance_vni",
                 "vlanId": "vlan_id"
             },
-            "iosxe:iosxe/getVrf:getVrf": {
+            "iosxe:index/getVrf:getVrf": {
                 "addressFamilyIpv4": "address_family_ipv4",
                 "addressFamilyIpv6": "address_family_ipv6",
                 "ipv4RouteTargetExportStitchings": "ipv4_route_target_export_stitching",
@@ -4908,7 +4908,7 @@
                 "routeTargetImports": "route_target_import",
                 "vpnId": "vpn_id"
             },
-            "iosxe:iosxe/getVtp:getVtp": {
+            "iosxe:index/getVtp:getVtp": {
                 "interfaceOnly": "interface_only",
                 "modeClientMst": "mode_client_mst",
                 "modeClientUnknown": "mode_client_unknown",
@@ -4925,7 +4925,7 @@
                 "passwordHidden": "password_hidden",
                 "passwordSecret": "password_secret"
             },
-            "iosxe:iosxe/interfaceEthernet:InterfaceEthernet": {
+            "iosxe:index/interfaceEthernet:InterfaceEthernet": {
                 "arpTimeout": "arp_timeout",
                 "autoQosClassify": "auto_qos_classify",
                 "autoQosClassifyPolice": "auto_qos_classify_police",
@@ -4978,7 +4978,7 @@
                 "trustDevice": "trust_device",
                 "vrfForwarding": "vrf_forwarding"
             },
-            "iosxe:iosxe/interfaceLoopback:InterfaceLoopback": {
+            "iosxe:index/interfaceLoopback:InterfaceLoopback": {
                 "arpTimeout": "arp_timeout",
                 "deleteMode": "delete_mode",
                 "ipAccessGroupIn": "ip_access_group_in",
@@ -4999,16 +4999,16 @@
                 "ipv6NdRaSuppressAll": "ipv6_nd_ra_suppress_all",
                 "vrfForwarding": "vrf_forwarding"
             },
-            "iosxe:iosxe/interfaceMpls:InterfaceMpls": {
+            "iosxe:index/interfaceMpls:InterfaceMpls": {
                 "deleteMode": "delete_mode"
             },
-            "iosxe:iosxe/interfaceNve:InterfaceNve": {
+            "iosxe:index/interfaceNve:InterfaceNve": {
                 "deleteMode": "delete_mode",
                 "hostReachabilityProtocolBgp": "host_reachability_protocol_bgp",
                 "sourceInterfaceLoopback": "source_interface_loopback",
                 "vniVrfs": "vni_vrfs"
             },
-            "iosxe:iosxe/interfaceOspf:InterfaceOspf": {
+            "iosxe:index/interfaceOspf:InterfaceOspf": {
                 "deadInterval": "dead_interval",
                 "deleteMode": "delete_mode",
                 "helloInterval": "hello_interval",
@@ -5021,21 +5021,21 @@
                 "processIds": "process_ids",
                 "ttlSecurityHops": "ttl_security_hops"
             },
-            "iosxe:iosxe/interfaceOspfv3:InterfaceOspfv3": {
+            "iosxe:index/interfaceOspfv3:InterfaceOspfv3": {
                 "deleteMode": "delete_mode",
                 "networkTypeBroadcast": "network_type_broadcast",
                 "networkTypeNonBroadcast": "network_type_non_broadcast",
                 "networkTypePointToMultipoint": "network_type_point_to_multipoint",
                 "networkTypePointToPoint": "network_type_point_to_point"
             },
-            "iosxe:iosxe/interfacePim:InterfacePim": {
+            "iosxe:index/interfacePim:InterfacePim": {
                 "bsrBorder": "bsr_border",
                 "denseMode": "dense_mode",
                 "drPriority": "dr_priority",
                 "sparseDenseMode": "sparse_dense_mode",
                 "sparseMode": "sparse_mode"
             },
-            "iosxe:iosxe/interfacePortChannel:InterfacePortChannel": {
+            "iosxe:index/interfacePortChannel:InterfacePortChannel": {
                 "arpTimeout": "arp_timeout",
                 "autoQosClassify": "auto_qos_classify",
                 "autoQosClassifyPolice": "auto_qos_classify_police",
@@ -5083,7 +5083,7 @@
                 "trustDevice": "trust_device",
                 "vrfForwarding": "vrf_forwarding"
             },
-            "iosxe:iosxe/interfacePortChannelSubinterface:InterfacePortChannelSubinterface": {
+            "iosxe:index/interfacePortChannelSubinterface:InterfacePortChannelSubinterface": {
                 "arpTimeout": "arp_timeout",
                 "autoQosClassify": "auto_qos_classify",
                 "autoQosClassifyPolice": "auto_qos_classify_police",
@@ -5128,7 +5128,7 @@
                 "trustDevice": "trust_device",
                 "vrfForwarding": "vrf_forwarding"
             },
-            "iosxe:iosxe/interfaceSwitchport:InterfaceSwitchport": {
+            "iosxe:index/interfaceSwitchport:InterfaceSwitchport": {
                 "accessVlan": "access_vlan",
                 "deleteMode": "delete_mode",
                 "modeAccess": "mode_access",
@@ -5142,7 +5142,7 @@
                 "trunkNativeVlan": "trunk_native_vlan",
                 "trunkNativeVlanTag": "trunk_native_vlan_tag"
             },
-            "iosxe:iosxe/interfaceTunnel:InterfaceTunnel": {
+            "iosxe:index/interfaceTunnel:InterfaceTunnel": {
                 "arpTimeout": "arp_timeout",
                 "bfdEcho": "bfd_echo",
                 "bfdEnable": "bfd_enable",
@@ -5177,7 +5177,7 @@
                 "tunnelSource": "tunnel_source",
                 "vrfForwarding": "vrf_forwarding"
             },
-            "iosxe:iosxe/interfaceVlan:InterfaceVlan": {
+            "iosxe:index/interfaceVlan:InterfaceVlan": {
                 "bfdEcho": "bfd_echo",
                 "bfdEnable": "bfd_enable",
                 "bfdInterval": "bfd_interval",
@@ -5206,12 +5206,12 @@
                 "ipv6NdRaSuppressAll": "ipv6_nd_ra_suppress_all",
                 "vrfForwarding": "vrf_forwarding"
             },
-            "iosxe:iosxe/line:Line": {
+            "iosxe:index/line:Line": {
                 "consoles": "console",
                 "deleteMode": "delete_mode",
                 "vties": "vty"
             },
-            "iosxe:iosxe/logging:Logging": {
+            "iosxe:index/logging:Logging": {
                 "bufferedSeverity": "buffered_severity",
                 "bufferedSize": "buffered_size",
                 "consoleSeverity": "console_severity",
@@ -5232,35 +5232,35 @@
                 "sourceInterfacesVrves": "source_interfaces_vrf",
                 "trapSeverity": "trap_severity"
             },
-            "iosxe:iosxe/loggingIpv4HostTransport:LoggingIpv4HostTransport": {
+            "iosxe:index/loggingIpv4HostTransport:LoggingIpv4HostTransport": {
                 "deleteMode": "delete_mode",
                 "ipv4Host": "ipv4_host",
                 "transportTcpPorts": "transport_tcp_ports",
                 "transportTlsPorts": "transport_tls_ports",
                 "transportUdpPorts": "transport_udp_ports"
             },
-            "iosxe:iosxe/loggingIpv4HostVrfTransport:LoggingIpv4HostVrfTransport": {
+            "iosxe:index/loggingIpv4HostVrfTransport:LoggingIpv4HostVrfTransport": {
                 "deleteMode": "delete_mode",
                 "ipv4Host": "ipv4_host",
                 "transportTcpPorts": "transport_tcp_ports",
                 "transportTlsPorts": "transport_tls_ports",
                 "transportUdpPorts": "transport_udp_ports"
             },
-            "iosxe:iosxe/loggingIpv6HostTransport:LoggingIpv6HostTransport": {
+            "iosxe:index/loggingIpv6HostTransport:LoggingIpv6HostTransport": {
                 "deleteMode": "delete_mode",
                 "ipv6Host": "ipv6_host",
                 "transportTcpPorts": "transport_tcp_ports",
                 "transportTlsPorts": "transport_tls_ports",
                 "transportUdpPorts": "transport_udp_ports"
             },
-            "iosxe:iosxe/loggingIpv6HostVrfTransport:LoggingIpv6HostVrfTransport": {
+            "iosxe:index/loggingIpv6HostVrfTransport:LoggingIpv6HostVrfTransport": {
                 "deleteMode": "delete_mode",
                 "ipv6Host": "ipv6_host",
                 "transportTcpPorts": "transport_tcp_ports",
                 "transportTlsPorts": "transport_tls_ports",
                 "transportUdpPorts": "transport_udp_ports"
             },
-            "iosxe:iosxe/mdtSubscription:MdtSubscription": {
+            "iosxe:index/mdtSubscription:MdtSubscription": {
                 "filterXpath": "filter_xpath",
                 "sourceAddress": "source_address",
                 "sourceVrf": "source_vrf",
@@ -5268,15 +5268,15 @@
                 "updatePolicyOnChange": "update_policy_on_change",
                 "updatePolicyPeriodic": "update_policy_periodic"
             },
-            "iosxe:iosxe/msdp:Msdp": {
+            "iosxe:index/msdp:Msdp": {
                 "deleteMode": "delete_mode",
                 "originatorId": "originator_id"
             },
-            "iosxe:iosxe/msdpVrf:MsdpVrf": {
+            "iosxe:index/msdpVrf:MsdpVrf": {
                 "deleteMode": "delete_mode",
                 "originatorId": "originator_id"
             },
-            "iosxe:iosxe/ntp:Ntp": {
+            "iosxe:index/ntp:Ntp": {
                 "accessGroupPeerAcl": "access_group_peer_acl",
                 "accessGroupQueryOnlyAcl": "access_group_query_only_acl",
                 "accessGroupServeAcl": "access_group_serve_acl",
@@ -5297,7 +5297,7 @@
                 "trapSourceVlan": "trap_source_vlan",
                 "updateCalendar": "update_calendar"
             },
-            "iosxe:iosxe/ospf:Ospf": {
+            "iosxe:index/ospf:Ospf": {
                 "bfdAllInterfaces": "bfd_all_interfaces",
                 "defaultInformationOriginate": "default_information_originate",
                 "defaultInformationOriginateAlways": "default_information_originate_always",
@@ -5311,7 +5311,7 @@
                 "routerId": "router_id",
                 "summaryAddresses": "summary_addresses"
             },
-            "iosxe:iosxe/ospfVrf:OspfVrf": {
+            "iosxe:index/ospfVrf:OspfVrf": {
                 "bfdAllInterfaces": "bfd_all_interfaces",
                 "defaultInformationOriginate": "default_information_originate",
                 "defaultInformationOriginateAlways": "default_information_originate_always",
@@ -5327,7 +5327,7 @@
                 "routerId": "router_id",
                 "summaryAddresses": "summary_address"
             },
-            "iosxe:iosxe/pim:Pim": {
+            "iosxe:index/pim:Pim": {
                 "autorpListener": "autorp_listener",
                 "bsrCandidateAcceptRpCandidate": "bsr_candidate_accept_rp_candidate",
                 "bsrCandidateLoopback": "bsr_candidate_loopback",
@@ -5342,7 +5342,7 @@
                 "ssmDefault": "ssm_default",
                 "ssmRange": "ssm_range"
             },
-            "iosxe:iosxe/pimVrf:PimVrf": {
+            "iosxe:index/pimVrf:PimVrf": {
                 "autorpListener": "autorp_listener",
                 "bsrCandidateAcceptRpCandidate": "bsr_candidate_accept_rp_candidate",
                 "bsrCandidateLoopback": "bsr_candidate_loopback",
@@ -5358,12 +5358,12 @@
                 "ssmDefault": "ssm_default",
                 "ssmRange": "ssm_range"
             },
-            "iosxe:iosxe/policyMapEvent:PolicyMapEvent": {
+            "iosxe:index/policyMapEvent:PolicyMapEvent": {
                 "classNumbers": "class_numbers",
                 "eventType": "event_type",
                 "matchType": "match_type"
             },
-            "iosxe:iosxe/radius:Radius": {
+            "iosxe:index/radius:Radius": {
                 "accountingPort": "accounting_port",
                 "authenticationPort": "authentication_port",
                 "automateTesterIgnoreAcctPort": "automate_tester_ignore_acct_port",
@@ -5373,11 +5373,11 @@
                 "pacKey": "pac_key",
                 "pacKeyEncryption": "pac_key_encryption"
             },
-            "iosxe:iosxe/radiusServer:RadiusServer": {
+            "iosxe:index/radiusServer:RadiusServer": {
                 "deadCriteriaTime": "dead_criteria_time",
                 "deadCriteriaTries": "dead_criteria_tries"
             },
-            "iosxe:iosxe/service:Service": {
+            "iosxe:index/service:Service": {
                 "callHome": "call_home",
                 "compressConfig": "compress_config",
                 "passwordEncryption": "password_encryption",
@@ -5400,7 +5400,7 @@
                 "timestampsLogDatetimeYear": "timestamps_log_datetime_year",
                 "timestampsLogUptime": "timestamps_log_uptime"
             },
-            "iosxe:iosxe/serviceTemplate:ServiceTemplate": {
+            "iosxe:index/serviceTemplate:ServiceTemplate": {
                 "absoluteTimer": "absolute_timer",
                 "accessGroups": "access_groups",
                 "dnsAclPreauth": "dns_acl_preauth",
@@ -5419,7 +5419,7 @@
                 "tunnelCapwapName": "tunnel_capwap_name",
                 "voiceVlan": "voice_vlan"
             },
-            "iosxe:iosxe/snmpServer:SnmpServer": {
+            "iosxe:index/snmpServer:SnmpServer": {
                 "chassisId": "chassis_id",
                 "deleteMode": "delete_mode",
                 "enableInforms": "enable_informs",
@@ -5564,10 +5564,10 @@
                 "trapSourceTenGigabitEthernet": "trap_source_ten_gigabit_ethernet",
                 "trapSourceVlan": "trap_source_vlan"
             },
-            "iosxe:iosxe/snmpServerGroup:SnmpServerGroup": {
+            "iosxe:index/snmpServerGroup:SnmpServerGroup": {
                 "v3Securities": "v3_security"
             },
-            "iosxe:iosxe/snmpServerUser:SnmpServerUser": {
+            "iosxe:index/snmpServerUser:SnmpServerUser": {
                 "deleteMode": "delete_mode",
                 "v3AuthAccessAclName": "v3_auth_access_acl_name",
                 "v3AuthAccessIpv6Acl": "v3_auth_access_ipv6_acl",
@@ -5588,10 +5588,10 @@
                 "v3AuthPrivDesAccessStandardAcl": "v3_auth_priv_des_access_standard_acl",
                 "v3AuthPrivDesPassword": "v3_auth_priv_des_password"
             },
-            "iosxe:iosxe/staticRoute:StaticRoute": {
+            "iosxe:index/staticRoute:StaticRoute": {
                 "nextHops": "next_hops"
             },
-            "iosxe:iosxe/system:System": {
+            "iosxe:index/system:System": {
                 "ipDomainLookup": "ip_domain_lookup",
                 "ipDomainName": "ip_domain_name",
                 "ipMulticastRouting": "ip_multicast_routing",
@@ -5607,11 +5607,11 @@
                 "multicastRoutingSwitch": "multicast_routing_switch",
                 "multicastRoutingVrfs": "multicast_routing_vrfs"
             },
-            "iosxe:iosxe/tacacsServer:TacacsServer": {
+            "iosxe:index/tacacsServer:TacacsServer": {
                 "addressIpv4": "address_ipv4",
                 "deleteMode": "delete_mode"
             },
-            "iosxe:iosxe/template:Template": {
+            "iosxe:index/template:Template": {
                 "accessSessionClosed": "access_session_closed",
                 "accessSessionControlDirection": "access_session_control_direction",
                 "accessSessionHostMode": "access_session_host_mode",
@@ -5685,16 +5685,16 @@
                 "switchportVoiceVlan": "switchport_voice_vlan",
                 "templateName": "template_name"
             },
-            "iosxe:iosxe/udld:Udld": {
+            "iosxe:index/udld:Udld": {
                 "deleteMode": "delete_mode",
                 "messageTime": "message_time",
                 "recoveryInterval": "recovery_interval"
             },
-            "iosxe:iosxe/username:Username": {
+            "iosxe:index/username:Username": {
                 "passwordEncryption": "password_encryption",
                 "secretEncryption": "secret_encryption"
             },
-            "iosxe:iosxe/vlan:Vlan": {
+            "iosxe:index/vlan:Vlan": {
                 "privateVlanAssociation": "private_vlan_association",
                 "privateVlanCommunity": "private_vlan_community",
                 "privateVlanIsolated": "private_vlan_isolated",
@@ -5702,17 +5702,17 @@
                 "remoteSpan": "remote_span",
                 "vlanId": "vlan_id"
             },
-            "iosxe:iosxe/vlanAccessMap:VlanAccessMap": {
+            "iosxe:index/vlanAccessMap:VlanAccessMap": {
                 "matchIpAddresses": "match_ip_address",
                 "matchIpv6Addresses": "match_ipv6_address"
             },
-            "iosxe:iosxe/vlanConfiguration:VlanConfiguration": {
+            "iosxe:index/vlanConfiguration:VlanConfiguration": {
                 "accessVfi": "access_vfi",
                 "evpnInstance": "evpn_instance",
                 "evpnInstanceVni": "evpn_instance_vni",
                 "vlanId": "vlan_id"
             },
-            "iosxe:iosxe/vrf:Vrf": {
+            "iosxe:index/vrf:Vrf": {
                 "addressFamilyIpv4": "address_family_ipv4",
                 "addressFamilyIpv6": "address_family_ipv6",
                 "deleteMode": "delete_mode",
@@ -5728,7 +5728,7 @@
                 "routeTargetImports": "route_target_import",
                 "vpnId": "vpn_id"
             },
-            "iosxe:iosxe/vtp:Vtp": {
+            "iosxe:index/vtp:Vtp": {
                 "deleteMode": "delete_mode",
                 "interfaceOnly": "interface_only",
                 "modeClientMst": "mode_client_mst",

@@ -267,7 +267,14 @@ class Aaa(pulumi.CustomResource):
                  session_id: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
-        Create a Aaa resource with the given unique name, props, and options.
+        This resource can manage the AAA configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/aaa:Aaa example "Cisco-IOS-XE-native:native/aaa"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] device: A device name from the provider configuration.
@@ -285,7 +292,14 @@ class Aaa(pulumi.CustomResource):
                  args: Optional[AaaArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a Aaa resource with the given unique name, props, and options.
+        This resource can manage the AAA configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/aaa:Aaa example "Cisco-IOS-XE-native:native/aaa"
+        ```
+
         :param str resource_name: The name of the resource.
         :param AaaArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

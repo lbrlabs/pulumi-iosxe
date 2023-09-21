@@ -12,93 +12,261 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetSnmpServerUserResult {
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return Group to which the user belongs
+     * 
+     */
     private String grpname;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
+    /**
+     * @return Name of the user
+     * 
+     */
     private String username;
+    /**
+     * @return Access-list name
+     * 
+     */
     private String v3AuthAccessAclName;
+    /**
+     * @return Specify IPv6 Named Access-List
+     * 
+     */
     private String v3AuthAccessIpv6Acl;
+    /**
+     * @return Standard IP Access-list allowing access with this community string
+     * 
+     */
     private Integer v3AuthAccessStandardAcl;
+    /**
+     * @return Use HMAC SHA/MD5 algorithm for authentication
+     * 
+     */
     private String v3AuthAlgorithm;
+    /**
+     * @return Authentication password for user
+     * 
+     */
     private String v3AuthPassword;
+    /**
+     * @return Access-list name
+     * 
+     */
     private String v3AuthPrivAesAccessAclName;
+    /**
+     * @return Specify IPv6 Named Access-List
+     * 
+     */
     private String v3AuthPrivAesAccessIpv6Acl;
+    /**
+     * @return Standard IP Access-list allowing access with this community string
+     * 
+     */
     private Integer v3AuthPrivAesAccessStandardAcl;
     private String v3AuthPrivAesAlgorithm;
+    /**
+     * @return Authentication password for user
+     * 
+     */
     private String v3AuthPrivAesPassword;
+    /**
+     * @return Access-list name
+     * 
+     */
     private String v3AuthPrivDes3AccessAclName;
+    /**
+     * @return Specify IPv6 Named Access-List
+     * 
+     */
     private String v3AuthPrivDes3AccessIpv6Acl;
+    /**
+     * @return Standard IP Access-list allowing access with this community string
+     * 
+     */
     private Integer v3AuthPrivDes3AccessStandardAcl;
+    /**
+     * @return Authentication password for user
+     * 
+     */
     private String v3AuthPrivDes3Password;
+    /**
+     * @return Access-list name
+     * 
+     */
     private String v3AuthPrivDesAccessAclName;
+    /**
+     * @return Specify IPv6 Named Access-List
+     * 
+     */
     private String v3AuthPrivDesAccessIpv6Acl;
+    /**
+     * @return Standard IP Access-list allowing access with this community string
+     * 
+     */
     private Integer v3AuthPrivDesAccessStandardAcl;
+    /**
+     * @return Authentication password for user
+     * 
+     */
     private String v3AuthPrivDesPassword;
 
     private GetSnmpServerUserResult() {}
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return Group to which the user belongs
+     * 
+     */
     public String grpname() {
         return this.grpname;
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
+    /**
+     * @return Name of the user
+     * 
+     */
     public String username() {
         return this.username;
     }
+    /**
+     * @return Access-list name
+     * 
+     */
     public String v3AuthAccessAclName() {
         return this.v3AuthAccessAclName;
     }
+    /**
+     * @return Specify IPv6 Named Access-List
+     * 
+     */
     public String v3AuthAccessIpv6Acl() {
         return this.v3AuthAccessIpv6Acl;
     }
+    /**
+     * @return Standard IP Access-list allowing access with this community string
+     * 
+     */
     public Integer v3AuthAccessStandardAcl() {
         return this.v3AuthAccessStandardAcl;
     }
+    /**
+     * @return Use HMAC SHA/MD5 algorithm for authentication
+     * 
+     */
     public String v3AuthAlgorithm() {
         return this.v3AuthAlgorithm;
     }
+    /**
+     * @return Authentication password for user
+     * 
+     */
     public String v3AuthPassword() {
         return this.v3AuthPassword;
     }
+    /**
+     * @return Access-list name
+     * 
+     */
     public String v3AuthPrivAesAccessAclName() {
         return this.v3AuthPrivAesAccessAclName;
     }
+    /**
+     * @return Specify IPv6 Named Access-List
+     * 
+     */
     public String v3AuthPrivAesAccessIpv6Acl() {
         return this.v3AuthPrivAesAccessIpv6Acl;
     }
+    /**
+     * @return Standard IP Access-list allowing access with this community string
+     * 
+     */
     public Integer v3AuthPrivAesAccessStandardAcl() {
         return this.v3AuthPrivAesAccessStandardAcl;
     }
     public String v3AuthPrivAesAlgorithm() {
         return this.v3AuthPrivAesAlgorithm;
     }
+    /**
+     * @return Authentication password for user
+     * 
+     */
     public String v3AuthPrivAesPassword() {
         return this.v3AuthPrivAesPassword;
     }
+    /**
+     * @return Access-list name
+     * 
+     */
     public String v3AuthPrivDes3AccessAclName() {
         return this.v3AuthPrivDes3AccessAclName;
     }
+    /**
+     * @return Specify IPv6 Named Access-List
+     * 
+     */
     public String v3AuthPrivDes3AccessIpv6Acl() {
         return this.v3AuthPrivDes3AccessIpv6Acl;
     }
+    /**
+     * @return Standard IP Access-list allowing access with this community string
+     * 
+     */
     public Integer v3AuthPrivDes3AccessStandardAcl() {
         return this.v3AuthPrivDes3AccessStandardAcl;
     }
+    /**
+     * @return Authentication password for user
+     * 
+     */
     public String v3AuthPrivDes3Password() {
         return this.v3AuthPrivDes3Password;
     }
+    /**
+     * @return Access-list name
+     * 
+     */
     public String v3AuthPrivDesAccessAclName() {
         return this.v3AuthPrivDesAccessAclName;
     }
+    /**
+     * @return Specify IPv6 Named Access-List
+     * 
+     */
     public String v3AuthPrivDesAccessIpv6Acl() {
         return this.v3AuthPrivDesAccessIpv6Acl;
     }
+    /**
+     * @return Standard IP Access-list allowing access with this community string
+     * 
+     */
     public Integer v3AuthPrivDesAccessStandardAcl() {
         return this.v3AuthPrivDesAccessStandardAcl;
     }
+    /**
+     * @return Authentication password for user
+     * 
+     */
     public String v3AuthPrivDesPassword() {
         return this.v3AuthPrivDesPassword;
     }

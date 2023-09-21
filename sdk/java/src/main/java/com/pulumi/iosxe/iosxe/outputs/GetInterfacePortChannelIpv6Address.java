@@ -10,10 +10,18 @@ import java.util.Objects;
 
 @CustomType
 public final class GetInterfacePortChannelIpv6Address {
+    /**
+     * @return Use eui-64 interface identifier
+     * 
+     */
     private Boolean eui64;
     private String prefix;
 
     private GetInterfacePortChannelIpv6Address() {}
+    /**
+     * @return Use eui-64 interface identifier
+     * 
+     */
     public Boolean eui64() {
         return this.eui64;
     }

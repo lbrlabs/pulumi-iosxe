@@ -69,71 +69,113 @@ class GetArpResult:
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
     @pulumi.getter(name="entryLearn")
     def entry_learn(self) -> int:
+        """
+        Maximum learn entry limit
+        """
         return pulumi.get(self, "entry_learn")
 
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
     @property
     @pulumi.getter(name="incompleteEntries")
     def incomplete_entries(self) -> int:
+        """
+        Specify the number of IP addresses to resolve
+        """
         return pulumi.get(self, "incomplete_entries")
 
     @property
     @pulumi.getter(name="inspectionFilters")
     def inspection_filters(self) -> Sequence['outputs.GetArpInspectionFilterResult']:
+        """
+        Specify ARP acl to be applied
+        """
         return pulumi.get(self, "inspection_filters")
 
     @property
     @pulumi.getter(name="inspectionLogBufferEntries")
     def inspection_log_buffer_entries(self) -> int:
+        """
+        Number of entries for log buffer
+        """
         return pulumi.get(self, "inspection_log_buffer_entries")
 
     @property
     @pulumi.getter(name="inspectionLogBufferLogsEntries")
     def inspection_log_buffer_logs_entries(self) -> int:
+        """
+        Number of entries for log buffer
+        """
         return pulumi.get(self, "inspection_log_buffer_logs_entries")
 
     @property
     @pulumi.getter(name="inspectionLogBufferLogsInterval")
     def inspection_log_buffer_logs_interval(self) -> int:
+        """
+        Interval for controlling logging rate
+        """
         return pulumi.get(self, "inspection_log_buffer_logs_interval")
 
     @property
     @pulumi.getter(name="inspectionValidateAllowZeros")
     def inspection_validate_allow_zeros(self) -> bool:
+        """
+        Allow 0.0.0.0 sender IP address
+        """
         return pulumi.get(self, "inspection_validate_allow_zeros")
 
     @property
     @pulumi.getter(name="inspectionValidateDstMac")
     def inspection_validate_dst_mac(self) -> bool:
+        """
+        Validate destination MAC address
+        """
         return pulumi.get(self, "inspection_validate_dst_mac")
 
     @property
     @pulumi.getter(name="inspectionValidateIp")
     def inspection_validate_ip(self) -> bool:
+        """
+        Validate IP addresses
+        """
         return pulumi.get(self, "inspection_validate_ip")
 
     @property
     @pulumi.getter(name="inspectionValidateSrcMac")
     def inspection_validate_src_mac(self) -> bool:
+        """
+        Validate source MAC address
+        """
         return pulumi.get(self, "inspection_validate_src_mac")
 
     @property
     @pulumi.getter(name="inspectionVlan")
     def inspection_vlan(self) -> str:
+        """
+        Enable/Disable ARP Inspection on vlans
+        """
         return pulumi.get(self, "inspection_vlan")
 
     @property
     @pulumi.getter(name="proxyDisable")
     def proxy_disable(self) -> bool:
+        """
+        Disable proxy ARP on all interfaces
+        """
         return pulumi.get(self, "proxy_disable")
 
 
@@ -162,7 +204,19 @@ class AwaitableGetArpResult(GetArpResult):
 def get_arp(device: Optional[str] = None,
             opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetArpResult:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the ARP configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_arp()
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -190,6 +244,18 @@ def get_arp(device: Optional[str] = None,
 def get_arp_output(device: Optional[pulumi.Input[Optional[str]]] = None,
                    opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetArpResult]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the ARP configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_arp()
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     ...

@@ -5,54 +5,29 @@ import (
 	_ "embed"
 	"fmt"
 	"path/filepath"
-	//"unicode"
 
 	iosxe "github.com/CiscoDevNet/terraform-provider-iosxe/shim"
 	"github.com/lbrlabs/pulumi-iosxe/provider/pkg/version"
 	pf "github.com/pulumi/pulumi-terraform-bridge/pf/tfbridge"
 	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfbridge"
 	tks "github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfbridge/tokens"
-	//"github.com/pulumi/pulumi/sdk/v3/go/common/tokens"
 )
 
 // all of the token components used below.
 const (
 	mainPkg = "iosxe"
 	// modules:
-	mainMod = "iosxe" // the iosxe module
+	mainMod = "index" // the iosxe module
 )
 
 //go:embed cmd/pulumi-resource-iosxe/bridge-metadata.json
 var metadata []byte
 
-// iosxeMember manufactures a type token for the random package and the given module and type.
-// func iosxeMember(mod string, mem string) tokens.ModuleMember {
-// 	return tokens.ModuleMember(mainPkg + ":" + mod + ":" + mem)
-// }
-
-// // iosxeType manufactures a type token for the random package and the given module and type.
-// func iosxeType(mod string, typ string) tokens.Type {
-// 	return tokens.Type(iosxeMember(mod, typ))
-// }
-
-// iosxe package and names the file by simply lower casing the resource's first character.
-// func iosxeResource(mod string, res string) tokens.Type {
-// 	fn := string(unicode.ToLower(rune(res[0]))) + res[1:]
-// 	return iosxeType(mod+"/"+fn, res)
-// }
-
-// portDataSource manufactures a standard resource token given a module and resource name.  It automatically uses the
-// fly package and names the file by simply lower casing the resource's first character.
-// func iosxeDataSource(mod string, res string) tokens.ModuleMember {
-// 	fn := string(unicode.ToLower(rune(res[0]))) + res[1:]
-// 	return iosxeMember(mod+"/"+fn, res)
-// }
-
 // Provider returns additional overlaid schema and metadata associated with the provider..
 func Provider() tfbridge.ProviderInfo {
 	info := tfbridge.ProviderInfo{
 		P:                 pf.ShimProvider(iosxe.NewProvider()),
-		Name:              "IOS XE",
+		Name:              "iosxe",
 		DisplayName:       "Cisco IOS XE",
 		Publisher:         "lbrlabs",
 		LogoURL:           "",
@@ -107,7 +82,7 @@ func Provider() tfbridge.ProviderInfo {
 		},
 	}
 
-	info.MustComputeTokens(tks.SingleModule("iosxe_", mainMod, tks.MakeStandard(mainMod)))
+	info.MustComputeTokens(tks.SingleModule("iosxe_", mainMod, tks.MakeStandard(mainPkg)))
 
 	info.SetAutonaming(255, "-")
 

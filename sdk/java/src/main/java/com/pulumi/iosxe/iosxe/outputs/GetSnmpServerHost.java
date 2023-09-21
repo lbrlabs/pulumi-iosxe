@@ -9,21 +9,45 @@ import java.util.Objects;
 
 @CustomType
 public final class GetSnmpServerHost {
+    /**
+     * @return SNMPv1/v2c community string or SNMPv3 user name
+     * 
+     */
     private String communityOrUser;
+    /**
+     * @return Specifies an encryption type for community string
+     * 
+     */
     private String encryption;
     private String ipAddress;
+    /**
+     * @return SNMP version to use for notification messages
+     * 
+     */
     private String version;
 
     private GetSnmpServerHost() {}
+    /**
+     * @return SNMPv1/v2c community string or SNMPv3 user name
+     * 
+     */
     public String communityOrUser() {
         return this.communityOrUser;
     }
+    /**
+     * @return Specifies an encryption type for community string
+     * 
+     */
     public String encryption() {
         return this.encryption;
     }
     public String ipAddress() {
         return this.ipAddress;
     }
+    /**
+     * @return SNMP version to use for notification messages
+     * 
+     */
     public String version() {
         return this.version;
     }

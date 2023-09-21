@@ -17,161 +17,457 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetInterfacePortChannelResult {
+    /**
+     * @return Set ARP cache timeout
+     * 
+     */
     private Integer arpTimeout;
+    /**
+     * @return Configure classification for untrusted devices
+     * 
+     */
     private Boolean autoQosClassify;
+    /**
+     * @return Configure QoS policing for untrusted devices
+     * 
+     */
     private Boolean autoQosClassifyPolice;
+    /**
+     * @return Trust the DSCP/CoS marking
+     * 
+     */
     private Boolean autoQosTrust;
+    /**
+     * @return Trust the CoS marking
+     * 
+     */
     private Boolean autoQosTrustCos;
+    /**
+     * @return Trust the DSCP marking
+     * 
+     */
     private Boolean autoQosTrustDscp;
+    /**
+     * @return Trust the QoS marking of the Cisco Telepresence System
+     * 
+     */
     private Boolean autoQosVideoCts;
+    /**
+     * @return Trust the QoS marking of the Ip Video Surveillance camera
+     * 
+     */
     private Boolean autoQosVideoIpCamera;
+    /**
+     * @return Trust the Qos marking of the Cisco Media Player
+     * 
+     */
     private Boolean autoQosVideoMediaPlayer;
+    /**
+     * @return Configure AutoQoS for VoIP
+     * 
+     */
     private Boolean autoQosVoip;
+    /**
+     * @return Trust the QoS marking of Cisco IP Phone
+     * 
+     */
     private Boolean autoQosVoipCiscoPhone;
+    /**
+     * @return Trust the QoS marking of Cisco IP SoftPhone
+     * 
+     */
     private Boolean autoQosVoipCiscoSoftphone;
+    /**
+     * @return Trust the DSCP/CoS marking
+     * 
+     */
     private Boolean autoQosVoipTrust;
+    /**
+     * @return Use echo adjunct as bfd detection mechanism
+     * 
+     */
     private Boolean bfdEcho;
+    /**
+     * @return Enable BFD under the interface
+     * 
+     */
     private Boolean bfdEnable;
     private Integer bfdInterval;
+    /**
+     * @return Minimum receive interval capability
+     * 
+     */
     private Integer bfdIntervalMinRx;
+    /**
+     * @return Multiplier value used to compute holddown
+     * 
+     */
     private Integer bfdIntervalMultiplier;
+    /**
+     * @return The Source IP address to be used for BFD sessions over this interface.
+     * 
+     */
     private String bfdLocalAddress;
+    /**
+     * @return BFD template
+     * 
+     */
     private String bfdTemplate;
+    /**
+     * @return Interface specific description
+     * 
+     */
     private String description;
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return Specify a destination address for UDP broadcasts
+     * 
+     */
     private List<GetInterfacePortChannelHelperAddress> helperAddresses;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
     private String ipAccessGroupIn;
+    /**
+     * @return inbound packets
+     * 
+     */
     private Boolean ipAccessGroupInEnable;
     private String ipAccessGroupOut;
+    /**
+     * @return outbound packets
+     * 
+     */
     private Boolean ipAccessGroupOutEnable;
+    /**
+     * @return Rate Limit
+     * 
+     */
     private Integer ipArpInspectionLimitRate;
+    /**
+     * @return Configure Trust state
+     * 
+     */
     private Boolean ipArpInspectionTrust;
+    /**
+     * @return Set source interface for relayed messages
+     * 
+     */
     private String ipDhcpRelaySourceInterface;
+    /**
+     * @return DHCP Snooping trust config
+     * 
+     */
     private Boolean ipDhcpSnoopingTrust;
+    /**
+     * @return Enable proxy ARP
+     * 
+     */
     private Boolean ipProxyArp;
+    /**
+     * @return Enable sending ICMP Redirect messages
+     * 
+     */
     private Boolean ipRedirects;
+    /**
+     * @return Enable sending ICMP Unreachable messages
+     * 
+     */
     private Boolean ipUnreachables;
     private String ipv4Address;
     private String ipv4AddressMask;
+    /**
+     * @return Insert default route
+     * 
+     */
     private Boolean ipv6AddressAutoconfigDefault;
+    /**
+     * @return Obtain IPv6 address from DHCP server
+     * 
+     */
     private Boolean ipv6AddressDhcp;
     private List<GetInterfacePortChannelIpv6Address> ipv6Addresses;
+    /**
+     * @return Enable IPv6 on interface
+     * 
+     */
     private Boolean ipv6Enable;
     private List<GetInterfacePortChannelIpv6LinkLocalAddress> ipv6LinkLocalAddresses;
+    /**
+     * @return Set IPv6 Maximum Transmission Unit
+     * 
+     */
     private Integer ipv6Mtu;
+    /**
+     * @return Suppress all IPv6 RA
+     * 
+     */
     private Boolean ipv6NdRaSuppressAll;
     private Integer name;
+    /**
+     * @return Shutdown the selected interface
+     * 
+     */
     private Boolean shutdown;
+    /**
+     * @return Change an interface&#39;s spanning tree guard mode
+     * 
+     */
     private String spanningTreeGuard;
+    /**
+     * @return Specify a link type for spanning tree tree protocol use
+     * 
+     */
     private String spanningTreeLinkType;
     private Boolean switchport;
+    /**
+     * @return trusted device class
+     * 
+     */
     private String trustDevice;
+    /**
+     * @return Configure forwarding table
+     * 
+     */
     private String vrfForwarding;
 
     private GetInterfacePortChannelResult() {}
+    /**
+     * @return Set ARP cache timeout
+     * 
+     */
     public Integer arpTimeout() {
         return this.arpTimeout;
     }
+    /**
+     * @return Configure classification for untrusted devices
+     * 
+     */
     public Boolean autoQosClassify() {
         return this.autoQosClassify;
     }
+    /**
+     * @return Configure QoS policing for untrusted devices
+     * 
+     */
     public Boolean autoQosClassifyPolice() {
         return this.autoQosClassifyPolice;
     }
+    /**
+     * @return Trust the DSCP/CoS marking
+     * 
+     */
     public Boolean autoQosTrust() {
         return this.autoQosTrust;
     }
+    /**
+     * @return Trust the CoS marking
+     * 
+     */
     public Boolean autoQosTrustCos() {
         return this.autoQosTrustCos;
     }
+    /**
+     * @return Trust the DSCP marking
+     * 
+     */
     public Boolean autoQosTrustDscp() {
         return this.autoQosTrustDscp;
     }
+    /**
+     * @return Trust the QoS marking of the Cisco Telepresence System
+     * 
+     */
     public Boolean autoQosVideoCts() {
         return this.autoQosVideoCts;
     }
+    /**
+     * @return Trust the QoS marking of the Ip Video Surveillance camera
+     * 
+     */
     public Boolean autoQosVideoIpCamera() {
         return this.autoQosVideoIpCamera;
     }
+    /**
+     * @return Trust the Qos marking of the Cisco Media Player
+     * 
+     */
     public Boolean autoQosVideoMediaPlayer() {
         return this.autoQosVideoMediaPlayer;
     }
+    /**
+     * @return Configure AutoQoS for VoIP
+     * 
+     */
     public Boolean autoQosVoip() {
         return this.autoQosVoip;
     }
+    /**
+     * @return Trust the QoS marking of Cisco IP Phone
+     * 
+     */
     public Boolean autoQosVoipCiscoPhone() {
         return this.autoQosVoipCiscoPhone;
     }
+    /**
+     * @return Trust the QoS marking of Cisco IP SoftPhone
+     * 
+     */
     public Boolean autoQosVoipCiscoSoftphone() {
         return this.autoQosVoipCiscoSoftphone;
     }
+    /**
+     * @return Trust the DSCP/CoS marking
+     * 
+     */
     public Boolean autoQosVoipTrust() {
         return this.autoQosVoipTrust;
     }
+    /**
+     * @return Use echo adjunct as bfd detection mechanism
+     * 
+     */
     public Boolean bfdEcho() {
         return this.bfdEcho;
     }
+    /**
+     * @return Enable BFD under the interface
+     * 
+     */
     public Boolean bfdEnable() {
         return this.bfdEnable;
     }
     public Integer bfdInterval() {
         return this.bfdInterval;
     }
+    /**
+     * @return Minimum receive interval capability
+     * 
+     */
     public Integer bfdIntervalMinRx() {
         return this.bfdIntervalMinRx;
     }
+    /**
+     * @return Multiplier value used to compute holddown
+     * 
+     */
     public Integer bfdIntervalMultiplier() {
         return this.bfdIntervalMultiplier;
     }
+    /**
+     * @return The Source IP address to be used for BFD sessions over this interface.
+     * 
+     */
     public String bfdLocalAddress() {
         return this.bfdLocalAddress;
     }
+    /**
+     * @return BFD template
+     * 
+     */
     public String bfdTemplate() {
         return this.bfdTemplate;
     }
+    /**
+     * @return Interface specific description
+     * 
+     */
     public String description() {
         return this.description;
     }
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return Specify a destination address for UDP broadcasts
+     * 
+     */
     public List<GetInterfacePortChannelHelperAddress> helperAddresses() {
         return this.helperAddresses;
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
     public String ipAccessGroupIn() {
         return this.ipAccessGroupIn;
     }
+    /**
+     * @return inbound packets
+     * 
+     */
     public Boolean ipAccessGroupInEnable() {
         return this.ipAccessGroupInEnable;
     }
     public String ipAccessGroupOut() {
         return this.ipAccessGroupOut;
     }
+    /**
+     * @return outbound packets
+     * 
+     */
     public Boolean ipAccessGroupOutEnable() {
         return this.ipAccessGroupOutEnable;
     }
+    /**
+     * @return Rate Limit
+     * 
+     */
     public Integer ipArpInspectionLimitRate() {
         return this.ipArpInspectionLimitRate;
     }
+    /**
+     * @return Configure Trust state
+     * 
+     */
     public Boolean ipArpInspectionTrust() {
         return this.ipArpInspectionTrust;
     }
+    /**
+     * @return Set source interface for relayed messages
+     * 
+     */
     public String ipDhcpRelaySourceInterface() {
         return this.ipDhcpRelaySourceInterface;
     }
+    /**
+     * @return DHCP Snooping trust config
+     * 
+     */
     public Boolean ipDhcpSnoopingTrust() {
         return this.ipDhcpSnoopingTrust;
     }
+    /**
+     * @return Enable proxy ARP
+     * 
+     */
     public Boolean ipProxyArp() {
         return this.ipProxyArp;
     }
+    /**
+     * @return Enable sending ICMP Redirect messages
+     * 
+     */
     public Boolean ipRedirects() {
         return this.ipRedirects;
     }
+    /**
+     * @return Enable sending ICMP Unreachable messages
+     * 
+     */
     public Boolean ipUnreachables() {
         return this.ipUnreachables;
     }
@@ -181,45 +477,85 @@ public final class GetInterfacePortChannelResult {
     public String ipv4AddressMask() {
         return this.ipv4AddressMask;
     }
+    /**
+     * @return Insert default route
+     * 
+     */
     public Boolean ipv6AddressAutoconfigDefault() {
         return this.ipv6AddressAutoconfigDefault;
     }
+    /**
+     * @return Obtain IPv6 address from DHCP server
+     * 
+     */
     public Boolean ipv6AddressDhcp() {
         return this.ipv6AddressDhcp;
     }
     public List<GetInterfacePortChannelIpv6Address> ipv6Addresses() {
         return this.ipv6Addresses;
     }
+    /**
+     * @return Enable IPv6 on interface
+     * 
+     */
     public Boolean ipv6Enable() {
         return this.ipv6Enable;
     }
     public List<GetInterfacePortChannelIpv6LinkLocalAddress> ipv6LinkLocalAddresses() {
         return this.ipv6LinkLocalAddresses;
     }
+    /**
+     * @return Set IPv6 Maximum Transmission Unit
+     * 
+     */
     public Integer ipv6Mtu() {
         return this.ipv6Mtu;
     }
+    /**
+     * @return Suppress all IPv6 RA
+     * 
+     */
     public Boolean ipv6NdRaSuppressAll() {
         return this.ipv6NdRaSuppressAll;
     }
     public Integer name() {
         return this.name;
     }
+    /**
+     * @return Shutdown the selected interface
+     * 
+     */
     public Boolean shutdown() {
         return this.shutdown;
     }
+    /**
+     * @return Change an interface&#39;s spanning tree guard mode
+     * 
+     */
     public String spanningTreeGuard() {
         return this.spanningTreeGuard;
     }
+    /**
+     * @return Specify a link type for spanning tree tree protocol use
+     * 
+     */
     public String spanningTreeLinkType() {
         return this.spanningTreeLinkType;
     }
     public Boolean switchport() {
         return this.switchport;
     }
+    /**
+     * @return trusted device class
+     * 
+     */
     public String trustDevice() {
         return this.trustDevice;
     }
+    /**
+     * @return Configure forwarding table
+     * 
+     */
     public String vrfForwarding() {
         return this.vrfForwarding;
     }

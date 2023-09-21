@@ -15,16 +15,32 @@ public final class GetMdtSubscriptionPlainArgs extends com.pulumi.resources.Invo
 
     public static final GetMdtSubscriptionPlainArgs Empty = new GetMdtSubscriptionPlainArgs();
 
+    /**
+     * A device name from the provider configuration.
+     * 
+     */
     @Import(name="device")
     private @Nullable String device;
 
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
 
+    /**
+     * Unique subscription identifier.
+     * 
+     */
     @Import(name="subscriptionId", required=true)
     private Integer subscriptionId;
 
+    /**
+     * @return Unique subscription identifier.
+     * 
+     */
     public Integer subscriptionId() {
         return this.subscriptionId;
     }
@@ -54,11 +70,23 @@ public final class GetMdtSubscriptionPlainArgs extends com.pulumi.resources.Invo
             $ = new GetMdtSubscriptionPlainArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param device A device name from the provider configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder device(@Nullable String device) {
             $.device = device;
             return this;
         }
 
+        /**
+         * @param subscriptionId Unique subscription identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionId(Integer subscriptionId) {
             $.subscriptionId = subscriptionId;
             return this;

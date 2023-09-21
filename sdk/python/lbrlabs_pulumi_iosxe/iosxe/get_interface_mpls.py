@@ -44,21 +44,33 @@ class GetInterfaceMplsResult:
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
     @property
     @pulumi.getter
     def ip(self) -> bool:
+        """
+        Configure dynamic MPLS forwarding for IP
+        """
         return pulumi.get(self, "ip")
 
     @property
     @pulumi.getter
     def mtu(self) -> str:
+        """
+        Set MPLS Maximum Transmission Unit
+        """
         return pulumi.get(self, "mtu")
 
     @property
@@ -69,6 +81,9 @@ class GetInterfaceMplsResult:
     @property
     @pulumi.getter
     def type(self) -> str:
+        """
+        Interface type
+        """
         return pulumi.get(self, "type")
 
 
@@ -91,7 +106,21 @@ def get_interface_mpls(device: Optional[str] = None,
                        type: Optional[str] = None,
                        opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetInterfaceMplsResult:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Interface MPLS configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_interface_mpls(name="1",
+        type="Loopback")
+    ```
+
+
+    :param str device: A device name from the provider configuration.
+    :param str type: Interface type
     """
     __args__ = dict()
     __args__['device'] = device
@@ -115,6 +144,20 @@ def get_interface_mpls_output(device: Optional[pulumi.Input[Optional[str]]] = No
                               type: Optional[pulumi.Input[str]] = None,
                               opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetInterfaceMplsResult]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Interface MPLS configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_interface_mpls(name="1",
+        type="Loopback")
+    ```
+
+
+    :param str device: A device name from the provider configuration.
+    :param str type: Interface type
     """
     ...

@@ -205,7 +205,14 @@ class RadiusServer(pulumi.CustomResource):
                  device: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
-        Create a RadiusServer resource with the given unique name, props, and options.
+        This resource can manage the Radius Server configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/radiusServer:RadiusServer example "Cisco-IOS-XE-native:native/radius-server"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['RadiusServerAttributeArgs']]]] attributes: Customize selected radius attributes
@@ -222,7 +229,14 @@ class RadiusServer(pulumi.CustomResource):
                  args: Optional[RadiusServerArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a RadiusServer resource with the given unique name, props, and options.
+        This resource can manage the Radius Server configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/radiusServer:RadiusServer example "Cisco-IOS-XE-native:native/radius-server"
+        ```
+
         :param str resource_name: The name of the resource.
         :param RadiusServerArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

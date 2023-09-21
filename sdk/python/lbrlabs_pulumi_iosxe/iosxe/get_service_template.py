@@ -102,81 +102,129 @@ class GetServiceTemplateResult:
     @property
     @pulumi.getter(name="absoluteTimer")
     def absolute_timer(self) -> int:
+        """
+        Enter a value between 1 and 1073741823
+        """
         return pulumi.get(self, "absolute_timer")
 
     @property
     @pulumi.getter(name="accessGroups")
     def access_groups(self) -> Sequence['outputs.GetServiceTemplateAccessGroupResult']:
+        """
+        Access list to be applied
+        """
         return pulumi.get(self, "access_groups")
 
     @property
     @pulumi.getter
     def description(self) -> str:
+        """
+        Enter a description
+        """
         return pulumi.get(self, "description")
 
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
     @pulumi.getter(name="dnsAclPreauth")
     def dns_acl_preauth(self) -> str:
+        """
+        pre-authentication
+        """
         return pulumi.get(self, "dns_acl_preauth")
 
     @property
     @pulumi.getter(name="ianctivityTimer")
     def ianctivity_timer(self) -> int:
+        """
+        Enter a value between 1 and 65535
+        """
         return pulumi.get(self, "ianctivity_timer")
 
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
     @property
     @pulumi.getter(name="inactivityTimerProbe")
     def inactivity_timer_probe(self) -> bool:
+        """
+        ARP probe
+        """
         return pulumi.get(self, "inactivity_timer_probe")
 
     @property
     @pulumi.getter(name="interfaceTemplates")
     def interface_templates(self) -> Sequence['outputs.GetServiceTemplateInterfaceTemplateResult']:
+        """
+        Interface template to be applied
+        """
         return pulumi.get(self, "interface_templates")
 
     @property
     @pulumi.getter(name="linksecPolicy")
     def linksec_policy(self) -> str:
+        """
+        Set the link security policy
+        """
         return pulumi.get(self, "linksec_policy")
 
     @property
     @pulumi.getter(name="mdnsServicePolicy")
     def mdns_service_policy(self) -> str:
+        """
+        mdns policy to be applied
+        """
         return pulumi.get(self, "mdns_service_policy")
 
     @property
     @pulumi.getter
     def name(self) -> str:
+        """
+        Specify a template name (maximum 48 characters)
+        """
         return pulumi.get(self, "name")
 
     @property
     @pulumi.getter(name="redirectAppendClientMac")
     def redirect_append_client_mac(self) -> str:
+        """
+        Append client Mac Address in redirect URL
+        """
         return pulumi.get(self, "redirect_append_client_mac")
 
     @property
     @pulumi.getter(name="redirectAppendSwitchMac")
     def redirect_append_switch_mac(self) -> str:
+        """
+        Append switch Mac Address in redirect URL
+        """
         return pulumi.get(self, "redirect_append_switch_mac")
 
     @property
     @pulumi.getter(name="redirectUrl")
     def redirect_url(self) -> str:
+        """
+        Specify a valid URL
+        """
         return pulumi.get(self, "redirect_url")
 
     @property
     @pulumi.getter(name="redirectUrlMatchAcl")
     def redirect_url_match_acl(self) -> str:
+        """
+        Specify the access list name
+        """
         return pulumi.get(self, "redirect_url_match_acl")
 
     @property
@@ -187,41 +235,65 @@ class GetServiceTemplateResult:
     @property
     @pulumi.getter(name="servicePolicyQosInput")
     def service_policy_qos_input(self) -> str:
+        """
+        Configure input Qos policy
+        """
         return pulumi.get(self, "service_policy_qos_input")
 
     @property
     @pulumi.getter(name="servicePolicyQosOutput")
     def service_policy_qos_output(self) -> str:
+        """
+        Configure output Qos policy
+        """
         return pulumi.get(self, "service_policy_qos_output")
 
     @property
     @pulumi.getter
     def sgt(self) -> int:
+        """
+        SGT tag
+        """
         return pulumi.get(self, "sgt")
 
     @property
     @pulumi.getter
     def tags(self) -> Sequence['outputs.GetServiceTemplateTagResult']:
+        """
+        tag name
+        """
         return pulumi.get(self, "tags")
 
     @property
     @pulumi.getter(name="tunnelCapwapName")
     def tunnel_capwap_name(self) -> str:
+        """
+        tunnel profile name
+        """
         return pulumi.get(self, "tunnel_capwap_name")
 
     @property
     @pulumi.getter
     def vlan(self) -> int:
+        """
+        Vlan to be applied
+        """
         return pulumi.get(self, "vlan")
 
     @property
     @pulumi.getter
     def vnid(self) -> str:
+        """
+        Vnid to be applied
+        """
         return pulumi.get(self, "vnid")
 
     @property
     @pulumi.getter(name="voiceVlan")
     def voice_vlan(self) -> bool:
+        """
+        Critical voice vlan
+        """
         return pulumi.get(self, "voice_vlan")
 
 
@@ -262,7 +334,20 @@ def get_service_template(device: Optional[str] = None,
                          name: Optional[str] = None,
                          opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetServiceTemplateResult:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Service Template configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_service_template(name="MY_TEMPLATE")
+    ```
+
+
+    :param str device: A device name from the provider configuration.
+    :param str name: Specify a template name (maximum 48 characters)
     """
     __args__ = dict()
     __args__['device'] = device
@@ -303,6 +388,19 @@ def get_service_template_output(device: Optional[pulumi.Input[Optional[str]]] = 
                                 name: Optional[pulumi.Input[str]] = None,
                                 opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetServiceTemplateResult]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Service Template configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_service_template(name="MY_TEMPLATE")
+    ```
+
+
+    :param str device: A device name from the provider configuration.
+    :param str name: Specify a template name (maximum 48 characters)
     """
     ...

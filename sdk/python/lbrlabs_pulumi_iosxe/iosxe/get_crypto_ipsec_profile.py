@@ -44,11 +44,17 @@ class GetCryptoIpsecProfileResult:
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
     @property
@@ -59,16 +65,25 @@ class GetCryptoIpsecProfileResult:
     @property
     @pulumi.getter(name="setIsakmpProfileIkev2ProfileIkev2ProfileCaseIkev2Profile")
     def set_isakmp_profile_ikev2_profile_ikev2_profile_case_ikev2_profile(self) -> str:
+        """
+        Specify ikev2 Profile
+        """
         return pulumi.get(self, "set_isakmp_profile_ikev2_profile_ikev2_profile_case_ikev2_profile")
 
     @property
     @pulumi.getter(name="setIsakmpProfileIkev2ProfileIsakmpProfileCaseIsakmpProfile")
     def set_isakmp_profile_ikev2_profile_isakmp_profile_case_isakmp_profile(self) -> str:
+        """
+        Specify isakmp Profile
+        """
         return pulumi.get(self, "set_isakmp_profile_ikev2_profile_isakmp_profile_case_isakmp_profile")
 
     @property
     @pulumi.getter(name="setTransformSets")
     def set_transform_sets(self) -> Sequence[str]:
+        """
+        Specify list of transform sets in priority order
+        """
         return pulumi.get(self, "set_transform_sets")
 
 
@@ -90,7 +105,19 @@ def get_crypto_ipsec_profile(device: Optional[str] = None,
                              name: Optional[str] = None,
                              opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetCryptoIpsecProfileResult:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Crypto IPSec Profile configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_crypto_ipsec_profile(name="vpn200")
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -112,6 +139,18 @@ def get_crypto_ipsec_profile_output(device: Optional[pulumi.Input[Optional[str]]
                                     name: Optional[pulumi.Input[str]] = None,
                                     opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetCryptoIpsecProfileResult]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Crypto IPSec Profile configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_crypto_ipsec_profile(name="vpn200")
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     ...

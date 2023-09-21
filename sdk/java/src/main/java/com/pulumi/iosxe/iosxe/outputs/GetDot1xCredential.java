@@ -9,18 +9,46 @@ import java.util.Objects;
 
 @CustomType
 public final class GetDot1xCredential {
+    /**
+     * @return Set the anonymous userid
+     * 
+     */
     private String anonymousId;
+    /**
+     * @return Provide a description for the credentials profile
+     * 
+     */
     private String description;
     private String password;
     private String passwordType;
+    /**
+     * @return Set the default pki trustpoint
+     * 
+     */
     private String pkiTrustpoint;
+    /**
+     * @return Specify a profile name
+     * 
+     */
     private String profileName;
+    /**
+     * @return Set the authentication userid
+     * 
+     */
     private String username;
 
     private GetDot1xCredential() {}
+    /**
+     * @return Set the anonymous userid
+     * 
+     */
     public String anonymousId() {
         return this.anonymousId;
     }
+    /**
+     * @return Provide a description for the credentials profile
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -30,12 +58,24 @@ public final class GetDot1xCredential {
     public String passwordType() {
         return this.passwordType;
     }
+    /**
+     * @return Set the default pki trustpoint
+     * 
+     */
     public String pkiTrustpoint() {
         return this.pkiTrustpoint;
     }
+    /**
+     * @return Specify a profile name
+     * 
+     */
     public String profileName() {
         return this.profileName;
     }
+    /**
+     * @return Set the authentication userid
+     * 
+     */
     public String username() {
         return this.username;
     }

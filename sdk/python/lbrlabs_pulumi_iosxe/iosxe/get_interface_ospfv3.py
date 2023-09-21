@@ -53,16 +53,25 @@ class GetInterfaceOspfv3Result:
     @property
     @pulumi.getter
     def cost(self) -> int:
+        """
+        Static route cost value of the interface
+        """
         return pulumi.get(self, "cost")
 
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
     @property
@@ -73,26 +82,41 @@ class GetInterfaceOspfv3Result:
     @property
     @pulumi.getter(name="networkTypeBroadcast")
     def network_type_broadcast(self) -> bool:
+        """
+        Specify OSPF broadcast multi-access network
+        """
         return pulumi.get(self, "network_type_broadcast")
 
     @property
     @pulumi.getter(name="networkTypeNonBroadcast")
     def network_type_non_broadcast(self) -> bool:
+        """
+        Specify OSPF NBMA network
+        """
         return pulumi.get(self, "network_type_non_broadcast")
 
     @property
     @pulumi.getter(name="networkTypePointToMultipoint")
     def network_type_point_to_multipoint(self) -> bool:
+        """
+        Specify OSPF point-to-multipoint network
+        """
         return pulumi.get(self, "network_type_point_to_multipoint")
 
     @property
     @pulumi.getter(name="networkTypePointToPoint")
     def network_type_point_to_point(self) -> bool:
+        """
+        Specify OSPF point-to-point network
+        """
         return pulumi.get(self, "network_type_point_to_point")
 
     @property
     @pulumi.getter
     def type(self) -> str:
+        """
+        Interface type
+        """
         return pulumi.get(self, "type")
 
 
@@ -118,7 +142,21 @@ def get_interface_ospfv3(device: Optional[str] = None,
                          type: Optional[str] = None,
                          opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetInterfaceOspfv3Result:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Interface OSPFv3 configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_interface_ospfv3(name="1",
+        type="Loopback")
+    ```
+
+
+    :param str device: A device name from the provider configuration.
+    :param str type: Interface type
     """
     __args__ = dict()
     __args__['device'] = device
@@ -145,6 +183,20 @@ def get_interface_ospfv3_output(device: Optional[pulumi.Input[Optional[str]]] = 
                                 type: Optional[pulumi.Input[str]] = None,
                                 opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetInterfaceOspfv3Result]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Interface OSPFv3 configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_interface_ospfv3(name="1",
+        type="Loopback")
+    ```
+
+
+    :param str device: A device name from the provider configuration.
+    :param str type: Interface type
     """
     ...

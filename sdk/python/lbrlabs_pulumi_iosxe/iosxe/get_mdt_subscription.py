@@ -60,56 +60,89 @@ class GetMdtSubscriptionResult:
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
     @pulumi.getter
     def encoding(self) -> str:
+        """
+        Update notification encoding
+        """
         return pulumi.get(self, "encoding")
 
     @property
     @pulumi.getter(name="filterXpath")
     def filter_xpath(self) -> str:
+        """
+        XPath expression describing the set of objects wanted as part of the subscription
+        """
         return pulumi.get(self, "filter_xpath")
 
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
     @property
     @pulumi.getter
     def receivers(self) -> Sequence['outputs.GetMdtSubscriptionReceiverResult']:
+        """
+        Configuration of receivers of configured subscriptions. Use of this is deprecated. Use mdt-receiver-names instead.
+        """
         return pulumi.get(self, "receivers")
 
     @property
     @pulumi.getter(name="sourceAddress")
     def source_address(self) -> str:
+        """
+        The source address for the notifications
+        """
         return pulumi.get(self, "source_address")
 
     @property
     @pulumi.getter(name="sourceVrf")
     def source_vrf(self) -> str:
+        """
+        Network instance name for the VRF
+        """
         return pulumi.get(self, "source_vrf")
 
     @property
     @pulumi.getter
     def stream(self) -> str:
+        """
+        The name of the event stream being subscribed to
+        """
         return pulumi.get(self, "stream")
 
     @property
     @pulumi.getter(name="subscriptionId")
     def subscription_id(self) -> int:
+        """
+        Unique subscription identifier.
+        """
         return pulumi.get(self, "subscription_id")
 
     @property
     @pulumi.getter(name="updatePolicyOnChange")
     def update_policy_on_change(self) -> bool:
+        """
+        If true, there is no initial update notification with the current value of all the data. NOT CURRENTLY SUPPORTED. If specified, must be false
+        """
         return pulumi.get(self, "update_policy_on_change")
 
     @property
     @pulumi.getter(name="updatePolicyPeriodic")
     def update_policy_periodic(self) -> int:
+        """
+        Period of update notifications in hundredths of a second
+        """
         return pulumi.get(self, "update_policy_periodic")
 
 
@@ -136,7 +169,20 @@ def get_mdt_subscription(device: Optional[str] = None,
                          subscription_id: Optional[int] = None,
                          opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetMdtSubscriptionResult:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the MDT Subscription configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_mdt_subscription(subscription_id=101)
+    ```
+
+
+    :param str device: A device name from the provider configuration.
+    :param int subscription_id: Unique subscription identifier.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -163,6 +209,19 @@ def get_mdt_subscription_output(device: Optional[pulumi.Input[Optional[str]]] = 
                                 subscription_id: Optional[pulumi.Input[int]] = None,
                                 opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetMdtSubscriptionResult]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the MDT Subscription configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_mdt_subscription(subscription_id=101)
+    ```
+
+
+    :param str device: A device name from the provider configuration.
+    :param int subscription_id: Unique subscription identifier.
     """
     ...

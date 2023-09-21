@@ -48,36 +48,57 @@ class GetCdpResult:
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
     @pulumi.getter(name="filterTlvList")
     def filter_tlv_list(self) -> str:
+        """
+        Apply tlv-list globally
+        """
         return pulumi.get(self, "filter_tlv_list")
 
     @property
     @pulumi.getter
     def holdtime(self) -> int:
+        """
+        Specify the holdtime (in sec) to be sent in packets
+        """
         return pulumi.get(self, "holdtime")
 
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
     @property
     @pulumi.getter
     def run(self) -> bool:
+        """
+        Enable CDP
+        """
         return pulumi.get(self, "run")
 
     @property
     @pulumi.getter
     def timer(self) -> int:
+        """
+        Specify the rate at which CDP packets are sent (in sec)
+        """
         return pulumi.get(self, "timer")
 
     @property
     @pulumi.getter(name="tlvLists")
     def tlv_lists(self) -> Sequence['outputs.GetCdpTlvListResult']:
+        """
+        Configure tlv-list
+        """
         return pulumi.get(self, "tlv_lists")
 
 
@@ -99,7 +120,19 @@ class AwaitableGetCdpResult(GetCdpResult):
 def get_cdp(device: Optional[str] = None,
             opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetCdpResult:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the CDP configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_cdp()
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -120,6 +153,18 @@ def get_cdp(device: Optional[str] = None,
 def get_cdp_output(device: Optional[pulumi.Input[Optional[str]]] = None,
                    opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetCdpResult]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the CDP configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_cdp()
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     ...

@@ -11,16 +11,32 @@ import java.util.Objects;
 @CustomType
 public final class GetInterfaceEthernetHelperAddress {
     private String address;
+    /**
+     * @return Helper-address is global
+     * 
+     */
     private Boolean global;
+    /**
+     * @return VRF name for helper-address (if different from interface VRF)
+     * 
+     */
     private String vrf;
 
     private GetInterfaceEthernetHelperAddress() {}
     public String address() {
         return this.address;
     }
+    /**
+     * @return Helper-address is global
+     * 
+     */
     public Boolean global() {
         return this.global;
     }
+    /**
+     * @return VRF name for helper-address (if different from interface VRF)
+     * 
+     */
     public String vrf() {
         return this.vrf;
     }

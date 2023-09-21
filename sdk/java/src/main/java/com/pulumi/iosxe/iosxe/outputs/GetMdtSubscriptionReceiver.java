@@ -10,17 +10,41 @@ import java.util.Objects;
 
 @CustomType
 public final class GetMdtSubscriptionReceiver {
+    /**
+     * @return IP address of the receiver
+     * 
+     */
     private String address;
+    /**
+     * @return Network port of the receiver
+     * 
+     */
     private Integer port;
+    /**
+     * @return Receiver transport protocol.
+     * 
+     */
     private String protocol;
 
     private GetMdtSubscriptionReceiver() {}
+    /**
+     * @return IP address of the receiver
+     * 
+     */
     public String address() {
         return this.address;
     }
+    /**
+     * @return Network port of the receiver
+     * 
+     */
     public Integer port() {
         return this.port;
     }
+    /**
+     * @return Receiver transport protocol.
+     * 
+     */
     public String protocol() {
         return this.protocol;
     }

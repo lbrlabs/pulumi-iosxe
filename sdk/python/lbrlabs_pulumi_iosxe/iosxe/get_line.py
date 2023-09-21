@@ -39,21 +39,33 @@ class GetLineResult:
     @property
     @pulumi.getter
     def consoles(self) -> Sequence['outputs.GetLineConsoleResult']:
+        """
+        Primary terminal line
+        """
         return pulumi.get(self, "consoles")
 
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
     @property
     @pulumi.getter
     def vties(self) -> Sequence['outputs.GetLineVtyResult']:
+        """
+        Virtual terminal
+        """
         return pulumi.get(self, "vties")
 
 
@@ -72,7 +84,19 @@ class AwaitableGetLineResult(GetLineResult):
 def get_line(device: Optional[str] = None,
              opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetLineResult:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Line configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_line()
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -90,6 +114,18 @@ def get_line(device: Optional[str] = None,
 def get_line_output(device: Optional[pulumi.Input[Optional[str]]] = None,
                     opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetLineResult]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Line configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_line()
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     ...

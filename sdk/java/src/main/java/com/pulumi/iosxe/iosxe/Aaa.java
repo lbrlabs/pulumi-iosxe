@@ -19,6 +19,66 @@ import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the AAA configuration.
+ * 
+ * ## Example Usage
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.Aaa;
+ * import com.pulumi.iosxe.iosxe.AaaArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.AaaGroupServerRadiusArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.AaaGroupServerTacacsplusArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.AaaServerRadiusDynamicAuthorClientArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Aaa(&#34;example&#34;, AaaArgs.builder()        
+ *             .groupServerRadii(AaaGroupServerRadiusArgs.builder()
+ *                 .ip_radius_source_interface_loopback(0)
+ *                 .name(&#34;T-Group&#34;)
+ *                 .server_names(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
+ *                 .build())
+ *             .groupServerTacacspluses(AaaGroupServerTacacsplusArgs.builder()
+ *                 .name(&#34;tacacs-group&#34;)
+ *                 .server_names(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
+ *                 .build())
+ *             .newModel(true)
+ *             .serverRadiusDynamicAuthor(true)
+ *             .serverRadiusDynamicAuthorClients(AaaServerRadiusDynamicAuthorClientArgs.builder()
+ *                 .ip(&#34;11.1.1.1&#34;)
+ *                 .server_key(&#34;abcd123&#34;)
+ *                 .server_key_type(&#34;0&#34;)
+ *                 .build())
+ *             .sessionId(&#34;common&#34;)
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/aaa:Aaa example &#34;Cisco-IOS-XE-native:native/aaa&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/aaa:Aaa")
 public class Aaa extends com.pulumi.resources.CustomResource {
     /**

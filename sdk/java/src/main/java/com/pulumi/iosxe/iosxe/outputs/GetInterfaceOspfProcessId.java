@@ -12,12 +12,20 @@ import java.util.Objects;
 @CustomType
 public final class GetInterfaceOspfProcessId {
     private List<GetInterfaceOspfProcessIdArea> areas;
+    /**
+     * @return Process ID
+     * 
+     */
     private Integer id;
 
     private GetInterfaceOspfProcessId() {}
     public List<GetInterfaceOspfProcessIdArea> areas() {
         return this.areas;
     }
+    /**
+     * @return Process ID
+     * 
+     */
     public Integer id() {
         return this.id;
     }

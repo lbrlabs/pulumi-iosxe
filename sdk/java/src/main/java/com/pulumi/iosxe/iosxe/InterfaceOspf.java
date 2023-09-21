@@ -19,6 +19,70 @@ import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the Interface OSPF configuration.
+ * 
+ * ## Example Usage
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.InterfaceOspf;
+ * import com.pulumi.iosxe.iosxe.InterfaceOspfArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.InterfaceOspfMessageDigestKeyArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.InterfaceOspfProcessIdArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new InterfaceOspf(&#34;example&#34;, InterfaceOspfArgs.builder()        
+ *             .cost(10)
+ *             .deadInterval(30)
+ *             .helloInterval(5)
+ *             .messageDigestKeys(InterfaceOspfMessageDigestKeyArgs.builder()
+ *                 .id(1)
+ *                 .md5_auth_key(&#34;mykey&#34;)
+ *                 .md5_auth_type(0)
+ *                 .build())
+ *             .mtuIgnore(false)
+ *             .networkTypeBroadcast(false)
+ *             .networkTypeNonBroadcast(false)
+ *             .networkTypePointToMultipoint(false)
+ *             .networkTypePointToPoint(true)
+ *             .priority(10)
+ *             .processIds(InterfaceOspfProcessIdArgs.builder()
+ *                 .areas(InterfaceOspfProcessIdAreaArgs.builder()
+ *                     .areaId(&#34;0&#34;)
+ *                     .build())
+ *                 .id(1)
+ *                 .build())
+ *             .ttlSecurityHops(2)
+ *             .type(&#34;Loopback&#34;)
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/interfaceOspf:InterfaceOspf example &#34;Cisco-IOS-XE-native:native/interface/Loopback=1/ip/Cisco-IOS-XE-ospf:router-ospf/ospf&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/interfaceOspf:InterfaceOspf")
 public class InterfaceOspf extends com.pulumi.resources.CustomResource {
     /**

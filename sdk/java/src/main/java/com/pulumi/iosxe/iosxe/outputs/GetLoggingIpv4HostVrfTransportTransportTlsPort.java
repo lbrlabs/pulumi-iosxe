@@ -10,13 +10,29 @@ import java.util.Objects;
 
 @CustomType
 public final class GetLoggingIpv4HostVrfTransportTransportTlsPort {
+    /**
+     * @return Specify the TLS port number (default=6514)
+     * 
+     */
     private Integer portNumber;
+    /**
+     * @return Specify the TLS profile
+     * 
+     */
     private String profile;
 
     private GetLoggingIpv4HostVrfTransportTransportTlsPort() {}
+    /**
+     * @return Specify the TLS port number (default=6514)
+     * 
+     */
     public Integer portNumber() {
         return this.portNumber;
     }
+    /**
+     * @return Specify the TLS profile
+     * 
+     */
     public String profile() {
         return this.profile;
     }

@@ -185,56 +185,89 @@ class GetErrdisableResult:
     @property
     @pulumi.getter(name="detectCauseAll")
     def detect_cause_all(self) -> bool:
+        """
+        Enable error detection on all cases
+        """
         return pulumi.get(self, "detect_cause_all")
 
     @property
     @pulumi.getter(name="detectCauseArpInspection")
     def detect_cause_arp_inspection(self) -> bool:
+        """
+        Enable error detection for arp inspection
+        """
         return pulumi.get(self, "detect_cause_arp_inspection")
 
     @property
     @pulumi.getter(name="detectCauseBpduguard")
     def detect_cause_bpduguard(self) -> bool:
+        """
+        Enable error detection on bpdu-guard
+        """
         return pulumi.get(self, "detect_cause_bpduguard")
 
     @property
     @pulumi.getter(name="detectCauseDhcpRateLimit")
     def detect_cause_dhcp_rate_limit(self) -> bool:
+        """
+        Enable error detection on dhcp-rate-limit
+        """
         return pulumi.get(self, "detect_cause_dhcp_rate_limit")
 
     @property
     @pulumi.getter(name="detectCauseDtpFlap")
     def detect_cause_dtp_flap(self) -> bool:
+        """
+        Enable error detection on dtp-flapping
+        """
         return pulumi.get(self, "detect_cause_dtp_flap")
 
     @property
     @pulumi.getter(name="detectCauseGbicInvalid")
     def detect_cause_gbic_invalid(self) -> bool:
+        """
+        Enable error detection on gbic-invalid
+        """
         return pulumi.get(self, "detect_cause_gbic_invalid")
 
     @property
     @pulumi.getter(name="detectCauseInlinePower")
     def detect_cause_inline_power(self) -> bool:
+        """
+        Enable error detection for inline-power
+        """
         return pulumi.get(self, "detect_cause_inline_power")
 
     @property
     @pulumi.getter(name="detectCauseL2ptguard")
     def detect_cause_l2ptguard(self) -> bool:
+        """
+        Enable timer to recover from l2protocol-tunnel error disable state
+        """
         return pulumi.get(self, "detect_cause_l2ptguard")
 
     @property
     @pulumi.getter(name="detectCauseLinkFlap")
     def detect_cause_link_flap(self) -> bool:
+        """
+        Enable error detection on linkstate-flapping
+        """
         return pulumi.get(self, "detect_cause_link_flap")
 
     @property
     @pulumi.getter(name="detectCauseLoopback")
     def detect_cause_loopback(self) -> bool:
+        """
+        Enable error detection on loopback
+        """
         return pulumi.get(self, "detect_cause_loopback")
 
     @property
     @pulumi.getter(name="detectCauseLoopdetect")
     def detect_cause_loopdetect(self) -> bool:
+        """
+        Enable error detection on loop detect
+        """
         return pulumi.get(self, "detect_cause_loopdetect")
 
     @property
@@ -245,116 +278,185 @@ class GetErrdisableResult:
     @property
     @pulumi.getter(name="detectCausePagpFlap")
     def detect_cause_pagp_flap(self) -> bool:
+        """
+        Enable error detection on pagp-flapping
+        """
         return pulumi.get(self, "detect_cause_pagp_flap")
 
     @property
     @pulumi.getter(name="detectCausePppoeIaRateLimit")
     def detect_cause_pppoe_ia_rate_limit(self) -> bool:
+        """
+        Enable error detection on PPPoE IA rate-limit
+        """
         return pulumi.get(self, "detect_cause_pppoe_ia_rate_limit")
 
     @property
     @pulumi.getter(name="detectCauseSecurityViolationShutdownVlan")
     def detect_cause_security_violation_shutdown_vlan(self) -> bool:
+        """
+        Shutdown vlan on 802.1x-guard violation
+        """
         return pulumi.get(self, "detect_cause_security_violation_shutdown_vlan")
 
     @property
     @pulumi.getter(name="detectCauseSfpConfigMismatch")
     def detect_cause_sfp_config_mismatch(self) -> bool:
+        """
+        Enable error detection on SFP config mismatch
+        """
         return pulumi.get(self, "detect_cause_sfp_config_mismatch")
 
     @property
     @pulumi.getter(name="detectCauseSmallFrame")
     def detect_cause_small_frame(self) -> bool:
+        """
+        Enable error detection on small_frame
+        """
         return pulumi.get(self, "detect_cause_small_frame")
 
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
     @pulumi.getter(name="flapSettingCauseDtpFlapMaxFlaps")
     def flap_setting_cause_dtp_flap_max_flaps(self) -> int:
+        """
+        maximum flaps allowed before setting to errdisable
+        """
         return pulumi.get(self, "flap_setting_cause_dtp_flap_max_flaps")
 
     @property
     @pulumi.getter(name="flapSettingCauseDtpFlapTime")
     def flap_setting_cause_dtp_flap_time(self) -> int:
+        """
+        time period the flaps are counted
+        """
         return pulumi.get(self, "flap_setting_cause_dtp_flap_time")
 
     @property
     @pulumi.getter(name="flapSettingCauseLinkFlapMaxFlaps")
     def flap_setting_cause_link_flap_max_flaps(self) -> int:
+        """
+        maximum flaps allowed before setting to errdisable
+        """
         return pulumi.get(self, "flap_setting_cause_link_flap_max_flaps")
 
     @property
     @pulumi.getter(name="flapSettingCauseLinkFlapTime")
     def flap_setting_cause_link_flap_time(self) -> int:
+        """
+        time period the flaps are counted
+        """
         return pulumi.get(self, "flap_setting_cause_link_flap_time")
 
     @property
     @pulumi.getter(name="flapSettingCausePagpFlapMaxFlaps")
     def flap_setting_cause_pagp_flap_max_flaps(self) -> int:
+        """
+        maximum flaps allowed before setting to errdisable
+        """
         return pulumi.get(self, "flap_setting_cause_pagp_flap_max_flaps")
 
     @property
     @pulumi.getter(name="flapSettingCausePagpFlapTime")
     def flap_setting_cause_pagp_flap_time(self) -> int:
+        """
+        time period the flaps are counted
+        """
         return pulumi.get(self, "flap_setting_cause_pagp_flap_time")
 
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
     @property
     @pulumi.getter(name="recoveryCauseAll")
     def recovery_cause_all(self) -> bool:
+        """
+        Enable timer to recover from all error causes
+        """
         return pulumi.get(self, "recovery_cause_all")
 
     @property
     @pulumi.getter(name="recoveryCauseArpInspection")
     def recovery_cause_arp_inspection(self) -> bool:
+        """
+        Enable timer to recover from arp inspection error disable state
+        """
         return pulumi.get(self, "recovery_cause_arp_inspection")
 
     @property
     @pulumi.getter(name="recoveryCauseBpduguard")
     def recovery_cause_bpduguard(self) -> bool:
+        """
+        Enable timer to recover from BPDU Guard error
+        """
         return pulumi.get(self, "recovery_cause_bpduguard")
 
     @property
     @pulumi.getter(name="recoveryCauseChannelMisconfig")
     def recovery_cause_channel_misconfig(self) -> bool:
+        """
+        (STP)  Enable timer to recover from channel misconfiguration error
+        """
         return pulumi.get(self, "recovery_cause_channel_misconfig")
 
     @property
     @pulumi.getter(name="recoveryCauseDhcpRateLimit")
     def recovery_cause_dhcp_rate_limit(self) -> bool:
+        """
+        Enable timer to recover from dhcp-rate-limit error
+        """
         return pulumi.get(self, "recovery_cause_dhcp_rate_limit")
 
     @property
     @pulumi.getter(name="recoveryCauseDtpFlap")
     def recovery_cause_dtp_flap(self) -> bool:
+        """
+        Enable timer to recover from dtp-flap error
+        """
         return pulumi.get(self, "recovery_cause_dtp_flap")
 
     @property
     @pulumi.getter(name="recoveryCauseGbicInvalid")
     def recovery_cause_gbic_invalid(self) -> bool:
+        """
+        Enable timer to recover from invalid GBIC error
+        """
         return pulumi.get(self, "recovery_cause_gbic_invalid")
 
     @property
     @pulumi.getter(name="recoveryCauseInlinePower")
     def recovery_cause_inline_power(self) -> bool:
+        """
+        Enable timer to recover from inline-power error
+        """
         return pulumi.get(self, "recovery_cause_inline_power")
 
     @property
     @pulumi.getter(name="recoveryCauseL2ptguard")
     def recovery_cause_l2ptguard(self) -> bool:
+        """
+        Enable timer to recover from l2protocol-tunnel error disable state
+        """
         return pulumi.get(self, "recovery_cause_l2ptguard")
 
     @property
     @pulumi.getter(name="recoveryCauseLinkFlap")
     def recovery_cause_link_flap(self) -> bool:
+        """
+        Enable timer to recover from link-flap error
+        """
         return pulumi.get(self, "recovery_cause_link_flap")
 
     @property
@@ -365,16 +467,25 @@ class GetErrdisableResult:
     @property
     @pulumi.getter(name="recoveryCauseLoopback")
     def recovery_cause_loopback(self) -> bool:
+        """
+        Enable timer to recover from loopback error
+        """
         return pulumi.get(self, "recovery_cause_loopback")
 
     @property
     @pulumi.getter(name="recoveryCauseLoopdetect")
     def recovery_cause_loopdetect(self) -> bool:
+        """
+        Enable timer to recover from loop detect error
+        """
         return pulumi.get(self, "recovery_cause_loopdetect")
 
     @property
     @pulumi.getter(name="recoveryCauseMacLimit")
     def recovery_cause_mac_limit(self) -> bool:
+        """
+        Enable timer to recover from mac limit disable state
+        """
         return pulumi.get(self, "recovery_cause_mac_limit")
 
     @property
@@ -385,21 +496,33 @@ class GetErrdisableResult:
     @property
     @pulumi.getter(name="recoveryCausePagpFlap")
     def recovery_cause_pagp_flap(self) -> bool:
+        """
+        Enable timer to recover from pagp-flap error
+        """
         return pulumi.get(self, "recovery_cause_pagp_flap")
 
     @property
     @pulumi.getter(name="recoveryCausePortModeFailure")
     def recovery_cause_port_mode_failure(self) -> bool:
+        """
+        Enable timer to recover from port mode change failure
+        """
         return pulumi.get(self, "recovery_cause_port_mode_failure")
 
     @property
     @pulumi.getter(name="recoveryCausePppoeIaRateLimit")
     def recovery_cause_pppoe_ia_rate_limit(self) -> bool:
+        """
+        Enable timer to recover from PPPoE IA rate-limit error
+        """
         return pulumi.get(self, "recovery_cause_pppoe_ia_rate_limit")
 
     @property
     @pulumi.getter(name="recoveryCausePsecureViolation")
     def recovery_cause_psecure_violation(self) -> bool:
+        """
+        Enable timer to recover from psecure violation error
+        """
         return pulumi.get(self, "recovery_cause_psecure_violation")
 
     @property
@@ -410,26 +533,41 @@ class GetErrdisableResult:
     @property
     @pulumi.getter(name="recoveryCauseSecurityViolation")
     def recovery_cause_security_violation(self) -> bool:
+        """
+        Enable timer to recover from 802.1x violation error
+        """
         return pulumi.get(self, "recovery_cause_security_violation")
 
     @property
     @pulumi.getter(name="recoveryCauseSfpConfigMismatch")
     def recovery_cause_sfp_config_mismatch(self) -> bool:
+        """
+        Enable timer to recover from SFP config mismatch error
+        """
         return pulumi.get(self, "recovery_cause_sfp_config_mismatch")
 
     @property
     @pulumi.getter(name="recoveryCauseSmallFrame")
     def recovery_cause_small_frame(self) -> bool:
+        """
+        Enable timer to recover from small frame error
+        """
         return pulumi.get(self, "recovery_cause_small_frame")
 
     @property
     @pulumi.getter(name="recoveryCauseStormControl")
     def recovery_cause_storm_control(self) -> bool:
+        """
+        Enable timer to recover from storm-control error
+        """
         return pulumi.get(self, "recovery_cause_storm_control")
 
     @property
     @pulumi.getter(name="recoveryCauseUdld")
     def recovery_cause_udld(self) -> bool:
+        """
+        Enable timer to recover from udld error
+        """
         return pulumi.get(self, "recovery_cause_udld")
 
     @property
@@ -440,11 +578,17 @@ class GetErrdisableResult:
     @property
     @pulumi.getter(name="recoveryCauseVmps")
     def recovery_cause_vmps(self) -> bool:
+        """
+        Enable timer to recover from vmps shutdown error
+        """
         return pulumi.get(self, "recovery_cause_vmps")
 
     @property
     @pulumi.getter(name="recoveryInterval")
     def recovery_interval(self) -> int:
+        """
+        Error disable recovery timer value
+        """
         return pulumi.get(self, "recovery_interval")
 
 
@@ -512,7 +656,19 @@ class AwaitableGetErrdisableResult(GetErrdisableResult):
 def get_errdisable(device: Optional[str] = None,
                    opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetErrdisableResult:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Errdisable configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_errdisable()
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -579,6 +735,18 @@ def get_errdisable(device: Optional[str] = None,
 def get_errdisable_output(device: Optional[pulumi.Input[Optional[str]]] = None,
                           opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetErrdisableResult]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Errdisable configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_errdisable()
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     ...

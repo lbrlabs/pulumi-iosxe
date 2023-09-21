@@ -18,6 +18,63 @@ import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the Dot1x configuration.
+ * 
+ * ## Example Usage
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.Dot1x;
+ * import com.pulumi.iosxe.iosxe.Dot1xArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.Dot1xCredentialArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Dot1x(&#34;example&#34;, Dot1xArgs.builder()        
+ *             .authFailEapol(true)
+ *             .credentials(Dot1xCredentialArgs.builder()
+ *                 .anonymous_id(&#34;1&#34;)
+ *                 .description(&#34;credential_profile_name&#34;)
+ *                 .password(&#34;password123&#34;)
+ *                 .password_type(&#34;0&#34;)
+ *                 .pki_trustpoint(&#34;trustpoint1&#34;)
+ *                 .profile_name(&#34;profile1&#34;)
+ *                 .username(&#34;username1&#34;)
+ *                 .build())
+ *             .criticalEapolConfigBlock(true)
+ *             .loggingVerbose(true)
+ *             .supplicantControlledTransient(true)
+ *             .supplicantForceMulticast(true)
+ *             .systemAuthControl(true)
+ *             .testTimeout(1000)
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/dot1x:Dot1x example &#34;Cisco-IOS-XE-native:native/dot1x&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/dot1x:Dot1x")
 public class Dot1x extends com.pulumi.resources.CustomResource {
     /**

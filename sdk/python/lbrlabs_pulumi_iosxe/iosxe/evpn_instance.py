@@ -594,7 +594,39 @@ class EvpnInstance(pulumi.CustomResource):
                  vlan_based_route_target_import: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
-        Create a EvpnInstance resource with the given unique name, props, and options.
+        This resource can manage the EVPN Instance configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.EvpnInstance("example",
+            evpn_instance_num=10,
+            vlan_based_auto_route_target=False,
+            vlan_based_default_gateway_advertise="enable",
+            vlan_based_encapsulation="vxlan",
+            vlan_based_ip_local_learning_disable=False,
+            vlan_based_ip_local_learning_enable=True,
+            vlan_based_rd="10:10",
+            vlan_based_re_originate_route_type5=True,
+            vlan_based_replication_type_ingress=False,
+            vlan_based_replication_type_mp2mp=False,
+            vlan_based_replication_type_p2mp=False,
+            vlan_based_replication_type_static=True,
+            vlan_based_route_target="10:10",
+            vlan_based_route_target_both="10:10",
+            vlan_based_route_target_export="10:10",
+            vlan_based_route_target_import="10:10")
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/evpnInstance:EvpnInstance example "Cisco-IOS-XE-native:native/l2vpn/Cisco-IOS-XE-l2vpn:evpn_cont/evpn-instance/evpn/instance/instance=10"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] device: A device name from the provider configuration.
@@ -622,7 +654,39 @@ class EvpnInstance(pulumi.CustomResource):
                  args: EvpnInstanceArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a EvpnInstance resource with the given unique name, props, and options.
+        This resource can manage the EVPN Instance configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.EvpnInstance("example",
+            evpn_instance_num=10,
+            vlan_based_auto_route_target=False,
+            vlan_based_default_gateway_advertise="enable",
+            vlan_based_encapsulation="vxlan",
+            vlan_based_ip_local_learning_disable=False,
+            vlan_based_ip_local_learning_enable=True,
+            vlan_based_rd="10:10",
+            vlan_based_re_originate_route_type5=True,
+            vlan_based_replication_type_ingress=False,
+            vlan_based_replication_type_mp2mp=False,
+            vlan_based_replication_type_p2mp=False,
+            vlan_based_replication_type_static=True,
+            vlan_based_route_target="10:10",
+            vlan_based_route_target_both="10:10",
+            vlan_based_route_target_export="10:10",
+            vlan_based_route_target_import="10:10")
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/evpnInstance:EvpnInstance example "Cisco-IOS-XE-native:native/l2vpn/Cisco-IOS-XE-l2vpn:evpn_cont/evpn-instance/evpn/instance/instance=10"
+        ```
+
         :param str resource_name: The name of the resource.
         :param EvpnInstanceArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

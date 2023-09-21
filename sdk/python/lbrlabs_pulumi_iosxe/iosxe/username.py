@@ -274,7 +274,27 @@ class Username(pulumi.CustomResource):
                  secret_encryption: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
-        Create a Username resource with the given unique name, props, and options.
+        This resource can manage the Username configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.Username("example",
+            description="User1 description",
+            password="MyPassword",
+            password_encryption="0",
+            privilege=15)
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/username:Username example "Cisco-IOS-XE-native:native/username=user1"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] description: description string with max 128 characters
@@ -290,7 +310,27 @@ class Username(pulumi.CustomResource):
                  args: Optional[UsernameArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a Username resource with the given unique name, props, and options.
+        This resource can manage the Username configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.Username("example",
+            description="User1 description",
+            password="MyPassword",
+            password_encryption="0",
+            privilege=15)
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/username:Username example "Cisco-IOS-XE-native:native/username=user1"
+        ```
+
         :param str resource_name: The name of the resource.
         :param UsernameArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

@@ -13,21 +13,45 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetRouteMapResult {
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
     private List<GetRouteMapEntry> entries;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
+    /**
+     * @return WORD;;Route map tag
+     * 
+     */
     private String name;
 
     private GetRouteMapResult() {}
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
     public List<GetRouteMapEntry> entries() {
         return this.entries;
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
+    /**
+     * @return WORD;;Route map tag
+     * 
+     */
     public String name() {
         return this.name;
     }

@@ -13,29 +13,77 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetUdldResult {
+    /**
+     * @return Enable UDLD protocol in aggressive mode on fiber ports exceptwhere locally configured
+     * 
+     */
     private Boolean aggressive;
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return Enable UDLD protocol on fiber ports except where locally configured
+     * 
+     */
     private Boolean enable;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
+    /**
+     * @return Set UDLD message time period
+     * 
+     */
     private Integer messageTime;
+    /**
+     * @return timer-interval(sec)
+     * 
+     */
     private Integer recoveryInterval;
 
     private GetUdldResult() {}
+    /**
+     * @return Enable UDLD protocol in aggressive mode on fiber ports exceptwhere locally configured
+     * 
+     */
     public Boolean aggressive() {
         return this.aggressive;
     }
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return Enable UDLD protocol on fiber ports except where locally configured
+     * 
+     */
     public Boolean enable() {
         return this.enable;
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
+    /**
+     * @return Set UDLD message time period
+     * 
+     */
     public Integer messageTime() {
         return this.messageTime;
     }
+    /**
+     * @return timer-interval(sec)
+     * 
+     */
     public Integer recoveryInterval() {
         return this.recoveryInterval;
     }

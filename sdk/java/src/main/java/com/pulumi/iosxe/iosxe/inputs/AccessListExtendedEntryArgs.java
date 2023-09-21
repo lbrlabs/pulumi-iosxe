@@ -17,9 +17,17 @@ public final class AccessListExtendedEntryArgs extends com.pulumi.resources.Reso
 
     public static final AccessListExtendedEntryArgs Empty = new AccessListExtendedEntryArgs();
 
+    /**
+     * - Choices: `deny`, `permit`
+     * 
+     */
     @Import(name="aceRuleAction")
     private @Nullable Output<String> aceRuleAction;
 
+    /**
+     * @return - Choices: `deny`, `permit`
+     * 
+     */
     public Optional<Output<String>> aceRuleAction() {
         return Optional.ofNullable(this.aceRuleAction);
     }
@@ -31,65 +39,137 @@ public final class AccessListExtendedEntryArgs extends com.pulumi.resources.Reso
         return Optional.ofNullable(this.aceRuleProtocol);
     }
 
+    /**
+     * Match on the ACK bit
+     * 
+     */
     @Import(name="ack")
     private @Nullable Output<Boolean> ack;
 
+    /**
+     * @return Match on the ACK bit
+     * 
+     */
     public Optional<Output<Boolean>> ack() {
         return Optional.ofNullable(this.ack);
     }
 
+    /**
+     * Any destination host
+     * 
+     */
     @Import(name="destinationAny")
     private @Nullable Output<Boolean> destinationAny;
 
+    /**
+     * @return Any destination host
+     * 
+     */
     public Optional<Output<Boolean>> destinationAny() {
         return Optional.ofNullable(this.destinationAny);
     }
 
+    /**
+     * A single destination host
+     * 
+     */
     @Import(name="destinationHost")
     private @Nullable Output<String> destinationHost;
 
+    /**
+     * @return A single destination host
+     * 
+     */
     public Optional<Output<String>> destinationHost() {
         return Optional.ofNullable(this.destinationHost);
     }
 
+    /**
+     * Destination network object group
+     * 
+     */
     @Import(name="destinationObjectGroup")
     private @Nullable Output<String> destinationObjectGroup;
 
+    /**
+     * @return Destination network object group
+     * 
+     */
     public Optional<Output<String>> destinationObjectGroup() {
         return Optional.ofNullable(this.destinationObjectGroup);
     }
 
+    /**
+     * Match only packets on a given port number up to 10 ports
+     * 
+     */
     @Import(name="destinationPortEqual")
     private @Nullable Output<String> destinationPortEqual;
 
+    /**
+     * @return Match only packets on a given port number up to 10 ports
+     * 
+     */
     public Optional<Output<String>> destinationPortEqual() {
         return Optional.ofNullable(this.destinationPortEqual);
     }
 
+    /**
+     * Match only packets with a greater port number
+     * 
+     */
     @Import(name="destinationPortGreaterThan")
     private @Nullable Output<String> destinationPortGreaterThan;
 
+    /**
+     * @return Match only packets with a greater port number
+     * 
+     */
     public Optional<Output<String>> destinationPortGreaterThan() {
         return Optional.ofNullable(this.destinationPortGreaterThan);
     }
 
+    /**
+     * Match only packets with a lower port number
+     * 
+     */
     @Import(name="destinationPortLesserThan")
     private @Nullable Output<String> destinationPortLesserThan;
 
+    /**
+     * @return Match only packets with a lower port number
+     * 
+     */
     public Optional<Output<String>> destinationPortLesserThan() {
         return Optional.ofNullable(this.destinationPortLesserThan);
     }
 
+    /**
+     * Match only packets in the range of port numbers
+     * 
+     */
     @Import(name="destinationPortRangeFrom")
     private @Nullable Output<String> destinationPortRangeFrom;
 
+    /**
+     * @return Match only packets in the range of port numbers
+     * 
+     */
     public Optional<Output<String>> destinationPortRangeFrom() {
         return Optional.ofNullable(this.destinationPortRangeFrom);
     }
 
+    /**
+     * Match only packets in the range of port numbers
+     * 
+     */
     @Import(name="destinationPortRangeTo")
     private @Nullable Output<String> destinationPortRangeTo;
 
+    /**
+     * @return Match only packets in the range of port numbers
+     * 
+     */
     public Optional<Output<String>> destinationPortRangeTo() {
         return Optional.ofNullable(this.destinationPortRangeTo);
     }
@@ -108,142 +188,302 @@ public final class AccessListExtendedEntryArgs extends com.pulumi.resources.Reso
         return Optional.ofNullable(this.destinationPrefixMask);
     }
 
+    /**
+     * Match packets with given dscp value
+     * 
+     */
     @Import(name="dscp")
     private @Nullable Output<String> dscp;
 
+    /**
+     * @return Match packets with given dscp value
+     * 
+     */
     public Optional<Output<String>> dscp() {
         return Optional.ofNullable(this.dscp);
     }
 
+    /**
+     * Match established connections
+     * 
+     */
     @Import(name="established")
     private @Nullable Output<Boolean> established;
 
+    /**
+     * @return Match established connections
+     * 
+     */
     public Optional<Output<Boolean>> established() {
         return Optional.ofNullable(this.established);
     }
 
+    /**
+     * Match on the FIN bit
+     * 
+     */
     @Import(name="fin")
     private @Nullable Output<Boolean> fin;
 
+    /**
+     * @return Match on the FIN bit
+     * 
+     */
     public Optional<Output<Boolean>> fin() {
         return Optional.ofNullable(this.fin);
     }
 
+    /**
+     * Check non-initial fragments
+     * 
+     */
     @Import(name="fragments")
     private @Nullable Output<Boolean> fragments;
 
+    /**
+     * @return Check non-initial fragments
+     * 
+     */
     public Optional<Output<Boolean>> fragments() {
         return Optional.ofNullable(this.fragments);
     }
 
+    /**
+     * Log matches against this entry
+     * 
+     */
     @Import(name="log")
     private @Nullable Output<Boolean> log;
 
+    /**
+     * @return Log matches against this entry
+     * 
+     */
     public Optional<Output<Boolean>> log() {
         return Optional.ofNullable(this.log);
     }
 
+    /**
+     * Log matches against this entry, including input interface
+     * 
+     */
     @Import(name="logInput")
     private @Nullable Output<Boolean> logInput;
 
+    /**
+     * @return Log matches against this entry, including input interface
+     * 
+     */
     public Optional<Output<Boolean>> logInput() {
         return Optional.ofNullable(this.logInput);
     }
 
+    /**
+     * Match packets with given precedence value
+     * 
+     */
     @Import(name="precedence")
     private @Nullable Output<String> precedence;
 
+    /**
+     * @return Match packets with given precedence value
+     * 
+     */
     public Optional<Output<String>> precedence() {
         return Optional.ofNullable(this.precedence);
     }
 
+    /**
+     * Match on the PSH bit
+     * 
+     */
     @Import(name="psh")
     private @Nullable Output<Boolean> psh;
 
+    /**
+     * @return Match on the PSH bit
+     * 
+     */
     public Optional<Output<Boolean>> psh() {
         return Optional.ofNullable(this.psh);
     }
 
+    /**
+     * Access list entry comment
+     * 
+     */
     @Import(name="remark")
     private @Nullable Output<String> remark;
 
+    /**
+     * @return Access list entry comment
+     * 
+     */
     public Optional<Output<String>> remark() {
         return Optional.ofNullable(this.remark);
     }
 
+    /**
+     * Match on the RST bit
+     * 
+     */
     @Import(name="rst")
     private @Nullable Output<Boolean> rst;
 
+    /**
+     * @return Match on the RST bit
+     * 
+     */
     public Optional<Output<Boolean>> rst() {
         return Optional.ofNullable(this.rst);
     }
 
+    /**
+     * - Range: `1`-`2147483647`
+     * 
+     */
     @Import(name="sequence", required=true)
     private Output<Integer> sequence;
 
+    /**
+     * @return - Range: `1`-`2147483647`
+     * 
+     */
     public Output<Integer> sequence() {
         return this.sequence;
     }
 
+    /**
+     * Service object group name
+     * 
+     */
     @Import(name="serviceObjectGroup")
     private @Nullable Output<String> serviceObjectGroup;
 
+    /**
+     * @return Service object group name
+     * 
+     */
     public Optional<Output<String>> serviceObjectGroup() {
         return Optional.ofNullable(this.serviceObjectGroup);
     }
 
+    /**
+     * Any source host
+     * 
+     */
     @Import(name="sourceAny")
     private @Nullable Output<Boolean> sourceAny;
 
+    /**
+     * @return Any source host
+     * 
+     */
     public Optional<Output<Boolean>> sourceAny() {
         return Optional.ofNullable(this.sourceAny);
     }
 
+    /**
+     * A single source host
+     * 
+     */
     @Import(name="sourceHost")
     private @Nullable Output<String> sourceHost;
 
+    /**
+     * @return A single source host
+     * 
+     */
     public Optional<Output<String>> sourceHost() {
         return Optional.ofNullable(this.sourceHost);
     }
 
+    /**
+     * Source network object group
+     * 
+     */
     @Import(name="sourceObjectGroup")
     private @Nullable Output<String> sourceObjectGroup;
 
+    /**
+     * @return Source network object group
+     * 
+     */
     public Optional<Output<String>> sourceObjectGroup() {
         return Optional.ofNullable(this.sourceObjectGroup);
     }
 
+    /**
+     * Match only packets on a given port number up to 10 ports
+     * 
+     */
     @Import(name="sourcePortEqual")
     private @Nullable Output<String> sourcePortEqual;
 
+    /**
+     * @return Match only packets on a given port number up to 10 ports
+     * 
+     */
     public Optional<Output<String>> sourcePortEqual() {
         return Optional.ofNullable(this.sourcePortEqual);
     }
 
+    /**
+     * Match only packets with a greater port number
+     * 
+     */
     @Import(name="sourcePortGreaterThan")
     private @Nullable Output<String> sourcePortGreaterThan;
 
+    /**
+     * @return Match only packets with a greater port number
+     * 
+     */
     public Optional<Output<String>> sourcePortGreaterThan() {
         return Optional.ofNullable(this.sourcePortGreaterThan);
     }
 
+    /**
+     * Match only packets with a lower port number
+     * 
+     */
     @Import(name="sourcePortLesserThan")
     private @Nullable Output<String> sourcePortLesserThan;
 
+    /**
+     * @return Match only packets with a lower port number
+     * 
+     */
     public Optional<Output<String>> sourcePortLesserThan() {
         return Optional.ofNullable(this.sourcePortLesserThan);
     }
 
+    /**
+     * Match only packets in the range of port numbers
+     * 
+     */
     @Import(name="sourcePortRangeFrom")
     private @Nullable Output<String> sourcePortRangeFrom;
 
+    /**
+     * @return Match only packets in the range of port numbers
+     * 
+     */
     public Optional<Output<String>> sourcePortRangeFrom() {
         return Optional.ofNullable(this.sourcePortRangeFrom);
     }
 
+    /**
+     * Match only packets in the range of port numbers
+     * 
+     */
     @Import(name="sourcePortRangeTo")
     private @Nullable Output<String> sourcePortRangeTo;
 
+    /**
+     * @return Match only packets in the range of port numbers
+     * 
+     */
     public Optional<Output<String>> sourcePortRangeTo() {
         return Optional.ofNullable(this.sourcePortRangeTo);
     }
@@ -262,23 +502,47 @@ public final class AccessListExtendedEntryArgs extends com.pulumi.resources.Reso
         return Optional.ofNullable(this.sourcePrefixMask);
     }
 
+    /**
+     * Match on the SYN bit
+     * 
+     */
     @Import(name="syn")
     private @Nullable Output<Boolean> syn;
 
+    /**
+     * @return Match on the SYN bit
+     * 
+     */
     public Optional<Output<Boolean>> syn() {
         return Optional.ofNullable(this.syn);
     }
 
+    /**
+     * Match packets with given TOS value
+     * 
+     */
     @Import(name="tos")
     private @Nullable Output<String> tos;
 
+    /**
+     * @return Match packets with given TOS value
+     * 
+     */
     public Optional<Output<String>> tos() {
         return Optional.ofNullable(this.tos);
     }
 
+    /**
+     * Match on the URG bit
+     * 
+     */
     @Import(name="urg")
     private @Nullable Output<Boolean> urg;
 
+    /**
+     * @return Match on the URG bit
+     * 
+     */
     public Optional<Output<Boolean>> urg() {
         return Optional.ofNullable(this.urg);
     }
@@ -344,11 +608,23 @@ public final class AccessListExtendedEntryArgs extends com.pulumi.resources.Reso
             $ = new AccessListExtendedEntryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param aceRuleAction - Choices: `deny`, `permit`
+         * 
+         * @return builder
+         * 
+         */
         public Builder aceRuleAction(@Nullable Output<String> aceRuleAction) {
             $.aceRuleAction = aceRuleAction;
             return this;
         }
 
+        /**
+         * @param aceRuleAction - Choices: `deny`, `permit`
+         * 
+         * @return builder
+         * 
+         */
         public Builder aceRuleAction(String aceRuleAction) {
             return aceRuleAction(Output.of(aceRuleAction));
         }
@@ -362,83 +638,191 @@ public final class AccessListExtendedEntryArgs extends com.pulumi.resources.Reso
             return aceRuleProtocol(Output.of(aceRuleProtocol));
         }
 
+        /**
+         * @param ack Match on the ACK bit
+         * 
+         * @return builder
+         * 
+         */
         public Builder ack(@Nullable Output<Boolean> ack) {
             $.ack = ack;
             return this;
         }
 
+        /**
+         * @param ack Match on the ACK bit
+         * 
+         * @return builder
+         * 
+         */
         public Builder ack(Boolean ack) {
             return ack(Output.of(ack));
         }
 
+        /**
+         * @param destinationAny Any destination host
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationAny(@Nullable Output<Boolean> destinationAny) {
             $.destinationAny = destinationAny;
             return this;
         }
 
+        /**
+         * @param destinationAny Any destination host
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationAny(Boolean destinationAny) {
             return destinationAny(Output.of(destinationAny));
         }
 
+        /**
+         * @param destinationHost A single destination host
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationHost(@Nullable Output<String> destinationHost) {
             $.destinationHost = destinationHost;
             return this;
         }
 
+        /**
+         * @param destinationHost A single destination host
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationHost(String destinationHost) {
             return destinationHost(Output.of(destinationHost));
         }
 
+        /**
+         * @param destinationObjectGroup Destination network object group
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationObjectGroup(@Nullable Output<String> destinationObjectGroup) {
             $.destinationObjectGroup = destinationObjectGroup;
             return this;
         }
 
+        /**
+         * @param destinationObjectGroup Destination network object group
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationObjectGroup(String destinationObjectGroup) {
             return destinationObjectGroup(Output.of(destinationObjectGroup));
         }
 
+        /**
+         * @param destinationPortEqual Match only packets on a given port number up to 10 ports
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationPortEqual(@Nullable Output<String> destinationPortEqual) {
             $.destinationPortEqual = destinationPortEqual;
             return this;
         }
 
+        /**
+         * @param destinationPortEqual Match only packets on a given port number up to 10 ports
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationPortEqual(String destinationPortEqual) {
             return destinationPortEqual(Output.of(destinationPortEqual));
         }
 
+        /**
+         * @param destinationPortGreaterThan Match only packets with a greater port number
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationPortGreaterThan(@Nullable Output<String> destinationPortGreaterThan) {
             $.destinationPortGreaterThan = destinationPortGreaterThan;
             return this;
         }
 
+        /**
+         * @param destinationPortGreaterThan Match only packets with a greater port number
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationPortGreaterThan(String destinationPortGreaterThan) {
             return destinationPortGreaterThan(Output.of(destinationPortGreaterThan));
         }
 
+        /**
+         * @param destinationPortLesserThan Match only packets with a lower port number
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationPortLesserThan(@Nullable Output<String> destinationPortLesserThan) {
             $.destinationPortLesserThan = destinationPortLesserThan;
             return this;
         }
 
+        /**
+         * @param destinationPortLesserThan Match only packets with a lower port number
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationPortLesserThan(String destinationPortLesserThan) {
             return destinationPortLesserThan(Output.of(destinationPortLesserThan));
         }
 
+        /**
+         * @param destinationPortRangeFrom Match only packets in the range of port numbers
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationPortRangeFrom(@Nullable Output<String> destinationPortRangeFrom) {
             $.destinationPortRangeFrom = destinationPortRangeFrom;
             return this;
         }
 
+        /**
+         * @param destinationPortRangeFrom Match only packets in the range of port numbers
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationPortRangeFrom(String destinationPortRangeFrom) {
             return destinationPortRangeFrom(Output.of(destinationPortRangeFrom));
         }
 
+        /**
+         * @param destinationPortRangeTo Match only packets in the range of port numbers
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationPortRangeTo(@Nullable Output<String> destinationPortRangeTo) {
             $.destinationPortRangeTo = destinationPortRangeTo;
             return this;
         }
 
+        /**
+         * @param destinationPortRangeTo Match only packets in the range of port numbers
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationPortRangeTo(String destinationPortRangeTo) {
             return destinationPortRangeTo(Output.of(destinationPortRangeTo));
         }
@@ -461,182 +845,422 @@ public final class AccessListExtendedEntryArgs extends com.pulumi.resources.Reso
             return destinationPrefixMask(Output.of(destinationPrefixMask));
         }
 
+        /**
+         * @param dscp Match packets with given dscp value
+         * 
+         * @return builder
+         * 
+         */
         public Builder dscp(@Nullable Output<String> dscp) {
             $.dscp = dscp;
             return this;
         }
 
+        /**
+         * @param dscp Match packets with given dscp value
+         * 
+         * @return builder
+         * 
+         */
         public Builder dscp(String dscp) {
             return dscp(Output.of(dscp));
         }
 
+        /**
+         * @param established Match established connections
+         * 
+         * @return builder
+         * 
+         */
         public Builder established(@Nullable Output<Boolean> established) {
             $.established = established;
             return this;
         }
 
+        /**
+         * @param established Match established connections
+         * 
+         * @return builder
+         * 
+         */
         public Builder established(Boolean established) {
             return established(Output.of(established));
         }
 
+        /**
+         * @param fin Match on the FIN bit
+         * 
+         * @return builder
+         * 
+         */
         public Builder fin(@Nullable Output<Boolean> fin) {
             $.fin = fin;
             return this;
         }
 
+        /**
+         * @param fin Match on the FIN bit
+         * 
+         * @return builder
+         * 
+         */
         public Builder fin(Boolean fin) {
             return fin(Output.of(fin));
         }
 
+        /**
+         * @param fragments Check non-initial fragments
+         * 
+         * @return builder
+         * 
+         */
         public Builder fragments(@Nullable Output<Boolean> fragments) {
             $.fragments = fragments;
             return this;
         }
 
+        /**
+         * @param fragments Check non-initial fragments
+         * 
+         * @return builder
+         * 
+         */
         public Builder fragments(Boolean fragments) {
             return fragments(Output.of(fragments));
         }
 
+        /**
+         * @param log Log matches against this entry
+         * 
+         * @return builder
+         * 
+         */
         public Builder log(@Nullable Output<Boolean> log) {
             $.log = log;
             return this;
         }
 
+        /**
+         * @param log Log matches against this entry
+         * 
+         * @return builder
+         * 
+         */
         public Builder log(Boolean log) {
             return log(Output.of(log));
         }
 
+        /**
+         * @param logInput Log matches against this entry, including input interface
+         * 
+         * @return builder
+         * 
+         */
         public Builder logInput(@Nullable Output<Boolean> logInput) {
             $.logInput = logInput;
             return this;
         }
 
+        /**
+         * @param logInput Log matches against this entry, including input interface
+         * 
+         * @return builder
+         * 
+         */
         public Builder logInput(Boolean logInput) {
             return logInput(Output.of(logInput));
         }
 
+        /**
+         * @param precedence Match packets with given precedence value
+         * 
+         * @return builder
+         * 
+         */
         public Builder precedence(@Nullable Output<String> precedence) {
             $.precedence = precedence;
             return this;
         }
 
+        /**
+         * @param precedence Match packets with given precedence value
+         * 
+         * @return builder
+         * 
+         */
         public Builder precedence(String precedence) {
             return precedence(Output.of(precedence));
         }
 
+        /**
+         * @param psh Match on the PSH bit
+         * 
+         * @return builder
+         * 
+         */
         public Builder psh(@Nullable Output<Boolean> psh) {
             $.psh = psh;
             return this;
         }
 
+        /**
+         * @param psh Match on the PSH bit
+         * 
+         * @return builder
+         * 
+         */
         public Builder psh(Boolean psh) {
             return psh(Output.of(psh));
         }
 
+        /**
+         * @param remark Access list entry comment
+         * 
+         * @return builder
+         * 
+         */
         public Builder remark(@Nullable Output<String> remark) {
             $.remark = remark;
             return this;
         }
 
+        /**
+         * @param remark Access list entry comment
+         * 
+         * @return builder
+         * 
+         */
         public Builder remark(String remark) {
             return remark(Output.of(remark));
         }
 
+        /**
+         * @param rst Match on the RST bit
+         * 
+         * @return builder
+         * 
+         */
         public Builder rst(@Nullable Output<Boolean> rst) {
             $.rst = rst;
             return this;
         }
 
+        /**
+         * @param rst Match on the RST bit
+         * 
+         * @return builder
+         * 
+         */
         public Builder rst(Boolean rst) {
             return rst(Output.of(rst));
         }
 
+        /**
+         * @param sequence - Range: `1`-`2147483647`
+         * 
+         * @return builder
+         * 
+         */
         public Builder sequence(Output<Integer> sequence) {
             $.sequence = sequence;
             return this;
         }
 
+        /**
+         * @param sequence - Range: `1`-`2147483647`
+         * 
+         * @return builder
+         * 
+         */
         public Builder sequence(Integer sequence) {
             return sequence(Output.of(sequence));
         }
 
+        /**
+         * @param serviceObjectGroup Service object group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceObjectGroup(@Nullable Output<String> serviceObjectGroup) {
             $.serviceObjectGroup = serviceObjectGroup;
             return this;
         }
 
+        /**
+         * @param serviceObjectGroup Service object group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceObjectGroup(String serviceObjectGroup) {
             return serviceObjectGroup(Output.of(serviceObjectGroup));
         }
 
+        /**
+         * @param sourceAny Any source host
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceAny(@Nullable Output<Boolean> sourceAny) {
             $.sourceAny = sourceAny;
             return this;
         }
 
+        /**
+         * @param sourceAny Any source host
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceAny(Boolean sourceAny) {
             return sourceAny(Output.of(sourceAny));
         }
 
+        /**
+         * @param sourceHost A single source host
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceHost(@Nullable Output<String> sourceHost) {
             $.sourceHost = sourceHost;
             return this;
         }
 
+        /**
+         * @param sourceHost A single source host
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceHost(String sourceHost) {
             return sourceHost(Output.of(sourceHost));
         }
 
+        /**
+         * @param sourceObjectGroup Source network object group
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceObjectGroup(@Nullable Output<String> sourceObjectGroup) {
             $.sourceObjectGroup = sourceObjectGroup;
             return this;
         }
 
+        /**
+         * @param sourceObjectGroup Source network object group
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceObjectGroup(String sourceObjectGroup) {
             return sourceObjectGroup(Output.of(sourceObjectGroup));
         }
 
+        /**
+         * @param sourcePortEqual Match only packets on a given port number up to 10 ports
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourcePortEqual(@Nullable Output<String> sourcePortEqual) {
             $.sourcePortEqual = sourcePortEqual;
             return this;
         }
 
+        /**
+         * @param sourcePortEqual Match only packets on a given port number up to 10 ports
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourcePortEqual(String sourcePortEqual) {
             return sourcePortEqual(Output.of(sourcePortEqual));
         }
 
+        /**
+         * @param sourcePortGreaterThan Match only packets with a greater port number
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourcePortGreaterThan(@Nullable Output<String> sourcePortGreaterThan) {
             $.sourcePortGreaterThan = sourcePortGreaterThan;
             return this;
         }
 
+        /**
+         * @param sourcePortGreaterThan Match only packets with a greater port number
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourcePortGreaterThan(String sourcePortGreaterThan) {
             return sourcePortGreaterThan(Output.of(sourcePortGreaterThan));
         }
 
+        /**
+         * @param sourcePortLesserThan Match only packets with a lower port number
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourcePortLesserThan(@Nullable Output<String> sourcePortLesserThan) {
             $.sourcePortLesserThan = sourcePortLesserThan;
             return this;
         }
 
+        /**
+         * @param sourcePortLesserThan Match only packets with a lower port number
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourcePortLesserThan(String sourcePortLesserThan) {
             return sourcePortLesserThan(Output.of(sourcePortLesserThan));
         }
 
+        /**
+         * @param sourcePortRangeFrom Match only packets in the range of port numbers
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourcePortRangeFrom(@Nullable Output<String> sourcePortRangeFrom) {
             $.sourcePortRangeFrom = sourcePortRangeFrom;
             return this;
         }
 
+        /**
+         * @param sourcePortRangeFrom Match only packets in the range of port numbers
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourcePortRangeFrom(String sourcePortRangeFrom) {
             return sourcePortRangeFrom(Output.of(sourcePortRangeFrom));
         }
 
+        /**
+         * @param sourcePortRangeTo Match only packets in the range of port numbers
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourcePortRangeTo(@Nullable Output<String> sourcePortRangeTo) {
             $.sourcePortRangeTo = sourcePortRangeTo;
             return this;
         }
 
+        /**
+         * @param sourcePortRangeTo Match only packets in the range of port numbers
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourcePortRangeTo(String sourcePortRangeTo) {
             return sourcePortRangeTo(Output.of(sourcePortRangeTo));
         }
@@ -659,29 +1283,65 @@ public final class AccessListExtendedEntryArgs extends com.pulumi.resources.Reso
             return sourcePrefixMask(Output.of(sourcePrefixMask));
         }
 
+        /**
+         * @param syn Match on the SYN bit
+         * 
+         * @return builder
+         * 
+         */
         public Builder syn(@Nullable Output<Boolean> syn) {
             $.syn = syn;
             return this;
         }
 
+        /**
+         * @param syn Match on the SYN bit
+         * 
+         * @return builder
+         * 
+         */
         public Builder syn(Boolean syn) {
             return syn(Output.of(syn));
         }
 
+        /**
+         * @param tos Match packets with given TOS value
+         * 
+         * @return builder
+         * 
+         */
         public Builder tos(@Nullable Output<String> tos) {
             $.tos = tos;
             return this;
         }
 
+        /**
+         * @param tos Match packets with given TOS value
+         * 
+         * @return builder
+         * 
+         */
         public Builder tos(String tos) {
             return tos(Output.of(tos));
         }
 
+        /**
+         * @param urg Match on the URG bit
+         * 
+         * @return builder
+         * 
+         */
         public Builder urg(@Nullable Output<Boolean> urg) {
             $.urg = urg;
             return this;
         }
 
+        /**
+         * @param urg Match on the URG bit
+         * 
+         * @return builder
+         * 
+         */
         public Builder urg(Boolean urg) {
             return urg(Output.of(urg));
         }

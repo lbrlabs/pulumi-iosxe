@@ -10,12 +10,20 @@ import java.util.Objects;
 @CustomType
 public final class GetLoggingIpv4VrfHost {
     private String ipv4Host;
+    /**
+     * @return Set VRF option
+     * 
+     */
     private String vrf;
 
     private GetLoggingIpv4VrfHost() {}
     public String ipv4Host() {
         return this.ipv4Host;
     }
+    /**
+     * @return Set VRF option
+     * 
+     */
     public String vrf() {
         return this.vrf;
     }

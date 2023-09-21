@@ -13,94 +13,270 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetBfdTemplateMultiHopResult {
+    /**
+     * @return keychain name
+     * 
+     */
     private String authenticationMd5Keychain;
+    /**
+     * @return keychain name
+     * 
+     */
     private String authenticationMeticulousMd5Keychain;
+    /**
+     * @return keychain name
+     * 
+     */
     private String authenticationMeticulousSha1keychain;
+    /**
+     * @return keychain name
+     * 
+     */
     private String authenticationSha1Keychain;
+    /**
+     * @return down monitoring
+     * 
+     */
     private Boolean dampeningDownMonitoring;
+    /**
+     * @return Half-life time for the penalty
+     * 
+     */
     private Integer dampeningHalfTime;
+    /**
+     * @return Maximum duration to suppress a session
+     * 
+     */
     private Integer dampeningMaxSuppressingTime;
+    /**
+     * @return Value to start suppressing a session
+     * 
+     */
     private Integer dampeningSuppressTime;
+    /**
+     * @return Stability threshold to enter dampening in down dampened state(seconds)
+     * 
+     */
     private Integer dampeningThreshold;
+    /**
+     * @return Value to unsuppress a session
+     * 
+     */
     private Integer dampeningUnsuppressTime;
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return Use echo adjunct as bfd detection mechanism
+     * 
+     */
     private Boolean echo;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
+    /**
+     * @return Specify BFD timers in microseconds
+     * 
+     */
     private Boolean intervalMicroseconds;
+    /**
+     * @return Minimum transmit and receive interval capability
+     * 
+     */
     private Integer intervalMicrosecondsBoth;
+    /**
+     * @return Minimum receive interval capability
+     * 
+     */
     private Integer intervalMicrosecondsMinRx;
+    /**
+     * @return Minimum transmit interval capability
+     * 
+     */
     private Integer intervalMicrosecondsMinTx;
+    /**
+     * @return Multiplier value used to compute holddown
+     * 
+     */
     private Integer intervalMicrosecondsMultiplier;
+    /**
+     * @return Minimum transmit and receive interval capability
+     * 
+     */
     private Integer intervalMillisecondsBoth;
+    /**
+     * @return Minimum receive interval capability
+     * 
+     */
     private Integer intervalMillisecondsMinRx;
+    /**
+     * @return Minimum transmit interval capability
+     * 
+     */
     private Integer intervalMillisecondsMinTx;
+    /**
+     * @return Multiplier value used to compute holddown
+     * 
+     */
     private Integer intervalMillisecondsMultiplier;
     private String name;
 
     private GetBfdTemplateMultiHopResult() {}
+    /**
+     * @return keychain name
+     * 
+     */
     public String authenticationMd5Keychain() {
         return this.authenticationMd5Keychain;
     }
+    /**
+     * @return keychain name
+     * 
+     */
     public String authenticationMeticulousMd5Keychain() {
         return this.authenticationMeticulousMd5Keychain;
     }
+    /**
+     * @return keychain name
+     * 
+     */
     public String authenticationMeticulousSha1keychain() {
         return this.authenticationMeticulousSha1keychain;
     }
+    /**
+     * @return keychain name
+     * 
+     */
     public String authenticationSha1Keychain() {
         return this.authenticationSha1Keychain;
     }
+    /**
+     * @return down monitoring
+     * 
+     */
     public Boolean dampeningDownMonitoring() {
         return this.dampeningDownMonitoring;
     }
+    /**
+     * @return Half-life time for the penalty
+     * 
+     */
     public Integer dampeningHalfTime() {
         return this.dampeningHalfTime;
     }
+    /**
+     * @return Maximum duration to suppress a session
+     * 
+     */
     public Integer dampeningMaxSuppressingTime() {
         return this.dampeningMaxSuppressingTime;
     }
+    /**
+     * @return Value to start suppressing a session
+     * 
+     */
     public Integer dampeningSuppressTime() {
         return this.dampeningSuppressTime;
     }
+    /**
+     * @return Stability threshold to enter dampening in down dampened state(seconds)
+     * 
+     */
     public Integer dampeningThreshold() {
         return this.dampeningThreshold;
     }
+    /**
+     * @return Value to unsuppress a session
+     * 
+     */
     public Integer dampeningUnsuppressTime() {
         return this.dampeningUnsuppressTime;
     }
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return Use echo adjunct as bfd detection mechanism
+     * 
+     */
     public Boolean echo() {
         return this.echo;
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
+    /**
+     * @return Specify BFD timers in microseconds
+     * 
+     */
     public Boolean intervalMicroseconds() {
         return this.intervalMicroseconds;
     }
+    /**
+     * @return Minimum transmit and receive interval capability
+     * 
+     */
     public Integer intervalMicrosecondsBoth() {
         return this.intervalMicrosecondsBoth;
     }
+    /**
+     * @return Minimum receive interval capability
+     * 
+     */
     public Integer intervalMicrosecondsMinRx() {
         return this.intervalMicrosecondsMinRx;
     }
+    /**
+     * @return Minimum transmit interval capability
+     * 
+     */
     public Integer intervalMicrosecondsMinTx() {
         return this.intervalMicrosecondsMinTx;
     }
+    /**
+     * @return Multiplier value used to compute holddown
+     * 
+     */
     public Integer intervalMicrosecondsMultiplier() {
         return this.intervalMicrosecondsMultiplier;
     }
+    /**
+     * @return Minimum transmit and receive interval capability
+     * 
+     */
     public Integer intervalMillisecondsBoth() {
         return this.intervalMillisecondsBoth;
     }
+    /**
+     * @return Minimum receive interval capability
+     * 
+     */
     public Integer intervalMillisecondsMinRx() {
         return this.intervalMillisecondsMinRx;
     }
+    /**
+     * @return Minimum transmit interval capability
+     * 
+     */
     public Integer intervalMillisecondsMinTx() {
         return this.intervalMillisecondsMinTx;
     }
+    /**
+     * @return Multiplier value used to compute holddown
+     * 
+     */
     public Integer intervalMillisecondsMultiplier() {
         return this.intervalMillisecondsMultiplier;
     }

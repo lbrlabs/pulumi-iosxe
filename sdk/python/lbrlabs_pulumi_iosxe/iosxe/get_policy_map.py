@@ -41,26 +41,41 @@ class GetPolicyMapResult:
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
     @property
     @pulumi.getter
     def name(self) -> str:
+        """
+        Name of the policy map
+        """
         return pulumi.get(self, "name")
 
     @property
     @pulumi.getter
     def subscriber(self) -> bool:
+        """
+        Domain name of the policy map
+        """
         return pulumi.get(self, "subscriber")
 
     @property
     @pulumi.getter
     def type(self) -> str:
+        """
+        type of the policy-map
+        """
         return pulumi.get(self, "type")
 
 
@@ -81,7 +96,20 @@ def get_policy_map(device: Optional[str] = None,
                    name: Optional[str] = None,
                    opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetPolicyMapResult:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Policy Map configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_policy_map(name="dot1x_policy")
+    ```
+
+
+    :param str device: A device name from the provider configuration.
+    :param str name: Name of the policy map
     """
     __args__ = dict()
     __args__['device'] = device
@@ -102,6 +130,19 @@ def get_policy_map_output(device: Optional[pulumi.Input[Optional[str]]] = None,
                           name: Optional[pulumi.Input[str]] = None,
                           opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetPolicyMapResult]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Policy Map configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_policy_map(name="dot1x_policy")
+    ```
+
+
+    :param str device: A device name from the provider configuration.
+    :param str name: Name of the policy map
     """
     ...

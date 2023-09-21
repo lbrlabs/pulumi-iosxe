@@ -15,23 +15,47 @@ public final class GetOspfVrfPlainArgs extends com.pulumi.resources.InvokeArgs {
 
     public static final GetOspfVrfPlainArgs Empty = new GetOspfVrfPlainArgs();
 
+    /**
+     * A device name from the provider configuration.
+     * 
+     */
     @Import(name="device")
     private @Nullable String device;
 
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
 
+    /**
+     * Process ID
+     * 
+     */
     @Import(name="processId", required=true)
     private Integer processId;
 
+    /**
+     * @return Process ID
+     * 
+     */
     public Integer processId() {
         return this.processId;
     }
 
+    /**
+     * VPN Routing/Forwarding Instance
+     * 
+     */
     @Import(name="vrf", required=true)
     private String vrf;
 
+    /**
+     * @return VPN Routing/Forwarding Instance
+     * 
+     */
     public String vrf() {
         return this.vrf;
     }
@@ -62,16 +86,34 @@ public final class GetOspfVrfPlainArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetOspfVrfPlainArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param device A device name from the provider configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder device(@Nullable String device) {
             $.device = device;
             return this;
         }
 
+        /**
+         * @param processId Process ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder processId(Integer processId) {
             $.processId = processId;
             return this;
         }
 
+        /**
+         * @param vrf VPN Routing/Forwarding Instance
+         * 
+         * @return builder
+         * 
+         */
         public Builder vrf(String vrf) {
             $.vrf = vrf;
             return this;

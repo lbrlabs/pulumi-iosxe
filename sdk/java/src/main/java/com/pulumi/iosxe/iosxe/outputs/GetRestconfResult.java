@@ -12,21 +12,53 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetRestconfResult {
+    /**
+     * @return Map of key-value pairs which represents the attributes and its values.
+     * 
+     */
     private Map<String,String> attributes;
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
+    /**
+     * @return A RESTCONF path, e.g. `openconfig-interfaces:interfaces`.
+     * 
+     */
     private String path;
 
     private GetRestconfResult() {}
+    /**
+     * @return Map of key-value pairs which represents the attributes and its values.
+     * 
+     */
     public Map<String,String> attributes() {
         return this.attributes;
     }
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
+    /**
+     * @return A RESTCONF path, e.g. `openconfig-interfaces:interfaces`.
+     * 
+     */
     public String path() {
         return this.path;
     }

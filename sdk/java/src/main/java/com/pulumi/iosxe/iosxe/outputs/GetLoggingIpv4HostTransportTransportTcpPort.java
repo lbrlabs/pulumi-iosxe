@@ -9,9 +9,17 @@ import java.util.Objects;
 
 @CustomType
 public final class GetLoggingIpv4HostTransportTransportTcpPort {
+    /**
+     * @return Specify the TCP port number (default=601)
+     * 
+     */
     private Integer portNumber;
 
     private GetLoggingIpv4HostTransportTransportTcpPort() {}
+    /**
+     * @return Specify the TCP port number (default=601)
+     * 
+     */
     public Integer portNumber() {
         return this.portNumber;
     }

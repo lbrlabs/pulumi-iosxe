@@ -13,26 +13,66 @@ import java.util.Objects;
 
 @CustomType
 public final class GetBgpAddressFamilyIpv4VrfVrf {
+    /**
+     * @return Advertise/export prefixes to l2vpn evpn table
+     * 
+     */
     private Boolean ipv4UnicastAdvertiseL2vpnEvpn;
+    /**
+     * @return Specify a network to announce via BGP
+     * 
+     */
     private List<GetBgpAddressFamilyIpv4VrfVrfIpv4UnicastNetwork> ipv4UnicastNetworks;
+    /**
+     * @return Specify a network to announce via BGP
+     * 
+     */
     private List<GetBgpAddressFamilyIpv4VrfVrfIpv4UnicastNetworksMask> ipv4UnicastNetworksMasks;
+    /**
+     * @return Connected
+     * 
+     */
     private Boolean ipv4UnicastRedistributeConnected;
+    /**
+     * @return Static routes
+     * 
+     */
     private Boolean ipv4UnicastRedistributeStatic;
     private String name;
 
     private GetBgpAddressFamilyIpv4VrfVrf() {}
+    /**
+     * @return Advertise/export prefixes to l2vpn evpn table
+     * 
+     */
     public Boolean ipv4UnicastAdvertiseL2vpnEvpn() {
         return this.ipv4UnicastAdvertiseL2vpnEvpn;
     }
+    /**
+     * @return Specify a network to announce via BGP
+     * 
+     */
     public List<GetBgpAddressFamilyIpv4VrfVrfIpv4UnicastNetwork> ipv4UnicastNetworks() {
         return this.ipv4UnicastNetworks;
     }
+    /**
+     * @return Specify a network to announce via BGP
+     * 
+     */
     public List<GetBgpAddressFamilyIpv4VrfVrfIpv4UnicastNetworksMask> ipv4UnicastNetworksMasks() {
         return this.ipv4UnicastNetworksMasks;
     }
+    /**
+     * @return Connected
+     * 
+     */
     public Boolean ipv4UnicastRedistributeConnected() {
         return this.ipv4UnicastRedistributeConnected;
     }
+    /**
+     * @return Static routes
+     * 
+     */
     public Boolean ipv4UnicastRedistributeStatic() {
         return this.ipv4UnicastRedistributeStatic;
     }

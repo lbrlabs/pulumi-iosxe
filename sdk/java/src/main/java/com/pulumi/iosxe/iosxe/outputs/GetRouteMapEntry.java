@@ -12,58 +12,210 @@ import java.util.Objects;
 
 @CustomType
 public final class GetRouteMapEntry {
+    /**
+     * @return Continue on a different entry within the route-map
+     * 
+     */
     private Boolean continue_;
+    /**
+     * @return Route-map entry sequence number
+     * 
+     */
     private Integer continueSequenceNumber;
+    /**
+     * @return Route-map comment
+     * 
+     */
     private String description;
+    /**
+     * @return AS path access-list
+     * 
+     */
     private List<Integer> matchAsPaths;
+    /**
+     * @return AS path access-list (DEPRECATED - please use route-map configuration in Cisco-IOS-XE-bgp.yang)
+     * 
+     */
     private List<Integer> matchAsPathsLegacies;
+    /**
+     * @return Do exact matching of communities
+     * 
+     */
     private Boolean matchCommunityListExactMatch;
+    /**
+     * @return Named Access List
+     * 
+     */
     private List<String> matchCommunityLists;
+    /**
+     * @return Named Access List (DEPRECATED- please use community-list in Cisco-IOS-XE-bgp.yang)
+     * 
+     */
     private List<String> matchCommunityListsLegacies;
+    /**
+     * @return Named Access List
+     * 
+     */
     private List<String> matchExtcommunityLists;
+    /**
+     * @return Named Access List (DEPRECATED- please use extcommunity-list in Cisco-IOS-XE-bgp.yang)
+     * 
+     */
     private List<String> matchExtcommunityListsLegacies;
     private List<String> matchInterfaces;
     private List<String> matchIpAddressAccessLists;
+    /**
+     * @return Match entries of prefix-lists
+     * 
+     */
     private List<String> matchIpAddressPrefixLists;
     private List<String> matchIpNextHopAccessLists;
+    /**
+     * @return Match entries of prefix-lists
+     * 
+     */
     private List<String> matchIpNextHopPrefixLists;
     private String matchIpv6AddressAccessLists;
+    /**
+     * @return IPv6 prefix-list
+     * 
+     */
     private String matchIpv6AddressPrefixLists;
     private String matchIpv6NextHopAccessLists;
+    /**
+     * @return IPv6 prefix-list
+     * 
+     */
     private String matchIpv6NextHopPrefixLists;
     private List<Integer> matchLocalPreferences;
     private List<Integer> matchLocalPreferencesLegacies;
+    /**
+     * @return external route (BGP, EIGRP and OSPF type 1/2)
+     * 
+     */
     private Boolean matchRouteTypeExternal;
+    /**
+     * @return OSPF external type 1 route
+     * 
+     */
     private Boolean matchRouteTypeExternalType1;
+    /**
+     * @return OSPF external type 2 route
+     * 
+     */
     private Boolean matchRouteTypeExternalType2;
+    /**
+     * @return internal route (including OSPF intra/inter area)
+     * 
+     */
     private Boolean matchRouteTypeInternal;
+    /**
+     * @return IS-IS level-1 route
+     * 
+     */
     private Boolean matchRouteTypeLevel1;
+    /**
+     * @return IS-IS level-2 route
+     * 
+     */
     private Boolean matchRouteTypeLevel2;
+    /**
+     * @return locally generated route (DEPRECATED - please use route-map configuration in Cisco-IOS-XE-bgp.yang)
+     * 
+     */
     private Boolean matchRouteTypeLocal;
+    /**
+     * @return Border Gateway Protocol (BGP)
+     * 
+     */
     private List<String> matchSourceProtocolBgps;
+    /**
+     * @return Connected
+     * 
+     */
     private Boolean matchSourceProtocolConnected;
+    /**
+     * @return Border Gateway Protocol (BGP)
+     * 
+     */
     private List<String> matchSourceProtocolEigrps;
+    /**
+     * @return ISO IS-IS
+     * 
+     */
     private Boolean matchSourceProtocolIsis;
+    /**
+     * @return Locator ID Separation Protocol (LISP)
+     * 
+     */
     private Boolean matchSourceProtocolLisp;
+    /**
+     * @return Open Shortest Path First (OSPF)
+     * 
+     */
     private List<String> matchSourceProtocolOspfs;
+    /**
+     * @return OSPFv3
+     * 
+     */
     private List<String> matchSourceProtocolOspfv3s;
+    /**
+     * @return Routing Information Protocol (RIP)
+     * 
+     */
     private Boolean matchSourceProtocolRip;
+    /**
+     * @return Static routes
+     * 
+     */
     private Boolean matchSourceProtocolStatic;
+    /**
+     * @return Tag value
+     * 
+     */
     private List<Integer> matchTags;
+    /**
+     * @return tracking object
+     * 
+     */
     private Integer matchTrack;
     private String operation;
     private Integer seq;
+    /**
+     * @return \n\n;;AS number
+     * 
+     */
     private String setAsPathPrependAs;
+    /**
+     * @return \n\n;;AS number (DEPRECATED - please use route-map configuration in Cisco-IOS-XE-bgp.yang)
+     * 
+     */
     private String setAsPathPrependAsLegacy;
     private Integer setAsPathPrependLastAs;
     private Integer setAsPathPrependLastAsLegacy;
+    /**
+     * @return Set the tag as an AS-path attribute
+     * 
+     */
     private Boolean setAsPathTag;
+    /**
+     * @return Set the tag as an AS-path attribute (DEPRECATED - please use route-map configuration in Cisco-IOS-XE-bgp.yang)
+     * 
+     */
     private Boolean setAsPathTagLegacy;
     private List<String> setCommunities;
     private Boolean setCommunitiesAdditive;
     private Boolean setCommunitiesAdditiveLegacy;
     private List<String> setCommunitiesLegacies;
+    /**
+     * @return Delete matching communities
+     * 
+     */
     private Boolean setCommunityListDelete;
+    /**
+     * @return Delete matching communities (DEPRECATED - please use route-map configuration in Cisco-IOS-XE-bgp.yang)
+     * 
+     */
     private Boolean setCommunityListDeleteLegacy;
     private Integer setCommunityListExpanded;
     private Integer setCommunityListExpandedLegacy;
@@ -71,74 +223,222 @@ public final class GetRouteMapEntry {
     private String setCommunityListNameLegacy;
     private Integer setCommunityListStandard;
     private Integer setCommunityListStandardLegacy;
+    /**
+     * @return No community attribute
+     * 
+     */
     private Boolean setCommunityNone;
+    /**
+     * @return No community attribute (DEPRECATED - please use route-map configuration in Cisco-IOS-XE-bgp.yang)
+     * 
+     */
     private Boolean setCommunityNoneLegacy;
+    /**
+     * @return SPAN source interface
+     * 
+     */
     private List<String> setDefaultInterfaces;
     private List<String> setExtcomunityRtLegacies;
     private List<String> setExtcomunityRts;
     private String setExtcomunitySoo;
     private String setExtcomunitySooLegacy;
+    /**
+     * @return VPN Distinguisher Extended Community
+     * 
+     */
     private String setExtcomunityVpnDistinguisher;
     private Boolean setExtcomunityVpnDistinguisherAdditive;
     private String setExtcomunityVpnDistinguisherLegacy;
     private Boolean setGlobal;
+    /**
+     * @return Interface specific information
+     * 
+     */
     private List<String> setInterfaces;
+    /**
+     * @return Specify prefix-list
+     * 
+     */
     private String setIpAddress;
     private List<String> setIpDefaultGlobalNextHopAddresses;
     private List<String> setIpDefaultNextHopAddresses;
     private List<String> setIpGlobalNextHopAddresses;
     private List<String> setIpNextHopAddresses;
+    /**
+     * @return Use self address (for BGP only)
+     * 
+     */
     private Boolean setIpNextHopSelf;
     private Integer setIpQosGroup;
+    /**
+     * @return IPv6 prefix-list
+     * 
+     */
     private List<String> setIpv6Addresses;
+    /**
+     * @return Next hop along path
+     * 
+     */
     private String setIpv6DefaultGlobalNextHop;
+    /**
+     * @return Default next hop IPv6 address
+     * 
+     */
     private List<String> setIpv6DefaultNextHops;
+    /**
+     * @return Next hop IPv6 address
+     * 
+     */
     private List<String> setIpv6NextHops;
+    /**
+     * @return Import into a level-1 area
+     * 
+     */
     private Boolean setLevel1;
+    /**
+     * @return Import into level-1 and level-2
+     * 
+     */
     private Boolean setLevel12;
+    /**
+     * @return Import into level-2 sub-domain
+     * 
+     */
     private Boolean setLevel2;
+    /**
+     * @return Preference value
+     * 
+     */
     private Integer setLocalPreference;
+    /**
+     * @return Preference value (DEPRECATED - please use route-map configuration in Cisco-IOS-XE-bgp.yang)
+     * 
+     */
     private Integer setLocalPreferenceLegacy;
+    /**
+     * @return +/-\n\n;;Add or subtract metric
+     * 
+     */
     private String setMetricChange;
+    /**
+     * @return EIGRP delay metric, in 10 microsecond units
+     * 
+     */
     private String setMetricDelay;
+    /**
+     * @return EIGRP Effective bandwidth metric (Loading) where 255 is 100% loaded
+     * 
+     */
     private Integer setMetricLoading;
+    /**
+     * @return EIGRP MTU of the path
+     * 
+     */
     private Integer setMetricMtu;
+    /**
+     * @return EIGRP reliability metric where 255 is 100% reliable
+     * 
+     */
     private Integer setMetricReliability;
+    /**
+     * @return Type of metric for destination routing protocol
+     * 
+     */
     private String setMetricType;
+    /**
+     * @return Metric value or Bandwidth in Kbits per second
+     * 
+     */
     private Integer setMetricValue;
+    /**
+     * @return Tag value
+     * 
+     */
     private Integer setTag;
+    /**
+     * @return VPN Routing/Forwarding instance name
+     * 
+     */
     private String setVrf;
+    /**
+     * @return BGP weight for routing table
+     * 
+     */
     private Integer setWeight;
+    /**
+     * @return BGP weight for routing table (DEPRECATED - please use route-map configuration in Cisco-IOS-XE-bgp.yang)
+     * 
+     */
     private Integer setWeightLegacy;
 
     private GetRouteMapEntry() {}
+    /**
+     * @return Continue on a different entry within the route-map
+     * 
+     */
     public Boolean continue_() {
         return this.continue_;
     }
+    /**
+     * @return Route-map entry sequence number
+     * 
+     */
     public Integer continueSequenceNumber() {
         return this.continueSequenceNumber;
     }
+    /**
+     * @return Route-map comment
+     * 
+     */
     public String description() {
         return this.description;
     }
+    /**
+     * @return AS path access-list
+     * 
+     */
     public List<Integer> matchAsPaths() {
         return this.matchAsPaths;
     }
+    /**
+     * @return AS path access-list (DEPRECATED - please use route-map configuration in Cisco-IOS-XE-bgp.yang)
+     * 
+     */
     public List<Integer> matchAsPathsLegacies() {
         return this.matchAsPathsLegacies;
     }
+    /**
+     * @return Do exact matching of communities
+     * 
+     */
     public Boolean matchCommunityListExactMatch() {
         return this.matchCommunityListExactMatch;
     }
+    /**
+     * @return Named Access List
+     * 
+     */
     public List<String> matchCommunityLists() {
         return this.matchCommunityLists;
     }
+    /**
+     * @return Named Access List (DEPRECATED- please use community-list in Cisco-IOS-XE-bgp.yang)
+     * 
+     */
     public List<String> matchCommunityListsLegacies() {
         return this.matchCommunityListsLegacies;
     }
+    /**
+     * @return Named Access List
+     * 
+     */
     public List<String> matchExtcommunityLists() {
         return this.matchExtcommunityLists;
     }
+    /**
+     * @return Named Access List (DEPRECATED- please use extcommunity-list in Cisco-IOS-XE-bgp.yang)
+     * 
+     */
     public List<String> matchExtcommunityListsLegacies() {
         return this.matchExtcommunityListsLegacies;
     }
@@ -148,24 +448,40 @@ public final class GetRouteMapEntry {
     public List<String> matchIpAddressAccessLists() {
         return this.matchIpAddressAccessLists;
     }
+    /**
+     * @return Match entries of prefix-lists
+     * 
+     */
     public List<String> matchIpAddressPrefixLists() {
         return this.matchIpAddressPrefixLists;
     }
     public List<String> matchIpNextHopAccessLists() {
         return this.matchIpNextHopAccessLists;
     }
+    /**
+     * @return Match entries of prefix-lists
+     * 
+     */
     public List<String> matchIpNextHopPrefixLists() {
         return this.matchIpNextHopPrefixLists;
     }
     public String matchIpv6AddressAccessLists() {
         return this.matchIpv6AddressAccessLists;
     }
+    /**
+     * @return IPv6 prefix-list
+     * 
+     */
     public String matchIpv6AddressPrefixLists() {
         return this.matchIpv6AddressPrefixLists;
     }
     public String matchIpv6NextHopAccessLists() {
         return this.matchIpv6NextHopAccessLists;
     }
+    /**
+     * @return IPv6 prefix-list
+     * 
+     */
     public String matchIpv6NextHopPrefixLists() {
         return this.matchIpv6NextHopPrefixLists;
     }
@@ -175,57 +491,129 @@ public final class GetRouteMapEntry {
     public List<Integer> matchLocalPreferencesLegacies() {
         return this.matchLocalPreferencesLegacies;
     }
+    /**
+     * @return external route (BGP, EIGRP and OSPF type 1/2)
+     * 
+     */
     public Boolean matchRouteTypeExternal() {
         return this.matchRouteTypeExternal;
     }
+    /**
+     * @return OSPF external type 1 route
+     * 
+     */
     public Boolean matchRouteTypeExternalType1() {
         return this.matchRouteTypeExternalType1;
     }
+    /**
+     * @return OSPF external type 2 route
+     * 
+     */
     public Boolean matchRouteTypeExternalType2() {
         return this.matchRouteTypeExternalType2;
     }
+    /**
+     * @return internal route (including OSPF intra/inter area)
+     * 
+     */
     public Boolean matchRouteTypeInternal() {
         return this.matchRouteTypeInternal;
     }
+    /**
+     * @return IS-IS level-1 route
+     * 
+     */
     public Boolean matchRouteTypeLevel1() {
         return this.matchRouteTypeLevel1;
     }
+    /**
+     * @return IS-IS level-2 route
+     * 
+     */
     public Boolean matchRouteTypeLevel2() {
         return this.matchRouteTypeLevel2;
     }
+    /**
+     * @return locally generated route (DEPRECATED - please use route-map configuration in Cisco-IOS-XE-bgp.yang)
+     * 
+     */
     public Boolean matchRouteTypeLocal() {
         return this.matchRouteTypeLocal;
     }
+    /**
+     * @return Border Gateway Protocol (BGP)
+     * 
+     */
     public List<String> matchSourceProtocolBgps() {
         return this.matchSourceProtocolBgps;
     }
+    /**
+     * @return Connected
+     * 
+     */
     public Boolean matchSourceProtocolConnected() {
         return this.matchSourceProtocolConnected;
     }
+    /**
+     * @return Border Gateway Protocol (BGP)
+     * 
+     */
     public List<String> matchSourceProtocolEigrps() {
         return this.matchSourceProtocolEigrps;
     }
+    /**
+     * @return ISO IS-IS
+     * 
+     */
     public Boolean matchSourceProtocolIsis() {
         return this.matchSourceProtocolIsis;
     }
+    /**
+     * @return Locator ID Separation Protocol (LISP)
+     * 
+     */
     public Boolean matchSourceProtocolLisp() {
         return this.matchSourceProtocolLisp;
     }
+    /**
+     * @return Open Shortest Path First (OSPF)
+     * 
+     */
     public List<String> matchSourceProtocolOspfs() {
         return this.matchSourceProtocolOspfs;
     }
+    /**
+     * @return OSPFv3
+     * 
+     */
     public List<String> matchSourceProtocolOspfv3s() {
         return this.matchSourceProtocolOspfv3s;
     }
+    /**
+     * @return Routing Information Protocol (RIP)
+     * 
+     */
     public Boolean matchSourceProtocolRip() {
         return this.matchSourceProtocolRip;
     }
+    /**
+     * @return Static routes
+     * 
+     */
     public Boolean matchSourceProtocolStatic() {
         return this.matchSourceProtocolStatic;
     }
+    /**
+     * @return Tag value
+     * 
+     */
     public List<Integer> matchTags() {
         return this.matchTags;
     }
+    /**
+     * @return tracking object
+     * 
+     */
     public Integer matchTrack() {
         return this.matchTrack;
     }
@@ -235,9 +623,17 @@ public final class GetRouteMapEntry {
     public Integer seq() {
         return this.seq;
     }
+    /**
+     * @return \n\n;;AS number
+     * 
+     */
     public String setAsPathPrependAs() {
         return this.setAsPathPrependAs;
     }
+    /**
+     * @return \n\n;;AS number (DEPRECATED - please use route-map configuration in Cisco-IOS-XE-bgp.yang)
+     * 
+     */
     public String setAsPathPrependAsLegacy() {
         return this.setAsPathPrependAsLegacy;
     }
@@ -247,9 +643,17 @@ public final class GetRouteMapEntry {
     public Integer setAsPathPrependLastAsLegacy() {
         return this.setAsPathPrependLastAsLegacy;
     }
+    /**
+     * @return Set the tag as an AS-path attribute
+     * 
+     */
     public Boolean setAsPathTag() {
         return this.setAsPathTag;
     }
+    /**
+     * @return Set the tag as an AS-path attribute (DEPRECATED - please use route-map configuration in Cisco-IOS-XE-bgp.yang)
+     * 
+     */
     public Boolean setAsPathTagLegacy() {
         return this.setAsPathTagLegacy;
     }
@@ -265,9 +669,17 @@ public final class GetRouteMapEntry {
     public List<String> setCommunitiesLegacies() {
         return this.setCommunitiesLegacies;
     }
+    /**
+     * @return Delete matching communities
+     * 
+     */
     public Boolean setCommunityListDelete() {
         return this.setCommunityListDelete;
     }
+    /**
+     * @return Delete matching communities (DEPRECATED - please use route-map configuration in Cisco-IOS-XE-bgp.yang)
+     * 
+     */
     public Boolean setCommunityListDeleteLegacy() {
         return this.setCommunityListDeleteLegacy;
     }
@@ -289,12 +701,24 @@ public final class GetRouteMapEntry {
     public Integer setCommunityListStandardLegacy() {
         return this.setCommunityListStandardLegacy;
     }
+    /**
+     * @return No community attribute
+     * 
+     */
     public Boolean setCommunityNone() {
         return this.setCommunityNone;
     }
+    /**
+     * @return No community attribute (DEPRECATED - please use route-map configuration in Cisco-IOS-XE-bgp.yang)
+     * 
+     */
     public Boolean setCommunityNoneLegacy() {
         return this.setCommunityNoneLegacy;
     }
+    /**
+     * @return SPAN source interface
+     * 
+     */
     public List<String> setDefaultInterfaces() {
         return this.setDefaultInterfaces;
     }
@@ -310,6 +734,10 @@ public final class GetRouteMapEntry {
     public String setExtcomunitySooLegacy() {
         return this.setExtcomunitySooLegacy;
     }
+    /**
+     * @return VPN Distinguisher Extended Community
+     * 
+     */
     public String setExtcomunityVpnDistinguisher() {
         return this.setExtcomunityVpnDistinguisher;
     }
@@ -322,9 +750,17 @@ public final class GetRouteMapEntry {
     public Boolean setGlobal() {
         return this.setGlobal;
     }
+    /**
+     * @return Interface specific information
+     * 
+     */
     public List<String> setInterfaces() {
         return this.setInterfaces;
     }
+    /**
+     * @return Specify prefix-list
+     * 
+     */
     public String setIpAddress() {
         return this.setIpAddress;
     }
@@ -340,69 +776,153 @@ public final class GetRouteMapEntry {
     public List<String> setIpNextHopAddresses() {
         return this.setIpNextHopAddresses;
     }
+    /**
+     * @return Use self address (for BGP only)
+     * 
+     */
     public Boolean setIpNextHopSelf() {
         return this.setIpNextHopSelf;
     }
     public Integer setIpQosGroup() {
         return this.setIpQosGroup;
     }
+    /**
+     * @return IPv6 prefix-list
+     * 
+     */
     public List<String> setIpv6Addresses() {
         return this.setIpv6Addresses;
     }
+    /**
+     * @return Next hop along path
+     * 
+     */
     public String setIpv6DefaultGlobalNextHop() {
         return this.setIpv6DefaultGlobalNextHop;
     }
+    /**
+     * @return Default next hop IPv6 address
+     * 
+     */
     public List<String> setIpv6DefaultNextHops() {
         return this.setIpv6DefaultNextHops;
     }
+    /**
+     * @return Next hop IPv6 address
+     * 
+     */
     public List<String> setIpv6NextHops() {
         return this.setIpv6NextHops;
     }
+    /**
+     * @return Import into a level-1 area
+     * 
+     */
     public Boolean setLevel1() {
         return this.setLevel1;
     }
+    /**
+     * @return Import into level-1 and level-2
+     * 
+     */
     public Boolean setLevel12() {
         return this.setLevel12;
     }
+    /**
+     * @return Import into level-2 sub-domain
+     * 
+     */
     public Boolean setLevel2() {
         return this.setLevel2;
     }
+    /**
+     * @return Preference value
+     * 
+     */
     public Integer setLocalPreference() {
         return this.setLocalPreference;
     }
+    /**
+     * @return Preference value (DEPRECATED - please use route-map configuration in Cisco-IOS-XE-bgp.yang)
+     * 
+     */
     public Integer setLocalPreferenceLegacy() {
         return this.setLocalPreferenceLegacy;
     }
+    /**
+     * @return +/-\n\n;;Add or subtract metric
+     * 
+     */
     public String setMetricChange() {
         return this.setMetricChange;
     }
+    /**
+     * @return EIGRP delay metric, in 10 microsecond units
+     * 
+     */
     public String setMetricDelay() {
         return this.setMetricDelay;
     }
+    /**
+     * @return EIGRP Effective bandwidth metric (Loading) where 255 is 100% loaded
+     * 
+     */
     public Integer setMetricLoading() {
         return this.setMetricLoading;
     }
+    /**
+     * @return EIGRP MTU of the path
+     * 
+     */
     public Integer setMetricMtu() {
         return this.setMetricMtu;
     }
+    /**
+     * @return EIGRP reliability metric where 255 is 100% reliable
+     * 
+     */
     public Integer setMetricReliability() {
         return this.setMetricReliability;
     }
+    /**
+     * @return Type of metric for destination routing protocol
+     * 
+     */
     public String setMetricType() {
         return this.setMetricType;
     }
+    /**
+     * @return Metric value or Bandwidth in Kbits per second
+     * 
+     */
     public Integer setMetricValue() {
         return this.setMetricValue;
     }
+    /**
+     * @return Tag value
+     * 
+     */
     public Integer setTag() {
         return this.setTag;
     }
+    /**
+     * @return VPN Routing/Forwarding instance name
+     * 
+     */
     public String setVrf() {
         return this.setVrf;
     }
+    /**
+     * @return BGP weight for routing table
+     * 
+     */
     public Integer setWeight() {
         return this.setWeight;
     }
+    /**
+     * @return BGP weight for routing table (DEPRECATED - please use route-map configuration in Cisco-IOS-XE-bgp.yang)
+     * 
+     */
     public Integer setWeightLegacy() {
         return this.setWeightLegacy;
     }

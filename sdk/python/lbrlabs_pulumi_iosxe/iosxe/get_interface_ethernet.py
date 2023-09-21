@@ -204,76 +204,121 @@ class GetInterfaceEthernetResult:
     @property
     @pulumi.getter(name="arpTimeout")
     def arp_timeout(self) -> int:
+        """
+        Set ARP cache timeout
+        """
         return pulumi.get(self, "arp_timeout")
 
     @property
     @pulumi.getter(name="autoQosClassify")
     def auto_qos_classify(self) -> bool:
+        """
+        Configure classification for untrusted devices
+        """
         return pulumi.get(self, "auto_qos_classify")
 
     @property
     @pulumi.getter(name="autoQosClassifyPolice")
     def auto_qos_classify_police(self) -> bool:
+        """
+        Configure QoS policing for untrusted devices
+        """
         return pulumi.get(self, "auto_qos_classify_police")
 
     @property
     @pulumi.getter(name="autoQosTrust")
     def auto_qos_trust(self) -> bool:
+        """
+        Trust the DSCP/CoS marking
+        """
         return pulumi.get(self, "auto_qos_trust")
 
     @property
     @pulumi.getter(name="autoQosTrustCos")
     def auto_qos_trust_cos(self) -> bool:
+        """
+        Trust the CoS marking
+        """
         return pulumi.get(self, "auto_qos_trust_cos")
 
     @property
     @pulumi.getter(name="autoQosTrustDscp")
     def auto_qos_trust_dscp(self) -> bool:
+        """
+        Trust the DSCP marking
+        """
         return pulumi.get(self, "auto_qos_trust_dscp")
 
     @property
     @pulumi.getter(name="autoQosVideoCts")
     def auto_qos_video_cts(self) -> bool:
+        """
+        Trust the QoS marking of the Cisco Telepresence System
+        """
         return pulumi.get(self, "auto_qos_video_cts")
 
     @property
     @pulumi.getter(name="autoQosVideoIpCamera")
     def auto_qos_video_ip_camera(self) -> bool:
+        """
+        Trust the QoS marking of the Ip Video Surveillance camera
+        """
         return pulumi.get(self, "auto_qos_video_ip_camera")
 
     @property
     @pulumi.getter(name="autoQosVideoMediaPlayer")
     def auto_qos_video_media_player(self) -> bool:
+        """
+        Trust the Qos marking of the Cisco Media Player
+        """
         return pulumi.get(self, "auto_qos_video_media_player")
 
     @property
     @pulumi.getter(name="autoQosVoip")
     def auto_qos_voip(self) -> bool:
+        """
+        Configure AutoQoS for VoIP
+        """
         return pulumi.get(self, "auto_qos_voip")
 
     @property
     @pulumi.getter(name="autoQosVoipCiscoPhone")
     def auto_qos_voip_cisco_phone(self) -> bool:
+        """
+        Trust the QoS marking of Cisco IP Phone
+        """
         return pulumi.get(self, "auto_qos_voip_cisco_phone")
 
     @property
     @pulumi.getter(name="autoQosVoipCiscoSoftphone")
     def auto_qos_voip_cisco_softphone(self) -> bool:
+        """
+        Trust the QoS marking of Cisco IP SoftPhone
+        """
         return pulumi.get(self, "auto_qos_voip_cisco_softphone")
 
     @property
     @pulumi.getter(name="autoQosVoipTrust")
     def auto_qos_voip_trust(self) -> bool:
+        """
+        Trust the DSCP/CoS marking
+        """
         return pulumi.get(self, "auto_qos_voip_trust")
 
     @property
     @pulumi.getter(name="bfdEcho")
     def bfd_echo(self) -> bool:
+        """
+        Use echo adjunct as bfd detection mechanism
+        """
         return pulumi.get(self, "bfd_echo")
 
     @property
     @pulumi.getter(name="bfdEnable")
     def bfd_enable(self) -> bool:
+        """
+        Enable BFD under the interface
+        """
         return pulumi.get(self, "bfd_enable")
 
     @property
@@ -284,26 +329,41 @@ class GetInterfaceEthernetResult:
     @property
     @pulumi.getter(name="bfdIntervalMinRx")
     def bfd_interval_min_rx(self) -> int:
+        """
+        Minimum receive interval capability
+        """
         return pulumi.get(self, "bfd_interval_min_rx")
 
     @property
     @pulumi.getter(name="bfdIntervalMultiplier")
     def bfd_interval_multiplier(self) -> int:
+        """
+        Multiplier value used to compute holddown
+        """
         return pulumi.get(self, "bfd_interval_multiplier")
 
     @property
     @pulumi.getter(name="bfdLocalAddress")
     def bfd_local_address(self) -> str:
+        """
+        The Source IP address to be used for BFD sessions over this interface.
+        """
         return pulumi.get(self, "bfd_local_address")
 
     @property
     @pulumi.getter(name="bfdTemplate")
     def bfd_template(self) -> str:
+        """
+        BFD template
+        """
         return pulumi.get(self, "bfd_template")
 
     @property
     @pulumi.getter(name="channelGroupMode")
     def channel_group_mode(self) -> str:
+        """
+        Etherchannel Mode of the interface
+        """
         return pulumi.get(self, "channel_group_mode")
 
     @property
@@ -314,11 +374,17 @@ class GetInterfaceEthernetResult:
     @property
     @pulumi.getter
     def description(self) -> str:
+        """
+        Interface specific description
+        """
         return pulumi.get(self, "description")
 
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
@@ -329,11 +395,17 @@ class GetInterfaceEthernetResult:
     @property
     @pulumi.getter(name="helperAddresses")
     def helper_addresses(self) -> Sequence['outputs.GetInterfaceEthernetHelperAddressResult']:
+        """
+        Specify a destination address for UDP broadcasts
+        """
         return pulumi.get(self, "helper_addresses")
 
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
     @property
@@ -344,6 +416,9 @@ class GetInterfaceEthernetResult:
     @property
     @pulumi.getter(name="ipAccessGroupInEnable")
     def ip_access_group_in_enable(self) -> bool:
+        """
+        inbound packets
+        """
         return pulumi.get(self, "ip_access_group_in_enable")
 
     @property
@@ -354,41 +429,65 @@ class GetInterfaceEthernetResult:
     @property
     @pulumi.getter(name="ipAccessGroupOutEnable")
     def ip_access_group_out_enable(self) -> bool:
+        """
+        outbound packets
+        """
         return pulumi.get(self, "ip_access_group_out_enable")
 
     @property
     @pulumi.getter(name="ipArpInspectionLimitRate")
     def ip_arp_inspection_limit_rate(self) -> int:
+        """
+        Rate Limit
+        """
         return pulumi.get(self, "ip_arp_inspection_limit_rate")
 
     @property
     @pulumi.getter(name="ipArpInspectionTrust")
     def ip_arp_inspection_trust(self) -> bool:
+        """
+        Configure Trust state
+        """
         return pulumi.get(self, "ip_arp_inspection_trust")
 
     @property
     @pulumi.getter(name="ipDhcpRelaySourceInterface")
     def ip_dhcp_relay_source_interface(self) -> str:
+        """
+        Set source interface for relayed messages
+        """
         return pulumi.get(self, "ip_dhcp_relay_source_interface")
 
     @property
     @pulumi.getter(name="ipDhcpSnoopingTrust")
     def ip_dhcp_snooping_trust(self) -> bool:
+        """
+        DHCP Snooping trust config
+        """
         return pulumi.get(self, "ip_dhcp_snooping_trust")
 
     @property
     @pulumi.getter(name="ipProxyArp")
     def ip_proxy_arp(self) -> bool:
+        """
+        Enable proxy ARP
+        """
         return pulumi.get(self, "ip_proxy_arp")
 
     @property
     @pulumi.getter(name="ipRedirects")
     def ip_redirects(self) -> bool:
+        """
+        Enable sending ICMP Redirect messages
+        """
         return pulumi.get(self, "ip_redirects")
 
     @property
     @pulumi.getter(name="ipUnreachables")
     def ip_unreachables(self) -> bool:
+        """
+        Enable sending ICMP Unreachable messages
+        """
         return pulumi.get(self, "ip_unreachables")
 
     @property
@@ -404,11 +503,17 @@ class GetInterfaceEthernetResult:
     @property
     @pulumi.getter(name="ipv6AddressAutoconfigDefault")
     def ipv6_address_autoconfig_default(self) -> bool:
+        """
+        Insert default route
+        """
         return pulumi.get(self, "ipv6_address_autoconfig_default")
 
     @property
     @pulumi.getter(name="ipv6AddressDhcp")
     def ipv6_address_dhcp(self) -> bool:
+        """
+        Obtain IPv6 address from DHCP server
+        """
         return pulumi.get(self, "ipv6_address_dhcp")
 
     @property
@@ -419,6 +524,9 @@ class GetInterfaceEthernetResult:
     @property
     @pulumi.getter(name="ipv6Enable")
     def ipv6_enable(self) -> bool:
+        """
+        Enable IPv6 on interface
+        """
         return pulumi.get(self, "ipv6_enable")
 
     @property
@@ -429,16 +537,25 @@ class GetInterfaceEthernetResult:
     @property
     @pulumi.getter(name="ipv6Mtu")
     def ipv6_mtu(self) -> int:
+        """
+        Set IPv6 Maximum Transmission Unit
+        """
         return pulumi.get(self, "ipv6_mtu")
 
     @property
     @pulumi.getter(name="ipv6NdRaSuppressAll")
     def ipv6_nd_ra_suppress_all(self) -> bool:
+        """
+        Suppress all IPv6 RA
+        """
         return pulumi.get(self, "ipv6_nd_ra_suppress_all")
 
     @property
     @pulumi.getter(name="mediaType")
     def media_type(self) -> str:
+        """
+        Media type
+        """
         return pulumi.get(self, "media_type")
 
     @property
@@ -449,6 +566,9 @@ class GetInterfaceEthernetResult:
     @property
     @pulumi.getter
     def shutdown(self) -> bool:
+        """
+        Shutdown the selected interface
+        """
         return pulumi.get(self, "shutdown")
 
     @property
@@ -459,16 +579,25 @@ class GetInterfaceEthernetResult:
     @property
     @pulumi.getter(name="spanningTreeGuard")
     def spanning_tree_guard(self) -> str:
+        """
+        Change an interface's spanning tree guard mode
+        """
         return pulumi.get(self, "spanning_tree_guard")
 
     @property
     @pulumi.getter(name="spanningTreeLinkType")
     def spanning_tree_link_type(self) -> str:
+        """
+        Specify a link type for spanning tree tree protocol use
+        """
         return pulumi.get(self, "spanning_tree_link_type")
 
     @property
     @pulumi.getter(name="spanningTreePortfastTrunk")
     def spanning_tree_portfast_trunk(self) -> bool:
+        """
+        Enable portfast on the interface even in trunk mode
+        """
         return pulumi.get(self, "spanning_tree_portfast_trunk")
 
     @property
@@ -479,21 +608,33 @@ class GetInterfaceEthernetResult:
     @property
     @pulumi.getter(name="trustDevice")
     def trust_device(self) -> str:
+        """
+        trusted device class
+        """
         return pulumi.get(self, "trust_device")
 
     @property
     @pulumi.getter
     def type(self) -> str:
+        """
+        Interface type
+        """
         return pulumi.get(self, "type")
 
     @property
     @pulumi.getter
     def unnumbered(self) -> str:
+        """
+        Enable IP processing without an explicit address
+        """
         return pulumi.get(self, "unnumbered")
 
     @property
     @pulumi.getter(name="vrfForwarding")
     def vrf_forwarding(self) -> str:
+        """
+        Configure forwarding table
+        """
         return pulumi.get(self, "vrf_forwarding")
 
 
@@ -569,7 +710,21 @@ def get_interface_ethernet(device: Optional[str] = None,
                            type: Optional[str] = None,
                            opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetInterfaceEthernetResult:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Interface Ethernet configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_interface_ethernet(name="3",
+        type="GigabitEthernet")
+    ```
+
+
+    :param str device: A device name from the provider configuration.
+    :param str type: Interface type
     """
     __args__ = dict()
     __args__['device'] = device
@@ -646,6 +801,20 @@ def get_interface_ethernet_output(device: Optional[pulumi.Input[Optional[str]]] 
                                   type: Optional[pulumi.Input[str]] = None,
                                   opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetInterfaceEthernetResult]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Interface Ethernet configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_interface_ethernet(name="3",
+        type="GigabitEthernet")
+    ```
+
+
+    :param str device: A device name from the provider configuration.
+    :param str type: Interface type
     """
     ...

@@ -17,6 +17,60 @@ import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the MSDP VRF configuration.
+ * 
+ * ## Example Usage
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.MsdpVrf;
+ * import com.pulumi.iosxe.iosxe.MsdpVrfArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.MsdpVrfPasswordArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.MsdpVrfPeerArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new MsdpVrf(&#34;example&#34;, MsdpVrfArgs.builder()        
+ *             .originatorId(&#34;Loopback100&#34;)
+ *             .passwords(MsdpVrfPasswordArgs.builder()
+ *                 .addr(&#34;10.1.1.1&#34;)
+ *                 .encryption(0)
+ *                 .password(&#34;Cisco123&#34;)
+ *                 .build())
+ *             .peers(MsdpVrfPeerArgs.builder()
+ *                 .addr(&#34;10.1.1.1&#34;)
+ *                 .connect_source_loopback(100)
+ *                 .remote_as(65000)
+ *                 .build())
+ *             .vrf(&#34;VRF1&#34;)
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/msdpVrf:MsdpVrf example &#34;Cisco-IOS-XE-native:native/ip/Cisco-IOS-XE-multicast:msdp/vrf=VRF1&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/msdpVrf:MsdpVrf")
 public class MsdpVrf extends com.pulumi.resources.CustomResource {
     /**

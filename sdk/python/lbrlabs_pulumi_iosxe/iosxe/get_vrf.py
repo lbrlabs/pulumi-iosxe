@@ -81,91 +81,145 @@ class GetVrfResult:
     @property
     @pulumi.getter(name="addressFamilyIpv4")
     def address_family_ipv4(self) -> bool:
+        """
+        Address family
+        """
         return pulumi.get(self, "address_family_ipv4")
 
     @property
     @pulumi.getter(name="addressFamilyIpv6")
     def address_family_ipv6(self) -> bool:
+        """
+        Address family
+        """
         return pulumi.get(self, "address_family_ipv6")
 
     @property
     @pulumi.getter
     def description(self) -> str:
+        """
+        VRF specific description
+        """
         return pulumi.get(self, "description")
 
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
     @property
     @pulumi.getter(name="ipv4RouteTargetExportStitchings")
     def ipv4_route_target_export_stitchings(self) -> Sequence['outputs.GetVrfIpv4RouteTargetExportStitchingResult']:
+        """
+        Export Target-VPN community
+        """
         return pulumi.get(self, "ipv4_route_target_export_stitchings")
 
     @property
     @pulumi.getter(name="ipv4RouteTargetExports")
     def ipv4_route_target_exports(self) -> Sequence['outputs.GetVrfIpv4RouteTargetExportResult']:
+        """
+        Export Target-VPN community
+        """
         return pulumi.get(self, "ipv4_route_target_exports")
 
     @property
     @pulumi.getter(name="ipv4RouteTargetImportStitchings")
     def ipv4_route_target_import_stitchings(self) -> Sequence['outputs.GetVrfIpv4RouteTargetImportStitchingResult']:
+        """
+        Import Target-VPN community
+        """
         return pulumi.get(self, "ipv4_route_target_import_stitchings")
 
     @property
     @pulumi.getter(name="ipv4RouteTargetImports")
     def ipv4_route_target_imports(self) -> Sequence['outputs.GetVrfIpv4RouteTargetImportResult']:
+        """
+        Import Target-VPN community
+        """
         return pulumi.get(self, "ipv4_route_target_imports")
 
     @property
     @pulumi.getter(name="ipv6RouteTargetExportStitchings")
     def ipv6_route_target_export_stitchings(self) -> Sequence['outputs.GetVrfIpv6RouteTargetExportStitchingResult']:
+        """
+        Export Target-VPN community
+        """
         return pulumi.get(self, "ipv6_route_target_export_stitchings")
 
     @property
     @pulumi.getter(name="ipv6RouteTargetExports")
     def ipv6_route_target_exports(self) -> Sequence['outputs.GetVrfIpv6RouteTargetExportResult']:
+        """
+        Export Target-VPN community
+        """
         return pulumi.get(self, "ipv6_route_target_exports")
 
     @property
     @pulumi.getter(name="ipv6RouteTargetImportStitchings")
     def ipv6_route_target_import_stitchings(self) -> Sequence['outputs.GetVrfIpv6RouteTargetImportStitchingResult']:
+        """
+        Import Target-VPN community
+        """
         return pulumi.get(self, "ipv6_route_target_import_stitchings")
 
     @property
     @pulumi.getter(name="ipv6RouteTargetImports")
     def ipv6_route_target_imports(self) -> Sequence['outputs.GetVrfIpv6RouteTargetImportResult']:
+        """
+        Import Target-VPN community
+        """
         return pulumi.get(self, "ipv6_route_target_imports")
 
     @property
     @pulumi.getter
     def name(self) -> str:
+        """
+        WORD;;VRF name
+        """
         return pulumi.get(self, "name")
 
     @property
     @pulumi.getter
     def rd(self) -> str:
+        """
+        Specify Route Distinguisher
+        """
         return pulumi.get(self, "rd")
 
     @property
     @pulumi.getter(name="routeTargetExports")
     def route_target_exports(self) -> Sequence['outputs.GetVrfRouteTargetExportResult']:
+        """
+        Export Target-VPN community
+        """
         return pulumi.get(self, "route_target_exports")
 
     @property
     @pulumi.getter(name="routeTargetImports")
     def route_target_imports(self) -> Sequence['outputs.GetVrfRouteTargetImportResult']:
+        """
+        Import Target-VPN community
+        """
         return pulumi.get(self, "route_target_imports")
 
     @property
     @pulumi.getter(name="vpnId")
     def vpn_id(self) -> str:
+        """
+        Configure VPN ID in rfc2685 format
+        """
         return pulumi.get(self, "vpn_id")
 
 
@@ -199,7 +253,20 @@ def get_vrf(device: Optional[str] = None,
             name: Optional[str] = None,
             opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetVrfResult:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the VRF configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_vrf(name="VRF22")
+    ```
+
+
+    :param str device: A device name from the provider configuration.
+    :param str name: WORD;;VRF name
     """
     __args__ = dict()
     __args__['device'] = device
@@ -233,6 +300,19 @@ def get_vrf_output(device: Optional[pulumi.Input[Optional[str]]] = None,
                    name: Optional[pulumi.Input[str]] = None,
                    opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetVrfResult]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the VRF configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_vrf(name="VRF22")
+    ```
+
+
+    :param str device: A device name from the provider configuration.
+    :param str name: WORD;;VRF name
     """
     ...

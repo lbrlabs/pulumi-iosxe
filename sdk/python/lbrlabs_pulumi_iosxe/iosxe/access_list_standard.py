@@ -119,7 +119,14 @@ class AccessListStandard(pulumi.CustomResource):
                  name: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
-        Create a AccessListStandard resource with the given unique name, props, and options.
+        This resource can manage the Access List Standard configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/accessListStandard:AccessListStandard example "Cisco-IOS-XE-native:native/ip/access-list/Cisco-IOS-XE-acl:standard=SACL1"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] device: A device name from the provider configuration.
@@ -131,7 +138,14 @@ class AccessListStandard(pulumi.CustomResource):
                  args: Optional[AccessListStandardArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a AccessListStandard resource with the given unique name, props, and options.
+        This resource can manage the Access List Standard configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/accessListStandard:AccessListStandard example "Cisco-IOS-XE-native:native/ip/access-list/Cisco-IOS-XE-acl:standard=SACL1"
+        ```
+
         :param str resource_name: The name of the resource.
         :param AccessListStandardArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

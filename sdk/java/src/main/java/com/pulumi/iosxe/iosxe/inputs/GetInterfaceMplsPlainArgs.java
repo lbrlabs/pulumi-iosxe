@@ -14,9 +14,17 @@ public final class GetInterfaceMplsPlainArgs extends com.pulumi.resources.Invoke
 
     public static final GetInterfaceMplsPlainArgs Empty = new GetInterfaceMplsPlainArgs();
 
+    /**
+     * A device name from the provider configuration.
+     * 
+     */
     @Import(name="device")
     private @Nullable String device;
 
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
@@ -28,9 +36,17 @@ public final class GetInterfaceMplsPlainArgs extends com.pulumi.resources.Invoke
         return this.name;
     }
 
+    /**
+     * Interface type
+     * 
+     */
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Interface type
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -61,6 +77,12 @@ public final class GetInterfaceMplsPlainArgs extends com.pulumi.resources.Invoke
             $ = new GetInterfaceMplsPlainArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param device A device name from the provider configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder device(@Nullable String device) {
             $.device = device;
             return this;
@@ -71,6 +93,12 @@ public final class GetInterfaceMplsPlainArgs extends com.pulumi.resources.Invoke
             return this;
         }
 
+        /**
+         * @param type Interface type
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

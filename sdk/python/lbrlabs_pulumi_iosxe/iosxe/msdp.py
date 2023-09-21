@@ -209,7 +209,14 @@ class Msdp(pulumi.CustomResource):
                  peers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['MsdpPeerArgs']]]]] = None,
                  __props__=None):
         """
-        Create a Msdp resource with the given unique name, props, and options.
+        This resource can manage the MSDP configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/msdp:Msdp example "Cisco-IOS-XE-native:native/ip/Cisco-IOS-XE-multicast:msdp"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] delete_mode: Configure behavior when deleting/destroying the resource. Either delete the entire object (YANG container) being
@@ -227,7 +234,14 @@ class Msdp(pulumi.CustomResource):
                  args: Optional[MsdpArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a Msdp resource with the given unique name, props, and options.
+        This resource can manage the MSDP configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/msdp:Msdp example "Cisco-IOS-XE-native:native/ip/Cisco-IOS-XE-multicast:msdp"
+        ```
+
         :param str resource_name: The name of the resource.
         :param MsdpArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

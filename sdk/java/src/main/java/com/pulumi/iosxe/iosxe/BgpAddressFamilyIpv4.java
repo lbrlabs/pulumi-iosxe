@@ -18,6 +18,63 @@ import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the BGP Address Family IPv4 configuration.
+ * 
+ * ## Example Usage
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.BgpAddressFamilyIpv4;
+ * import com.pulumi.iosxe.iosxe.BgpAddressFamilyIpv4Args;
+ * import com.pulumi.iosxe.iosxe.inputs.BgpAddressFamilyIpv4Ipv4UnicastNetworkArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.BgpAddressFamilyIpv4Ipv4UnicastNetworksMaskArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new BgpAddressFamilyIpv4(&#34;example&#34;, BgpAddressFamilyIpv4Args.builder()        
+ *             .afName(&#34;unicast&#34;)
+ *             .asn(&#34;65000&#34;)
+ *             .ipv4UnicastNetworks(BgpAddressFamilyIpv4Ipv4UnicastNetworkArgs.builder()
+ *                 .backdoor(true)
+ *                 .network(&#34;13.0.0.0&#34;)
+ *                 .route_map(&#34;RM1&#34;)
+ *                 .build())
+ *             .ipv4UnicastNetworksMasks(BgpAddressFamilyIpv4Ipv4UnicastNetworksMaskArgs.builder()
+ *                 .backdoor(true)
+ *                 .mask(&#34;255.255.0.0&#34;)
+ *                 .network(&#34;12.0.0.0&#34;)
+ *                 .route_map(&#34;RM1&#34;)
+ *                 .build())
+ *             .ipv4UnicastRedistributeConnected(true)
+ *             .ipv4UnicastRedistributeStatic(true)
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/bgpAddressFamilyIpv4:BgpAddressFamilyIpv4 example &#34;Cisco-IOS-XE-native:native/router/Cisco-IOS-XE-bgp:bgp=65000/address-family/no-vrf/ipv4=unicast&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/bgpAddressFamilyIpv4:BgpAddressFamilyIpv4")
 public class BgpAddressFamilyIpv4 extends com.pulumi.resources.CustomResource {
     /**

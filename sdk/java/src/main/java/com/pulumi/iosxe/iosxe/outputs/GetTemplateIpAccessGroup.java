@@ -9,13 +9,29 @@ import java.util.Objects;
 
 @CustomType
 public final class GetTemplateIpAccessGroup {
+    /**
+     * @return Access control list name
+     * 
+     */
     private String accessList;
+    /**
+     * @return packet flow direction
+     * 
+     */
     private String direction;
 
     private GetTemplateIpAccessGroup() {}
+    /**
+     * @return Access control list name
+     * 
+     */
     public String accessList() {
         return this.accessList;
     }
+    /**
+     * @return packet flow direction
+     * 
+     */
     public String direction() {
         return this.direction;
     }

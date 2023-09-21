@@ -20,6 +20,75 @@ import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the Service Template configuration.
+ * 
+ * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.ServiceTemplate;
+ * import com.pulumi.iosxe.iosxe.ServiceTemplateArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.ServiceTemplateAccessGroupArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.ServiceTemplateInterfaceTemplateArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.ServiceTemplateTagArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ServiceTemplate(&#34;example&#34;, ServiceTemplateArgs.builder()        
+ *             .absoluteTimer(45)
+ *             .accessGroups(ServiceTemplateAccessGroupArgs.builder()
+ *                 .name(&#34;ag1&#34;)
+ *                 .build())
+ *             .description(&#34;service_template_desc&#34;)
+ *             .dnsAclPreauth(&#34;dns_acl_name&#34;)
+ *             .ianctivityTimer(25)
+ *             .inactivityTimerProbe(false)
+ *             .interfaceTemplates(ServiceTemplateInterfaceTemplateArgs.builder()
+ *                 .name(&#34;template1&#34;)
+ *                 .build())
+ *             .linksecPolicy(&#34;must-secure&#34;)
+ *             .redirectAppendClientMac(&#34;00:01:00:01:00:01&#34;)
+ *             .redirectAppendSwitchMac(&#34;00:01:00:01:00:02&#34;)
+ *             .redirectUrl(&#34;valid_url&#34;)
+ *             .redirectUrlMatchAcl(&#34;acl_name&#34;)
+ *             .redirectUrlMatchAction(&#34;redirect-on-no-match&#34;)
+ *             .servicePolicyQosInput(&#34;input_qos&#34;)
+ *             .servicePolicyQosOutput(&#34;output_qos&#34;)
+ *             .sgt(57)
+ *             .tags(ServiceTemplateTagArgs.builder()
+ *                 .name(&#34;tag_name&#34;)
+ *                 .build())
+ *             .tunnelCapwapName(&#34;TUN1&#34;)
+ *             .vlan(27)
+ *             .vnid(&#34;12345&#34;)
+ *             .voiceVlan(false)
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/serviceTemplate:ServiceTemplate example &#34;Cisco-IOS-XE-native:native/Cisco-IOS-XE-switch:service-template=MY_TEMPLATE&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/serviceTemplate:ServiceTemplate")
 public class ServiceTemplate extends com.pulumi.resources.CustomResource {
     /**

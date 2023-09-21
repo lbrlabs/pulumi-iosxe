@@ -23,77 +23,221 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetVrfResult {
+    /**
+     * @return Address family
+     * 
+     */
     private Boolean addressFamilyIpv4;
+    /**
+     * @return Address family
+     * 
+     */
     private Boolean addressFamilyIpv6;
+    /**
+     * @return VRF specific description
+     * 
+     */
     private String description;
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
+    /**
+     * @return Export Target-VPN community
+     * 
+     */
     private List<GetVrfIpv4RouteTargetExportStitching> ipv4RouteTargetExportStitchings;
+    /**
+     * @return Export Target-VPN community
+     * 
+     */
     private List<GetVrfIpv4RouteTargetExport> ipv4RouteTargetExports;
+    /**
+     * @return Import Target-VPN community
+     * 
+     */
     private List<GetVrfIpv4RouteTargetImportStitching> ipv4RouteTargetImportStitchings;
+    /**
+     * @return Import Target-VPN community
+     * 
+     */
     private List<GetVrfIpv4RouteTargetImport> ipv4RouteTargetImports;
+    /**
+     * @return Export Target-VPN community
+     * 
+     */
     private List<GetVrfIpv6RouteTargetExportStitching> ipv6RouteTargetExportStitchings;
+    /**
+     * @return Export Target-VPN community
+     * 
+     */
     private List<GetVrfIpv6RouteTargetExport> ipv6RouteTargetExports;
+    /**
+     * @return Import Target-VPN community
+     * 
+     */
     private List<GetVrfIpv6RouteTargetImportStitching> ipv6RouteTargetImportStitchings;
+    /**
+     * @return Import Target-VPN community
+     * 
+     */
     private List<GetVrfIpv6RouteTargetImport> ipv6RouteTargetImports;
+    /**
+     * @return WORD;;VRF name
+     * 
+     */
     private String name;
+    /**
+     * @return Specify Route Distinguisher
+     * 
+     */
     private String rd;
+    /**
+     * @return Export Target-VPN community
+     * 
+     */
     private List<GetVrfRouteTargetExport> routeTargetExports;
+    /**
+     * @return Import Target-VPN community
+     * 
+     */
     private List<GetVrfRouteTargetImport> routeTargetImports;
+    /**
+     * @return Configure VPN ID in rfc2685 format
+     * 
+     */
     private String vpnId;
 
     private GetVrfResult() {}
+    /**
+     * @return Address family
+     * 
+     */
     public Boolean addressFamilyIpv4() {
         return this.addressFamilyIpv4;
     }
+    /**
+     * @return Address family
+     * 
+     */
     public Boolean addressFamilyIpv6() {
         return this.addressFamilyIpv6;
     }
+    /**
+     * @return VRF specific description
+     * 
+     */
     public String description() {
         return this.description;
     }
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
+    /**
+     * @return Export Target-VPN community
+     * 
+     */
     public List<GetVrfIpv4RouteTargetExportStitching> ipv4RouteTargetExportStitchings() {
         return this.ipv4RouteTargetExportStitchings;
     }
+    /**
+     * @return Export Target-VPN community
+     * 
+     */
     public List<GetVrfIpv4RouteTargetExport> ipv4RouteTargetExports() {
         return this.ipv4RouteTargetExports;
     }
+    /**
+     * @return Import Target-VPN community
+     * 
+     */
     public List<GetVrfIpv4RouteTargetImportStitching> ipv4RouteTargetImportStitchings() {
         return this.ipv4RouteTargetImportStitchings;
     }
+    /**
+     * @return Import Target-VPN community
+     * 
+     */
     public List<GetVrfIpv4RouteTargetImport> ipv4RouteTargetImports() {
         return this.ipv4RouteTargetImports;
     }
+    /**
+     * @return Export Target-VPN community
+     * 
+     */
     public List<GetVrfIpv6RouteTargetExportStitching> ipv6RouteTargetExportStitchings() {
         return this.ipv6RouteTargetExportStitchings;
     }
+    /**
+     * @return Export Target-VPN community
+     * 
+     */
     public List<GetVrfIpv6RouteTargetExport> ipv6RouteTargetExports() {
         return this.ipv6RouteTargetExports;
     }
+    /**
+     * @return Import Target-VPN community
+     * 
+     */
     public List<GetVrfIpv6RouteTargetImportStitching> ipv6RouteTargetImportStitchings() {
         return this.ipv6RouteTargetImportStitchings;
     }
+    /**
+     * @return Import Target-VPN community
+     * 
+     */
     public List<GetVrfIpv6RouteTargetImport> ipv6RouteTargetImports() {
         return this.ipv6RouteTargetImports;
     }
+    /**
+     * @return WORD;;VRF name
+     * 
+     */
     public String name() {
         return this.name;
     }
+    /**
+     * @return Specify Route Distinguisher
+     * 
+     */
     public String rd() {
         return this.rd;
     }
+    /**
+     * @return Export Target-VPN community
+     * 
+     */
     public List<GetVrfRouteTargetExport> routeTargetExports() {
         return this.routeTargetExports;
     }
+    /**
+     * @return Import Target-VPN community
+     * 
+     */
     public List<GetVrfRouteTargetImport> routeTargetImports() {
         return this.routeTargetImports;
     }
+    /**
+     * @return Configure VPN ID in rfc2685 format
+     * 
+     */
     public String vpnId() {
         return this.vpnId;
     }

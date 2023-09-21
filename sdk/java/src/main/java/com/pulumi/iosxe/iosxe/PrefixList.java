@@ -16,6 +16,54 @@ import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the Prefix List configuration.
+ * 
+ * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.PrefixList;
+ * import com.pulumi.iosxe.iosxe.PrefixListArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.PrefixListPrefixArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new PrefixList(&#34;example&#34;, PrefixListArgs.builder()        
+ *             .prefixes(PrefixListPrefixArgs.builder()
+ *                 .action(&#34;permit&#34;)
+ *                 .ge(24)
+ *                 .ip(&#34;10.0.0.0/8&#34;)
+ *                 .le(32)
+ *                 .name(&#34;PREFIX_LIST_1&#34;)
+ *                 .seq(10)
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/prefixList:PrefixList example &#34;Cisco-IOS-XE-native:native/ip/prefix-lists&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/prefixList:PrefixList")
 public class PrefixList extends com.pulumi.resources.CustomResource {
     /**

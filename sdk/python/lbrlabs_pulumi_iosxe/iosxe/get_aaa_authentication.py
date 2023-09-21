@@ -60,56 +60,89 @@ class GetAaaAuthenticationResult:
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
     @pulumi.getter(name="dot1xDefaultA1Group")
     def dot1x_default_a1_group(self) -> str:
+        """
+        Use Server-group
+        """
         return pulumi.get(self, "dot1x_default_a1_group")
 
     @property
     @pulumi.getter(name="dot1xDefaultA1Local")
     def dot1x_default_a1_local(self) -> bool:
+        """
+        Use local username authentication
+        """
         return pulumi.get(self, "dot1x_default_a1_local")
 
     @property
     @pulumi.getter(name="dot1xDefaultA2Group")
     def dot1x_default_a2_group(self) -> str:
+        """
+        Use Server-group
+        """
         return pulumi.get(self, "dot1x_default_a2_group")
 
     @property
     @pulumi.getter(name="dot1xDefaultA2Local")
     def dot1x_default_a2_local(self) -> bool:
+        """
+        Use local username authentication
+        """
         return pulumi.get(self, "dot1x_default_a2_local")
 
     @property
     @pulumi.getter(name="dot1xDefaultA3Group")
     def dot1x_default_a3_group(self) -> str:
+        """
+        Use Server-group
+        """
         return pulumi.get(self, "dot1x_default_a3_group")
 
     @property
     @pulumi.getter(name="dot1xDefaultA3Local")
     def dot1x_default_a3_local(self) -> bool:
+        """
+        Use local username authentication
+        """
         return pulumi.get(self, "dot1x_default_a3_local")
 
     @property
     @pulumi.getter(name="dot1xDefaultA4Group")
     def dot1x_default_a4_group(self) -> str:
+        """
+        Use Server-group
+        """
         return pulumi.get(self, "dot1x_default_a4_group")
 
     @property
     @pulumi.getter(name="dot1xDefaultA4Local")
     def dot1x_default_a4_local(self) -> bool:
+        """
+        Use local username authentication
+        """
         return pulumi.get(self, "dot1x_default_a4_local")
 
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
     @property
     @pulumi.getter
     def logins(self) -> Sequence['outputs.GetAaaAuthenticationLoginResult']:
+        """
+        Set authentication lists for logins.
+        """
         return pulumi.get(self, "logins")
 
 
@@ -135,7 +168,19 @@ class AwaitableGetAaaAuthenticationResult(GetAaaAuthenticationResult):
 def get_aaa_authentication(device: Optional[str] = None,
                            opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetAaaAuthenticationResult:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the AAA Authentication configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_aaa_authentication()
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -160,6 +205,18 @@ def get_aaa_authentication(device: Optional[str] = None,
 def get_aaa_authentication_output(device: Optional[pulumi.Input[Optional[str]]] = None,
                                   opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetAaaAuthenticationResult]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the AAA Authentication configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_aaa_authentication()
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     ...

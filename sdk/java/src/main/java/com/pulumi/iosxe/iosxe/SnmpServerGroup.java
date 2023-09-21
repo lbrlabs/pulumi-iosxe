@@ -16,6 +16,57 @@ import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the SNMP Server Group configuration.
+ * 
+ * ## Example Usage
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.SnmpServerGroup;
+ * import com.pulumi.iosxe.iosxe.SnmpServerGroupArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.SnmpServerGroupV3SecurityArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new SnmpServerGroup(&#34;example&#34;, SnmpServerGroupArgs.builder()        
+ *             .v3Securities(SnmpServerGroupV3SecurityArgs.builder()
+ *                 .access_acl_name(&#34;ACL1&#34;)
+ *                 .access_ipv6_acl(&#34;V6ACL1&#34;)
+ *                 .context_node(&#34;CON1&#34;)
+ *                 .match_node(&#34;exact&#34;)
+ *                 .notify_node(&#34;VIEW3&#34;)
+ *                 .read_node(&#34;VIEW1&#34;)
+ *                 .security_level(&#34;priv&#34;)
+ *                 .write_node(&#34;VIEW2&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/snmpServerGroup:SnmpServerGroup example &#34;Cisco-IOS-XE-native:native/snmp-server/Cisco-IOS-XE-snmp:group=GROUP1&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/snmpServerGroup:SnmpServerGroup")
 public class SnmpServerGroup extends com.pulumi.resources.CustomResource {
     /**

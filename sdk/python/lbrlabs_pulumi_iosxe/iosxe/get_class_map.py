@@ -81,91 +81,145 @@ class GetClassMapResult:
     @property
     @pulumi.getter
     def description(self) -> str:
+        """
+        Class-Map description
+        """
         return pulumi.get(self, "description")
 
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
     @property
     @pulumi.getter(name="matchActivatedServiceTemplates")
     def match_activated_service_templates(self) -> Sequence['outputs.GetClassMapMatchActivatedServiceTemplateResult']:
+        """
+        match name of service template activated on session
+        """
         return pulumi.get(self, "match_activated_service_templates")
 
     @property
     @pulumi.getter(name="matchAuthorizationStatusAuthorized")
     def match_authorization_status_authorized(self) -> bool:
+        """
+        authorized
+        """
         return pulumi.get(self, "match_authorization_status_authorized")
 
     @property
     @pulumi.getter(name="matchAuthorizationStatusUnauthorized")
     def match_authorization_status_unauthorized(self) -> bool:
+        """
+        unauthorized
+        """
         return pulumi.get(self, "match_authorization_status_unauthorized")
 
     @property
     @pulumi.getter(name="matchAuthorizingMethodPriorityGreaterThans")
     def match_authorizing_method_priority_greater_thans(self) -> Sequence[int]:
+        """
+        greater than
+        """
         return pulumi.get(self, "match_authorizing_method_priority_greater_thans")
 
     @property
     @pulumi.getter(name="matchMethodDot1x")
     def match_method_dot1x(self) -> bool:
+        """
+        dot1x
+        """
         return pulumi.get(self, "match_method_dot1x")
 
     @property
     @pulumi.getter(name="matchMethodMab")
     def match_method_mab(self) -> bool:
+        """
+        mab
+        """
         return pulumi.get(self, "match_method_mab")
 
     @property
     @pulumi.getter(name="matchResultTypeAaaTimeout")
     def match_result_type_aaa_timeout(self) -> bool:
+        """
+        aaa timeout type
+        """
         return pulumi.get(self, "match_result_type_aaa_timeout")
 
     @property
     @pulumi.getter(name="matchResultTypeMethodDot1xAgentNotFound")
     def match_result_type_method_dot1x_agent_not_found(self) -> bool:
+        """
+        agent not found type
+        """
         return pulumi.get(self, "match_result_type_method_dot1x_agent_not_found")
 
     @property
     @pulumi.getter(name="matchResultTypeMethodDot1xAuthoritative")
     def match_result_type_method_dot1x_authoritative(self) -> bool:
+        """
+        failure type
+        """
         return pulumi.get(self, "match_result_type_method_dot1x_authoritative")
 
     @property
     @pulumi.getter(name="matchResultTypeMethodDot1xMethodTimeout")
     def match_result_type_method_dot1x_method_timeout(self) -> bool:
+        """
+        method_timeout type
+        """
         return pulumi.get(self, "match_result_type_method_dot1x_method_timeout")
 
     @property
     @pulumi.getter(name="matchResultTypeMethodMabAuthoritative")
     def match_result_type_method_mab_authoritative(self) -> bool:
+        """
+        failure type
+        """
         return pulumi.get(self, "match_result_type_method_mab_authoritative")
 
     @property
     @pulumi.getter
     def name(self) -> str:
+        """
+        name of the class map
+        """
         return pulumi.get(self, "name")
 
     @property
     @pulumi.getter
     def prematch(self) -> str:
+        """
+        Logical-AND/Logical-OR of all matching statements under this class map
+        """
         return pulumi.get(self, "prematch")
 
     @property
     @pulumi.getter
     def subscriber(self) -> bool:
+        """
+        Domain name of the class map
+        """
         return pulumi.get(self, "subscriber")
 
     @property
     @pulumi.getter
     def type(self) -> str:
+        """
+        type of the class-map
+        """
         return pulumi.get(self, "type")
 
 
@@ -199,7 +253,20 @@ def get_class_map(device: Optional[str] = None,
                   name: Optional[str] = None,
                   opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetClassMapResult:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Class Map configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_class_map(name="CM1")
+    ```
+
+
+    :param str device: A device name from the provider configuration.
+    :param str name: name of the class map
     """
     __args__ = dict()
     __args__['device'] = device
@@ -233,6 +300,19 @@ def get_class_map_output(device: Optional[pulumi.Input[Optional[str]]] = None,
                          name: Optional[pulumi.Input[str]] = None,
                          opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetClassMapResult]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Class Map configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_class_map(name="CM1")
+    ```
+
+
+    :param str device: A device name from the provider configuration.
+    :param str name: name of the class map
     """
     ...

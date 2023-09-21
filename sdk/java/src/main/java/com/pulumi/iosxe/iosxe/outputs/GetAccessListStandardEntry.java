@@ -11,50 +11,138 @@ import java.util.Objects;
 
 @CustomType
 public final class GetAccessListStandardEntry {
+    /**
+     * @return Any source prefix
+     * 
+     */
     private Boolean denyAny;
+    /**
+     * @return A single source host
+     * 
+     */
     private String denyHost;
+    /**
+     * @return Log matches against this entry
+     * 
+     */
     private Boolean denyLog;
+    /**
+     * @return Network address prefix
+     * 
+     */
     private String denyPrefix;
+    /**
+     * @return Wildcard bits
+     * 
+     */
     private String denyPrefixMask;
+    /**
+     * @return Any source prefix
+     * 
+     */
     private Boolean permitAny;
+    /**
+     * @return A single source host
+     * 
+     */
     private String permitHost;
+    /**
+     * @return Log matches against this entry
+     * 
+     */
     private Boolean permitLog;
+    /**
+     * @return Network address prefix
+     * 
+     */
     private String permitPrefix;
+    /**
+     * @return Wildcard bits
+     * 
+     */
     private String permitPrefixMask;
+    /**
+     * @return Access list entry comment
+     * 
+     */
     private String remark;
     private Integer sequence;
 
     private GetAccessListStandardEntry() {}
+    /**
+     * @return Any source prefix
+     * 
+     */
     public Boolean denyAny() {
         return this.denyAny;
     }
+    /**
+     * @return A single source host
+     * 
+     */
     public String denyHost() {
         return this.denyHost;
     }
+    /**
+     * @return Log matches against this entry
+     * 
+     */
     public Boolean denyLog() {
         return this.denyLog;
     }
+    /**
+     * @return Network address prefix
+     * 
+     */
     public String denyPrefix() {
         return this.denyPrefix;
     }
+    /**
+     * @return Wildcard bits
+     * 
+     */
     public String denyPrefixMask() {
         return this.denyPrefixMask;
     }
+    /**
+     * @return Any source prefix
+     * 
+     */
     public Boolean permitAny() {
         return this.permitAny;
     }
+    /**
+     * @return A single source host
+     * 
+     */
     public String permitHost() {
         return this.permitHost;
     }
+    /**
+     * @return Log matches against this entry
+     * 
+     */
     public Boolean permitLog() {
         return this.permitLog;
     }
+    /**
+     * @return Network address prefix
+     * 
+     */
     public String permitPrefix() {
         return this.permitPrefix;
     }
+    /**
+     * @return Wildcard bits
+     * 
+     */
     public String permitPrefixMask() {
         return this.permitPrefixMask;
     }
+    /**
+     * @return Access list entry comment
+     * 
+     */
     public String remark() {
         return this.remark;
     }

@@ -68,21 +68,33 @@ class GetRadiusResult:
     @property
     @pulumi.getter(name="accountingPort")
     def accounting_port(self) -> int:
+        """
+        UDP port for RADIUS accounting server (default is 1813)
+        """
         return pulumi.get(self, "accounting_port")
 
     @property
     @pulumi.getter(name="authenticationPort")
     def authentication_port(self) -> int:
+        """
+        UDP port for RADIUS authentication server (default is 1812)
+        """
         return pulumi.get(self, "authentication_port")
 
     @property
     @pulumi.getter(name="automateTesterIgnoreAcctPort")
     def automate_tester_ignore_acct_port(self) -> bool:
+        """
+        Do not test accounting ports of the servers.
+        """
         return pulumi.get(self, "automate_tester_ignore_acct_port")
 
     @property
     @pulumi.getter(name="automateTesterProbeOnConfig")
     def automate_tester_probe_on_config(self) -> bool:
+        """
+        Send a packet to verify the server status
+        """
         return pulumi.get(self, "automate_tester_probe_on_config")
 
     @property
@@ -93,16 +105,25 @@ class GetRadiusResult:
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
     @property
     @pulumi.getter(name="ipv4Address")
     def ipv4_address(self) -> str:
+        """
+        IPv4 address or Hostname for radius server
+        """
         return pulumi.get(self, "ipv4_address")
 
     @property
@@ -113,26 +134,41 @@ class GetRadiusResult:
     @property
     @pulumi.getter
     def name(self) -> str:
+        """
+        Name for the radius server configuration
+        """
         return pulumi.get(self, "name")
 
     @property
     @pulumi.getter(name="pacKey")
     def pac_key(self) -> str:
+        """
+        The UNENCRYPTED (cleartext) server key
+        """
         return pulumi.get(self, "pac_key")
 
     @property
     @pulumi.getter(name="pacKeyEncryption")
     def pac_key_encryption(self) -> str:
+        """
+        0 - Specifies an UNENCRYPTED key will follow 6 - Specifies an ENCRYPTED key will follow 7 - Specifies HIDDEN key will follow
+        """
         return pulumi.get(self, "pac_key_encryption")
 
     @property
     @pulumi.getter
     def retransmit(self) -> int:
+        """
+        Number of retries to active server (overrides default)
+        """
         return pulumi.get(self, "retransmit")
 
     @property
     @pulumi.getter
     def timeout(self) -> int:
+        """
+        Time to wait for a RADIUS server to reply (overrides default)
+        """
         return pulumi.get(self, "timeout")
 
 
@@ -162,7 +198,20 @@ def get_radius(device: Optional[str] = None,
                name: Optional[str] = None,
                opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetRadiusResult:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Radius configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_radius(name="radius_10.10.15.12")
+    ```
+
+
+    :param str device: A device name from the provider configuration.
+    :param str name: Name for the radius server configuration
     """
     __args__ = dict()
     __args__['device'] = device
@@ -192,6 +241,19 @@ def get_radius_output(device: Optional[pulumi.Input[Optional[str]]] = None,
                       name: Optional[pulumi.Input[str]] = None,
                       opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetRadiusResult]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Radius configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_radius(name="radius_10.10.15.12")
+    ```
+
+
+    :param str device: A device name from the provider configuration.
+    :param str name: Name for the radius server configuration
     """
     ...

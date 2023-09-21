@@ -48,11 +48,17 @@ class GetLoggingIpv6HostVrfTransportResult:
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
     @property
@@ -63,21 +69,33 @@ class GetLoggingIpv6HostVrfTransportResult:
     @property
     @pulumi.getter(name="transportTcpPorts")
     def transport_tcp_ports(self) -> Sequence['outputs.GetLoggingIpv6HostVrfTransportTransportTcpPortResult']:
+        """
+        Port Number List
+        """
         return pulumi.get(self, "transport_tcp_ports")
 
     @property
     @pulumi.getter(name="transportTlsPorts")
     def transport_tls_ports(self) -> Sequence['outputs.GetLoggingIpv6HostVrfTransportTransportTlsPortResult']:
+        """
+        Port Number List
+        """
         return pulumi.get(self, "transport_tls_ports")
 
     @property
     @pulumi.getter(name="transportUdpPorts")
     def transport_udp_ports(self) -> Sequence['outputs.GetLoggingIpv6HostVrfTransportTransportUdpPortResult']:
+        """
+        Port Number List
+        """
         return pulumi.get(self, "transport_udp_ports")
 
     @property
     @pulumi.getter
     def vrf(self) -> str:
+        """
+        Set VRF option
+        """
         return pulumi.get(self, "vrf")
 
 
@@ -101,7 +119,21 @@ def get_logging_ipv6_host_vrf_transport(device: Optional[str] = None,
                                         vrf: Optional[str] = None,
                                         opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetLoggingIpv6HostVrfTransportResult:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Logging IPv6 Host VRF Transport configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_logging_ipv6_host_vrf_transport(ipv6_host="2001::1",
+        vrf="VRF1")
+    ```
+
+
+    :param str device: A device name from the provider configuration.
+    :param str vrf: Set VRF option
     """
     __args__ = dict()
     __args__['device'] = device
@@ -126,6 +158,20 @@ def get_logging_ipv6_host_vrf_transport_output(device: Optional[pulumi.Input[Opt
                                                vrf: Optional[pulumi.Input[str]] = None,
                                                opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetLoggingIpv6HostVrfTransportResult]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Logging IPv6 Host VRF Transport configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_logging_ipv6_host_vrf_transport(ipv6_host="2001::1",
+        vrf="VRF1")
+    ```
+
+
+    :param str device: A device name from the provider configuration.
+    :param str vrf: Set VRF option
     """
     ...

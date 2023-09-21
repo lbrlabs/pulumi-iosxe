@@ -92,61 +92,97 @@ class GetSnmpServerUserResult:
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
     @pulumi.getter
     def grpname(self) -> str:
+        """
+        Group to which the user belongs
+        """
         return pulumi.get(self, "grpname")
 
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
     @property
     @pulumi.getter
     def username(self) -> str:
+        """
+        Name of the user
+        """
         return pulumi.get(self, "username")
 
     @property
     @pulumi.getter(name="v3AuthAccessAclName")
     def v3_auth_access_acl_name(self) -> str:
+        """
+        Access-list name
+        """
         return pulumi.get(self, "v3_auth_access_acl_name")
 
     @property
     @pulumi.getter(name="v3AuthAccessIpv6Acl")
     def v3_auth_access_ipv6_acl(self) -> str:
+        """
+        Specify IPv6 Named Access-List
+        """
         return pulumi.get(self, "v3_auth_access_ipv6_acl")
 
     @property
     @pulumi.getter(name="v3AuthAccessStandardAcl")
     def v3_auth_access_standard_acl(self) -> int:
+        """
+        Standard IP Access-list allowing access with this community string
+        """
         return pulumi.get(self, "v3_auth_access_standard_acl")
 
     @property
     @pulumi.getter(name="v3AuthAlgorithm")
     def v3_auth_algorithm(self) -> str:
+        """
+        Use HMAC SHA/MD5 algorithm for authentication
+        """
         return pulumi.get(self, "v3_auth_algorithm")
 
     @property
     @pulumi.getter(name="v3AuthPassword")
     def v3_auth_password(self) -> str:
+        """
+        Authentication password for user
+        """
         return pulumi.get(self, "v3_auth_password")
 
     @property
     @pulumi.getter(name="v3AuthPrivAesAccessAclName")
     def v3_auth_priv_aes_access_acl_name(self) -> str:
+        """
+        Access-list name
+        """
         return pulumi.get(self, "v3_auth_priv_aes_access_acl_name")
 
     @property
     @pulumi.getter(name="v3AuthPrivAesAccessIpv6Acl")
     def v3_auth_priv_aes_access_ipv6_acl(self) -> str:
+        """
+        Specify IPv6 Named Access-List
+        """
         return pulumi.get(self, "v3_auth_priv_aes_access_ipv6_acl")
 
     @property
     @pulumi.getter(name="v3AuthPrivAesAccessStandardAcl")
     def v3_auth_priv_aes_access_standard_acl(self) -> int:
+        """
+        Standard IP Access-list allowing access with this community string
+        """
         return pulumi.get(self, "v3_auth_priv_aes_access_standard_acl")
 
     @property
@@ -157,46 +193,73 @@ class GetSnmpServerUserResult:
     @property
     @pulumi.getter(name="v3AuthPrivAesPassword")
     def v3_auth_priv_aes_password(self) -> str:
+        """
+        Authentication password for user
+        """
         return pulumi.get(self, "v3_auth_priv_aes_password")
 
     @property
     @pulumi.getter(name="v3AuthPrivDes3AccessAclName")
     def v3_auth_priv_des3_access_acl_name(self) -> str:
+        """
+        Access-list name
+        """
         return pulumi.get(self, "v3_auth_priv_des3_access_acl_name")
 
     @property
     @pulumi.getter(name="v3AuthPrivDes3AccessIpv6Acl")
     def v3_auth_priv_des3_access_ipv6_acl(self) -> str:
+        """
+        Specify IPv6 Named Access-List
+        """
         return pulumi.get(self, "v3_auth_priv_des3_access_ipv6_acl")
 
     @property
     @pulumi.getter(name="v3AuthPrivDes3AccessStandardAcl")
     def v3_auth_priv_des3_access_standard_acl(self) -> int:
+        """
+        Standard IP Access-list allowing access with this community string
+        """
         return pulumi.get(self, "v3_auth_priv_des3_access_standard_acl")
 
     @property
     @pulumi.getter(name="v3AuthPrivDes3Password")
     def v3_auth_priv_des3_password(self) -> str:
+        """
+        Authentication password for user
+        """
         return pulumi.get(self, "v3_auth_priv_des3_password")
 
     @property
     @pulumi.getter(name="v3AuthPrivDesAccessAclName")
     def v3_auth_priv_des_access_acl_name(self) -> str:
+        """
+        Access-list name
+        """
         return pulumi.get(self, "v3_auth_priv_des_access_acl_name")
 
     @property
     @pulumi.getter(name="v3AuthPrivDesAccessIpv6Acl")
     def v3_auth_priv_des_access_ipv6_acl(self) -> str:
+        """
+        Specify IPv6 Named Access-List
+        """
         return pulumi.get(self, "v3_auth_priv_des_access_ipv6_acl")
 
     @property
     @pulumi.getter(name="v3AuthPrivDesAccessStandardAcl")
     def v3_auth_priv_des_access_standard_acl(self) -> int:
+        """
+        Standard IP Access-list allowing access with this community string
+        """
         return pulumi.get(self, "v3_auth_priv_des_access_standard_acl")
 
     @property
     @pulumi.getter(name="v3AuthPrivDesPassword")
     def v3_auth_priv_des_password(self) -> str:
+        """
+        Authentication password for user
+        """
         return pulumi.get(self, "v3_auth_priv_des_password")
 
 
@@ -235,7 +298,22 @@ def get_snmp_server_user(device: Optional[str] = None,
                          username: Optional[str] = None,
                          opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetSnmpServerUserResult:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the SNMP Server User configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_snmp_server_user(grpname="GROUP1",
+        username="USER1")
+    ```
+
+
+    :param str device: A device name from the provider configuration.
+    :param str grpname: Group to which the user belongs
+    :param str username: Name of the user
     """
     __args__ = dict()
     __args__['device'] = device
@@ -275,6 +353,21 @@ def get_snmp_server_user_output(device: Optional[pulumi.Input[Optional[str]]] = 
                                 username: Optional[pulumi.Input[str]] = None,
                                 opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSnmpServerUserResult]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the SNMP Server User configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_snmp_server_user(grpname="GROUP1",
+        username="USER1")
+    ```
+
+
+    :param str device: A device name from the provider configuration.
+    :param str grpname: Group to which the user belongs
+    :param str username: Name of the user
     """
     ...

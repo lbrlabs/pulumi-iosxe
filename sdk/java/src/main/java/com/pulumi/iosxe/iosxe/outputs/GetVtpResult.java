@@ -13,97 +13,281 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetVtpResult {
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return Set the name of the VTP administrative domain.
+     * 
+     */
     private String domain;
+    /**
+     * @return Configure IFS filesystem file where VTP configuration is stored.
+     * 
+     */
     private String file;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
+    /**
+     * @return The name of the interface providing the VTP updater ID for this device
+     * 
+     */
     private String interface_;
+    /**
+     * @return Use only this interface&#39;s IP address as the VTP IP updater address
+     * 
+     */
     private Boolean interfaceOnly;
+    /**
+     * @return Set the mode for MST VTP instance
+     * 
+     */
     private Boolean modeClientMst;
+    /**
+     * @return Set the mode for unknown VTP instances
+     * 
+     */
     private Boolean modeClientUnknown;
+    /**
+     * @return Set the mode for VLAN VTP instance
+     * 
+     */
     private Boolean modeClientVlan;
+    /**
+     * @return Set the mode for MST VTP instance
+     * 
+     */
     private Boolean modeOffMst;
+    /**
+     * @return Set the mode for unknown VTP instances
+     * 
+     */
     private Boolean modeOffUnknown;
+    /**
+     * @return Set the mode for VLAN VTP instance
+     * 
+     */
     private Boolean modeOffVlan;
+    /**
+     * @return Set the mode for MST VTP instance
+     * 
+     */
     private Boolean modeServerMst;
+    /**
+     * @return Set the mode for unknown VTP instances
+     * 
+     */
     private Boolean modeServerUnknown;
+    /**
+     * @return Set the mode for VLAN VTP instance
+     * 
+     */
     private Boolean modeServerVlan;
+    /**
+     * @return Set the mode for MST VTP instance
+     * 
+     */
     private Boolean modeTransparentMst;
+    /**
+     * @return Set the mode for unknown VTP instances
+     * 
+     */
     private Boolean modeTransparentUnknown;
+    /**
+     * @return Set the mode for VLAN VTP instance
+     * 
+     */
     private Boolean modeTransparentVlan;
+    /**
+     * @return The ascii password for the VTP administrative domain
+     * 
+     */
     private String password;
+    /**
+     * @return Set the VTP password hidden option
+     * 
+     */
     private Boolean passwordHidden;
+    /**
+     * @return Specify the vtp password in encrypted form
+     * 
+     */
     private Boolean passwordSecret;
+    /**
+     * @return Set the administrative domain to permit pruning
+     * 
+     */
     private Boolean pruning;
+    /**
+     * @return Set the administrative domain to VTP version
+     * 
+     */
     private Integer version;
 
     private GetVtpResult() {}
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return Set the name of the VTP administrative domain.
+     * 
+     */
     public String domain() {
         return this.domain;
     }
+    /**
+     * @return Configure IFS filesystem file where VTP configuration is stored.
+     * 
+     */
     public String file() {
         return this.file;
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
+    /**
+     * @return The name of the interface providing the VTP updater ID for this device
+     * 
+     */
     public String interface_() {
         return this.interface_;
     }
+    /**
+     * @return Use only this interface&#39;s IP address as the VTP IP updater address
+     * 
+     */
     public Boolean interfaceOnly() {
         return this.interfaceOnly;
     }
+    /**
+     * @return Set the mode for MST VTP instance
+     * 
+     */
     public Boolean modeClientMst() {
         return this.modeClientMst;
     }
+    /**
+     * @return Set the mode for unknown VTP instances
+     * 
+     */
     public Boolean modeClientUnknown() {
         return this.modeClientUnknown;
     }
+    /**
+     * @return Set the mode for VLAN VTP instance
+     * 
+     */
     public Boolean modeClientVlan() {
         return this.modeClientVlan;
     }
+    /**
+     * @return Set the mode for MST VTP instance
+     * 
+     */
     public Boolean modeOffMst() {
         return this.modeOffMst;
     }
+    /**
+     * @return Set the mode for unknown VTP instances
+     * 
+     */
     public Boolean modeOffUnknown() {
         return this.modeOffUnknown;
     }
+    /**
+     * @return Set the mode for VLAN VTP instance
+     * 
+     */
     public Boolean modeOffVlan() {
         return this.modeOffVlan;
     }
+    /**
+     * @return Set the mode for MST VTP instance
+     * 
+     */
     public Boolean modeServerMst() {
         return this.modeServerMst;
     }
+    /**
+     * @return Set the mode for unknown VTP instances
+     * 
+     */
     public Boolean modeServerUnknown() {
         return this.modeServerUnknown;
     }
+    /**
+     * @return Set the mode for VLAN VTP instance
+     * 
+     */
     public Boolean modeServerVlan() {
         return this.modeServerVlan;
     }
+    /**
+     * @return Set the mode for MST VTP instance
+     * 
+     */
     public Boolean modeTransparentMst() {
         return this.modeTransparentMst;
     }
+    /**
+     * @return Set the mode for unknown VTP instances
+     * 
+     */
     public Boolean modeTransparentUnknown() {
         return this.modeTransparentUnknown;
     }
+    /**
+     * @return Set the mode for VLAN VTP instance
+     * 
+     */
     public Boolean modeTransparentVlan() {
         return this.modeTransparentVlan;
     }
+    /**
+     * @return The ascii password for the VTP administrative domain
+     * 
+     */
     public String password() {
         return this.password;
     }
+    /**
+     * @return Set the VTP password hidden option
+     * 
+     */
     public Boolean passwordHidden() {
         return this.passwordHidden;
     }
+    /**
+     * @return Specify the vtp password in encrypted form
+     * 
+     */
     public Boolean passwordSecret() {
         return this.passwordSecret;
     }
+    /**
+     * @return Set the administrative domain to permit pruning
+     * 
+     */
     public Boolean pruning() {
         return this.pruning;
     }
+    /**
+     * @return Set the administrative domain to VTP version
+     * 
+     */
     public Integer version() {
         return this.version;
     }

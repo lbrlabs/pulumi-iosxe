@@ -13,53 +13,141 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetInterfacePimResult {
+    /**
+     * @return Configure BFD
+     * 
+     */
     private Boolean bfd;
+    /**
+     * @return Border of PIM domain
+     * 
+     */
     private Boolean border;
+    /**
+     * @return Border of PIM domain
+     * 
+     */
     private Boolean bsrBorder;
+    /**
+     * @return Enable PIM dense-mode operation
+     * 
+     */
     private Boolean denseMode;
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return PIM router DR priority
+     * 
+     */
     private Integer drPriority;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
     private String name;
+    /**
+     * @return Enable PIM passive interface operation
+     * 
+     */
     private Boolean passive;
+    /**
+     * @return Enable PIM sparse-dense-mode operation
+     * 
+     */
     private Boolean sparseDenseMode;
+    /**
+     * @return Enable PIM sparse-mode operation
+     * 
+     */
     private Boolean sparseMode;
+    /**
+     * @return Interface type
+     * 
+     */
     private String type;
 
     private GetInterfacePimResult() {}
+    /**
+     * @return Configure BFD
+     * 
+     */
     public Boolean bfd() {
         return this.bfd;
     }
+    /**
+     * @return Border of PIM domain
+     * 
+     */
     public Boolean border() {
         return this.border;
     }
+    /**
+     * @return Border of PIM domain
+     * 
+     */
     public Boolean bsrBorder() {
         return this.bsrBorder;
     }
+    /**
+     * @return Enable PIM dense-mode operation
+     * 
+     */
     public Boolean denseMode() {
         return this.denseMode;
     }
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return PIM router DR priority
+     * 
+     */
     public Integer drPriority() {
         return this.drPriority;
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
     public String name() {
         return this.name;
     }
+    /**
+     * @return Enable PIM passive interface operation
+     * 
+     */
     public Boolean passive() {
         return this.passive;
     }
+    /**
+     * @return Enable PIM sparse-dense-mode operation
+     * 
+     */
     public Boolean sparseDenseMode() {
         return this.sparseDenseMode;
     }
+    /**
+     * @return Enable PIM sparse-mode operation
+     * 
+     */
     public Boolean sparseMode() {
         return this.sparseMode;
     }
+    /**
+     * @return Interface type
+     * 
+     */
     public String type() {
         return this.type;
     }

@@ -13,77 +13,221 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetEvpnInstanceResult {
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return evpn instance number
+     * 
+     */
     private Integer evpnInstanceNum;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
+    /**
+     * @return Automatically set a route-target
+     * 
+     */
     private Boolean vlanBasedAutoRouteTarget;
+    /**
+     * @return Advertise Default Gateway MAC/IP routes
+     * 
+     */
     private String vlanBasedDefaultGatewayAdvertise;
+    /**
+     * @return Data encapsulation method
+     * 
+     */
     private String vlanBasedEncapsulation;
+    /**
+     * @return Disable IP local learning from dataplane
+     * 
+     */
     private Boolean vlanBasedIpLocalLearningDisable;
+    /**
+     * @return Enable IP local learning from dataplane
+     * 
+     */
     private Boolean vlanBasedIpLocalLearningEnable;
+    /**
+     * @return ASN:nn or IP-address:nn
+     * 
+     */
     private String vlanBasedRd;
+    /**
+     * @return Re-originate route-type 5
+     * 
+     */
     private Boolean vlanBasedReOriginateRouteType5;
+    /**
+     * @return Ingress replication
+     * 
+     */
     private Boolean vlanBasedReplicationTypeIngress;
+    /**
+     * @return mp2mp replication
+     * 
+     */
     private Boolean vlanBasedReplicationTypeMp2mp;
+    /**
+     * @return p2mp replication
+     * 
+     */
     private Boolean vlanBasedReplicationTypeP2mp;
+    /**
+     * @return Static replication
+     * 
+     */
     private Boolean vlanBasedReplicationTypeStatic;
+    /**
+     * @return ASN:nn or IP-address:nn
+     * 
+     */
     private String vlanBasedRouteTarget;
+    /**
+     * @return ASN:nn or IP-address:nn
+     * 
+     */
     private String vlanBasedRouteTargetBoth;
+    /**
+     * @return ASN:nn or IP-address:nn (DEPRECATED, use rt-value-entry)
+     * 
+     */
     private String vlanBasedRouteTargetExport;
+    /**
+     * @return ASN:nn or IP-address:nn (DEPRECATED, use rt-value-entry)
+     * 
+     */
     private String vlanBasedRouteTargetImport;
 
     private GetEvpnInstanceResult() {}
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return evpn instance number
+     * 
+     */
     public Integer evpnInstanceNum() {
         return this.evpnInstanceNum;
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
+    /**
+     * @return Automatically set a route-target
+     * 
+     */
     public Boolean vlanBasedAutoRouteTarget() {
         return this.vlanBasedAutoRouteTarget;
     }
+    /**
+     * @return Advertise Default Gateway MAC/IP routes
+     * 
+     */
     public String vlanBasedDefaultGatewayAdvertise() {
         return this.vlanBasedDefaultGatewayAdvertise;
     }
+    /**
+     * @return Data encapsulation method
+     * 
+     */
     public String vlanBasedEncapsulation() {
         return this.vlanBasedEncapsulation;
     }
+    /**
+     * @return Disable IP local learning from dataplane
+     * 
+     */
     public Boolean vlanBasedIpLocalLearningDisable() {
         return this.vlanBasedIpLocalLearningDisable;
     }
+    /**
+     * @return Enable IP local learning from dataplane
+     * 
+     */
     public Boolean vlanBasedIpLocalLearningEnable() {
         return this.vlanBasedIpLocalLearningEnable;
     }
+    /**
+     * @return ASN:nn or IP-address:nn
+     * 
+     */
     public String vlanBasedRd() {
         return this.vlanBasedRd;
     }
+    /**
+     * @return Re-originate route-type 5
+     * 
+     */
     public Boolean vlanBasedReOriginateRouteType5() {
         return this.vlanBasedReOriginateRouteType5;
     }
+    /**
+     * @return Ingress replication
+     * 
+     */
     public Boolean vlanBasedReplicationTypeIngress() {
         return this.vlanBasedReplicationTypeIngress;
     }
+    /**
+     * @return mp2mp replication
+     * 
+     */
     public Boolean vlanBasedReplicationTypeMp2mp() {
         return this.vlanBasedReplicationTypeMp2mp;
     }
+    /**
+     * @return p2mp replication
+     * 
+     */
     public Boolean vlanBasedReplicationTypeP2mp() {
         return this.vlanBasedReplicationTypeP2mp;
     }
+    /**
+     * @return Static replication
+     * 
+     */
     public Boolean vlanBasedReplicationTypeStatic() {
         return this.vlanBasedReplicationTypeStatic;
     }
+    /**
+     * @return ASN:nn or IP-address:nn
+     * 
+     */
     public String vlanBasedRouteTarget() {
         return this.vlanBasedRouteTarget;
     }
+    /**
+     * @return ASN:nn or IP-address:nn
+     * 
+     */
     public String vlanBasedRouteTargetBoth() {
         return this.vlanBasedRouteTargetBoth;
     }
+    /**
+     * @return ASN:nn or IP-address:nn (DEPRECATED, use rt-value-entry)
+     * 
+     */
     public String vlanBasedRouteTargetExport() {
         return this.vlanBasedRouteTargetExport;
     }
+    /**
+     * @return ASN:nn or IP-address:nn (DEPRECATED, use rt-value-entry)
+     * 
+     */
     public String vlanBasedRouteTargetImport() {
         return this.vlanBasedRouteTargetImport;
     }

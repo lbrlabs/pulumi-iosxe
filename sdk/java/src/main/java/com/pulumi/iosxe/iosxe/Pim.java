@@ -19,6 +19,70 @@ import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the PIM configuration.
+ * 
+ * ## Example Usage
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.Pim;
+ * import com.pulumi.iosxe.iosxe.PimArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.PimRpAddressArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.PimRpCandidateArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Pim(&#34;example&#34;, PimArgs.builder()        
+ *             .autorp(false)
+ *             .autorpListener(false)
+ *             .bsrCandidateLoopback(100)
+ *             .bsrCandidateMask(30)
+ *             .bsrCandidatePriority(10)
+ *             .rpAddress(&#34;9.9.9.9&#34;)
+ *             .rpAddressBidir(false)
+ *             .rpAddressOverride(false)
+ *             .rpAddresses(PimRpAddressArgs.builder()
+ *                 .access_list(&#34;10&#34;)
+ *                 .bidir(false)
+ *                 .override(false)
+ *                 .rp_address(&#34;10.10.10.10&#34;)
+ *                 .build())
+ *             .rpCandidates(PimRpCandidateArgs.builder()
+ *                 .bidir(false)
+ *                 .interface_(&#34;Loopback100&#34;)
+ *                 .interval(100)
+ *                 .priority(10)
+ *                 .build())
+ *             .ssmDefault(false)
+ *             .ssmRange(&#34;10&#34;)
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/pim:Pim example &#34;Cisco-IOS-XE-native:native/ip/pim&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/pim:Pim")
 public class Pim extends com.pulumi.resources.CustomResource {
     /**

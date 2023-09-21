@@ -17,6 +17,59 @@ import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the MSDP configuration.
+ * 
+ * ## Example Usage
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.Msdp;
+ * import com.pulumi.iosxe.iosxe.MsdpArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.MsdpPasswordArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.MsdpPeerArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Msdp(&#34;example&#34;, MsdpArgs.builder()        
+ *             .originatorId(&#34;Loopback100&#34;)
+ *             .passwords(MsdpPasswordArgs.builder()
+ *                 .addr(&#34;10.1.1.1&#34;)
+ *                 .encryption(0)
+ *                 .password(&#34;Cisco123&#34;)
+ *                 .build())
+ *             .peers(MsdpPeerArgs.builder()
+ *                 .addr(&#34;10.1.1.1&#34;)
+ *                 .connect_source_loopback(100)
+ *                 .remote_as(65000)
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/msdp:Msdp example &#34;Cisco-IOS-XE-native:native/ip/Cisco-IOS-XE-multicast:msdp&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/msdp:Msdp")
 public class Msdp extends com.pulumi.resources.CustomResource {
     /**

@@ -125,36 +125,57 @@ class GetNtpResult:
     @property
     @pulumi.getter
     def authenticate(self) -> bool:
+        """
+        Authenticate time sources
+        """
         return pulumi.get(self, "authenticate")
 
     @property
     @pulumi.getter(name="authenticationKeys")
     def authentication_keys(self) -> Sequence['outputs.GetNtpAuthenticationKeyResult']:
+        """
+        Authentication key for trusted time sources
+        """
         return pulumi.get(self, "authentication_keys")
 
     @property
     @pulumi.getter(name="clockPeriod")
     def clock_period(self) -> int:
+        """
+        Length of hardware clock tick
+        """
         return pulumi.get(self, "clock_period")
 
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
     @property
     @pulumi.getter
     def logging(self) -> bool:
+        """
+        Enable NTP message logging
+        """
         return pulumi.get(self, "logging")
 
     @property
     @pulumi.getter
     def master(self) -> bool:
+        """
+        Act as NTP master clock
+        """
         return pulumi.get(self, "master")
 
     @property
@@ -165,11 +186,17 @@ class GetNtpResult:
     @property
     @pulumi.getter
     def passive(self) -> bool:
+        """
+        NTP passive mode
+        """
         return pulumi.get(self, "passive")
 
     @property
     @pulumi.getter(name="peerVrfs")
     def peer_vrfs(self) -> Sequence['outputs.GetNtpPeerVrfResult']:
+        """
+        VPN Routing/Forwarding Information
+        """
         return pulumi.get(self, "peer_vrfs")
 
     @property
@@ -180,6 +207,9 @@ class GetNtpResult:
     @property
     @pulumi.getter(name="serverVrfs")
     def server_vrfs(self) -> Sequence['outputs.GetNtpServerVrfResult']:
+        """
+        VPN Routing/Forwarding Information
+        """
         return pulumi.get(self, "server_vrfs")
 
     @property
@@ -190,26 +220,41 @@ class GetNtpResult:
     @property
     @pulumi.getter(name="trapSourceFortyGigabitEthernet")
     def trap_source_forty_gigabit_ethernet(self) -> str:
+        """
+        Forty GigabitEthernet
+        """
         return pulumi.get(self, "trap_source_forty_gigabit_ethernet")
 
     @property
     @pulumi.getter(name="trapSourceGigabitEthernet")
     def trap_source_gigabit_ethernet(self) -> str:
+        """
+        GigabitEthernet IEEE 802.3z
+        """
         return pulumi.get(self, "trap_source_gigabit_ethernet")
 
     @property
     @pulumi.getter(name="trapSourceHundredGigE")
     def trap_source_hundred_gig_e(self) -> str:
+        """
+        Hundred GigabitEthernet
+        """
         return pulumi.get(self, "trap_source_hundred_gig_e")
 
     @property
     @pulumi.getter(name="trapSourceLoopback")
     def trap_source_loopback(self) -> int:
+        """
+        Loopback interface
+        """
         return pulumi.get(self, "trap_source_loopback")
 
     @property
     @pulumi.getter(name="trapSourcePortChannel")
     def trap_source_port_channel(self) -> int:
+        """
+        Ethernet Channel of interfaces
+        """
         return pulumi.get(self, "trap_source_port_channel")
 
     @property
@@ -220,16 +265,25 @@ class GetNtpResult:
     @property
     @pulumi.getter(name="trapSourceTenGigabitEthernet")
     def trap_source_ten_gigabit_ethernet(self) -> str:
+        """
+        Ten Gigabit Ethernet
+        """
         return pulumi.get(self, "trap_source_ten_gigabit_ethernet")
 
     @property
     @pulumi.getter(name="trapSourceVlan")
     def trap_source_vlan(self) -> int:
+        """
+        Iosxr Vlans
+        """
         return pulumi.get(self, "trap_source_vlan")
 
     @property
     @pulumi.getter(name="updateCalendar")
     def update_calendar(self) -> bool:
+        """
+        Periodically update calendar with NTP time
+        """
         return pulumi.get(self, "update_calendar")
 
 
@@ -270,7 +324,19 @@ class AwaitableGetNtpResult(GetNtpResult):
 def get_ntp(device: Optional[str] = None,
             opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetNtpResult:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the NTP configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_ntp()
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -310,6 +376,18 @@ def get_ntp(device: Optional[str] = None,
 def get_ntp_output(device: Optional[pulumi.Input[Optional[str]]] = None,
                    opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetNtpResult]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the NTP configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_ntp()
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     ...

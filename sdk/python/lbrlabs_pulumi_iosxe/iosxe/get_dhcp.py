@@ -67,41 +67,65 @@ class GetDhcpResult:
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
     @property
     @pulumi.getter(name="relayInformationOptionDefault")
     def relay_information_option_default(self) -> bool:
+        """
+        Default option, no vpn
+        """
         return pulumi.get(self, "relay_information_option_default")
 
     @property
     @pulumi.getter(name="relayInformationOptionVpn")
     def relay_information_option_vpn(self) -> bool:
+        """
+        Insert VPN sub-options and change the giaddr to the outgoing interface
+        """
         return pulumi.get(self, "relay_information_option_vpn")
 
     @property
     @pulumi.getter(name="relayInformationTrustAll")
     def relay_information_trust_all(self) -> bool:
+        """
+        Received DHCP packets may contain relay info option with zero giaddr
+        """
         return pulumi.get(self, "relay_information_trust_all")
 
     @property
     @pulumi.getter
     def snooping(self) -> bool:
+        """
+        DHCP Snooping
+        """
         return pulumi.get(self, "snooping")
 
     @property
     @pulumi.getter(name="snoopingInformationOptionFormatRemoteIdHostname")
     def snooping_information_option_format_remote_id_hostname(self) -> bool:
+        """
+        Use configured hostname for remote id
+        """
         return pulumi.get(self, "snooping_information_option_format_remote_id_hostname")
 
     @property
     @pulumi.getter(name="snoopingVlans")
     def snooping_vlans(self) -> Sequence['outputs.GetDhcpSnoopingVlanResult']:
+        """
+        DHCP Snooping vlan
+        """
         return pulumi.get(self, "snooping_vlans")
 
 
@@ -126,7 +150,19 @@ class AwaitableGetDhcpResult(GetDhcpResult):
 def get_dhcp(device: Optional[str] = None,
              opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetDhcpResult:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the DHCP configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_dhcp()
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -150,6 +186,18 @@ def get_dhcp(device: Optional[str] = None,
 def get_dhcp_output(device: Optional[pulumi.Input[Optional[str]]] = None,
                     opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetDhcpResult]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the DHCP configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_dhcp()
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     ...

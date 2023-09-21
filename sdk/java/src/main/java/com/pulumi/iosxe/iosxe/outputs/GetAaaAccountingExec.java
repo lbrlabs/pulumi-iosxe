@@ -10,12 +10,20 @@ import java.util.Objects;
 @CustomType
 public final class GetAaaAccountingExec {
     private String name;
+    /**
+     * @return Use Server-group
+     * 
+     */
     private String startStopGroup1;
 
     private GetAaaAccountingExec() {}
     public String name() {
         return this.name;
     }
+    /**
+     * @return Use Server-group
+     * 
+     */
     public String startStopGroup1() {
         return this.startStopGroup1;
     }

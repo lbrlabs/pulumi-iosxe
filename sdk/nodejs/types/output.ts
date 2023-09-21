@@ -5,2030 +5,3407 @@ import * as pulumi from "@pulumi/pulumi";
 import * as inputs from "../types/input";
 import * as outputs from "../types/output";
 
+export interface AaaAccountingExec {
+    name: string;
+    startStopGroup1?: string;
+}
+
+export interface AaaAccountingNetwork {
+    id: string;
+    startStopGroup1?: string;
+    startStopGroup2?: string;
+}
+
+export interface AaaAuthenticationLogin {
+    a1Enable?: boolean;
+    a1Group?: string;
+    a1Line?: boolean;
+    a1Local?: boolean;
+    a1None?: boolean;
+    a2Enable?: boolean;
+    a2Group?: string;
+    a2Line?: boolean;
+    a2Local?: boolean;
+    a2None?: boolean;
+    a3Enable?: boolean;
+    a3Group?: string;
+    a3Line?: boolean;
+    a3Local?: boolean;
+    a3None?: boolean;
+    a4Enable?: boolean;
+    a4Group?: string;
+    a4Line?: boolean;
+    a4Local?: boolean;
+    a4None?: boolean;
+    name: string;
+}
+
+export interface AaaAuthorizationExec {
+    a1Group?: string;
+    a1IfAuthenticated?: boolean;
+    a1Local?: boolean;
+    a2Local?: boolean;
+    name: string;
+}
+
+export interface AaaAuthorizationNetwork {
+    a1Group?: string;
+    id: string;
+}
+
+export interface AaaGroupServerRadius {
+    ipRadiusSourceInterfaceLoopback?: number;
+    name: string;
+    serverNames?: outputs.AaaGroupServerRadiusServerName[];
+}
+
+export interface AaaGroupServerRadiusServerName {
+    name: string;
+}
+
+export interface AaaGroupServerTacacsplus {
+    name: string;
+    serverNames?: outputs.AaaGroupServerTacacsplusServerName[];
+}
+
+export interface AaaGroupServerTacacsplusServerName {
+    name: string;
+}
+
+export interface AaaServerRadiusDynamicAuthorClient {
+    ip: string;
+    serverKey?: string;
+    serverKeyType?: string;
+}
+
+export interface AccessListExtendedEntry {
+    /**
+     * - Choices: `deny`, `permit`
+     */
+    aceRuleAction?: string;
+    aceRuleProtocol?: string;
+    /**
+     * Match on the ACK bit
+     */
+    ack?: boolean;
+    /**
+     * Any destination host
+     */
+    destinationAny?: boolean;
+    /**
+     * A single destination host
+     */
+    destinationHost?: string;
+    /**
+     * Destination network object group
+     */
+    destinationObjectGroup?: string;
+    /**
+     * Match only packets on a given port number up to 10 ports
+     */
+    destinationPortEqual?: string;
+    /**
+     * Match only packets with a greater port number
+     */
+    destinationPortGreaterThan?: string;
+    /**
+     * Match only packets with a lower port number
+     */
+    destinationPortLesserThan?: string;
+    /**
+     * Match only packets in the range of port numbers
+     */
+    destinationPortRangeFrom?: string;
+    /**
+     * Match only packets in the range of port numbers
+     */
+    destinationPortRangeTo?: string;
+    destinationPrefix?: string;
+    destinationPrefixMask?: string;
+    /**
+     * Match packets with given dscp value
+     */
+    dscp?: string;
+    /**
+     * Match established connections
+     */
+    established?: boolean;
+    /**
+     * Match on the FIN bit
+     */
+    fin?: boolean;
+    /**
+     * Check non-initial fragments
+     */
+    fragments?: boolean;
+    /**
+     * Log matches against this entry
+     */
+    log?: boolean;
+    /**
+     * Log matches against this entry, including input interface
+     */
+    logInput?: boolean;
+    /**
+     * Match packets with given precedence value
+     */
+    precedence?: string;
+    /**
+     * Match on the PSH bit
+     */
+    psh?: boolean;
+    /**
+     * Access list entry comment
+     */
+    remark?: string;
+    /**
+     * Match on the RST bit
+     */
+    rst?: boolean;
+    /**
+     * - Range: `1`-`2147483647`
+     */
+    sequence: number;
+    /**
+     * Service object group name
+     */
+    serviceObjectGroup?: string;
+    /**
+     * Any source host
+     */
+    sourceAny?: boolean;
+    /**
+     * A single source host
+     */
+    sourceHost?: string;
+    /**
+     * Source network object group
+     */
+    sourceObjectGroup?: string;
+    /**
+     * Match only packets on a given port number up to 10 ports
+     */
+    sourcePortEqual?: string;
+    /**
+     * Match only packets with a greater port number
+     */
+    sourcePortGreaterThan?: string;
+    /**
+     * Match only packets with a lower port number
+     */
+    sourcePortLesserThan?: string;
+    /**
+     * Match only packets in the range of port numbers
+     */
+    sourcePortRangeFrom?: string;
+    /**
+     * Match only packets in the range of port numbers
+     */
+    sourcePortRangeTo?: string;
+    sourcePrefix?: string;
+    sourcePrefixMask?: string;
+    /**
+     * Match on the SYN bit
+     */
+    syn?: boolean;
+    /**
+     * Match packets with given TOS value
+     */
+    tos?: string;
+    /**
+     * Match on the URG bit
+     */
+    urg?: boolean;
+}
+
+export interface AccessListStandardEntry {
+    /**
+     * Any source prefix
+     */
+    denyAny?: boolean;
+    /**
+     * A single source host
+     */
+    denyHost?: string;
+    /**
+     * Log matches against this entry
+     */
+    denyLog?: boolean;
+    /**
+     * Network address prefix
+     */
+    denyPrefix?: string;
+    /**
+     * Wildcard bits
+     */
+    denyPrefixMask?: string;
+    /**
+     * Any source prefix
+     */
+    permitAny?: boolean;
+    /**
+     * A single source host
+     */
+    permitHost?: string;
+    /**
+     * Log matches against this entry
+     */
+    permitLog?: boolean;
+    /**
+     * Network address prefix
+     */
+    permitPrefix?: string;
+    /**
+     * Wildcard bits
+     */
+    permitPrefixMask?: string;
+    /**
+     * Access list entry comment
+     */
+    remark?: string;
+    /**
+     * - Range: `1`-`2147483647`
+     */
+    sequence: number;
+}
+
+export interface ArpInspectionFilter {
+    name: string;
+    vlans?: outputs.ArpInspectionFilterVlan[];
+}
+
+export interface ArpInspectionFilterVlan {
+    static?: boolean;
+    vlanRange: string;
+}
+
+export interface BfdIpv4BothVrf {
+    destIp: string;
+    dstVrf: string;
+    srcIp: string;
+    srcVrf: string;
+    templateName: string;
+}
+
+export interface BfdIpv4WithDstVrf {
+    destIp: string;
+    dstVrf: string;
+    srcIp: string;
+    templateName: string;
+}
+
+export interface BfdIpv4WithSrcVrf {
+    destIp: string;
+    srcIp: string;
+    srcVrf: string;
+    templateName: string;
+}
+
+export interface BfdIpv4WithoutVrf {
+    destIp: string;
+    srcIp: string;
+    templateName: string;
+}
+
+export interface BfdIpv6WithBothVrf {
+    destIpv6: string;
+    dstVrf: string;
+    srcIpv6: string;
+    srcVrf: string;
+    templateName: string;
+}
+
+export interface BfdIpv6WithDstVrf {
+    destIpv6: string;
+    dstVrf: string;
+    srcIpv6: string;
+    templateName: string;
+}
+
+export interface BfdIpv6WithSrcVrf {
+    destIpv6: string;
+    srcIpv6: string;
+    srcVrf: string;
+    templateName: string;
+}
+
+export interface BfdIpv6WithoutVrf {
+    destIpv6: string;
+    srcIpv6: string;
+    templateName: string;
+}
+
+export interface BgpAddressFamilyIpv4Ipv4UnicastNetwork {
+    backdoor?: boolean;
+    network: string;
+    routeMap?: string;
+}
+
+export interface BgpAddressFamilyIpv4Ipv4UnicastNetworksMask {
+    backdoor?: boolean;
+    mask: string;
+    network: string;
+    routeMap?: string;
+}
+
+export interface BgpAddressFamilyIpv4VrfVrf {
+    ipv4UnicastAdvertiseL2vpnEvpn?: boolean;
+    ipv4UnicastNetworks?: outputs.BgpAddressFamilyIpv4VrfVrfIpv4UnicastNetwork[];
+    ipv4UnicastNetworksMasks?: outputs.BgpAddressFamilyIpv4VrfVrfIpv4UnicastNetworksMask[];
+    ipv4UnicastRedistributeConnected?: boolean;
+    ipv4UnicastRedistributeStatic?: boolean;
+    name: string;
+}
+
+export interface BgpAddressFamilyIpv4VrfVrfIpv4UnicastNetwork {
+    backdoor?: boolean;
+    evpn?: boolean;
+    network: string;
+    routeMap?: string;
+}
+
+export interface BgpAddressFamilyIpv4VrfVrfIpv4UnicastNetworksMask {
+    backdoor?: boolean;
+    evpn?: boolean;
+    mask: string;
+    network: string;
+    routeMap?: string;
+}
+
+export interface BgpAddressFamilyIpv6Ipv6UnicastNetwork {
+    backdoor?: boolean;
+    network: string;
+    routeMap?: string;
+}
+
+export interface BgpAddressFamilyIpv6VrfVrf {
+    ipv6UnicastAdvertiseL2vpnEvpn?: boolean;
+    ipv6UnicastNetworks?: outputs.BgpAddressFamilyIpv6VrfVrfIpv6UnicastNetwork[];
+    ipv6UnicastRedistributeConnected?: boolean;
+    ipv6UnicastRedistributeStatic?: boolean;
+    name: string;
+}
+
+export interface BgpAddressFamilyIpv6VrfVrfIpv6UnicastNetwork {
+    backdoor?: boolean;
+    evpn?: boolean;
+    network: string;
+    routeMap?: string;
+}
+
+export interface BgpIpv4UnicastNeighborRouteMap {
+    inOut: string;
+    routeMapName: string;
+}
+
+export interface BgpIpv4UnicastVrfNeighborRouteMap {
+    inOut: string;
+    routeMapName: string;
+}
+
+export interface BgpIpv6UnicastNeighborRouteMap {
+    inOut: string;
+    routeMapName: string;
+}
+
+export interface CdpTlvList {
+    cos?: boolean;
+    duplex?: boolean;
+    name: string;
+    trust?: boolean;
+    version?: boolean;
+    vtpMgmtDomain?: boolean;
+}
+
+export interface ClassMapMatchActivatedServiceTemplate {
+    serviceName: string;
+}
+
+export interface CryptoIkev2KeyringPeer {
+    /**
+     * Specify a description of this peer
+     */
+    description?: string;
+    /**
+     * Hostname of peer
+     */
+    hostname?: string;
+    /**
+     * IP address
+     */
+    identityAddress?: string;
+    /**
+     * email Domain Name
+     */
+    identityEmailDomain?: string;
+    /**
+     * Specify the name string
+     */
+    identityEmailName?: string;
+    /**
+     * email Domain Name
+     */
+    identityFqdnDomain?: string;
+    /**
+     * Specify the name string
+     */
+    identityFqdnName?: string;
+    /**
+     * proprietary types of identification (ID KEY ID)
+     */
+    identityKeyId?: string;
+    ipv4Address?: string;
+    ipv4Mask?: string;
+    ipv6Prefix?: string;
+    name: string;
+    preSharedKey?: string;
+    /**
+     * - Choices: `0`, `6`
+     */
+    preSharedKeyEncryption?: string;
+    preSharedKeyLocal?: string;
+    /**
+     * - Choices: `0`, `6`
+     */
+    preSharedKeyLocalEncryption?: string;
+    preSharedKeyRemote?: string;
+    /**
+     * - Choices: `0`, `6`
+     */
+    preSharedKeyRemoteEncryption?: string;
+}
+
+export interface CryptoIkev2PolicyProposal {
+    /**
+     * Specify Proposal
+     */
+    proposals: string;
+}
+
+export interface CryptoIkev2ProfileMatchIdentityRemoteIpv4Address {
+    address: string;
+    mask?: string;
+}
+
+export interface DhcpSnoopingVlan {
+    vlanId: string;
+}
+
+export interface Dot1xCredential {
+    anonymousId?: string;
+    description?: string;
+    password?: string;
+    passwordType?: string;
+    pkiTrustpoint?: string;
+    profileName: string;
+    username?: string;
+}
+
+export interface GetAaaAccountingExec {
+    name: string;
+    /**
+     * Use Server-group
+     */
+    startStopGroup1: string;
+}
+
+export interface GetAaaAccountingNetwork {
+    /**
+     * The path of the retrieved object.
+     */
+    id: string;
+    /**
+     * Use Server-group
+     */
+    startStopGroup1: string;
+    /**
+     * Use Server-group
+     */
+    startStopGroup2: string;
+}
+
+export interface GetAaaAuthenticationLogin {
+    /**
+     * Use enable password for authentication.
+     */
+    a1Enable: boolean;
+    /**
+     * Use Server-group
+     */
+    a1Group: string;
+    /**
+     * Use line password for authentication.
+     */
+    a1Line: boolean;
+    /**
+     * Use local username authentication.
+     */
+    a1Local: boolean;
+    /**
+     * NO authentication.
+     */
+    a1None: boolean;
+    /**
+     * Use enable password for authentication.
+     */
+    a2Enable: boolean;
+    /**
+     * Use Server-group
+     */
+    a2Group: string;
+    /**
+     * Use line password for authentication.
+     */
+    a2Line: boolean;
+    a2Local: boolean;
+    /**
+     * NO authentication.
+     */
+    a2None: boolean;
+    /**
+     * Use enable password for authentication.
+     */
+    a3Enable: boolean;
+    /**
+     * Use Server-group
+     */
+    a3Group: string;
+    /**
+     * Use line password for authentication.
+     */
+    a3Line: boolean;
+    a3Local: boolean;
+    /**
+     * NO authentication.
+     */
+    a3None: boolean;
+    /**
+     * Use enable password for authentication.
+     */
+    a4Enable: boolean;
+    /**
+     * Use Server-group
+     */
+    a4Group: string;
+    /**
+     * Use line password for authentication.
+     */
+    a4Line: boolean;
+    a4Local: boolean;
+    /**
+     * NO authentication.
+     */
+    a4None: boolean;
+    name: string;
+}
+
+export interface GetAaaAuthorizationExec {
+    /**
+     * Use Server-group
+     */
+    a1Group: string;
+    /**
+     * Succeed if user has authenticated.
+     */
+    a1IfAuthenticated: boolean;
+    /**
+     * Use local database
+     */
+    a1Local: boolean;
+    a2Local: boolean;
+    name: string;
+}
+
+export interface GetAaaAuthorizationNetwork {
+    /**
+     * Use Server-group
+     */
+    a1Group: string;
+    /**
+     * The path of the retrieved object.
+     */
+    id: string;
+}
+
+export interface GetAaaGroupServerRadius {
+    /**
+     * Loopback interface
+     */
+    ipRadiusSourceInterfaceLoopback: number;
+    /**
+     * Radius Server-group name with max string length 32
+     */
+    name: string;
+    /**
+     * Name of radius server
+     */
+    serverNames: outputs.GetAaaGroupServerRadiusServerName[];
+}
+
+export interface GetAaaGroupServerRadiusServerName {
+    name: string;
+}
+
+export interface GetAaaGroupServerTacacsplus {
+    /**
+     * Server-group name with max string length 32
+     */
+    name: string;
+    /**
+     * Name of tacacs server
+     */
+    serverNames: outputs.GetAaaGroupServerTacacsplusServerName[];
+}
+
+export interface GetAaaGroupServerTacacsplusServerName {
+    name: string;
+}
+
+export interface GetAaaServerRadiusDynamicAuthorClient {
+    ip: string;
+    serverKey: string;
+    serverKeyType: string;
+}
+
+export interface GetAccessListExtendedEntry {
+    aceRuleAction: string;
+    aceRuleProtocol: string;
+    /**
+     * Match on the ACK bit
+     */
+    ack: boolean;
+    /**
+     * Any destination host
+     */
+    destinationAny: boolean;
+    /**
+     * A single destination host
+     */
+    destinationHost: string;
+    /**
+     * Destination network object group
+     */
+    destinationObjectGroup: string;
+    /**
+     * Match only packets on a given port number up to 10 ports
+     */
+    destinationPortEqual: string;
+    /**
+     * Match only packets with a greater port number
+     */
+    destinationPortGreaterThan: string;
+    /**
+     * Match only packets with a lower port number
+     */
+    destinationPortLesserThan: string;
+    /**
+     * Match only packets in the range of port numbers
+     */
+    destinationPortRangeFrom: string;
+    /**
+     * Match only packets in the range of port numbers
+     */
+    destinationPortRangeTo: string;
+    destinationPrefix: string;
+    destinationPrefixMask: string;
+    /**
+     * Match packets with given dscp value
+     */
+    dscp: string;
+    /**
+     * Match established connections
+     */
+    established: boolean;
+    /**
+     * Match on the FIN bit
+     */
+    fin: boolean;
+    /**
+     * Check non-initial fragments
+     */
+    fragments: boolean;
+    /**
+     * Log matches against this entry
+     */
+    log: boolean;
+    /**
+     * Log matches against this entry, including input interface
+     */
+    logInput: boolean;
+    /**
+     * Match packets with given precedence value
+     */
+    precedence: string;
+    /**
+     * Match on the PSH bit
+     */
+    psh: boolean;
+    /**
+     * Access list entry comment
+     */
+    remark: string;
+    /**
+     * Match on the RST bit
+     */
+    rst: boolean;
+    sequence: number;
+    /**
+     * Service object group name
+     */
+    serviceObjectGroup: string;
+    /**
+     * Any source host
+     */
+    sourceAny: boolean;
+    /**
+     * A single source host
+     */
+    sourceHost: string;
+    /**
+     * Source network object group
+     */
+    sourceObjectGroup: string;
+    /**
+     * Match only packets on a given port number up to 10 ports
+     */
+    sourcePortEqual: string;
+    /**
+     * Match only packets with a greater port number
+     */
+    sourcePortGreaterThan: string;
+    /**
+     * Match only packets with a lower port number
+     */
+    sourcePortLesserThan: string;
+    /**
+     * Match only packets in the range of port numbers
+     */
+    sourcePortRangeFrom: string;
+    /**
+     * Match only packets in the range of port numbers
+     */
+    sourcePortRangeTo: string;
+    sourcePrefix: string;
+    sourcePrefixMask: string;
+    /**
+     * Match on the SYN bit
+     */
+    syn: boolean;
+    /**
+     * Match packets with given TOS value
+     */
+    tos: string;
+    /**
+     * Match on the URG bit
+     */
+    urg: boolean;
+}
+
+export interface GetAccessListStandardEntry {
+    /**
+     * Any source prefix
+     */
+    denyAny: boolean;
+    /**
+     * A single source host
+     */
+    denyHost: string;
+    /**
+     * Log matches against this entry
+     */
+    denyLog: boolean;
+    /**
+     * Network address prefix
+     */
+    denyPrefix: string;
+    /**
+     * Wildcard bits
+     */
+    denyPrefixMask: string;
+    /**
+     * Any source prefix
+     */
+    permitAny: boolean;
+    /**
+     * A single source host
+     */
+    permitHost: string;
+    /**
+     * Log matches against this entry
+     */
+    permitLog: boolean;
+    /**
+     * Network address prefix
+     */
+    permitPrefix: string;
+    /**
+     * Wildcard bits
+     */
+    permitPrefixMask: string;
+    /**
+     * Access list entry comment
+     */
+    remark: string;
+    sequence: number;
+}
+
+export interface GetArpInspectionFilter {
+    name: string;
+    /**
+     * Vlans to apply the filter
+     */
+    vlans: outputs.GetArpInspectionFilterVlan[];
+}
+
+export interface GetArpInspectionFilterVlan {
+    static: boolean;
+    vlanRange: string;
+}
+
+export interface GetBfdIpv4BothVrf {
+    /**
+     * Destination IP prefix/len
+     */
+    destIp: string;
+    /**
+     * Destination VRF instance name
+     */
+    dstVrf: string;
+    /**
+     * Source IP prefix/len
+     */
+    srcIp: string;
+    /**
+     * source VRF instance name
+     */
+    srcVrf: string;
+    /**
+     * BFD template name
+     */
+    templateName: string;
+}
+
+export interface GetBfdIpv4WithDstVrf {
+    /**
+     * Destination IP prefix/len
+     */
+    destIp: string;
+    /**
+     * Destination VRF instance name
+     */
+    dstVrf: string;
+    /**
+     * Source IP prefix/len
+     */
+    srcIp: string;
+    /**
+     * BFD template name
+     */
+    templateName: string;
+}
+
+export interface GetBfdIpv4WithSrcVrf {
+    /**
+     * Destination IP prefix/len
+     */
+    destIp: string;
+    /**
+     * Source IP prefix/len
+     */
+    srcIp: string;
+    /**
+     * source VRF instance name
+     */
+    srcVrf: string;
+    /**
+     * BFD template name
+     */
+    templateName: string;
+}
+
+export interface GetBfdIpv4WithoutVrf {
+    /**
+     * Destination IP prefix/len
+     */
+    destIp: string;
+    /**
+     * Source IP prefix/len
+     */
+    srcIp: string;
+    /**
+     * BFD template name
+     */
+    templateName: string;
+}
+
+export interface GetBfdIpv6WithBothVrf {
+    /**
+     * Destination IPv6 prefix/len
+     */
+    destIpv6: string;
+    /**
+     * Destination VRF instance name
+     */
+    dstVrf: string;
+    /**
+     * Source IPv6 prefix/len
+     */
+    srcIpv6: string;
+    /**
+     * source VRF instance name
+     */
+    srcVrf: string;
+    /**
+     * BFD template name
+     */
+    templateName: string;
+}
+
+export interface GetBfdIpv6WithDstVrf {
+    /**
+     * Destination IPv6 prefix/len
+     */
+    destIpv6: string;
+    /**
+     * Destination VRF instance name
+     */
+    dstVrf: string;
+    /**
+     * Source IPv6 prefix/len
+     */
+    srcIpv6: string;
+    /**
+     * BFD template name
+     */
+    templateName: string;
+}
+
+export interface GetBfdIpv6WithSrcVrf {
+    /**
+     * Destination IPv6 prefix/len
+     */
+    destIpv6: string;
+    /**
+     * Source IPv6 prefix/len
+     */
+    srcIpv6: string;
+    /**
+     * source VRF instance name
+     */
+    srcVrf: string;
+    /**
+     * BFD template name
+     */
+    templateName: string;
+}
+
+export interface GetBfdIpv6WithoutVrf {
+    /**
+     * Destination IPv6 prefix/len
+     */
+    destIpv6: string;
+    /**
+     * Source IPv6 prefix/len
+     */
+    srcIpv6: string;
+    /**
+     * BFD template name
+     */
+    templateName: string;
+}
+
+export interface GetBgpAddressFamilyIpv4Ipv4UnicastNetwork {
+    /**
+     * Specify a BGP backdoor route
+     */
+    backdoor: boolean;
+    network: string;
+    /**
+     * Route-map to modify the attributes
+     */
+    routeMap: string;
+}
+
+export interface GetBgpAddressFamilyIpv4Ipv4UnicastNetworksMask {
+    /**
+     * Specify a BGP backdoor route
+     */
+    backdoor: boolean;
+    /**
+     * Network mask
+     */
+    mask: string;
+    network: string;
+    /**
+     * Route-map to modify the attributes
+     */
+    routeMap: string;
+}
+
+export interface GetBgpAddressFamilyIpv4VrfVrf {
+    /**
+     * Advertise/export prefixes to l2vpn evpn table
+     */
+    ipv4UnicastAdvertiseL2vpnEvpn: boolean;
+    /**
+     * Specify a network to announce via BGP
+     */
+    ipv4UnicastNetworks: outputs.GetBgpAddressFamilyIpv4VrfVrfIpv4UnicastNetwork[];
+    /**
+     * Specify a network to announce via BGP
+     */
+    ipv4UnicastNetworksMasks: outputs.GetBgpAddressFamilyIpv4VrfVrfIpv4UnicastNetworksMask[];
+    /**
+     * Connected
+     */
+    ipv4UnicastRedistributeConnected: boolean;
+    /**
+     * Static routes
+     */
+    ipv4UnicastRedistributeStatic: boolean;
+    name: string;
+}
+
+export interface GetBgpAddressFamilyIpv4VrfVrfIpv4UnicastNetwork {
+    backdoor: boolean;
+    evpn: boolean;
+    network: string;
+    routeMap: string;
+}
+
+export interface GetBgpAddressFamilyIpv4VrfVrfIpv4UnicastNetworksMask {
+    backdoor: boolean;
+    evpn: boolean;
+    mask: string;
+    network: string;
+    routeMap: string;
+}
+
+export interface GetBgpAddressFamilyIpv6Ipv6UnicastNetwork {
+    /**
+     * Specify a BGP backdoor route
+     */
+    backdoor: boolean;
+    network: string;
+    /**
+     * Route-map to modify the attributes
+     */
+    routeMap: string;
+}
+
+export interface GetBgpAddressFamilyIpv6VrfVrf {
+    /**
+     * Advertise/export prefixes to l2vpn evpn table
+     */
+    ipv6UnicastAdvertiseL2vpnEvpn: boolean;
+    /**
+     * Specify a network to announce via BGP
+     */
+    ipv6UnicastNetworks: outputs.GetBgpAddressFamilyIpv6VrfVrfIpv6UnicastNetwork[];
+    /**
+     * Connected
+     */
+    ipv6UnicastRedistributeConnected: boolean;
+    /**
+     * Static routes
+     */
+    ipv6UnicastRedistributeStatic: boolean;
+    name: string;
+}
+
+export interface GetBgpAddressFamilyIpv6VrfVrfIpv6UnicastNetwork {
+    backdoor: boolean;
+    evpn: boolean;
+    network: string;
+    routeMap: string;
+}
+
+export interface GetBgpIpv4UnicastNeighborRouteMap {
+    inOut: string;
+    routeMapName: string;
+}
+
+export interface GetBgpIpv4UnicastVrfNeighborRouteMap {
+    inOut: string;
+    routeMapName: string;
+}
+
+export interface GetBgpIpv6UnicastNeighborRouteMap {
+    inOut: string;
+    routeMapName: string;
+}
+
+export interface GetCdpTlvList {
+    /**
+     * Select cos TLV
+     */
+    cos: boolean;
+    /**
+     * Select duplex TLV
+     */
+    duplex: boolean;
+    /**
+     * Tlv-list
+     */
+    name: string;
+    /**
+     * Select trust TLV
+     */
+    trust: boolean;
+    /**
+     * Select version TLV
+     */
+    version: boolean;
+    /**
+     * Select vtp mgmt domain TLV
+     */
+    vtpMgmtDomain: boolean;
+}
+
+export interface GetClassMapMatchActivatedServiceTemplate {
+    /**
+     * Enter service name
+     */
+    serviceName: string;
+}
+
+export interface GetCryptoIkev2KeyringPeer {
+    /**
+     * Specify a description of this peer
+     */
+    description: string;
+    /**
+     * Hostname of peer
+     */
+    hostname: string;
+    /**
+     * IP address
+     */
+    identityAddress: string;
+    /**
+     * email Domain Name
+     */
+    identityEmailDomain: string;
+    /**
+     * Specify the name string
+     */
+    identityEmailName: string;
+    /**
+     * email Domain Name
+     */
+    identityFqdnDomain: string;
+    /**
+     * Specify the name string
+     */
+    identityFqdnName: string;
+    /**
+     * proprietary types of identification (ID KEY ID)
+     */
+    identityKeyId: string;
+    ipv4Address: string;
+    ipv4Mask: string;
+    ipv6Prefix: string;
+    name: string;
+    preSharedKey: string;
+    preSharedKeyEncryption: string;
+    preSharedKeyLocal: string;
+    preSharedKeyLocalEncryption: string;
+    preSharedKeyRemote: string;
+    preSharedKeyRemoteEncryption: string;
+}
+
+export interface GetCryptoIkev2PolicyProposal {
+    /**
+     * Specify Proposal
+     */
+    proposals: string;
+}
+
+export interface GetCryptoIkev2ProfileMatchIdentityRemoteIpv4Address {
+    address: string;
+    mask: string;
+}
+
+export interface GetDhcpSnoopingVlan {
+    /**
+     * DHCP Snooping vlan first number or vlan range,example: 1,3-5,7,9-11
+     */
+    vlanId: string;
+}
+
+export interface GetDot1xCredential {
+    /**
+     * Set the anonymous userid
+     */
+    anonymousId: string;
+    /**
+     * Provide a description for the credentials profile
+     */
+    description: string;
+    password: string;
+    passwordType: string;
+    /**
+     * Set the default pki trustpoint
+     */
+    pkiTrustpoint: string;
+    /**
+     * Specify a profile name
+     */
+    profileName: string;
+    /**
+     * Set the authentication userid
+     */
+    username: string;
+}
+
+export interface GetInterfaceEthernetHelperAddress {
+    address: string;
+    /**
+     * Helper-address is global
+     */
+    global: boolean;
+    /**
+     * VRF name for helper-address (if different from interface VRF)
+     */
+    vrf: string;
+}
+
+export interface GetInterfaceEthernetIpv6Address {
+    /**
+     * Use eui-64 interface identifier
+     */
+    eui64: boolean;
+    prefix: string;
+}
+
+export interface GetInterfaceEthernetIpv6LinkLocalAddress {
+    address: string;
+    /**
+     * Use link-local address
+     */
+    linkLocal: boolean;
+}
+
+export interface GetInterfaceEthernetSourceTemplate {
+    /**
+     * merge option of binding
+     */
+    merge: boolean;
+    templateName: string;
+}
+
+export interface GetInterfaceLoopbackIpv6Address {
+    /**
+     * Use eui-64 interface identifier
+     */
+    eui64: boolean;
+    prefix: string;
+}
+
+export interface GetInterfaceLoopbackIpv6LinkLocalAddress {
+    address: string;
+    /**
+     * Use link-local address
+     */
+    linkLocal: boolean;
+}
+
+export interface GetInterfaceNveVni {
+    /**
+     * Ingress Replication control-plane (BGP) signaling
+     */
+    ingressReplication: boolean;
+    /**
+     * Starting Multicast Group IPv4 Address
+     */
+    ipv4MulticastGroup: string;
+    /**
+     * VNI range or instance between 4096-16777215, example: 6010-6030 or 7115
+     */
+    vniRange: string;
+}
+
+export interface GetInterfaceNveVniVrf {
+    /**
+     * VNI range or instance between 4096-16777215, example: 6010-6030 or 7115
+     */
+    vniRange: string;
+    /**
+     * Specify a particular VRF
+     */
+    vrf: string;
+}
+
+export interface GetInterfaceOspfMessageDigestKey {
+    /**
+     * Key ID
+     */
+    id: number;
+    /**
+     * The OSPF password (key) (only the first 16 characters are used)
+     */
+    md5AuthKey: string;
+    /**
+     * Encryption type (0 for not yet encrypted, 7 for proprietary)
+     */
+    md5AuthType: number;
+}
+
+export interface GetInterfaceOspfProcessId {
+    areas: outputs.GetInterfaceOspfProcessIdArea[];
+    /**
+     * Process ID
+     */
+    id: number;
+}
+
+export interface GetInterfaceOspfProcessIdArea {
+    areaId: string;
+}
+
+export interface GetInterfacePortChannelHelperAddress {
+    address: string;
+    /**
+     * Helper-address is global
+     */
+    global: boolean;
+    /**
+     * VRF name for helper-address (if different from interface VRF)
+     */
+    vrf: string;
+}
+
+export interface GetInterfacePortChannelIpv6Address {
+    /**
+     * Use eui-64 interface identifier
+     */
+    eui64: boolean;
+    prefix: string;
+}
+
+export interface GetInterfacePortChannelIpv6LinkLocalAddress {
+    address: string;
+    /**
+     * Use link-local address
+     */
+    linkLocal: boolean;
+}
+
+export interface GetInterfacePortChannelSubinterfaceHelperAddress {
+    address: string;
+    /**
+     * Helper-address is global
+     */
+    global: boolean;
+    /**
+     * VRF name for helper-address (if different from interface VRF)
+     */
+    vrf: string;
+}
+
+export interface GetInterfacePortChannelSubinterfaceIpv6Address {
+    /**
+     * Use eui-64 interface identifier
+     */
+    eui64: boolean;
+    prefix: string;
+}
+
+export interface GetInterfacePortChannelSubinterfaceIpv6LinkLocalAddress {
+    address: string;
+    /**
+     * Use link-local address
+     */
+    linkLocal: boolean;
+}
+
+export interface GetInterfaceTunnelHelperAddress {
+    address: string;
+    /**
+     * Helper-address is global
+     */
+    global: boolean;
+    /**
+     * VRF name for helper-address (if different from interface VRF)
+     */
+    vrf: string;
+}
+
+export interface GetInterfaceTunnelIpv6Address {
+    /**
+     * Use eui-64 interface identifier
+     */
+    eui64: boolean;
+    prefix: string;
+}
+
+export interface GetInterfaceTunnelIpv6LinkLocalAddress {
+    address: string;
+    /**
+     * Use link-local address
+     */
+    linkLocal: boolean;
+}
+
+export interface GetInterfaceVlanHelperAddress {
+    address: string;
+    /**
+     * Helper-address is global
+     */
+    global: boolean;
+    /**
+     * VRF name for helper-address (if different from interface VRF)
+     */
+    vrf: string;
+}
+
+export interface GetInterfaceVlanIpv6Address {
+    /**
+     * Use eui-64 interface identifier
+     */
+    eui64: boolean;
+    prefix: string;
+}
+
+export interface GetInterfaceVlanIpv6LinkLocalAddress {
+    address: string;
+    /**
+     * Use link-local address
+     */
+    linkLocal: boolean;
+}
+
+export interface GetLineConsole {
+    /**
+     * \n\n;;Timeout in minutes
+     */
+    execTimeoutMinutes: number;
+    /**
+     * \n\n;;Timeout in seconds
+     */
+    execTimeoutSeconds: number;
+    first: string;
+    loginAuthentication: string;
+    loginLocal: boolean;
+    password: string;
+    /**
+     * Set exec level password
+     */
+    passwordLevel: number;
+    passwordType: string;
+    privilegeLevel: number;
+    /**
+     * Set async line stop bits
+     */
+    stopbits: string;
+}
+
+export interface GetLineVty {
+    accessClasses: outputs.GetLineVtyAccessClass[];
+    escapeCharacter: string;
+    /**
+     * \n\n;;Timeout in minutes
+     */
+    execTimeoutMinutes: number;
+    /**
+     * \n\n;;Timeout in seconds
+     */
+    execTimeoutSeconds: number;
+    first: number;
+    last: number;
+    loginAuthentication: string;
+    password: string;
+    /**
+     * Set exec level password
+     */
+    passwordLevel: number;
+    passwordType: string;
+    transportPreferredProtocol: string;
+}
+
+export interface GetLineVtyAccessClass {
+    accessList: string;
+    direction: string;
+    vrfAlso: boolean;
+}
+
+export interface GetLoggingIpv4Host {
+    ipv4Host: string;
+}
+
+export interface GetLoggingIpv4HostTransportTransportTcpPort {
+    /**
+     * Specify the TCP port number (default=601)
+     */
+    portNumber: number;
+}
+
+export interface GetLoggingIpv4HostTransportTransportTlsPort {
+    /**
+     * Specify the TLS port number (default=6514)
+     */
+    portNumber: number;
+    /**
+     * Specify the TLS profile
+     */
+    profile: string;
+}
+
+export interface GetLoggingIpv4HostTransportTransportUdpPort {
+    /**
+     * Specify the UDP port number (default=514)
+     */
+    portNumber: number;
+}
+
+export interface GetLoggingIpv4HostVrfTransportTransportTcpPort {
+    /**
+     * Specify the TCP port number (default=601)
+     */
+    portNumber: number;
+}
+
+export interface GetLoggingIpv4HostVrfTransportTransportTlsPort {
+    /**
+     * Specify the TLS port number (default=6514)
+     */
+    portNumber: number;
+    /**
+     * Specify the TLS profile
+     */
+    profile: string;
+}
+
+export interface GetLoggingIpv4HostVrfTransportTransportUdpPort {
+    /**
+     * Specify the UDP port number (default=514)
+     */
+    portNumber: number;
+}
+
+export interface GetLoggingIpv4VrfHost {
+    ipv4Host: string;
+    /**
+     * Set VRF option
+     */
+    vrf: string;
+}
+
+export interface GetLoggingIpv6Host {
+    ipv6Host: string;
+}
+
+export interface GetLoggingIpv6HostTransportTransportTcpPort {
+    /**
+     * Specify the TCP port number (default=601)
+     */
+    portNumber: number;
+}
+
+export interface GetLoggingIpv6HostTransportTransportTlsPort {
+    /**
+     * Specify the TLS port number (default=6514)
+     */
+    portNumber: number;
+    /**
+     * Specify the TLS profile
+     */
+    profile: string;
+}
+
+export interface GetLoggingIpv6HostTransportTransportUdpPort {
+    /**
+     * Specify the UDP port number (default=514)
+     */
+    portNumber: number;
+}
+
+export interface GetLoggingIpv6HostVrfTransportTransportTcpPort {
+    /**
+     * Specify the TCP port number (default=601)
+     */
+    portNumber: number;
+}
+
+export interface GetLoggingIpv6HostVrfTransportTransportTlsPort {
+    /**
+     * Specify the TLS port number (default=6514)
+     */
+    portNumber: number;
+    /**
+     * Specify the TLS profile
+     */
+    profile: string;
+}
+
+export interface GetLoggingIpv6HostVrfTransportTransportUdpPort {
+    /**
+     * Specify the UDP port number (default=514)
+     */
+    portNumber: number;
+}
+
+export interface GetLoggingIpv6VrfHost {
+    ipv6Host: string;
+    /**
+     * Set VRF option
+     */
+    vrf: string;
+}
+
+export interface GetLoggingSourceInterfacesVrf {
+    interfaceName: string;
+    /**
+     * Specify the vrf of source interface for logging transactions
+     */
+    vrf: string;
+}
+
+export interface GetMdtSubscriptionReceiver {
+    /**
+     * IP address of the receiver
+     */
+    address: string;
+    /**
+     * Network port of the receiver
+     */
+    port: number;
+    /**
+     * Receiver transport protocol.
+     */
+    protocol: string;
+}
+
+export interface GetMsdpPassword {
+    addr: string;
+    encryption: number;
+    password: string;
+}
+
+export interface GetMsdpPeer {
+    addr: string;
+    /**
+     * Loopback interface
+     */
+    connectSourceLoopback: number;
+    /**
+     * Configured AS number
+     */
+    remoteAs: number;
+}
+
+export interface GetMsdpVrfPassword {
+    addr: string;
+    encryption: number;
+    password: string;
+}
+
+export interface GetMsdpVrfPeer {
+    addr: string;
+    /**
+     * Loopback interface
+     */
+    connectSourceLoopback: number;
+    /**
+     * Configured AS number
+     */
+    remoteAs: number;
+}
+
+export interface GetNtpAuthenticationKey {
+    /**
+     * CMAC-AES-128 (digest length = 128 bits,  key length = [16 or 32] bytes)
+     */
+    cmacAes128: string;
+    /**
+     * Authentication key encryption type
+     */
+    encryptionType: number;
+    /**
+     * HMAC-SHA1 (digest length = 160 bits,  key length = [1-32] bytes)
+     */
+    hmacSha1: string;
+    /**
+     * HMAC-SHA2-256 (digest length = 256 bits,  key length = [1-32] bytes)
+     */
+    hmacSha2256: string;
+    /**
+     * MD5 authentication
+     */
+    md5: string;
+    number: number;
+    /**
+     * SHA1 (digest length = 160 bits,  key length = [1-32] bytes)
+     */
+    sha1: string;
+    /**
+     * SHA-256 (digest length = 256 bits,  key length = [1-32] bytes)
+     */
+    sha2: string;
+}
+
+export interface GetNtpPeer {
+    ipAddress: string;
+    /**
+     * Configure peer authentication key
+     */
+    key: number;
+    /**
+     * Prefer this peer when possible
+     */
+    prefer: boolean;
+    /**
+     * Interface for source address
+     */
+    source: string;
+    /**
+     * Configure NTP version
+     */
+    version: number;
+}
+
+export interface GetNtpPeerVrf {
+    name: string;
+    peers: outputs.GetNtpPeerVrfPeer[];
+}
+
+export interface GetNtpPeerVrfPeer {
+    ipAddress: string;
+    /**
+     * Configure peer authentication key
+     */
+    key: number;
+    /**
+     * Prefer this peer when possible
+     */
+    prefer: boolean;
+    /**
+     * Configure NTP version
+     */
+    version: number;
+}
+
+export interface GetNtpServer {
+    ipAddress: string;
+    /**
+     * Configure peer authentication key
+     */
+    key: number;
+    /**
+     * Prefer this peer when possible
+     */
+    prefer: boolean;
+    /**
+     * Interface for source address
+     */
+    source: string;
+    /**
+     * Configure NTP version
+     */
+    version: number;
+}
+
+export interface GetNtpServerVrf {
+    name: string;
+    servers: outputs.GetNtpServerVrfServer[];
+}
+
+export interface GetNtpServerVrfServer {
+    ipAddress: string;
+    /**
+     * Configure peer authentication key
+     */
+    key: number;
+    /**
+     * Prefer this peer when possible
+     */
+    prefer: boolean;
+    /**
+     * Configure NTP version
+     */
+    version: number;
+}
+
+export interface GetOspfArea {
+    /**
+     * OSPF area ID
+     */
+    areaId: string;
+    /**
+     * Use message-digest authentication
+     */
+    authenticationMessageDigest: boolean;
+    /**
+     * Specify a NSSA area
+     */
+    nssa: boolean;
+    /**
+     * Originate Type 7 default into NSSA area
+     */
+    nssaDefaultInformationOriginate: boolean;
+    /**
+     * OSPF default metric
+     */
+    nssaDefaultInformationOriginateMetric: number;
+    /**
+     * OSPF metric type for default routes
+     */
+    nssaDefaultInformationOriginateMetricType: number;
+    /**
+     * No redistribution into this NSSA area
+     */
+    nssaNoRedistribution: boolean;
+    /**
+     * Do not send summary LSA into NSSA
+     */
+    nssaNoSummary: boolean;
+}
+
+export interface GetOspfNeighbor {
+    /**
+     * OSPF cost for point-to-multipoint neighbor
+     */
+    cost: number;
+    /**
+     * Neighbor address
+     */
+    ip: string;
+    /**
+     * OSPF priority of non-broadcast neighbor
+     */
+    priority: number;
+}
+
+export interface GetOspfNetwork {
+    /**
+     * Set the OSPF area ID
+     */
+    area: string;
+    /**
+     * Network number
+     */
+    ip: string;
+    /**
+     * OSPF wild card bits
+     */
+    wildcard: string;
+}
+
+export interface GetOspfSummaryAddress {
+    /**
+     * IP summary address
+     */
+    ip: string;
+    /**
+     * Summary mask
+     */
+    mask: string;
+}
+
+export interface GetOspfVrfArea {
+    /**
+     * OSPF area ID
+     */
+    areaId: string;
+    /**
+     * Use message-digest authentication
+     */
+    authenticationMessageDigest: boolean;
+    /**
+     * Specify a NSSA area
+     */
+    nssa: boolean;
+    /**
+     * Originate Type 7 default into NSSA area
+     */
+    nssaDefaultInformationOriginate: boolean;
+    /**
+     * OSPF default metric
+     */
+    nssaDefaultInformationOriginateMetric: number;
+    /**
+     * OSPF metric type for default routes
+     */
+    nssaDefaultInformationOriginateMetricType: number;
+    /**
+     * No redistribution into this NSSA area
+     */
+    nssaNoRedistribution: boolean;
+    /**
+     * Do not send summary LSA into NSSA
+     */
+    nssaNoSummary: boolean;
+}
+
+export interface GetOspfVrfNeighbor {
+    /**
+     * OSPF cost for point-to-multipoint neighbor
+     */
+    cost: number;
+    /**
+     * Neighbor address
+     */
+    ip: string;
+    /**
+     * OSPF priority of non-broadcast neighbor
+     */
+    priority: number;
+}
+
+export interface GetOspfVrfNetwork {
+    /**
+     * Set the OSPF area ID
+     */
+    area: string;
+    /**
+     * Network number
+     */
+    ip: string;
+    /**
+     * OSPF wild card bits
+     */
+    wildcard: string;
+}
+
+export interface GetOspfVrfSummaryAddress {
+    /**
+     * IP summary address
+     */
+    ip: string;
+    /**
+     * Summary mask
+     */
+    mask: string;
+}
+
+export interface GetPimRpAddress {
+    /**
+     * IP Access-list
+     */
+    accessList: string;
+    /**
+     * Group range treated in bidirectional shared-tree mode
+     */
+    bidir: boolean;
+    /**
+     * Overrides dynamically learnt RP mappings
+     */
+    override: boolean;
+    /**
+     * IP address of Rendezvous-point for group
+     */
+    rpAddress: string;
+}
+
+export interface GetPimRpCandidate {
+    /**
+     * Group range treated in bidirectional shared-tree mode
+     */
+    bidir: boolean;
+    /**
+     * IP Access list
+     */
+    groupList: string;
+    /**
+     * Autonomic-Networking virtual interface
+     */
+    interface: string;
+    /**
+     * RP candidate advertisement interval
+     */
+    interval: number;
+    /**
+     * RP candidate priority
+     */
+    priority: number;
+}
+
+export interface GetPimVrfRpAddress {
+    /**
+     * IP Access-list
+     */
+    accessList: string;
+    /**
+     * Group range treated in bidirectional shared-tree mode
+     */
+    bidir: boolean;
+    /**
+     * Overrides dynamically learnt RP mappings
+     */
+    override: boolean;
+    /**
+     * IP address of Rendezvous-point for group
+     */
+    rpAddress: string;
+}
+
+export interface GetPimVrfRpCandidate {
+    /**
+     * Group range treated in bidirectional shared-tree mode
+     */
+    bidir: boolean;
+    /**
+     * IP Access list
+     */
+    groupList: string;
+    /**
+     * Autonomic-Networking virtual interface
+     */
+    interface: string;
+    /**
+     * RP candidate advertisement interval
+     */
+    interval: number;
+    /**
+     * RP candidate priority
+     */
+    priority: number;
+}
+
+export interface GetPolicyMapEventClassNumber {
+    /**
+     * action number, 1 for 1st class, 2 for 2nd...
+     */
+    actionNumbers: outputs.GetPolicyMapEventClassNumberActionNumber[];
+    /**
+     * The class type this control policy-map triggers upon
+     */
+    class: string;
+    executionType: string;
+    number: number;
+}
+
+export interface GetPolicyMapEventClassNumberActionNumber {
+    activateServiceTemplateConfigServiceTemplate: string;
+    authenticateUsingMethod: string;
+    authenticateUsingPriority: number;
+    authenticateUsingRetries: number;
+    authenticateUsingRetryTime: number;
+    authorize: boolean;
+    number: number;
+    pauseReauthentication: boolean;
+    terminateConfig: string;
+}
+
+export interface GetPrefixListPrefix {
+    /**
+     * Specify deny or permit action
+     */
+    action: string;
+    /**
+     * Minimum prefix length to be matched
+     */
+    ge: number;
+    /**
+     * IPv4 Prefix
+     */
+    ip: string;
+    /**
+     * Maximum prefix length to be matched
+     */
+    le: number;
+    /**
+     * Name of the prefix-list
+     */
+    name: string;
+    /**
+     * Seq Number of the prefix-list
+     */
+    seq: number;
+}
+
+export interface GetRadiusServerAttribute {
+    /**
+     * Include attribute
+     */
+    accessRequestInclude: boolean;
+    attribute31Parameters: outputs.GetRadiusServerAttributeAttribute31Parameter[];
+    number: string;
+    sendAttributes: string[];
+}
+
+export interface GetRadiusServerAttributeAttribute31Parameter {
+    callingStationId: string;
+    idMacFormat: string;
+    idMacLuCase: string;
+    idSendMacOnly: boolean;
+    idSendNasPortDetail: boolean;
+}
+
+export interface GetRouteMapEntry {
+    /**
+     * Continue on a different entry within the route-map
+     */
+    continue: boolean;
+    /**
+     * Route-map entry sequence number
+     */
+    continueSequenceNumber: number;
+    /**
+     * Route-map comment
+     */
+    description: string;
+    /**
+     * AS path access-list
+     */
+    matchAsPaths: number[];
+    /**
+     * AS path access-list (DEPRECATED - please use route-map configuration in Cisco-IOS-XE-bgp.yang)
+     */
+    matchAsPathsLegacies: number[];
+    /**
+     * Do exact matching of communities
+     */
+    matchCommunityListExactMatch: boolean;
+    /**
+     * Named Access List
+     */
+    matchCommunityLists: string[];
+    /**
+     * Named Access List (DEPRECATED- please use community-list in Cisco-IOS-XE-bgp.yang)
+     */
+    matchCommunityListsLegacies: string[];
+    /**
+     * Named Access List
+     */
+    matchExtcommunityLists: string[];
+    /**
+     * Named Access List (DEPRECATED- please use extcommunity-list in Cisco-IOS-XE-bgp.yang)
+     */
+    matchExtcommunityListsLegacies: string[];
+    matchInterfaces: string[];
+    matchIpAddressAccessLists: string[];
+    /**
+     * Match entries of prefix-lists
+     */
+    matchIpAddressPrefixLists: string[];
+    matchIpNextHopAccessLists: string[];
+    /**
+     * Match entries of prefix-lists
+     */
+    matchIpNextHopPrefixLists: string[];
+    matchIpv6AddressAccessLists: string;
+    /**
+     * IPv6 prefix-list
+     */
+    matchIpv6AddressPrefixLists: string;
+    matchIpv6NextHopAccessLists: string;
+    /**
+     * IPv6 prefix-list
+     */
+    matchIpv6NextHopPrefixLists: string;
+    matchLocalPreferences: number[];
+    matchLocalPreferencesLegacies: number[];
+    /**
+     * external route (BGP, EIGRP and OSPF type 1/2)
+     */
+    matchRouteTypeExternal: boolean;
+    /**
+     * OSPF external type 1 route
+     */
+    matchRouteTypeExternalType1: boolean;
+    /**
+     * OSPF external type 2 route
+     */
+    matchRouteTypeExternalType2: boolean;
+    /**
+     * internal route (including OSPF intra/inter area)
+     */
+    matchRouteTypeInternal: boolean;
+    /**
+     * IS-IS level-1 route
+     */
+    matchRouteTypeLevel1: boolean;
+    /**
+     * IS-IS level-2 route
+     */
+    matchRouteTypeLevel2: boolean;
+    /**
+     * locally generated route (DEPRECATED - please use route-map configuration in Cisco-IOS-XE-bgp.yang)
+     */
+    matchRouteTypeLocal: boolean;
+    /**
+     * Border Gateway Protocol (BGP)
+     */
+    matchSourceProtocolBgps: string[];
+    /**
+     * Connected
+     */
+    matchSourceProtocolConnected: boolean;
+    /**
+     * Border Gateway Protocol (BGP)
+     */
+    matchSourceProtocolEigrps: string[];
+    /**
+     * ISO IS-IS
+     */
+    matchSourceProtocolIsis: boolean;
+    /**
+     * Locator ID Separation Protocol (LISP)
+     */
+    matchSourceProtocolLisp: boolean;
+    /**
+     * Open Shortest Path First (OSPF)
+     */
+    matchSourceProtocolOspfs: string[];
+    /**
+     * OSPFv3
+     */
+    matchSourceProtocolOspfv3s: string[];
+    /**
+     * Routing Information Protocol (RIP)
+     */
+    matchSourceProtocolRip: boolean;
+    /**
+     * Static routes
+     */
+    matchSourceProtocolStatic: boolean;
+    /**
+     * Tag value
+     */
+    matchTags: number[];
+    /**
+     * tracking object
+     */
+    matchTrack: number;
+    operation: string;
+    seq: number;
+    /**
+     * \n\n;;AS number
+     */
+    setAsPathPrependAs: string;
+    /**
+     * \n\n;;AS number (DEPRECATED - please use route-map configuration in Cisco-IOS-XE-bgp.yang)
+     */
+    setAsPathPrependAsLegacy: string;
+    setAsPathPrependLastAs: number;
+    setAsPathPrependLastAsLegacy: number;
+    /**
+     * Set the tag as an AS-path attribute
+     */
+    setAsPathTag: boolean;
+    /**
+     * Set the tag as an AS-path attribute (DEPRECATED - please use route-map configuration in Cisco-IOS-XE-bgp.yang)
+     */
+    setAsPathTagLegacy: boolean;
+    setCommunities: string[];
+    setCommunitiesAdditive: boolean;
+    setCommunitiesAdditiveLegacy: boolean;
+    setCommunitiesLegacies: string[];
+    /**
+     * Delete matching communities
+     */
+    setCommunityListDelete: boolean;
+    /**
+     * Delete matching communities (DEPRECATED - please use route-map configuration in Cisco-IOS-XE-bgp.yang)
+     */
+    setCommunityListDeleteLegacy: boolean;
+    setCommunityListExpanded: number;
+    setCommunityListExpandedLegacy: number;
+    setCommunityListName: string;
+    setCommunityListNameLegacy: string;
+    setCommunityListStandard: number;
+    setCommunityListStandardLegacy: number;
+    /**
+     * No community attribute
+     */
+    setCommunityNone: boolean;
+    /**
+     * No community attribute (DEPRECATED - please use route-map configuration in Cisco-IOS-XE-bgp.yang)
+     */
+    setCommunityNoneLegacy: boolean;
+    /**
+     * SPAN source interface
+     */
+    setDefaultInterfaces: string[];
+    setExtcomunityRtLegacies: string[];
+    setExtcomunityRts: string[];
+    setExtcomunitySoo: string;
+    setExtcomunitySooLegacy: string;
+    /**
+     * VPN Distinguisher Extended Community
+     */
+    setExtcomunityVpnDistinguisher: string;
+    setExtcomunityVpnDistinguisherAdditive: boolean;
+    setExtcomunityVpnDistinguisherLegacy: string;
+    setGlobal: boolean;
+    /**
+     * Interface specific information
+     */
+    setInterfaces: string[];
+    /**
+     * Specify prefix-list
+     */
+    setIpAddress: string;
+    setIpDefaultGlobalNextHopAddresses: string[];
+    setIpDefaultNextHopAddresses: string[];
+    setIpGlobalNextHopAddresses: string[];
+    setIpNextHopAddresses: string[];
+    /**
+     * Use self address (for BGP only)
+     */
+    setIpNextHopSelf: boolean;
+    setIpQosGroup: number;
+    /**
+     * IPv6 prefix-list
+     */
+    setIpv6Addresses: string[];
+    /**
+     * Next hop along path
+     */
+    setIpv6DefaultGlobalNextHop: string;
+    /**
+     * Default next hop IPv6 address
+     */
+    setIpv6DefaultNextHops: string[];
+    /**
+     * Next hop IPv6 address
+     */
+    setIpv6NextHops: string[];
+    /**
+     * Import into a level-1 area
+     */
+    setLevel1: boolean;
+    /**
+     * Import into level-1 and level-2
+     */
+    setLevel12: boolean;
+    /**
+     * Import into level-2 sub-domain
+     */
+    setLevel2: boolean;
+    /**
+     * Preference value
+     */
+    setLocalPreference: number;
+    /**
+     * Preference value (DEPRECATED - please use route-map configuration in Cisco-IOS-XE-bgp.yang)
+     */
+    setLocalPreferenceLegacy: number;
+    /**
+     * +/-\n\n;;Add or subtract metric
+     */
+    setMetricChange: string;
+    /**
+     * EIGRP delay metric, in 10 microsecond units
+     */
+    setMetricDelay: string;
+    /**
+     * EIGRP Effective bandwidth metric (Loading) where 255 is 100% loaded
+     */
+    setMetricLoading: number;
+    /**
+     * EIGRP MTU of the path
+     */
+    setMetricMtu: number;
+    /**
+     * EIGRP reliability metric where 255 is 100% reliable
+     */
+    setMetricReliability: number;
+    /**
+     * Type of metric for destination routing protocol
+     */
+    setMetricType: string;
+    /**
+     * Metric value or Bandwidth in Kbits per second
+     */
+    setMetricValue: number;
+    /**
+     * Tag value
+     */
+    setTag: number;
+    /**
+     * VPN Routing/Forwarding instance name
+     */
+    setVrf: string;
+    /**
+     * BGP weight for routing table
+     */
+    setWeight: number;
+    /**
+     * BGP weight for routing table (DEPRECATED - please use route-map configuration in Cisco-IOS-XE-bgp.yang)
+     */
+    setWeightLegacy: number;
+}
+
+export interface GetServiceTemplateAccessGroup {
+    /**
+     * Specify the access list name
+     */
+    name: string;
+}
+
+export interface GetServiceTemplateInterfaceTemplate {
+    /**
+     * Enter name of interface template
+     */
+    name: string;
+}
+
+export interface GetServiceTemplateTag {
+    /**
+     * Specify the Tag name
+     */
+    name: string;
+}
+
+export interface GetSnmpServerContext {
+    name: string;
+}
+
+export interface GetSnmpServerGroupV3Security {
+    /**
+     * Access-list name
+     */
+    accessAclName: string;
+    /**
+     * Specify IPv6 Named Access-List
+     */
+    accessIpv6Acl: string;
+    /**
+     * Standard IP Access-list allowing access with this community string
+     */
+    accessStandardAcl: number;
+    /**
+     * specify a context to associate these views for the group
+     */
+    contextNode: string;
+    /**
+     * context name match criteria
+     */
+    matchNode: string;
+    /**
+     * specify a notify view for the group
+     */
+    notifyNode: string;
+    /**
+     * specify a read view for the group
+     */
+    readNode: string;
+    /**
+     * security level type
+     */
+    securityLevel: string;
+    /**
+     * specify a write view for the group
+     */
+    writeNode: string;
+}
+
+export interface GetSnmpServerHost {
+    /**
+     * SNMPv1/v2c community string or SNMPv3 user name
+     */
+    communityOrUser: string;
+    /**
+     * Specifies an encryption type for community string
+     */
+    encryption: string;
+    ipAddress: string;
+    /**
+     * SNMP version to use for notification messages
+     */
+    version: string;
+}
+
+export interface GetSnmpServerSnmpCommunity {
+    /**
+     * Access-list name
+     */
+    accessListName: string;
+    /**
+     * Specify IPv6 Named Access-List
+     */
+    ipv6: string;
+    name: string;
+    permission: string;
+    /**
+     * Restrict this community to a named MIB view
+     */
+    view: string;
+}
+
+export interface GetSnmpServerView {
+    incExl: string;
+    mib: string;
+    name: string;
+}
+
+export interface GetStaticRouteNextHop {
+    /**
+     * Next hop address is global
+     */
+    global: boolean;
+    metric: number;
+    /**
+     * Specify name of the next hop
+     */
+    name: string;
+    nextHop: string;
+    /**
+     * permanent route
+     */
+    permanent: boolean;
+    /**
+     * Set tag for this route
+     */
+    tag: number;
+}
+
+export interface GetStaticRouteVrfRoute {
+    mask: string;
+    nextHops: outputs.GetStaticRouteVrfRouteNextHop[];
+    prefix: string;
+}
+
+export interface GetStaticRouteVrfRouteNextHop {
+    global: boolean;
+    metric: number;
+    name: string;
+    nextHop: string;
+    permanent: boolean;
+    tag: number;
+}
+
+export interface GetSystemMulticastRoutingVrf {
+    /**
+     * Distributed multicast switching
+     */
+    distributed: boolean;
+    vrf: string;
+}
+
+export interface GetTemplateDeviceTrackingAttachPolicy {
+    policyName: string;
+    /**
+     * VLAN IDs of the VLANs for which this policy applies
+     */
+    vlanRange: string;
+}
+
+export interface GetTemplateIpAccessGroup {
+    /**
+     * Access control list name
+     */
+    accessList: string;
+    /**
+     * packet flow direction
+     */
+    direction: string;
+}
+
+export interface GetTemplateSwitchportPortSecurityMaximumRange {
+    /**
+     * Maximum addresses
+     */
+    range: number;
+    /**
+     * Max secure addresses per vlan
+     */
+    vlan: boolean;
+    /**
+     * access vlan
+     */
+    vlanAccess: boolean;
+}
+
+export interface GetVrfIpv4RouteTargetExport {
+    /**
+     * Value
+     */
+    value: string;
+}
+
+export interface GetVrfIpv4RouteTargetExportStitching {
+    /**
+     * VXLAN route target set
+     */
+    stitching: boolean;
+    /**
+     * Value
+     */
+    value: string;
+}
+
+export interface GetVrfIpv4RouteTargetImport {
+    /**
+     * Value
+     */
+    value: string;
+}
+
+export interface GetVrfIpv4RouteTargetImportStitching {
+    /**
+     * VXLAN route target set
+     */
+    stitching: boolean;
+    /**
+     * Value
+     */
+    value: string;
+}
+
+export interface GetVrfIpv6RouteTargetExport {
+    /**
+     * Value
+     */
+    value: string;
+}
+
+export interface GetVrfIpv6RouteTargetExportStitching {
+    /**
+     * VXLAN route target set
+     */
+    stitching: boolean;
+    /**
+     * Value
+     */
+    value: string;
+}
+
+export interface GetVrfIpv6RouteTargetImport {
+    /**
+     * Value
+     */
+    value: string;
+}
+
+export interface GetVrfIpv6RouteTargetImportStitching {
+    /**
+     * VXLAN route target set
+     */
+    stitching: boolean;
+    /**
+     * Value
+     */
+    value: string;
+}
+
+export interface GetVrfRouteTargetExport {
+    /**
+     * VXLAN route target set
+     */
+    stitching: boolean;
+    /**
+     * Value
+     */
+    value: string;
+}
+
+export interface GetVrfRouteTargetImport {
+    /**
+     * VXLAN route target set
+     */
+    stitching: boolean;
+    /**
+     * Value
+     */
+    value: string;
+}
+
+export interface InterfaceEthernetHelperAddress {
+    address: string;
+    global?: boolean;
+    vrf?: string;
+}
+
+export interface InterfaceEthernetIpv6Address {
+    eui64?: boolean;
+    prefix: string;
+}
+
+export interface InterfaceEthernetIpv6LinkLocalAddress {
+    address: string;
+    linkLocal?: boolean;
+}
+
+export interface InterfaceEthernetSourceTemplate {
+    merge?: boolean;
+    templateName: string;
+}
+
+export interface InterfaceLoopbackIpv6Address {
+    eui64?: boolean;
+    prefix: string;
+}
+
+export interface InterfaceLoopbackIpv6LinkLocalAddress {
+    address: string;
+    linkLocal?: boolean;
+}
+
+export interface InterfaceNveVni {
+    ingressReplication?: boolean;
+    ipv4MulticastGroup?: string;
+    vniRange: string;
+}
+
+export interface InterfaceNveVniVrf {
+    vniRange: string;
+    vrf?: string;
+}
+
+export interface InterfaceOspfMessageDigestKey {
+    id: number;
+    md5AuthKey?: string;
+    md5AuthType?: number;
+}
+
+export interface InterfaceOspfProcessId {
+    areas?: outputs.InterfaceOspfProcessIdArea[];
+    id: number;
+}
+
+export interface InterfaceOspfProcessIdArea {
+    areaId: string;
+}
+
+export interface InterfacePortChannelHelperAddress {
+    address: string;
+    global?: boolean;
+    vrf?: string;
+}
+
+export interface InterfacePortChannelIpv6Address {
+    eui64?: boolean;
+    prefix: string;
+}
+
+export interface InterfacePortChannelIpv6LinkLocalAddress {
+    address: string;
+    linkLocal?: boolean;
+}
+
+export interface InterfacePortChannelSubinterfaceHelperAddress {
+    address: string;
+    global?: boolean;
+    vrf?: string;
+}
+
+export interface InterfacePortChannelSubinterfaceIpv6Address {
+    eui64?: boolean;
+    prefix: string;
+}
+
+export interface InterfacePortChannelSubinterfaceIpv6LinkLocalAddress {
+    address: string;
+    linkLocal?: boolean;
+}
+
+export interface InterfaceTunnelHelperAddress {
+    address: string;
+    global?: boolean;
+    vrf?: string;
+}
+
+export interface InterfaceTunnelIpv6Address {
+    eui64?: boolean;
+    prefix: string;
+}
+
+export interface InterfaceTunnelIpv6LinkLocalAddress {
+    address: string;
+    linkLocal?: boolean;
+}
+
+export interface InterfaceVlanHelperAddress {
+    address: string;
+    global?: boolean;
+    vrf?: string;
+}
+
+export interface InterfaceVlanIpv6Address {
+    eui64?: boolean;
+    prefix: string;
+}
+
+export interface InterfaceVlanIpv6LinkLocalAddress {
+    address: string;
+    linkLocal?: boolean;
+}
+
+export interface LineConsole {
+    execTimeoutMinutes?: number;
+    execTimeoutSeconds?: number;
+    first: string;
+    loginAuthentication?: string;
+    loginLocal?: boolean;
+    password?: string;
+    passwordLevel?: number;
+    passwordType?: string;
+    privilegeLevel?: number;
+    stopbits?: string;
+}
+
+export interface LineVty {
+    accessClasses?: outputs.LineVtyAccessClass[];
+    escapeCharacter?: string;
+    execTimeoutMinutes?: number;
+    execTimeoutSeconds?: number;
+    first: number;
+    last?: number;
+    loginAuthentication?: string;
+    password?: string;
+    passwordLevel?: number;
+    passwordType?: string;
+    transportPreferredProtocol?: string;
+}
+
+export interface LineVtyAccessClass {
+    accessList: string;
+    direction: string;
+    vrfAlso?: boolean;
+}
+
+export interface LoggingIpv4Host {
+    ipv4Host: string;
+}
+
+export interface LoggingIpv4HostTransportTransportTcpPort {
+    portNumber: number;
+}
+
+export interface LoggingIpv4HostTransportTransportTlsPort {
+    portNumber: number;
+    profile?: string;
+}
+
+export interface LoggingIpv4HostTransportTransportUdpPort {
+    portNumber: number;
+}
+
+export interface LoggingIpv4HostVrfTransportTransportTcpPort {
+    portNumber: number;
+}
+
+export interface LoggingIpv4HostVrfTransportTransportTlsPort {
+    portNumber: number;
+    profile?: string;
+}
+
+export interface LoggingIpv4HostVrfTransportTransportUdpPort {
+    portNumber: number;
+}
+
+export interface LoggingIpv4VrfHost {
+    ipv4Host: string;
+    vrf: string;
+}
+
+export interface LoggingIpv6Host {
+    ipv6Host: string;
+}
+
+export interface LoggingIpv6HostTransportTransportTcpPort {
+    portNumber: number;
+}
+
+export interface LoggingIpv6HostTransportTransportTlsPort {
+    portNumber: number;
+    profile?: string;
+}
+
+export interface LoggingIpv6HostTransportTransportUdpPort {
+    portNumber: number;
+}
+
+export interface LoggingIpv6HostVrfTransportTransportTcpPort {
+    portNumber: number;
+}
+
+export interface LoggingIpv6HostVrfTransportTransportTlsPort {
+    portNumber: number;
+    profile?: string;
+}
+
+export interface LoggingIpv6HostVrfTransportTransportUdpPort {
+    portNumber: number;
+}
+
+export interface LoggingIpv6VrfHost {
+    ipv6Host: string;
+    vrf: string;
+}
+
+export interface LoggingSourceInterfacesVrf {
+    interfaceName: string;
+    vrf: string;
+}
+
+export interface MdtSubscriptionReceiver {
+    address: string;
+    port: number;
+    protocol: string;
+}
+
+export interface MsdpPassword {
+    addr: string;
+    encryption?: number;
+    password: string;
+}
+
+export interface MsdpPeer {
+    addr: string;
+    connectSourceLoopback?: number;
+    remoteAs?: number;
+}
+
+export interface MsdpVrfPassword {
+    addr: string;
+    encryption?: number;
+    password: string;
+}
+
+export interface MsdpVrfPeer {
+    addr: string;
+    connectSourceLoopback?: number;
+    remoteAs?: number;
+}
+
+export interface NtpAuthenticationKey {
+    cmacAes128?: string;
+    encryptionType?: number;
+    hmacSha1?: string;
+    hmacSha2256?: string;
+    md5?: string;
+    number: number;
+    sha1?: string;
+    sha2?: string;
+}
+
+export interface NtpPeer {
+    ipAddress: string;
+    key?: number;
+    prefer?: boolean;
+    source?: string;
+    version?: number;
+}
+
+export interface NtpPeerVrf {
+    name: string;
+    peers?: outputs.NtpPeerVrfPeer[];
+}
+
+export interface NtpPeerVrfPeer {
+    ipAddress: string;
+    key?: number;
+    prefer?: boolean;
+    version?: number;
+}
+
+export interface NtpServer {
+    ipAddress: string;
+    key?: number;
+    prefer?: boolean;
+    source?: string;
+    version?: number;
+}
+
+export interface NtpServerVrf {
+    name: string;
+    servers?: outputs.NtpServerVrfServer[];
+}
+
+export interface NtpServerVrfServer {
+    ipAddress: string;
+    key?: number;
+    prefer?: boolean;
+    version?: number;
+}
+
+export interface OspfArea {
+    areaId: string;
+    authenticationMessageDigest?: boolean;
+    nssa?: boolean;
+    nssaDefaultInformationOriginate?: boolean;
+    nssaDefaultInformationOriginateMetric?: number;
+    nssaDefaultInformationOriginateMetricType?: number;
+    nssaNoRedistribution?: boolean;
+    nssaNoSummary?: boolean;
+}
+
+export interface OspfNeighbor {
+    cost?: number;
+    ip: string;
+    priority?: number;
+}
+
+export interface OspfNetwork {
+    area?: string;
+    ip: string;
+    wildcard?: string;
+}
+
+export interface OspfSummaryAddress {
+    ip: string;
+    mask?: string;
+}
+
+export interface OspfVrfArea {
+    areaId: string;
+    authenticationMessageDigest?: boolean;
+    nssa?: boolean;
+    nssaDefaultInformationOriginate?: boolean;
+    nssaDefaultInformationOriginateMetric?: number;
+    nssaDefaultInformationOriginateMetricType?: number;
+    nssaNoRedistribution?: boolean;
+    nssaNoSummary?: boolean;
+}
+
+export interface OspfVrfNeighbor {
+    cost?: number;
+    ip: string;
+    priority?: number;
+}
+
+export interface OspfVrfNetwork {
+    area?: string;
+    ip: string;
+    wildcard?: string;
+}
+
+export interface OspfVrfSummaryAddress {
+    ip: string;
+    mask?: string;
+}
+
+export interface PimRpAddress {
+    accessList: string;
+    bidir?: boolean;
+    override?: boolean;
+    rpAddress?: string;
+}
+
+export interface PimRpCandidate {
+    bidir?: boolean;
+    groupList?: string;
+    interface: string;
+    interval?: number;
+    priority?: number;
+}
+
+export interface PimVrfRpAddress {
+    accessList: string;
+    bidir?: boolean;
+    override?: boolean;
+    rpAddress?: string;
+}
+
+export interface PimVrfRpCandidate {
+    bidir?: boolean;
+    groupList?: string;
+    interface: string;
+    interval?: number;
+    priority?: number;
+}
+
+export interface PolicyMapEventClassNumber {
+    actionNumbers?: outputs.PolicyMapEventClassNumberActionNumber[];
+    class?: string;
+    executionType?: string;
+    number: number;
+}
+
+export interface PolicyMapEventClassNumberActionNumber {
+    activateServiceTemplateConfigServiceTemplate?: string;
+    authenticateUsingMethod?: string;
+    authenticateUsingPriority?: number;
+    authenticateUsingRetries?: number;
+    authenticateUsingRetryTime?: number;
+    authorize?: boolean;
+    number: number;
+    pauseReauthentication?: boolean;
+    terminateConfig?: string;
+}
+
+export interface PrefixListPrefix {
+    action?: string;
+    ge?: number;
+    ip?: string;
+    le?: number;
+    name: string;
+    seq: number;
+}
+
+export interface RadiusServerAttribute {
+    accessRequestInclude?: boolean;
+    attribute31Parameters?: outputs.RadiusServerAttributeAttribute31Parameter[];
+    number: string;
+    sendAttributes?: string[];
+}
+
+export interface RadiusServerAttributeAttribute31Parameter {
+    callingStationId: string;
+    idMacFormat?: string;
+    idMacLuCase?: string;
+    idSendMacOnly?: boolean;
+    idSendNasPortDetail?: boolean;
+}
+
+export interface RestconfList {
+    /**
+     * List of maps of key-value pairs which represents the YANG leafs and its values.
+     */
+    items?: {[key: string]: string}[];
+    /**
+     * YANG list key attribute. In case of multiple keys, those should be separated by a comma (`,`).
+     */
+    key: string;
+    /**
+     * YANG list name.
+     */
+    name: string;
+    /**
+     * YANG leaf-list values.
+     */
+    values?: string[];
+}
+
+export interface RouteMapEntry {
+    continue?: boolean;
+    continueSequenceNumber?: number;
+    description?: string;
+    matchAsPaths?: number[];
+    matchAsPathsLegacies?: number[];
+    matchCommunityListExactMatch?: boolean;
+    matchCommunityLists?: string[];
+    matchCommunityListsLegacies?: string[];
+    matchExtcommunityLists?: string[];
+    matchExtcommunityListsLegacies?: string[];
+    matchInterfaces?: string[];
+    matchIpAddressAccessLists?: string[];
+    matchIpAddressPrefixLists?: string[];
+    matchIpNextHopAccessLists?: string[];
+    matchIpNextHopPrefixLists?: string[];
+    matchIpv6AddressAccessLists?: string;
+    matchIpv6AddressPrefixLists?: string;
+    matchIpv6NextHopAccessLists?: string;
+    matchIpv6NextHopPrefixLists?: string;
+    matchLocalPreferences?: number[];
+    matchLocalPreferencesLegacies?: number[];
+    matchRouteTypeExternal?: boolean;
+    matchRouteTypeExternalType1?: boolean;
+    matchRouteTypeExternalType2?: boolean;
+    matchRouteTypeInternal?: boolean;
+    matchRouteTypeLevel1?: boolean;
+    matchRouteTypeLevel2?: boolean;
+    matchRouteTypeLocal?: boolean;
+    matchSourceProtocolBgps?: string[];
+    matchSourceProtocolConnected?: boolean;
+    matchSourceProtocolEigrps?: string[];
+    matchSourceProtocolIsis?: boolean;
+    matchSourceProtocolLisp?: boolean;
+    matchSourceProtocolOspfs?: string[];
+    matchSourceProtocolOspfv3s?: string[];
+    matchSourceProtocolRip?: boolean;
+    matchSourceProtocolStatic?: boolean;
+    matchTags?: number[];
+    matchTrack?: number;
+    operation?: string;
+    seq: number;
+    setAsPathPrependAs?: string;
+    setAsPathPrependAsLegacy?: string;
+    setAsPathPrependLastAs?: number;
+    setAsPathPrependLastAsLegacy?: number;
+    setAsPathTag?: boolean;
+    setAsPathTagLegacy?: boolean;
+    setCommunities?: string[];
+    setCommunitiesAdditive?: boolean;
+    setCommunitiesAdditiveLegacy?: boolean;
+    setCommunitiesLegacies?: string[];
+    setCommunityListDelete?: boolean;
+    setCommunityListDeleteLegacy?: boolean;
+    setCommunityListExpanded?: number;
+    setCommunityListExpandedLegacy?: number;
+    setCommunityListName?: string;
+    setCommunityListNameLegacy?: string;
+    setCommunityListStandard?: number;
+    setCommunityListStandardLegacy?: number;
+    setCommunityNone?: boolean;
+    setCommunityNoneLegacy?: boolean;
+    setDefaultInterfaces?: string[];
+    setExtcomunityRtLegacies?: string[];
+    setExtcomunityRts?: string[];
+    setExtcomunitySoo?: string;
+    setExtcomunitySooLegacy?: string;
+    setExtcomunityVpnDistinguisher?: string;
+    setExtcomunityVpnDistinguisherAdditive?: boolean;
+    setExtcomunityVpnDistinguisherLegacy?: string;
+    setGlobal?: boolean;
+    setInterfaces?: string[];
+    setIpAddress?: string;
+    setIpDefaultGlobalNextHopAddresses?: string[];
+    setIpDefaultNextHopAddresses?: string[];
+    setIpGlobalNextHopAddresses?: string[];
+    setIpNextHopAddresses?: string[];
+    setIpNextHopSelf?: boolean;
+    setIpQosGroup?: number;
+    setIpv6Addresses?: string[];
+    setIpv6DefaultGlobalNextHop?: string;
+    setIpv6DefaultNextHops?: string[];
+    setIpv6NextHops?: string[];
+    setLevel1?: boolean;
+    setLevel12?: boolean;
+    setLevel2?: boolean;
+    setLocalPreference?: number;
+    setLocalPreferenceLegacy?: number;
+    setMetricChange?: string;
+    setMetricDelay?: string;
+    setMetricLoading?: number;
+    setMetricMtu?: number;
+    setMetricReliability?: number;
+    setMetricType?: string;
+    setMetricValue?: number;
+    setTag?: number;
+    setVrf?: string;
+    setWeight?: number;
+    setWeightLegacy?: number;
+}
+
+export interface ServiceTemplateAccessGroup {
+    name: string;
+}
+
+export interface ServiceTemplateInterfaceTemplate {
+    name: string;
+}
+
+export interface ServiceTemplateTag {
+    name: string;
+}
+
+export interface SnmpServerContext {
+    name: string;
+}
+
+export interface SnmpServerGroupV3Security {
+    accessAclName?: string;
+    accessIpv6Acl?: string;
+    accessStandardAcl?: number;
+    contextNode?: string;
+    matchNode?: string;
+    notifyNode?: string;
+    readNode?: string;
+    securityLevel: string;
+    writeNode?: string;
+}
+
+export interface SnmpServerHost {
+    communityOrUser?: string;
+    encryption?: string;
+    ipAddress: string;
+    version?: string;
+}
+
+export interface SnmpServerSnmpCommunity {
+    accessListName?: string;
+    ipv6?: string;
+    name: string;
+    permission?: string;
+    view?: string;
+}
+
+export interface SnmpServerView {
+    incExl?: string;
+    mib: string;
+    name: string;
+}
+
+export interface StaticRouteNextHop {
+    global?: boolean;
+    metric?: number;
+    name?: string;
+    nextHop: string;
+    permanent?: boolean;
+    tag?: number;
+}
+
+export interface StaticRouteVrfRoute {
+    mask: string;
+    nextHops?: outputs.StaticRouteVrfRouteNextHop[];
+    prefix: string;
+}
+
+export interface StaticRouteVrfRouteNextHop {
+    global?: boolean;
+    metric?: number;
+    name?: string;
+    nextHop: string;
+    permanent?: boolean;
+    tag?: number;
+}
+
+export interface SystemMulticastRoutingVrf {
+    distributed?: boolean;
+    vrf: string;
+}
+
+export interface TemplateDeviceTrackingAttachPolicy {
+    policyName: string;
+    vlanRange?: string;
+}
+
+export interface TemplateIpAccessGroup {
+    accessList?: string;
+    direction: string;
+}
+
+export interface TemplateSwitchportPortSecurityMaximumRange {
+    range: number;
+    vlan?: boolean;
+    vlanAccess?: boolean;
+}
+
+export interface VrfIpv4RouteTargetExport {
+    value: string;
+}
+
+export interface VrfIpv4RouteTargetExportStitching {
+    stitching: boolean;
+    value: string;
+}
+
+export interface VrfIpv4RouteTargetImport {
+    value: string;
+}
+
+export interface VrfIpv4RouteTargetImportStitching {
+    stitching: boolean;
+    value: string;
+}
+
+export interface VrfIpv6RouteTargetExport {
+    value: string;
+}
+
+export interface VrfIpv6RouteTargetExportStitching {
+    stitching: boolean;
+    value: string;
+}
+
+export interface VrfIpv6RouteTargetImport {
+    value: string;
+}
+
+export interface VrfIpv6RouteTargetImportStitching {
+    stitching: boolean;
+    value: string;
+}
+
+export interface VrfRouteTargetExport {
+    stitching?: boolean;
+    value: string;
+}
+
+export interface VrfRouteTargetImport {
+    stitching?: boolean;
+    value: string;
+}
+
 export namespace config {
     export interface Devices {
         name: string;
         url: string;
-    }
-
-}
-
-export namespace iosxe {
-    export interface AaaAccountingExec {
-        name: string;
-        startStopGroup1?: string;
-    }
-
-    export interface AaaAccountingNetwork {
-        id: string;
-        startStopGroup1?: string;
-        startStopGroup2?: string;
-    }
-
-    export interface AaaAuthenticationLogin {
-        a1Enable?: boolean;
-        a1Group?: string;
-        a1Line?: boolean;
-        a1Local?: boolean;
-        a1None?: boolean;
-        a2Enable?: boolean;
-        a2Group?: string;
-        a2Line?: boolean;
-        a2Local?: boolean;
-        a2None?: boolean;
-        a3Enable?: boolean;
-        a3Group?: string;
-        a3Line?: boolean;
-        a3Local?: boolean;
-        a3None?: boolean;
-        a4Enable?: boolean;
-        a4Group?: string;
-        a4Line?: boolean;
-        a4Local?: boolean;
-        a4None?: boolean;
-        name: string;
-    }
-
-    export interface AaaAuthorizationExec {
-        a1Group?: string;
-        a1IfAuthenticated?: boolean;
-        a1Local?: boolean;
-        a2Local?: boolean;
-        name: string;
-    }
-
-    export interface AaaAuthorizationNetwork {
-        a1Group?: string;
-        id: string;
-    }
-
-    export interface AaaGroupServerRadius {
-        ipRadiusSourceInterfaceLoopback?: number;
-        name: string;
-        serverNames?: outputs.iosxe.AaaGroupServerRadiusServerName[];
-    }
-
-    export interface AaaGroupServerRadiusServerName {
-        name: string;
-    }
-
-    export interface AaaGroupServerTacacsplus {
-        name: string;
-        serverNames?: outputs.iosxe.AaaGroupServerTacacsplusServerName[];
-    }
-
-    export interface AaaGroupServerTacacsplusServerName {
-        name: string;
-    }
-
-    export interface AaaServerRadiusDynamicAuthorClient {
-        ip: string;
-        serverKey?: string;
-        serverKeyType?: string;
-    }
-
-    export interface AccessListExtendedEntry {
-        aceRuleAction?: string;
-        aceRuleProtocol?: string;
-        ack?: boolean;
-        destinationAny?: boolean;
-        destinationHost?: string;
-        destinationObjectGroup?: string;
-        destinationPortEqual?: string;
-        destinationPortGreaterThan?: string;
-        destinationPortLesserThan?: string;
-        destinationPortRangeFrom?: string;
-        destinationPortRangeTo?: string;
-        destinationPrefix?: string;
-        destinationPrefixMask?: string;
-        dscp?: string;
-        established?: boolean;
-        fin?: boolean;
-        fragments?: boolean;
-        log?: boolean;
-        logInput?: boolean;
-        precedence?: string;
-        psh?: boolean;
-        remark?: string;
-        rst?: boolean;
-        sequence: number;
-        serviceObjectGroup?: string;
-        sourceAny?: boolean;
-        sourceHost?: string;
-        sourceObjectGroup?: string;
-        sourcePortEqual?: string;
-        sourcePortGreaterThan?: string;
-        sourcePortLesserThan?: string;
-        sourcePortRangeFrom?: string;
-        sourcePortRangeTo?: string;
-        sourcePrefix?: string;
-        sourcePrefixMask?: string;
-        syn?: boolean;
-        tos?: string;
-        urg?: boolean;
-    }
-
-    export interface AccessListStandardEntry {
-        denyAny?: boolean;
-        denyHost?: string;
-        denyLog?: boolean;
-        denyPrefix?: string;
-        denyPrefixMask?: string;
-        permitAny?: boolean;
-        permitHost?: string;
-        permitLog?: boolean;
-        permitPrefix?: string;
-        permitPrefixMask?: string;
-        remark?: string;
-        sequence: number;
-    }
-
-    export interface ArpInspectionFilter {
-        name: string;
-        vlans?: outputs.iosxe.ArpInspectionFilterVlan[];
-    }
-
-    export interface ArpInspectionFilterVlan {
-        static?: boolean;
-        vlanRange: string;
-    }
-
-    export interface BfdIpv4BothVrf {
-        destIp: string;
-        dstVrf: string;
-        srcIp: string;
-        srcVrf: string;
-        templateName: string;
-    }
-
-    export interface BfdIpv4WithDstVrf {
-        destIp: string;
-        dstVrf: string;
-        srcIp: string;
-        templateName: string;
-    }
-
-    export interface BfdIpv4WithSrcVrf {
-        destIp: string;
-        srcIp: string;
-        srcVrf: string;
-        templateName: string;
-    }
-
-    export interface BfdIpv4WithoutVrf {
-        destIp: string;
-        srcIp: string;
-        templateName: string;
-    }
-
-    export interface BfdIpv6WithBothVrf {
-        destIpv6: string;
-        dstVrf: string;
-        srcIpv6: string;
-        srcVrf: string;
-        templateName: string;
-    }
-
-    export interface BfdIpv6WithDstVrf {
-        destIpv6: string;
-        dstVrf: string;
-        srcIpv6: string;
-        templateName: string;
-    }
-
-    export interface BfdIpv6WithSrcVrf {
-        destIpv6: string;
-        srcIpv6: string;
-        srcVrf: string;
-        templateName: string;
-    }
-
-    export interface BfdIpv6WithoutVrf {
-        destIpv6: string;
-        srcIpv6: string;
-        templateName: string;
-    }
-
-    export interface BgpAddressFamilyIpv4Ipv4UnicastNetwork {
-        backdoor?: boolean;
-        network: string;
-        routeMap?: string;
-    }
-
-    export interface BgpAddressFamilyIpv4Ipv4UnicastNetworksMask {
-        backdoor?: boolean;
-        mask: string;
-        network: string;
-        routeMap?: string;
-    }
-
-    export interface BgpAddressFamilyIpv4VrfVrf {
-        ipv4UnicastAdvertiseL2vpnEvpn?: boolean;
-        ipv4UnicastNetworks?: outputs.iosxe.BgpAddressFamilyIpv4VrfVrfIpv4UnicastNetwork[];
-        ipv4UnicastNetworksMasks?: outputs.iosxe.BgpAddressFamilyIpv4VrfVrfIpv4UnicastNetworksMask[];
-        ipv4UnicastRedistributeConnected?: boolean;
-        ipv4UnicastRedistributeStatic?: boolean;
-        name: string;
-    }
-
-    export interface BgpAddressFamilyIpv4VrfVrfIpv4UnicastNetwork {
-        backdoor?: boolean;
-        evpn?: boolean;
-        network: string;
-        routeMap?: string;
-    }
-
-    export interface BgpAddressFamilyIpv4VrfVrfIpv4UnicastNetworksMask {
-        backdoor?: boolean;
-        evpn?: boolean;
-        mask: string;
-        network: string;
-        routeMap?: string;
-    }
-
-    export interface BgpAddressFamilyIpv6Ipv6UnicastNetwork {
-        backdoor?: boolean;
-        network: string;
-        routeMap?: string;
-    }
-
-    export interface BgpAddressFamilyIpv6VrfVrf {
-        ipv6UnicastAdvertiseL2vpnEvpn?: boolean;
-        ipv6UnicastNetworks?: outputs.iosxe.BgpAddressFamilyIpv6VrfVrfIpv6UnicastNetwork[];
-        ipv6UnicastRedistributeConnected?: boolean;
-        ipv6UnicastRedistributeStatic?: boolean;
-        name: string;
-    }
-
-    export interface BgpAddressFamilyIpv6VrfVrfIpv6UnicastNetwork {
-        backdoor?: boolean;
-        evpn?: boolean;
-        network: string;
-        routeMap?: string;
-    }
-
-    export interface BgpIpv4UnicastNeighborRouteMap {
-        inOut: string;
-        routeMapName: string;
-    }
-
-    export interface BgpIpv4UnicastVrfNeighborRouteMap {
-        inOut: string;
-        routeMapName: string;
-    }
-
-    export interface BgpIpv6UnicastNeighborRouteMap {
-        inOut: string;
-        routeMapName: string;
-    }
-
-    export interface CdpTlvList {
-        cos?: boolean;
-        duplex?: boolean;
-        name: string;
-        trust?: boolean;
-        version?: boolean;
-        vtpMgmtDomain?: boolean;
-    }
-
-    export interface ClassMapMatchActivatedServiceTemplate {
-        serviceName: string;
-    }
-
-    export interface CryptoIkev2KeyringPeer {
-        description?: string;
-        hostname?: string;
-        identityAddress?: string;
-        identityEmailDomain?: string;
-        identityEmailName?: string;
-        identityFqdnDomain?: string;
-        identityFqdnName?: string;
-        identityKeyId?: string;
-        ipv4Address?: string;
-        ipv4Mask?: string;
-        ipv6Prefix?: string;
-        name: string;
-        preSharedKey?: string;
-        preSharedKeyEncryption?: string;
-        preSharedKeyLocal?: string;
-        preSharedKeyLocalEncryption?: string;
-        preSharedKeyRemote?: string;
-        preSharedKeyRemoteEncryption?: string;
-    }
-
-    export interface CryptoIkev2PolicyProposal {
-        proposals: string;
-    }
-
-    export interface CryptoIkev2ProfileMatchIdentityRemoteIpv4Address {
-        address: string;
-        mask?: string;
-    }
-
-    export interface DhcpSnoopingVlan {
-        vlanId: string;
-    }
-
-    export interface Dot1xCredential {
-        anonymousId?: string;
-        description?: string;
-        password?: string;
-        passwordType?: string;
-        pkiTrustpoint?: string;
-        profileName: string;
-        username?: string;
-    }
-
-    export interface GetAaaAccountingExec {
-        name: string;
-        startStopGroup1: string;
-    }
-
-    export interface GetAaaAccountingNetwork {
-        id: string;
-        startStopGroup1: string;
-        startStopGroup2: string;
-    }
-
-    export interface GetAaaAuthenticationLogin {
-        a1Enable: boolean;
-        a1Group: string;
-        a1Line: boolean;
-        a1Local: boolean;
-        a1None: boolean;
-        a2Enable: boolean;
-        a2Group: string;
-        a2Line: boolean;
-        a2Local: boolean;
-        a2None: boolean;
-        a3Enable: boolean;
-        a3Group: string;
-        a3Line: boolean;
-        a3Local: boolean;
-        a3None: boolean;
-        a4Enable: boolean;
-        a4Group: string;
-        a4Line: boolean;
-        a4Local: boolean;
-        a4None: boolean;
-        name: string;
-    }
-
-    export interface GetAaaAuthorizationExec {
-        a1Group: string;
-        a1IfAuthenticated: boolean;
-        a1Local: boolean;
-        a2Local: boolean;
-        name: string;
-    }
-
-    export interface GetAaaAuthorizationNetwork {
-        a1Group: string;
-        id: string;
-    }
-
-    export interface GetAaaGroupServerRadius {
-        ipRadiusSourceInterfaceLoopback: number;
-        name: string;
-        serverNames: outputs.iosxe.GetAaaGroupServerRadiusServerName[];
-    }
-
-    export interface GetAaaGroupServerRadiusServerName {
-        name: string;
-    }
-
-    export interface GetAaaGroupServerTacacsplus {
-        name: string;
-        serverNames: outputs.iosxe.GetAaaGroupServerTacacsplusServerName[];
-    }
-
-    export interface GetAaaGroupServerTacacsplusServerName {
-        name: string;
-    }
-
-    export interface GetAaaServerRadiusDynamicAuthorClient {
-        ip: string;
-        serverKey: string;
-        serverKeyType: string;
-    }
-
-    export interface GetAccessListExtendedEntry {
-        aceRuleAction: string;
-        aceRuleProtocol: string;
-        ack: boolean;
-        destinationAny: boolean;
-        destinationHost: string;
-        destinationObjectGroup: string;
-        destinationPortEqual: string;
-        destinationPortGreaterThan: string;
-        destinationPortLesserThan: string;
-        destinationPortRangeFrom: string;
-        destinationPortRangeTo: string;
-        destinationPrefix: string;
-        destinationPrefixMask: string;
-        dscp: string;
-        established: boolean;
-        fin: boolean;
-        fragments: boolean;
-        log: boolean;
-        logInput: boolean;
-        precedence: string;
-        psh: boolean;
-        remark: string;
-        rst: boolean;
-        sequence: number;
-        serviceObjectGroup: string;
-        sourceAny: boolean;
-        sourceHost: string;
-        sourceObjectGroup: string;
-        sourcePortEqual: string;
-        sourcePortGreaterThan: string;
-        sourcePortLesserThan: string;
-        sourcePortRangeFrom: string;
-        sourcePortRangeTo: string;
-        sourcePrefix: string;
-        sourcePrefixMask: string;
-        syn: boolean;
-        tos: string;
-        urg: boolean;
-    }
-
-    export interface GetAccessListStandardEntry {
-        denyAny: boolean;
-        denyHost: string;
-        denyLog: boolean;
-        denyPrefix: string;
-        denyPrefixMask: string;
-        permitAny: boolean;
-        permitHost: string;
-        permitLog: boolean;
-        permitPrefix: string;
-        permitPrefixMask: string;
-        remark: string;
-        sequence: number;
-    }
-
-    export interface GetArpInspectionFilter {
-        name: string;
-        vlans: outputs.iosxe.GetArpInspectionFilterVlan[];
-    }
-
-    export interface GetArpInspectionFilterVlan {
-        static: boolean;
-        vlanRange: string;
-    }
-
-    export interface GetBfdIpv4BothVrf {
-        destIp: string;
-        dstVrf: string;
-        srcIp: string;
-        srcVrf: string;
-        templateName: string;
-    }
-
-    export interface GetBfdIpv4WithDstVrf {
-        destIp: string;
-        dstVrf: string;
-        srcIp: string;
-        templateName: string;
-    }
-
-    export interface GetBfdIpv4WithSrcVrf {
-        destIp: string;
-        srcIp: string;
-        srcVrf: string;
-        templateName: string;
-    }
-
-    export interface GetBfdIpv4WithoutVrf {
-        destIp: string;
-        srcIp: string;
-        templateName: string;
-    }
-
-    export interface GetBfdIpv6WithBothVrf {
-        destIpv6: string;
-        dstVrf: string;
-        srcIpv6: string;
-        srcVrf: string;
-        templateName: string;
-    }
-
-    export interface GetBfdIpv6WithDstVrf {
-        destIpv6: string;
-        dstVrf: string;
-        srcIpv6: string;
-        templateName: string;
-    }
-
-    export interface GetBfdIpv6WithSrcVrf {
-        destIpv6: string;
-        srcIpv6: string;
-        srcVrf: string;
-        templateName: string;
-    }
-
-    export interface GetBfdIpv6WithoutVrf {
-        destIpv6: string;
-        srcIpv6: string;
-        templateName: string;
-    }
-
-    export interface GetBgpAddressFamilyIpv4Ipv4UnicastNetwork {
-        backdoor: boolean;
-        network: string;
-        routeMap: string;
-    }
-
-    export interface GetBgpAddressFamilyIpv4Ipv4UnicastNetworksMask {
-        backdoor: boolean;
-        mask: string;
-        network: string;
-        routeMap: string;
-    }
-
-    export interface GetBgpAddressFamilyIpv4VrfVrf {
-        ipv4UnicastAdvertiseL2vpnEvpn: boolean;
-        ipv4UnicastNetworks: outputs.iosxe.GetBgpAddressFamilyIpv4VrfVrfIpv4UnicastNetwork[];
-        ipv4UnicastNetworksMasks: outputs.iosxe.GetBgpAddressFamilyIpv4VrfVrfIpv4UnicastNetworksMask[];
-        ipv4UnicastRedistributeConnected: boolean;
-        ipv4UnicastRedistributeStatic: boolean;
-        name: string;
-    }
-
-    export interface GetBgpAddressFamilyIpv4VrfVrfIpv4UnicastNetwork {
-        backdoor: boolean;
-        evpn: boolean;
-        network: string;
-        routeMap: string;
-    }
-
-    export interface GetBgpAddressFamilyIpv4VrfVrfIpv4UnicastNetworksMask {
-        backdoor: boolean;
-        evpn: boolean;
-        mask: string;
-        network: string;
-        routeMap: string;
-    }
-
-    export interface GetBgpAddressFamilyIpv6Ipv6UnicastNetwork {
-        backdoor: boolean;
-        network: string;
-        routeMap: string;
-    }
-
-    export interface GetBgpAddressFamilyIpv6VrfVrf {
-        ipv6UnicastAdvertiseL2vpnEvpn: boolean;
-        ipv6UnicastNetworks: outputs.iosxe.GetBgpAddressFamilyIpv6VrfVrfIpv6UnicastNetwork[];
-        ipv6UnicastRedistributeConnected: boolean;
-        ipv6UnicastRedistributeStatic: boolean;
-        name: string;
-    }
-
-    export interface GetBgpAddressFamilyIpv6VrfVrfIpv6UnicastNetwork {
-        backdoor: boolean;
-        evpn: boolean;
-        network: string;
-        routeMap: string;
-    }
-
-    export interface GetBgpIpv4UnicastNeighborRouteMap {
-        inOut: string;
-        routeMapName: string;
-    }
-
-    export interface GetBgpIpv4UnicastVrfNeighborRouteMap {
-        inOut: string;
-        routeMapName: string;
-    }
-
-    export interface GetBgpIpv6UnicastNeighborRouteMap {
-        inOut: string;
-        routeMapName: string;
-    }
-
-    export interface GetCdpTlvList {
-        cos: boolean;
-        duplex: boolean;
-        name: string;
-        trust: boolean;
-        version: boolean;
-        vtpMgmtDomain: boolean;
-    }
-
-    export interface GetClassMapMatchActivatedServiceTemplate {
-        serviceName: string;
-    }
-
-    export interface GetCryptoIkev2KeyringPeer {
-        description: string;
-        hostname: string;
-        identityAddress: string;
-        identityEmailDomain: string;
-        identityEmailName: string;
-        identityFqdnDomain: string;
-        identityFqdnName: string;
-        identityKeyId: string;
-        ipv4Address: string;
-        ipv4Mask: string;
-        ipv6Prefix: string;
-        name: string;
-        preSharedKey: string;
-        preSharedKeyEncryption: string;
-        preSharedKeyLocal: string;
-        preSharedKeyLocalEncryption: string;
-        preSharedKeyRemote: string;
-        preSharedKeyRemoteEncryption: string;
-    }
-
-    export interface GetCryptoIkev2PolicyProposal {
-        proposals: string;
-    }
-
-    export interface GetCryptoIkev2ProfileMatchIdentityRemoteIpv4Address {
-        address: string;
-        mask: string;
-    }
-
-    export interface GetDhcpSnoopingVlan {
-        vlanId: string;
-    }
-
-    export interface GetDot1xCredential {
-        anonymousId: string;
-        description: string;
-        password: string;
-        passwordType: string;
-        pkiTrustpoint: string;
-        profileName: string;
-        username: string;
-    }
-
-    export interface GetInterfaceEthernetHelperAddress {
-        address: string;
-        global: boolean;
-        vrf: string;
-    }
-
-    export interface GetInterfaceEthernetIpv6Address {
-        eui64: boolean;
-        prefix: string;
-    }
-
-    export interface GetInterfaceEthernetIpv6LinkLocalAddress {
-        address: string;
-        linkLocal: boolean;
-    }
-
-    export interface GetInterfaceEthernetSourceTemplate {
-        merge: boolean;
-        templateName: string;
-    }
-
-    export interface GetInterfaceLoopbackIpv6Address {
-        eui64: boolean;
-        prefix: string;
-    }
-
-    export interface GetInterfaceLoopbackIpv6LinkLocalAddress {
-        address: string;
-        linkLocal: boolean;
-    }
-
-    export interface GetInterfaceNveVni {
-        ingressReplication: boolean;
-        ipv4MulticastGroup: string;
-        vniRange: string;
-    }
-
-    export interface GetInterfaceNveVniVrf {
-        vniRange: string;
-        vrf: string;
-    }
-
-    export interface GetInterfaceOspfMessageDigestKey {
-        id: number;
-        md5AuthKey: string;
-        md5AuthType: number;
-    }
-
-    export interface GetInterfaceOspfProcessId {
-        areas: outputs.iosxe.GetInterfaceOspfProcessIdArea[];
-        id: number;
-    }
-
-    export interface GetInterfaceOspfProcessIdArea {
-        areaId: string;
-    }
-
-    export interface GetInterfacePortChannelHelperAddress {
-        address: string;
-        global: boolean;
-        vrf: string;
-    }
-
-    export interface GetInterfacePortChannelIpv6Address {
-        eui64: boolean;
-        prefix: string;
-    }
-
-    export interface GetInterfacePortChannelIpv6LinkLocalAddress {
-        address: string;
-        linkLocal: boolean;
-    }
-
-    export interface GetInterfacePortChannelSubinterfaceHelperAddress {
-        address: string;
-        global: boolean;
-        vrf: string;
-    }
-
-    export interface GetInterfacePortChannelSubinterfaceIpv6Address {
-        eui64: boolean;
-        prefix: string;
-    }
-
-    export interface GetInterfacePortChannelSubinterfaceIpv6LinkLocalAddress {
-        address: string;
-        linkLocal: boolean;
-    }
-
-    export interface GetInterfaceTunnelHelperAddress {
-        address: string;
-        global: boolean;
-        vrf: string;
-    }
-
-    export interface GetInterfaceTunnelIpv6Address {
-        eui64: boolean;
-        prefix: string;
-    }
-
-    export interface GetInterfaceTunnelIpv6LinkLocalAddress {
-        address: string;
-        linkLocal: boolean;
-    }
-
-    export interface GetInterfaceVlanHelperAddress {
-        address: string;
-        global: boolean;
-        vrf: string;
-    }
-
-    export interface GetInterfaceVlanIpv6Address {
-        eui64: boolean;
-        prefix: string;
-    }
-
-    export interface GetInterfaceVlanIpv6LinkLocalAddress {
-        address: string;
-        linkLocal: boolean;
-    }
-
-    export interface GetLineConsole {
-        execTimeoutMinutes: number;
-        execTimeoutSeconds: number;
-        first: string;
-        loginAuthentication: string;
-        loginLocal: boolean;
-        password: string;
-        passwordLevel: number;
-        passwordType: string;
-        privilegeLevel: number;
-        stopbits: string;
-    }
-
-    export interface GetLineVty {
-        accessClasses: outputs.iosxe.GetLineVtyAccessClass[];
-        escapeCharacter: string;
-        execTimeoutMinutes: number;
-        execTimeoutSeconds: number;
-        first: number;
-        last: number;
-        loginAuthentication: string;
-        password: string;
-        passwordLevel: number;
-        passwordType: string;
-        transportPreferredProtocol: string;
-    }
-
-    export interface GetLineVtyAccessClass {
-        accessList: string;
-        direction: string;
-        vrfAlso: boolean;
-    }
-
-    export interface GetLoggingIpv4Host {
-        ipv4Host: string;
-    }
-
-    export interface GetLoggingIpv4HostTransportTransportTcpPort {
-        portNumber: number;
-    }
-
-    export interface GetLoggingIpv4HostTransportTransportTlsPort {
-        portNumber: number;
-        profile: string;
-    }
-
-    export interface GetLoggingIpv4HostTransportTransportUdpPort {
-        portNumber: number;
-    }
-
-    export interface GetLoggingIpv4HostVrfTransportTransportTcpPort {
-        portNumber: number;
-    }
-
-    export interface GetLoggingIpv4HostVrfTransportTransportTlsPort {
-        portNumber: number;
-        profile: string;
-    }
-
-    export interface GetLoggingIpv4HostVrfTransportTransportUdpPort {
-        portNumber: number;
-    }
-
-    export interface GetLoggingIpv4VrfHost {
-        ipv4Host: string;
-        vrf: string;
-    }
-
-    export interface GetLoggingIpv6Host {
-        ipv6Host: string;
-    }
-
-    export interface GetLoggingIpv6HostTransportTransportTcpPort {
-        portNumber: number;
-    }
-
-    export interface GetLoggingIpv6HostTransportTransportTlsPort {
-        portNumber: number;
-        profile: string;
-    }
-
-    export interface GetLoggingIpv6HostTransportTransportUdpPort {
-        portNumber: number;
-    }
-
-    export interface GetLoggingIpv6HostVrfTransportTransportTcpPort {
-        portNumber: number;
-    }
-
-    export interface GetLoggingIpv6HostVrfTransportTransportTlsPort {
-        portNumber: number;
-        profile: string;
-    }
-
-    export interface GetLoggingIpv6HostVrfTransportTransportUdpPort {
-        portNumber: number;
-    }
-
-    export interface GetLoggingIpv6VrfHost {
-        ipv6Host: string;
-        vrf: string;
-    }
-
-    export interface GetLoggingSourceInterfacesVrf {
-        interfaceName: string;
-        vrf: string;
-    }
-
-    export interface GetMdtSubscriptionReceiver {
-        address: string;
-        port: number;
-        protocol: string;
-    }
-
-    export interface GetMsdpPassword {
-        addr: string;
-        encryption: number;
-        password: string;
-    }
-
-    export interface GetMsdpPeer {
-        addr: string;
-        connectSourceLoopback: number;
-        remoteAs: number;
-    }
-
-    export interface GetMsdpVrfPassword {
-        addr: string;
-        encryption: number;
-        password: string;
-    }
-
-    export interface GetMsdpVrfPeer {
-        addr: string;
-        connectSourceLoopback: number;
-        remoteAs: number;
-    }
-
-    export interface GetNtpAuthenticationKey {
-        cmacAes128: string;
-        encryptionType: number;
-        hmacSha1: string;
-        hmacSha2256: string;
-        md5: string;
-        number: number;
-        sha1: string;
-        sha2: string;
-    }
-
-    export interface GetNtpPeer {
-        ipAddress: string;
-        key: number;
-        prefer: boolean;
-        source: string;
-        version: number;
-    }
-
-    export interface GetNtpPeerVrf {
-        name: string;
-        peers: outputs.iosxe.GetNtpPeerVrfPeer[];
-    }
-
-    export interface GetNtpPeerVrfPeer {
-        ipAddress: string;
-        key: number;
-        prefer: boolean;
-        version: number;
-    }
-
-    export interface GetNtpServer {
-        ipAddress: string;
-        key: number;
-        prefer: boolean;
-        source: string;
-        version: number;
-    }
-
-    export interface GetNtpServerVrf {
-        name: string;
-        servers: outputs.iosxe.GetNtpServerVrfServer[];
-    }
-
-    export interface GetNtpServerVrfServer {
-        ipAddress: string;
-        key: number;
-        prefer: boolean;
-        version: number;
-    }
-
-    export interface GetOspfArea {
-        areaId: string;
-        authenticationMessageDigest: boolean;
-        nssa: boolean;
-        nssaDefaultInformationOriginate: boolean;
-        nssaDefaultInformationOriginateMetric: number;
-        nssaDefaultInformationOriginateMetricType: number;
-        nssaNoRedistribution: boolean;
-        nssaNoSummary: boolean;
-    }
-
-    export interface GetOspfNeighbor {
-        cost: number;
-        ip: string;
-        priority: number;
-    }
-
-    export interface GetOspfNetwork {
-        area: string;
-        ip: string;
-        wildcard: string;
-    }
-
-    export interface GetOspfSummaryAddress {
-        ip: string;
-        mask: string;
-    }
-
-    export interface GetOspfVrfArea {
-        areaId: string;
-        authenticationMessageDigest: boolean;
-        nssa: boolean;
-        nssaDefaultInformationOriginate: boolean;
-        nssaDefaultInformationOriginateMetric: number;
-        nssaDefaultInformationOriginateMetricType: number;
-        nssaNoRedistribution: boolean;
-        nssaNoSummary: boolean;
-    }
-
-    export interface GetOspfVrfNeighbor {
-        cost: number;
-        ip: string;
-        priority: number;
-    }
-
-    export interface GetOspfVrfNetwork {
-        area: string;
-        ip: string;
-        wildcard: string;
-    }
-
-    export interface GetOspfVrfSummaryAddress {
-        ip: string;
-        mask: string;
-    }
-
-    export interface GetPimRpAddress {
-        accessList: string;
-        bidir: boolean;
-        override: boolean;
-        rpAddress: string;
-    }
-
-    export interface GetPimRpCandidate {
-        bidir: boolean;
-        groupList: string;
-        interface: string;
-        interval: number;
-        priority: number;
-    }
-
-    export interface GetPimVrfRpAddress {
-        accessList: string;
-        bidir: boolean;
-        override: boolean;
-        rpAddress: string;
-    }
-
-    export interface GetPimVrfRpCandidate {
-        bidir: boolean;
-        groupList: string;
-        interface: string;
-        interval: number;
-        priority: number;
-    }
-
-    export interface GetPolicyMapEventClassNumber {
-        actionNumbers: outputs.iosxe.GetPolicyMapEventClassNumberActionNumber[];
-        class: string;
-        executionType: string;
-        number: number;
-    }
-
-    export interface GetPolicyMapEventClassNumberActionNumber {
-        activateServiceTemplateConfigServiceTemplate: string;
-        authenticateUsingMethod: string;
-        authenticateUsingPriority: number;
-        authenticateUsingRetries: number;
-        authenticateUsingRetryTime: number;
-        authorize: boolean;
-        number: number;
-        pauseReauthentication: boolean;
-        terminateConfig: string;
-    }
-
-    export interface GetPrefixListPrefix {
-        action: string;
-        ge: number;
-        ip: string;
-        le: number;
-        name: string;
-        seq: number;
-    }
-
-    export interface GetRadiusServerAttribute {
-        accessRequestInclude: boolean;
-        attribute31Parameters: outputs.iosxe.GetRadiusServerAttributeAttribute31Parameter[];
-        number: string;
-        sendAttributes: string[];
-    }
-
-    export interface GetRadiusServerAttributeAttribute31Parameter {
-        callingStationId: string;
-        idMacFormat: string;
-        idMacLuCase: string;
-        idSendMacOnly: boolean;
-        idSendNasPortDetail: boolean;
-    }
-
-    export interface GetRouteMapEntry {
-        continue: boolean;
-        continueSequenceNumber: number;
-        description: string;
-        matchAsPaths: number[];
-        matchAsPathsLegacies: number[];
-        matchCommunityListExactMatch: boolean;
-        matchCommunityLists: string[];
-        matchCommunityListsLegacies: string[];
-        matchExtcommunityLists: string[];
-        matchExtcommunityListsLegacies: string[];
-        matchInterfaces: string[];
-        matchIpAddressAccessLists: string[];
-        matchIpAddressPrefixLists: string[];
-        matchIpNextHopAccessLists: string[];
-        matchIpNextHopPrefixLists: string[];
-        matchIpv6AddressAccessLists: string;
-        matchIpv6AddressPrefixLists: string;
-        matchIpv6NextHopAccessLists: string;
-        matchIpv6NextHopPrefixLists: string;
-        matchLocalPreferences: number[];
-        matchLocalPreferencesLegacies: number[];
-        matchRouteTypeExternal: boolean;
-        matchRouteTypeExternalType1: boolean;
-        matchRouteTypeExternalType2: boolean;
-        matchRouteTypeInternal: boolean;
-        matchRouteTypeLevel1: boolean;
-        matchRouteTypeLevel2: boolean;
-        matchRouteTypeLocal: boolean;
-        matchSourceProtocolBgps: string[];
-        matchSourceProtocolConnected: boolean;
-        matchSourceProtocolEigrps: string[];
-        matchSourceProtocolIsis: boolean;
-        matchSourceProtocolLisp: boolean;
-        matchSourceProtocolOspfs: string[];
-        matchSourceProtocolOspfv3s: string[];
-        matchSourceProtocolRip: boolean;
-        matchSourceProtocolStatic: boolean;
-        matchTags: number[];
-        matchTrack: number;
-        operation: string;
-        seq: number;
-        setAsPathPrependAs: string;
-        setAsPathPrependAsLegacy: string;
-        setAsPathPrependLastAs: number;
-        setAsPathPrependLastAsLegacy: number;
-        setAsPathTag: boolean;
-        setAsPathTagLegacy: boolean;
-        setCommunities: string[];
-        setCommunitiesAdditive: boolean;
-        setCommunitiesAdditiveLegacy: boolean;
-        setCommunitiesLegacies: string[];
-        setCommunityListDelete: boolean;
-        setCommunityListDeleteLegacy: boolean;
-        setCommunityListExpanded: number;
-        setCommunityListExpandedLegacy: number;
-        setCommunityListName: string;
-        setCommunityListNameLegacy: string;
-        setCommunityListStandard: number;
-        setCommunityListStandardLegacy: number;
-        setCommunityNone: boolean;
-        setCommunityNoneLegacy: boolean;
-        setDefaultInterfaces: string[];
-        setExtcomunityRtLegacies: string[];
-        setExtcomunityRts: string[];
-        setExtcomunitySoo: string;
-        setExtcomunitySooLegacy: string;
-        setExtcomunityVpnDistinguisher: string;
-        setExtcomunityVpnDistinguisherAdditive: boolean;
-        setExtcomunityVpnDistinguisherLegacy: string;
-        setGlobal: boolean;
-        setInterfaces: string[];
-        setIpAddress: string;
-        setIpDefaultGlobalNextHopAddresses: string[];
-        setIpDefaultNextHopAddresses: string[];
-        setIpGlobalNextHopAddresses: string[];
-        setIpNextHopAddresses: string[];
-        setIpNextHopSelf: boolean;
-        setIpQosGroup: number;
-        setIpv6Addresses: string[];
-        setIpv6DefaultGlobalNextHop: string;
-        setIpv6DefaultNextHops: string[];
-        setIpv6NextHops: string[];
-        setLevel1: boolean;
-        setLevel12: boolean;
-        setLevel2: boolean;
-        setLocalPreference: number;
-        setLocalPreferenceLegacy: number;
-        setMetricChange: string;
-        setMetricDelay: string;
-        setMetricLoading: number;
-        setMetricMtu: number;
-        setMetricReliability: number;
-        setMetricType: string;
-        setMetricValue: number;
-        setTag: number;
-        setVrf: string;
-        setWeight: number;
-        setWeightLegacy: number;
-    }
-
-    export interface GetServiceTemplateAccessGroup {
-        name: string;
-    }
-
-    export interface GetServiceTemplateInterfaceTemplate {
-        name: string;
-    }
-
-    export interface GetServiceTemplateTag {
-        name: string;
-    }
-
-    export interface GetSnmpServerContext {
-        name: string;
-    }
-
-    export interface GetSnmpServerGroupV3Security {
-        accessAclName: string;
-        accessIpv6Acl: string;
-        accessStandardAcl: number;
-        contextNode: string;
-        matchNode: string;
-        notifyNode: string;
-        readNode: string;
-        securityLevel: string;
-        writeNode: string;
-    }
-
-    export interface GetSnmpServerHost {
-        communityOrUser: string;
-        encryption: string;
-        ipAddress: string;
-        version: string;
-    }
-
-    export interface GetSnmpServerSnmpCommunity {
-        accessListName: string;
-        ipv6: string;
-        name: string;
-        permission: string;
-        view: string;
-    }
-
-    export interface GetSnmpServerView {
-        incExl: string;
-        mib: string;
-        name: string;
-    }
-
-    export interface GetStaticRouteNextHop {
-        global: boolean;
-        metric: number;
-        name: string;
-        nextHop: string;
-        permanent: boolean;
-        tag: number;
-    }
-
-    export interface GetStaticRouteVrfRoute {
-        mask: string;
-        nextHops: outputs.iosxe.GetStaticRouteVrfRouteNextHop[];
-        prefix: string;
-    }
-
-    export interface GetStaticRouteVrfRouteNextHop {
-        global: boolean;
-        metric: number;
-        name: string;
-        nextHop: string;
-        permanent: boolean;
-        tag: number;
-    }
-
-    export interface GetSystemMulticastRoutingVrf {
-        distributed: boolean;
-        vrf: string;
-    }
-
-    export interface GetTemplateDeviceTrackingAttachPolicy {
-        policyName: string;
-        vlanRange: string;
-    }
-
-    export interface GetTemplateIpAccessGroup {
-        accessList: string;
-        direction: string;
-    }
-
-    export interface GetTemplateSwitchportPortSecurityMaximumRange {
-        range: number;
-        vlan: boolean;
-        vlanAccess: boolean;
-    }
-
-    export interface GetVrfIpv4RouteTargetExport {
-        value: string;
-    }
-
-    export interface GetVrfIpv4RouteTargetExportStitching {
-        stitching: boolean;
-        value: string;
-    }
-
-    export interface GetVrfIpv4RouteTargetImport {
-        value: string;
-    }
-
-    export interface GetVrfIpv4RouteTargetImportStitching {
-        stitching: boolean;
-        value: string;
-    }
-
-    export interface GetVrfIpv6RouteTargetExport {
-        value: string;
-    }
-
-    export interface GetVrfIpv6RouteTargetExportStitching {
-        stitching: boolean;
-        value: string;
-    }
-
-    export interface GetVrfIpv6RouteTargetImport {
-        value: string;
-    }
-
-    export interface GetVrfIpv6RouteTargetImportStitching {
-        stitching: boolean;
-        value: string;
-    }
-
-    export interface GetVrfRouteTargetExport {
-        stitching: boolean;
-        value: string;
-    }
-
-    export interface GetVrfRouteTargetImport {
-        stitching: boolean;
-        value: string;
-    }
-
-    export interface InterfaceEthernetHelperAddress {
-        address: string;
-        global?: boolean;
-        vrf?: string;
-    }
-
-    export interface InterfaceEthernetIpv6Address {
-        eui64?: boolean;
-        prefix: string;
-    }
-
-    export interface InterfaceEthernetIpv6LinkLocalAddress {
-        address: string;
-        linkLocal?: boolean;
-    }
-
-    export interface InterfaceEthernetSourceTemplate {
-        merge?: boolean;
-        templateName: string;
-    }
-
-    export interface InterfaceLoopbackIpv6Address {
-        eui64?: boolean;
-        prefix: string;
-    }
-
-    export interface InterfaceLoopbackIpv6LinkLocalAddress {
-        address: string;
-        linkLocal?: boolean;
-    }
-
-    export interface InterfaceNveVni {
-        ingressReplication?: boolean;
-        ipv4MulticastGroup?: string;
-        vniRange: string;
-    }
-
-    export interface InterfaceNveVniVrf {
-        vniRange: string;
-        vrf?: string;
-    }
-
-    export interface InterfaceOspfMessageDigestKey {
-        id: number;
-        md5AuthKey?: string;
-        md5AuthType?: number;
-    }
-
-    export interface InterfaceOspfProcessId {
-        areas?: outputs.iosxe.InterfaceOspfProcessIdArea[];
-        id: number;
-    }
-
-    export interface InterfaceOspfProcessIdArea {
-        areaId: string;
-    }
-
-    export interface InterfacePortChannelHelperAddress {
-        address: string;
-        global?: boolean;
-        vrf?: string;
-    }
-
-    export interface InterfacePortChannelIpv6Address {
-        eui64?: boolean;
-        prefix: string;
-    }
-
-    export interface InterfacePortChannelIpv6LinkLocalAddress {
-        address: string;
-        linkLocal?: boolean;
-    }
-
-    export interface InterfacePortChannelSubinterfaceHelperAddress {
-        address: string;
-        global?: boolean;
-        vrf?: string;
-    }
-
-    export interface InterfacePortChannelSubinterfaceIpv6Address {
-        eui64?: boolean;
-        prefix: string;
-    }
-
-    export interface InterfacePortChannelSubinterfaceIpv6LinkLocalAddress {
-        address: string;
-        linkLocal?: boolean;
-    }
-
-    export interface InterfaceTunnelHelperAddress {
-        address: string;
-        global?: boolean;
-        vrf?: string;
-    }
-
-    export interface InterfaceTunnelIpv6Address {
-        eui64?: boolean;
-        prefix: string;
-    }
-
-    export interface InterfaceTunnelIpv6LinkLocalAddress {
-        address: string;
-        linkLocal?: boolean;
-    }
-
-    export interface InterfaceVlanHelperAddress {
-        address: string;
-        global?: boolean;
-        vrf?: string;
-    }
-
-    export interface InterfaceVlanIpv6Address {
-        eui64?: boolean;
-        prefix: string;
-    }
-
-    export interface InterfaceVlanIpv6LinkLocalAddress {
-        address: string;
-        linkLocal?: boolean;
-    }
-
-    export interface LineConsole {
-        execTimeoutMinutes?: number;
-        execTimeoutSeconds?: number;
-        first: string;
-        loginAuthentication?: string;
-        loginLocal?: boolean;
-        password?: string;
-        passwordLevel?: number;
-        passwordType?: string;
-        privilegeLevel?: number;
-        stopbits?: string;
-    }
-
-    export interface LineVty {
-        accessClasses?: outputs.iosxe.LineVtyAccessClass[];
-        escapeCharacter?: string;
-        execTimeoutMinutes?: number;
-        execTimeoutSeconds?: number;
-        first: number;
-        last?: number;
-        loginAuthentication?: string;
-        password?: string;
-        passwordLevel?: number;
-        passwordType?: string;
-        transportPreferredProtocol?: string;
-    }
-
-    export interface LineVtyAccessClass {
-        accessList: string;
-        direction: string;
-        vrfAlso?: boolean;
-    }
-
-    export interface LoggingIpv4Host {
-        ipv4Host: string;
-    }
-
-    export interface LoggingIpv4HostTransportTransportTcpPort {
-        portNumber: number;
-    }
-
-    export interface LoggingIpv4HostTransportTransportTlsPort {
-        portNumber: number;
-        profile?: string;
-    }
-
-    export interface LoggingIpv4HostTransportTransportUdpPort {
-        portNumber: number;
-    }
-
-    export interface LoggingIpv4HostVrfTransportTransportTcpPort {
-        portNumber: number;
-    }
-
-    export interface LoggingIpv4HostVrfTransportTransportTlsPort {
-        portNumber: number;
-        profile?: string;
-    }
-
-    export interface LoggingIpv4HostVrfTransportTransportUdpPort {
-        portNumber: number;
-    }
-
-    export interface LoggingIpv4VrfHost {
-        ipv4Host: string;
-        vrf: string;
-    }
-
-    export interface LoggingIpv6Host {
-        ipv6Host: string;
-    }
-
-    export interface LoggingIpv6HostTransportTransportTcpPort {
-        portNumber: number;
-    }
-
-    export interface LoggingIpv6HostTransportTransportTlsPort {
-        portNumber: number;
-        profile?: string;
-    }
-
-    export interface LoggingIpv6HostTransportTransportUdpPort {
-        portNumber: number;
-    }
-
-    export interface LoggingIpv6HostVrfTransportTransportTcpPort {
-        portNumber: number;
-    }
-
-    export interface LoggingIpv6HostVrfTransportTransportTlsPort {
-        portNumber: number;
-        profile?: string;
-    }
-
-    export interface LoggingIpv6HostVrfTransportTransportUdpPort {
-        portNumber: number;
-    }
-
-    export interface LoggingIpv6VrfHost {
-        ipv6Host: string;
-        vrf: string;
-    }
-
-    export interface LoggingSourceInterfacesVrf {
-        interfaceName: string;
-        vrf: string;
-    }
-
-    export interface MdtSubscriptionReceiver {
-        address: string;
-        port: number;
-        protocol: string;
-    }
-
-    export interface MsdpPassword {
-        addr: string;
-        encryption?: number;
-        password: string;
-    }
-
-    export interface MsdpPeer {
-        addr: string;
-        connectSourceLoopback?: number;
-        remoteAs?: number;
-    }
-
-    export interface MsdpVrfPassword {
-        addr: string;
-        encryption?: number;
-        password: string;
-    }
-
-    export interface MsdpVrfPeer {
-        addr: string;
-        connectSourceLoopback?: number;
-        remoteAs?: number;
-    }
-
-    export interface NtpAuthenticationKey {
-        cmacAes128?: string;
-        encryptionType?: number;
-        hmacSha1?: string;
-        hmacSha2256?: string;
-        md5?: string;
-        number: number;
-        sha1?: string;
-        sha2?: string;
-    }
-
-    export interface NtpPeer {
-        ipAddress: string;
-        key?: number;
-        prefer?: boolean;
-        source?: string;
-        version?: number;
-    }
-
-    export interface NtpPeerVrf {
-        name: string;
-        peers?: outputs.iosxe.NtpPeerVrfPeer[];
-    }
-
-    export interface NtpPeerVrfPeer {
-        ipAddress: string;
-        key?: number;
-        prefer?: boolean;
-        version?: number;
-    }
-
-    export interface NtpServer {
-        ipAddress: string;
-        key?: number;
-        prefer?: boolean;
-        source?: string;
-        version?: number;
-    }
-
-    export interface NtpServerVrf {
-        name: string;
-        servers?: outputs.iosxe.NtpServerVrfServer[];
-    }
-
-    export interface NtpServerVrfServer {
-        ipAddress: string;
-        key?: number;
-        prefer?: boolean;
-        version?: number;
-    }
-
-    export interface OspfArea {
-        areaId: string;
-        authenticationMessageDigest?: boolean;
-        nssa?: boolean;
-        nssaDefaultInformationOriginate?: boolean;
-        nssaDefaultInformationOriginateMetric?: number;
-        nssaDefaultInformationOriginateMetricType?: number;
-        nssaNoRedistribution?: boolean;
-        nssaNoSummary?: boolean;
-    }
-
-    export interface OspfNeighbor {
-        cost?: number;
-        ip: string;
-        priority?: number;
-    }
-
-    export interface OspfNetwork {
-        area?: string;
-        ip: string;
-        wildcard?: string;
-    }
-
-    export interface OspfSummaryAddress {
-        ip: string;
-        mask?: string;
-    }
-
-    export interface OspfVrfArea {
-        areaId: string;
-        authenticationMessageDigest?: boolean;
-        nssa?: boolean;
-        nssaDefaultInformationOriginate?: boolean;
-        nssaDefaultInformationOriginateMetric?: number;
-        nssaDefaultInformationOriginateMetricType?: number;
-        nssaNoRedistribution?: boolean;
-        nssaNoSummary?: boolean;
-    }
-
-    export interface OspfVrfNeighbor {
-        cost?: number;
-        ip: string;
-        priority?: number;
-    }
-
-    export interface OspfVrfNetwork {
-        area?: string;
-        ip: string;
-        wildcard?: string;
-    }
-
-    export interface OspfVrfSummaryAddress {
-        ip: string;
-        mask?: string;
-    }
-
-    export interface PimRpAddress {
-        accessList: string;
-        bidir?: boolean;
-        override?: boolean;
-        rpAddress?: string;
-    }
-
-    export interface PimRpCandidate {
-        bidir?: boolean;
-        groupList?: string;
-        interface: string;
-        interval?: number;
-        priority?: number;
-    }
-
-    export interface PimVrfRpAddress {
-        accessList: string;
-        bidir?: boolean;
-        override?: boolean;
-        rpAddress?: string;
-    }
-
-    export interface PimVrfRpCandidate {
-        bidir?: boolean;
-        groupList?: string;
-        interface: string;
-        interval?: number;
-        priority?: number;
-    }
-
-    export interface PolicyMapEventClassNumber {
-        actionNumbers?: outputs.iosxe.PolicyMapEventClassNumberActionNumber[];
-        class?: string;
-        executionType?: string;
-        number: number;
-    }
-
-    export interface PolicyMapEventClassNumberActionNumber {
-        activateServiceTemplateConfigServiceTemplate?: string;
-        authenticateUsingMethod?: string;
-        authenticateUsingPriority?: number;
-        authenticateUsingRetries?: number;
-        authenticateUsingRetryTime?: number;
-        authorize?: boolean;
-        number: number;
-        pauseReauthentication?: boolean;
-        terminateConfig?: string;
-    }
-
-    export interface PrefixListPrefix {
-        action?: string;
-        ge?: number;
-        ip?: string;
-        le?: number;
-        name: string;
-        seq: number;
-    }
-
-    export interface RadiusServerAttribute {
-        accessRequestInclude?: boolean;
-        attribute31Parameters?: outputs.iosxe.RadiusServerAttributeAttribute31Parameter[];
-        number: string;
-        sendAttributes?: string[];
-    }
-
-    export interface RadiusServerAttributeAttribute31Parameter {
-        callingStationId: string;
-        idMacFormat?: string;
-        idMacLuCase?: string;
-        idSendMacOnly?: boolean;
-        idSendNasPortDetail?: boolean;
-    }
-
-    export interface RestconfList {
-        items?: {[key: string]: string}[];
-        key: string;
-        name: string;
-        values?: string[];
-    }
-
-    export interface RouteMapEntry {
-        continue?: boolean;
-        continueSequenceNumber?: number;
-        description?: string;
-        matchAsPaths?: number[];
-        matchAsPathsLegacies?: number[];
-        matchCommunityListExactMatch?: boolean;
-        matchCommunityLists?: string[];
-        matchCommunityListsLegacies?: string[];
-        matchExtcommunityLists?: string[];
-        matchExtcommunityListsLegacies?: string[];
-        matchInterfaces?: string[];
-        matchIpAddressAccessLists?: string[];
-        matchIpAddressPrefixLists?: string[];
-        matchIpNextHopAccessLists?: string[];
-        matchIpNextHopPrefixLists?: string[];
-        matchIpv6AddressAccessLists?: string;
-        matchIpv6AddressPrefixLists?: string;
-        matchIpv6NextHopAccessLists?: string;
-        matchIpv6NextHopPrefixLists?: string;
-        matchLocalPreferences?: number[];
-        matchLocalPreferencesLegacies?: number[];
-        matchRouteTypeExternal?: boolean;
-        matchRouteTypeExternalType1?: boolean;
-        matchRouteTypeExternalType2?: boolean;
-        matchRouteTypeInternal?: boolean;
-        matchRouteTypeLevel1?: boolean;
-        matchRouteTypeLevel2?: boolean;
-        matchRouteTypeLocal?: boolean;
-        matchSourceProtocolBgps?: string[];
-        matchSourceProtocolConnected?: boolean;
-        matchSourceProtocolEigrps?: string[];
-        matchSourceProtocolIsis?: boolean;
-        matchSourceProtocolLisp?: boolean;
-        matchSourceProtocolOspfs?: string[];
-        matchSourceProtocolOspfv3s?: string[];
-        matchSourceProtocolRip?: boolean;
-        matchSourceProtocolStatic?: boolean;
-        matchTags?: number[];
-        matchTrack?: number;
-        operation?: string;
-        seq: number;
-        setAsPathPrependAs?: string;
-        setAsPathPrependAsLegacy?: string;
-        setAsPathPrependLastAs?: number;
-        setAsPathPrependLastAsLegacy?: number;
-        setAsPathTag?: boolean;
-        setAsPathTagLegacy?: boolean;
-        setCommunities?: string[];
-        setCommunitiesAdditive?: boolean;
-        setCommunitiesAdditiveLegacy?: boolean;
-        setCommunitiesLegacies?: string[];
-        setCommunityListDelete?: boolean;
-        setCommunityListDeleteLegacy?: boolean;
-        setCommunityListExpanded?: number;
-        setCommunityListExpandedLegacy?: number;
-        setCommunityListName?: string;
-        setCommunityListNameLegacy?: string;
-        setCommunityListStandard?: number;
-        setCommunityListStandardLegacy?: number;
-        setCommunityNone?: boolean;
-        setCommunityNoneLegacy?: boolean;
-        setDefaultInterfaces?: string[];
-        setExtcomunityRtLegacies?: string[];
-        setExtcomunityRts?: string[];
-        setExtcomunitySoo?: string;
-        setExtcomunitySooLegacy?: string;
-        setExtcomunityVpnDistinguisher?: string;
-        setExtcomunityVpnDistinguisherAdditive?: boolean;
-        setExtcomunityVpnDistinguisherLegacy?: string;
-        setGlobal?: boolean;
-        setInterfaces?: string[];
-        setIpAddress?: string;
-        setIpDefaultGlobalNextHopAddresses?: string[];
-        setIpDefaultNextHopAddresses?: string[];
-        setIpGlobalNextHopAddresses?: string[];
-        setIpNextHopAddresses?: string[];
-        setIpNextHopSelf?: boolean;
-        setIpQosGroup?: number;
-        setIpv6Addresses?: string[];
-        setIpv6DefaultGlobalNextHop?: string;
-        setIpv6DefaultNextHops?: string[];
-        setIpv6NextHops?: string[];
-        setLevel1?: boolean;
-        setLevel12?: boolean;
-        setLevel2?: boolean;
-        setLocalPreference?: number;
-        setLocalPreferenceLegacy?: number;
-        setMetricChange?: string;
-        setMetricDelay?: string;
-        setMetricLoading?: number;
-        setMetricMtu?: number;
-        setMetricReliability?: number;
-        setMetricType?: string;
-        setMetricValue?: number;
-        setTag?: number;
-        setVrf?: string;
-        setWeight?: number;
-        setWeightLegacy?: number;
-    }
-
-    export interface ServiceTemplateAccessGroup {
-        name: string;
-    }
-
-    export interface ServiceTemplateInterfaceTemplate {
-        name: string;
-    }
-
-    export interface ServiceTemplateTag {
-        name: string;
-    }
-
-    export interface SnmpServerContext {
-        name: string;
-    }
-
-    export interface SnmpServerGroupV3Security {
-        accessAclName?: string;
-        accessIpv6Acl?: string;
-        accessStandardAcl?: number;
-        contextNode?: string;
-        matchNode?: string;
-        notifyNode?: string;
-        readNode?: string;
-        securityLevel: string;
-        writeNode?: string;
-    }
-
-    export interface SnmpServerHost {
-        communityOrUser?: string;
-        encryption?: string;
-        ipAddress: string;
-        version?: string;
-    }
-
-    export interface SnmpServerSnmpCommunity {
-        accessListName?: string;
-        ipv6?: string;
-        name: string;
-        permission?: string;
-        view?: string;
-    }
-
-    export interface SnmpServerView {
-        incExl?: string;
-        mib: string;
-        name: string;
-    }
-
-    export interface StaticRouteNextHop {
-        global?: boolean;
-        metric?: number;
-        name?: string;
-        nextHop: string;
-        permanent?: boolean;
-        tag?: number;
-    }
-
-    export interface StaticRouteVrfRoute {
-        mask: string;
-        nextHops?: outputs.iosxe.StaticRouteVrfRouteNextHop[];
-        prefix: string;
-    }
-
-    export interface StaticRouteVrfRouteNextHop {
-        global?: boolean;
-        metric?: number;
-        name?: string;
-        nextHop: string;
-        permanent?: boolean;
-        tag?: number;
-    }
-
-    export interface SystemMulticastRoutingVrf {
-        distributed?: boolean;
-        vrf: string;
-    }
-
-    export interface TemplateDeviceTrackingAttachPolicy {
-        policyName: string;
-        vlanRange?: string;
-    }
-
-    export interface TemplateIpAccessGroup {
-        accessList?: string;
-        direction: string;
-    }
-
-    export interface TemplateSwitchportPortSecurityMaximumRange {
-        range: number;
-        vlan?: boolean;
-        vlanAccess?: boolean;
-    }
-
-    export interface VrfIpv4RouteTargetExport {
-        value: string;
-    }
-
-    export interface VrfIpv4RouteTargetExportStitching {
-        stitching: boolean;
-        value: string;
-    }
-
-    export interface VrfIpv4RouteTargetImport {
-        value: string;
-    }
-
-    export interface VrfIpv4RouteTargetImportStitching {
-        stitching: boolean;
-        value: string;
-    }
-
-    export interface VrfIpv6RouteTargetExport {
-        value: string;
-    }
-
-    export interface VrfIpv6RouteTargetExportStitching {
-        stitching: boolean;
-        value: string;
-    }
-
-    export interface VrfIpv6RouteTargetImport {
-        value: string;
-    }
-
-    export interface VrfIpv6RouteTargetImportStitching {
-        stitching: boolean;
-        value: string;
-    }
-
-    export interface VrfRouteTargetExport {
-        stitching?: boolean;
-        value: string;
-    }
-
-    export interface VrfRouteTargetImport {
-        stitching?: boolean;
-        value: string;
     }
 
 }

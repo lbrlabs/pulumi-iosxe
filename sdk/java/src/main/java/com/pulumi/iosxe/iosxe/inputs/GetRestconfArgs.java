@@ -15,16 +15,32 @@ public final class GetRestconfArgs extends com.pulumi.resources.InvokeArgs {
 
     public static final GetRestconfArgs Empty = new GetRestconfArgs();
 
+    /**
+     * A device name from the provider configuration.
+     * 
+     */
     @Import(name="device")
     private @Nullable Output<String> device;
 
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<Output<String>> device() {
         return Optional.ofNullable(this.device);
     }
 
+    /**
+     * A RESTCONF path, e.g. `openconfig-interfaces:interfaces`.
+     * 
+     */
     @Import(name="path", required=true)
     private Output<String> path;
 
+    /**
+     * @return A RESTCONF path, e.g. `openconfig-interfaces:interfaces`.
+     * 
+     */
     public Output<String> path() {
         return this.path;
     }
@@ -54,20 +70,44 @@ public final class GetRestconfArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetRestconfArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param device A device name from the provider configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder device(@Nullable Output<String> device) {
             $.device = device;
             return this;
         }
 
+        /**
+         * @param device A device name from the provider configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder device(String device) {
             return device(Output.of(device));
         }
 
+        /**
+         * @param path A RESTCONF path, e.g. `openconfig-interfaces:interfaces`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(Output<String> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path A RESTCONF path, e.g. `openconfig-interfaces:interfaces`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             return path(Output.of(path));
         }

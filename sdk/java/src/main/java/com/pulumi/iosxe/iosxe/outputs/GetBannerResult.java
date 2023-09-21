@@ -11,29 +11,77 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetBannerResult {
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return Banner message
+     * 
+     */
     private String execBanner;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
+    /**
+     * @return Banner message
+     * 
+     */
     private String loginBanner;
+    /**
+     * @return Banner message
+     * 
+     */
     private String motdBanner;
+    /**
+     * @return Banner message
+     * 
+     */
     private String promptTimeoutBanner;
 
     private GetBannerResult() {}
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return Banner message
+     * 
+     */
     public String execBanner() {
         return this.execBanner;
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
+    /**
+     * @return Banner message
+     * 
+     */
     public String loginBanner() {
         return this.loginBanner;
     }
+    /**
+     * @return Banner message
+     * 
+     */
     public String motdBanner() {
         return this.motdBanner;
     }
+    /**
+     * @return Banner message
+     * 
+     */
     public String promptTimeoutBanner() {
         return this.promptTimeoutBanner;
     }

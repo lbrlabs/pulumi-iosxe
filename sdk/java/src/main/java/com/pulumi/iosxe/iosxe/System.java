@@ -18,6 +18,59 @@ import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the System configuration.
+ * 
+ * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.System;
+ * import com.pulumi.iosxe.iosxe.SystemArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.SystemMulticastRoutingVrfArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new System(&#34;example&#34;, SystemArgs.builder()        
+ *             .hostname(&#34;ROUTER-1&#34;)
+ *             .ipDomainLookup(false)
+ *             .ipDomainName(&#34;test.com&#34;)
+ *             .ipSourceRoute(false)
+ *             .ipv6UnicastRouting(true)
+ *             .loginDelay(10)
+ *             .loginOnFailure(true)
+ *             .loginOnFailureLog(true)
+ *             .loginOnSuccess(true)
+ *             .loginOnSuccessLog(true)
+ *             .multicastRoutingVrfs(SystemMulticastRoutingVrfArgs.builder()
+ *                 .vrf(&#34;VRF1&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/system:System example &#34;Cisco-IOS-XE-native:native&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/system:System")
 public class System extends com.pulumi.resources.CustomResource {
     /**

@@ -14,12 +14,24 @@ import java.util.Objects;
 public final class GetLineVty {
     private List<GetLineVtyAccessClass> accessClasses;
     private String escapeCharacter;
+    /**
+     * @return \n\n;;Timeout in minutes
+     * 
+     */
     private Integer execTimeoutMinutes;
+    /**
+     * @return \n\n;;Timeout in seconds
+     * 
+     */
     private Integer execTimeoutSeconds;
     private Integer first;
     private Integer last;
     private String loginAuthentication;
     private String password;
+    /**
+     * @return Set exec level password
+     * 
+     */
     private Integer passwordLevel;
     private String passwordType;
     private String transportPreferredProtocol;
@@ -31,9 +43,17 @@ public final class GetLineVty {
     public String escapeCharacter() {
         return this.escapeCharacter;
     }
+    /**
+     * @return \n\n;;Timeout in minutes
+     * 
+     */
     public Integer execTimeoutMinutes() {
         return this.execTimeoutMinutes;
     }
+    /**
+     * @return \n\n;;Timeout in seconds
+     * 
+     */
     public Integer execTimeoutSeconds() {
         return this.execTimeoutSeconds;
     }
@@ -49,6 +69,10 @@ public final class GetLineVty {
     public String password() {
         return this.password;
     }
+    /**
+     * @return Set exec level password
+     * 
+     */
     public Integer passwordLevel() {
         return this.passwordLevel;
     }

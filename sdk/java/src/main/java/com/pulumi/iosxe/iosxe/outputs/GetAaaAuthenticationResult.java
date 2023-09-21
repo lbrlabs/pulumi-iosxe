@@ -14,49 +14,137 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetAaaAuthenticationResult {
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return Use Server-group
+     * 
+     */
     private String dot1xDefaultA1Group;
+    /**
+     * @return Use local username authentication
+     * 
+     */
     private Boolean dot1xDefaultA1Local;
+    /**
+     * @return Use Server-group
+     * 
+     */
     private String dot1xDefaultA2Group;
+    /**
+     * @return Use local username authentication
+     * 
+     */
     private Boolean dot1xDefaultA2Local;
+    /**
+     * @return Use Server-group
+     * 
+     */
     private String dot1xDefaultA3Group;
+    /**
+     * @return Use local username authentication
+     * 
+     */
     private Boolean dot1xDefaultA3Local;
+    /**
+     * @return Use Server-group
+     * 
+     */
     private String dot1xDefaultA4Group;
+    /**
+     * @return Use local username authentication
+     * 
+     */
     private Boolean dot1xDefaultA4Local;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
+    /**
+     * @return Set authentication lists for logins.
+     * 
+     */
     private List<GetAaaAuthenticationLogin> logins;
 
     private GetAaaAuthenticationResult() {}
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return Use Server-group
+     * 
+     */
     public String dot1xDefaultA1Group() {
         return this.dot1xDefaultA1Group;
     }
+    /**
+     * @return Use local username authentication
+     * 
+     */
     public Boolean dot1xDefaultA1Local() {
         return this.dot1xDefaultA1Local;
     }
+    /**
+     * @return Use Server-group
+     * 
+     */
     public String dot1xDefaultA2Group() {
         return this.dot1xDefaultA2Group;
     }
+    /**
+     * @return Use local username authentication
+     * 
+     */
     public Boolean dot1xDefaultA2Local() {
         return this.dot1xDefaultA2Local;
     }
+    /**
+     * @return Use Server-group
+     * 
+     */
     public String dot1xDefaultA3Group() {
         return this.dot1xDefaultA3Group;
     }
+    /**
+     * @return Use local username authentication
+     * 
+     */
     public Boolean dot1xDefaultA3Local() {
         return this.dot1xDefaultA3Local;
     }
+    /**
+     * @return Use Server-group
+     * 
+     */
     public String dot1xDefaultA4Group() {
         return this.dot1xDefaultA4Group;
     }
+    /**
+     * @return Use local username authentication
+     * 
+     */
     public Boolean dot1xDefaultA4Local() {
         return this.dot1xDefaultA4Local;
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
+    /**
+     * @return Set authentication lists for logins.
+     * 
+     */
     public List<GetAaaAuthenticationLogin> logins() {
         return this.logins;
     }

@@ -16,70 +16,198 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetPimVrfResult {
+    /**
+     * @return Configure AutoRP global operations
+     * 
+     */
     private Boolean autorp;
+    /**
+     * @return Allow AutoRP packets across sparse mode interface
+     * 
+     */
     private Boolean autorpListener;
+    /**
+     * @return BSR RP candidate filter
+     * 
+     */
     private String bsrCandidateAcceptRpCandidate;
+    /**
+     * @return Loopback interface
+     * 
+     */
     private Integer bsrCandidateLoopback;
+    /**
+     * @return Hash Mask length for RP selection
+     * 
+     */
     private Integer bsrCandidateMask;
+    /**
+     * @return Priority value for candidate bootstrap router
+     * 
+     */
     private Integer bsrCandidatePriority;
+    /**
+     * @return Cache outgoing interface RPF info
+     * 
+     */
     private Boolean cacheRpfOif;
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
+    /**
+     * @return IP address of Rendezvous-point for group
+     * 
+     */
     private String rpAddress;
+    /**
+     * @return Group range treated in bidirectional shared-tree mode
+     * 
+     */
     private Boolean rpAddressBidir;
+    /**
+     * @return Overrides dynamically learnt RP mappings
+     * 
+     */
     private Boolean rpAddressOverride;
+    /**
+     * @return PIM RP-address (Rendezvous Point)
+     * 
+     */
     private List<GetPimVrfRpAddress> rpAddresses;
+    /**
+     * @return To be a PIM version 2 RP candidate
+     * 
+     */
     private List<GetPimVrfRpCandidate> rpCandidates;
+    /**
+     * @return Use 232/8 group range for SSM
+     * 
+     */
     private Boolean ssmDefault;
+    /**
+     * @return ACL for group range to be used for SSM
+     * 
+     */
     private String ssmRange;
     private String vrf;
 
     private GetPimVrfResult() {}
+    /**
+     * @return Configure AutoRP global operations
+     * 
+     */
     public Boolean autorp() {
         return this.autorp;
     }
+    /**
+     * @return Allow AutoRP packets across sparse mode interface
+     * 
+     */
     public Boolean autorpListener() {
         return this.autorpListener;
     }
+    /**
+     * @return BSR RP candidate filter
+     * 
+     */
     public String bsrCandidateAcceptRpCandidate() {
         return this.bsrCandidateAcceptRpCandidate;
     }
+    /**
+     * @return Loopback interface
+     * 
+     */
     public Integer bsrCandidateLoopback() {
         return this.bsrCandidateLoopback;
     }
+    /**
+     * @return Hash Mask length for RP selection
+     * 
+     */
     public Integer bsrCandidateMask() {
         return this.bsrCandidateMask;
     }
+    /**
+     * @return Priority value for candidate bootstrap router
+     * 
+     */
     public Integer bsrCandidatePriority() {
         return this.bsrCandidatePriority;
     }
+    /**
+     * @return Cache outgoing interface RPF info
+     * 
+     */
     public Boolean cacheRpfOif() {
         return this.cacheRpfOif;
     }
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
+    /**
+     * @return IP address of Rendezvous-point for group
+     * 
+     */
     public String rpAddress() {
         return this.rpAddress;
     }
+    /**
+     * @return Group range treated in bidirectional shared-tree mode
+     * 
+     */
     public Boolean rpAddressBidir() {
         return this.rpAddressBidir;
     }
+    /**
+     * @return Overrides dynamically learnt RP mappings
+     * 
+     */
     public Boolean rpAddressOverride() {
         return this.rpAddressOverride;
     }
+    /**
+     * @return PIM RP-address (Rendezvous Point)
+     * 
+     */
     public List<GetPimVrfRpAddress> rpAddresses() {
         return this.rpAddresses;
     }
+    /**
+     * @return To be a PIM version 2 RP candidate
+     * 
+     */
     public List<GetPimVrfRpCandidate> rpCandidates() {
         return this.rpCandidates;
     }
+    /**
+     * @return Use 232/8 group range for SSM
+     * 
+     */
     public Boolean ssmDefault() {
         return this.ssmDefault;
     }
+    /**
+     * @return ACL for group range to be used for SSM
+     * 
+     */
     public String ssmRange() {
         return this.ssmRange;
     }

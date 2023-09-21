@@ -999,7 +999,44 @@ class BgpNeighbor(pulumi.CustomResource):
                  version: Optional[pulumi.Input[int]] = None,
                  __props__=None):
         """
-        Create a BgpNeighbor resource with the given unique name, props, and options.
+        This resource can manage the BGP Neighbor configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.BgpNeighbor("example",
+            asn="65000",
+            cluster_id="1234",
+            description="BGP Neighbor Description",
+            disable_connected_check=False,
+            fall_over_bfd_check_control_plane_failure=True,
+            fall_over_bfd_single_hop=True,
+            fall_over_bfd_strict_mode=True,
+            fall_over_default_enable=False,
+            fall_over_default_route_map="RMAP",
+            fall_over_maximum_metric_route_map="RMAP",
+            ip="3.3.3.3",
+            log_neighbor_changes=True,
+            password="test1234",
+            password_type=1,
+            remote_as="65000",
+            shutdown=False,
+            timers_holdtime=866,
+            timers_keepalive_interval=655,
+            timers_minimum_neighbor_hold=222,
+            update_source_loopback="100",
+            version=4)
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/bgpNeighbor:BgpNeighbor example "Cisco-IOS-XE-native:native/router/Cisco-IOS-XE-bgp:bgp=65000/neighbor=3.3.3.3"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] delete_mode: Configure behavior when deleting/destroying the resource. Either delete the entire object (YANG container) being
@@ -1035,7 +1072,44 @@ class BgpNeighbor(pulumi.CustomResource):
                  args: BgpNeighborArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a BgpNeighbor resource with the given unique name, props, and options.
+        This resource can manage the BGP Neighbor configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.BgpNeighbor("example",
+            asn="65000",
+            cluster_id="1234",
+            description="BGP Neighbor Description",
+            disable_connected_check=False,
+            fall_over_bfd_check_control_plane_failure=True,
+            fall_over_bfd_single_hop=True,
+            fall_over_bfd_strict_mode=True,
+            fall_over_default_enable=False,
+            fall_over_default_route_map="RMAP",
+            fall_over_maximum_metric_route_map="RMAP",
+            ip="3.3.3.3",
+            log_neighbor_changes=True,
+            password="test1234",
+            password_type=1,
+            remote_as="65000",
+            shutdown=False,
+            timers_holdtime=866,
+            timers_keepalive_interval=655,
+            timers_minimum_neighbor_hold=222,
+            update_source_loopback="100",
+            version=4)
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/bgpNeighbor:BgpNeighbor example "Cisco-IOS-XE-native:native/router/Cisco-IOS-XE-bgp:bgp=65000/neighbor=3.3.3.3"
+        ```
+
         :param str resource_name: The name of the resource.
         :param BgpNeighborArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

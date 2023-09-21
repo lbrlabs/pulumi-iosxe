@@ -15,33 +15,89 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetCdpResult {
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return Apply tlv-list globally
+     * 
+     */
     private String filterTlvList;
+    /**
+     * @return Specify the holdtime (in sec) to be sent in packets
+     * 
+     */
     private Integer holdtime;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
+    /**
+     * @return Enable CDP
+     * 
+     */
     private Boolean run;
+    /**
+     * @return Specify the rate at which CDP packets are sent (in sec)
+     * 
+     */
     private Integer timer;
+    /**
+     * @return Configure tlv-list
+     * 
+     */
     private List<GetCdpTlvList> tlvLists;
 
     private GetCdpResult() {}
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return Apply tlv-list globally
+     * 
+     */
     public String filterTlvList() {
         return this.filterTlvList;
     }
+    /**
+     * @return Specify the holdtime (in sec) to be sent in packets
+     * 
+     */
     public Integer holdtime() {
         return this.holdtime;
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
+    /**
+     * @return Enable CDP
+     * 
+     */
     public Boolean run() {
         return this.run;
     }
+    /**
+     * @return Specify the rate at which CDP packets are sent (in sec)
+     * 
+     */
     public Integer timer() {
         return this.timer;
     }
+    /**
+     * @return Configure tlv-list
+     * 
+     */
     public List<GetCdpTlvList> tlvLists() {
         return this.tlvLists;
     }

@@ -14,29 +14,77 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetRadiusServerResult {
+    /**
+     * @return Customize selected radius attributes
+     * 
+     */
     private List<GetRadiusServerAttribute> attributes;
+    /**
+     * @return The time during which no properly formed response must be received from the RADIUS server
+     * 
+     */
     private Integer deadCriteriaTime;
+    /**
+     * @return The number of times the router must fail to receive a response from the radius server to mark it as dead
+     * 
+     */
     private Integer deadCriteriaTries;
+    /**
+     * @return Time to stop using a server that does not respond
+     * 
+     */
     private Integer deadtime;
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
 
     private GetRadiusServerResult() {}
+    /**
+     * @return Customize selected radius attributes
+     * 
+     */
     public List<GetRadiusServerAttribute> attributes() {
         return this.attributes;
     }
+    /**
+     * @return The time during which no properly formed response must be received from the RADIUS server
+     * 
+     */
     public Integer deadCriteriaTime() {
         return this.deadCriteriaTime;
     }
+    /**
+     * @return The number of times the router must fail to receive a response from the radius server to mark it as dead
+     * 
+     */
     public Integer deadCriteriaTries() {
         return this.deadCriteriaTries;
     }
+    /**
+     * @return Time to stop using a server that does not respond
+     * 
+     */
     public Integer deadtime() {
         return this.deadtime;
     }
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }

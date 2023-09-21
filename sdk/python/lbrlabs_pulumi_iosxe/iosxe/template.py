@@ -2481,7 +2481,14 @@ class Template(pulumi.CustomResource):
                  template_name: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
-        Create a Template resource with the given unique name, props, and options.
+        This resource can manage the Template configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/template:Template example "Cisco-IOS-XE-native:native/template/Cisco-IOS-XE-template:template_details=TEMP1"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[bool] access_session_closed: Enable closed access on port (disabled by default, i.e. open access)
@@ -2568,7 +2575,14 @@ class Template(pulumi.CustomResource):
                  args: TemplateArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a Template resource with the given unique name, props, and options.
+        This resource can manage the Template configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/template:Template example "Cisco-IOS-XE-native:native/template/Cisco-IOS-XE-template:template_details=TEMP1"
+        ```
+
         :param str resource_name: The name of the resource.
         :param TemplateArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

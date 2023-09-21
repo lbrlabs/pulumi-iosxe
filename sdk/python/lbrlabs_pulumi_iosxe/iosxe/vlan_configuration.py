@@ -231,7 +231,26 @@ class VlanConfiguration(pulumi.CustomResource):
                  vni: Optional[pulumi.Input[int]] = None,
                  __props__=None):
         """
-        Create a VlanConfiguration resource with the given unique name, props, and options.
+        This resource can manage the VLAN Configuration configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.VlanConfiguration("example",
+            evpn_instance=123,
+            evpn_instance_vni=10123,
+            vlan_id=123)
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/vlanConfiguration:VlanConfiguration example "Cisco-IOS-XE-native:native/vlan/Cisco-IOS-XE-vlan:configuration=123"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] access_vfi: Enter VFI name
@@ -248,7 +267,26 @@ class VlanConfiguration(pulumi.CustomResource):
                  args: VlanConfigurationArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a VlanConfiguration resource with the given unique name, props, and options.
+        This resource can manage the VLAN Configuration configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.VlanConfiguration("example",
+            evpn_instance=123,
+            evpn_instance_vni=10123,
+            vlan_id=123)
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/vlanConfiguration:VlanConfiguration example "Cisco-IOS-XE-native:native/vlan/Cisco-IOS-XE-vlan:configuration=123"
+        ```
+
         :param str resource_name: The name of the resource.
         :param VlanConfigurationArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

@@ -21,6 +21,152 @@ import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the SNMP Server configuration.
+ * 
+ * ## Example Usage
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.SnmpServer;
+ * import com.pulumi.iosxe.iosxe.SnmpServerArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.SnmpServerContextArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.SnmpServerHostArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.SnmpServerSnmpCommunityArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.SnmpServerViewArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new SnmpServer(&#34;example&#34;, SnmpServerArgs.builder()        
+ *             .chassisId(&#34;R1&#34;)
+ *             .contact(&#34;Contact1&#34;)
+ *             .contexts(SnmpServerContextArgs.builder()
+ *                 .name(&#34;CON1&#34;)
+ *                 .build())
+ *             .enableLoggingGetop(true)
+ *             .enableLoggingSetop(true)
+ *             .enableTraps(true)
+ *             .enableTrapsAuthFrameworkSecViolation(true)
+ *             .enableTrapsBfd(true)
+ *             .enableTrapsBulkstatCollection(true)
+ *             .enableTrapsBulkstatTransfer(true)
+ *             .enableTrapsCallHomeMessageSendFail(true)
+ *             .enableTrapsCallHomeServerFail(true)
+ *             .enableTrapsConfig(true)
+ *             .enableTrapsConfigCopy(true)
+ *             .enableTrapsConfigCtid(true)
+ *             .enableTrapsCpuThreshold(true)
+ *             .enableTrapsDhcp(true)
+ *             .enableTrapsEigrp(true)
+ *             .enableTrapsEntity(true)
+ *             .enableTrapsEventManager(true)
+ *             .enableTrapsFlashInsertion(true)
+ *             .enableTrapsFlashRemoval(true)
+ *             .enableTrapsFlowmon(true)
+ *             .enableTrapsFruCtrl(true)
+ *             .enableTrapsIkePolicyAdd(true)
+ *             .enableTrapsIkePolicyDelete(true)
+ *             .enableTrapsIkeTunnelStart(true)
+ *             .enableTrapsIkeTunnelStop(true)
+ *             .enableTrapsIpmulticast(true)
+ *             .enableTrapsIpsecCryptomapAdd(true)
+ *             .enableTrapsIpsecCryptomapAttach(true)
+ *             .enableTrapsIpsecCryptomapDelete(true)
+ *             .enableTrapsIpsecCryptomapDetach(true)
+ *             .enableTrapsIpsecTooManySas(true)
+ *             .enableTrapsIpsecTunnelStart(true)
+ *             .enableTrapsIpsecTunnelStop(true)
+ *             .enableTrapsIpsla(true)
+ *             .enableTrapsLicense(true)
+ *             .enableTrapsMemoryBufferpeak(true)
+ *             .enableTrapsMsdp(true)
+ *             .enableTrapsOspfConfigErrors(true)
+ *             .enableTrapsOspfConfigLsa(true)
+ *             .enableTrapsOspfConfigRetransmit(true)
+ *             .enableTrapsOspfConfigStateChange(true)
+ *             .enableTrapsOspfErrorsEnable(true)
+ *             .enableTrapsOspfLsaEnable(true)
+ *             .enableTrapsOspfNssaTransChange(true)
+ *             .enableTrapsOspfRetransmitEnable(true)
+ *             .enableTrapsOspfShamlinkInterface(true)
+ *             .enableTrapsOspfShamlinkNeighbor(true)
+ *             .enableTrapsOspfv3ConfigErrors(true)
+ *             .enableTrapsOspfv3ConfigStateChange(true)
+ *             .enableTrapsPimInvalidPimMessage(true)
+ *             .enableTrapsPimNeighborChange(true)
+ *             .enableTrapsPimRpMappingChange(true)
+ *             .enableTrapsPortSecurity(true)
+ *             .enableTrapsPwVc(true)
+ *             .enableTrapsRf(true)
+ *             .enableTrapsSmartLicense(true)
+ *             .enableTrapsSnmpAuthentication(true)
+ *             .enableTrapsSnmpColdstart(true)
+ *             .enableTrapsSnmpLinkdown(true)
+ *             .enableTrapsSnmpLinkup(true)
+ *             .enableTrapsSnmpWarmstart(true)
+ *             .enableTrapsSyslog(true)
+ *             .enableTrapsTransceiverAll(true)
+ *             .enableTrapsTty(true)
+ *             .enableTrapsVlancreate(true)
+ *             .enableTrapsVlandelete(true)
+ *             .enableTrapsVrfmibVnetTrunkDown(true)
+ *             .enableTrapsVrfmibVnetTrunkUp(true)
+ *             .enableTrapsVrfmibVrfDown(true)
+ *             .enableTrapsVrfmibVrfUp(true)
+ *             .enableTrapsVtp(true)
+ *             .hosts(SnmpServerHostArgs.builder()
+ *                 .community_or_user(&#34;08116C5D1A0E550518&#34;)
+ *                 .encryption(&#34;7&#34;)
+ *                 .ip_address(&#34;11.1.1.1&#34;)
+ *                 .version(&#34;2c&#34;)
+ *                 .build())
+ *             .ifindexPersist(true)
+ *             .location(&#34;Location1&#34;)
+ *             .packetsize(2000)
+ *             .queueLength(100)
+ *             .snmpCommunities(SnmpServerSnmpCommunityArgs.builder()
+ *                 .access_list_name(&#34;1&#34;)
+ *                 .ipv6(&#34;ACL1&#34;)
+ *                 .name(&#34;COM1&#34;)
+ *                 .permission(&#34;ro&#34;)
+ *                 .view(&#34;VIEW1&#34;)
+ *                 .build())
+ *             .sourceInterfaceInformsLoopback(1)
+ *             .sourceInterfaceTrapsLoopback(1)
+ *             .systemShutdown(true)
+ *             .trapSourceLoopback(1)
+ *             .views(SnmpServerViewArgs.builder()
+ *                 .inc_exl(&#34;included&#34;)
+ *                 .mib(&#34;interfaces&#34;)
+ *                 .name(&#34;VIEW1&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/snmpServer:SnmpServer example &#34;Cisco-IOS-XE-native:native/snmp-server&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/snmpServer:SnmpServer")
 public class SnmpServer extends com.pulumi.resources.CustomResource {
     /**

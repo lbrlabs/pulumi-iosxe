@@ -15,6 +15,50 @@ import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the BGP L2VPN EVPN Neighbor configuration.
+ * 
+ * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.BgpL2vpnEvpnNeighbor;
+ * import com.pulumi.iosxe.iosxe.BgpL2vpnEvpnNeighborArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new BgpL2vpnEvpnNeighbor(&#34;example&#34;, BgpL2vpnEvpnNeighborArgs.builder()        
+ *             .activate(true)
+ *             .asn(&#34;65000&#34;)
+ *             .ip(&#34;3.3.3.3&#34;)
+ *             .routeReflectorClient(false)
+ *             .sendCommunity(&#34;both&#34;)
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/bgpL2vpnEvpnNeighbor:BgpL2vpnEvpnNeighbor example &#34;Cisco-IOS-XE-native:native/router/Cisco-IOS-XE-bgp:bgp=65000/address-family/no-vrf/l2vpn=evpn/l2vpn-evpn/neighbor=3.3.3.3&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/bgpL2vpnEvpnNeighbor:BgpL2vpnEvpnNeighbor")
 public class BgpL2vpnEvpnNeighbor extends com.pulumi.resources.CustomResource {
     /**

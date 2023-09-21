@@ -20,6 +20,76 @@ import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the Interface Port Channel configuration.
+ * 
+ * ## Example Usage
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.InterfacePortChannel;
+ * import com.pulumi.iosxe.iosxe.InterfacePortChannelArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.InterfacePortChannelHelperAddressArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.InterfacePortChannelIpv6AddressArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.InterfacePortChannelIpv6LinkLocalAddressArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new InterfacePortChannel(&#34;example&#34;, InterfacePortChannelArgs.builder()        
+ *             .arpTimeout(2147)
+ *             .description(&#34;My Interface Description&#34;)
+ *             .helperAddresses(InterfacePortChannelHelperAddressArgs.builder()
+ *                 .address(&#34;10.10.10.10&#34;)
+ *                 .global(false)
+ *                 .build())
+ *             .ipAccessGroupIn(&#34;1&#34;)
+ *             .ipAccessGroupInEnable(true)
+ *             .ipAccessGroupOut(&#34;1&#34;)
+ *             .ipAccessGroupOutEnable(true)
+ *             .ipDhcpRelaySourceInterface(&#34;Loopback100&#34;)
+ *             .ipv4Address(&#34;192.0.2.1&#34;)
+ *             .ipv4AddressMask(&#34;255.255.255.0&#34;)
+ *             .ipv6AddressDhcp(true)
+ *             .ipv6Addresses(InterfacePortChannelIpv6AddressArgs.builder()
+ *                 .eui_64(true)
+ *                 .prefix(&#34;2224:DB8::/32&#34;)
+ *                 .build())
+ *             .ipv6Enable(true)
+ *             .ipv6LinkLocalAddresses(InterfacePortChannelIpv6LinkLocalAddressArgs.builder()
+ *                 .address(&#34;fe80::64&#34;)
+ *                 .link_local(true)
+ *                 .build())
+ *             .ipv6Mtu(1300)
+ *             .ipv6NdRaSuppressAll(true)
+ *             .shutdown(false)
+ *             .vrfForwarding(&#34;VRF1&#34;)
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/interfacePortChannel:InterfacePortChannel example &#34;Cisco-IOS-XE-native:native/interface/Port-channel=10&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/interfacePortChannel:InterfacePortChannel")
 public class InterfacePortChannel extends com.pulumi.resources.CustomResource {
     /**

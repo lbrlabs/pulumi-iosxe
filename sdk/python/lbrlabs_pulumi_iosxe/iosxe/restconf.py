@@ -200,7 +200,39 @@ class Restconf(pulumi.CustomResource):
                  path: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
-        Create a Restconf resource with the given unique name, props, and options.
+        Manages IOS-XE objects via RESTCONF calls. This resource can only manage a single object. It is able to read the state and therefore reconcile configuration drift.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        simple = iosxe.iosxe.Restconf("simple",
+            attributes={
+                "banner": "My Banner",
+            },
+            path="Cisco-IOS-XE-native:native/banner/login")
+        nested_list = iosxe.iosxe.Restconf("nestedList",
+            attributes={
+                "source-route": "true",
+            },
+            lists=[iosxe.iosxe.RestconfListArgs(
+                items=[{
+                    "name": "VRF1",
+                }],
+                key="name",
+                name="vrf",
+            )],
+            path="Cisco-IOS-XE-native:native/ip")
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/restconf:Restconf example "Cisco-IOS-XE-native:native/banner/login"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Mapping[str, pulumi.Input[str]]] attributes: Map of key-value pairs which represents the YANG leafs and its values.
@@ -216,7 +248,39 @@ class Restconf(pulumi.CustomResource):
                  args: RestconfArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a Restconf resource with the given unique name, props, and options.
+        Manages IOS-XE objects via RESTCONF calls. This resource can only manage a single object. It is able to read the state and therefore reconcile configuration drift.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        simple = iosxe.iosxe.Restconf("simple",
+            attributes={
+                "banner": "My Banner",
+            },
+            path="Cisco-IOS-XE-native:native/banner/login")
+        nested_list = iosxe.iosxe.Restconf("nestedList",
+            attributes={
+                "source-route": "true",
+            },
+            lists=[iosxe.iosxe.RestconfListArgs(
+                items=[{
+                    "name": "VRF1",
+                }],
+                key="name",
+                name="vrf",
+            )],
+            path="Cisco-IOS-XE-native:native/ip")
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/restconf:Restconf example "Cisco-IOS-XE-native:native/banner/login"
+        ```
+
         :param str resource_name: The name of the resource.
         :param RestconfArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

@@ -9,9 +9,17 @@ import java.util.Objects;
 
 @CustomType
 public final class GetServiceTemplateAccessGroup {
+    /**
+     * @return Specify the access list name
+     * 
+     */
     private String name;
 
     private GetServiceTemplateAccessGroup() {}
+    /**
+     * @return Specify the access list name
+     * 
+     */
     public String name() {
         return this.name;
     }

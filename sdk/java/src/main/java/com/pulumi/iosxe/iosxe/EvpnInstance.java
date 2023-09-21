@@ -16,6 +16,61 @@ import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the EVPN Instance configuration.
+ * 
+ * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.EvpnInstance;
+ * import com.pulumi.iosxe.iosxe.EvpnInstanceArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new EvpnInstance(&#34;example&#34;, EvpnInstanceArgs.builder()        
+ *             .evpnInstanceNum(10)
+ *             .vlanBasedAutoRouteTarget(false)
+ *             .vlanBasedDefaultGatewayAdvertise(&#34;enable&#34;)
+ *             .vlanBasedEncapsulation(&#34;vxlan&#34;)
+ *             .vlanBasedIpLocalLearningDisable(false)
+ *             .vlanBasedIpLocalLearningEnable(true)
+ *             .vlanBasedRd(&#34;10:10&#34;)
+ *             .vlanBasedReOriginateRouteType5(true)
+ *             .vlanBasedReplicationTypeIngress(false)
+ *             .vlanBasedReplicationTypeMp2mp(false)
+ *             .vlanBasedReplicationTypeP2mp(false)
+ *             .vlanBasedReplicationTypeStatic(true)
+ *             .vlanBasedRouteTarget(&#34;10:10&#34;)
+ *             .vlanBasedRouteTargetBoth(&#34;10:10&#34;)
+ *             .vlanBasedRouteTargetExport(&#34;10:10&#34;)
+ *             .vlanBasedRouteTargetImport(&#34;10:10&#34;)
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/evpnInstance:EvpnInstance example &#34;Cisco-IOS-XE-native:native/l2vpn/Cisco-IOS-XE-l2vpn:evpn_cont/evpn-instance/evpn/instance/instance=10&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/evpnInstance:EvpnInstance")
 public class EvpnInstance extends com.pulumi.resources.CustomResource {
     /**

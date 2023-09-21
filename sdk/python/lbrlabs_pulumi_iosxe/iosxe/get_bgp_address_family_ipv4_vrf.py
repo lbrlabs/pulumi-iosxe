@@ -52,11 +52,17 @@ class GetBgpAddressFamilyIpv4VrfResult:
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
     @property
@@ -83,7 +89,20 @@ def get_bgp_address_family_ipv4_vrf(af_name: Optional[str] = None,
                                     device: Optional[str] = None,
                                     opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetBgpAddressFamilyIpv4VrfResult:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the BGP Address Family IPv4 VRF configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_bgp_address_family_ipv4_vrf(af_name="unicast",
+        asn="65000")
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     __args__ = dict()
     __args__['afName'] = af_name
@@ -106,6 +125,19 @@ def get_bgp_address_family_ipv4_vrf_output(af_name: Optional[pulumi.Input[str]] 
                                            device: Optional[pulumi.Input[Optional[str]]] = None,
                                            opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetBgpAddressFamilyIpv4VrfResult]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the BGP Address Family IPv4 VRF configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_bgp_address_family_ipv4_vrf(af_name="unicast",
+        asn="65000")
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     ...

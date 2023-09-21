@@ -563,7 +563,14 @@ class InterfaceOspf(pulumi.CustomResource):
                  type: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
-        Create a InterfaceOspf resource with the given unique name, props, and options.
+        This resource can manage the Interface OSPF configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/interfaceOspf:InterfaceOspf example "Cisco-IOS-XE-native:native/interface/Loopback=1/ip/Cisco-IOS-XE-ospf:router-ospf/ospf"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[int] cost: Route cost of this interface - Range: `1`-`65535`
@@ -592,7 +599,14 @@ class InterfaceOspf(pulumi.CustomResource):
                  args: InterfaceOspfArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a InterfaceOspf resource with the given unique name, props, and options.
+        This resource can manage the Interface OSPF configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/interfaceOspf:InterfaceOspf example "Cisco-IOS-XE-native:native/interface/Loopback=1/ip/Cisco-IOS-XE-ospf:router-ospf/ospf"
+        ```
+
         :param str resource_name: The name of the resource.
         :param InterfaceOspfArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

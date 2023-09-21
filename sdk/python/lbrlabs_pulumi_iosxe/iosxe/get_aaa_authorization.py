@@ -39,21 +39,33 @@ class GetAaaAuthorizationResult:
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
     @pulumi.getter
     def execs(self) -> Sequence['outputs.GetAaaAuthorizationExecResult']:
+        """
+        For starting an exec (shell).
+        """
         return pulumi.get(self, "execs")
 
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
     @property
     @pulumi.getter
     def networks(self) -> Sequence['outputs.GetAaaAuthorizationNetworkResult']:
+        """
+        For network services. (PPP, SLIP, ARAP)
+        """
         return pulumi.get(self, "networks")
 
 
@@ -72,7 +84,19 @@ class AwaitableGetAaaAuthorizationResult(GetAaaAuthorizationResult):
 def get_aaa_authorization(device: Optional[str] = None,
                           opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetAaaAuthorizationResult:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the AAA Authorization configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_aaa_authorization()
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -90,6 +114,18 @@ def get_aaa_authorization(device: Optional[str] = None,
 def get_aaa_authorization_output(device: Optional[pulumi.Input[Optional[str]]] = None,
                                  opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetAaaAuthorizationResult]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the AAA Authorization configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_aaa_authorization()
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     ...

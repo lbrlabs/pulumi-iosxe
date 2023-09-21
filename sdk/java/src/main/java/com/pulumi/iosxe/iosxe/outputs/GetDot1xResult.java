@@ -15,49 +15,137 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetDot1xResult {
+    /**
+     * @return Send EAPOL-Success on successful auth-fail Authorization
+     * 
+     */
     private Boolean authFailEapol;
+    /**
+     * @return Configure 802.1X credentials profiles
+     * 
+     */
     private List<GetDot1xCredential> credentials;
+    /**
+     * @return Block all EAPoL transaction on Critical Authentication
+     * 
+     */
     private Boolean criticalEapolConfigBlock;
+    /**
+     * @return Set 802.1x Critical Authentication Recovery Delay period
+     * 
+     */
     private Integer criticalRecoveryDelay;
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
+    /**
+     * @return Show verbose messages in system logs
+     * 
+     */
     private Boolean loggingVerbose;
+    /**
+     * @return Controlled access is only applied during authentication
+     * 
+     */
     private Boolean supplicantControlledTransient;
+    /**
+     * @return Force 802.1X supplicant to send multicast packets
+     * 
+     */
     private Boolean supplicantForceMulticast;
+    /**
+     * @return Enable or Disable SysAuthControl
+     * 
+     */
     private Boolean systemAuthControl;
+    /**
+     * @return Timeout for device EAPOL capabilities test in seconds
+     * 
+     */
     private Integer testTimeout;
 
     private GetDot1xResult() {}
+    /**
+     * @return Send EAPOL-Success on successful auth-fail Authorization
+     * 
+     */
     public Boolean authFailEapol() {
         return this.authFailEapol;
     }
+    /**
+     * @return Configure 802.1X credentials profiles
+     * 
+     */
     public List<GetDot1xCredential> credentials() {
         return this.credentials;
     }
+    /**
+     * @return Block all EAPoL transaction on Critical Authentication
+     * 
+     */
     public Boolean criticalEapolConfigBlock() {
         return this.criticalEapolConfigBlock;
     }
+    /**
+     * @return Set 802.1x Critical Authentication Recovery Delay period
+     * 
+     */
     public Integer criticalRecoveryDelay() {
         return this.criticalRecoveryDelay;
     }
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
+    /**
+     * @return Show verbose messages in system logs
+     * 
+     */
     public Boolean loggingVerbose() {
         return this.loggingVerbose;
     }
+    /**
+     * @return Controlled access is only applied during authentication
+     * 
+     */
     public Boolean supplicantControlledTransient() {
         return this.supplicantControlledTransient;
     }
+    /**
+     * @return Force 802.1X supplicant to send multicast packets
+     * 
+     */
     public Boolean supplicantForceMulticast() {
         return this.supplicantForceMulticast;
     }
+    /**
+     * @return Enable or Disable SysAuthControl
+     * 
+     */
     public Boolean systemAuthControl() {
         return this.systemAuthControl;
     }
+    /**
+     * @return Timeout for device EAPOL capabilities test in seconds
+     * 
+     */
     public Integer testTimeout() {
         return this.testTimeout;
     }

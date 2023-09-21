@@ -17,6 +17,54 @@ import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the AAA Authentication configuration.
+ * 
+ * ## Example Usage
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.AaaAuthentication;
+ * import com.pulumi.iosxe.iosxe.AaaAuthenticationArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.AaaAuthenticationLoginArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new AaaAuthentication(&#34;example&#34;, AaaAuthenticationArgs.builder()        
+ *             .dot1xDefaultA1Group(&#34;Radius-GROUP&#34;)
+ *             .dot1xDefaultA2Group(&#34;Radius-GROUP2&#34;)
+ *             .logins(AaaAuthenticationLoginArgs.builder()
+ *                 .a1_group(&#34;Radius-GROUP&#34;)
+ *                 .a2_none(true)
+ *                 .name(&#34;test&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/aaaAuthentication:AaaAuthentication example &#34;Cisco-IOS-XE-native:native/aaa/Cisco-IOS-XE-aaa:authentication&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/aaaAuthentication:AaaAuthentication")
 public class AaaAuthentication extends com.pulumi.resources.CustomResource {
     /**

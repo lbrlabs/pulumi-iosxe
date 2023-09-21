@@ -13,45 +13,125 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetVlanResult {
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
+    /**
+     * @return Ascii name of the VLAN
+     * 
+     */
     private String name;
+    /**
+     * @return Configure association between private VLANs
+     * 
+     */
     private String privateVlanAssociation;
+    /**
+     * @return Configure the VLAN as a community private VLAN
+     * 
+     */
     private Boolean privateVlanCommunity;
+    /**
+     * @return Configure the VLAN as an isolated private VLAN
+     * 
+     */
     private Boolean privateVlanIsolated;
+    /**
+     * @return Configure the VLAN as a primary private VLAN
+     * 
+     */
     private Boolean privateVlanPrimary;
+    /**
+     * @return Configure as Remote SPAN VLAN
+     * 
+     */
     private Boolean remoteSpan;
+    /**
+     * @return Shutdown VLAN switching
+     * 
+     */
     private Boolean shutdown;
+    /**
+     * @return a single VLAN id (allowed value range 1-4094)or Comma-separated VLAN id range.e.g. 99 or 1-30 or  1-20,30,40-50
+     * 
+     */
     private Integer vlanId;
 
     private GetVlanResult() {}
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
+    /**
+     * @return Ascii name of the VLAN
+     * 
+     */
     public String name() {
         return this.name;
     }
+    /**
+     * @return Configure association between private VLANs
+     * 
+     */
     public String privateVlanAssociation() {
         return this.privateVlanAssociation;
     }
+    /**
+     * @return Configure the VLAN as a community private VLAN
+     * 
+     */
     public Boolean privateVlanCommunity() {
         return this.privateVlanCommunity;
     }
+    /**
+     * @return Configure the VLAN as an isolated private VLAN
+     * 
+     */
     public Boolean privateVlanIsolated() {
         return this.privateVlanIsolated;
     }
+    /**
+     * @return Configure the VLAN as a primary private VLAN
+     * 
+     */
     public Boolean privateVlanPrimary() {
         return this.privateVlanPrimary;
     }
+    /**
+     * @return Configure as Remote SPAN VLAN
+     * 
+     */
     public Boolean remoteSpan() {
         return this.remoteSpan;
     }
+    /**
+     * @return Shutdown VLAN switching
+     * 
+     */
     public Boolean shutdown() {
         return this.shutdown;
     }
+    /**
+     * @return a single VLAN id (allowed value range 1-4094)or Comma-separated VLAN id range.e.g. 99 or 1-30 or  1-20,30,40-50
+     * 
+     */
     public Integer vlanId() {
         return this.vlanId;
     }

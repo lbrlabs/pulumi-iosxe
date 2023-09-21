@@ -48,11 +48,17 @@ class GetBgpAddressFamilyL2vpnResult:
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
 
@@ -73,7 +79,20 @@ def get_bgp_address_family_l2vpn(af_name: Optional[str] = None,
                                  device: Optional[str] = None,
                                  opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetBgpAddressFamilyL2vpnResult:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the BGP Address Family L2VPN configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_bgp_address_family_l2vpn(af_name="evpn",
+        asn="65000")
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     __args__ = dict()
     __args__['afName'] = af_name
@@ -95,6 +114,19 @@ def get_bgp_address_family_l2vpn_output(af_name: Optional[pulumi.Input[str]] = N
                                         device: Optional[pulumi.Input[Optional[str]]] = None,
                                         opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetBgpAddressFamilyL2vpnResult]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the BGP Address Family L2VPN configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_bgp_address_family_l2vpn(af_name="evpn",
+        asn="65000")
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     ...

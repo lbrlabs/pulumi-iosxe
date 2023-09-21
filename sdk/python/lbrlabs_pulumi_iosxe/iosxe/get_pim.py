@@ -72,76 +72,121 @@ class GetPimResult:
     @property
     @pulumi.getter
     def autorp(self) -> bool:
+        """
+        Configure AutoRP global operations
+        """
         return pulumi.get(self, "autorp")
 
     @property
     @pulumi.getter(name="autorpListener")
     def autorp_listener(self) -> bool:
+        """
+        Allow AutoRP packets across sparse mode interface
+        """
         return pulumi.get(self, "autorp_listener")
 
     @property
     @pulumi.getter(name="bsrCandidateAcceptRpCandidate")
     def bsr_candidate_accept_rp_candidate(self) -> str:
+        """
+        BSR RP candidate filter
+        """
         return pulumi.get(self, "bsr_candidate_accept_rp_candidate")
 
     @property
     @pulumi.getter(name="bsrCandidateLoopback")
     def bsr_candidate_loopback(self) -> int:
+        """
+        Loopback interface
+        """
         return pulumi.get(self, "bsr_candidate_loopback")
 
     @property
     @pulumi.getter(name="bsrCandidateMask")
     def bsr_candidate_mask(self) -> int:
+        """
+        Hash Mask length for RP selection
+        """
         return pulumi.get(self, "bsr_candidate_mask")
 
     @property
     @pulumi.getter(name="bsrCandidatePriority")
     def bsr_candidate_priority(self) -> int:
+        """
+        Priority value for candidate bootstrap router
+        """
         return pulumi.get(self, "bsr_candidate_priority")
 
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
     @property
     @pulumi.getter(name="rpAddress")
     def rp_address(self) -> str:
+        """
+        IP address of Rendezvous-point for group
+        """
         return pulumi.get(self, "rp_address")
 
     @property
     @pulumi.getter(name="rpAddressBidir")
     def rp_address_bidir(self) -> bool:
+        """
+        Group range treated in bidirectional shared-tree mode
+        """
         return pulumi.get(self, "rp_address_bidir")
 
     @property
     @pulumi.getter(name="rpAddressOverride")
     def rp_address_override(self) -> bool:
+        """
+        Overrides dynamically learnt RP mappings
+        """
         return pulumi.get(self, "rp_address_override")
 
     @property
     @pulumi.getter(name="rpAddresses")
     def rp_addresses(self) -> Sequence['outputs.GetPimRpAddressResult']:
+        """
+        PIM RP-address (Rendezvous Point)
+        """
         return pulumi.get(self, "rp_addresses")
 
     @property
     @pulumi.getter(name="rpCandidates")
     def rp_candidates(self) -> Sequence['outputs.GetPimRpCandidateResult']:
+        """
+        To be a PIM version 2 RP candidate
+        """
         return pulumi.get(self, "rp_candidates")
 
     @property
     @pulumi.getter(name="ssmDefault")
     def ssm_default(self) -> bool:
+        """
+        Use 232/8 group range for SSM
+        """
         return pulumi.get(self, "ssm_default")
 
     @property
     @pulumi.getter(name="ssmRange")
     def ssm_range(self) -> str:
+        """
+        ACL for group range to be used for SSM
+        """
         return pulumi.get(self, "ssm_range")
 
 
@@ -171,7 +216,19 @@ class AwaitableGetPimResult(GetPimResult):
 def get_pim(device: Optional[str] = None,
             opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetPimResult:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the PIM configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_pim()
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -200,6 +257,18 @@ def get_pim(device: Optional[str] = None,
 def get_pim_output(device: Optional[pulumi.Input[Optional[str]]] = None,
                    opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetPimResult]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the PIM configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_pim()
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     ...

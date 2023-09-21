@@ -369,7 +369,35 @@ class MdtSubscription(pulumi.CustomResource):
                  update_policy_periodic: Optional[pulumi.Input[int]] = None,
                  __props__=None):
         """
-        Create a MdtSubscription resource with the given unique name, props, and options.
+        This resource can manage the MDT Subscription configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.MdtSubscription("example",
+            encoding="encode-kvgpb",
+            filter_xpath="/ios-events-ios-xe-oper:ospf-neighbor-state-change",
+            receivers=[iosxe.iosxe.MdtSubscriptionReceiverArgs(
+                address="5.6.7.8",
+                port=57600,
+                protocol="grpc-tcp",
+            )],
+            source_address="1.2.3.4",
+            source_vrf="Mgmt-vrf",
+            stream="yang-notif-native",
+            subscription_id=101,
+            update_policy_on_change=True)
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/mdtSubscription:MdtSubscription example "Cisco-IOS-XE-mdt-cfg:mdt-config-data/mdt-subscription=101"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] device: A device name from the provider configuration.
@@ -391,7 +419,35 @@ class MdtSubscription(pulumi.CustomResource):
                  args: MdtSubscriptionArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a MdtSubscription resource with the given unique name, props, and options.
+        This resource can manage the MDT Subscription configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.MdtSubscription("example",
+            encoding="encode-kvgpb",
+            filter_xpath="/ios-events-ios-xe-oper:ospf-neighbor-state-change",
+            receivers=[iosxe.iosxe.MdtSubscriptionReceiverArgs(
+                address="5.6.7.8",
+                port=57600,
+                protocol="grpc-tcp",
+            )],
+            source_address="1.2.3.4",
+            source_vrf="Mgmt-vrf",
+            stream="yang-notif-native",
+            subscription_id=101,
+            update_policy_on_change=True)
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/mdtSubscription:MdtSubscription example "Cisco-IOS-XE-mdt-cfg:mdt-config-data/mdt-subscription=101"
+        ```
+
         :param str resource_name: The name of the resource.
         :param MdtSubscriptionArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

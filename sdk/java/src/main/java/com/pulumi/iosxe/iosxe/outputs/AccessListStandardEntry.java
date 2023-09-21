@@ -13,53 +13,149 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AccessListStandardEntry {
+    /**
+     * @return Any source prefix
+     * 
+     */
     private @Nullable Boolean denyAny;
+    /**
+     * @return A single source host
+     * 
+     */
     private @Nullable String denyHost;
+    /**
+     * @return Log matches against this entry
+     * 
+     */
     private @Nullable Boolean denyLog;
+    /**
+     * @return Network address prefix
+     * 
+     */
     private @Nullable String denyPrefix;
+    /**
+     * @return Wildcard bits
+     * 
+     */
     private @Nullable String denyPrefixMask;
+    /**
+     * @return Any source prefix
+     * 
+     */
     private @Nullable Boolean permitAny;
+    /**
+     * @return A single source host
+     * 
+     */
     private @Nullable String permitHost;
+    /**
+     * @return Log matches against this entry
+     * 
+     */
     private @Nullable Boolean permitLog;
+    /**
+     * @return Network address prefix
+     * 
+     */
     private @Nullable String permitPrefix;
+    /**
+     * @return Wildcard bits
+     * 
+     */
     private @Nullable String permitPrefixMask;
+    /**
+     * @return Access list entry comment
+     * 
+     */
     private @Nullable String remark;
+    /**
+     * @return - Range: `1`-`2147483647`
+     * 
+     */
     private Integer sequence;
 
     private AccessListStandardEntry() {}
+    /**
+     * @return Any source prefix
+     * 
+     */
     public Optional<Boolean> denyAny() {
         return Optional.ofNullable(this.denyAny);
     }
+    /**
+     * @return A single source host
+     * 
+     */
     public Optional<String> denyHost() {
         return Optional.ofNullable(this.denyHost);
     }
+    /**
+     * @return Log matches against this entry
+     * 
+     */
     public Optional<Boolean> denyLog() {
         return Optional.ofNullable(this.denyLog);
     }
+    /**
+     * @return Network address prefix
+     * 
+     */
     public Optional<String> denyPrefix() {
         return Optional.ofNullable(this.denyPrefix);
     }
+    /**
+     * @return Wildcard bits
+     * 
+     */
     public Optional<String> denyPrefixMask() {
         return Optional.ofNullable(this.denyPrefixMask);
     }
+    /**
+     * @return Any source prefix
+     * 
+     */
     public Optional<Boolean> permitAny() {
         return Optional.ofNullable(this.permitAny);
     }
+    /**
+     * @return A single source host
+     * 
+     */
     public Optional<String> permitHost() {
         return Optional.ofNullable(this.permitHost);
     }
+    /**
+     * @return Log matches against this entry
+     * 
+     */
     public Optional<Boolean> permitLog() {
         return Optional.ofNullable(this.permitLog);
     }
+    /**
+     * @return Network address prefix
+     * 
+     */
     public Optional<String> permitPrefix() {
         return Optional.ofNullable(this.permitPrefix);
     }
+    /**
+     * @return Wildcard bits
+     * 
+     */
     public Optional<String> permitPrefixMask() {
         return Optional.ofNullable(this.permitPrefixMask);
     }
+    /**
+     * @return Access list entry comment
+     * 
+     */
     public Optional<String> remark() {
         return Optional.ofNullable(this.remark);
     }
+    /**
+     * @return - Range: `1`-`2147483647`
+     * 
+     */
     public Integer sequence() {
         return this.sequence;
     }

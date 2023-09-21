@@ -9,17 +9,41 @@ import java.util.Objects;
 
 @CustomType
 public final class GetOspfNetwork {
+    /**
+     * @return Set the OSPF area ID
+     * 
+     */
     private String area;
+    /**
+     * @return Network number
+     * 
+     */
     private String ip;
+    /**
+     * @return OSPF wild card bits
+     * 
+     */
     private String wildcard;
 
     private GetOspfNetwork() {}
+    /**
+     * @return Set the OSPF area ID
+     * 
+     */
     public String area() {
         return this.area;
     }
+    /**
+     * @return Network number
+     * 
+     */
     public String ip() {
         return this.ip;
     }
+    /**
+     * @return OSPF wild card bits
+     * 
+     */
     public String wildcard() {
         return this.wildcard;
     }

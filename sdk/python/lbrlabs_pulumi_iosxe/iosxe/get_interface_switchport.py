@@ -82,46 +82,73 @@ class GetInterfaceSwitchportResult:
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
     @pulumi.getter
     def host(self) -> bool:
+        """
+        Set port host
+        """
         return pulumi.get(self, "host")
 
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
     @property
     @pulumi.getter(name="modeAccess")
     def mode_access(self) -> bool:
+        """
+        Set trunking mode to ACCESS unconditionally
+        """
         return pulumi.get(self, "mode_access")
 
     @property
     @pulumi.getter(name="modeDot1qTunnel")
     def mode_dot1q_tunnel(self) -> bool:
+        """
+        set trunking mode to TUNNEL unconditionally
+        """
         return pulumi.get(self, "mode_dot1q_tunnel")
 
     @property
     @pulumi.getter(name="modePrivateVlanHost")
     def mode_private_vlan_host(self) -> bool:
+        """
+        Set the mode to private-vlan host
+        """
         return pulumi.get(self, "mode_private_vlan_host")
 
     @property
     @pulumi.getter(name="modePrivateVlanPromiscuous")
     def mode_private_vlan_promiscuous(self) -> bool:
+        """
+        Set the mode to private-vlan promiscuous
+        """
         return pulumi.get(self, "mode_private_vlan_promiscuous")
 
     @property
     @pulumi.getter(name="modePrivateVlanTrunk")
     def mode_private_vlan_trunk(self) -> bool:
+        """
+        Set the mode to private-vlan trunk
+        """
         return pulumi.get(self, "mode_private_vlan_trunk")
 
     @property
     @pulumi.getter(name="modeTrunk")
     def mode_trunk(self) -> bool:
+        """
+        Set trunking mode to TRUNK unconditionally
+        """
         return pulumi.get(self, "mode_trunk")
 
     @property
@@ -132,6 +159,9 @@ class GetInterfaceSwitchportResult:
     @property
     @pulumi.getter
     def nonegotiate(self) -> bool:
+        """
+        Device will not engage in negotiation protocol on this interface
+        """
         return pulumi.get(self, "nonegotiate")
 
     @property
@@ -142,6 +172,9 @@ class GetInterfaceSwitchportResult:
     @property
     @pulumi.getter(name="trunkAllowedVlansNone")
     def trunk_allowed_vlans_none(self) -> bool:
+        """
+        no VLANs
+        """
         return pulumi.get(self, "trunk_allowed_vlans_none")
 
     @property
@@ -157,6 +190,9 @@ class GetInterfaceSwitchportResult:
     @property
     @pulumi.getter
     def type(self) -> str:
+        """
+        Interface type
+        """
         return pulumi.get(self, "type")
 
 
@@ -190,7 +226,21 @@ def get_interface_switchport(device: Optional[str] = None,
                              type: Optional[str] = None,
                              opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetInterfaceSwitchportResult:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Interface Switchport configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_interface_switchport(name="1/0/3",
+        type="GigabitEthernet")
+    ```
+
+
+    :param str device: A device name from the provider configuration.
+    :param str type: Interface type
     """
     __args__ = dict()
     __args__['device'] = device
@@ -225,6 +275,20 @@ def get_interface_switchport_output(device: Optional[pulumi.Input[Optional[str]]
                                     type: Optional[pulumi.Input[str]] = None,
                                     opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetInterfaceSwitchportResult]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Interface Switchport configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_interface_switchport(name="1/0/3",
+        type="GigabitEthernet")
+    ```
+
+
+    :param str device: A device name from the provider configuration.
+    :param str type: Interface type
     """
     ...

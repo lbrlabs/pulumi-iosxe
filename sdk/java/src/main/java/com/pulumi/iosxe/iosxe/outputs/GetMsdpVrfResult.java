@@ -14,26 +14,66 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetMsdpVrfResult {
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
+    /**
+     * @return Configure MSDP Originator ID
+     * 
+     */
     private String originatorId;
+    /**
+     * @return MSDP peer on which the password is to be set
+     * 
+     */
     private List<GetMsdpVrfPassword> passwords;
+    /**
+     * @return Configure an MSDP peer
+     * 
+     */
     private List<GetMsdpVrfPeer> peers;
     private String vrf;
 
     private GetMsdpVrfResult() {}
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
+    /**
+     * @return Configure MSDP Originator ID
+     * 
+     */
     public String originatorId() {
         return this.originatorId;
     }
+    /**
+     * @return MSDP peer on which the password is to be set
+     * 
+     */
     public List<GetMsdpVrfPassword> passwords() {
         return this.passwords;
     }
+    /**
+     * @return Configure an MSDP peer
+     * 
+     */
     public List<GetMsdpVrfPeer> peers() {
         return this.peers;
     }

@@ -14,6 +14,47 @@ import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the BGP Address Family L2VPN configuration.
+ * 
+ * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.BgpAddressFamilyL2vpn;
+ * import com.pulumi.iosxe.iosxe.BgpAddressFamilyL2vpnArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new BgpAddressFamilyL2vpn(&#34;example&#34;, BgpAddressFamilyL2vpnArgs.builder()        
+ *             .afName(&#34;evpn&#34;)
+ *             .asn(&#34;65000&#34;)
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/bgpAddressFamilyL2vpn:BgpAddressFamilyL2vpn example &#34;Cisco-IOS-XE-native:native/router/Cisco-IOS-XE-bgp:bgp=65000/address-family/no-vrf/l2vpn=evpn&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/bgpAddressFamilyL2vpn:BgpAddressFamilyL2vpn")
 public class BgpAddressFamilyL2vpn extends com.pulumi.resources.CustomResource {
     /**

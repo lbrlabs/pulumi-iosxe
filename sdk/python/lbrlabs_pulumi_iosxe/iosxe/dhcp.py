@@ -374,7 +374,14 @@ class Dhcp(pulumi.CustomResource):
                  snooping_vlans: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['DhcpSnoopingVlanArgs']]]]] = None,
                  __props__=None):
         """
-        Create a Dhcp resource with the given unique name, props, and options.
+        This resource can manage the DHCP configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/dhcp:Dhcp example "Cisco-IOS-XE-native:native/ip/dhcp"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] compatibility_suboption_link_selection: - Choices: `cisco`, `standard`
@@ -397,7 +404,14 @@ class Dhcp(pulumi.CustomResource):
                  args: Optional[DhcpArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a Dhcp resource with the given unique name, props, and options.
+        This resource can manage the DHCP configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/dhcp:Dhcp example "Cisco-IOS-XE-native:native/ip/dhcp"
+        ```
+
         :param str resource_name: The name of the resource.
         :param DhcpArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

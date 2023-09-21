@@ -670,7 +670,14 @@ class Ospf(pulumi.CustomResource):
                  summary_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['OspfSummaryAddressArgs']]]]] = None,
                  __props__=None):
         """
-        Create a Ospf resource with the given unique name, props, and options.
+        This resource can manage the OSPF configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/ospf:Ospf example "Cisco-IOS-XE-native:native/router/Cisco-IOS-XE-ospf:router-ospf/ospf/process-id=1"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['OspfAreaArgs']]]] areas: OSPF area parameters
@@ -702,7 +709,14 @@ class Ospf(pulumi.CustomResource):
                  args: OspfArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a Ospf resource with the given unique name, props, and options.
+        This resource can manage the OSPF configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/ospf:Ospf example "Cisco-IOS-XE-native:native/router/Cisco-IOS-XE-ospf:router-ospf/ospf/process-id=1"
+        ```
+
         :param str resource_name: The name of the resource.
         :param OspfArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

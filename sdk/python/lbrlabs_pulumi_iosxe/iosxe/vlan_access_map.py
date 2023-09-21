@@ -223,7 +223,27 @@ class VlanAccessMap(pulumi.CustomResource):
                  sequence: Optional[pulumi.Input[int]] = None,
                  __props__=None):
         """
-        Create a VlanAccessMap resource with the given unique name, props, and options.
+        This resource can manage the VLAN Access Map configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.VlanAccessMap("example",
+            action="forward",
+            match_ip_addresses=["ACL1"],
+            match_ipv6_addresses=["ACL2"],
+            sequence=10)
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/vlanAccessMap:VlanAccessMap example "Cisco-IOS-XE-native:native/vlan/Cisco-IOS-XE-vlan:access-map=VAM1,10"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] action: Take the action - Choices: `drop`, `forward`
@@ -239,7 +259,27 @@ class VlanAccessMap(pulumi.CustomResource):
                  args: VlanAccessMapArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a VlanAccessMap resource with the given unique name, props, and options.
+        This resource can manage the VLAN Access Map configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.VlanAccessMap("example",
+            action="forward",
+            match_ip_addresses=["ACL1"],
+            match_ipv6_addresses=["ACL2"],
+            sequence=10)
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/vlanAccessMap:VlanAccessMap example "Cisco-IOS-XE-native:native/vlan/Cisco-IOS-XE-vlan:access-map=VAM1,10"
+        ```
+
         :param str resource_name: The name of the resource.
         :param VlanAccessMapArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

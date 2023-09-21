@@ -16,6 +16,62 @@ import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the VTP configuration.
+ * 
+ * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.Vtp;
+ * import com.pulumi.iosxe.iosxe.VtpArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Vtp(&#34;example&#34;, VtpArgs.builder()        
+ *             .domain(&#34;TESTDOMAIN&#34;)
+ *             .file(&#34;TEST&#34;)
+ *             .interface_(&#34;Gi1/0/1&#34;)
+ *             .modeClientMst(true)
+ *             .modeClientUnknown(true)
+ *             .modeClientVlan(true)
+ *             .modeOffMst(true)
+ *             .modeOffVlan(true)
+ *             .modeServerMst(true)
+ *             .modeServerUnknown(true)
+ *             .modeServerVlan(true)
+ *             .modeTransparentMst(true)
+ *             .modeTransparentUnknown(true)
+ *             .modeTransparentVlan(true)
+ *             .password(&#34;test123&#34;)
+ *             .passwordHidden(true)
+ *             .version(3)
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/vtp:Vtp example &#34;Cisco-IOS-XE-native:native/vtp&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/vtp:Vtp")
 public class Vtp extends com.pulumi.resources.CustomResource {
     /**

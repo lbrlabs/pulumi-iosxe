@@ -16,6 +16,54 @@ import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the Interface PIM configuration.
+ * 
+ * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.InterfacePim;
+ * import com.pulumi.iosxe.iosxe.InterfacePimArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new InterfacePim(&#34;example&#34;, InterfacePimArgs.builder()        
+ *             .bfd(false)
+ *             .border(false)
+ *             .bsrBorder(false)
+ *             .denseMode(false)
+ *             .drPriority(10)
+ *             .passive(false)
+ *             .sparseDenseMode(false)
+ *             .sparseMode(true)
+ *             .type(&#34;Loopback&#34;)
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/interfacePim:InterfacePim example &#34;Cisco-IOS-XE-native:native/interface/Loopback=100/ip/pim&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/interfacePim:InterfacePim")
 public class InterfacePim extends com.pulumi.resources.CustomResource {
     /**

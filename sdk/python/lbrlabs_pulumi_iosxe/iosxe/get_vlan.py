@@ -56,51 +56,81 @@ class GetVlanResult:
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
     @property
     @pulumi.getter
     def name(self) -> str:
+        """
+        Ascii name of the VLAN
+        """
         return pulumi.get(self, "name")
 
     @property
     @pulumi.getter(name="privateVlanAssociation")
     def private_vlan_association(self) -> str:
+        """
+        Configure association between private VLANs
+        """
         return pulumi.get(self, "private_vlan_association")
 
     @property
     @pulumi.getter(name="privateVlanCommunity")
     def private_vlan_community(self) -> bool:
+        """
+        Configure the VLAN as a community private VLAN
+        """
         return pulumi.get(self, "private_vlan_community")
 
     @property
     @pulumi.getter(name="privateVlanIsolated")
     def private_vlan_isolated(self) -> bool:
+        """
+        Configure the VLAN as an isolated private VLAN
+        """
         return pulumi.get(self, "private_vlan_isolated")
 
     @property
     @pulumi.getter(name="privateVlanPrimary")
     def private_vlan_primary(self) -> bool:
+        """
+        Configure the VLAN as a primary private VLAN
+        """
         return pulumi.get(self, "private_vlan_primary")
 
     @property
     @pulumi.getter(name="remoteSpan")
     def remote_span(self) -> bool:
+        """
+        Configure as Remote SPAN VLAN
+        """
         return pulumi.get(self, "remote_span")
 
     @property
     @pulumi.getter
     def shutdown(self) -> bool:
+        """
+        Shutdown VLAN switching
+        """
         return pulumi.get(self, "shutdown")
 
     @property
     @pulumi.getter(name="vlanId")
     def vlan_id(self) -> int:
+        """
+        a single VLAN id (allowed value range 1-4094)or Comma-separated VLAN id range.e.g. 99 or 1-30 or  1-20,30,40-50
+        """
         return pulumi.get(self, "vlan_id")
 
 
@@ -126,7 +156,20 @@ def get_vlan(device: Optional[str] = None,
              vlan_id: Optional[int] = None,
              opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetVlanResult:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the VLAN configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_vlan(vlan_id=123)
+    ```
+
+
+    :param str device: A device name from the provider configuration.
+    :param int vlan_id: a single VLAN id (allowed value range 1-4094)or Comma-separated VLAN id range.e.g. 99 or 1-30 or  1-20,30,40-50
     """
     __args__ = dict()
     __args__['device'] = device
@@ -152,6 +195,19 @@ def get_vlan_output(device: Optional[pulumi.Input[Optional[str]]] = None,
                     vlan_id: Optional[pulumi.Input[int]] = None,
                     opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetVlanResult]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the VLAN configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_vlan(vlan_id=123)
+    ```
+
+
+    :param str device: A device name from the provider configuration.
+    :param int vlan_id: a single VLAN id (allowed value range 1-4094)or Comma-separated VLAN id range.e.g. 99 or 1-30 or  1-20,30,40-50
     """
     ...

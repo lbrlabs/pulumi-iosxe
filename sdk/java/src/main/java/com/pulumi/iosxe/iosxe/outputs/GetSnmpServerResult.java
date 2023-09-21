@@ -18,20 +18,64 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetSnmpServerResult {
+    /**
+     * @return String to uniquely identify this chassis
+     * 
+     */
     private String chassisId;
+    /**
+     * @return Text for mib object sysContact
+     * 
+     */
     private String contact;
+    /**
+     * @return Create/Delete a context apart from default
+     * 
+     */
     private List<GetSnmpServerContext> contexts;
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return Enable SNMP Informs
+     * 
+     */
     private Boolean enableInforms;
+    /**
+     * @return Enable SNMP GET Operation logging
+     * 
+     */
     private Boolean enableLoggingGetop;
+    /**
+     * @return Enable SNMP SET Operation logging
+     * 
+     */
     private Boolean enableLoggingSetop;
+    /**
+     * @return Enable SNMP Traps
+     * 
+     */
     private Boolean enableTraps;
     private Boolean enableTrapsAuthFrameworkSecViolation;
     private Boolean enableTrapsBfd;
+    /**
+     * @return Enable BGP MIBv2 traps
+     * 
+     */
     private Boolean enableTrapsBgpCbgp2;
     private Boolean enableTrapsBridgeNewroot;
     private Boolean enableTrapsBridgeTopologychange;
+    /**
+     * @return Enable Data-Collection-MIB Collection notifications
+     * 
+     */
     private Boolean enableTrapsBulkstatCollection;
+    /**
+     * @return Enable Data-Collection-MIB Transfer notifications
+     * 
+     */
     private Boolean enableTrapsBulkstatTransfer;
     private Boolean enableTrapsCallHomeMessageSendFail;
     private Boolean enableTrapsCallHomeServerFail;
@@ -39,93 +83,381 @@ public final class GetSnmpServerResult {
     private Boolean enableTrapsCefPeerFibStateChange;
     private Boolean enableTrapsCefPeerStateChange;
     private Boolean enableTrapsCefResourceFailure;
+    /**
+     * @return Enable SNMP config traps
+     * 
+     */
     private Boolean enableTrapsConfig;
+    /**
+     * @return Enable SNMP config-copy traps
+     * 
+     */
     private Boolean enableTrapsConfigCopy;
     private Boolean enableTrapsConfigCtid;
+    /**
+     * @return Allow CPU utilization threshold violation traps
+     * 
+     */
     private Boolean enableTrapsCpuThreshold;
+    /**
+     * @return Enable SNMP dhcp traps
+     * 
+     */
     private Boolean enableTrapsDhcp;
+    /**
+     * @return Enable SNMP EIGRP traps
+     * 
+     */
     private Boolean enableTrapsEigrp;
     private Boolean enableTrapsEnergywise;
+    /**
+     * @return Enable SNMP entity traps
+     * 
+     */
     private Boolean enableTrapsEntity;
+    /**
+     * @return Enable SNMP ceDiagBootUpFailedNotif traps
+     * 
+     */
     private Boolean enableTrapsEntityDiagBootUpFail;
+    /**
+     * @return Enable SNMP ceDiagHMTestRecoverNotif traps
+     * 
+     */
     private Boolean enableTrapsEntityDiagHmTestRecover;
+    /**
+     * @return Enable SNMP ceDiagHMThresholdReachedNotif traps
+     * 
+     */
     private Boolean enableTrapsEntityDiagHmThreshReached;
+    /**
+     * @return Enable SNMP ceDiagScheduledTestFailedNotif traps
+     * 
+     */
     private Boolean enableTrapsEntityDiagScheduledTestFail;
+    /**
+     * @return Enable ENTITY PERFORMANCE MIB throughput traps
+     * 
+     */
     private Boolean enableTrapsEntityPerfThroughputNotif;
+    /**
+     * @return Enable SNMP environmental monitor traps
+     * 
+     */
     private Boolean enableTrapsEnvmon;
+    /**
+     * @return Enable SNMP errdisable notifications
+     * 
+     */
     private Boolean enableTrapsErrdisable;
+    /**
+     * @return Enable SNMP Embedded Event Manager traps
+     * 
+     */
     private Boolean enableTrapsEventManager;
     private Boolean enableTrapsFastRerouteProtected;
+    /**
+     * @return Enable SNMP Flash Insertion notifications
+     * 
+     */
     private Boolean enableTrapsFlashInsertion;
+    /**
+     * @return Enable SNMP Flash Lowspace notifications
+     * 
+     */
     private Boolean enableTrapsFlashLowspace;
+    /**
+     * @return Enable SNMP Flash Removal notifications
+     * 
+     */
     private Boolean enableTrapsFlashRemoval;
+    /**
+     * @return Enable SNMP flowmon notifications
+     * 
+     */
     private Boolean enableTrapsFlowmon;
+    /**
+     * @return Enable SNMP entity FRU control traps
+     * 
+     */
     private Boolean enableTrapsFruCtrl;
+    /**
+     * @return Enable SNMP HSRP traps
+     * 
+     */
     private Boolean enableTrapsHsrp;
+    /**
+     * @return Enable IKE Policy add trap
+     * 
+     */
     private Boolean enableTrapsIkePolicyAdd;
+    /**
+     * @return Enable IKE Policy delete trap
+     * 
+     */
     private Boolean enableTrapsIkePolicyDelete;
+    /**
+     * @return Enable IKE Tunnel start trap
+     * 
+     */
     private Boolean enableTrapsIkeTunnelStart;
+    /**
+     * @return Enable IKE Tunnel stop trap
+     * 
+     */
     private Boolean enableTrapsIkeTunnelStop;
+    /**
+     * @return Enable SNMP ipmulticast traps
+     * 
+     */
     private Boolean enableTrapsIpmulticast;
+    /**
+     * @return Enable IPsec Cryptomap add trap
+     * 
+     */
     private Boolean enableTrapsIpsecCryptomapAdd;
+    /**
+     * @return Enable IPsec Cryptomap Attach trap
+     * 
+     */
     private Boolean enableTrapsIpsecCryptomapAttach;
+    /**
+     * @return Enable IPsec Cryptomap delete trap
+     * 
+     */
     private Boolean enableTrapsIpsecCryptomapDelete;
+    /**
+     * @return Enable IPsec Cryptomap Detach trap
+     * 
+     */
     private Boolean enableTrapsIpsecCryptomapDetach;
+    /**
+     * @return Enable IPsec Tunnel Start trap
+     * 
+     */
     private Boolean enableTrapsIpsecTooManySas;
+    /**
+     * @return Enable IPsec Tunnel Start trap
+     * 
+     */
     private Boolean enableTrapsIpsecTunnelStart;
+    /**
+     * @return Enable IPsec Tunnel Stop trap
+     * 
+     */
     private Boolean enableTrapsIpsecTunnelStop;
+    /**
+     * @return Enable IPSLA traps traps
+     * 
+     */
     private Boolean enableTrapsIpsla;
+    /**
+     * @return Enable ISIS traps traps
+     * 
+     */
     private Boolean enableTrapsIsis;
+    /**
+     * @return Enable license traps
+     * 
+     */
     private Boolean enableTrapsLicense;
+    /**
+     * @return Enable SNMP local auth traps
+     * 
+     */
     private Boolean enableTrapsLocalAuth;
+    /**
+     * @return Enable SNMP Change traps
+     * 
+     */
     private Boolean enableTrapsMacNotificationChange;
+    /**
+     * @return Enable SNMP Move traps
+     * 
+     */
     private Boolean enableTrapsMacNotificationMove;
+    /**
+     * @return Enable SNMP Threshold traps
+     * 
+     */
     private Boolean enableTrapsMacNotificationThreshold;
+    /**
+     * @return Enable SNMP Memory Bufferpeak traps
+     * 
+     */
     private Boolean enableTrapsMemoryBufferpeak;
+    /**
+     * @return SNMP MPLS label distribution protocol traps
+     * 
+     */
     private Boolean enableTrapsMplsLdp;
     private Boolean enableTrapsMplsRfcLdp;
     private Boolean enableTrapsMplsTrafficEng;
     private Boolean enableTrapsMplsVpn;
+    /**
+     * @return Enable SNMP MSDP traps
+     * 
+     */
     private Boolean enableTrapsMsdp;
     private Boolean enableTrapsNhrpNhc;
     private Boolean enableTrapsNhrpNhp;
     private Boolean enableTrapsNhrpNhs;
     private Boolean enableTrapsNhrpQuotaExceeded;
+    /**
+     * @return Enable all traps of errors
+     * 
+     */
     private Boolean enableTrapsOspfConfigErrors;
+    /**
+     * @return Enable all traps of lsa
+     * 
+     */
     private Boolean enableTrapsOspfConfigLsa;
+    /**
+     * @return Enable all traps of retransmit
+     * 
+     */
     private Boolean enableTrapsOspfConfigRetransmit;
+    /**
+     * @return Enable all traps of state-change
+     * 
+     */
     private Boolean enableTrapsOspfConfigStateChange;
+    /**
+     * @return Enable all traps of errors
+     * 
+     */
     private Boolean enableTrapsOspfErrorsEnable;
+    /**
+     * @return Enable all traps of lsa
+     * 
+     */
     private Boolean enableTrapsOspfLsaEnable;
+    /**
+     * @return Nssa translator state changes
+     * 
+     */
     private Boolean enableTrapsOspfNssaTransChange;
+    /**
+     * @return Enable all traps of retransmit
+     * 
+     */
     private Boolean enableTrapsOspfRetransmitEnable;
+    /**
+     * @return Sham link interface state changes
+     * 
+     */
     private Boolean enableTrapsOspfShamlinkInterface;
+    /**
+     * @return Sham link neighbor state changes
+     * 
+     */
     private Boolean enableTrapsOspfShamlinkNeighbor;
+    /**
+     * @return Enable all traps of errors
+     * 
+     */
     private Boolean enableTrapsOspfv3ConfigErrors;
+    /**
+     * @return Enable all traps of state-change
+     * 
+     */
     private Boolean enableTrapsOspfv3ConfigStateChange;
+    /**
+     * @return Enable invalid pim message trap
+     * 
+     */
     private Boolean enableTrapsPimInvalidPimMessage;
+    /**
+     * @return Enable neighbor change trap
+     * 
+     */
     private Boolean enableTrapsPimNeighborChange;
+    /**
+     * @return Enable rp mapping change trap
+     * 
+     */
     private Boolean enableTrapsPimRpMappingChange;
+    /**
+     * @return Enable SNMP port security traps
+     * 
+     */
     private Boolean enableTrapsPortSecurity;
+    /**
+     * @return Enable SNMP inline power group based traps
+     * 
+     */
     private String enableTrapsPowerEthernetGroup;
+    /**
+     * @return Enable Policing Trap
+     * 
+     */
     private Boolean enableTrapsPowerEthernetPolice;
     private Boolean enableTrapsPwVc;
     private Boolean enableTrapsRep;
+    /**
+     * @return Enable all SNMP traps defined in CISCO-RF-MIB
+     * 
+     */
     private Boolean enableTrapsRf;
+    /**
+     * @return Enable smart license traps
+     * 
+     */
     private Boolean enableTrapsSmartLicense;
+    /**
+     * @return Enable authentication trap
+     * 
+     */
     private Boolean enableTrapsSnmpAuthentication;
+    /**
+     * @return Enable coldStart trap
+     * 
+     */
     private Boolean enableTrapsSnmpColdstart;
+    /**
+     * @return Enable linkDown trap
+     * 
+     */
     private Boolean enableTrapsSnmpLinkdown;
+    /**
+     * @return Enable linkUp trap
+     * 
+     */
     private Boolean enableTrapsSnmpLinkup;
+    /**
+     * @return Enable warmStart trap
+     * 
+     */
     private Boolean enableTrapsSnmpWarmstart;
+    /**
+     * @return Enable SNMP stackwise traps
+     * 
+     */
     private Boolean enableTrapsStackwise;
     private Boolean enableTrapsStpxInconsistency;
     private Boolean enableTrapsStpxLoopInconsistency;
     private Boolean enableTrapsStpxRootInconsistency;
+    /**
+     * @return Enable SNMP syslog traps
+     * 
+     */
     private Boolean enableTrapsSyslog;
     private Boolean enableTrapsTransceiverAll;
+    /**
+     * @return Enable TCP connection traps
+     * 
+     */
     private Boolean enableTrapsTty;
+    /**
+     * @return Enable SNMP cudldpFastHelloLinkFailRptNotification traps
+     * 
+     */
     private Boolean enableTrapsUdldLinkFailRpt;
+    /**
+     * @return Enable SNMP cudldpFastHelloStatusChangeNotification traps
+     * 
+     */
     private Boolean enableTrapsUdldStatusChange;
     private Boolean enableTrapsVlanMembership;
     private Boolean enableTrapsVlancreate;
@@ -135,62 +467,214 @@ public final class GetSnmpServerResult {
     private Boolean enableTrapsVrfmibVrfDown;
     private Boolean enableTrapsVrfmibVrfUp;
     private Boolean enableTrapsVtp;
+    /**
+     * @return Specify hosts keyed by (ip-address, community-or-user)
+     * 
+     */
     private List<GetSnmpServerHost> hosts;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
+    /**
+     * @return Persist interface indices
+     * 
+     */
     private Boolean ifindexPersist;
+    /**
+     * @return Text for mib object sysLocation
+     * 
+     */
     private String location;
+    /**
+     * @return Largest SNMP packet size
+     * 
+     */
     private Integer packetsize;
+    /**
+     * @return Message queue length for each TRAP host
+     * 
+     */
     private Integer queueLength;
+    /**
+     * @return Enable SNMP; set community string and access privs
+     * 
+     */
     private List<GetSnmpServerSnmpCommunity> snmpCommunities;
+    /**
+     * @return Forty GigabitEthernet
+     * 
+     */
     private String sourceInterfaceInformsFortyGigabitEthernet;
+    /**
+     * @return GigabitEthernet IEEE 802.3z
+     * 
+     */
     private String sourceInterfaceInformsGigabitEthernet;
+    /**
+     * @return Hundred GigabitEthernet
+     * 
+     */
     private String sourceInterfaceInformsHundredGigE;
+    /**
+     * @return Loopback interface
+     * 
+     */
     private Integer sourceInterfaceInformsLoopback;
+    /**
+     * @return Ethernet Channel of interfaces
+     * 
+     */
     private Integer sourceInterfaceInformsPortChannel;
     private String sourceInterfaceInformsPortChannelSubinterface;
+    /**
+     * @return Ten Gigabit Ethernet
+     * 
+     */
     private String sourceInterfaceInformsTenGigabitEthernet;
+    /**
+     * @return Iosxr Vlans
+     * 
+     */
     private Integer sourceInterfaceInformsVlan;
+    /**
+     * @return Forty GigabitEthernet
+     * 
+     */
     private String sourceInterfaceTrapsFortyGigabitEthernet;
+    /**
+     * @return GigabitEthernet IEEE 802.3z
+     * 
+     */
     private String sourceInterfaceTrapsGigabitEthernet;
+    /**
+     * @return Hundred GigabitEthernet
+     * 
+     */
     private String sourceInterfaceTrapsHundredGigE;
+    /**
+     * @return Loopback interface
+     * 
+     */
     private Integer sourceInterfaceTrapsLoopback;
+    /**
+     * @return Ethernet Channel of interfaces
+     * 
+     */
     private Integer sourceInterfaceTrapsPortChannel;
     private String sourceInterfaceTrapsPortChannelSubinterface;
+    /**
+     * @return Ten Gigabit Ethernet
+     * 
+     */
     private String sourceInterfaceTrapsTenGigabitEthernet;
+    /**
+     * @return Iosxr Vlans
+     * 
+     */
     private Integer sourceInterfaceTrapsVlan;
+    /**
+     * @return Enable use of the SNMP reload command
+     * 
+     */
     private Boolean systemShutdown;
+    /**
+     * @return Forty GigabitEthernet
+     * 
+     */
     private String trapSourceFortyGigabitEthernet;
+    /**
+     * @return GigabitEthernet IEEE 802.3z
+     * 
+     */
     private String trapSourceGigabitEthernet;
+    /**
+     * @return Hundred GigabitEthernet
+     * 
+     */
     private String trapSourceHundredGigE;
+    /**
+     * @return Loopback interface
+     * 
+     */
     private Integer trapSourceLoopback;
+    /**
+     * @return Ethernet Channel of interfaces
+     * 
+     */
     private Integer trapSourcePortChannel;
     private String trapSourcePortChannelSubinterface;
+    /**
+     * @return Ten Gigabit Ethernet
+     * 
+     */
     private String trapSourceTenGigabitEthernet;
+    /**
+     * @return Iosxr Vlans
+     * 
+     */
     private Integer trapSourceVlan;
+    /**
+     * @return Define an SNMPv2 MIB view
+     * 
+     */
     private List<GetSnmpServerView> views;
 
     private GetSnmpServerResult() {}
+    /**
+     * @return String to uniquely identify this chassis
+     * 
+     */
     public String chassisId() {
         return this.chassisId;
     }
+    /**
+     * @return Text for mib object sysContact
+     * 
+     */
     public String contact() {
         return this.contact;
     }
+    /**
+     * @return Create/Delete a context apart from default
+     * 
+     */
     public List<GetSnmpServerContext> contexts() {
         return this.contexts;
     }
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return Enable SNMP Informs
+     * 
+     */
     public Boolean enableInforms() {
         return this.enableInforms;
     }
+    /**
+     * @return Enable SNMP GET Operation logging
+     * 
+     */
     public Boolean enableLoggingGetop() {
         return this.enableLoggingGetop;
     }
+    /**
+     * @return Enable SNMP SET Operation logging
+     * 
+     */
     public Boolean enableLoggingSetop() {
         return this.enableLoggingSetop;
     }
+    /**
+     * @return Enable SNMP Traps
+     * 
+     */
     public Boolean enableTraps() {
         return this.enableTraps;
     }
@@ -200,6 +684,10 @@ public final class GetSnmpServerResult {
     public Boolean enableTrapsBfd() {
         return this.enableTrapsBfd;
     }
+    /**
+     * @return Enable BGP MIBv2 traps
+     * 
+     */
     public Boolean enableTrapsBgpCbgp2() {
         return this.enableTrapsBgpCbgp2;
     }
@@ -209,9 +697,17 @@ public final class GetSnmpServerResult {
     public Boolean enableTrapsBridgeTopologychange() {
         return this.enableTrapsBridgeTopologychange;
     }
+    /**
+     * @return Enable Data-Collection-MIB Collection notifications
+     * 
+     */
     public Boolean enableTrapsBulkstatCollection() {
         return this.enableTrapsBulkstatCollection;
     }
+    /**
+     * @return Enable Data-Collection-MIB Transfer notifications
+     * 
+     */
     public Boolean enableTrapsBulkstatTransfer() {
         return this.enableTrapsBulkstatTransfer;
     }
@@ -233,135 +729,299 @@ public final class GetSnmpServerResult {
     public Boolean enableTrapsCefResourceFailure() {
         return this.enableTrapsCefResourceFailure;
     }
+    /**
+     * @return Enable SNMP config traps
+     * 
+     */
     public Boolean enableTrapsConfig() {
         return this.enableTrapsConfig;
     }
+    /**
+     * @return Enable SNMP config-copy traps
+     * 
+     */
     public Boolean enableTrapsConfigCopy() {
         return this.enableTrapsConfigCopy;
     }
     public Boolean enableTrapsConfigCtid() {
         return this.enableTrapsConfigCtid;
     }
+    /**
+     * @return Allow CPU utilization threshold violation traps
+     * 
+     */
     public Boolean enableTrapsCpuThreshold() {
         return this.enableTrapsCpuThreshold;
     }
+    /**
+     * @return Enable SNMP dhcp traps
+     * 
+     */
     public Boolean enableTrapsDhcp() {
         return this.enableTrapsDhcp;
     }
+    /**
+     * @return Enable SNMP EIGRP traps
+     * 
+     */
     public Boolean enableTrapsEigrp() {
         return this.enableTrapsEigrp;
     }
     public Boolean enableTrapsEnergywise() {
         return this.enableTrapsEnergywise;
     }
+    /**
+     * @return Enable SNMP entity traps
+     * 
+     */
     public Boolean enableTrapsEntity() {
         return this.enableTrapsEntity;
     }
+    /**
+     * @return Enable SNMP ceDiagBootUpFailedNotif traps
+     * 
+     */
     public Boolean enableTrapsEntityDiagBootUpFail() {
         return this.enableTrapsEntityDiagBootUpFail;
     }
+    /**
+     * @return Enable SNMP ceDiagHMTestRecoverNotif traps
+     * 
+     */
     public Boolean enableTrapsEntityDiagHmTestRecover() {
         return this.enableTrapsEntityDiagHmTestRecover;
     }
+    /**
+     * @return Enable SNMP ceDiagHMThresholdReachedNotif traps
+     * 
+     */
     public Boolean enableTrapsEntityDiagHmThreshReached() {
         return this.enableTrapsEntityDiagHmThreshReached;
     }
+    /**
+     * @return Enable SNMP ceDiagScheduledTestFailedNotif traps
+     * 
+     */
     public Boolean enableTrapsEntityDiagScheduledTestFail() {
         return this.enableTrapsEntityDiagScheduledTestFail;
     }
+    /**
+     * @return Enable ENTITY PERFORMANCE MIB throughput traps
+     * 
+     */
     public Boolean enableTrapsEntityPerfThroughputNotif() {
         return this.enableTrapsEntityPerfThroughputNotif;
     }
+    /**
+     * @return Enable SNMP environmental monitor traps
+     * 
+     */
     public Boolean enableTrapsEnvmon() {
         return this.enableTrapsEnvmon;
     }
+    /**
+     * @return Enable SNMP errdisable notifications
+     * 
+     */
     public Boolean enableTrapsErrdisable() {
         return this.enableTrapsErrdisable;
     }
+    /**
+     * @return Enable SNMP Embedded Event Manager traps
+     * 
+     */
     public Boolean enableTrapsEventManager() {
         return this.enableTrapsEventManager;
     }
     public Boolean enableTrapsFastRerouteProtected() {
         return this.enableTrapsFastRerouteProtected;
     }
+    /**
+     * @return Enable SNMP Flash Insertion notifications
+     * 
+     */
     public Boolean enableTrapsFlashInsertion() {
         return this.enableTrapsFlashInsertion;
     }
+    /**
+     * @return Enable SNMP Flash Lowspace notifications
+     * 
+     */
     public Boolean enableTrapsFlashLowspace() {
         return this.enableTrapsFlashLowspace;
     }
+    /**
+     * @return Enable SNMP Flash Removal notifications
+     * 
+     */
     public Boolean enableTrapsFlashRemoval() {
         return this.enableTrapsFlashRemoval;
     }
+    /**
+     * @return Enable SNMP flowmon notifications
+     * 
+     */
     public Boolean enableTrapsFlowmon() {
         return this.enableTrapsFlowmon;
     }
+    /**
+     * @return Enable SNMP entity FRU control traps
+     * 
+     */
     public Boolean enableTrapsFruCtrl() {
         return this.enableTrapsFruCtrl;
     }
+    /**
+     * @return Enable SNMP HSRP traps
+     * 
+     */
     public Boolean enableTrapsHsrp() {
         return this.enableTrapsHsrp;
     }
+    /**
+     * @return Enable IKE Policy add trap
+     * 
+     */
     public Boolean enableTrapsIkePolicyAdd() {
         return this.enableTrapsIkePolicyAdd;
     }
+    /**
+     * @return Enable IKE Policy delete trap
+     * 
+     */
     public Boolean enableTrapsIkePolicyDelete() {
         return this.enableTrapsIkePolicyDelete;
     }
+    /**
+     * @return Enable IKE Tunnel start trap
+     * 
+     */
     public Boolean enableTrapsIkeTunnelStart() {
         return this.enableTrapsIkeTunnelStart;
     }
+    /**
+     * @return Enable IKE Tunnel stop trap
+     * 
+     */
     public Boolean enableTrapsIkeTunnelStop() {
         return this.enableTrapsIkeTunnelStop;
     }
+    /**
+     * @return Enable SNMP ipmulticast traps
+     * 
+     */
     public Boolean enableTrapsIpmulticast() {
         return this.enableTrapsIpmulticast;
     }
+    /**
+     * @return Enable IPsec Cryptomap add trap
+     * 
+     */
     public Boolean enableTrapsIpsecCryptomapAdd() {
         return this.enableTrapsIpsecCryptomapAdd;
     }
+    /**
+     * @return Enable IPsec Cryptomap Attach trap
+     * 
+     */
     public Boolean enableTrapsIpsecCryptomapAttach() {
         return this.enableTrapsIpsecCryptomapAttach;
     }
+    /**
+     * @return Enable IPsec Cryptomap delete trap
+     * 
+     */
     public Boolean enableTrapsIpsecCryptomapDelete() {
         return this.enableTrapsIpsecCryptomapDelete;
     }
+    /**
+     * @return Enable IPsec Cryptomap Detach trap
+     * 
+     */
     public Boolean enableTrapsIpsecCryptomapDetach() {
         return this.enableTrapsIpsecCryptomapDetach;
     }
+    /**
+     * @return Enable IPsec Tunnel Start trap
+     * 
+     */
     public Boolean enableTrapsIpsecTooManySas() {
         return this.enableTrapsIpsecTooManySas;
     }
+    /**
+     * @return Enable IPsec Tunnel Start trap
+     * 
+     */
     public Boolean enableTrapsIpsecTunnelStart() {
         return this.enableTrapsIpsecTunnelStart;
     }
+    /**
+     * @return Enable IPsec Tunnel Stop trap
+     * 
+     */
     public Boolean enableTrapsIpsecTunnelStop() {
         return this.enableTrapsIpsecTunnelStop;
     }
+    /**
+     * @return Enable IPSLA traps traps
+     * 
+     */
     public Boolean enableTrapsIpsla() {
         return this.enableTrapsIpsla;
     }
+    /**
+     * @return Enable ISIS traps traps
+     * 
+     */
     public Boolean enableTrapsIsis() {
         return this.enableTrapsIsis;
     }
+    /**
+     * @return Enable license traps
+     * 
+     */
     public Boolean enableTrapsLicense() {
         return this.enableTrapsLicense;
     }
+    /**
+     * @return Enable SNMP local auth traps
+     * 
+     */
     public Boolean enableTrapsLocalAuth() {
         return this.enableTrapsLocalAuth;
     }
+    /**
+     * @return Enable SNMP Change traps
+     * 
+     */
     public Boolean enableTrapsMacNotificationChange() {
         return this.enableTrapsMacNotificationChange;
     }
+    /**
+     * @return Enable SNMP Move traps
+     * 
+     */
     public Boolean enableTrapsMacNotificationMove() {
         return this.enableTrapsMacNotificationMove;
     }
+    /**
+     * @return Enable SNMP Threshold traps
+     * 
+     */
     public Boolean enableTrapsMacNotificationThreshold() {
         return this.enableTrapsMacNotificationThreshold;
     }
+    /**
+     * @return Enable SNMP Memory Bufferpeak traps
+     * 
+     */
     public Boolean enableTrapsMemoryBufferpeak() {
         return this.enableTrapsMemoryBufferpeak;
     }
+    /**
+     * @return SNMP MPLS label distribution protocol traps
+     * 
+     */
     public Boolean enableTrapsMplsLdp() {
         return this.enableTrapsMplsLdp;
     }
@@ -374,6 +1034,10 @@ public final class GetSnmpServerResult {
     public Boolean enableTrapsMplsVpn() {
         return this.enableTrapsMplsVpn;
     }
+    /**
+     * @return Enable SNMP MSDP traps
+     * 
+     */
     public Boolean enableTrapsMsdp() {
         return this.enableTrapsMsdp;
     }
@@ -389,57 +1053,129 @@ public final class GetSnmpServerResult {
     public Boolean enableTrapsNhrpQuotaExceeded() {
         return this.enableTrapsNhrpQuotaExceeded;
     }
+    /**
+     * @return Enable all traps of errors
+     * 
+     */
     public Boolean enableTrapsOspfConfigErrors() {
         return this.enableTrapsOspfConfigErrors;
     }
+    /**
+     * @return Enable all traps of lsa
+     * 
+     */
     public Boolean enableTrapsOspfConfigLsa() {
         return this.enableTrapsOspfConfigLsa;
     }
+    /**
+     * @return Enable all traps of retransmit
+     * 
+     */
     public Boolean enableTrapsOspfConfigRetransmit() {
         return this.enableTrapsOspfConfigRetransmit;
     }
+    /**
+     * @return Enable all traps of state-change
+     * 
+     */
     public Boolean enableTrapsOspfConfigStateChange() {
         return this.enableTrapsOspfConfigStateChange;
     }
+    /**
+     * @return Enable all traps of errors
+     * 
+     */
     public Boolean enableTrapsOspfErrorsEnable() {
         return this.enableTrapsOspfErrorsEnable;
     }
+    /**
+     * @return Enable all traps of lsa
+     * 
+     */
     public Boolean enableTrapsOspfLsaEnable() {
         return this.enableTrapsOspfLsaEnable;
     }
+    /**
+     * @return Nssa translator state changes
+     * 
+     */
     public Boolean enableTrapsOspfNssaTransChange() {
         return this.enableTrapsOspfNssaTransChange;
     }
+    /**
+     * @return Enable all traps of retransmit
+     * 
+     */
     public Boolean enableTrapsOspfRetransmitEnable() {
         return this.enableTrapsOspfRetransmitEnable;
     }
+    /**
+     * @return Sham link interface state changes
+     * 
+     */
     public Boolean enableTrapsOspfShamlinkInterface() {
         return this.enableTrapsOspfShamlinkInterface;
     }
+    /**
+     * @return Sham link neighbor state changes
+     * 
+     */
     public Boolean enableTrapsOspfShamlinkNeighbor() {
         return this.enableTrapsOspfShamlinkNeighbor;
     }
+    /**
+     * @return Enable all traps of errors
+     * 
+     */
     public Boolean enableTrapsOspfv3ConfigErrors() {
         return this.enableTrapsOspfv3ConfigErrors;
     }
+    /**
+     * @return Enable all traps of state-change
+     * 
+     */
     public Boolean enableTrapsOspfv3ConfigStateChange() {
         return this.enableTrapsOspfv3ConfigStateChange;
     }
+    /**
+     * @return Enable invalid pim message trap
+     * 
+     */
     public Boolean enableTrapsPimInvalidPimMessage() {
         return this.enableTrapsPimInvalidPimMessage;
     }
+    /**
+     * @return Enable neighbor change trap
+     * 
+     */
     public Boolean enableTrapsPimNeighborChange() {
         return this.enableTrapsPimNeighborChange;
     }
+    /**
+     * @return Enable rp mapping change trap
+     * 
+     */
     public Boolean enableTrapsPimRpMappingChange() {
         return this.enableTrapsPimRpMappingChange;
     }
+    /**
+     * @return Enable SNMP port security traps
+     * 
+     */
     public Boolean enableTrapsPortSecurity() {
         return this.enableTrapsPortSecurity;
     }
+    /**
+     * @return Enable SNMP inline power group based traps
+     * 
+     */
     public String enableTrapsPowerEthernetGroup() {
         return this.enableTrapsPowerEthernetGroup;
     }
+    /**
+     * @return Enable Policing Trap
+     * 
+     */
     public Boolean enableTrapsPowerEthernetPolice() {
         return this.enableTrapsPowerEthernetPolice;
     }
@@ -449,27 +1185,59 @@ public final class GetSnmpServerResult {
     public Boolean enableTrapsRep() {
         return this.enableTrapsRep;
     }
+    /**
+     * @return Enable all SNMP traps defined in CISCO-RF-MIB
+     * 
+     */
     public Boolean enableTrapsRf() {
         return this.enableTrapsRf;
     }
+    /**
+     * @return Enable smart license traps
+     * 
+     */
     public Boolean enableTrapsSmartLicense() {
         return this.enableTrapsSmartLicense;
     }
+    /**
+     * @return Enable authentication trap
+     * 
+     */
     public Boolean enableTrapsSnmpAuthentication() {
         return this.enableTrapsSnmpAuthentication;
     }
+    /**
+     * @return Enable coldStart trap
+     * 
+     */
     public Boolean enableTrapsSnmpColdstart() {
         return this.enableTrapsSnmpColdstart;
     }
+    /**
+     * @return Enable linkDown trap
+     * 
+     */
     public Boolean enableTrapsSnmpLinkdown() {
         return this.enableTrapsSnmpLinkdown;
     }
+    /**
+     * @return Enable linkUp trap
+     * 
+     */
     public Boolean enableTrapsSnmpLinkup() {
         return this.enableTrapsSnmpLinkup;
     }
+    /**
+     * @return Enable warmStart trap
+     * 
+     */
     public Boolean enableTrapsSnmpWarmstart() {
         return this.enableTrapsSnmpWarmstart;
     }
+    /**
+     * @return Enable SNMP stackwise traps
+     * 
+     */
     public Boolean enableTrapsStackwise() {
         return this.enableTrapsStackwise;
     }
@@ -482,18 +1250,34 @@ public final class GetSnmpServerResult {
     public Boolean enableTrapsStpxRootInconsistency() {
         return this.enableTrapsStpxRootInconsistency;
     }
+    /**
+     * @return Enable SNMP syslog traps
+     * 
+     */
     public Boolean enableTrapsSyslog() {
         return this.enableTrapsSyslog;
     }
     public Boolean enableTrapsTransceiverAll() {
         return this.enableTrapsTransceiverAll;
     }
+    /**
+     * @return Enable TCP connection traps
+     * 
+     */
     public Boolean enableTrapsTty() {
         return this.enableTrapsTty;
     }
+    /**
+     * @return Enable SNMP cudldpFastHelloLinkFailRptNotification traps
+     * 
+     */
     public Boolean enableTrapsUdldLinkFailRpt() {
         return this.enableTrapsUdldLinkFailRpt;
     }
+    /**
+     * @return Enable SNMP cudldpFastHelloStatusChangeNotification traps
+     * 
+     */
     public Boolean enableTrapsUdldStatusChange() {
         return this.enableTrapsUdldStatusChange;
     }
@@ -521,102 +1305,222 @@ public final class GetSnmpServerResult {
     public Boolean enableTrapsVtp() {
         return this.enableTrapsVtp;
     }
+    /**
+     * @return Specify hosts keyed by (ip-address, community-or-user)
+     * 
+     */
     public List<GetSnmpServerHost> hosts() {
         return this.hosts;
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
+    /**
+     * @return Persist interface indices
+     * 
+     */
     public Boolean ifindexPersist() {
         return this.ifindexPersist;
     }
+    /**
+     * @return Text for mib object sysLocation
+     * 
+     */
     public String location() {
         return this.location;
     }
+    /**
+     * @return Largest SNMP packet size
+     * 
+     */
     public Integer packetsize() {
         return this.packetsize;
     }
+    /**
+     * @return Message queue length for each TRAP host
+     * 
+     */
     public Integer queueLength() {
         return this.queueLength;
     }
+    /**
+     * @return Enable SNMP; set community string and access privs
+     * 
+     */
     public List<GetSnmpServerSnmpCommunity> snmpCommunities() {
         return this.snmpCommunities;
     }
+    /**
+     * @return Forty GigabitEthernet
+     * 
+     */
     public String sourceInterfaceInformsFortyGigabitEthernet() {
         return this.sourceInterfaceInformsFortyGigabitEthernet;
     }
+    /**
+     * @return GigabitEthernet IEEE 802.3z
+     * 
+     */
     public String sourceInterfaceInformsGigabitEthernet() {
         return this.sourceInterfaceInformsGigabitEthernet;
     }
+    /**
+     * @return Hundred GigabitEthernet
+     * 
+     */
     public String sourceInterfaceInformsHundredGigE() {
         return this.sourceInterfaceInformsHundredGigE;
     }
+    /**
+     * @return Loopback interface
+     * 
+     */
     public Integer sourceInterfaceInformsLoopback() {
         return this.sourceInterfaceInformsLoopback;
     }
+    /**
+     * @return Ethernet Channel of interfaces
+     * 
+     */
     public Integer sourceInterfaceInformsPortChannel() {
         return this.sourceInterfaceInformsPortChannel;
     }
     public String sourceInterfaceInformsPortChannelSubinterface() {
         return this.sourceInterfaceInformsPortChannelSubinterface;
     }
+    /**
+     * @return Ten Gigabit Ethernet
+     * 
+     */
     public String sourceInterfaceInformsTenGigabitEthernet() {
         return this.sourceInterfaceInformsTenGigabitEthernet;
     }
+    /**
+     * @return Iosxr Vlans
+     * 
+     */
     public Integer sourceInterfaceInformsVlan() {
         return this.sourceInterfaceInformsVlan;
     }
+    /**
+     * @return Forty GigabitEthernet
+     * 
+     */
     public String sourceInterfaceTrapsFortyGigabitEthernet() {
         return this.sourceInterfaceTrapsFortyGigabitEthernet;
     }
+    /**
+     * @return GigabitEthernet IEEE 802.3z
+     * 
+     */
     public String sourceInterfaceTrapsGigabitEthernet() {
         return this.sourceInterfaceTrapsGigabitEthernet;
     }
+    /**
+     * @return Hundred GigabitEthernet
+     * 
+     */
     public String sourceInterfaceTrapsHundredGigE() {
         return this.sourceInterfaceTrapsHundredGigE;
     }
+    /**
+     * @return Loopback interface
+     * 
+     */
     public Integer sourceInterfaceTrapsLoopback() {
         return this.sourceInterfaceTrapsLoopback;
     }
+    /**
+     * @return Ethernet Channel of interfaces
+     * 
+     */
     public Integer sourceInterfaceTrapsPortChannel() {
         return this.sourceInterfaceTrapsPortChannel;
     }
     public String sourceInterfaceTrapsPortChannelSubinterface() {
         return this.sourceInterfaceTrapsPortChannelSubinterface;
     }
+    /**
+     * @return Ten Gigabit Ethernet
+     * 
+     */
     public String sourceInterfaceTrapsTenGigabitEthernet() {
         return this.sourceInterfaceTrapsTenGigabitEthernet;
     }
+    /**
+     * @return Iosxr Vlans
+     * 
+     */
     public Integer sourceInterfaceTrapsVlan() {
         return this.sourceInterfaceTrapsVlan;
     }
+    /**
+     * @return Enable use of the SNMP reload command
+     * 
+     */
     public Boolean systemShutdown() {
         return this.systemShutdown;
     }
+    /**
+     * @return Forty GigabitEthernet
+     * 
+     */
     public String trapSourceFortyGigabitEthernet() {
         return this.trapSourceFortyGigabitEthernet;
     }
+    /**
+     * @return GigabitEthernet IEEE 802.3z
+     * 
+     */
     public String trapSourceGigabitEthernet() {
         return this.trapSourceGigabitEthernet;
     }
+    /**
+     * @return Hundred GigabitEthernet
+     * 
+     */
     public String trapSourceHundredGigE() {
         return this.trapSourceHundredGigE;
     }
+    /**
+     * @return Loopback interface
+     * 
+     */
     public Integer trapSourceLoopback() {
         return this.trapSourceLoopback;
     }
+    /**
+     * @return Ethernet Channel of interfaces
+     * 
+     */
     public Integer trapSourcePortChannel() {
         return this.trapSourcePortChannel;
     }
     public String trapSourcePortChannelSubinterface() {
         return this.trapSourcePortChannelSubinterface;
     }
+    /**
+     * @return Ten Gigabit Ethernet
+     * 
+     */
     public String trapSourceTenGigabitEthernet() {
         return this.trapSourceTenGigabitEthernet;
     }
+    /**
+     * @return Iosxr Vlans
+     * 
+     */
     public Integer trapSourceVlan() {
         return this.trapSourceVlan;
     }
+    /**
+     * @return Define an SNMPv2 MIB view
+     * 
+     */
     public List<GetSnmpServerView> views() {
         return this.views;
     }

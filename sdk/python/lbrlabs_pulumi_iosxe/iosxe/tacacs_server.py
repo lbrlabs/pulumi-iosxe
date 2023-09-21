@@ -240,7 +240,26 @@ class TacacsServer(pulumi.CustomResource):
                  timeout: Optional[pulumi.Input[int]] = None,
                  __props__=None):
         """
-        Create a TacacsServer resource with the given unique name, props, and options.
+        This resource can manage the TACACS Server configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.TacacsServer("example",
+            address_ipv4="10.10.15.13",
+            key="123",
+            timeout=4)
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/tacacsServer:TacacsServer example "Cisco-IOS-XE-native:native/tacacs/Cisco-IOS-XE-aaa:server=tacacs_10.10.15.13"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] address_ipv4: IPv4 address or Hostname for tacacs server
@@ -259,7 +278,26 @@ class TacacsServer(pulumi.CustomResource):
                  args: Optional[TacacsServerArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a TacacsServer resource with the given unique name, props, and options.
+        This resource can manage the TACACS Server configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.TacacsServer("example",
+            address_ipv4="10.10.15.13",
+            key="123",
+            timeout=4)
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/tacacsServer:TacacsServer example "Cisco-IOS-XE-native:native/tacacs/Cisco-IOS-XE-aaa:server=tacacs_10.10.15.13"
+        ```
+
         :param str resource_name: The name of the resource.
         :param TacacsServerArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

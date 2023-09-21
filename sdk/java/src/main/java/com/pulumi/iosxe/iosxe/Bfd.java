@@ -24,6 +24,103 @@ import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the BFD configuration.
+ * 
+ * ## Example Usage
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.Bfd;
+ * import com.pulumi.iosxe.iosxe.BfdArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.BfdIpv4BothVrfArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.BfdIpv4WithDstVrfArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.BfdIpv4WithSrcVrfArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.BfdIpv4WithoutVrfArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.BfdIpv6WithBothVrfArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.BfdIpv6WithDstVrfArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.BfdIpv6WithSrcVrfArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.BfdIpv6WithoutVrfArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Bfd(&#34;example&#34;, BfdArgs.builder()        
+ *             .ipv4BothVrfs(BfdIpv4BothVrfArgs.builder()
+ *                 .dest_ip(&#34;1.2.3.4/4&#34;)
+ *                 .dst_vrf(&#34;dest_vrf1&#34;)
+ *                 .src_ip(&#34;11.22.33.44/12&#34;)
+ *                 .src_vrf(&#34;src_vrf1&#34;)
+ *                 .template_name(&#34;template1&#34;)
+ *                 .build())
+ *             .ipv4WithDstVrfs(BfdIpv4WithDstVrfArgs.builder()
+ *                 .dest_ip(&#34;1.2.3.4/4&#34;)
+ *                 .dst_vrf(&#34;dest_vrf1&#34;)
+ *                 .src_ip(&#34;11.22.33.44/12&#34;)
+ *                 .template_name(&#34;template1&#34;)
+ *                 .build())
+ *             .ipv4WithSrcVrfs(BfdIpv4WithSrcVrfArgs.builder()
+ *                 .dest_ip(&#34;1.2.3.4/4&#34;)
+ *                 .src_ip(&#34;11.22.33.44/12&#34;)
+ *                 .src_vrf(&#34;src_vrf1&#34;)
+ *                 .template_name(&#34;template1&#34;)
+ *                 .build())
+ *             .ipv4WithoutVrfs(BfdIpv4WithoutVrfArgs.builder()
+ *                 .dest_ip(&#34;1.2.3.4/4&#34;)
+ *                 .src_ip(&#34;11.22.33.44/12&#34;)
+ *                 .template_name(&#34;template1&#34;)
+ *                 .build())
+ *             .ipv6WithBothVrfs(BfdIpv6WithBothVrfArgs.builder()
+ *                 .dest_ipv6(&#34;2001:DB8:0:1::/64&#34;)
+ *                 .dst_vrf(&#34;dst_vrf1&#34;)
+ *                 .src_ipv6(&#34;2001:DB8:0:2::/64&#34;)
+ *                 .src_vrf(&#34;src_vrf1&#34;)
+ *                 .template_name(&#34;template1&#34;)
+ *                 .build())
+ *             .ipv6WithDstVrfs(BfdIpv6WithDstVrfArgs.builder()
+ *                 .dest_ipv6(&#34;2001:DB8:0:1::/64&#34;)
+ *                 .dst_vrf(&#34;dst_vrf1&#34;)
+ *                 .src_ipv6(&#34;2001:DB8:0:2::/64&#34;)
+ *                 .template_name(&#34;template1&#34;)
+ *                 .build())
+ *             .ipv6WithSrcVrfs(BfdIpv6WithSrcVrfArgs.builder()
+ *                 .dest_ipv6(&#34;2001:DB8:0:1::/64&#34;)
+ *                 .src_ipv6(&#34;2001:DB8:0:2::/64&#34;)
+ *                 .src_vrf(&#34;src_vrf1&#34;)
+ *                 .template_name(&#34;template1&#34;)
+ *                 .build())
+ *             .ipv6WithoutVrfs(BfdIpv6WithoutVrfArgs.builder()
+ *                 .dest_ipv6(&#34;2001:DB8:0:1::/64&#34;)
+ *                 .src_ipv6(&#34;2001:DB8:0:2::/64&#34;)
+ *                 .template_name(&#34;template1&#34;)
+ *                 .build())
+ *             .slowTimers(1000)
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/bfd:Bfd example &#34;Cisco-IOS-XE-native:native/bfd&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/bfd:Bfd")
 public class Bfd extends com.pulumi.resources.CustomResource {
     /**

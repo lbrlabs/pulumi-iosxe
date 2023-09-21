@@ -14,9 +14,17 @@ public final class GetPolicyMapEventPlainArgs extends com.pulumi.resources.Invok
 
     public static final GetPolicyMapEventPlainArgs Empty = new GetPolicyMapEventPlainArgs();
 
+    /**
+     * A device name from the provider configuration.
+     * 
+     */
     @Import(name="device")
     private @Nullable String device;
 
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
@@ -28,9 +36,17 @@ public final class GetPolicyMapEventPlainArgs extends com.pulumi.resources.Invok
         return this.eventType;
     }
 
+    /**
+     * Name of the policy map
+     * 
+     */
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the policy map
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -61,6 +77,12 @@ public final class GetPolicyMapEventPlainArgs extends com.pulumi.resources.Invok
             $ = new GetPolicyMapEventPlainArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param device A device name from the provider configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder device(@Nullable String device) {
             $.device = device;
             return this;
@@ -71,6 +93,12 @@ public final class GetPolicyMapEventPlainArgs extends com.pulumi.resources.Invok
             return this;
         }
 
+        /**
+         * @param name Name of the policy map
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

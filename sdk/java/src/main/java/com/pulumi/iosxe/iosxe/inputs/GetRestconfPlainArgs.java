@@ -14,16 +14,32 @@ public final class GetRestconfPlainArgs extends com.pulumi.resources.InvokeArgs 
 
     public static final GetRestconfPlainArgs Empty = new GetRestconfPlainArgs();
 
+    /**
+     * A device name from the provider configuration.
+     * 
+     */
     @Import(name="device")
     private @Nullable String device;
 
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
 
+    /**
+     * A RESTCONF path, e.g. `openconfig-interfaces:interfaces`.
+     * 
+     */
     @Import(name="path", required=true)
     private String path;
 
+    /**
+     * @return A RESTCONF path, e.g. `openconfig-interfaces:interfaces`.
+     * 
+     */
     public String path() {
         return this.path;
     }
@@ -53,11 +69,23 @@ public final class GetRestconfPlainArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetRestconfPlainArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param device A device name from the provider configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder device(@Nullable String device) {
             $.device = device;
             return this;
         }
 
+        /**
+         * @param path A RESTCONF path, e.g. `openconfig-interfaces:interfaces`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             $.path = path;
             return this;

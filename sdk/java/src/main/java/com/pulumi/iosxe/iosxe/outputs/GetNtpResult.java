@@ -23,27 +23,99 @@ public final class GetNtpResult {
     private String accessGroupQueryOnlyAcl;
     private String accessGroupServeAcl;
     private String accessGroupServeOnlyAcl;
+    /**
+     * @return Authenticate time sources
+     * 
+     */
     private Boolean authenticate;
+    /**
+     * @return Authentication key for trusted time sources
+     * 
+     */
     private List<GetNtpAuthenticationKey> authenticationKeys;
+    /**
+     * @return Length of hardware clock tick
+     * 
+     */
     private Integer clockPeriod;
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
+    /**
+     * @return Enable NTP message logging
+     * 
+     */
     private Boolean logging;
+    /**
+     * @return Act as NTP master clock
+     * 
+     */
     private Boolean master;
     private Integer masterStratum;
+    /**
+     * @return NTP passive mode
+     * 
+     */
     private Boolean passive;
+    /**
+     * @return VPN Routing/Forwarding Information
+     * 
+     */
     private List<GetNtpPeerVrf> peerVrfs;
     private List<GetNtpPeer> peers;
+    /**
+     * @return VPN Routing/Forwarding Information
+     * 
+     */
     private List<GetNtpServerVrf> serverVrfs;
     private List<GetNtpServer> servers;
+    /**
+     * @return Forty GigabitEthernet
+     * 
+     */
     private String trapSourceFortyGigabitEthernet;
+    /**
+     * @return GigabitEthernet IEEE 802.3z
+     * 
+     */
     private String trapSourceGigabitEthernet;
+    /**
+     * @return Hundred GigabitEthernet
+     * 
+     */
     private String trapSourceHundredGigE;
+    /**
+     * @return Loopback interface
+     * 
+     */
     private Integer trapSourceLoopback;
+    /**
+     * @return Ethernet Channel of interfaces
+     * 
+     */
     private Integer trapSourcePortChannel;
     private String trapSourcePortChannelSubinterface;
+    /**
+     * @return Ten Gigabit Ethernet
+     * 
+     */
     private String trapSourceTenGigabitEthernet;
+    /**
+     * @return Iosxr Vlans
+     * 
+     */
     private Integer trapSourceVlan;
+    /**
+     * @return Periodically update calendar with NTP time
+     * 
+     */
     private Boolean updateCalendar;
 
     private GetNtpResult() {}
@@ -59,69 +131,141 @@ public final class GetNtpResult {
     public String accessGroupServeOnlyAcl() {
         return this.accessGroupServeOnlyAcl;
     }
+    /**
+     * @return Authenticate time sources
+     * 
+     */
     public Boolean authenticate() {
         return this.authenticate;
     }
+    /**
+     * @return Authentication key for trusted time sources
+     * 
+     */
     public List<GetNtpAuthenticationKey> authenticationKeys() {
         return this.authenticationKeys;
     }
+    /**
+     * @return Length of hardware clock tick
+     * 
+     */
     public Integer clockPeriod() {
         return this.clockPeriod;
     }
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
+    /**
+     * @return Enable NTP message logging
+     * 
+     */
     public Boolean logging() {
         return this.logging;
     }
+    /**
+     * @return Act as NTP master clock
+     * 
+     */
     public Boolean master() {
         return this.master;
     }
     public Integer masterStratum() {
         return this.masterStratum;
     }
+    /**
+     * @return NTP passive mode
+     * 
+     */
     public Boolean passive() {
         return this.passive;
     }
+    /**
+     * @return VPN Routing/Forwarding Information
+     * 
+     */
     public List<GetNtpPeerVrf> peerVrfs() {
         return this.peerVrfs;
     }
     public List<GetNtpPeer> peers() {
         return this.peers;
     }
+    /**
+     * @return VPN Routing/Forwarding Information
+     * 
+     */
     public List<GetNtpServerVrf> serverVrfs() {
         return this.serverVrfs;
     }
     public List<GetNtpServer> servers() {
         return this.servers;
     }
+    /**
+     * @return Forty GigabitEthernet
+     * 
+     */
     public String trapSourceFortyGigabitEthernet() {
         return this.trapSourceFortyGigabitEthernet;
     }
+    /**
+     * @return GigabitEthernet IEEE 802.3z
+     * 
+     */
     public String trapSourceGigabitEthernet() {
         return this.trapSourceGigabitEthernet;
     }
+    /**
+     * @return Hundred GigabitEthernet
+     * 
+     */
     public String trapSourceHundredGigE() {
         return this.trapSourceHundredGigE;
     }
+    /**
+     * @return Loopback interface
+     * 
+     */
     public Integer trapSourceLoopback() {
         return this.trapSourceLoopback;
     }
+    /**
+     * @return Ethernet Channel of interfaces
+     * 
+     */
     public Integer trapSourcePortChannel() {
         return this.trapSourcePortChannel;
     }
     public String trapSourcePortChannelSubinterface() {
         return this.trapSourcePortChannelSubinterface;
     }
+    /**
+     * @return Ten Gigabit Ethernet
+     * 
+     */
     public String trapSourceTenGigabitEthernet() {
         return this.trapSourceTenGigabitEthernet;
     }
+    /**
+     * @return Iosxr Vlans
+     * 
+     */
     public Integer trapSourceVlan() {
         return this.trapSourceVlan;
     }
+    /**
+     * @return Periodically update calendar with NTP time
+     * 
+     */
     public Boolean updateCalendar() {
         return this.updateCalendar;
     }

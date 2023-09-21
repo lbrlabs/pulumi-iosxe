@@ -19,6 +19,55 @@ import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the Interface NVE configuration.
+ * 
+ * ## Example Usage
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.InterfaceNve;
+ * import com.pulumi.iosxe.iosxe.InterfaceNveArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.InterfaceNveVniArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new InterfaceNve(&#34;example&#34;, InterfaceNveArgs.builder()        
+ *             .description(&#34;My Interface Description&#34;)
+ *             .hostReachabilityProtocolBgp(true)
+ *             .shutdown(false)
+ *             .sourceInterfaceLoopback(100)
+ *             .vnis(InterfaceNveVniArgs.builder()
+ *                 .ipv4_multicast_group(&#34;225.1.1.1&#34;)
+ *                 .vni_range(&#34;10000&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/interfaceNve:InterfaceNve example &#34;Cisco-IOS-XE-native:native/interface/nve=1&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/interfaceNve:InterfaceNve")
 public class InterfaceNve extends com.pulumi.resources.CustomResource {
     /**

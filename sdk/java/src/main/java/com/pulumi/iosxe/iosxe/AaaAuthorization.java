@@ -17,6 +17,53 @@ import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the AAA Authorization configuration.
+ * 
+ * ## Example Usage
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.AaaAuthorization;
+ * import com.pulumi.iosxe.iosxe.AaaAuthorizationArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.AaaAuthorizationExecArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new AaaAuthorization(&#34;example&#34;, AaaAuthorizationArgs.builder()        
+ *             .execs(AaaAuthorizationExecArgs.builder()
+ *                 .a1_group(&#34;GROUP1&#34;)
+ *                 .a1_if_authenticated(true)
+ *                 .a1_local(false)
+ *                 .name(&#34;TEST&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/aaaAuthorization:AaaAuthorization example &#34;Cisco-IOS-XE-native:native/aaa/Cisco-IOS-XE-aaa:authorization&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/aaaAuthorization:AaaAuthorization")
 public class AaaAuthorization extends com.pulumi.resources.CustomResource {
     /**

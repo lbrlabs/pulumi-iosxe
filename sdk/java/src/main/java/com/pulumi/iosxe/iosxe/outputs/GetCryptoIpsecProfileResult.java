@@ -12,29 +12,69 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetCryptoIpsecProfileResult {
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
     private String name;
+    /**
+     * @return Specify ikev2 Profile
+     * 
+     */
     private String setIsakmpProfileIkev2ProfileIkev2ProfileCaseIkev2Profile;
+    /**
+     * @return Specify isakmp Profile
+     * 
+     */
     private String setIsakmpProfileIkev2ProfileIsakmpProfileCaseIsakmpProfile;
+    /**
+     * @return Specify list of transform sets in priority order
+     * 
+     */
     private List<String> setTransformSets;
 
     private GetCryptoIpsecProfileResult() {}
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
     public String name() {
         return this.name;
     }
+    /**
+     * @return Specify ikev2 Profile
+     * 
+     */
     public String setIsakmpProfileIkev2ProfileIkev2ProfileCaseIkev2Profile() {
         return this.setIsakmpProfileIkev2ProfileIkev2ProfileCaseIkev2Profile;
     }
+    /**
+     * @return Specify isakmp Profile
+     * 
+     */
     public String setIsakmpProfileIkev2ProfileIsakmpProfileCaseIsakmpProfile() {
         return this.setIsakmpProfileIkev2ProfileIsakmpProfileCaseIsakmpProfile;
     }
+    /**
+     * @return Specify list of transform sets in priority order
+     * 
+     */
     public List<String> setTransformSets() {
         return this.setTransformSets;
     }

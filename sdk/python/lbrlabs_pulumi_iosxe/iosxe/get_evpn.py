@@ -68,71 +68,113 @@ class GetEvpnResult:
     @property
     @pulumi.getter(name="defaultGatewayAdvertise")
     def default_gateway_advertise(self) -> bool:
+        """
+        Advertise Default Gateway MAC/IP routes
+        """
         return pulumi.get(self, "default_gateway_advertise")
 
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
     @property
     @pulumi.getter(name="ipDuplicationLimit")
     def ip_duplication_limit(self) -> int:
+        """
+        Number of IP moves within specified time interval
+        """
         return pulumi.get(self, "ip_duplication_limit")
 
     @property
     @pulumi.getter(name="ipDuplicationTime")
     def ip_duplication_time(self) -> int:
+        """
+        IP duplication timer
+        """
         return pulumi.get(self, "ip_duplication_time")
 
     @property
     @pulumi.getter(name="loggingPeerState")
     def logging_peer_state(self) -> bool:
+        """
+        Peer state transition logging
+        """
         return pulumi.get(self, "logging_peer_state")
 
     @property
     @pulumi.getter(name="macDuplicationLimit")
     def mac_duplication_limit(self) -> int:
+        """
+        Number of MAC moves within specified time interval
+        """
         return pulumi.get(self, "mac_duplication_limit")
 
     @property
     @pulumi.getter(name="macDuplicationTime")
     def mac_duplication_time(self) -> int:
+        """
+        MAC duplication timer
+        """
         return pulumi.get(self, "mac_duplication_time")
 
     @property
     @pulumi.getter(name="replicationTypeIngress")
     def replication_type_ingress(self) -> bool:
+        """
+        Ingress replication
+        """
         return pulumi.get(self, "replication_type_ingress")
 
     @property
     @pulumi.getter(name="replicationTypeMp2mp")
     def replication_type_mp2mp(self) -> bool:
+        """
+        mp2mp replication
+        """
         return pulumi.get(self, "replication_type_mp2mp")
 
     @property
     @pulumi.getter(name="replicationTypeP2mp")
     def replication_type_p2mp(self) -> bool:
+        """
+        p2mp replication
+        """
         return pulumi.get(self, "replication_type_p2mp")
 
     @property
     @pulumi.getter(name="replicationTypeStatic")
     def replication_type_static(self) -> bool:
+        """
+        Static replication
+        """
         return pulumi.get(self, "replication_type_static")
 
     @property
     @pulumi.getter(name="routeTargetAutoVni")
     def route_target_auto_vni(self) -> bool:
+        """
+        Set vni-based route-target
+        """
         return pulumi.get(self, "route_target_auto_vni")
 
     @property
     @pulumi.getter(name="routerIdLoopback")
     def router_id_loopback(self) -> int:
+        """
+        Loopback interface
+        """
         return pulumi.get(self, "router_id_loopback")
 
 
@@ -161,7 +203,19 @@ class AwaitableGetEvpnResult(GetEvpnResult):
 def get_evpn(device: Optional[str] = None,
              opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetEvpnResult:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the EVPN configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_evpn()
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -189,6 +243,18 @@ def get_evpn(device: Optional[str] = None,
 def get_evpn_output(device: Optional[pulumi.Input[Optional[str]]] = None,
                     opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetEvpnResult]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the EVPN configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_evpn()
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     ...

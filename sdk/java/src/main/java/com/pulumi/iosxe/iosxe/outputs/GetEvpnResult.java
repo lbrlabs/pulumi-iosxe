@@ -13,61 +13,173 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetEvpnResult {
+    /**
+     * @return Advertise Default Gateway MAC/IP routes
+     * 
+     */
     private Boolean defaultGatewayAdvertise;
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
+    /**
+     * @return Number of IP moves within specified time interval
+     * 
+     */
     private Integer ipDuplicationLimit;
+    /**
+     * @return IP duplication timer
+     * 
+     */
     private Integer ipDuplicationTime;
+    /**
+     * @return Peer state transition logging
+     * 
+     */
     private Boolean loggingPeerState;
+    /**
+     * @return Number of MAC moves within specified time interval
+     * 
+     */
     private Integer macDuplicationLimit;
+    /**
+     * @return MAC duplication timer
+     * 
+     */
     private Integer macDuplicationTime;
+    /**
+     * @return Ingress replication
+     * 
+     */
     private Boolean replicationTypeIngress;
+    /**
+     * @return mp2mp replication
+     * 
+     */
     private Boolean replicationTypeMp2mp;
+    /**
+     * @return p2mp replication
+     * 
+     */
     private Boolean replicationTypeP2mp;
+    /**
+     * @return Static replication
+     * 
+     */
     private Boolean replicationTypeStatic;
+    /**
+     * @return Set vni-based route-target
+     * 
+     */
     private Boolean routeTargetAutoVni;
+    /**
+     * @return Loopback interface
+     * 
+     */
     private Integer routerIdLoopback;
 
     private GetEvpnResult() {}
+    /**
+     * @return Advertise Default Gateway MAC/IP routes
+     * 
+     */
     public Boolean defaultGatewayAdvertise() {
         return this.defaultGatewayAdvertise;
     }
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
+    /**
+     * @return Number of IP moves within specified time interval
+     * 
+     */
     public Integer ipDuplicationLimit() {
         return this.ipDuplicationLimit;
     }
+    /**
+     * @return IP duplication timer
+     * 
+     */
     public Integer ipDuplicationTime() {
         return this.ipDuplicationTime;
     }
+    /**
+     * @return Peer state transition logging
+     * 
+     */
     public Boolean loggingPeerState() {
         return this.loggingPeerState;
     }
+    /**
+     * @return Number of MAC moves within specified time interval
+     * 
+     */
     public Integer macDuplicationLimit() {
         return this.macDuplicationLimit;
     }
+    /**
+     * @return MAC duplication timer
+     * 
+     */
     public Integer macDuplicationTime() {
         return this.macDuplicationTime;
     }
+    /**
+     * @return Ingress replication
+     * 
+     */
     public Boolean replicationTypeIngress() {
         return this.replicationTypeIngress;
     }
+    /**
+     * @return mp2mp replication
+     * 
+     */
     public Boolean replicationTypeMp2mp() {
         return this.replicationTypeMp2mp;
     }
+    /**
+     * @return p2mp replication
+     * 
+     */
     public Boolean replicationTypeP2mp() {
         return this.replicationTypeP2mp;
     }
+    /**
+     * @return Static replication
+     * 
+     */
     public Boolean replicationTypeStatic() {
         return this.replicationTypeStatic;
     }
+    /**
+     * @return Set vni-based route-target
+     * 
+     */
     public Boolean routeTargetAutoVni() {
         return this.routeTargetAutoVni;
     }
+    /**
+     * @return Loopback interface
+     * 
+     */
     public Integer routerIdLoopback() {
         return this.routerIdLoopback;
     }

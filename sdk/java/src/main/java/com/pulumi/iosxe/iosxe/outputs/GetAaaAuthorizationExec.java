@@ -10,19 +10,43 @@ import java.util.Objects;
 
 @CustomType
 public final class GetAaaAuthorizationExec {
+    /**
+     * @return Use Server-group
+     * 
+     */
     private String a1Group;
+    /**
+     * @return Succeed if user has authenticated.
+     * 
+     */
     private Boolean a1IfAuthenticated;
+    /**
+     * @return Use local database
+     * 
+     */
     private Boolean a1Local;
     private Boolean a2Local;
     private String name;
 
     private GetAaaAuthorizationExec() {}
+    /**
+     * @return Use Server-group
+     * 
+     */
     public String a1Group() {
         return this.a1Group;
     }
+    /**
+     * @return Succeed if user has authenticated.
+     * 
+     */
     public Boolean a1IfAuthenticated() {
         return this.a1IfAuthenticated;
     }
+    /**
+     * @return Use local database
+     * 
+     */
     public Boolean a1Local() {
         return this.a1Local;
     }

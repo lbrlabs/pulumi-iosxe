@@ -15,29 +15,69 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetLoggingIpv6HostTransportResult {
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
     private String ipv6Host;
+    /**
+     * @return Port Number List
+     * 
+     */
     private List<GetLoggingIpv6HostTransportTransportTcpPort> transportTcpPorts;
+    /**
+     * @return Port Number List
+     * 
+     */
     private List<GetLoggingIpv6HostTransportTransportTlsPort> transportTlsPorts;
+    /**
+     * @return Port Number List
+     * 
+     */
     private List<GetLoggingIpv6HostTransportTransportUdpPort> transportUdpPorts;
 
     private GetLoggingIpv6HostTransportResult() {}
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
     public String ipv6Host() {
         return this.ipv6Host;
     }
+    /**
+     * @return Port Number List
+     * 
+     */
     public List<GetLoggingIpv6HostTransportTransportTcpPort> transportTcpPorts() {
         return this.transportTcpPorts;
     }
+    /**
+     * @return Port Number List
+     * 
+     */
     public List<GetLoggingIpv6HostTransportTransportTlsPort> transportTlsPorts() {
         return this.transportTlsPorts;
     }
+    /**
+     * @return Port Number List
+     * 
+     */
     public List<GetLoggingIpv6HostTransportTransportUdpPort> transportUdpPorts() {
         return this.transportUdpPorts;
     }

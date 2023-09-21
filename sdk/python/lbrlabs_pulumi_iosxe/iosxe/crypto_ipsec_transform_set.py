@@ -189,7 +189,26 @@ class CryptoIpsecTransformSet(pulumi.CustomResource):
                  name: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
-        Create a CryptoIpsecTransformSet resource with the given unique name, props, and options.
+        This resource can manage the Crypto IPSec Transform Set configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.CryptoIpsecTransformSet("example",
+            esp="esp-aes",
+            esp_hmac="esp-sha-hmac",
+            mode_tunnel=True)
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/cryptoIpsecTransformSet:CryptoIpsecTransformSet example "Cisco-IOS-XE-native:native/crypto/Cisco-IOS-XE-crypto:ipsec/transform-set=TEST"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] device: A device name from the provider configuration.
@@ -204,7 +223,26 @@ class CryptoIpsecTransformSet(pulumi.CustomResource):
                  args: CryptoIpsecTransformSetArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a CryptoIpsecTransformSet resource with the given unique name, props, and options.
+        This resource can manage the Crypto IPSec Transform Set configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.CryptoIpsecTransformSet("example",
+            esp="esp-aes",
+            esp_hmac="esp-sha-hmac",
+            mode_tunnel=True)
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/cryptoIpsecTransformSet:CryptoIpsecTransformSet example "Cisco-IOS-XE-native:native/crypto/Cisco-IOS-XE-crypto:ipsec/transform-set=TEST"
+        ```
+
         :param str resource_name: The name of the resource.
         :param CryptoIpsecTransformSetArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

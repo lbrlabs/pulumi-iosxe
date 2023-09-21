@@ -1751,7 +1751,49 @@ class Errdisable(pulumi.CustomResource):
                  recovery_interval: Optional[pulumi.Input[int]] = None,
                  __props__=None):
         """
-        Create a Errdisable resource with the given unique name, props, and options.
+        This resource can manage the Errdisable configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.Errdisable("example",
+            detect_cause_all=True,
+            detect_cause_dhcp_rate_limit=True,
+            detect_cause_dtp_flap=True,
+            detect_cause_l2ptguard=True,
+            detect_cause_link_flap=True,
+            detect_cause_pppoe_ia_rate_limit=True,
+            flap_setting_cause_dtp_flap_max_flaps=80,
+            flap_setting_cause_dtp_flap_time=90,
+            flap_setting_cause_link_flap_max_flaps=80,
+            flap_setting_cause_link_flap_time=90,
+            flap_setting_cause_pagp_flap_max_flaps=80,
+            flap_setting_cause_pagp_flap_time=90,
+            recovery_cause_all=True,
+            recovery_cause_arp_inspection=True,
+            recovery_cause_bpduguard=True,
+            recovery_cause_dhcp_rate_limit=True,
+            recovery_cause_dtp_flap=True,
+            recovery_cause_l2ptguard=True,
+            recovery_cause_link_flap=True,
+            recovery_cause_port_mode_failure=True,
+            recovery_cause_pppoe_ia_rate_limit=True,
+            recovery_cause_psecure_violation=True,
+            recovery_cause_psp=True,
+            recovery_cause_security_violation=True,
+            recovery_cause_udld=True,
+            recovery_interval=855)
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/errdisable:Errdisable example "Cisco-IOS-XE-native:native/errdisable"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] delete_mode: Configure behavior when deleting/destroying the resource. Either delete the entire object (YANG container) being
@@ -1812,7 +1854,49 @@ class Errdisable(pulumi.CustomResource):
                  args: Optional[ErrdisableArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a Errdisable resource with the given unique name, props, and options.
+        This resource can manage the Errdisable configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.Errdisable("example",
+            detect_cause_all=True,
+            detect_cause_dhcp_rate_limit=True,
+            detect_cause_dtp_flap=True,
+            detect_cause_l2ptguard=True,
+            detect_cause_link_flap=True,
+            detect_cause_pppoe_ia_rate_limit=True,
+            flap_setting_cause_dtp_flap_max_flaps=80,
+            flap_setting_cause_dtp_flap_time=90,
+            flap_setting_cause_link_flap_max_flaps=80,
+            flap_setting_cause_link_flap_time=90,
+            flap_setting_cause_pagp_flap_max_flaps=80,
+            flap_setting_cause_pagp_flap_time=90,
+            recovery_cause_all=True,
+            recovery_cause_arp_inspection=True,
+            recovery_cause_bpduguard=True,
+            recovery_cause_dhcp_rate_limit=True,
+            recovery_cause_dtp_flap=True,
+            recovery_cause_l2ptguard=True,
+            recovery_cause_link_flap=True,
+            recovery_cause_port_mode_failure=True,
+            recovery_cause_pppoe_ia_rate_limit=True,
+            recovery_cause_psecure_violation=True,
+            recovery_cause_psp=True,
+            recovery_cause_security_violation=True,
+            recovery_cause_udld=True,
+            recovery_interval=855)
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/errdisable:Errdisable example "Cisco-IOS-XE-native:native/errdisable"
+        ```
+
         :param str resource_name: The name of the resource.
         :param ErrdisableArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

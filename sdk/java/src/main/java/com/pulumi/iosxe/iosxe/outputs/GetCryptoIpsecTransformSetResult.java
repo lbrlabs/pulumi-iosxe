@@ -12,14 +12,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetCryptoIpsecTransformSetResult {
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
     private String esp;
     private String espHmac;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
+    /**
+     * @return tunnel (datagram encapsulation) mode
+     * 
+     */
     private Boolean modeTunnel;
     private String name;
 
     private GetCryptoIpsecTransformSetResult() {}
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
@@ -29,9 +45,17 @@ public final class GetCryptoIpsecTransformSetResult {
     public String espHmac() {
         return this.espHmac;
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
+    /**
+     * @return tunnel (datagram encapsulation) mode
+     * 
+     */
     public Boolean modeTunnel() {
         return this.modeTunnel;
     }

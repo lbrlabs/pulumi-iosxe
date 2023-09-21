@@ -15,9 +15,17 @@ public final class GetCryptoIkev2Args extends com.pulumi.resources.InvokeArgs {
 
     public static final GetCryptoIkev2Args Empty = new GetCryptoIkev2Args();
 
+    /**
+     * A device name from the provider configuration.
+     * 
+     */
     @Import(name="device")
     private @Nullable Output<String> device;
 
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<Output<String>> device() {
         return Optional.ofNullable(this.device);
     }
@@ -46,11 +54,23 @@ public final class GetCryptoIkev2Args extends com.pulumi.resources.InvokeArgs {
             $ = new GetCryptoIkev2Args(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param device A device name from the provider configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder device(@Nullable Output<String> device) {
             $.device = device;
             return this;
         }
 
+        /**
+         * @param device A device name from the provider configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder device(String device) {
             return device(Output.of(device));
         }

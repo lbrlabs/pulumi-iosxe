@@ -334,7 +334,25 @@ class Vlan(pulumi.CustomResource):
                  vlan_id: Optional[pulumi.Input[int]] = None,
                  __props__=None):
         """
-        Create a Vlan resource with the given unique name, props, and options.
+        This resource can manage the VLAN configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.Vlan("example",
+            shutdown=False,
+            vlan_id=123)
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/vlan:Vlan example "Cisco-IOS-XE-native:native/vlan/Cisco-IOS-XE-vlan:vlan-list=123"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] device: A device name from the provider configuration.
@@ -355,7 +373,25 @@ class Vlan(pulumi.CustomResource):
                  args: VlanArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a Vlan resource with the given unique name, props, and options.
+        This resource can manage the VLAN configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.Vlan("example",
+            shutdown=False,
+            vlan_id=123)
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/vlan:Vlan example "Cisco-IOS-XE-native:native/vlan/Cisco-IOS-XE-vlan:vlan-list=123"
+        ```
+
         :param str resource_name: The name of the resource.
         :param VlanArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

@@ -407,7 +407,14 @@ class Bfd(pulumi.CustomResource):
                  slow_timers: Optional[pulumi.Input[int]] = None,
                  __props__=None):
         """
-        Create a Bfd resource with the given unique name, props, and options.
+        This resource can manage the BFD configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/bfd:Bfd example "Cisco-IOS-XE-native:native/bfd"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] delete_mode: Configure behavior when deleting/destroying the resource. Either delete the entire object (YANG container) being
@@ -431,7 +438,14 @@ class Bfd(pulumi.CustomResource):
                  args: Optional[BfdArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a Bfd resource with the given unique name, props, and options.
+        This resource can manage the BFD configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/bfd:Bfd example "Cisco-IOS-XE-native:native/bfd"
+        ```
+
         :param str resource_name: The name of the resource.
         :param BfdArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

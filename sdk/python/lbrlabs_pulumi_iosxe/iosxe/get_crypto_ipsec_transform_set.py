@@ -44,6 +44,9 @@ class GetCryptoIpsecTransformSetResult:
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
@@ -59,11 +62,17 @@ class GetCryptoIpsecTransformSetResult:
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
     @property
     @pulumi.getter(name="modeTunnel")
     def mode_tunnel(self) -> bool:
+        """
+        tunnel (datagram encapsulation) mode
+        """
         return pulumi.get(self, "mode_tunnel")
 
     @property
@@ -90,7 +99,19 @@ def get_crypto_ipsec_transform_set(device: Optional[str] = None,
                                    name: Optional[str] = None,
                                    opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetCryptoIpsecTransformSetResult:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Crypto IPSec Transform Set configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_crypto_ipsec_transform_set(name="TEST")
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -112,6 +133,18 @@ def get_crypto_ipsec_transform_set_output(device: Optional[pulumi.Input[Optional
                                           name: Optional[pulumi.Input[str]] = None,
                                           opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetCryptoIpsecTransformSetResult]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Crypto IPSec Transform Set configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_crypto_ipsec_transform_set(name="TEST")
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     ...

@@ -17,30 +17,62 @@ public final class RestconfListArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final RestconfListArgs Empty = new RestconfListArgs();
 
+    /**
+     * List of maps of key-value pairs which represents the YANG leafs and its values.
+     * 
+     */
     @Import(name="items")
     private @Nullable Output<List<Map<String,String>>> items;
 
+    /**
+     * @return List of maps of key-value pairs which represents the YANG leafs and its values.
+     * 
+     */
     public Optional<Output<List<Map<String,String>>>> items() {
         return Optional.ofNullable(this.items);
     }
 
+    /**
+     * YANG list key attribute. In case of multiple keys, those should be separated by a comma (`,`).
+     * 
+     */
     @Import(name="key", required=true)
     private Output<String> key;
 
+    /**
+     * @return YANG list key attribute. In case of multiple keys, those should be separated by a comma (`,`).
+     * 
+     */
     public Output<String> key() {
         return this.key;
     }
 
+    /**
+     * YANG list name.
+     * 
+     */
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return YANG list name.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
 
+    /**
+     * YANG leaf-list values.
+     * 
+     */
     @Import(name="values")
     private @Nullable Output<List<String>> values;
 
+    /**
+     * @return YANG leaf-list values.
+     * 
+     */
     public Optional<Output<List<String>>> values() {
         return Optional.ofNullable(this.values);
     }
@@ -72,46 +104,106 @@ public final class RestconfListArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RestconfListArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param items List of maps of key-value pairs which represents the YANG leafs and its values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(@Nullable Output<List<Map<String,String>>> items) {
             $.items = items;
             return this;
         }
 
+        /**
+         * @param items List of maps of key-value pairs which represents the YANG leafs and its values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(List<Map<String,String>> items) {
             return items(Output.of(items));
         }
 
+        /**
+         * @param items List of maps of key-value pairs which represents the YANG leafs and its values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(Map<String,String>... items) {
             return items(List.of(items));
         }
 
+        /**
+         * @param key YANG list key attribute. In case of multiple keys, those should be separated by a comma (`,`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key YANG list key attribute. In case of multiple keys, those should be separated by a comma (`,`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }
 
+        /**
+         * @param name YANG list name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name YANG list name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param values YANG leaf-list values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(@Nullable Output<List<String>> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values YANG leaf-list values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(List<String> values) {
             return values(Output.of(values));
         }
 
+        /**
+         * @param values YANG leaf-list values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(String... values) {
             return values(List.of(values));
         }

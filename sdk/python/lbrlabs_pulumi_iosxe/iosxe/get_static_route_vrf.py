@@ -39,11 +39,17 @@ class GetStaticRouteVrfResult:
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
     @property
@@ -73,7 +79,19 @@ def get_static_route_vrf(device: Optional[str] = None,
                          vrf: Optional[str] = None,
                          opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetStaticRouteVrfResult:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Static Route VRF configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_static_route_vrf(vrf="VRF1")
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -93,6 +111,18 @@ def get_static_route_vrf_output(device: Optional[pulumi.Input[Optional[str]]] = 
                                 vrf: Optional[pulumi.Input[str]] = None,
                                 opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetStaticRouteVrfResult]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Static Route VRF configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_static_route_vrf(vrf="VRF1")
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     ...

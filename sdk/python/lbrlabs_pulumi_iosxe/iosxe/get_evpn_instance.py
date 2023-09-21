@@ -80,91 +80,145 @@ class GetEvpnInstanceResult:
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
     @pulumi.getter(name="evpnInstanceNum")
     def evpn_instance_num(self) -> int:
+        """
+        evpn instance number
+        """
         return pulumi.get(self, "evpn_instance_num")
 
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
     @property
     @pulumi.getter(name="vlanBasedAutoRouteTarget")
     def vlan_based_auto_route_target(self) -> bool:
+        """
+        Automatically set a route-target
+        """
         return pulumi.get(self, "vlan_based_auto_route_target")
 
     @property
     @pulumi.getter(name="vlanBasedDefaultGatewayAdvertise")
     def vlan_based_default_gateway_advertise(self) -> str:
+        """
+        Advertise Default Gateway MAC/IP routes
+        """
         return pulumi.get(self, "vlan_based_default_gateway_advertise")
 
     @property
     @pulumi.getter(name="vlanBasedEncapsulation")
     def vlan_based_encapsulation(self) -> str:
+        """
+        Data encapsulation method
+        """
         return pulumi.get(self, "vlan_based_encapsulation")
 
     @property
     @pulumi.getter(name="vlanBasedIpLocalLearningDisable")
     def vlan_based_ip_local_learning_disable(self) -> bool:
+        """
+        Disable IP local learning from dataplane
+        """
         return pulumi.get(self, "vlan_based_ip_local_learning_disable")
 
     @property
     @pulumi.getter(name="vlanBasedIpLocalLearningEnable")
     def vlan_based_ip_local_learning_enable(self) -> bool:
+        """
+        Enable IP local learning from dataplane
+        """
         return pulumi.get(self, "vlan_based_ip_local_learning_enable")
 
     @property
     @pulumi.getter(name="vlanBasedRd")
     def vlan_based_rd(self) -> str:
+        """
+        ASN:nn or IP-address:nn
+        """
         return pulumi.get(self, "vlan_based_rd")
 
     @property
     @pulumi.getter(name="vlanBasedReOriginateRouteType5")
     def vlan_based_re_originate_route_type5(self) -> bool:
+        """
+        Re-originate route-type 5
+        """
         return pulumi.get(self, "vlan_based_re_originate_route_type5")
 
     @property
     @pulumi.getter(name="vlanBasedReplicationTypeIngress")
     def vlan_based_replication_type_ingress(self) -> bool:
+        """
+        Ingress replication
+        """
         return pulumi.get(self, "vlan_based_replication_type_ingress")
 
     @property
     @pulumi.getter(name="vlanBasedReplicationTypeMp2mp")
     def vlan_based_replication_type_mp2mp(self) -> bool:
+        """
+        mp2mp replication
+        """
         return pulumi.get(self, "vlan_based_replication_type_mp2mp")
 
     @property
     @pulumi.getter(name="vlanBasedReplicationTypeP2mp")
     def vlan_based_replication_type_p2mp(self) -> bool:
+        """
+        p2mp replication
+        """
         return pulumi.get(self, "vlan_based_replication_type_p2mp")
 
     @property
     @pulumi.getter(name="vlanBasedReplicationTypeStatic")
     def vlan_based_replication_type_static(self) -> bool:
+        """
+        Static replication
+        """
         return pulumi.get(self, "vlan_based_replication_type_static")
 
     @property
     @pulumi.getter(name="vlanBasedRouteTarget")
     def vlan_based_route_target(self) -> str:
+        """
+        ASN:nn or IP-address:nn
+        """
         return pulumi.get(self, "vlan_based_route_target")
 
     @property
     @pulumi.getter(name="vlanBasedRouteTargetBoth")
     def vlan_based_route_target_both(self) -> str:
+        """
+        ASN:nn or IP-address:nn
+        """
         return pulumi.get(self, "vlan_based_route_target_both")
 
     @property
     @pulumi.getter(name="vlanBasedRouteTargetExport")
     def vlan_based_route_target_export(self) -> str:
+        """
+        ASN:nn or IP-address:nn (DEPRECATED, use rt-value-entry)
+        """
         return pulumi.get(self, "vlan_based_route_target_export")
 
     @property
     @pulumi.getter(name="vlanBasedRouteTargetImport")
     def vlan_based_route_target_import(self) -> str:
+        """
+        ASN:nn or IP-address:nn (DEPRECATED, use rt-value-entry)
+        """
         return pulumi.get(self, "vlan_based_route_target_import")
 
 
@@ -198,7 +252,20 @@ def get_evpn_instance(device: Optional[str] = None,
                       evpn_instance_num: Optional[int] = None,
                       opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetEvpnInstanceResult:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the EVPN Instance configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_evpn_instance(evpn_instance_num=10)
+    ```
+
+
+    :param str device: A device name from the provider configuration.
+    :param int evpn_instance_num: evpn instance number
     """
     __args__ = dict()
     __args__['device'] = device
@@ -232,6 +299,19 @@ def get_evpn_instance_output(device: Optional[pulumi.Input[Optional[str]]] = Non
                              evpn_instance_num: Optional[pulumi.Input[int]] = None,
                              opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetEvpnInstanceResult]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the EVPN Instance configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_evpn_instance(evpn_instance_num=10)
+    ```
+
+
+    :param str device: A device name from the provider configuration.
+    :param int evpn_instance_num: evpn instance number
     """
     ...

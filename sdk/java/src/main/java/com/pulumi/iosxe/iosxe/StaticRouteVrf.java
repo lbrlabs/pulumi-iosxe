@@ -16,6 +16,53 @@ import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the Static Route VRF configuration.
+ * 
+ * ## Example Usage
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.StaticRouteVrf;
+ * import com.pulumi.iosxe.iosxe.StaticRouteVrfArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.StaticRouteVrfRouteArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new StaticRouteVrf(&#34;example&#34;, StaticRouteVrfArgs.builder()        
+ *             .routes(StaticRouteVrfRouteArgs.builder()
+ *                 .mask(&#34;255.255.255.255&#34;)
+ *                 .next_hops(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
+ *                 .prefix(&#34;6.6.6.6&#34;)
+ *                 .build())
+ *             .vrf(&#34;VRF1&#34;)
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/staticRouteVrf:StaticRouteVrf example &#34;Cisco-IOS-XE-native:native/ip/route/vrf=VRF1&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/staticRouteVrf:StaticRouteVrf")
 public class StaticRouteVrf extends com.pulumi.resources.CustomResource {
     /**

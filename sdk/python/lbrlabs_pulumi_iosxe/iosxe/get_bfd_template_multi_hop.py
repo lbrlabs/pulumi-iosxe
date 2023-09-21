@@ -95,111 +95,177 @@ class GetBfdTemplateMultiHopResult:
     @property
     @pulumi.getter(name="authenticationMd5Keychain")
     def authentication_md5_keychain(self) -> str:
+        """
+        keychain name
+        """
         return pulumi.get(self, "authentication_md5_keychain")
 
     @property
     @pulumi.getter(name="authenticationMeticulousMd5Keychain")
     def authentication_meticulous_md5_keychain(self) -> str:
+        """
+        keychain name
+        """
         return pulumi.get(self, "authentication_meticulous_md5_keychain")
 
     @property
     @pulumi.getter(name="authenticationMeticulousSha1keychain")
     def authentication_meticulous_sha1keychain(self) -> str:
+        """
+        keychain name
+        """
         return pulumi.get(self, "authentication_meticulous_sha1keychain")
 
     @property
     @pulumi.getter(name="authenticationSha1Keychain")
     def authentication_sha1_keychain(self) -> str:
+        """
+        keychain name
+        """
         return pulumi.get(self, "authentication_sha1_keychain")
 
     @property
     @pulumi.getter(name="dampeningDownMonitoring")
     def dampening_down_monitoring(self) -> bool:
+        """
+        down monitoring
+        """
         return pulumi.get(self, "dampening_down_monitoring")
 
     @property
     @pulumi.getter(name="dampeningHalfTime")
     def dampening_half_time(self) -> int:
+        """
+        Half-life time for the penalty
+        """
         return pulumi.get(self, "dampening_half_time")
 
     @property
     @pulumi.getter(name="dampeningMaxSuppressingTime")
     def dampening_max_suppressing_time(self) -> int:
+        """
+        Maximum duration to suppress a session
+        """
         return pulumi.get(self, "dampening_max_suppressing_time")
 
     @property
     @pulumi.getter(name="dampeningSuppressTime")
     def dampening_suppress_time(self) -> int:
+        """
+        Value to start suppressing a session
+        """
         return pulumi.get(self, "dampening_suppress_time")
 
     @property
     @pulumi.getter(name="dampeningThreshold")
     def dampening_threshold(self) -> int:
+        """
+        Stability threshold to enter dampening in down dampened state(seconds)
+        """
         return pulumi.get(self, "dampening_threshold")
 
     @property
     @pulumi.getter(name="dampeningUnsuppressTime")
     def dampening_unsuppress_time(self) -> int:
+        """
+        Value to unsuppress a session
+        """
         return pulumi.get(self, "dampening_unsuppress_time")
 
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
     @pulumi.getter
     def echo(self) -> bool:
+        """
+        Use echo adjunct as bfd detection mechanism
+        """
         return pulumi.get(self, "echo")
 
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
     @property
     @pulumi.getter(name="intervalMicroseconds")
     def interval_microseconds(self) -> bool:
+        """
+        Specify BFD timers in microseconds
+        """
         return pulumi.get(self, "interval_microseconds")
 
     @property
     @pulumi.getter(name="intervalMicrosecondsBoth")
     def interval_microseconds_both(self) -> int:
+        """
+        Minimum transmit and receive interval capability
+        """
         return pulumi.get(self, "interval_microseconds_both")
 
     @property
     @pulumi.getter(name="intervalMicrosecondsMinRx")
     def interval_microseconds_min_rx(self) -> int:
+        """
+        Minimum receive interval capability
+        """
         return pulumi.get(self, "interval_microseconds_min_rx")
 
     @property
     @pulumi.getter(name="intervalMicrosecondsMinTx")
     def interval_microseconds_min_tx(self) -> int:
+        """
+        Minimum transmit interval capability
+        """
         return pulumi.get(self, "interval_microseconds_min_tx")
 
     @property
     @pulumi.getter(name="intervalMicrosecondsMultiplier")
     def interval_microseconds_multiplier(self) -> int:
+        """
+        Multiplier value used to compute holddown
+        """
         return pulumi.get(self, "interval_microseconds_multiplier")
 
     @property
     @pulumi.getter(name="intervalMillisecondsBoth")
     def interval_milliseconds_both(self) -> int:
+        """
+        Minimum transmit and receive interval capability
+        """
         return pulumi.get(self, "interval_milliseconds_both")
 
     @property
     @pulumi.getter(name="intervalMillisecondsMinRx")
     def interval_milliseconds_min_rx(self) -> int:
+        """
+        Minimum receive interval capability
+        """
         return pulumi.get(self, "interval_milliseconds_min_rx")
 
     @property
     @pulumi.getter(name="intervalMillisecondsMinTx")
     def interval_milliseconds_min_tx(self) -> int:
+        """
+        Minimum transmit interval capability
+        """
         return pulumi.get(self, "interval_milliseconds_min_tx")
 
     @property
     @pulumi.getter(name="intervalMillisecondsMultiplier")
     def interval_milliseconds_multiplier(self) -> int:
+        """
+        Multiplier value used to compute holddown
+        """
         return pulumi.get(self, "interval_milliseconds_multiplier")
 
     @property
@@ -243,7 +309,19 @@ def get_bfd_template_multi_hop(device: Optional[str] = None,
                                name: Optional[str] = None,
                                opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetBfdTemplateMultiHopResult:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the BFD Template Multi Hop configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_bfd_template_multi_hop(name="T11")
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -282,6 +360,18 @@ def get_bfd_template_multi_hop_output(device: Optional[pulumi.Input[Optional[str
                                       name: Optional[pulumi.Input[str]] = None,
                                       opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetBfdTemplateMultiHopResult]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the BFD Template Multi Hop configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_bfd_template_multi_hop(name="T11")
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     ...

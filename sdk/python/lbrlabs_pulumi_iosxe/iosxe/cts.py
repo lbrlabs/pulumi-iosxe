@@ -141,7 +141,23 @@ class Cts(pulumi.CustomResource):
                  device: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
-        Create a Cts resource with the given unique name, props, and options.
+        This resource can manage the CTS configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.Cts("example", authorization_list="Tacacs-GROUP")
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/cts:Cts example "Cisco-IOS-XE-native:native/cts"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] authorization_list: Local authorization list to use for CTS
@@ -157,7 +173,23 @@ class Cts(pulumi.CustomResource):
                  args: Optional[CtsArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a Cts resource with the given unique name, props, and options.
+        This resource can manage the CTS configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.Cts("example", authorization_list="Tacacs-GROUP")
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/cts:Cts example "Cisco-IOS-XE-native:native/cts"
+        ```
+
         :param str resource_name: The name of the resource.
         :param CtsArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

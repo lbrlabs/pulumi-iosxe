@@ -755,7 +755,14 @@ class InterfaceLoopback(pulumi.CustomResource):
                  vrf_forwarding: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
-        Create a InterfaceLoopback resource with the given unique name, props, and options.
+        This resource can manage the Interface Loopback configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/interfaceLoopback:InterfaceLoopback example "Cisco-IOS-XE-native:native/interface/Loopback=100"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[int] arp_timeout: Set ARP cache timeout - Range: `0`-`2147483`
@@ -785,7 +792,14 @@ class InterfaceLoopback(pulumi.CustomResource):
                  args: Optional[InterfaceLoopbackArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a InterfaceLoopback resource with the given unique name, props, and options.
+        This resource can manage the Interface Loopback configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/interfaceLoopback:InterfaceLoopback example "Cisco-IOS-XE-native:native/interface/Loopback=100"
+        ```
+
         :param str resource_name: The name of the resource.
         :param InterfaceLoopbackArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

@@ -18,6 +18,60 @@ import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the Logging IPv4 Host VRF Transport configuration.
+ * 
+ * ## Example Usage
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.LoggingIpv4HostVrfTransport;
+ * import com.pulumi.iosxe.iosxe.LoggingIpv4HostVrfTransportArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.LoggingIpv4HostVrfTransportTransportTcpPortArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.LoggingIpv4HostVrfTransportTransportTlsPortArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.LoggingIpv4HostVrfTransportTransportUdpPortArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new LoggingIpv4HostVrfTransport(&#34;example&#34;, LoggingIpv4HostVrfTransportArgs.builder()        
+ *             .ipv4Host(&#34;2.2.2.2&#34;)
+ *             .transportTcpPorts(LoggingIpv4HostVrfTransportTransportTcpPortArgs.builder()
+ *                 .port_number(10001)
+ *                 .build())
+ *             .transportTlsPorts(LoggingIpv4HostVrfTransportTransportTlsPortArgs.builder()
+ *                 .port_number(10002)
+ *                 .build())
+ *             .transportUdpPorts(LoggingIpv4HostVrfTransportTransportUdpPortArgs.builder()
+ *                 .port_number(10000)
+ *                 .build())
+ *             .vrf(&#34;VRF1&#34;)
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/loggingIpv4HostVrfTransport:LoggingIpv4HostVrfTransport example &#34;Cisco-IOS-XE-native:native/logging/host/ipv4-host-vrf-transport-list=2.2.2.2,VRF1&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/loggingIpv4HostVrfTransport:LoggingIpv4HostVrfTransport")
 public class LoggingIpv4HostVrfTransport extends com.pulumi.resources.CustomResource {
     /**

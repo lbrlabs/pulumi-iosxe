@@ -19,6 +19,71 @@ import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the PIM VRF configuration.
+ * 
+ * ## Example Usage
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.PimVrf;
+ * import com.pulumi.iosxe.iosxe.PimVrfArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.PimVrfRpAddressArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.PimVrfRpCandidateArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new PimVrf(&#34;example&#34;, PimVrfArgs.builder()        
+ *             .autorp(false)
+ *             .autorpListener(false)
+ *             .bsrCandidateLoopback(100)
+ *             .bsrCandidateMask(30)
+ *             .bsrCandidatePriority(10)
+ *             .rpAddress(&#34;19.19.19.19&#34;)
+ *             .rpAddressBidir(false)
+ *             .rpAddressOverride(false)
+ *             .rpAddresses(PimVrfRpAddressArgs.builder()
+ *                 .access_list(&#34;10&#34;)
+ *                 .bidir(false)
+ *                 .override(false)
+ *                 .rp_address(&#34;10.10.10.10&#34;)
+ *                 .build())
+ *             .rpCandidates(PimVrfRpCandidateArgs.builder()
+ *                 .bidir(false)
+ *                 .interface_(&#34;Loopback100&#34;)
+ *                 .interval(100)
+ *                 .priority(10)
+ *                 .build())
+ *             .ssmDefault(false)
+ *             .ssmRange(&#34;10&#34;)
+ *             .vrf(&#34;VRF1&#34;)
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/pimVrf:PimVrf example &#34;Cisco-IOS-XE-native:native/ip/pim/Cisco-IOS-XE-multicast:vrf=VRF1&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/pimVrf:PimVrf")
 public class PimVrf extends com.pulumi.resources.CustomResource {
     /**

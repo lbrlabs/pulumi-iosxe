@@ -84,96 +84,153 @@ class GetOspfResult:
     @property
     @pulumi.getter
     def areas(self) -> Sequence['outputs.GetOspfAreaResult']:
+        """
+        OSPF area parameters
+        """
         return pulumi.get(self, "areas")
 
     @property
     @pulumi.getter(name="bfdAllInterfaces")
     def bfd_all_interfaces(self) -> bool:
+        """
+        Enable BFD on all interfaces
+        """
         return pulumi.get(self, "bfd_all_interfaces")
 
     @property
     @pulumi.getter(name="defaultInformationOriginate")
     def default_information_originate(self) -> bool:
+        """
+        Distribute a default route
+        """
         return pulumi.get(self, "default_information_originate")
 
     @property
     @pulumi.getter(name="defaultInformationOriginateAlways")
     def default_information_originate_always(self) -> bool:
+        """
+        Always advertise default route
+        """
         return pulumi.get(self, "default_information_originate_always")
 
     @property
     @pulumi.getter(name="defaultMetric")
     def default_metric(self) -> int:
+        """
+        Set metric of redistributed routes
+        """
         return pulumi.get(self, "default_metric")
 
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
     @pulumi.getter
     def distance(self) -> int:
+        """
+        Administrative distance
+        """
         return pulumi.get(self, "distance")
 
     @property
     @pulumi.getter(name="domainTag")
     def domain_tag(self) -> int:
+        """
+        OSPF domain-tag
+        """
         return pulumi.get(self, "domain_tag")
 
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
     @property
     @pulumi.getter(name="mplsLdpAutoconfig")
     def mpls_ldp_autoconfig(self) -> bool:
+        """
+        Configure LDP automatic configuration
+        """
         return pulumi.get(self, "mpls_ldp_autoconfig")
 
     @property
     @pulumi.getter(name="mplsLdpSync")
     def mpls_ldp_sync(self) -> bool:
+        """
+        Configure LDP-IGP Synchronization
+        """
         return pulumi.get(self, "mpls_ldp_sync")
 
     @property
     @pulumi.getter
     def neighbors(self) -> Sequence['outputs.GetOspfNeighborResult']:
+        """
+        Specify a neighbor router
+        """
         return pulumi.get(self, "neighbors")
 
     @property
     @pulumi.getter
     def networks(self) -> Sequence['outputs.GetOspfNetworkResult']:
+        """
+        Enable routing on an IP network
+        """
         return pulumi.get(self, "networks")
 
     @property
     @pulumi.getter(name="passiveInterfaceDefault")
     def passive_interface_default(self) -> bool:
+        """
+        Suppress routing updates on all interfaces
+        """
         return pulumi.get(self, "passive_interface_default")
 
     @property
     @pulumi.getter
     def priority(self) -> int:
+        """
+        OSPF topology priority
+        """
         return pulumi.get(self, "priority")
 
     @property
     @pulumi.getter(name="processId")
     def process_id(self) -> int:
+        """
+        Process ID
+        """
         return pulumi.get(self, "process_id")
 
     @property
     @pulumi.getter(name="routerId")
     def router_id(self) -> str:
+        """
+        Override configured router identifier (peers will reset)
+        """
         return pulumi.get(self, "router_id")
 
     @property
     @pulumi.getter
     def shutdown(self) -> bool:
+        """
+        Shutdown the OSPF protocol under the current instance
+        """
         return pulumi.get(self, "shutdown")
 
     @property
     @pulumi.getter(name="summaryAddresses")
     def summary_addresses(self) -> Sequence['outputs.GetOspfSummaryAddressResult']:
+        """
+        Configure IP address summaries
+        """
         return pulumi.get(self, "summary_addresses")
 
 
@@ -208,7 +265,20 @@ def get_ospf(device: Optional[str] = None,
              process_id: Optional[int] = None,
              opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetOspfResult:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the OSPF configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_ospf(process_id=1)
+    ```
+
+
+    :param str device: A device name from the provider configuration.
+    :param int process_id: Process ID
     """
     __args__ = dict()
     __args__['device'] = device
@@ -243,6 +313,19 @@ def get_ospf_output(device: Optional[pulumi.Input[Optional[str]]] = None,
                     process_id: Optional[pulumi.Input[int]] = None,
                     opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetOspfResult]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the OSPF configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_ospf(process_id=1)
+    ```
+
+
+    :param str device: A device name from the provider configuration.
+    :param int process_id: Process ID
     """
     ...

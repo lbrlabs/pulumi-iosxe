@@ -14,21 +14,53 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetLineResult {
+    /**
+     * @return Primary terminal line
+     * 
+     */
     private List<GetLineConsole> consoles;
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
+    /**
+     * @return Virtual terminal
+     * 
+     */
     private List<GetLineVty> vties;
 
     private GetLineResult() {}
+    /**
+     * @return Primary terminal line
+     * 
+     */
     public List<GetLineConsole> consoles() {
         return this.consoles;
     }
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
+    /**
+     * @return Virtual terminal
+     * 
+     */
     public List<GetLineVty> vties() {
         return this.vties;
     }

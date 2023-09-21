@@ -16,16 +16,32 @@ public final class GetEvpnInstanceArgs extends com.pulumi.resources.InvokeArgs {
 
     public static final GetEvpnInstanceArgs Empty = new GetEvpnInstanceArgs();
 
+    /**
+     * A device name from the provider configuration.
+     * 
+     */
     @Import(name="device")
     private @Nullable Output<String> device;
 
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<Output<String>> device() {
         return Optional.ofNullable(this.device);
     }
 
+    /**
+     * evpn instance number
+     * 
+     */
     @Import(name="evpnInstanceNum", required=true)
     private Output<Integer> evpnInstanceNum;
 
+    /**
+     * @return evpn instance number
+     * 
+     */
     public Output<Integer> evpnInstanceNum() {
         return this.evpnInstanceNum;
     }
@@ -55,20 +71,44 @@ public final class GetEvpnInstanceArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetEvpnInstanceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param device A device name from the provider configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder device(@Nullable Output<String> device) {
             $.device = device;
             return this;
         }
 
+        /**
+         * @param device A device name from the provider configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder device(String device) {
             return device(Output.of(device));
         }
 
+        /**
+         * @param evpnInstanceNum evpn instance number
+         * 
+         * @return builder
+         * 
+         */
         public Builder evpnInstanceNum(Output<Integer> evpnInstanceNum) {
             $.evpnInstanceNum = evpnInstanceNum;
             return this;
         }
 
+        /**
+         * @param evpnInstanceNum evpn instance number
+         * 
+         * @return builder
+         * 
+         */
         public Builder evpnInstanceNum(Integer evpnInstanceNum) {
             return evpnInstanceNum(Output.of(evpnInstanceNum));
         }

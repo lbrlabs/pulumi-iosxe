@@ -10,12 +10,20 @@ import java.util.Objects;
 @CustomType
 public final class GetLoggingSourceInterfacesVrf {
     private String interfaceName;
+    /**
+     * @return Specify the vrf of source interface for logging transactions
+     * 
+     */
     private String vrf;
 
     private GetLoggingSourceInterfacesVrf() {}
     public String interfaceName() {
         return this.interfaceName;
     }
+    /**
+     * @return Specify the vrf of source interface for logging transactions
+     * 
+     */
     public String vrf() {
         return this.vrf;
     }

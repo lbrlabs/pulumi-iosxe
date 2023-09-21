@@ -250,7 +250,28 @@ class CryptoIkev2Policy(pulumi.CustomResource):
                  proposals: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CryptoIkev2PolicyProposalArgs']]]]] = None,
                  __props__=None):
         """
-        Create a CryptoIkev2Policy resource with the given unique name, props, and options.
+        This resource can manage the Crypto IKEv2 Policy configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.CryptoIkev2Policy("example",
+            match_address_local_ips=["1.2.3.4"],
+            match_fvrf_any=True,
+            proposals=[iosxe.iosxe.CryptoIkev2PolicyProposalArgs(
+                proposals="proposal123",
+            )])
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/cryptoIkev2Policy:CryptoIkev2Policy example "Cisco-IOS-XE-native:native/crypto/Cisco-IOS-XE-crypto:ikev2/policy=policy1"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] device: A device name from the provider configuration.
@@ -266,7 +287,28 @@ class CryptoIkev2Policy(pulumi.CustomResource):
                  args: CryptoIkev2PolicyArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a CryptoIkev2Policy resource with the given unique name, props, and options.
+        This resource can manage the Crypto IKEv2 Policy configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.CryptoIkev2Policy("example",
+            match_address_local_ips=["1.2.3.4"],
+            match_fvrf_any=True,
+            proposals=[iosxe.iosxe.CryptoIkev2PolicyProposalArgs(
+                proposals="proposal123",
+            )])
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/cryptoIkev2Policy:CryptoIkev2Policy example "Cisco-IOS-XE-native:native/crypto/Cisco-IOS-XE-crypto:ikev2/policy=policy1"
+        ```
+
         :param str resource_name: The name of the resource.
         :param CryptoIkev2PolicyArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

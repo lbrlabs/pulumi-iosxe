@@ -10,41 +10,113 @@ import java.util.Objects;
 
 @CustomType
 public final class GetSnmpServerGroupV3Security {
+    /**
+     * @return Access-list name
+     * 
+     */
     private String accessAclName;
+    /**
+     * @return Specify IPv6 Named Access-List
+     * 
+     */
     private String accessIpv6Acl;
+    /**
+     * @return Standard IP Access-list allowing access with this community string
+     * 
+     */
     private Integer accessStandardAcl;
+    /**
+     * @return specify a context to associate these views for the group
+     * 
+     */
     private String contextNode;
+    /**
+     * @return context name match criteria
+     * 
+     */
     private String matchNode;
+    /**
+     * @return specify a notify view for the group
+     * 
+     */
     private String notifyNode;
+    /**
+     * @return specify a read view for the group
+     * 
+     */
     private String readNode;
+    /**
+     * @return security level type
+     * 
+     */
     private String securityLevel;
+    /**
+     * @return specify a write view for the group
+     * 
+     */
     private String writeNode;
 
     private GetSnmpServerGroupV3Security() {}
+    /**
+     * @return Access-list name
+     * 
+     */
     public String accessAclName() {
         return this.accessAclName;
     }
+    /**
+     * @return Specify IPv6 Named Access-List
+     * 
+     */
     public String accessIpv6Acl() {
         return this.accessIpv6Acl;
     }
+    /**
+     * @return Standard IP Access-list allowing access with this community string
+     * 
+     */
     public Integer accessStandardAcl() {
         return this.accessStandardAcl;
     }
+    /**
+     * @return specify a context to associate these views for the group
+     * 
+     */
     public String contextNode() {
         return this.contextNode;
     }
+    /**
+     * @return context name match criteria
+     * 
+     */
     public String matchNode() {
         return this.matchNode;
     }
+    /**
+     * @return specify a notify view for the group
+     * 
+     */
     public String notifyNode() {
         return this.notifyNode;
     }
+    /**
+     * @return specify a read view for the group
+     * 
+     */
     public String readNode() {
         return this.readNode;
     }
+    /**
+     * @return security level type
+     * 
+     */
     public String securityLevel() {
         return this.securityLevel;
     }
+    /**
+     * @return specify a write view for the group
+     * 
+     */
     public String writeNode() {
         return this.writeNode;
     }

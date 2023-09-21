@@ -239,7 +239,26 @@ class InterfaceMpls(pulumi.CustomResource):
                  type: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
-        Create a InterfaceMpls resource with the given unique name, props, and options.
+        This resource can manage the Interface MPLS configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.InterfaceMpls("example",
+            ip=True,
+            mtu="1200",
+            type="Loopback")
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/interfaceMpls:InterfaceMpls example "Cisco-IOS-XE-native:native/interface/Loopback=1/mpls"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] delete_mode: Configure behavior when deleting/destroying the resource. Either delete the entire object (YANG container) being
@@ -259,7 +278,26 @@ class InterfaceMpls(pulumi.CustomResource):
                  args: InterfaceMplsArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a InterfaceMpls resource with the given unique name, props, and options.
+        This resource can manage the Interface MPLS configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.InterfaceMpls("example",
+            ip=True,
+            mtu="1200",
+            type="Loopback")
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/interfaceMpls:InterfaceMpls example "Cisco-IOS-XE-native:native/interface/Loopback=1/mpls"
+        ```
+
         :param str resource_name: The name of the resource.
         :param InterfaceMplsArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

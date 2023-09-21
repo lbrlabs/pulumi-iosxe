@@ -12,117 +12,333 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetCryptoIkev2ProposalResult {
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return AES-CBC-128
+     * 
+     */
     private Boolean encryptionAesCbc128;
+    /**
+     * @return AES-CBC-192
+     * 
+     */
     private Boolean encryptionAesCbc192;
+    /**
+     * @return AES-CBC-256
+     * 
+     */
     private Boolean encryptionAesCbc256;
+    /**
+     * @return Combined-mode,128 bit key,16 byte ICV(Authentication Tag)
+     * 
+     */
     private Boolean encryptionAesGcm128;
+    /**
+     * @return Combined-mode,256 bit key,16 byte ICV(Authentication Tag)
+     * 
+     */
     private Boolean encryptionAesGcm256;
+    /**
+     * @return 3DES
+     * 
+     */
     private Boolean encryptionEn3des;
+    /**
+     * @return DH 3072 MODP
+     * 
+     */
     private Boolean groupFifteen;
+    /**
+     * @return DH 2048 MODP
+     * 
+     */
     private Boolean groupFourteen;
+    /**
+     * @return DH 256 ECP
+     * 
+     */
     private Boolean groupNineteen;
+    /**
+     * @return DH 768 MODP
+     * 
+     */
     private Boolean groupOne;
+    /**
+     * @return DH 4096 MODP
+     * 
+     */
     private Boolean groupSixteen;
+    /**
+     * @return DH 384 ECP
+     * 
+     */
     private Boolean groupTwenty;
+    /**
+     * @return DH 2048 (256 subgroup) MODP
+     * 
+     */
     private Boolean groupTwentyFour;
+    /**
+     * @return DH 521 ECP
+     * 
+     */
     private Boolean groupTwentyOne;
+    /**
+     * @return DH 1024 MODP
+     * 
+     */
     private Boolean groupTwo;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
+    /**
+     * @return Message Digest 5
+     * 
+     */
     private Boolean integrityMd5;
+    /**
+     * @return Secure Hash Standard
+     * 
+     */
     private Boolean integritySha1;
+    /**
+     * @return Secure Hash Standard 2 (256 bit)
+     * 
+     */
     private Boolean integritySha256;
+    /**
+     * @return Secure Hash Standard 2 (384 bit)
+     * 
+     */
     private Boolean integritySha384;
+    /**
+     * @return Secure Hash Standard 2 (512 bit)
+     * 
+     */
     private Boolean integritySha512;
     private String name;
+    /**
+     * @return Message Digest 5
+     * 
+     */
     private Boolean prfMd5;
+    /**
+     * @return Secure Hash Standard
+     * 
+     */
     private Boolean prfSha1;
+    /**
+     * @return Secure Hash Standard 2 (256 bit)
+     * 
+     */
     private Boolean prfSha256;
+    /**
+     * @return Secure Hash Standard 2 (384 bit)
+     * 
+     */
     private Boolean prfSha384;
+    /**
+     * @return Secure Hash Standard 2 (512 bit)
+     * 
+     */
     private Boolean prfSha512;
 
     private GetCryptoIkev2ProposalResult() {}
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return AES-CBC-128
+     * 
+     */
     public Boolean encryptionAesCbc128() {
         return this.encryptionAesCbc128;
     }
+    /**
+     * @return AES-CBC-192
+     * 
+     */
     public Boolean encryptionAesCbc192() {
         return this.encryptionAesCbc192;
     }
+    /**
+     * @return AES-CBC-256
+     * 
+     */
     public Boolean encryptionAesCbc256() {
         return this.encryptionAesCbc256;
     }
+    /**
+     * @return Combined-mode,128 bit key,16 byte ICV(Authentication Tag)
+     * 
+     */
     public Boolean encryptionAesGcm128() {
         return this.encryptionAesGcm128;
     }
+    /**
+     * @return Combined-mode,256 bit key,16 byte ICV(Authentication Tag)
+     * 
+     */
     public Boolean encryptionAesGcm256() {
         return this.encryptionAesGcm256;
     }
+    /**
+     * @return 3DES
+     * 
+     */
     public Boolean encryptionEn3des() {
         return this.encryptionEn3des;
     }
+    /**
+     * @return DH 3072 MODP
+     * 
+     */
     public Boolean groupFifteen() {
         return this.groupFifteen;
     }
+    /**
+     * @return DH 2048 MODP
+     * 
+     */
     public Boolean groupFourteen() {
         return this.groupFourteen;
     }
+    /**
+     * @return DH 256 ECP
+     * 
+     */
     public Boolean groupNineteen() {
         return this.groupNineteen;
     }
+    /**
+     * @return DH 768 MODP
+     * 
+     */
     public Boolean groupOne() {
         return this.groupOne;
     }
+    /**
+     * @return DH 4096 MODP
+     * 
+     */
     public Boolean groupSixteen() {
         return this.groupSixteen;
     }
+    /**
+     * @return DH 384 ECP
+     * 
+     */
     public Boolean groupTwenty() {
         return this.groupTwenty;
     }
+    /**
+     * @return DH 2048 (256 subgroup) MODP
+     * 
+     */
     public Boolean groupTwentyFour() {
         return this.groupTwentyFour;
     }
+    /**
+     * @return DH 521 ECP
+     * 
+     */
     public Boolean groupTwentyOne() {
         return this.groupTwentyOne;
     }
+    /**
+     * @return DH 1024 MODP
+     * 
+     */
     public Boolean groupTwo() {
         return this.groupTwo;
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
+    /**
+     * @return Message Digest 5
+     * 
+     */
     public Boolean integrityMd5() {
         return this.integrityMd5;
     }
+    /**
+     * @return Secure Hash Standard
+     * 
+     */
     public Boolean integritySha1() {
         return this.integritySha1;
     }
+    /**
+     * @return Secure Hash Standard 2 (256 bit)
+     * 
+     */
     public Boolean integritySha256() {
         return this.integritySha256;
     }
+    /**
+     * @return Secure Hash Standard 2 (384 bit)
+     * 
+     */
     public Boolean integritySha384() {
         return this.integritySha384;
     }
+    /**
+     * @return Secure Hash Standard 2 (512 bit)
+     * 
+     */
     public Boolean integritySha512() {
         return this.integritySha512;
     }
     public String name() {
         return this.name;
     }
+    /**
+     * @return Message Digest 5
+     * 
+     */
     public Boolean prfMd5() {
         return this.prfMd5;
     }
+    /**
+     * @return Secure Hash Standard
+     * 
+     */
     public Boolean prfSha1() {
         return this.prfSha1;
     }
+    /**
+     * @return Secure Hash Standard 2 (256 bit)
+     * 
+     */
     public Boolean prfSha256() {
         return this.prfSha256;
     }
+    /**
+     * @return Secure Hash Standard 2 (384 bit)
+     * 
+     */
     public Boolean prfSha384() {
         return this.prfSha384;
     }
+    /**
+     * @return Secure Hash Standard 2 (512 bit)
+     * 
+     */
     public Boolean prfSha512() {
         return this.prfSha512;
     }

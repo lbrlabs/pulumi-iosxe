@@ -846,7 +846,14 @@ class Ntp(pulumi.CustomResource):
                  update_calendar: Optional[pulumi.Input[bool]] = None,
                  __props__=None):
         """
-        Create a Ntp resource with the given unique name, props, and options.
+        This resource can manage the NTP configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/ntp:Ntp example "Cisco-IOS-XE-native:native/ntp"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[bool] authenticate: Authenticate time sources
@@ -878,7 +885,14 @@ class Ntp(pulumi.CustomResource):
                  args: Optional[NtpArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a Ntp resource with the given unique name, props, and options.
+        This resource can manage the NTP configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/ntp:Ntp example "Cisco-IOS-XE-native:native/ntp"
+        ```
+
         :param str resource_name: The name of the resource.
         :param NtpArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

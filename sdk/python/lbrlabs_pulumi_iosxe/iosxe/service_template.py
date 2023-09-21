@@ -828,7 +828,50 @@ class ServiceTemplate(pulumi.CustomResource):
                  voice_vlan: Optional[pulumi.Input[bool]] = None,
                  __props__=None):
         """
-        Create a ServiceTemplate resource with the given unique name, props, and options.
+        This resource can manage the Service Template configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.ServiceTemplate("example",
+            absolute_timer=45,
+            access_groups=[iosxe.iosxe.ServiceTemplateAccessGroupArgs(
+                name="ag1",
+            )],
+            description="service_template_desc",
+            dns_acl_preauth="dns_acl_name",
+            ianctivity_timer=25,
+            inactivity_timer_probe=False,
+            interface_templates=[iosxe.iosxe.ServiceTemplateInterfaceTemplateArgs(
+                name="template1",
+            )],
+            linksec_policy="must-secure",
+            redirect_append_client_mac="00:01:00:01:00:01",
+            redirect_append_switch_mac="00:01:00:01:00:02",
+            redirect_url="valid_url",
+            redirect_url_match_acl="acl_name",
+            redirect_url_match_action="redirect-on-no-match",
+            service_policy_qos_input="input_qos",
+            service_policy_qos_output="output_qos",
+            sgt=57,
+            tags=[iosxe.iosxe.ServiceTemplateTagArgs(
+                name="tag_name",
+            )],
+            tunnel_capwap_name="TUN1",
+            vlan=27,
+            vnid="12345",
+            voice_vlan=False)
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/serviceTemplate:ServiceTemplate example "Cisco-IOS-XE-native:native/Cisco-IOS-XE-switch:service-template=MY_TEMPLATE"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[int] absolute_timer: Enter a value between 1 and 1073741823 - Range: `1`-`1073741823`
@@ -863,7 +906,50 @@ class ServiceTemplate(pulumi.CustomResource):
                  args: Optional[ServiceTemplateArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a ServiceTemplate resource with the given unique name, props, and options.
+        This resource can manage the Service Template configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.ServiceTemplate("example",
+            absolute_timer=45,
+            access_groups=[iosxe.iosxe.ServiceTemplateAccessGroupArgs(
+                name="ag1",
+            )],
+            description="service_template_desc",
+            dns_acl_preauth="dns_acl_name",
+            ianctivity_timer=25,
+            inactivity_timer_probe=False,
+            interface_templates=[iosxe.iosxe.ServiceTemplateInterfaceTemplateArgs(
+                name="template1",
+            )],
+            linksec_policy="must-secure",
+            redirect_append_client_mac="00:01:00:01:00:01",
+            redirect_append_switch_mac="00:01:00:01:00:02",
+            redirect_url="valid_url",
+            redirect_url_match_acl="acl_name",
+            redirect_url_match_action="redirect-on-no-match",
+            service_policy_qos_input="input_qos",
+            service_policy_qos_output="output_qos",
+            sgt=57,
+            tags=[iosxe.iosxe.ServiceTemplateTagArgs(
+                name="tag_name",
+            )],
+            tunnel_capwap_name="TUN1",
+            vlan=27,
+            vnid="12345",
+            voice_vlan=False)
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/serviceTemplate:ServiceTemplate example "Cisco-IOS-XE-native:native/Cisco-IOS-XE-switch:service-template=MY_TEMPLATE"
+        ```
+
         :param str resource_name: The name of the resource.
         :param ServiceTemplateArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

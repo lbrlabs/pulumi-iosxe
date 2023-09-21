@@ -60,56 +60,89 @@ class GetDot1xResult:
     @property
     @pulumi.getter(name="authFailEapol")
     def auth_fail_eapol(self) -> bool:
+        """
+        Send EAPOL-Success on successful auth-fail Authorization
+        """
         return pulumi.get(self, "auth_fail_eapol")
 
     @property
     @pulumi.getter
     def credentials(self) -> Sequence['outputs.GetDot1xCredentialResult']:
+        """
+        Configure 802.1X credentials profiles
+        """
         return pulumi.get(self, "credentials")
 
     @property
     @pulumi.getter(name="criticalEapolConfigBlock")
     def critical_eapol_config_block(self) -> bool:
+        """
+        Block all EAPoL transaction on Critical Authentication
+        """
         return pulumi.get(self, "critical_eapol_config_block")
 
     @property
     @pulumi.getter(name="criticalRecoveryDelay")
     def critical_recovery_delay(self) -> int:
+        """
+        Set 802.1x Critical Authentication Recovery Delay period
+        """
         return pulumi.get(self, "critical_recovery_delay")
 
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
     @property
     @pulumi.getter(name="loggingVerbose")
     def logging_verbose(self) -> bool:
+        """
+        Show verbose messages in system logs
+        """
         return pulumi.get(self, "logging_verbose")
 
     @property
     @pulumi.getter(name="supplicantControlledTransient")
     def supplicant_controlled_transient(self) -> bool:
+        """
+        Controlled access is only applied during authentication
+        """
         return pulumi.get(self, "supplicant_controlled_transient")
 
     @property
     @pulumi.getter(name="supplicantForceMulticast")
     def supplicant_force_multicast(self) -> bool:
+        """
+        Force 802.1X supplicant to send multicast packets
+        """
         return pulumi.get(self, "supplicant_force_multicast")
 
     @property
     @pulumi.getter(name="systemAuthControl")
     def system_auth_control(self) -> bool:
+        """
+        Enable or Disable SysAuthControl
+        """
         return pulumi.get(self, "system_auth_control")
 
     @property
     @pulumi.getter(name="testTimeout")
     def test_timeout(self) -> int:
+        """
+        Timeout for device EAPOL capabilities test in seconds
+        """
         return pulumi.get(self, "test_timeout")
 
 
@@ -135,7 +168,19 @@ class AwaitableGetDot1xResult(GetDot1xResult):
 def get_dot1x(device: Optional[str] = None,
               opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetDot1xResult:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Dot1x configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_dot1x()
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -160,6 +205,18 @@ def get_dot1x(device: Optional[str] = None,
 def get_dot1x_output(device: Optional[pulumi.Input[Optional[str]]] = None,
                      opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetDot1xResult]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Dot1x configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_dot1x()
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     ...

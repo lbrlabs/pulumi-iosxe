@@ -176,7 +176,14 @@ class Line(pulumi.CustomResource):
                  vties: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['LineVtyArgs']]]]] = None,
                  __props__=None):
         """
-        Create a Line resource with the given unique name, props, and options.
+        This resource can manage the Line configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/line:Line example "Cisco-IOS-XE-native:native/line"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['LineConsoleArgs']]]] consoles: Primary terminal line
@@ -193,7 +200,14 @@ class Line(pulumi.CustomResource):
                  args: Optional[LineArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a Line resource with the given unique name, props, and options.
+        This resource can manage the Line configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/line:Line example "Cisco-IOS-XE-native:native/line"
+        ```
+
         :param str resource_name: The name of the resource.
         :param LineArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

@@ -14,34 +14,74 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetBgpIpv4UnicastNeighborResult {
+    /**
+     * @return Enable the address family for this neighbor
+     * 
+     */
     private Boolean activate;
     private String asn;
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
     private String ip;
+    /**
+     * @return Apply route map to neighbor
+     * 
+     */
     private List<GetBgpIpv4UnicastNeighborRouteMap> routeMaps;
+    /**
+     * @return Configure a neighbor as Route Reflector client
+     * 
+     */
     private Boolean routeReflectorClient;
     private String sendCommunity;
 
     private GetBgpIpv4UnicastNeighborResult() {}
+    /**
+     * @return Enable the address family for this neighbor
+     * 
+     */
     public Boolean activate() {
         return this.activate;
     }
     public String asn() {
         return this.asn;
     }
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
     public String ip() {
         return this.ip;
     }
+    /**
+     * @return Apply route map to neighbor
+     * 
+     */
     public List<GetBgpIpv4UnicastNeighborRouteMap> routeMaps() {
         return this.routeMaps;
     }
+    /**
+     * @return Configure a neighbor as Route Reflector client
+     * 
+     */
     public Boolean routeReflectorClient() {
         return this.routeReflectorClient;
     }

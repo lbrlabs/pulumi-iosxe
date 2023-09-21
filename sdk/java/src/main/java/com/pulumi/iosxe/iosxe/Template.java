@@ -21,6 +21,118 @@ import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the Template configuration.
+ * 
+ * ## Example Usage
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.Template;
+ * import com.pulumi.iosxe.iosxe.TemplateArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.TemplateIpAccessGroupArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.TemplateSwitchportPortSecurityMaximumRangeArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Template(&#34;example&#34;, TemplateArgs.builder()        
+ *             .accessSessionClosed(true)
+ *             .accessSessionControlDirection(&#34;both&#34;)
+ *             .accessSessionHostMode(&#34;single-host&#34;)
+ *             .accessSessionInterfaceTemplateSticky(true)
+ *             .accessSessionInterfaceTemplateStickyTimer(100)
+ *             .accessSessionMonitor(true)
+ *             .accessSessionPortControl(&#34;auto&#34;)
+ *             .authenticationPeriodic(true)
+ *             .authenticationTimerReauthenticateServer(true)
+ *             .ctsManual(true)
+ *             .ctsManualPolicyStaticSgt(100)
+ *             .ctsManualPolicyStaticTrusted(false)
+ *             .ctsManualPropagateSgt(false)
+ *             .ctsRoleBasedEnforcement(false)
+ *             .deviceTracking(true)
+ *             .deviceTrackingVlanRange(&#34;100-199&#34;)
+ *             .dot1xMaxReauthReq(3)
+ *             .dot1xMaxReq(3)
+ *             .dot1xPae(&#34;both&#34;)
+ *             .dot1xTimeoutTxPeriod(2)
+ *             .ipAccessGroups(TemplateIpAccessGroupArgs.builder()
+ *                 .access_list(&#34;ACL1&#34;)
+ *                 .direction(&#34;in&#34;)
+ *                 .build())
+ *             .ipDhcpSnoopingLimitRate(10)
+ *             .ipDhcpSnoopingTrust(true)
+ *             .loadInterval(30)
+ *             .mab(true)
+ *             .mabEap(true)
+ *             .servicePolicyInput(&#34;SP1&#34;)
+ *             .servicePolicyOutput(&#34;SP2&#34;)
+ *             .servicePolicyTypeControlSubscriber(&#34;dot1x_policy&#34;)
+ *             .spanningTreeBpduguardEnable(true)
+ *             .spanningTreePortfast(true)
+ *             .spanningTreePortfastDisable(false)
+ *             .spanningTreePortfastEdge(false)
+ *             .spanningTreePortfastNetwork(false)
+ *             .stormControlActionShutdown(true)
+ *             .stormControlActionTrap(true)
+ *             .stormControlBroadcastLevelBpsThreshold(10)
+ *             .stormControlBroadcastLevelPpsThreshold(&#34;10&#34;)
+ *             .stormControlBroadcastLevelThreshold(10)
+ *             .stormControlMulticastLevelBpsThreshold(10000)
+ *             .stormControlMulticastLevelPpsThreshold(&#34;10&#34;)
+ *             .stormControlMulticastLevelThreshold(10)
+ *             .subscriberAgingProbe(true)
+ *             .switchportAccessVlan(200)
+ *             .switchportBlockUnicast(false)
+ *             .switchportModeAccess(false)
+ *             .switchportModeTrunk(true)
+ *             .switchportNonegotiate(false)
+ *             .switchportPortSecurity(true)
+ *             .switchportPortSecurityAgingStatic(false)
+ *             .switchportPortSecurityAgingTime(100)
+ *             .switchportPortSecurityAgingType(true)
+ *             .switchportPortSecurityAgingTypeInactivity(true)
+ *             .switchportPortSecurityMaximumRanges(TemplateSwitchportPortSecurityMaximumRangeArgs.builder()
+ *                 .range(100)
+ *                 .vlan(true)
+ *                 .vlan_access(true)
+ *                 .build())
+ *             .switchportPortSecurityViolationProtect(false)
+ *             .switchportPortSecurityViolationRestrict(false)
+ *             .switchportPortSecurityViolationShutdown(false)
+ *             .switchportPrivateVlanHostAssociationPrimaryRange(301)
+ *             .switchportPrivateVlanHostAssociationSecondaryRange(302)
+ *             .switchportTrunkAllowedVlans(&#34;500-599&#34;)
+ *             .switchportTrunkNativeVlanVlanId(10)
+ *             .switchportVoiceVlan(201)
+ *             .templateName(&#34;TEMP1&#34;)
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/template:Template example &#34;Cisco-IOS-XE-native:native/template/Cisco-IOS-XE-template:template_details=TEMP1&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/template:Template")
 public class Template extends com.pulumi.resources.CustomResource {
     /**

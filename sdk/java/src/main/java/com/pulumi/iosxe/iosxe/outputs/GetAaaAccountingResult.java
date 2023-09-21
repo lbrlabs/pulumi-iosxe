@@ -16,45 +16,125 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetAaaAccountingResult {
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return For starting an exec (shell).
+     * 
+     */
     private List<GetAaaAccountingExec> execs;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
+    /**
+     * @return Use Server-group
+     * 
+     */
     private String identityDefaultStartStopGroup1;
+    /**
+     * @return Use Server-group
+     * 
+     */
     private String identityDefaultStartStopGroup2;
+    /**
+     * @return Use Server-group
+     * 
+     */
     private String identityDefaultStartStopGroup3;
+    /**
+     * @return Use Server-group
+     * 
+     */
     private String identityDefaultStartStopGroup4;
+    /**
+     * @return For network services. (PPP, SLIP, ARAP)
+     * 
+     */
     private List<GetAaaAccountingNetwork> networks;
+    /**
+     * @return Guarantee system accounting as first record.
+     * 
+     */
     private Boolean systemGuaranteeFirst;
+    /**
+     * @return Periodic intervals to send accounting update records(in minutes)
+     * 
+     */
     private Integer updateNewinfoPeriodic;
 
     private GetAaaAccountingResult() {}
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return For starting an exec (shell).
+     * 
+     */
     public List<GetAaaAccountingExec> execs() {
         return this.execs;
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
+    /**
+     * @return Use Server-group
+     * 
+     */
     public String identityDefaultStartStopGroup1() {
         return this.identityDefaultStartStopGroup1;
     }
+    /**
+     * @return Use Server-group
+     * 
+     */
     public String identityDefaultStartStopGroup2() {
         return this.identityDefaultStartStopGroup2;
     }
+    /**
+     * @return Use Server-group
+     * 
+     */
     public String identityDefaultStartStopGroup3() {
         return this.identityDefaultStartStopGroup3;
     }
+    /**
+     * @return Use Server-group
+     * 
+     */
     public String identityDefaultStartStopGroup4() {
         return this.identityDefaultStartStopGroup4;
     }
+    /**
+     * @return For network services. (PPP, SLIP, ARAP)
+     * 
+     */
     public List<GetAaaAccountingNetwork> networks() {
         return this.networks;
     }
+    /**
+     * @return Guarantee system accounting as first record.
+     * 
+     */
     public Boolean systemGuaranteeFirst() {
         return this.systemGuaranteeFirst;
     }
+    /**
+     * @return Periodic intervals to send accounting update records(in minutes)
+     * 
+     */
     public Integer updateNewinfoPeriodic() {
         return this.updateNewinfoPeriodic;
     }

@@ -16,69 +16,181 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetInterfaceOspfResult {
+    /**
+     * @return Route cost of this interface
+     * 
+     */
     private Integer cost;
+    /**
+     * @return Interval after which a neighbor is declared dead
+     * 
+     */
     private Integer deadInterval;
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return Time between HELLO packets
+     * 
+     */
     private Integer helloInterval;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
+    /**
+     * @return Message digest authentication password (key)
+     * 
+     */
     private List<GetInterfaceOspfMessageDigestKey> messageDigestKeys;
+    /**
+     * @return Ignores the MTU in DBD packets
+     * 
+     */
     private Boolean mtuIgnore;
     private String name;
+    /**
+     * @return Specify OSPF broadcast multi-access network
+     * 
+     */
     private Boolean networkTypeBroadcast;
+    /**
+     * @return Specify OSPF NBMA network
+     * 
+     */
     private Boolean networkTypeNonBroadcast;
+    /**
+     * @return Specify OSPF point-to-multipoint network
+     * 
+     */
     private Boolean networkTypePointToMultipoint;
+    /**
+     * @return Specify OSPF point-to-point network
+     * 
+     */
     private Boolean networkTypePointToPoint;
+    /**
+     * @return Router priority
+     * 
+     */
     private Integer priority;
     private List<GetInterfaceOspfProcessId> processIds;
+    /**
+     * @return IP hops
+     * 
+     */
     private Integer ttlSecurityHops;
+    /**
+     * @return Interface type
+     * 
+     */
     private String type;
 
     private GetInterfaceOspfResult() {}
+    /**
+     * @return Route cost of this interface
+     * 
+     */
     public Integer cost() {
         return this.cost;
     }
+    /**
+     * @return Interval after which a neighbor is declared dead
+     * 
+     */
     public Integer deadInterval() {
         return this.deadInterval;
     }
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return Time between HELLO packets
+     * 
+     */
     public Integer helloInterval() {
         return this.helloInterval;
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
+    /**
+     * @return Message digest authentication password (key)
+     * 
+     */
     public List<GetInterfaceOspfMessageDigestKey> messageDigestKeys() {
         return this.messageDigestKeys;
     }
+    /**
+     * @return Ignores the MTU in DBD packets
+     * 
+     */
     public Boolean mtuIgnore() {
         return this.mtuIgnore;
     }
     public String name() {
         return this.name;
     }
+    /**
+     * @return Specify OSPF broadcast multi-access network
+     * 
+     */
     public Boolean networkTypeBroadcast() {
         return this.networkTypeBroadcast;
     }
+    /**
+     * @return Specify OSPF NBMA network
+     * 
+     */
     public Boolean networkTypeNonBroadcast() {
         return this.networkTypeNonBroadcast;
     }
+    /**
+     * @return Specify OSPF point-to-multipoint network
+     * 
+     */
     public Boolean networkTypePointToMultipoint() {
         return this.networkTypePointToMultipoint;
     }
+    /**
+     * @return Specify OSPF point-to-point network
+     * 
+     */
     public Boolean networkTypePointToPoint() {
         return this.networkTypePointToPoint;
     }
+    /**
+     * @return Router priority
+     * 
+     */
     public Integer priority() {
         return this.priority;
     }
     public List<GetInterfaceOspfProcessId> processIds() {
         return this.processIds;
     }
+    /**
+     * @return IP hops
+     * 
+     */
     public Integer ttlSecurityHops() {
         return this.ttlSecurityHops;
     }
+    /**
+     * @return Interface type
+     * 
+     */
     public String type() {
         return this.type;
     }

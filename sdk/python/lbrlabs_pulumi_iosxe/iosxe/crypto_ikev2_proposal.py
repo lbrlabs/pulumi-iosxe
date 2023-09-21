@@ -917,7 +917,35 @@ class CryptoIkev2Proposal(pulumi.CustomResource):
                  prf_sha512: Optional[pulumi.Input[bool]] = None,
                  __props__=None):
         """
-        Create a CryptoIkev2Proposal resource with the given unique name, props, and options.
+        This resource can manage the Crypto IKEv2 Proposal configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.CryptoIkev2Proposal("example",
+            encryption_aes_gcm256=True,
+            group_fifteen=True,
+            group_fourteen=True,
+            group_nineteen=True,
+            group_one=True,
+            group_sixteen=True,
+            group_twenty=True,
+            group_twenty_four=True,
+            group_twenty_one=True,
+            group_two=True,
+            integrity_sha1=True,
+            prf_sha1=True)
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/cryptoIkev2Proposal:CryptoIkev2Proposal example "Cisco-IOS-XE-native:native/crypto/Cisco-IOS-XE-crypto:ikev2/proposal=PROPOSAL1"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] device: A device name from the provider configuration.
@@ -954,7 +982,35 @@ class CryptoIkev2Proposal(pulumi.CustomResource):
                  args: Optional[CryptoIkev2ProposalArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a CryptoIkev2Proposal resource with the given unique name, props, and options.
+        This resource can manage the Crypto IKEv2 Proposal configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.CryptoIkev2Proposal("example",
+            encryption_aes_gcm256=True,
+            group_fifteen=True,
+            group_fourteen=True,
+            group_nineteen=True,
+            group_one=True,
+            group_sixteen=True,
+            group_twenty=True,
+            group_twenty_four=True,
+            group_twenty_one=True,
+            group_two=True,
+            integrity_sha1=True,
+            prf_sha1=True)
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/cryptoIkev2Proposal:CryptoIkev2Proposal example "Cisco-IOS-XE-native:native/crypto/Cisco-IOS-XE-crypto:ikev2/proposal=PROPOSAL1"
+        ```
+
         :param str resource_name: The name of the resource.
         :param CryptoIkev2ProposalArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

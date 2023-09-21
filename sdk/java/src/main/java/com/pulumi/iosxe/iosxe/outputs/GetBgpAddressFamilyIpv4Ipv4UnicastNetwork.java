@@ -10,17 +10,33 @@ import java.util.Objects;
 
 @CustomType
 public final class GetBgpAddressFamilyIpv4Ipv4UnicastNetwork {
+    /**
+     * @return Specify a BGP backdoor route
+     * 
+     */
     private Boolean backdoor;
     private String network;
+    /**
+     * @return Route-map to modify the attributes
+     * 
+     */
     private String routeMap;
 
     private GetBgpAddressFamilyIpv4Ipv4UnicastNetwork() {}
+    /**
+     * @return Specify a BGP backdoor route
+     * 
+     */
     public Boolean backdoor() {
         return this.backdoor;
     }
     public String network() {
         return this.network;
     }
+    /**
+     * @return Route-map to modify the attributes
+     * 
+     */
     public String routeMap() {
         return this.routeMap;
     }

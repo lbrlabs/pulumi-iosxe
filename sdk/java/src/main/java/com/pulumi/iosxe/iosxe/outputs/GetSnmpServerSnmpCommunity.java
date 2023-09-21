@@ -9,16 +9,36 @@ import java.util.Objects;
 
 @CustomType
 public final class GetSnmpServerSnmpCommunity {
+    /**
+     * @return Access-list name
+     * 
+     */
     private String accessListName;
+    /**
+     * @return Specify IPv6 Named Access-List
+     * 
+     */
     private String ipv6;
     private String name;
     private String permission;
+    /**
+     * @return Restrict this community to a named MIB view
+     * 
+     */
     private String view;
 
     private GetSnmpServerSnmpCommunity() {}
+    /**
+     * @return Access-list name
+     * 
+     */
     public String accessListName() {
         return this.accessListName;
     }
+    /**
+     * @return Specify IPv6 Named Access-List
+     * 
+     */
     public String ipv6() {
         return this.ipv6;
     }
@@ -28,6 +48,10 @@ public final class GetSnmpServerSnmpCommunity {
     public String permission() {
         return this.permission;
     }
+    /**
+     * @return Restrict this community to a named MIB view
+     * 
+     */
     public String view() {
         return this.view;
     }

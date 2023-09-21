@@ -54,11 +54,17 @@ class GetInterfaceNveResult:
     @property
     @pulumi.getter
     def description(self) -> str:
+        """
+        Interface specific description
+        """
         return pulumi.get(self, "description")
 
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
@@ -69,6 +75,9 @@ class GetInterfaceNveResult:
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
     @property
@@ -79,21 +88,33 @@ class GetInterfaceNveResult:
     @property
     @pulumi.getter
     def shutdown(self) -> bool:
+        """
+        Shutdown the selected interface
+        """
         return pulumi.get(self, "shutdown")
 
     @property
     @pulumi.getter(name="sourceInterfaceLoopback")
     def source_interface_loopback(self) -> int:
+        """
+        Loopback interface
+        """
         return pulumi.get(self, "source_interface_loopback")
 
     @property
     @pulumi.getter(name="vniVrfs")
     def vni_vrfs(self) -> Sequence['outputs.GetInterfaceNveVniVrfResult']:
+        """
+        Configure VNI information
+        """
         return pulumi.get(self, "vni_vrfs")
 
     @property
     @pulumi.getter
     def vnis(self) -> Sequence['outputs.GetInterfaceNveVniResult']:
+        """
+        Configure VNI information
+        """
         return pulumi.get(self, "vnis")
 
 
@@ -118,7 +139,19 @@ def get_interface_nve(device: Optional[str] = None,
                       name: Optional[int] = None,
                       opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetInterfaceNveResult:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Interface NVE configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_interface_nve(name=1)
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -143,6 +176,18 @@ def get_interface_nve_output(device: Optional[pulumi.Input[Optional[str]]] = Non
                              name: Optional[pulumi.Input[int]] = None,
                              opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetInterfaceNveResult]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Interface NVE configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_interface_nve(name=1)
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     ...

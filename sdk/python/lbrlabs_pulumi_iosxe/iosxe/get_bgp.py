@@ -49,26 +49,41 @@ class GetBgpResult:
     @property
     @pulumi.getter(name="defaultIpv4Unicast")
     def default_ipv4_unicast(self) -> bool:
+        """
+        Activate ipv4-unicast for a peer by default
+        """
         return pulumi.get(self, "default_ipv4_unicast")
 
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
     @property
     @pulumi.getter(name="logNeighborChanges")
     def log_neighbor_changes(self) -> bool:
+        """
+        Log neighbor up/down and reset reason
+        """
         return pulumi.get(self, "log_neighbor_changes")
 
     @property
     @pulumi.getter(name="routerIdLoopback")
     def router_id_loopback(self) -> int:
+        """
+        Loopback interface
+        """
         return pulumi.get(self, "router_id_loopback")
 
 
@@ -90,7 +105,19 @@ def get_bgp(asn: Optional[str] = None,
             device: Optional[str] = None,
             opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetBgpResult:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the BGP configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_bgp(asn="65000")
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     __args__ = dict()
     __args__['asn'] = asn
@@ -112,6 +139,18 @@ def get_bgp_output(asn: Optional[pulumi.Input[str]] = None,
                    device: Optional[pulumi.Input[Optional[str]]] = None,
                    opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetBgpResult]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the BGP configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_bgp(asn="65000")
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     ...

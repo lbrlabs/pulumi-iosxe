@@ -9,13 +9,29 @@ import java.util.Objects;
 
 @CustomType
 public final class GetAaaAuthorizationNetwork {
+    /**
+     * @return Use Server-group
+     * 
+     */
     private String a1Group;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
 
     private GetAaaAuthorizationNetwork() {}
+    /**
+     * @return Use Server-group
+     * 
+     */
     public String a1Group() {
         return this.a1Group;
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }

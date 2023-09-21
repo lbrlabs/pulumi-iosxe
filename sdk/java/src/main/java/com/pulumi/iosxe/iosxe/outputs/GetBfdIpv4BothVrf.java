@@ -9,25 +9,65 @@ import java.util.Objects;
 
 @CustomType
 public final class GetBfdIpv4BothVrf {
+    /**
+     * @return Destination IP prefix/len
+     * 
+     */
     private String destIp;
+    /**
+     * @return Destination VRF instance name
+     * 
+     */
     private String dstVrf;
+    /**
+     * @return Source IP prefix/len
+     * 
+     */
     private String srcIp;
+    /**
+     * @return source VRF instance name
+     * 
+     */
     private String srcVrf;
+    /**
+     * @return BFD template name
+     * 
+     */
     private String templateName;
 
     private GetBfdIpv4BothVrf() {}
+    /**
+     * @return Destination IP prefix/len
+     * 
+     */
     public String destIp() {
         return this.destIp;
     }
+    /**
+     * @return Destination VRF instance name
+     * 
+     */
     public String dstVrf() {
         return this.dstVrf;
     }
+    /**
+     * @return Source IP prefix/len
+     * 
+     */
     public String srcIp() {
         return this.srcIp;
     }
+    /**
+     * @return source VRF instance name
+     * 
+     */
     public String srcVrf() {
         return this.srcVrf;
     }
+    /**
+     * @return BFD template name
+     * 
+     */
     public String templateName() {
         return this.templateName;
     }

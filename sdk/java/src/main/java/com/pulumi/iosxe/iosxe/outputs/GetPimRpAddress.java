@@ -10,21 +10,53 @@ import java.util.Objects;
 
 @CustomType
 public final class GetPimRpAddress {
+    /**
+     * @return IP Access-list
+     * 
+     */
     private String accessList;
+    /**
+     * @return Group range treated in bidirectional shared-tree mode
+     * 
+     */
     private Boolean bidir;
+    /**
+     * @return Overrides dynamically learnt RP mappings
+     * 
+     */
     private Boolean override;
+    /**
+     * @return IP address of Rendezvous-point for group
+     * 
+     */
     private String rpAddress;
 
     private GetPimRpAddress() {}
+    /**
+     * @return IP Access-list
+     * 
+     */
     public String accessList() {
         return this.accessList;
     }
+    /**
+     * @return Group range treated in bidirectional shared-tree mode
+     * 
+     */
     public Boolean bidir() {
         return this.bidir;
     }
+    /**
+     * @return Overrides dynamically learnt RP mappings
+     * 
+     */
     public Boolean override() {
         return this.override;
     }
+    /**
+     * @return IP address of Rendezvous-point for group
+     * 
+     */
     public String rpAddress() {
         return this.rpAddress;
     }

@@ -16,6 +16,49 @@ import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the VLAN Access Map configuration.
+ * 
+ * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.VlanAccessMap;
+ * import com.pulumi.iosxe.iosxe.VlanAccessMapArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new VlanAccessMap(&#34;example&#34;, VlanAccessMapArgs.builder()        
+ *             .action(&#34;forward&#34;)
+ *             .matchIpAddresses(&#34;ACL1&#34;)
+ *             .matchIpv6Addresses(&#34;ACL2&#34;)
+ *             .sequence(10)
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/vlanAccessMap:VlanAccessMap example &#34;Cisco-IOS-XE-native:native/vlan/Cisco-IOS-XE-vlan:access-map=VAM1,10&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/vlanAccessMap:VlanAccessMap")
 public class VlanAccessMap extends com.pulumi.resources.CustomResource {
     /**

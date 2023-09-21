@@ -17,6 +17,56 @@ import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the BGP Address Family IPv6 configuration.
+ * 
+ * ## Example Usage
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.BgpAddressFamilyIpv6;
+ * import com.pulumi.iosxe.iosxe.BgpAddressFamilyIpv6Args;
+ * import com.pulumi.iosxe.iosxe.inputs.BgpAddressFamilyIpv6Ipv6UnicastNetworkArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new BgpAddressFamilyIpv6(&#34;example&#34;, BgpAddressFamilyIpv6Args.builder()        
+ *             .afName(&#34;unicast&#34;)
+ *             .asn(&#34;65000&#34;)
+ *             .ipv6UnicastNetworks(BgpAddressFamilyIpv6Ipv6UnicastNetworkArgs.builder()
+ *                 .backdoor(true)
+ *                 .network(&#34;2001:1234::/64&#34;)
+ *                 .route_map(&#34;RM1&#34;)
+ *                 .build())
+ *             .ipv6UnicastRedistributeConnected(true)
+ *             .ipv6UnicastRedistributeStatic(true)
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/bgpAddressFamilyIpv6:BgpAddressFamilyIpv6 example &#34;Cisco-IOS-XE-native:native/router/Cisco-IOS-XE-bgp:bgp=65000/address-family/no-vrf/ipv6=unicast&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/bgpAddressFamilyIpv6:BgpAddressFamilyIpv6")
 public class BgpAddressFamilyIpv6 extends com.pulumi.resources.CustomResource {
     /**

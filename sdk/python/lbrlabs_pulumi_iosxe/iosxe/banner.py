@@ -240,7 +240,27 @@ class Banner(pulumi.CustomResource):
                  prompt_timeout_banner: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
-        Create a Banner resource with the given unique name, props, and options.
+        This resource can manage the Banner configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.Banner("example",
+            exec_banner="My Exec Banner",
+            login_banner="My Login Banner",
+            motd_banner="My MOTD Banner",
+            prompt_timeout_banner="My Prompt-Timeout Banner")
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/banner:Banner example "Cisco-IOS-XE-native:native/banner"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] delete_mode: Configure behavior when deleting/destroying the resource. Either delete the entire object (YANG container) being
@@ -259,7 +279,27 @@ class Banner(pulumi.CustomResource):
                  args: Optional[BannerArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a Banner resource with the given unique name, props, and options.
+        This resource can manage the Banner configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.Banner("example",
+            exec_banner="My Exec Banner",
+            login_banner="My Login Banner",
+            motd_banner="My MOTD Banner",
+            prompt_timeout_banner="My Prompt-Timeout Banner")
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/banner:Banner example "Cisco-IOS-XE-native:native/banner"
+        ```
+
         :param str resource_name: The name of the resource.
         :param BannerArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

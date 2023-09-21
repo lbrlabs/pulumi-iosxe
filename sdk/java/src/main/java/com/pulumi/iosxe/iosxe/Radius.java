@@ -16,6 +16,56 @@ import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the Radius configuration.
+ * 
+ * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.Radius;
+ * import com.pulumi.iosxe.iosxe.RadiusArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Radius(&#34;example&#34;, RadiusArgs.builder()        
+ *             .accountingPort(1812)
+ *             .authenticationPort(1813)
+ *             .automateTesterIgnoreAcctPort(true)
+ *             .automateTesterProbeOnConfig(true)
+ *             .automateTesterUsername(&#34;dummy&#34;)
+ *             .ipv4Address(&#34;10.10.15.12&#34;)
+ *             .key(&#34;123&#34;)
+ *             .pacKey(&#34;123&#34;)
+ *             .pacKeyEncryption(&#34;0&#34;)
+ *             .retransmit(3)
+ *             .timeout(4)
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/radius:Radius example &#34;Cisco-IOS-XE-native:native/radius/Cisco-IOS-XE-aaa:server=radius_10.10.15.12&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/radius:Radius")
 public class Radius extends com.pulumi.resources.CustomResource {
     /**

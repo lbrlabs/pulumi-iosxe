@@ -14,6 +14,46 @@ import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the CTS configuration.
+ * 
+ * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.Cts;
+ * import com.pulumi.iosxe.iosxe.CtsArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Cts(&#34;example&#34;, CtsArgs.builder()        
+ *             .authorizationList(&#34;Tacacs-GROUP&#34;)
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/cts:Cts example &#34;Cisco-IOS-XE-native:native/cts&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/cts:Cts")
 public class Cts extends com.pulumi.resources.CustomResource {
     /**

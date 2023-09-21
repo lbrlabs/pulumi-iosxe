@@ -102,7 +102,30 @@ class PrefixList(pulumi.CustomResource):
                  prefixes: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['PrefixListPrefixArgs']]]]] = None,
                  __props__=None):
         """
-        Create a PrefixList resource with the given unique name, props, and options.
+        This resource can manage the Prefix List configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.PrefixList("example", prefixes=[iosxe.iosxe.PrefixListPrefixArgs(
+            action="permit",
+            ge=24,
+            ip="10.0.0.0/8",
+            le=32,
+            name="PREFIX_LIST_1",
+            seq=10,
+        )])
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/prefixList:PrefixList example "Cisco-IOS-XE-native:native/ip/prefix-lists"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] device: A device name from the provider configuration.
@@ -115,7 +138,30 @@ class PrefixList(pulumi.CustomResource):
                  args: Optional[PrefixListArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a PrefixList resource with the given unique name, props, and options.
+        This resource can manage the Prefix List configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.PrefixList("example", prefixes=[iosxe.iosxe.PrefixListPrefixArgs(
+            action="permit",
+            ge=24,
+            ip="10.0.0.0/8",
+            le=32,
+            name="PREFIX_LIST_1",
+            seq=10,
+        )])
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/prefixList:PrefixList example "Cisco-IOS-XE-native:native/ip/prefix-lists"
+        ```
+
         :param str resource_name: The name of the resource.
         :param PrefixListArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

@@ -638,7 +638,60 @@ class Vrf(pulumi.CustomResource):
                  vpn_id: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
-        Create a Vrf resource with the given unique name, props, and options.
+        This resource can manage the VRF configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.Vrf("example",
+            address_family_ipv4=True,
+            address_family_ipv6=True,
+            description="VRF22 description",
+            ipv4_route_target_exports=[iosxe.iosxe.VrfIpv4RouteTargetExportArgs(
+                value="22:22",
+            )],
+            ipv4_route_target_export_stitchings=[iosxe.iosxe.VrfIpv4RouteTargetExportStitchingArgs(
+                value="22:22",
+            )],
+            ipv4_route_target_imports=[iosxe.iosxe.VrfIpv4RouteTargetImportArgs(
+                value="22:22",
+            )],
+            ipv4_route_target_import_stitchings=[iosxe.iosxe.VrfIpv4RouteTargetImportStitchingArgs(
+                value="22:22",
+            )],
+            ipv6_route_target_exports=[iosxe.iosxe.VrfIpv6RouteTargetExportArgs(
+                value="22:22",
+            )],
+            ipv6_route_target_export_stitchings=[iosxe.iosxe.VrfIpv6RouteTargetExportStitchingArgs(
+                value="22:22",
+            )],
+            ipv6_route_target_imports=[iosxe.iosxe.VrfIpv6RouteTargetImportArgs(
+                value="22:22",
+            )],
+            ipv6_route_target_import_stitchings=[iosxe.iosxe.VrfIpv6RouteTargetImportStitchingArgs(
+                value="22:22",
+            )],
+            rd="22:22",
+            route_target_exports=[iosxe.iosxe.VrfRouteTargetExportArgs(
+                stitching=False,
+                value="22:22",
+            )],
+            route_target_imports=[iosxe.iosxe.VrfRouteTargetImportArgs(
+                stitching=False,
+                value="22:22",
+            )],
+            vpn_id="22:22")
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/vrf:Vrf example "Cisco-IOS-XE-native:native/vrf/definition=VRF22"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[bool] address_family_ipv4: Address family
@@ -669,7 +722,60 @@ class Vrf(pulumi.CustomResource):
                  args: Optional[VrfArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a Vrf resource with the given unique name, props, and options.
+        This resource can manage the VRF configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.Vrf("example",
+            address_family_ipv4=True,
+            address_family_ipv6=True,
+            description="VRF22 description",
+            ipv4_route_target_exports=[iosxe.iosxe.VrfIpv4RouteTargetExportArgs(
+                value="22:22",
+            )],
+            ipv4_route_target_export_stitchings=[iosxe.iosxe.VrfIpv4RouteTargetExportStitchingArgs(
+                value="22:22",
+            )],
+            ipv4_route_target_imports=[iosxe.iosxe.VrfIpv4RouteTargetImportArgs(
+                value="22:22",
+            )],
+            ipv4_route_target_import_stitchings=[iosxe.iosxe.VrfIpv4RouteTargetImportStitchingArgs(
+                value="22:22",
+            )],
+            ipv6_route_target_exports=[iosxe.iosxe.VrfIpv6RouteTargetExportArgs(
+                value="22:22",
+            )],
+            ipv6_route_target_export_stitchings=[iosxe.iosxe.VrfIpv6RouteTargetExportStitchingArgs(
+                value="22:22",
+            )],
+            ipv6_route_target_imports=[iosxe.iosxe.VrfIpv6RouteTargetImportArgs(
+                value="22:22",
+            )],
+            ipv6_route_target_import_stitchings=[iosxe.iosxe.VrfIpv6RouteTargetImportStitchingArgs(
+                value="22:22",
+            )],
+            rd="22:22",
+            route_target_exports=[iosxe.iosxe.VrfRouteTargetExportArgs(
+                stitching=False,
+                value="22:22",
+            )],
+            route_target_imports=[iosxe.iosxe.VrfRouteTargetImportArgs(
+                stitching=False,
+                value="22:22",
+            )],
+            vpn_id="22:22")
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/vrf:Vrf example "Cisco-IOS-XE-native:native/vrf/definition=VRF22"
+        ```
+
         :param str resource_name: The name of the resource.
         :param VrfArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

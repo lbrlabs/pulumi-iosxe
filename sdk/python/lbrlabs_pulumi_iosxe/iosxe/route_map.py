@@ -127,7 +127,14 @@ class RouteMap(pulumi.CustomResource):
                  name: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
-        Create a RouteMap resource with the given unique name, props, and options.
+        This resource can manage the Route Map configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/routeMap:RouteMap example "Cisco-IOS-XE-native:native/route-map=RM1"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] device: A device name from the provider configuration.
@@ -140,7 +147,14 @@ class RouteMap(pulumi.CustomResource):
                  args: Optional[RouteMapArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a RouteMap resource with the given unique name, props, and options.
+        This resource can manage the Route Map configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/routeMap:RouteMap example "Cisco-IOS-XE-native:native/route-map=RM1"
+        ```
+
         :param str resource_name: The name of the resource.
         :param RouteMapArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

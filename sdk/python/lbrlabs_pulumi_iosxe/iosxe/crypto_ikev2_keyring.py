@@ -127,7 +127,14 @@ class CryptoIkev2Keyring(pulumi.CustomResource):
                  peers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CryptoIkev2KeyringPeerArgs']]]]] = None,
                  __props__=None):
         """
-        Create a CryptoIkev2Keyring resource with the given unique name, props, and options.
+        This resource can manage the Crypto IKEv2 Keyring configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/cryptoIkev2Keyring:CryptoIkev2Keyring example "Cisco-IOS-XE-native:native/crypto/Cisco-IOS-XE-crypto:ikev2/keyring=keyring1"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] device: A device name from the provider configuration.
@@ -140,7 +147,14 @@ class CryptoIkev2Keyring(pulumi.CustomResource):
                  args: Optional[CryptoIkev2KeyringArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a CryptoIkev2Keyring resource with the given unique name, props, and options.
+        This resource can manage the Crypto IKEv2 Keyring configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/cryptoIkev2Keyring:CryptoIkev2Keyring example "Cisco-IOS-XE-native:native/crypto/Cisco-IOS-XE-crypto:ikev2/keyring=keyring1"
+        ```
+
         :param str resource_name: The name of the resource.
         :param CryptoIkev2KeyringArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

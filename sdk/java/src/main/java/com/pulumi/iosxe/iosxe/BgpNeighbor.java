@@ -16,6 +16,66 @@ import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the BGP Neighbor configuration.
+ * 
+ * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.BgpNeighbor;
+ * import com.pulumi.iosxe.iosxe.BgpNeighborArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new BgpNeighbor(&#34;example&#34;, BgpNeighborArgs.builder()        
+ *             .asn(&#34;65000&#34;)
+ *             .clusterId(&#34;1234&#34;)
+ *             .description(&#34;BGP Neighbor Description&#34;)
+ *             .disableConnectedCheck(false)
+ *             .fallOverBfdCheckControlPlaneFailure(true)
+ *             .fallOverBfdSingleHop(true)
+ *             .fallOverBfdStrictMode(true)
+ *             .fallOverDefaultEnable(false)
+ *             .fallOverDefaultRouteMap(&#34;RMAP&#34;)
+ *             .fallOverMaximumMetricRouteMap(&#34;RMAP&#34;)
+ *             .ip(&#34;3.3.3.3&#34;)
+ *             .logNeighborChanges(true)
+ *             .password(&#34;test1234&#34;)
+ *             .passwordType(1)
+ *             .remoteAs(&#34;65000&#34;)
+ *             .shutdown(false)
+ *             .timersHoldtime(866)
+ *             .timersKeepaliveInterval(655)
+ *             .timersMinimumNeighborHold(222)
+ *             .updateSourceLoopback(&#34;100&#34;)
+ *             .version(4)
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/bgpNeighbor:BgpNeighbor example &#34;Cisco-IOS-XE-native:native/router/Cisco-IOS-XE-bgp:bgp=65000/neighbor=3.3.3.3&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/bgpNeighbor:BgpNeighbor")
 public class BgpNeighbor extends com.pulumi.resources.CustomResource {
     @Export(name="asn", refs={String.class}, tree="[0]")

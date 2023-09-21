@@ -10,12 +10,20 @@ import java.util.Objects;
 @CustomType
 public final class GetLoggingIpv6VrfHost {
     private String ipv6Host;
+    /**
+     * @return Set VRF option
+     * 
+     */
     private String vrf;
 
     private GetLoggingIpv6VrfHost() {}
     public String ipv6Host() {
         return this.ipv6Host;
     }
+    /**
+     * @return Set VRF option
+     * 
+     */
     public String vrf() {
         return this.vrf;
     }

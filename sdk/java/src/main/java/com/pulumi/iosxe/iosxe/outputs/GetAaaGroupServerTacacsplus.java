@@ -11,13 +11,29 @@ import java.util.Objects;
 
 @CustomType
 public final class GetAaaGroupServerTacacsplus {
+    /**
+     * @return Server-group name with max string length 32
+     * 
+     */
     private String name;
+    /**
+     * @return Name of tacacs server
+     * 
+     */
     private List<GetAaaGroupServerTacacsplusServerName> serverNames;
 
     private GetAaaGroupServerTacacsplus() {}
+    /**
+     * @return Server-group name with max string length 32
+     * 
+     */
     public String name() {
         return this.name;
     }
+    /**
+     * @return Name of tacacs server
+     * 
+     */
     public List<GetAaaGroupServerTacacsplusServerName> serverNames() {
         return this.serverNames;
     }

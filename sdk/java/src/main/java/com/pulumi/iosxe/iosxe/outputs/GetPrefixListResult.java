@@ -13,17 +13,41 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetPrefixListResult {
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
+    /**
+     * @return Build prefix-lists with name ans seq.no
+     * 
+     */
     private List<GetPrefixListPrefix> prefixes;
 
     private GetPrefixListResult() {}
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
+    /**
+     * @return Build prefix-lists with name ans seq.no
+     * 
+     */
     public List<GetPrefixListPrefix> prefixes() {
         return this.prefixes;
     }

@@ -13,9 +13,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetClockResult {
+    /**
+     * @return Calendar time is authoritative
+     * 
+     */
     private Boolean calendarValid;
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
+    /**
+     * @return Configure absolute summer time
+     * 
+     */
     private Boolean summerTimeDate;
     private Integer summerTimeDateEndDay;
     private String summerTimeDateEndMonth;
@@ -26,6 +42,10 @@ public final class GetClockResult {
     private String summerTimeDateStartMonth;
     private String summerTimeDateStartTime;
     private Integer summerTimeDateStartYear;
+    /**
+     * @return Configure recurring summer time
+     * 
+     */
     private Boolean summerTimeRecurring;
     private String summerTimeRecurringEndMonth;
     private String summerTimeRecurringEndTime;
@@ -36,18 +56,38 @@ public final class GetClockResult {
     private String summerTimeRecurringStartTime;
     private String summerTimeRecurringStartWeek;
     private String summerTimeRecurringStartWeekday;
+    /**
+     * @return Name of time zone in summer
+     * 
+     */
     private String summerTimeZone;
 
     private GetClockResult() {}
+    /**
+     * @return Calendar time is authoritative
+     * 
+     */
     public Boolean calendarValid() {
         return this.calendarValid;
     }
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
+    /**
+     * @return Configure absolute summer time
+     * 
+     */
     public Boolean summerTimeDate() {
         return this.summerTimeDate;
     }
@@ -78,6 +118,10 @@ public final class GetClockResult {
     public Integer summerTimeDateStartYear() {
         return this.summerTimeDateStartYear;
     }
+    /**
+     * @return Configure recurring summer time
+     * 
+     */
     public Boolean summerTimeRecurring() {
         return this.summerTimeRecurring;
     }
@@ -108,6 +152,10 @@ public final class GetClockResult {
     public String summerTimeRecurringStartWeekday() {
         return this.summerTimeRecurringStartWeekday;
     }
+    /**
+     * @return Name of time zone in summer
+     * 
+     */
     public String summerTimeZone() {
         return this.summerTimeZone;
     }

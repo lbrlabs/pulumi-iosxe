@@ -39,6 +39,9 @@ class GetRouteMapResult:
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
@@ -49,11 +52,17 @@ class GetRouteMapResult:
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
     @property
     @pulumi.getter
     def name(self) -> str:
+        """
+        WORD;;Route map tag
+        """
         return pulumi.get(self, "name")
 
 
@@ -73,7 +82,20 @@ def get_route_map(device: Optional[str] = None,
                   name: Optional[str] = None,
                   opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetRouteMapResult:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Route Map configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_route_map(name="RM1")
+    ```
+
+
+    :param str device: A device name from the provider configuration.
+    :param str name: WORD;;Route map tag
     """
     __args__ = dict()
     __args__['device'] = device
@@ -93,6 +115,19 @@ def get_route_map_output(device: Optional[pulumi.Input[Optional[str]]] = None,
                          name: Optional[pulumi.Input[str]] = None,
                          opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetRouteMapResult]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Route Map configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_route_map(name="RM1")
+    ```
+
+
+    :param str device: A device name from the provider configuration.
+    :param str name: WORD;;Route map tag
     """
     ...

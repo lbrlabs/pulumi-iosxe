@@ -13,41 +13,165 @@ import java.util.Objects;
 public final class GetAccessListExtendedEntry {
     private String aceRuleAction;
     private String aceRuleProtocol;
+    /**
+     * @return Match on the ACK bit
+     * 
+     */
     private Boolean ack;
+    /**
+     * @return Any destination host
+     * 
+     */
     private Boolean destinationAny;
+    /**
+     * @return A single destination host
+     * 
+     */
     private String destinationHost;
+    /**
+     * @return Destination network object group
+     * 
+     */
     private String destinationObjectGroup;
+    /**
+     * @return Match only packets on a given port number up to 10 ports
+     * 
+     */
     private String destinationPortEqual;
+    /**
+     * @return Match only packets with a greater port number
+     * 
+     */
     private String destinationPortGreaterThan;
+    /**
+     * @return Match only packets with a lower port number
+     * 
+     */
     private String destinationPortLesserThan;
+    /**
+     * @return Match only packets in the range of port numbers
+     * 
+     */
     private String destinationPortRangeFrom;
+    /**
+     * @return Match only packets in the range of port numbers
+     * 
+     */
     private String destinationPortRangeTo;
     private String destinationPrefix;
     private String destinationPrefixMask;
+    /**
+     * @return Match packets with given dscp value
+     * 
+     */
     private String dscp;
+    /**
+     * @return Match established connections
+     * 
+     */
     private Boolean established;
+    /**
+     * @return Match on the FIN bit
+     * 
+     */
     private Boolean fin;
+    /**
+     * @return Check non-initial fragments
+     * 
+     */
     private Boolean fragments;
+    /**
+     * @return Log matches against this entry
+     * 
+     */
     private Boolean log;
+    /**
+     * @return Log matches against this entry, including input interface
+     * 
+     */
     private Boolean logInput;
+    /**
+     * @return Match packets with given precedence value
+     * 
+     */
     private String precedence;
+    /**
+     * @return Match on the PSH bit
+     * 
+     */
     private Boolean psh;
+    /**
+     * @return Access list entry comment
+     * 
+     */
     private String remark;
+    /**
+     * @return Match on the RST bit
+     * 
+     */
     private Boolean rst;
     private Integer sequence;
+    /**
+     * @return Service object group name
+     * 
+     */
     private String serviceObjectGroup;
+    /**
+     * @return Any source host
+     * 
+     */
     private Boolean sourceAny;
+    /**
+     * @return A single source host
+     * 
+     */
     private String sourceHost;
+    /**
+     * @return Source network object group
+     * 
+     */
     private String sourceObjectGroup;
+    /**
+     * @return Match only packets on a given port number up to 10 ports
+     * 
+     */
     private String sourcePortEqual;
+    /**
+     * @return Match only packets with a greater port number
+     * 
+     */
     private String sourcePortGreaterThan;
+    /**
+     * @return Match only packets with a lower port number
+     * 
+     */
     private String sourcePortLesserThan;
+    /**
+     * @return Match only packets in the range of port numbers
+     * 
+     */
     private String sourcePortRangeFrom;
+    /**
+     * @return Match only packets in the range of port numbers
+     * 
+     */
     private String sourcePortRangeTo;
     private String sourcePrefix;
     private String sourcePrefixMask;
+    /**
+     * @return Match on the SYN bit
+     * 
+     */
     private Boolean syn;
+    /**
+     * @return Match packets with given TOS value
+     * 
+     */
     private String tos;
+    /**
+     * @return Match on the URG bit
+     * 
+     */
     private Boolean urg;
 
     private GetAccessListExtendedEntry() {}
@@ -57,30 +181,66 @@ public final class GetAccessListExtendedEntry {
     public String aceRuleProtocol() {
         return this.aceRuleProtocol;
     }
+    /**
+     * @return Match on the ACK bit
+     * 
+     */
     public Boolean ack() {
         return this.ack;
     }
+    /**
+     * @return Any destination host
+     * 
+     */
     public Boolean destinationAny() {
         return this.destinationAny;
     }
+    /**
+     * @return A single destination host
+     * 
+     */
     public String destinationHost() {
         return this.destinationHost;
     }
+    /**
+     * @return Destination network object group
+     * 
+     */
     public String destinationObjectGroup() {
         return this.destinationObjectGroup;
     }
+    /**
+     * @return Match only packets on a given port number up to 10 ports
+     * 
+     */
     public String destinationPortEqual() {
         return this.destinationPortEqual;
     }
+    /**
+     * @return Match only packets with a greater port number
+     * 
+     */
     public String destinationPortGreaterThan() {
         return this.destinationPortGreaterThan;
     }
+    /**
+     * @return Match only packets with a lower port number
+     * 
+     */
     public String destinationPortLesserThan() {
         return this.destinationPortLesserThan;
     }
+    /**
+     * @return Match only packets in the range of port numbers
+     * 
+     */
     public String destinationPortRangeFrom() {
         return this.destinationPortRangeFrom;
     }
+    /**
+     * @return Match only packets in the range of port numbers
+     * 
+     */
     public String destinationPortRangeTo() {
         return this.destinationPortRangeTo;
     }
@@ -90,63 +250,139 @@ public final class GetAccessListExtendedEntry {
     public String destinationPrefixMask() {
         return this.destinationPrefixMask;
     }
+    /**
+     * @return Match packets with given dscp value
+     * 
+     */
     public String dscp() {
         return this.dscp;
     }
+    /**
+     * @return Match established connections
+     * 
+     */
     public Boolean established() {
         return this.established;
     }
+    /**
+     * @return Match on the FIN bit
+     * 
+     */
     public Boolean fin() {
         return this.fin;
     }
+    /**
+     * @return Check non-initial fragments
+     * 
+     */
     public Boolean fragments() {
         return this.fragments;
     }
+    /**
+     * @return Log matches against this entry
+     * 
+     */
     public Boolean log() {
         return this.log;
     }
+    /**
+     * @return Log matches against this entry, including input interface
+     * 
+     */
     public Boolean logInput() {
         return this.logInput;
     }
+    /**
+     * @return Match packets with given precedence value
+     * 
+     */
     public String precedence() {
         return this.precedence;
     }
+    /**
+     * @return Match on the PSH bit
+     * 
+     */
     public Boolean psh() {
         return this.psh;
     }
+    /**
+     * @return Access list entry comment
+     * 
+     */
     public String remark() {
         return this.remark;
     }
+    /**
+     * @return Match on the RST bit
+     * 
+     */
     public Boolean rst() {
         return this.rst;
     }
     public Integer sequence() {
         return this.sequence;
     }
+    /**
+     * @return Service object group name
+     * 
+     */
     public String serviceObjectGroup() {
         return this.serviceObjectGroup;
     }
+    /**
+     * @return Any source host
+     * 
+     */
     public Boolean sourceAny() {
         return this.sourceAny;
     }
+    /**
+     * @return A single source host
+     * 
+     */
     public String sourceHost() {
         return this.sourceHost;
     }
+    /**
+     * @return Source network object group
+     * 
+     */
     public String sourceObjectGroup() {
         return this.sourceObjectGroup;
     }
+    /**
+     * @return Match only packets on a given port number up to 10 ports
+     * 
+     */
     public String sourcePortEqual() {
         return this.sourcePortEqual;
     }
+    /**
+     * @return Match only packets with a greater port number
+     * 
+     */
     public String sourcePortGreaterThan() {
         return this.sourcePortGreaterThan;
     }
+    /**
+     * @return Match only packets with a lower port number
+     * 
+     */
     public String sourcePortLesserThan() {
         return this.sourcePortLesserThan;
     }
+    /**
+     * @return Match only packets in the range of port numbers
+     * 
+     */
     public String sourcePortRangeFrom() {
         return this.sourcePortRangeFrom;
     }
+    /**
+     * @return Match only packets in the range of port numbers
+     * 
+     */
     public String sourcePortRangeTo() {
         return this.sourcePortRangeTo;
     }
@@ -156,12 +392,24 @@ public final class GetAccessListExtendedEntry {
     public String sourcePrefixMask() {
         return this.sourcePrefixMask;
     }
+    /**
+     * @return Match on the SYN bit
+     * 
+     */
     public Boolean syn() {
         return this.syn;
     }
+    /**
+     * @return Match packets with given TOS value
+     * 
+     */
     public String tos() {
         return this.tos;
     }
+    /**
+     * @return Match on the URG bit
+     * 
+     */
     public Boolean urg() {
         return this.urg;
     }

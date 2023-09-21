@@ -17,11 +17,35 @@ import javax.annotation.Nullable;
 public final class GetBgpAddressFamilyIpv4Result {
     private String afName;
     private String asn;
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
+    /**
+     * @return Specify a network to announce via BGP
+     * 
+     */
     private List<GetBgpAddressFamilyIpv4Ipv4UnicastNetwork> ipv4UnicastNetworks;
+    /**
+     * @return Specify a network to announce via BGP
+     * 
+     */
     private List<GetBgpAddressFamilyIpv4Ipv4UnicastNetworksMask> ipv4UnicastNetworksMasks;
+    /**
+     * @return Connected
+     * 
+     */
     private Boolean ipv4UnicastRedistributeConnected;
+    /**
+     * @return Static routes
+     * 
+     */
     private Boolean ipv4UnicastRedistributeStatic;
 
     private GetBgpAddressFamilyIpv4Result() {}
@@ -31,21 +55,45 @@ public final class GetBgpAddressFamilyIpv4Result {
     public String asn() {
         return this.asn;
     }
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
+    /**
+     * @return Specify a network to announce via BGP
+     * 
+     */
     public List<GetBgpAddressFamilyIpv4Ipv4UnicastNetwork> ipv4UnicastNetworks() {
         return this.ipv4UnicastNetworks;
     }
+    /**
+     * @return Specify a network to announce via BGP
+     * 
+     */
     public List<GetBgpAddressFamilyIpv4Ipv4UnicastNetworksMask> ipv4UnicastNetworksMasks() {
         return this.ipv4UnicastNetworksMasks;
     }
+    /**
+     * @return Connected
+     * 
+     */
     public Boolean ipv4UnicastRedistributeConnected() {
         return this.ipv4UnicastRedistributeConnected;
     }
+    /**
+     * @return Static routes
+     * 
+     */
     public Boolean ipv4UnicastRedistributeStatic() {
         return this.ipv4UnicastRedistributeStatic;
     }

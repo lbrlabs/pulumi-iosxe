@@ -57,51 +57,81 @@ class GetAaaAccountingResult:
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
     @pulumi.getter
     def execs(self) -> Sequence['outputs.GetAaaAccountingExecResult']:
+        """
+        For starting an exec (shell).
+        """
         return pulumi.get(self, "execs")
 
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
     @property
     @pulumi.getter(name="identityDefaultStartStopGroup1")
     def identity_default_start_stop_group1(self) -> str:
+        """
+        Use Server-group
+        """
         return pulumi.get(self, "identity_default_start_stop_group1")
 
     @property
     @pulumi.getter(name="identityDefaultStartStopGroup2")
     def identity_default_start_stop_group2(self) -> str:
+        """
+        Use Server-group
+        """
         return pulumi.get(self, "identity_default_start_stop_group2")
 
     @property
     @pulumi.getter(name="identityDefaultStartStopGroup3")
     def identity_default_start_stop_group3(self) -> str:
+        """
+        Use Server-group
+        """
         return pulumi.get(self, "identity_default_start_stop_group3")
 
     @property
     @pulumi.getter(name="identityDefaultStartStopGroup4")
     def identity_default_start_stop_group4(self) -> str:
+        """
+        Use Server-group
+        """
         return pulumi.get(self, "identity_default_start_stop_group4")
 
     @property
     @pulumi.getter
     def networks(self) -> Sequence['outputs.GetAaaAccountingNetworkResult']:
+        """
+        For network services. (PPP, SLIP, ARAP)
+        """
         return pulumi.get(self, "networks")
 
     @property
     @pulumi.getter(name="systemGuaranteeFirst")
     def system_guarantee_first(self) -> bool:
+        """
+        Guarantee system accounting as first record.
+        """
         return pulumi.get(self, "system_guarantee_first")
 
     @property
     @pulumi.getter(name="updateNewinfoPeriodic")
     def update_newinfo_periodic(self) -> int:
+        """
+        Periodic intervals to send accounting update records(in minutes)
+        """
         return pulumi.get(self, "update_newinfo_periodic")
 
 
@@ -126,7 +156,19 @@ class AwaitableGetAaaAccountingResult(GetAaaAccountingResult):
 def get_aaa_accounting(device: Optional[str] = None,
                        opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetAaaAccountingResult:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the AAA Accounting configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_aaa_accounting()
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -150,6 +192,18 @@ def get_aaa_accounting(device: Optional[str] = None,
 def get_aaa_accounting_output(device: Optional[pulumi.Input[Optional[str]]] = None,
                               opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetAaaAccountingResult]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the AAA Accounting configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_aaa_accounting()
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     ...

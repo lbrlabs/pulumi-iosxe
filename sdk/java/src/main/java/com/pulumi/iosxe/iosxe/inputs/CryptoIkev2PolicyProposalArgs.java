@@ -13,9 +13,17 @@ public final class CryptoIkev2PolicyProposalArgs extends com.pulumi.resources.Re
 
     public static final CryptoIkev2PolicyProposalArgs Empty = new CryptoIkev2PolicyProposalArgs();
 
+    /**
+     * Specify Proposal
+     * 
+     */
     @Import(name="proposals", required=true)
     private Output<String> proposals;
 
+    /**
+     * @return Specify Proposal
+     * 
+     */
     public Output<String> proposals() {
         return this.proposals;
     }
@@ -44,11 +52,23 @@ public final class CryptoIkev2PolicyProposalArgs extends com.pulumi.resources.Re
             $ = new CryptoIkev2PolicyProposalArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param proposals Specify Proposal
+         * 
+         * @return builder
+         * 
+         */
         public Builder proposals(Output<String> proposals) {
             $.proposals = proposals;
             return this;
         }
 
+        /**
+         * @param proposals Specify Proposal
+         * 
+         * @return builder
+         * 
+         */
         public Builder proposals(String proposals) {
             return proposals(Output.of(proposals));
         }

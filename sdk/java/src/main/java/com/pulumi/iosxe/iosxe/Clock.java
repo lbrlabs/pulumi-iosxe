@@ -16,6 +16,57 @@ import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the Clock configuration.
+ * 
+ * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.Clock;
+ * import com.pulumi.iosxe.iosxe.ClockArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Clock(&#34;example&#34;, ClockArgs.builder()        
+ *             .calendarValid(true)
+ *             .summerTimeRecurring(true)
+ *             .summerTimeRecurringEndMonth(&#34;Dec&#34;)
+ *             .summerTimeRecurringEndTime(&#34;00:00&#34;)
+ *             .summerTimeRecurringEndWeek(&#34;1&#34;)
+ *             .summerTimeRecurringEndWeekday(&#34;Mon&#34;)
+ *             .summerTimeRecurringOffset(60)
+ *             .summerTimeRecurringStartMonth(&#34;Jan&#34;)
+ *             .summerTimeRecurringStartTime(&#34;00:00&#34;)
+ *             .summerTimeRecurringStartWeek(&#34;1&#34;)
+ *             .summerTimeRecurringStartWeekday(&#34;Mon&#34;)
+ *             .summerTimeZone(&#34;CET&#34;)
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/clock:Clock example &#34;Cisco-IOS-XE-native:native/clock&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/clock:Clock")
 public class Clock extends com.pulumi.resources.CustomResource {
     /**

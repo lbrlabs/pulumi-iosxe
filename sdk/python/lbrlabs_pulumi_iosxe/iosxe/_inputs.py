@@ -748,6 +748,41 @@ class AccessListExtendedEntryArgs:
                  syn: Optional[pulumi.Input[bool]] = None,
                  tos: Optional[pulumi.Input[str]] = None,
                  urg: Optional[pulumi.Input[bool]] = None):
+        """
+        :param pulumi.Input[int] sequence: - Range: `1`-`2147483647`
+        :param pulumi.Input[str] ace_rule_action: - Choices: `deny`, `permit`
+        :param pulumi.Input[bool] ack: Match on the ACK bit
+        :param pulumi.Input[bool] destination_any: Any destination host
+        :param pulumi.Input[str] destination_host: A single destination host
+        :param pulumi.Input[str] destination_object_group: Destination network object group
+        :param pulumi.Input[str] destination_port_equal: Match only packets on a given port number up to 10 ports
+        :param pulumi.Input[str] destination_port_greater_than: Match only packets with a greater port number
+        :param pulumi.Input[str] destination_port_lesser_than: Match only packets with a lower port number
+        :param pulumi.Input[str] destination_port_range_from: Match only packets in the range of port numbers
+        :param pulumi.Input[str] destination_port_range_to: Match only packets in the range of port numbers
+        :param pulumi.Input[str] dscp: Match packets with given dscp value
+        :param pulumi.Input[bool] established: Match established connections
+        :param pulumi.Input[bool] fin: Match on the FIN bit
+        :param pulumi.Input[bool] fragments: Check non-initial fragments
+        :param pulumi.Input[bool] log: Log matches against this entry
+        :param pulumi.Input[bool] log_input: Log matches against this entry, including input interface
+        :param pulumi.Input[str] precedence: Match packets with given precedence value
+        :param pulumi.Input[bool] psh: Match on the PSH bit
+        :param pulumi.Input[str] remark: Access list entry comment
+        :param pulumi.Input[bool] rst: Match on the RST bit
+        :param pulumi.Input[str] service_object_group: Service object group name
+        :param pulumi.Input[bool] source_any: Any source host
+        :param pulumi.Input[str] source_host: A single source host
+        :param pulumi.Input[str] source_object_group: Source network object group
+        :param pulumi.Input[str] source_port_equal: Match only packets on a given port number up to 10 ports
+        :param pulumi.Input[str] source_port_greater_than: Match only packets with a greater port number
+        :param pulumi.Input[str] source_port_lesser_than: Match only packets with a lower port number
+        :param pulumi.Input[str] source_port_range_from: Match only packets in the range of port numbers
+        :param pulumi.Input[str] source_port_range_to: Match only packets in the range of port numbers
+        :param pulumi.Input[bool] syn: Match on the SYN bit
+        :param pulumi.Input[str] tos: Match packets with given TOS value
+        :param pulumi.Input[bool] urg: Match on the URG bit
+        """
         pulumi.set(__self__, "sequence", sequence)
         if ace_rule_action is not None:
             pulumi.set(__self__, "ace_rule_action", ace_rule_action)
@@ -827,6 +862,9 @@ class AccessListExtendedEntryArgs:
     @property
     @pulumi.getter
     def sequence(self) -> pulumi.Input[int]:
+        """
+        - Range: `1`-`2147483647`
+        """
         return pulumi.get(self, "sequence")
 
     @sequence.setter
@@ -836,6 +874,9 @@ class AccessListExtendedEntryArgs:
     @property
     @pulumi.getter(name="aceRuleAction")
     def ace_rule_action(self) -> Optional[pulumi.Input[str]]:
+        """
+        - Choices: `deny`, `permit`
+        """
         return pulumi.get(self, "ace_rule_action")
 
     @ace_rule_action.setter
@@ -854,6 +895,9 @@ class AccessListExtendedEntryArgs:
     @property
     @pulumi.getter
     def ack(self) -> Optional[pulumi.Input[bool]]:
+        """
+        Match on the ACK bit
+        """
         return pulumi.get(self, "ack")
 
     @ack.setter
@@ -863,6 +907,9 @@ class AccessListExtendedEntryArgs:
     @property
     @pulumi.getter(name="destinationAny")
     def destination_any(self) -> Optional[pulumi.Input[bool]]:
+        """
+        Any destination host
+        """
         return pulumi.get(self, "destination_any")
 
     @destination_any.setter
@@ -872,6 +919,9 @@ class AccessListExtendedEntryArgs:
     @property
     @pulumi.getter(name="destinationHost")
     def destination_host(self) -> Optional[pulumi.Input[str]]:
+        """
+        A single destination host
+        """
         return pulumi.get(self, "destination_host")
 
     @destination_host.setter
@@ -881,6 +931,9 @@ class AccessListExtendedEntryArgs:
     @property
     @pulumi.getter(name="destinationObjectGroup")
     def destination_object_group(self) -> Optional[pulumi.Input[str]]:
+        """
+        Destination network object group
+        """
         return pulumi.get(self, "destination_object_group")
 
     @destination_object_group.setter
@@ -890,6 +943,9 @@ class AccessListExtendedEntryArgs:
     @property
     @pulumi.getter(name="destinationPortEqual")
     def destination_port_equal(self) -> Optional[pulumi.Input[str]]:
+        """
+        Match only packets on a given port number up to 10 ports
+        """
         return pulumi.get(self, "destination_port_equal")
 
     @destination_port_equal.setter
@@ -899,6 +955,9 @@ class AccessListExtendedEntryArgs:
     @property
     @pulumi.getter(name="destinationPortGreaterThan")
     def destination_port_greater_than(self) -> Optional[pulumi.Input[str]]:
+        """
+        Match only packets with a greater port number
+        """
         return pulumi.get(self, "destination_port_greater_than")
 
     @destination_port_greater_than.setter
@@ -908,6 +967,9 @@ class AccessListExtendedEntryArgs:
     @property
     @pulumi.getter(name="destinationPortLesserThan")
     def destination_port_lesser_than(self) -> Optional[pulumi.Input[str]]:
+        """
+        Match only packets with a lower port number
+        """
         return pulumi.get(self, "destination_port_lesser_than")
 
     @destination_port_lesser_than.setter
@@ -917,6 +979,9 @@ class AccessListExtendedEntryArgs:
     @property
     @pulumi.getter(name="destinationPortRangeFrom")
     def destination_port_range_from(self) -> Optional[pulumi.Input[str]]:
+        """
+        Match only packets in the range of port numbers
+        """
         return pulumi.get(self, "destination_port_range_from")
 
     @destination_port_range_from.setter
@@ -926,6 +991,9 @@ class AccessListExtendedEntryArgs:
     @property
     @pulumi.getter(name="destinationPortRangeTo")
     def destination_port_range_to(self) -> Optional[pulumi.Input[str]]:
+        """
+        Match only packets in the range of port numbers
+        """
         return pulumi.get(self, "destination_port_range_to")
 
     @destination_port_range_to.setter
@@ -953,6 +1021,9 @@ class AccessListExtendedEntryArgs:
     @property
     @pulumi.getter
     def dscp(self) -> Optional[pulumi.Input[str]]:
+        """
+        Match packets with given dscp value
+        """
         return pulumi.get(self, "dscp")
 
     @dscp.setter
@@ -962,6 +1033,9 @@ class AccessListExtendedEntryArgs:
     @property
     @pulumi.getter
     def established(self) -> Optional[pulumi.Input[bool]]:
+        """
+        Match established connections
+        """
         return pulumi.get(self, "established")
 
     @established.setter
@@ -971,6 +1045,9 @@ class AccessListExtendedEntryArgs:
     @property
     @pulumi.getter
     def fin(self) -> Optional[pulumi.Input[bool]]:
+        """
+        Match on the FIN bit
+        """
         return pulumi.get(self, "fin")
 
     @fin.setter
@@ -980,6 +1057,9 @@ class AccessListExtendedEntryArgs:
     @property
     @pulumi.getter
     def fragments(self) -> Optional[pulumi.Input[bool]]:
+        """
+        Check non-initial fragments
+        """
         return pulumi.get(self, "fragments")
 
     @fragments.setter
@@ -989,6 +1069,9 @@ class AccessListExtendedEntryArgs:
     @property
     @pulumi.getter
     def log(self) -> Optional[pulumi.Input[bool]]:
+        """
+        Log matches against this entry
+        """
         return pulumi.get(self, "log")
 
     @log.setter
@@ -998,6 +1081,9 @@ class AccessListExtendedEntryArgs:
     @property
     @pulumi.getter(name="logInput")
     def log_input(self) -> Optional[pulumi.Input[bool]]:
+        """
+        Log matches against this entry, including input interface
+        """
         return pulumi.get(self, "log_input")
 
     @log_input.setter
@@ -1007,6 +1093,9 @@ class AccessListExtendedEntryArgs:
     @property
     @pulumi.getter
     def precedence(self) -> Optional[pulumi.Input[str]]:
+        """
+        Match packets with given precedence value
+        """
         return pulumi.get(self, "precedence")
 
     @precedence.setter
@@ -1016,6 +1105,9 @@ class AccessListExtendedEntryArgs:
     @property
     @pulumi.getter
     def psh(self) -> Optional[pulumi.Input[bool]]:
+        """
+        Match on the PSH bit
+        """
         return pulumi.get(self, "psh")
 
     @psh.setter
@@ -1025,6 +1117,9 @@ class AccessListExtendedEntryArgs:
     @property
     @pulumi.getter
     def remark(self) -> Optional[pulumi.Input[str]]:
+        """
+        Access list entry comment
+        """
         return pulumi.get(self, "remark")
 
     @remark.setter
@@ -1034,6 +1129,9 @@ class AccessListExtendedEntryArgs:
     @property
     @pulumi.getter
     def rst(self) -> Optional[pulumi.Input[bool]]:
+        """
+        Match on the RST bit
+        """
         return pulumi.get(self, "rst")
 
     @rst.setter
@@ -1043,6 +1141,9 @@ class AccessListExtendedEntryArgs:
     @property
     @pulumi.getter(name="serviceObjectGroup")
     def service_object_group(self) -> Optional[pulumi.Input[str]]:
+        """
+        Service object group name
+        """
         return pulumi.get(self, "service_object_group")
 
     @service_object_group.setter
@@ -1052,6 +1153,9 @@ class AccessListExtendedEntryArgs:
     @property
     @pulumi.getter(name="sourceAny")
     def source_any(self) -> Optional[pulumi.Input[bool]]:
+        """
+        Any source host
+        """
         return pulumi.get(self, "source_any")
 
     @source_any.setter
@@ -1061,6 +1165,9 @@ class AccessListExtendedEntryArgs:
     @property
     @pulumi.getter(name="sourceHost")
     def source_host(self) -> Optional[pulumi.Input[str]]:
+        """
+        A single source host
+        """
         return pulumi.get(self, "source_host")
 
     @source_host.setter
@@ -1070,6 +1177,9 @@ class AccessListExtendedEntryArgs:
     @property
     @pulumi.getter(name="sourceObjectGroup")
     def source_object_group(self) -> Optional[pulumi.Input[str]]:
+        """
+        Source network object group
+        """
         return pulumi.get(self, "source_object_group")
 
     @source_object_group.setter
@@ -1079,6 +1189,9 @@ class AccessListExtendedEntryArgs:
     @property
     @pulumi.getter(name="sourcePortEqual")
     def source_port_equal(self) -> Optional[pulumi.Input[str]]:
+        """
+        Match only packets on a given port number up to 10 ports
+        """
         return pulumi.get(self, "source_port_equal")
 
     @source_port_equal.setter
@@ -1088,6 +1201,9 @@ class AccessListExtendedEntryArgs:
     @property
     @pulumi.getter(name="sourcePortGreaterThan")
     def source_port_greater_than(self) -> Optional[pulumi.Input[str]]:
+        """
+        Match only packets with a greater port number
+        """
         return pulumi.get(self, "source_port_greater_than")
 
     @source_port_greater_than.setter
@@ -1097,6 +1213,9 @@ class AccessListExtendedEntryArgs:
     @property
     @pulumi.getter(name="sourcePortLesserThan")
     def source_port_lesser_than(self) -> Optional[pulumi.Input[str]]:
+        """
+        Match only packets with a lower port number
+        """
         return pulumi.get(self, "source_port_lesser_than")
 
     @source_port_lesser_than.setter
@@ -1106,6 +1225,9 @@ class AccessListExtendedEntryArgs:
     @property
     @pulumi.getter(name="sourcePortRangeFrom")
     def source_port_range_from(self) -> Optional[pulumi.Input[str]]:
+        """
+        Match only packets in the range of port numbers
+        """
         return pulumi.get(self, "source_port_range_from")
 
     @source_port_range_from.setter
@@ -1115,6 +1237,9 @@ class AccessListExtendedEntryArgs:
     @property
     @pulumi.getter(name="sourcePortRangeTo")
     def source_port_range_to(self) -> Optional[pulumi.Input[str]]:
+        """
+        Match only packets in the range of port numbers
+        """
         return pulumi.get(self, "source_port_range_to")
 
     @source_port_range_to.setter
@@ -1142,6 +1267,9 @@ class AccessListExtendedEntryArgs:
     @property
     @pulumi.getter
     def syn(self) -> Optional[pulumi.Input[bool]]:
+        """
+        Match on the SYN bit
+        """
         return pulumi.get(self, "syn")
 
     @syn.setter
@@ -1151,6 +1279,9 @@ class AccessListExtendedEntryArgs:
     @property
     @pulumi.getter
     def tos(self) -> Optional[pulumi.Input[str]]:
+        """
+        Match packets with given TOS value
+        """
         return pulumi.get(self, "tos")
 
     @tos.setter
@@ -1160,6 +1291,9 @@ class AccessListExtendedEntryArgs:
     @property
     @pulumi.getter
     def urg(self) -> Optional[pulumi.Input[bool]]:
+        """
+        Match on the URG bit
+        """
         return pulumi.get(self, "urg")
 
     @urg.setter
@@ -1182,6 +1316,20 @@ class AccessListStandardEntryArgs:
                  permit_prefix: Optional[pulumi.Input[str]] = None,
                  permit_prefix_mask: Optional[pulumi.Input[str]] = None,
                  remark: Optional[pulumi.Input[str]] = None):
+        """
+        :param pulumi.Input[int] sequence: - Range: `1`-`2147483647`
+        :param pulumi.Input[bool] deny_any: Any source prefix
+        :param pulumi.Input[str] deny_host: A single source host
+        :param pulumi.Input[bool] deny_log: Log matches against this entry
+        :param pulumi.Input[str] deny_prefix: Network address prefix
+        :param pulumi.Input[str] deny_prefix_mask: Wildcard bits
+        :param pulumi.Input[bool] permit_any: Any source prefix
+        :param pulumi.Input[str] permit_host: A single source host
+        :param pulumi.Input[bool] permit_log: Log matches against this entry
+        :param pulumi.Input[str] permit_prefix: Network address prefix
+        :param pulumi.Input[str] permit_prefix_mask: Wildcard bits
+        :param pulumi.Input[str] remark: Access list entry comment
+        """
         pulumi.set(__self__, "sequence", sequence)
         if deny_any is not None:
             pulumi.set(__self__, "deny_any", deny_any)
@@ -1209,6 +1357,9 @@ class AccessListStandardEntryArgs:
     @property
     @pulumi.getter
     def sequence(self) -> pulumi.Input[int]:
+        """
+        - Range: `1`-`2147483647`
+        """
         return pulumi.get(self, "sequence")
 
     @sequence.setter
@@ -1218,6 +1369,9 @@ class AccessListStandardEntryArgs:
     @property
     @pulumi.getter(name="denyAny")
     def deny_any(self) -> Optional[pulumi.Input[bool]]:
+        """
+        Any source prefix
+        """
         return pulumi.get(self, "deny_any")
 
     @deny_any.setter
@@ -1227,6 +1381,9 @@ class AccessListStandardEntryArgs:
     @property
     @pulumi.getter(name="denyHost")
     def deny_host(self) -> Optional[pulumi.Input[str]]:
+        """
+        A single source host
+        """
         return pulumi.get(self, "deny_host")
 
     @deny_host.setter
@@ -1236,6 +1393,9 @@ class AccessListStandardEntryArgs:
     @property
     @pulumi.getter(name="denyLog")
     def deny_log(self) -> Optional[pulumi.Input[bool]]:
+        """
+        Log matches against this entry
+        """
         return pulumi.get(self, "deny_log")
 
     @deny_log.setter
@@ -1245,6 +1405,9 @@ class AccessListStandardEntryArgs:
     @property
     @pulumi.getter(name="denyPrefix")
     def deny_prefix(self) -> Optional[pulumi.Input[str]]:
+        """
+        Network address prefix
+        """
         return pulumi.get(self, "deny_prefix")
 
     @deny_prefix.setter
@@ -1254,6 +1417,9 @@ class AccessListStandardEntryArgs:
     @property
     @pulumi.getter(name="denyPrefixMask")
     def deny_prefix_mask(self) -> Optional[pulumi.Input[str]]:
+        """
+        Wildcard bits
+        """
         return pulumi.get(self, "deny_prefix_mask")
 
     @deny_prefix_mask.setter
@@ -1263,6 +1429,9 @@ class AccessListStandardEntryArgs:
     @property
     @pulumi.getter(name="permitAny")
     def permit_any(self) -> Optional[pulumi.Input[bool]]:
+        """
+        Any source prefix
+        """
         return pulumi.get(self, "permit_any")
 
     @permit_any.setter
@@ -1272,6 +1441,9 @@ class AccessListStandardEntryArgs:
     @property
     @pulumi.getter(name="permitHost")
     def permit_host(self) -> Optional[pulumi.Input[str]]:
+        """
+        A single source host
+        """
         return pulumi.get(self, "permit_host")
 
     @permit_host.setter
@@ -1281,6 +1453,9 @@ class AccessListStandardEntryArgs:
     @property
     @pulumi.getter(name="permitLog")
     def permit_log(self) -> Optional[pulumi.Input[bool]]:
+        """
+        Log matches against this entry
+        """
         return pulumi.get(self, "permit_log")
 
     @permit_log.setter
@@ -1290,6 +1465,9 @@ class AccessListStandardEntryArgs:
     @property
     @pulumi.getter(name="permitPrefix")
     def permit_prefix(self) -> Optional[pulumi.Input[str]]:
+        """
+        Network address prefix
+        """
         return pulumi.get(self, "permit_prefix")
 
     @permit_prefix.setter
@@ -1299,6 +1477,9 @@ class AccessListStandardEntryArgs:
     @property
     @pulumi.getter(name="permitPrefixMask")
     def permit_prefix_mask(self) -> Optional[pulumi.Input[str]]:
+        """
+        Wildcard bits
+        """
         return pulumi.get(self, "permit_prefix_mask")
 
     @permit_prefix_mask.setter
@@ -1308,6 +1489,9 @@ class AccessListStandardEntryArgs:
     @property
     @pulumi.getter
     def remark(self) -> Optional[pulumi.Input[str]]:
+        """
+        Access list entry comment
+        """
         return pulumi.get(self, "remark")
 
     @remark.setter
@@ -2395,6 +2579,19 @@ class CryptoIkev2KeyringPeerArgs:
                  pre_shared_key_local_encryption: Optional[pulumi.Input[str]] = None,
                  pre_shared_key_remote: Optional[pulumi.Input[str]] = None,
                  pre_shared_key_remote_encryption: Optional[pulumi.Input[str]] = None):
+        """
+        :param pulumi.Input[str] description: Specify a description of this peer
+        :param pulumi.Input[str] hostname: Hostname of peer
+        :param pulumi.Input[str] identity_address: IP address
+        :param pulumi.Input[str] identity_email_domain: email Domain Name
+        :param pulumi.Input[str] identity_email_name: Specify the name string
+        :param pulumi.Input[str] identity_fqdn_domain: email Domain Name
+        :param pulumi.Input[str] identity_fqdn_name: Specify the name string
+        :param pulumi.Input[str] identity_key_id: proprietary types of identification (ID KEY ID)
+        :param pulumi.Input[str] pre_shared_key_encryption: - Choices: `0`, `6`
+        :param pulumi.Input[str] pre_shared_key_local_encryption: - Choices: `0`, `6`
+        :param pulumi.Input[str] pre_shared_key_remote_encryption: - Choices: `0`, `6`
+        """
         pulumi.set(__self__, "name", name)
         if description is not None:
             pulumi.set(__self__, "description", description)
@@ -2443,6 +2640,9 @@ class CryptoIkev2KeyringPeerArgs:
     @property
     @pulumi.getter
     def description(self) -> Optional[pulumi.Input[str]]:
+        """
+        Specify a description of this peer
+        """
         return pulumi.get(self, "description")
 
     @description.setter
@@ -2452,6 +2652,9 @@ class CryptoIkev2KeyringPeerArgs:
     @property
     @pulumi.getter
     def hostname(self) -> Optional[pulumi.Input[str]]:
+        """
+        Hostname of peer
+        """
         return pulumi.get(self, "hostname")
 
     @hostname.setter
@@ -2461,6 +2664,9 @@ class CryptoIkev2KeyringPeerArgs:
     @property
     @pulumi.getter(name="identityAddress")
     def identity_address(self) -> Optional[pulumi.Input[str]]:
+        """
+        IP address
+        """
         return pulumi.get(self, "identity_address")
 
     @identity_address.setter
@@ -2470,6 +2676,9 @@ class CryptoIkev2KeyringPeerArgs:
     @property
     @pulumi.getter(name="identityEmailDomain")
     def identity_email_domain(self) -> Optional[pulumi.Input[str]]:
+        """
+        email Domain Name
+        """
         return pulumi.get(self, "identity_email_domain")
 
     @identity_email_domain.setter
@@ -2479,6 +2688,9 @@ class CryptoIkev2KeyringPeerArgs:
     @property
     @pulumi.getter(name="identityEmailName")
     def identity_email_name(self) -> Optional[pulumi.Input[str]]:
+        """
+        Specify the name string
+        """
         return pulumi.get(self, "identity_email_name")
 
     @identity_email_name.setter
@@ -2488,6 +2700,9 @@ class CryptoIkev2KeyringPeerArgs:
     @property
     @pulumi.getter(name="identityFqdnDomain")
     def identity_fqdn_domain(self) -> Optional[pulumi.Input[str]]:
+        """
+        email Domain Name
+        """
         return pulumi.get(self, "identity_fqdn_domain")
 
     @identity_fqdn_domain.setter
@@ -2497,6 +2712,9 @@ class CryptoIkev2KeyringPeerArgs:
     @property
     @pulumi.getter(name="identityFqdnName")
     def identity_fqdn_name(self) -> Optional[pulumi.Input[str]]:
+        """
+        Specify the name string
+        """
         return pulumi.get(self, "identity_fqdn_name")
 
     @identity_fqdn_name.setter
@@ -2506,6 +2724,9 @@ class CryptoIkev2KeyringPeerArgs:
     @property
     @pulumi.getter(name="identityKeyId")
     def identity_key_id(self) -> Optional[pulumi.Input[str]]:
+        """
+        proprietary types of identification (ID KEY ID)
+        """
         return pulumi.get(self, "identity_key_id")
 
     @identity_key_id.setter
@@ -2551,6 +2772,9 @@ class CryptoIkev2KeyringPeerArgs:
     @property
     @pulumi.getter(name="preSharedKeyEncryption")
     def pre_shared_key_encryption(self) -> Optional[pulumi.Input[str]]:
+        """
+        - Choices: `0`, `6`
+        """
         return pulumi.get(self, "pre_shared_key_encryption")
 
     @pre_shared_key_encryption.setter
@@ -2569,6 +2793,9 @@ class CryptoIkev2KeyringPeerArgs:
     @property
     @pulumi.getter(name="preSharedKeyLocalEncryption")
     def pre_shared_key_local_encryption(self) -> Optional[pulumi.Input[str]]:
+        """
+        - Choices: `0`, `6`
+        """
         return pulumi.get(self, "pre_shared_key_local_encryption")
 
     @pre_shared_key_local_encryption.setter
@@ -2587,6 +2814,9 @@ class CryptoIkev2KeyringPeerArgs:
     @property
     @pulumi.getter(name="preSharedKeyRemoteEncryption")
     def pre_shared_key_remote_encryption(self) -> Optional[pulumi.Input[str]]:
+        """
+        - Choices: `0`, `6`
+        """
         return pulumi.get(self, "pre_shared_key_remote_encryption")
 
     @pre_shared_key_remote_encryption.setter
@@ -2598,11 +2828,17 @@ class CryptoIkev2KeyringPeerArgs:
 class CryptoIkev2PolicyProposalArgs:
     def __init__(__self__, *,
                  proposals: pulumi.Input[str]):
+        """
+        :param pulumi.Input[str] proposals: Specify Proposal
+        """
         pulumi.set(__self__, "proposals", proposals)
 
     @property
     @pulumi.getter
     def proposals(self) -> pulumi.Input[str]:
+        """
+        Specify Proposal
+        """
         return pulumi.get(self, "proposals")
 
     @proposals.setter
@@ -5704,6 +5940,12 @@ class RestconfListArgs:
                  name: pulumi.Input[str],
                  items: Optional[pulumi.Input[Sequence[pulumi.Input[Mapping[str, pulumi.Input[str]]]]]] = None,
                  values: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None):
+        """
+        :param pulumi.Input[str] key: YANG list key attribute. In case of multiple keys, those should be separated by a comma (`,`).
+        :param pulumi.Input[str] name: YANG list name.
+        :param pulumi.Input[Sequence[pulumi.Input[Mapping[str, pulumi.Input[str]]]]] items: List of maps of key-value pairs which represents the YANG leafs and its values.
+        :param pulumi.Input[Sequence[pulumi.Input[str]]] values: YANG leaf-list values.
+        """
         pulumi.set(__self__, "key", key)
         pulumi.set(__self__, "name", name)
         if items is not None:
@@ -5714,6 +5956,9 @@ class RestconfListArgs:
     @property
     @pulumi.getter
     def key(self) -> pulumi.Input[str]:
+        """
+        YANG list key attribute. In case of multiple keys, those should be separated by a comma (`,`).
+        """
         return pulumi.get(self, "key")
 
     @key.setter
@@ -5723,6 +5968,9 @@ class RestconfListArgs:
     @property
     @pulumi.getter
     def name(self) -> pulumi.Input[str]:
+        """
+        YANG list name.
+        """
         return pulumi.get(self, "name")
 
     @name.setter
@@ -5732,6 +5980,9 @@ class RestconfListArgs:
     @property
     @pulumi.getter
     def items(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[Mapping[str, pulumi.Input[str]]]]]]:
+        """
+        List of maps of key-value pairs which represents the YANG leafs and its values.
+        """
         return pulumi.get(self, "items")
 
     @items.setter
@@ -5741,6 +5992,9 @@ class RestconfListArgs:
     @property
     @pulumi.getter
     def values(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]:
+        """
+        YANG leaf-list values.
+        """
         return pulumi.get(self, "values")
 
     @values.setter

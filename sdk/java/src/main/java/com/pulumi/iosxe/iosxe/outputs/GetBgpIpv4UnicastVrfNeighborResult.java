@@ -15,43 +15,135 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetBgpIpv4UnicastVrfNeighborResult {
+    /**
+     * @return Enable the address family for this neighbor
+     * 
+     */
     private Boolean activate;
     private String asn;
     private String clusterId;
+    /**
+     * @return Neighbor specific description
+     * 
+     */
     private String description;
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return one-hop away EBGP peer using loopback address
+     * 
+     */
     private Boolean disableConnectedCheck;
+    /**
+     * @return Allow EBGP neighbors not on directly connected networks. For single-hop ebgp peers, delete ebgp-multihop directly.
+     * 
+     */
     private Boolean ebgpMultihop;
     private Integer ebgpMultihopMaxHop;
+    /**
+     * @return Retrieve control plane dependent failure info from BFD for BGP GR/NSR operation
+     * 
+     */
     private Boolean fallOverBfdCheckControlPlaneFailure;
+    /**
+     * @return Force BFD multi-hop to detect failure
+     * 
+     */
     private Boolean fallOverBfdMultiHop;
+    /**
+     * @return Force BFD single-hop to detect failure
+     * 
+     */
     private Boolean fallOverBfdSingleHop;
+    /**
+     * @return Enable BFD strict-mode
+     * 
+     */
     private Boolean fallOverBfdStrictMode;
     private String fallOverDefaultRouteMap;
     private String fallOverMaximumMetricRouteMap;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
     private String ip;
     private String localAs;
+    /**
+     * @return Accept either real AS or local AS from the ebgp peer
+     * 
+     */
     private Boolean localAsDualAs;
+    /**
+     * @return Do not prepend local-as to updates from ebgp peers
+     * 
+     */
     private Boolean localAsNoPrepend;
+    /**
+     * @return Replace real AS with local AS in the EBGP updates
+     * 
+     */
     private Boolean localAsReplaceAs;
+    /**
+     * @return disable
+     * 
+     */
     private Boolean logNeighborChangesDisable;
     private String password;
+    /**
+     * @return Encryption type (0 to disable encryption, 7 for proprietary)
+     * 
+     */
     private Integer passwordType;
+    /**
+     * @return Specify a BGP peer-group remote-as
+     * 
+     */
     private String remoteAs;
+    /**
+     * @return Apply route map to neighbor
+     * 
+     */
     private List<GetBgpIpv4UnicastVrfNeighborRouteMap> routeMaps;
+    /**
+     * @return Configure a neighbor as Route Reflector client
+     * 
+     */
     private Boolean routeReflectorClient;
     private String sendCommunity;
+    /**
+     * @return Administratively shut down this neighbor
+     * 
+     */
     private Boolean shutdown;
     private Integer timersHoldtime;
     private Integer timersKeepaliveInterval;
     private Integer timersMinimumNeighborHold;
+    /**
+     * @return IP hops
+     * 
+     */
     private Integer ttlSecurityHops;
+    /**
+     * @return Loopback interface
+     * 
+     */
     private String updateSourceLoopback;
+    /**
+     * @return Set the BGP version to match a neighbor
+     * 
+     */
     private Integer version;
     private String vrf;
 
     private GetBgpIpv4UnicastVrfNeighborResult() {}
+    /**
+     * @return Enable the address family for this neighbor
+     * 
+     */
     public Boolean activate() {
         return this.activate;
     }
@@ -61,30 +153,62 @@ public final class GetBgpIpv4UnicastVrfNeighborResult {
     public String clusterId() {
         return this.clusterId;
     }
+    /**
+     * @return Neighbor specific description
+     * 
+     */
     public String description() {
         return this.description;
     }
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return one-hop away EBGP peer using loopback address
+     * 
+     */
     public Boolean disableConnectedCheck() {
         return this.disableConnectedCheck;
     }
+    /**
+     * @return Allow EBGP neighbors not on directly connected networks. For single-hop ebgp peers, delete ebgp-multihop directly.
+     * 
+     */
     public Boolean ebgpMultihop() {
         return this.ebgpMultihop;
     }
     public Integer ebgpMultihopMaxHop() {
         return this.ebgpMultihopMaxHop;
     }
+    /**
+     * @return Retrieve control plane dependent failure info from BFD for BGP GR/NSR operation
+     * 
+     */
     public Boolean fallOverBfdCheckControlPlaneFailure() {
         return this.fallOverBfdCheckControlPlaneFailure;
     }
+    /**
+     * @return Force BFD multi-hop to detect failure
+     * 
+     */
     public Boolean fallOverBfdMultiHop() {
         return this.fallOverBfdMultiHop;
     }
+    /**
+     * @return Force BFD single-hop to detect failure
+     * 
+     */
     public Boolean fallOverBfdSingleHop() {
         return this.fallOverBfdSingleHop;
     }
+    /**
+     * @return Enable BFD strict-mode
+     * 
+     */
     public Boolean fallOverBfdStrictMode() {
         return this.fallOverBfdStrictMode;
     }
@@ -94,6 +218,10 @@ public final class GetBgpIpv4UnicastVrfNeighborResult {
     public String fallOverMaximumMetricRouteMap() {
         return this.fallOverMaximumMetricRouteMap;
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -103,36 +231,72 @@ public final class GetBgpIpv4UnicastVrfNeighborResult {
     public String localAs() {
         return this.localAs;
     }
+    /**
+     * @return Accept either real AS or local AS from the ebgp peer
+     * 
+     */
     public Boolean localAsDualAs() {
         return this.localAsDualAs;
     }
+    /**
+     * @return Do not prepend local-as to updates from ebgp peers
+     * 
+     */
     public Boolean localAsNoPrepend() {
         return this.localAsNoPrepend;
     }
+    /**
+     * @return Replace real AS with local AS in the EBGP updates
+     * 
+     */
     public Boolean localAsReplaceAs() {
         return this.localAsReplaceAs;
     }
+    /**
+     * @return disable
+     * 
+     */
     public Boolean logNeighborChangesDisable() {
         return this.logNeighborChangesDisable;
     }
     public String password() {
         return this.password;
     }
+    /**
+     * @return Encryption type (0 to disable encryption, 7 for proprietary)
+     * 
+     */
     public Integer passwordType() {
         return this.passwordType;
     }
+    /**
+     * @return Specify a BGP peer-group remote-as
+     * 
+     */
     public String remoteAs() {
         return this.remoteAs;
     }
+    /**
+     * @return Apply route map to neighbor
+     * 
+     */
     public List<GetBgpIpv4UnicastVrfNeighborRouteMap> routeMaps() {
         return this.routeMaps;
     }
+    /**
+     * @return Configure a neighbor as Route Reflector client
+     * 
+     */
     public Boolean routeReflectorClient() {
         return this.routeReflectorClient;
     }
     public String sendCommunity() {
         return this.sendCommunity;
     }
+    /**
+     * @return Administratively shut down this neighbor
+     * 
+     */
     public Boolean shutdown() {
         return this.shutdown;
     }
@@ -145,12 +309,24 @@ public final class GetBgpIpv4UnicastVrfNeighborResult {
     public Integer timersMinimumNeighborHold() {
         return this.timersMinimumNeighborHold;
     }
+    /**
+     * @return IP hops
+     * 
+     */
     public Integer ttlSecurityHops() {
         return this.ttlSecurityHops;
     }
+    /**
+     * @return Loopback interface
+     * 
+     */
     public String updateSourceLoopback() {
         return this.updateSourceLoopback;
     }
+    /**
+     * @return Set the BGP version to match a neighbor
+     * 
+     */
     public Integer version() {
         return this.version;
     }

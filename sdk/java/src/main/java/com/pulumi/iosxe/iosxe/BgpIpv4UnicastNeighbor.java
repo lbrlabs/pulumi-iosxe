@@ -17,6 +17,56 @@ import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the BGP IPv4 Unicast Neighbor configuration.
+ * 
+ * ## Example Usage
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.BgpIpv4UnicastNeighbor;
+ * import com.pulumi.iosxe.iosxe.BgpIpv4UnicastNeighborArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.BgpIpv4UnicastNeighborRouteMapArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new BgpIpv4UnicastNeighbor(&#34;example&#34;, BgpIpv4UnicastNeighborArgs.builder()        
+ *             .activate(true)
+ *             .asn(&#34;65000&#34;)
+ *             .ip(&#34;3.3.3.3&#34;)
+ *             .routeMaps(BgpIpv4UnicastNeighborRouteMapArgs.builder()
+ *                 .in_out(&#34;in&#34;)
+ *                 .route_map_name(&#34;RM1&#34;)
+ *                 .build())
+ *             .routeReflectorClient(false)
+ *             .sendCommunity(&#34;both&#34;)
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/bgpIpv4UnicastNeighbor:BgpIpv4UnicastNeighbor example &#34;Cisco-IOS-XE-native:native/router/Cisco-IOS-XE-bgp:bgp=65000/address-family/no-vrf/ipv4=unicast/ipv4-unicast/neighbor=3.3.3.3&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/bgpIpv4UnicastNeighbor:BgpIpv4UnicastNeighbor")
 public class BgpIpv4UnicastNeighbor extends com.pulumi.resources.CustomResource {
     /**

@@ -15,77 +15,221 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetClassMapResult {
+    /**
+     * @return Class-Map description
+     * 
+     */
     private String description;
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
+    /**
+     * @return match name of service template activated on session
+     * 
+     */
     private List<GetClassMapMatchActivatedServiceTemplate> matchActivatedServiceTemplates;
+    /**
+     * @return authorized
+     * 
+     */
     private Boolean matchAuthorizationStatusAuthorized;
+    /**
+     * @return unauthorized
+     * 
+     */
     private Boolean matchAuthorizationStatusUnauthorized;
+    /**
+     * @return greater than
+     * 
+     */
     private List<Integer> matchAuthorizingMethodPriorityGreaterThans;
+    /**
+     * @return dot1x
+     * 
+     */
     private Boolean matchMethodDot1x;
+    /**
+     * @return mab
+     * 
+     */
     private Boolean matchMethodMab;
+    /**
+     * @return aaa timeout type
+     * 
+     */
     private Boolean matchResultTypeAaaTimeout;
+    /**
+     * @return agent not found type
+     * 
+     */
     private Boolean matchResultTypeMethodDot1xAgentNotFound;
+    /**
+     * @return failure type
+     * 
+     */
     private Boolean matchResultTypeMethodDot1xAuthoritative;
+    /**
+     * @return method_timeout type
+     * 
+     */
     private Boolean matchResultTypeMethodDot1xMethodTimeout;
+    /**
+     * @return failure type
+     * 
+     */
     private Boolean matchResultTypeMethodMabAuthoritative;
+    /**
+     * @return name of the class map
+     * 
+     */
     private String name;
+    /**
+     * @return Logical-AND/Logical-OR of all matching statements under this class map
+     * 
+     */
     private String prematch;
+    /**
+     * @return Domain name of the class map
+     * 
+     */
     private Boolean subscriber;
+    /**
+     * @return type of the class-map
+     * 
+     */
     private String type;
 
     private GetClassMapResult() {}
+    /**
+     * @return Class-Map description
+     * 
+     */
     public String description() {
         return this.description;
     }
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
+    /**
+     * @return match name of service template activated on session
+     * 
+     */
     public List<GetClassMapMatchActivatedServiceTemplate> matchActivatedServiceTemplates() {
         return this.matchActivatedServiceTemplates;
     }
+    /**
+     * @return authorized
+     * 
+     */
     public Boolean matchAuthorizationStatusAuthorized() {
         return this.matchAuthorizationStatusAuthorized;
     }
+    /**
+     * @return unauthorized
+     * 
+     */
     public Boolean matchAuthorizationStatusUnauthorized() {
         return this.matchAuthorizationStatusUnauthorized;
     }
+    /**
+     * @return greater than
+     * 
+     */
     public List<Integer> matchAuthorizingMethodPriorityGreaterThans() {
         return this.matchAuthorizingMethodPriorityGreaterThans;
     }
+    /**
+     * @return dot1x
+     * 
+     */
     public Boolean matchMethodDot1x() {
         return this.matchMethodDot1x;
     }
+    /**
+     * @return mab
+     * 
+     */
     public Boolean matchMethodMab() {
         return this.matchMethodMab;
     }
+    /**
+     * @return aaa timeout type
+     * 
+     */
     public Boolean matchResultTypeAaaTimeout() {
         return this.matchResultTypeAaaTimeout;
     }
+    /**
+     * @return agent not found type
+     * 
+     */
     public Boolean matchResultTypeMethodDot1xAgentNotFound() {
         return this.matchResultTypeMethodDot1xAgentNotFound;
     }
+    /**
+     * @return failure type
+     * 
+     */
     public Boolean matchResultTypeMethodDot1xAuthoritative() {
         return this.matchResultTypeMethodDot1xAuthoritative;
     }
+    /**
+     * @return method_timeout type
+     * 
+     */
     public Boolean matchResultTypeMethodDot1xMethodTimeout() {
         return this.matchResultTypeMethodDot1xMethodTimeout;
     }
+    /**
+     * @return failure type
+     * 
+     */
     public Boolean matchResultTypeMethodMabAuthoritative() {
         return this.matchResultTypeMethodMabAuthoritative;
     }
+    /**
+     * @return name of the class map
+     * 
+     */
     public String name() {
         return this.name;
     }
+    /**
+     * @return Logical-AND/Logical-OR of all matching statements under this class map
+     * 
+     */
     public String prematch() {
         return this.prematch;
     }
+    /**
+     * @return Domain name of the class map
+     * 
+     */
     public Boolean subscriber() {
         return this.subscriber;
     }
+    /**
+     * @return type of the class-map
+     * 
+     */
     public String type() {
         return this.type;
     }

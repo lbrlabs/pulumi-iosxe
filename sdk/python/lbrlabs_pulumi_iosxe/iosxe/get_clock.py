@@ -98,21 +98,33 @@ class GetClockResult:
     @property
     @pulumi.getter(name="calendarValid")
     def calendar_valid(self) -> bool:
+        """
+        Calendar time is authoritative
+        """
         return pulumi.get(self, "calendar_valid")
 
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
     @property
     @pulumi.getter(name="summerTimeDate")
     def summer_time_date(self) -> bool:
+        """
+        Configure absolute summer time
+        """
         return pulumi.get(self, "summer_time_date")
 
     @property
@@ -163,6 +175,9 @@ class GetClockResult:
     @property
     @pulumi.getter(name="summerTimeRecurring")
     def summer_time_recurring(self) -> bool:
+        """
+        Configure recurring summer time
+        """
         return pulumi.get(self, "summer_time_recurring")
 
     @property
@@ -213,6 +228,9 @@ class GetClockResult:
     @property
     @pulumi.getter(name="summerTimeZone")
     def summer_time_zone(self) -> str:
+        """
+        Name of time zone in summer
+        """
         return pulumi.get(self, "summer_time_zone")
 
 
@@ -251,7 +269,19 @@ class AwaitableGetClockResult(GetClockResult):
 def get_clock(device: Optional[str] = None,
               opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetClockResult:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Clock configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_clock()
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -289,6 +319,18 @@ def get_clock(device: Optional[str] = None,
 def get_clock_output(device: Optional[pulumi.Input[Optional[str]]] = None,
                      opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetClockResult]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Clock configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_clock()
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     ...

@@ -13,76 +13,248 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AccessListExtendedEntry {
+    /**
+     * @return - Choices: `deny`, `permit`
+     * 
+     */
     private @Nullable String aceRuleAction;
     private @Nullable String aceRuleProtocol;
+    /**
+     * @return Match on the ACK bit
+     * 
+     */
     private @Nullable Boolean ack;
+    /**
+     * @return Any destination host
+     * 
+     */
     private @Nullable Boolean destinationAny;
+    /**
+     * @return A single destination host
+     * 
+     */
     private @Nullable String destinationHost;
+    /**
+     * @return Destination network object group
+     * 
+     */
     private @Nullable String destinationObjectGroup;
+    /**
+     * @return Match only packets on a given port number up to 10 ports
+     * 
+     */
     private @Nullable String destinationPortEqual;
+    /**
+     * @return Match only packets with a greater port number
+     * 
+     */
     private @Nullable String destinationPortGreaterThan;
+    /**
+     * @return Match only packets with a lower port number
+     * 
+     */
     private @Nullable String destinationPortLesserThan;
+    /**
+     * @return Match only packets in the range of port numbers
+     * 
+     */
     private @Nullable String destinationPortRangeFrom;
+    /**
+     * @return Match only packets in the range of port numbers
+     * 
+     */
     private @Nullable String destinationPortRangeTo;
     private @Nullable String destinationPrefix;
     private @Nullable String destinationPrefixMask;
+    /**
+     * @return Match packets with given dscp value
+     * 
+     */
     private @Nullable String dscp;
+    /**
+     * @return Match established connections
+     * 
+     */
     private @Nullable Boolean established;
+    /**
+     * @return Match on the FIN bit
+     * 
+     */
     private @Nullable Boolean fin;
+    /**
+     * @return Check non-initial fragments
+     * 
+     */
     private @Nullable Boolean fragments;
+    /**
+     * @return Log matches against this entry
+     * 
+     */
     private @Nullable Boolean log;
+    /**
+     * @return Log matches against this entry, including input interface
+     * 
+     */
     private @Nullable Boolean logInput;
+    /**
+     * @return Match packets with given precedence value
+     * 
+     */
     private @Nullable String precedence;
+    /**
+     * @return Match on the PSH bit
+     * 
+     */
     private @Nullable Boolean psh;
+    /**
+     * @return Access list entry comment
+     * 
+     */
     private @Nullable String remark;
+    /**
+     * @return Match on the RST bit
+     * 
+     */
     private @Nullable Boolean rst;
+    /**
+     * @return - Range: `1`-`2147483647`
+     * 
+     */
     private Integer sequence;
+    /**
+     * @return Service object group name
+     * 
+     */
     private @Nullable String serviceObjectGroup;
+    /**
+     * @return Any source host
+     * 
+     */
     private @Nullable Boolean sourceAny;
+    /**
+     * @return A single source host
+     * 
+     */
     private @Nullable String sourceHost;
+    /**
+     * @return Source network object group
+     * 
+     */
     private @Nullable String sourceObjectGroup;
+    /**
+     * @return Match only packets on a given port number up to 10 ports
+     * 
+     */
     private @Nullable String sourcePortEqual;
+    /**
+     * @return Match only packets with a greater port number
+     * 
+     */
     private @Nullable String sourcePortGreaterThan;
+    /**
+     * @return Match only packets with a lower port number
+     * 
+     */
     private @Nullable String sourcePortLesserThan;
+    /**
+     * @return Match only packets in the range of port numbers
+     * 
+     */
     private @Nullable String sourcePortRangeFrom;
+    /**
+     * @return Match only packets in the range of port numbers
+     * 
+     */
     private @Nullable String sourcePortRangeTo;
     private @Nullable String sourcePrefix;
     private @Nullable String sourcePrefixMask;
+    /**
+     * @return Match on the SYN bit
+     * 
+     */
     private @Nullable Boolean syn;
+    /**
+     * @return Match packets with given TOS value
+     * 
+     */
     private @Nullable String tos;
+    /**
+     * @return Match on the URG bit
+     * 
+     */
     private @Nullable Boolean urg;
 
     private AccessListExtendedEntry() {}
+    /**
+     * @return - Choices: `deny`, `permit`
+     * 
+     */
     public Optional<String> aceRuleAction() {
         return Optional.ofNullable(this.aceRuleAction);
     }
     public Optional<String> aceRuleProtocol() {
         return Optional.ofNullable(this.aceRuleProtocol);
     }
+    /**
+     * @return Match on the ACK bit
+     * 
+     */
     public Optional<Boolean> ack() {
         return Optional.ofNullable(this.ack);
     }
+    /**
+     * @return Any destination host
+     * 
+     */
     public Optional<Boolean> destinationAny() {
         return Optional.ofNullable(this.destinationAny);
     }
+    /**
+     * @return A single destination host
+     * 
+     */
     public Optional<String> destinationHost() {
         return Optional.ofNullable(this.destinationHost);
     }
+    /**
+     * @return Destination network object group
+     * 
+     */
     public Optional<String> destinationObjectGroup() {
         return Optional.ofNullable(this.destinationObjectGroup);
     }
+    /**
+     * @return Match only packets on a given port number up to 10 ports
+     * 
+     */
     public Optional<String> destinationPortEqual() {
         return Optional.ofNullable(this.destinationPortEqual);
     }
+    /**
+     * @return Match only packets with a greater port number
+     * 
+     */
     public Optional<String> destinationPortGreaterThan() {
         return Optional.ofNullable(this.destinationPortGreaterThan);
     }
+    /**
+     * @return Match only packets with a lower port number
+     * 
+     */
     public Optional<String> destinationPortLesserThan() {
         return Optional.ofNullable(this.destinationPortLesserThan);
     }
+    /**
+     * @return Match only packets in the range of port numbers
+     * 
+     */
     public Optional<String> destinationPortRangeFrom() {
         return Optional.ofNullable(this.destinationPortRangeFrom);
     }
+    /**
+     * @return Match only packets in the range of port numbers
+     * 
+     */
     public Optional<String> destinationPortRangeTo() {
         return Optional.ofNullable(this.destinationPortRangeTo);
     }
@@ -92,63 +264,143 @@ public final class AccessListExtendedEntry {
     public Optional<String> destinationPrefixMask() {
         return Optional.ofNullable(this.destinationPrefixMask);
     }
+    /**
+     * @return Match packets with given dscp value
+     * 
+     */
     public Optional<String> dscp() {
         return Optional.ofNullable(this.dscp);
     }
+    /**
+     * @return Match established connections
+     * 
+     */
     public Optional<Boolean> established() {
         return Optional.ofNullable(this.established);
     }
+    /**
+     * @return Match on the FIN bit
+     * 
+     */
     public Optional<Boolean> fin() {
         return Optional.ofNullable(this.fin);
     }
+    /**
+     * @return Check non-initial fragments
+     * 
+     */
     public Optional<Boolean> fragments() {
         return Optional.ofNullable(this.fragments);
     }
+    /**
+     * @return Log matches against this entry
+     * 
+     */
     public Optional<Boolean> log() {
         return Optional.ofNullable(this.log);
     }
+    /**
+     * @return Log matches against this entry, including input interface
+     * 
+     */
     public Optional<Boolean> logInput() {
         return Optional.ofNullable(this.logInput);
     }
+    /**
+     * @return Match packets with given precedence value
+     * 
+     */
     public Optional<String> precedence() {
         return Optional.ofNullable(this.precedence);
     }
+    /**
+     * @return Match on the PSH bit
+     * 
+     */
     public Optional<Boolean> psh() {
         return Optional.ofNullable(this.psh);
     }
+    /**
+     * @return Access list entry comment
+     * 
+     */
     public Optional<String> remark() {
         return Optional.ofNullable(this.remark);
     }
+    /**
+     * @return Match on the RST bit
+     * 
+     */
     public Optional<Boolean> rst() {
         return Optional.ofNullable(this.rst);
     }
+    /**
+     * @return - Range: `1`-`2147483647`
+     * 
+     */
     public Integer sequence() {
         return this.sequence;
     }
+    /**
+     * @return Service object group name
+     * 
+     */
     public Optional<String> serviceObjectGroup() {
         return Optional.ofNullable(this.serviceObjectGroup);
     }
+    /**
+     * @return Any source host
+     * 
+     */
     public Optional<Boolean> sourceAny() {
         return Optional.ofNullable(this.sourceAny);
     }
+    /**
+     * @return A single source host
+     * 
+     */
     public Optional<String> sourceHost() {
         return Optional.ofNullable(this.sourceHost);
     }
+    /**
+     * @return Source network object group
+     * 
+     */
     public Optional<String> sourceObjectGroup() {
         return Optional.ofNullable(this.sourceObjectGroup);
     }
+    /**
+     * @return Match only packets on a given port number up to 10 ports
+     * 
+     */
     public Optional<String> sourcePortEqual() {
         return Optional.ofNullable(this.sourcePortEqual);
     }
+    /**
+     * @return Match only packets with a greater port number
+     * 
+     */
     public Optional<String> sourcePortGreaterThan() {
         return Optional.ofNullable(this.sourcePortGreaterThan);
     }
+    /**
+     * @return Match only packets with a lower port number
+     * 
+     */
     public Optional<String> sourcePortLesserThan() {
         return Optional.ofNullable(this.sourcePortLesserThan);
     }
+    /**
+     * @return Match only packets in the range of port numbers
+     * 
+     */
     public Optional<String> sourcePortRangeFrom() {
         return Optional.ofNullable(this.sourcePortRangeFrom);
     }
+    /**
+     * @return Match only packets in the range of port numbers
+     * 
+     */
     public Optional<String> sourcePortRangeTo() {
         return Optional.ofNullable(this.sourcePortRangeTo);
     }
@@ -158,12 +410,24 @@ public final class AccessListExtendedEntry {
     public Optional<String> sourcePrefixMask() {
         return Optional.ofNullable(this.sourcePrefixMask);
     }
+    /**
+     * @return Match on the SYN bit
+     * 
+     */
     public Optional<Boolean> syn() {
         return Optional.ofNullable(this.syn);
     }
+    /**
+     * @return Match packets with given TOS value
+     * 
+     */
     public Optional<String> tos() {
         return Optional.ofNullable(this.tos);
     }
+    /**
+     * @return Match on the URG bit
+     * 
+     */
     public Optional<Boolean> urg() {
         return Optional.ofNullable(this.urg);
     }

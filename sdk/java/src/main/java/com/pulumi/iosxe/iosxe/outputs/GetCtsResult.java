@@ -11,17 +11,41 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetCtsResult {
+    /**
+     * @return Local authorization list to use for CTS
+     * 
+     */
     private String authorizationList;
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
 
     private GetCtsResult() {}
+    /**
+     * @return Local authorization list to use for CTS
+     * 
+     */
     public String authorizationList() {
         return this.authorizationList;
     }
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }

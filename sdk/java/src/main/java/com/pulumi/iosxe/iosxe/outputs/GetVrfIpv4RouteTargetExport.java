@@ -9,9 +9,17 @@ import java.util.Objects;
 
 @CustomType
 public final class GetVrfIpv4RouteTargetExport {
+    /**
+     * @return Value
+     * 
+     */
     private String value;
 
     private GetVrfIpv4RouteTargetExport() {}
+    /**
+     * @return Value
+     * 
+     */
     public String value() {
         return this.value;
     }

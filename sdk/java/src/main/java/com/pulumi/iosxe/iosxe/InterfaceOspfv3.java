@@ -16,6 +16,51 @@ import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the Interface OSPFv3 configuration.
+ * 
+ * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.InterfaceOspfv3;
+ * import com.pulumi.iosxe.iosxe.InterfaceOspfv3Args;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new InterfaceOspfv3(&#34;example&#34;, InterfaceOspfv3Args.builder()        
+ *             .cost(1000)
+ *             .networkTypeBroadcast(false)
+ *             .networkTypeNonBroadcast(false)
+ *             .networkTypePointToMultipoint(false)
+ *             .networkTypePointToPoint(true)
+ *             .type(&#34;Loopback&#34;)
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/interfaceOspfv3:InterfaceOspfv3 example &#34;Cisco-IOS-XE-native:native/interface/Loopback=1/Cisco-IOS-XE-ospfv3:ospfv3&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/interfaceOspfv3:InterfaceOspfv3")
 public class InterfaceOspfv3 extends com.pulumi.resources.CustomResource {
     /**

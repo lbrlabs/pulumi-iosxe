@@ -15,77 +15,213 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetSystemResult {
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return Set system&#39;s network name
+     * 
+     */
     private String hostname;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
+    /**
+     * @return Enable IP Domain Name System hostname translation
+     * 
+     */
     private Boolean ipDomainLookup;
+    /**
+     * @return Define the default domain name
+     * 
+     */
     private String ipDomainName;
+    /**
+     * @return Enable IP multicast forwarding
+     * 
+     */
     private Boolean ipMulticastRouting;
+    /**
+     * @return Distributed multicast switching
+     * 
+     */
     private Boolean ipMulticastRoutingDistributed;
+    /**
+     * @return Enable or disable IP routing
+     * 
+     */
     private Boolean ipRouting;
+    /**
+     * @return Process packets with source routing header options
+     * 
+     */
     private Boolean ipSourceRoute;
+    /**
+     * @return Enable unicast routing
+     * 
+     */
     private Boolean ipv6UnicastRouting;
+    /**
+     * @return Set delay between successive fail login
+     * 
+     */
     private Integer loginDelay;
+    /**
+     * @return Set options for failed login attempt
+     * 
+     */
     private Boolean loginOnFailure;
+    /**
+     * @return Generate syslogs on failure logins
+     * 
+     */
     private Boolean loginOnFailureLog;
+    /**
+     * @return Set options for successful login attempt
+     * 
+     */
     private Boolean loginOnSuccess;
+    /**
+     * @return Generate syslogs on successful logins
+     * 
+     */
     private Boolean loginOnSuccessLog;
     private Integer mtu;
+    /**
+     * @return Enable IP multicast forwarding, some XE devices use this option instead of `multicast_routing`.
+     * 
+     */
     private Boolean multicastRoutingSwitch;
+    /**
+     * @return Select VPN Routing/Forwarding instance
+     * 
+     */
     private List<GetSystemMulticastRoutingVrf> multicastRoutingVrfs;
 
     private GetSystemResult() {}
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return Set system&#39;s network name
+     * 
+     */
     public String hostname() {
         return this.hostname;
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
+    /**
+     * @return Enable IP Domain Name System hostname translation
+     * 
+     */
     public Boolean ipDomainLookup() {
         return this.ipDomainLookup;
     }
+    /**
+     * @return Define the default domain name
+     * 
+     */
     public String ipDomainName() {
         return this.ipDomainName;
     }
+    /**
+     * @return Enable IP multicast forwarding
+     * 
+     */
     public Boolean ipMulticastRouting() {
         return this.ipMulticastRouting;
     }
+    /**
+     * @return Distributed multicast switching
+     * 
+     */
     public Boolean ipMulticastRoutingDistributed() {
         return this.ipMulticastRoutingDistributed;
     }
+    /**
+     * @return Enable or disable IP routing
+     * 
+     */
     public Boolean ipRouting() {
         return this.ipRouting;
     }
+    /**
+     * @return Process packets with source routing header options
+     * 
+     */
     public Boolean ipSourceRoute() {
         return this.ipSourceRoute;
     }
+    /**
+     * @return Enable unicast routing
+     * 
+     */
     public Boolean ipv6UnicastRouting() {
         return this.ipv6UnicastRouting;
     }
+    /**
+     * @return Set delay between successive fail login
+     * 
+     */
     public Integer loginDelay() {
         return this.loginDelay;
     }
+    /**
+     * @return Set options for failed login attempt
+     * 
+     */
     public Boolean loginOnFailure() {
         return this.loginOnFailure;
     }
+    /**
+     * @return Generate syslogs on failure logins
+     * 
+     */
     public Boolean loginOnFailureLog() {
         return this.loginOnFailureLog;
     }
+    /**
+     * @return Set options for successful login attempt
+     * 
+     */
     public Boolean loginOnSuccess() {
         return this.loginOnSuccess;
     }
+    /**
+     * @return Generate syslogs on successful logins
+     * 
+     */
     public Boolean loginOnSuccessLog() {
         return this.loginOnSuccessLog;
     }
     public Integer mtu() {
         return this.mtu;
     }
+    /**
+     * @return Enable IP multicast forwarding, some XE devices use this option instead of `multicast_routing`.
+     * 
+     */
     public Boolean multicastRoutingSwitch() {
         return this.multicastRoutingSwitch;
     }
+    /**
+     * @return Select VPN Routing/Forwarding instance
+     * 
+     */
     public List<GetSystemMulticastRoutingVrf> multicastRoutingVrfs() {
         return this.multicastRoutingVrfs;
     }

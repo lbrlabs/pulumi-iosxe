@@ -104,131 +104,209 @@ class GetServiceResult:
     @property
     @pulumi.getter(name="callHome")
     def call_home(self) -> bool:
+        """
+        Enable call-home service
+        """
         return pulumi.get(self, "call_home")
 
     @property
     @pulumi.getter(name="compressConfig")
     def compress_config(self) -> bool:
+        """
+        Compress the configuration file
+        """
         return pulumi.get(self, "compress_config")
 
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
     @pulumi.getter
     def dhcp(self) -> bool:
+        """
+        Enable DHCP server and relay agent
+        """
         return pulumi.get(self, "dhcp")
 
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
     @property
     @pulumi.getter
     def pad(self) -> bool:
+        """
+        Enable PAD commands
+        """
         return pulumi.get(self, "pad")
 
     @property
     @pulumi.getter(name="passwordEncryption")
     def password_encryption(self) -> bool:
+        """
+        Encrypt system passwords
+        """
         return pulumi.get(self, "password_encryption")
 
     @property
     @pulumi.getter(name="passwordRecovery")
     def password_recovery(self) -> bool:
+        """
+        Enable password recovery
+        """
         return pulumi.get(self, "password_recovery")
 
     @property
     @pulumi.getter(name="sequenceNumbers")
     def sequence_numbers(self) -> bool:
+        """
+        Stamp logger messages with a sequence number
+        """
         return pulumi.get(self, "sequence_numbers")
 
     @property
     @pulumi.getter(name="tcpKeepalivesIn")
     def tcp_keepalives_in(self) -> bool:
+        """
+        Generate keepalives on idle incoming network connections
+        """
         return pulumi.get(self, "tcp_keepalives_in")
 
     @property
     @pulumi.getter(name="tcpKeepalivesOut")
     def tcp_keepalives_out(self) -> bool:
+        """
+        Generate keepalives on idle outgoing network connections
+        """
         return pulumi.get(self, "tcp_keepalives_out")
 
     @property
     @pulumi.getter
     def timestamps(self) -> bool:
+        """
+        Timestamp debug/log messages
+        """
         return pulumi.get(self, "timestamps")
 
     @property
     @pulumi.getter(name="timestampsDebug")
     def timestamps_debug(self) -> bool:
+        """
+        Timestamp debug messages
+        """
         return pulumi.get(self, "timestamps_debug")
 
     @property
     @pulumi.getter(name="timestampsDebugDatetime")
     def timestamps_debug_datetime(self) -> bool:
+        """
+        Timestamp with date and time
+        """
         return pulumi.get(self, "timestamps_debug_datetime")
 
     @property
     @pulumi.getter(name="timestampsDebugDatetimeLocaltime")
     def timestamps_debug_datetime_localtime(self) -> bool:
+        """
+        Use local time zone for timestamps
+        """
         return pulumi.get(self, "timestamps_debug_datetime_localtime")
 
     @property
     @pulumi.getter(name="timestampsDebugDatetimeMsec")
     def timestamps_debug_datetime_msec(self) -> bool:
+        """
+        Include milliseconds in timestamp
+        """
         return pulumi.get(self, "timestamps_debug_datetime_msec")
 
     @property
     @pulumi.getter(name="timestampsDebugDatetimeShowTimezone")
     def timestamps_debug_datetime_show_timezone(self) -> bool:
+        """
+        Add time zone information to timestamp
+        """
         return pulumi.get(self, "timestamps_debug_datetime_show_timezone")
 
     @property
     @pulumi.getter(name="timestampsDebugDatetimeYear")
     def timestamps_debug_datetime_year(self) -> bool:
+        """
+        Include year in timestamp
+        """
         return pulumi.get(self, "timestamps_debug_datetime_year")
 
     @property
     @pulumi.getter(name="timestampsDebugUptime")
     def timestamps_debug_uptime(self) -> bool:
+        """
+        Timestamp with system uptime
+        """
         return pulumi.get(self, "timestamps_debug_uptime")
 
     @property
     @pulumi.getter(name="timestampsLog")
     def timestamps_log(self) -> bool:
+        """
+        Timestamp log messages
+        """
         return pulumi.get(self, "timestamps_log")
 
     @property
     @pulumi.getter(name="timestampsLogDatetime")
     def timestamps_log_datetime(self) -> bool:
+        """
+        Timestamp with date and time
+        """
         return pulumi.get(self, "timestamps_log_datetime")
 
     @property
     @pulumi.getter(name="timestampsLogDatetimeLocaltime")
     def timestamps_log_datetime_localtime(self) -> bool:
+        """
+        Use local time zone for timestamps
+        """
         return pulumi.get(self, "timestamps_log_datetime_localtime")
 
     @property
     @pulumi.getter(name="timestampsLogDatetimeMsec")
     def timestamps_log_datetime_msec(self) -> bool:
+        """
+        Include milliseconds in timestamp
+        """
         return pulumi.get(self, "timestamps_log_datetime_msec")
 
     @property
     @pulumi.getter(name="timestampsLogDatetimeShowTimezone")
     def timestamps_log_datetime_show_timezone(self) -> bool:
+        """
+        Add time zone information to timestamp
+        """
         return pulumi.get(self, "timestamps_log_datetime_show_timezone")
 
     @property
     @pulumi.getter(name="timestampsLogDatetimeYear")
     def timestamps_log_datetime_year(self) -> bool:
+        """
+        Include year in timestamp
+        """
         return pulumi.get(self, "timestamps_log_datetime_year")
 
     @property
     @pulumi.getter(name="timestampsLogUptime")
     def timestamps_log_uptime(self) -> bool:
+        """
+        Timestamp with system uptime
+        """
         return pulumi.get(self, "timestamps_log_uptime")
 
 
@@ -269,7 +347,19 @@ class AwaitableGetServiceResult(GetServiceResult):
 def get_service(device: Optional[str] = None,
                 opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetServiceResult:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Service configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_service()
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -309,6 +399,18 @@ def get_service(device: Optional[str] = None,
 def get_service_output(device: Optional[pulumi.Input[Optional[str]]] = None,
                        opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetServiceResult]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Service configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_service()
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     ...

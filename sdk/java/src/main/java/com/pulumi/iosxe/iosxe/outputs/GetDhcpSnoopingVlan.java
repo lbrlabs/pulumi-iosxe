@@ -9,9 +9,17 @@ import java.util.Objects;
 
 @CustomType
 public final class GetDhcpSnoopingVlan {
+    /**
+     * @return DHCP Snooping vlan first number or vlan range,example: 1,3-5,7,9-11
+     * 
+     */
     private String vlanId;
 
     private GetDhcpSnoopingVlan() {}
+    /**
+     * @return DHCP Snooping vlan first number or vlan range,example: 1,3-5,7,9-11
+     * 
+     */
     public String vlanId() {
         return this.vlanId;
     }

@@ -16,6 +16,54 @@ import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the Access List Standard configuration.
+ * 
+ * ## Example Usage
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.AccessListStandard;
+ * import com.pulumi.iosxe.iosxe.AccessListStandardArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.AccessListStandardEntryArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new AccessListStandard(&#34;example&#34;, AccessListStandardArgs.builder()        
+ *             .entries(AccessListStandardEntryArgs.builder()
+ *                 .deny_log(true)
+ *                 .deny_prefix(&#34;10.0.0.0&#34;)
+ *                 .deny_prefix_mask(&#34;0.0.0.255&#34;)
+ *                 .remark(&#34;Description&#34;)
+ *                 .sequence(10)
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/accessListStandard:AccessListStandard example &#34;Cisco-IOS-XE-native:native/ip/access-list/Cisco-IOS-XE-acl:standard=SACL1&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/accessListStandard:AccessListStandard")
 public class AccessListStandard extends com.pulumi.resources.CustomResource {
     /**

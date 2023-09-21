@@ -44,31 +44,49 @@ class GetUdldResult:
     @property
     @pulumi.getter
     def aggressive(self) -> bool:
+        """
+        Enable UDLD protocol in aggressive mode on fiber ports exceptwhere locally configured
+        """
         return pulumi.get(self, "aggressive")
 
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
     @pulumi.getter
     def enable(self) -> bool:
+        """
+        Enable UDLD protocol on fiber ports except where locally configured
+        """
         return pulumi.get(self, "enable")
 
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
     @property
     @pulumi.getter(name="messageTime")
     def message_time(self) -> int:
+        """
+        Set UDLD message time period
+        """
         return pulumi.get(self, "message_time")
 
     @property
     @pulumi.getter(name="recoveryInterval")
     def recovery_interval(self) -> int:
+        """
+        timer-interval(sec)
+        """
         return pulumi.get(self, "recovery_interval")
 
 
@@ -89,7 +107,19 @@ class AwaitableGetUdldResult(GetUdldResult):
 def get_udld(device: Optional[str] = None,
              opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetUdldResult:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the UDLD configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_udld()
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -109,6 +139,18 @@ def get_udld(device: Optional[str] = None,
 def get_udld_output(device: Optional[pulumi.Input[Optional[str]]] = None,
                     opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetUdldResult]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the UDLD configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_udld()
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     ...

@@ -374,7 +374,14 @@ class AaaAccounting(pulumi.CustomResource):
                  update_newinfo_periodic: Optional[pulumi.Input[int]] = None,
                  __props__=None):
         """
-        Create a AaaAccounting resource with the given unique name, props, and options.
+        This resource can manage the AAA Accounting configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/aaaAccounting:AaaAccounting example "Cisco-IOS-XE-native:native/aaa/Cisco-IOS-XE-aaa:accounting"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] delete_mode: Configure behavior when deleting/destroying the resource. Either delete the entire object (YANG container) being
@@ -397,7 +404,14 @@ class AaaAccounting(pulumi.CustomResource):
                  args: Optional[AaaAccountingArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a AaaAccounting resource with the given unique name, props, and options.
+        This resource can manage the AAA Accounting configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/aaaAccounting:AaaAccounting example "Cisco-IOS-XE-native:native/aaa/Cisco-IOS-XE-aaa:accounting"
+        ```
+
         :param str resource_name: The name of the resource.
         :param AaaAccountingArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

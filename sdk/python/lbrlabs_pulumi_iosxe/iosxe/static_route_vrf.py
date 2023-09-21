@@ -118,7 +118,14 @@ class StaticRouteVrf(pulumi.CustomResource):
                  vrf: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
-        Create a StaticRouteVrf resource with the given unique name, props, and options.
+        This resource can manage the Static Route VRF configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/staticRouteVrf:StaticRouteVrf example "Cisco-IOS-XE-native:native/ip/route/vrf=VRF1"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] device: A device name from the provider configuration.
@@ -130,7 +137,14 @@ class StaticRouteVrf(pulumi.CustomResource):
                  args: StaticRouteVrfArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a StaticRouteVrf resource with the given unique name, props, and options.
+        This resource can manage the Static Route VRF configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/staticRouteVrf:StaticRouteVrf example "Cisco-IOS-XE-native:native/ip/route/vrf=VRF1"
+        ```
+
         :param str resource_name: The name of the resource.
         :param StaticRouteVrfArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

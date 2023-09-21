@@ -19,43 +19,99 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetLoggingResult {
+    /**
+     * @return Logging severity level
+     * 
+     */
     private String bufferedSeverity;
+    /**
+     * @return Logging buffer size
+     * 
+     */
     private Integer bufferedSize;
     private String consoleSeverity;
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return Facility parameter for syslog messages
+     * 
+     */
     private String facility;
     private Integer fileMaxSize;
     private Integer fileMinSize;
     private String fileName;
     private String fileSeverity;
     private String historySeverity;
+    /**
+     * @return Set history table size
+     * 
+     */
     private Integer historySize;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
     private List<GetLoggingIpv4Host> ipv4Hosts;
     private List<GetLoggingIpv4VrfHost> ipv4VrfHosts;
     private List<GetLoggingIpv6Host> ipv6Hosts;
     private List<GetLoggingIpv6VrfHost> ipv6VrfHosts;
     private String monitorSeverity;
+    /**
+     * @return Define a unique text string as ID
+     * 
+     */
     private String originIdName;
+    /**
+     * @return Use origin hostname/ip/ipv6 as ID
+     * 
+     */
     private String originIdType;
     private String sourceInterface;
+    /**
+     * @return Specify interface and vrf for source address in logging transactions
+     * 
+     */
     private List<GetLoggingSourceInterfacesVrf> sourceInterfacesVrves;
+    /**
+     * @return Set trap server logging level
+     * 
+     */
     private Boolean trap;
     private String trapSeverity;
 
     private GetLoggingResult() {}
+    /**
+     * @return Logging severity level
+     * 
+     */
     public String bufferedSeverity() {
         return this.bufferedSeverity;
     }
+    /**
+     * @return Logging buffer size
+     * 
+     */
     public Integer bufferedSize() {
         return this.bufferedSize;
     }
     public String consoleSeverity() {
         return this.consoleSeverity;
     }
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return Facility parameter for syslog messages
+     * 
+     */
     public String facility() {
         return this.facility;
     }
@@ -74,9 +130,17 @@ public final class GetLoggingResult {
     public String historySeverity() {
         return this.historySeverity;
     }
+    /**
+     * @return Set history table size
+     * 
+     */
     public Integer historySize() {
         return this.historySize;
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -95,18 +159,34 @@ public final class GetLoggingResult {
     public String monitorSeverity() {
         return this.monitorSeverity;
     }
+    /**
+     * @return Define a unique text string as ID
+     * 
+     */
     public String originIdName() {
         return this.originIdName;
     }
+    /**
+     * @return Use origin hostname/ip/ipv6 as ID
+     * 
+     */
     public String originIdType() {
         return this.originIdType;
     }
     public String sourceInterface() {
         return this.sourceInterface;
     }
+    /**
+     * @return Specify interface and vrf for source address in logging transactions
+     * 
+     */
     public List<GetLoggingSourceInterfacesVrf> sourceInterfacesVrves() {
         return this.sourceInterfacesVrves;
     }
+    /**
+     * @return Set trap server logging level
+     * 
+     */
     public Boolean trap() {
         return this.trap;
     }

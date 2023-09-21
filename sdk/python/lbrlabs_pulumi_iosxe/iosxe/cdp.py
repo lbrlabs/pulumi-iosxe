@@ -234,7 +234,14 @@ class Cdp(pulumi.CustomResource):
                  tlv_lists: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CdpTlvListArgs']]]]] = None,
                  __props__=None):
         """
-        Create a Cdp resource with the given unique name, props, and options.
+        This resource can manage the CDP configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/cdp:Cdp example "Cisco-IOS-XE-native:native/cdp"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] device: A device name from the provider configuration.
@@ -251,7 +258,14 @@ class Cdp(pulumi.CustomResource):
                  args: Optional[CdpArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a Cdp resource with the given unique name, props, and options.
+        This resource can manage the CDP configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/cdp:Cdp example "Cisco-IOS-XE-native:native/cdp"
+        ```
+
         :param str resource_name: The name of the resource.
         :param CdpArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

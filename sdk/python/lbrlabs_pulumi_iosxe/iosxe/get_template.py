@@ -249,306 +249,489 @@ class GetTemplateResult:
     @property
     @pulumi.getter(name="accessSessionClosed")
     def access_session_closed(self) -> bool:
+        """
+        Enable closed access on port (disabled by default, i.e. open access)
+        """
         return pulumi.get(self, "access_session_closed")
 
     @property
     @pulumi.getter(name="accessSessionControlDirection")
     def access_session_control_direction(self) -> str:
+        """
+        Set the control-direction on the interface
+        """
         return pulumi.get(self, "access_session_control_direction")
 
     @property
     @pulumi.getter(name="accessSessionHostMode")
     def access_session_host_mode(self) -> str:
+        """
+        Set the Host mode for authentication on this interface
+        """
         return pulumi.get(self, "access_session_host_mode")
 
     @property
     @pulumi.getter(name="accessSessionInterfaceTemplateSticky")
     def access_session_interface_template_sticky(self) -> bool:
+        """
+        Interface templates set to sticky
+        """
         return pulumi.get(self, "access_session_interface_template_sticky")
 
     @property
     @pulumi.getter(name="accessSessionInterfaceTemplateStickyTimer")
     def access_session_interface_template_sticky_timer(self) -> int:
+        """
+        Sticky timer value
+        """
         return pulumi.get(self, "access_session_interface_template_sticky_timer")
 
     @property
     @pulumi.getter(name="accessSessionMonitor")
     def access_session_monitor(self) -> bool:
+        """
+        Apply template to monitor access sessions on the port
+        """
         return pulumi.get(self, "access_session_monitor")
 
     @property
     @pulumi.getter(name="accessSessionPortControl")
     def access_session_port_control(self) -> str:
+        """
+        Set the port-control value
+        """
         return pulumi.get(self, "access_session_port_control")
 
     @property
     @pulumi.getter(name="authenticationPeriodic")
     def authentication_periodic(self) -> bool:
+        """
+        Enable or Disable Reauthentication for this port
+        """
         return pulumi.get(self, "authentication_periodic")
 
     @property
     @pulumi.getter(name="authenticationTimerReauthenticateRange")
     def authentication_timer_reauthenticate_range(self) -> int:
+        """
+        Enter a value between 1 and 65535
+        """
         return pulumi.get(self, "authentication_timer_reauthenticate_range")
 
     @property
     @pulumi.getter(name="authenticationTimerReauthenticateServer")
     def authentication_timer_reauthenticate_server(self) -> bool:
+        """
+        Obtain re-authentication timeout value from the server
+        """
         return pulumi.get(self, "authentication_timer_reauthenticate_server")
 
     @property
     @pulumi.getter(name="ctsManual")
     def cts_manual(self) -> bool:
+        """
+        Supply local configuration for CTS parameters
+        """
         return pulumi.get(self, "cts_manual")
 
     @property
     @pulumi.getter(name="ctsManualPolicyStaticSgt")
     def cts_manual_policy_static_sgt(self) -> int:
+        """
+        Source Security Group Tag to apply to untagged or non-trusted incoming traffic
+        """
         return pulumi.get(self, "cts_manual_policy_static_sgt")
 
     @property
     @pulumi.getter(name="ctsManualPolicyStaticTrusted")
     def cts_manual_policy_static_trusted(self) -> bool:
+        """
+        Trust the Source Group Tags (SGT) that the peer uses for sending
+        """
         return pulumi.get(self, "cts_manual_policy_static_trusted")
 
     @property
     @pulumi.getter(name="ctsManualPropagateSgt")
     def cts_manual_propagate_sgt(self) -> bool:
+        """
+        CTS SGT Propagation configuration
+        """
         return pulumi.get(self, "cts_manual_propagate_sgt")
 
     @property
     @pulumi.getter(name="ctsRoleBasedEnforcement")
     def cts_role_based_enforcement(self) -> bool:
+        """
+        Enable Role-based Access Control enforcement
+        """
         return pulumi.get(self, "cts_role_based_enforcement")
 
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
     @pulumi.getter(name="deviceTracking")
     def device_tracking(self) -> bool:
+        """
+        Configure device-tracking on the interface
+        """
         return pulumi.get(self, "device_tracking")
 
     @property
     @pulumi.getter(name="deviceTrackingAttachPolicies")
     def device_tracking_attach_policies(self) -> Sequence['outputs.GetTemplateDeviceTrackingAttachPolicyResult']:
+        """
+        policy name for device tracking
+        """
         return pulumi.get(self, "device_tracking_attach_policies")
 
     @property
     @pulumi.getter(name="deviceTrackingVlanRange")
     def device_tracking_vlan_range(self) -> str:
+        """
+        VLAN IDs of the VLANs for which this policy applies
+        """
         return pulumi.get(self, "device_tracking_vlan_range")
 
     @property
     @pulumi.getter(name="dot1xMaxReauthReq")
     def dot1x_max_reauth_req(self) -> int:
+        """
+        Max No. of Reauthentication Attempts
+        """
         return pulumi.get(self, "dot1x_max_reauth_req")
 
     @property
     @pulumi.getter(name="dot1xMaxReq")
     def dot1x_max_req(self) -> int:
+        """
+        Max No. of Retries
+        """
         return pulumi.get(self, "dot1x_max_req")
 
     @property
     @pulumi.getter(name="dot1xPae")
     def dot1x_pae(self) -> str:
+        """
+        Set 802.1x interface pae type
+        """
         return pulumi.get(self, "dot1x_pae")
 
     @property
     @pulumi.getter(name="dot1xTimeoutTxPeriod")
     def dot1x_timeout_tx_period(self) -> int:
+        """
+        Timeout for supplicant retries
+        """
         return pulumi.get(self, "dot1x_timeout_tx_period")
 
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
     @property
     @pulumi.getter(name="ipAccessGroups")
     def ip_access_groups(self) -> Sequence['outputs.GetTemplateIpAccessGroupResult']:
+        """
+        Access control list for IP packets
+        """
         return pulumi.get(self, "ip_access_groups")
 
     @property
     @pulumi.getter(name="ipDhcpSnoopingLimitRate")
     def ip_dhcp_snooping_limit_rate(self) -> int:
+        """
+        DHCP snooping rate limit
+        """
         return pulumi.get(self, "ip_dhcp_snooping_limit_rate")
 
     @property
     @pulumi.getter(name="ipDhcpSnoopingTrust")
     def ip_dhcp_snooping_trust(self) -> bool:
+        """
+        DHCP Snooping trust config
+        """
         return pulumi.get(self, "ip_dhcp_snooping_trust")
 
     @property
     @pulumi.getter(name="loadInterval")
     def load_interval(self) -> int:
+        """
+        Load interval delay in seconds
+        """
         return pulumi.get(self, "load_interval")
 
     @property
     @pulumi.getter
     def mab(self) -> bool:
+        """
+        MAC Authentication Bypass Interface Config Commands
+        """
         return pulumi.get(self, "mab")
 
     @property
     @pulumi.getter(name="mabEap")
     def mab_eap(self) -> bool:
+        """
+        Use EAP authentication for MAC Auth Bypass
+        """
         return pulumi.get(self, "mab_eap")
 
     @property
     @pulumi.getter(name="servicePolicyInput")
     def service_policy_input(self) -> str:
+        """
+        policy-map name
+        """
         return pulumi.get(self, "service_policy_input")
 
     @property
     @pulumi.getter(name="servicePolicyOutput")
     def service_policy_output(self) -> str:
+        """
+        policy-map name
+        """
         return pulumi.get(self, "service_policy_output")
 
     @property
     @pulumi.getter(name="servicePolicyTypeControlSubscriber")
     def service_policy_type_control_subscriber(self) -> str:
+        """
+        Apply a subscriber control policy to the interface
+        """
         return pulumi.get(self, "service_policy_type_control_subscriber")
 
     @property
     @pulumi.getter(name="sourceTemplate")
     def source_template(self) -> str:
+        """
+        Get config from a template
+        """
         return pulumi.get(self, "source_template")
 
     @property
     @pulumi.getter(name="spanningTreeBpduguardEnable")
     def spanning_tree_bpduguard_enable(self) -> bool:
+        """
+        Enable BPDU guard for this interface
+        """
         return pulumi.get(self, "spanning_tree_bpduguard_enable")
 
     @property
     @pulumi.getter(name="spanningTreePortfast")
     def spanning_tree_portfast(self) -> bool:
+        """
+        Portfast options for the interface
+        """
         return pulumi.get(self, "spanning_tree_portfast")
 
     @property
     @pulumi.getter(name="spanningTreePortfastDisable")
     def spanning_tree_portfast_disable(self) -> bool:
+        """
+        Disable portfast for this interface
+        """
         return pulumi.get(self, "spanning_tree_portfast_disable")
 
     @property
     @pulumi.getter(name="spanningTreePortfastEdge")
     def spanning_tree_portfast_edge(self) -> bool:
+        """
+        Enable portfast edge on the interface
+        """
         return pulumi.get(self, "spanning_tree_portfast_edge")
 
     @property
     @pulumi.getter(name="spanningTreePortfastNetwork")
     def spanning_tree_portfast_network(self) -> bool:
+        """
+        Enable portfast network on the interface
+        """
         return pulumi.get(self, "spanning_tree_portfast_network")
 
     @property
     @pulumi.getter(name="spanningTreeServicePolicy")
     def spanning_tree_service_policy(self) -> bool:
+        """
+        help
+        """
         return pulumi.get(self, "spanning_tree_service_policy")
 
     @property
     @pulumi.getter(name="stormControlActionShutdown")
     def storm_control_action_shutdown(self) -> bool:
+        """
+        Shutdown this interface if a storm occurs
+        """
         return pulumi.get(self, "storm_control_action_shutdown")
 
     @property
     @pulumi.getter(name="stormControlActionTrap")
     def storm_control_action_trap(self) -> bool:
+        """
+        Send SNMP trap if a storm occurs
+        """
         return pulumi.get(self, "storm_control_action_trap")
 
     @property
     @pulumi.getter(name="stormControlBroadcastLevelBpsThreshold")
     def storm_control_broadcast_level_bps_threshold(self) -> float:
+        """
+        Enter threshold
+        """
         return pulumi.get(self, "storm_control_broadcast_level_bps_threshold")
 
     @property
     @pulumi.getter(name="stormControlBroadcastLevelPpsThreshold")
     def storm_control_broadcast_level_pps_threshold(self) -> str:
+        """
+        Enter threshold
+        """
         return pulumi.get(self, "storm_control_broadcast_level_pps_threshold")
 
     @property
     @pulumi.getter(name="stormControlBroadcastLevelThreshold")
     def storm_control_broadcast_level_threshold(self) -> float:
+        """
+        Enter threshold
+        """
         return pulumi.get(self, "storm_control_broadcast_level_threshold")
 
     @property
     @pulumi.getter(name="stormControlMulticastLevelBpsThreshold")
     def storm_control_multicast_level_bps_threshold(self) -> float:
+        """
+        Enter threshold
+        """
         return pulumi.get(self, "storm_control_multicast_level_bps_threshold")
 
     @property
     @pulumi.getter(name="stormControlMulticastLevelPpsThreshold")
     def storm_control_multicast_level_pps_threshold(self) -> str:
+        """
+        Enter threshold
+        """
         return pulumi.get(self, "storm_control_multicast_level_pps_threshold")
 
     @property
     @pulumi.getter(name="stormControlMulticastLevelThreshold")
     def storm_control_multicast_level_threshold(self) -> float:
+        """
+        Enter threshold
+        """
         return pulumi.get(self, "storm_control_multicast_level_threshold")
 
     @property
     @pulumi.getter(name="subscriberAgingInactivityTimerProbe")
     def subscriber_aging_inactivity_timer_probe(self) -> bool:
+        """
+        ARP probe
+        """
         return pulumi.get(self, "subscriber_aging_inactivity_timer_probe")
 
     @property
     @pulumi.getter(name="subscriberAgingInactivityTimerValue")
     def subscriber_aging_inactivity_timer_value(self) -> int:
+        """
+        Enter a value between 1 and 65535 in seconds
+        """
         return pulumi.get(self, "subscriber_aging_inactivity_timer_value")
 
     @property
     @pulumi.getter(name="subscriberAgingProbe")
     def subscriber_aging_probe(self) -> bool:
+        """
+        ARP probe
+        """
         return pulumi.get(self, "subscriber_aging_probe")
 
     @property
     @pulumi.getter(name="switchportAccessVlan")
     def switchport_access_vlan(self) -> int:
+        """
+        VLAN ID of the VLAN when this port is in access mode
+        """
         return pulumi.get(self, "switchport_access_vlan")
 
     @property
     @pulumi.getter(name="switchportBlockUnicast")
     def switchport_block_unicast(self) -> bool:
+        """
+        Block unknown unicast addresses
+        """
         return pulumi.get(self, "switchport_block_unicast")
 
     @property
     @pulumi.getter(name="switchportModeAccess")
     def switchport_mode_access(self) -> bool:
+        """
+        Set trunking mode to ACCESS unconditionally
+        """
         return pulumi.get(self, "switchport_mode_access")
 
     @property
     @pulumi.getter(name="switchportModeTrunk")
     def switchport_mode_trunk(self) -> bool:
+        """
+        Set trunking mode to TRUNK unconditionally
+        """
         return pulumi.get(self, "switchport_mode_trunk")
 
     @property
     @pulumi.getter(name="switchportNonegotiate")
     def switchport_nonegotiate(self) -> bool:
+        """
+        Device will not engage in negotiation protocol on this interface
+        """
         return pulumi.get(self, "switchport_nonegotiate")
 
     @property
     @pulumi.getter(name="switchportPortSecurity")
     def switchport_port_security(self) -> bool:
+        """
+        Security related command
+        """
         return pulumi.get(self, "switchport_port_security")
 
     @property
     @pulumi.getter(name="switchportPortSecurityAgingStatic")
     def switchport_port_security_aging_static(self) -> bool:
+        """
+        Enable aging for configured secure addresses
+        """
         return pulumi.get(self, "switchport_port_security_aging_static")
 
     @property
     @pulumi.getter(name="switchportPortSecurityAgingTime")
     def switchport_port_security_aging_time(self) -> int:
+        """
+        Port-security aging time
+        """
         return pulumi.get(self, "switchport_port_security_aging_time")
 
     @property
     @pulumi.getter(name="switchportPortSecurityAgingType")
     def switchport_port_security_aging_type(self) -> bool:
+        """
+        Port-security aging type
+        """
         return pulumi.get(self, "switchport_port_security_aging_type")
 
     @property
     @pulumi.getter(name="switchportPortSecurityAgingTypeInactivity")
     def switchport_port_security_aging_type_inactivity(self) -> bool:
+        """
+        Aging based on inactivity time period
+        """
         return pulumi.get(self, "switchport_port_security_aging_type_inactivity")
 
     @property
@@ -559,61 +742,97 @@ class GetTemplateResult:
     @property
     @pulumi.getter(name="switchportPortSecurityViolationProtect")
     def switchport_port_security_violation_protect(self) -> bool:
+        """
+        Security violation protect mode
+        """
         return pulumi.get(self, "switchport_port_security_violation_protect")
 
     @property
     @pulumi.getter(name="switchportPortSecurityViolationRestrict")
     def switchport_port_security_violation_restrict(self) -> bool:
+        """
+        Security violation restrict mode
+        """
         return pulumi.get(self, "switchport_port_security_violation_restrict")
 
     @property
     @pulumi.getter(name="switchportPortSecurityViolationShutdown")
     def switchport_port_security_violation_shutdown(self) -> bool:
+        """
+        Security violation shutdown mode
+        """
         return pulumi.get(self, "switchport_port_security_violation_shutdown")
 
     @property
     @pulumi.getter(name="switchportPrivateVlanHostAssociationPrimaryRange")
     def switchport_private_vlan_host_association_primary_range(self) -> int:
+        """
+        Primary normal range VLAN ID of the private VLAN port association
+        """
         return pulumi.get(self, "switchport_private_vlan_host_association_primary_range")
 
     @property
     @pulumi.getter(name="switchportPrivateVlanHostAssociationSecondaryRange")
     def switchport_private_vlan_host_association_secondary_range(self) -> int:
+        """
+        Secondary normal range VLAN ID of the private VLAN host port association
+        """
         return pulumi.get(self, "switchport_private_vlan_host_association_secondary_range")
 
     @property
     @pulumi.getter(name="switchportTrunkAllowedVlans")
     def switchport_trunk_allowed_vlans(self) -> str:
+        """
+        VLAN IDs of the allowed VLANs when this port is in trunking mode
+        """
         return pulumi.get(self, "switchport_trunk_allowed_vlans")
 
     @property
     @pulumi.getter(name="switchportTrunkAllowedVlansAll")
     def switchport_trunk_allowed_vlans_all(self) -> bool:
+        """
+        all VLANs
+        """
         return pulumi.get(self, "switchport_trunk_allowed_vlans_all")
 
     @property
     @pulumi.getter(name="switchportTrunkAllowedVlansNone")
     def switchport_trunk_allowed_vlans_none(self) -> bool:
+        """
+        no VLANs
+        """
         return pulumi.get(self, "switchport_trunk_allowed_vlans_none")
 
     @property
     @pulumi.getter(name="switchportTrunkNativeVlanTag")
     def switchport_trunk_native_vlan_tag(self) -> bool:
+        """
+        Set native VLAN tagging state
+        """
         return pulumi.get(self, "switchport_trunk_native_vlan_tag")
 
     @property
     @pulumi.getter(name="switchportTrunkNativeVlanVlanId")
     def switchport_trunk_native_vlan_vlan_id(self) -> int:
+        """
+        VLAN ID of the native VLAN when this port is in trunking mode
+        """
         return pulumi.get(self, "switchport_trunk_native_vlan_vlan_id")
 
     @property
     @pulumi.getter(name="switchportVoiceVlan")
     def switchport_voice_vlan(self) -> int:
+        """
+        Vlan for voice traffic
+        """
         return pulumi.get(self, "switchport_voice_vlan")
 
     @property
     @pulumi.getter(name="templateName")
     def template_name(self) -> str:
+        """
+        Template name
+        """
         return pulumi.get(self, "template_name")
 
 
@@ -703,7 +922,20 @@ def get_template(device: Optional[str] = None,
                  template_name: Optional[str] = None,
                  opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetTemplateResult:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Template configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_template(template_name="TEMP1")
+    ```
+
+
+    :param str device: A device name from the provider configuration.
+    :param str template_name: Template name
     """
     __args__ = dict()
     __args__['device'] = device
@@ -793,6 +1025,19 @@ def get_template_output(device: Optional[pulumi.Input[Optional[str]]] = None,
                         template_name: Optional[pulumi.Input[str]] = None,
                         opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetTemplateResult]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Template configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_template(template_name="TEMP1")
+    ```
+
+
+    :param str device: A device name from the provider configuration.
+    :param str template_name: Template name
     """
     ...

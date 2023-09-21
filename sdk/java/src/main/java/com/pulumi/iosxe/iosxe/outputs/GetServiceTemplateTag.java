@@ -9,9 +9,17 @@ import java.util.Objects;
 
 @CustomType
 public final class GetServiceTemplateTag {
+    /**
+     * @return Specify the Tag name
+     * 
+     */
     private String name;
 
     private GetServiceTemplateTag() {}
+    /**
+     * @return Specify the Tag name
+     * 
+     */
     public String name() {
         return this.name;
     }

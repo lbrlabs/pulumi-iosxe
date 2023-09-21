@@ -13,41 +13,105 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetInterfaceOspfv3Result {
+    /**
+     * @return Static route cost value of the interface
+     * 
+     */
     private Integer cost;
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
     private String name;
+    /**
+     * @return Specify OSPF broadcast multi-access network
+     * 
+     */
     private Boolean networkTypeBroadcast;
+    /**
+     * @return Specify OSPF NBMA network
+     * 
+     */
     private Boolean networkTypeNonBroadcast;
+    /**
+     * @return Specify OSPF point-to-multipoint network
+     * 
+     */
     private Boolean networkTypePointToMultipoint;
+    /**
+     * @return Specify OSPF point-to-point network
+     * 
+     */
     private Boolean networkTypePointToPoint;
+    /**
+     * @return Interface type
+     * 
+     */
     private String type;
 
     private GetInterfaceOspfv3Result() {}
+    /**
+     * @return Static route cost value of the interface
+     * 
+     */
     public Integer cost() {
         return this.cost;
     }
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
     public String name() {
         return this.name;
     }
+    /**
+     * @return Specify OSPF broadcast multi-access network
+     * 
+     */
     public Boolean networkTypeBroadcast() {
         return this.networkTypeBroadcast;
     }
+    /**
+     * @return Specify OSPF NBMA network
+     * 
+     */
     public Boolean networkTypeNonBroadcast() {
         return this.networkTypeNonBroadcast;
     }
+    /**
+     * @return Specify OSPF point-to-multipoint network
+     * 
+     */
     public Boolean networkTypePointToMultipoint() {
         return this.networkTypePointToMultipoint;
     }
+    /**
+     * @return Specify OSPF point-to-point network
+     * 
+     */
     public Boolean networkTypePointToPoint() {
         return this.networkTypePointToPoint;
     }
+    /**
+     * @return Interface type
+     * 
+     */
     public String type() {
         return this.type;
     }

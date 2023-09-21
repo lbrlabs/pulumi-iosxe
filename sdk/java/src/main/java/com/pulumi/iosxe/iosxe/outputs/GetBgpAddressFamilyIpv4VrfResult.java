@@ -15,7 +15,15 @@ import javax.annotation.Nullable;
 public final class GetBgpAddressFamilyIpv4VrfResult {
     private String afName;
     private String asn;
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
     private List<GetBgpAddressFamilyIpv4VrfVrf> vrfs;
 
@@ -26,9 +34,17 @@ public final class GetBgpAddressFamilyIpv4VrfResult {
     public String asn() {
         return this.asn;
     }
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }

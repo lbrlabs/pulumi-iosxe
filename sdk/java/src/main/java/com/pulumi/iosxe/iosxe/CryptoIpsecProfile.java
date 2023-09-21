@@ -15,6 +15,47 @@ import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the Crypto IPSec Profile configuration.
+ * 
+ * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.CryptoIpsecProfile;
+ * import com.pulumi.iosxe.iosxe.CryptoIpsecProfileArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new CryptoIpsecProfile(&#34;example&#34;, CryptoIpsecProfileArgs.builder()        
+ *             .setIsakmpProfileIkev2ProfileIkev2ProfileCaseIkev2Profile(&#34;vpn300&#34;)
+ *             .setTransformSets(&#34;TS1&#34;)
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/cryptoIpsecProfile:CryptoIpsecProfile example &#34;Cisco-IOS-XE-native:native/crypto/Cisco-IOS-XE-crypto:ipsec/profile=vpn200&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/cryptoIpsecProfile:CryptoIpsecProfile")
 public class CryptoIpsecProfile extends com.pulumi.resources.CustomResource {
     /**

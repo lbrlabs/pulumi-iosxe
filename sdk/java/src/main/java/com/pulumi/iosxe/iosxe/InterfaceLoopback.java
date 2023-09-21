@@ -19,6 +19,72 @@ import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the Interface Loopback configuration.
+ * 
+ * ## Example Usage
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.InterfaceLoopback;
+ * import com.pulumi.iosxe.iosxe.InterfaceLoopbackArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.InterfaceLoopbackIpv6AddressArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.InterfaceLoopbackIpv6LinkLocalAddressArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new InterfaceLoopback(&#34;example&#34;, InterfaceLoopbackArgs.builder()        
+ *             .arpTimeout(2147)
+ *             .description(&#34;My Interface Description&#34;)
+ *             .ipAccessGroupIn(&#34;1&#34;)
+ *             .ipAccessGroupInEnable(true)
+ *             .ipAccessGroupOut(&#34;1&#34;)
+ *             .ipAccessGroupOutEnable(true)
+ *             .ipProxyArp(false)
+ *             .ipRedirects(false)
+ *             .ipUnreachables(false)
+ *             .ipv4Address(&#34;200.1.1.1&#34;)
+ *             .ipv4AddressMask(&#34;255.255.255.255&#34;)
+ *             .ipv6AddressDhcp(true)
+ *             .ipv6Addresses(InterfaceLoopbackIpv6AddressArgs.builder()
+ *                 .eui_64(true)
+ *                 .prefix(&#34;2002:DB8::/32&#34;)
+ *                 .build())
+ *             .ipv6Enable(true)
+ *             .ipv6LinkLocalAddresses(InterfaceLoopbackIpv6LinkLocalAddressArgs.builder()
+ *                 .address(&#34;fe80::9656:d028:8652:66b7&#34;)
+ *                 .link_local(true)
+ *                 .build())
+ *             .ipv6Mtu(1300)
+ *             .shutdown(false)
+ *             .vrfForwarding(&#34;VRF1&#34;)
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/interfaceLoopback:InterfaceLoopback example &#34;Cisco-IOS-XE-native:native/interface/Loopback=100&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/interfaceLoopback:InterfaceLoopback")
 public class InterfaceLoopback extends com.pulumi.resources.CustomResource {
     /**

@@ -18,6 +18,74 @@ import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the BGP IPv4 Unicast VRF Neighbor configuration.
+ * 
+ * ## Example Usage
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.BgpIpv4UnicastVrfNeighbor;
+ * import com.pulumi.iosxe.iosxe.BgpIpv4UnicastVrfNeighborArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.BgpIpv4UnicastVrfNeighborRouteMapArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new BgpIpv4UnicastVrfNeighbor(&#34;example&#34;, BgpIpv4UnicastVrfNeighborArgs.builder()        
+ *             .activate(true)
+ *             .asn(&#34;65000&#34;)
+ *             .clusterId(&#34;2.2.2.2&#34;)
+ *             .description(&#34;BGP Neighbor Description&#34;)
+ *             .fallOverBfdCheckControlPlaneFailure(true)
+ *             .fallOverBfdSingleHop(true)
+ *             .fallOverBfdStrictMode(true)
+ *             .fallOverDefaultRouteMap(&#34;RMAP&#34;)
+ *             .fallOverMaximumMetricRouteMap(&#34;ROUTEMAP&#34;)
+ *             .ip(&#34;3.3.3.3&#34;)
+ *             .logNeighborChangesDisable(true)
+ *             .password(&#34;LINE&#34;)
+ *             .passwordType(1)
+ *             .remoteAs(&#34;65000&#34;)
+ *             .routeMaps(BgpIpv4UnicastVrfNeighborRouteMapArgs.builder()
+ *                 .in_out(&#34;in&#34;)
+ *                 .route_map_name(&#34;RM1&#34;)
+ *                 .build())
+ *             .routeReflectorClient(false)
+ *             .sendCommunity(&#34;both&#34;)
+ *             .shutdown(false)
+ *             .timersHoldtime(40)
+ *             .timersKeepaliveInterval(30)
+ *             .timersMinimumNeighborHold(30)
+ *             .updateSourceLoopback(&#34;100&#34;)
+ *             .version(4)
+ *             .vrf(&#34;VRF1&#34;)
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/bgpIpv4UnicastVrfNeighbor:BgpIpv4UnicastVrfNeighbor example &#34;Cisco-IOS-XE-native:native/router/Cisco-IOS-XE-bgp:bgp=65000/address-family/with-vrf/ipv4=unicast/vrf=VRF1/ipv4-unicast/neighbor=3.3.3.3&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/bgpIpv4UnicastVrfNeighbor:BgpIpv4UnicastVrfNeighbor")
 public class BgpIpv4UnicastVrfNeighbor extends com.pulumi.resources.CustomResource {
     /**

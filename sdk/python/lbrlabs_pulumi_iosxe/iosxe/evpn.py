@@ -504,7 +504,35 @@ class Evpn(pulumi.CustomResource):
                  router_id_loopback: Optional[pulumi.Input[int]] = None,
                  __props__=None):
         """
-        Create a Evpn resource with the given unique name, props, and options.
+        This resource can manage the EVPN configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.Evpn("example",
+            default_gateway_advertise=True,
+            ip_duplication_limit=10,
+            ip_duplication_time=100,
+            logging_peer_state=True,
+            mac_duplication_limit=10,
+            mac_duplication_time=100,
+            replication_type_ingress=False,
+            replication_type_mp2mp=False,
+            replication_type_p2mp=False,
+            replication_type_static=True,
+            route_target_auto_vni=True,
+            router_id_loopback=100)
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/evpn:Evpn example "Cisco-IOS-XE-native:native/l2vpn/Cisco-IOS-XE-l2vpn:evpn_cont/evpn"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[bool] default_gateway_advertise: Advertise Default Gateway MAC/IP routes
@@ -531,7 +559,35 @@ class Evpn(pulumi.CustomResource):
                  args: Optional[EvpnArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a Evpn resource with the given unique name, props, and options.
+        This resource can manage the EVPN configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.Evpn("example",
+            default_gateway_advertise=True,
+            ip_duplication_limit=10,
+            ip_duplication_time=100,
+            logging_peer_state=True,
+            mac_duplication_limit=10,
+            mac_duplication_time=100,
+            replication_type_ingress=False,
+            replication_type_mp2mp=False,
+            replication_type_p2mp=False,
+            replication_type_static=True,
+            route_target_auto_vni=True,
+            router_id_loopback=100)
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/evpn:Evpn example "Cisco-IOS-XE-native:native/l2vpn/Cisco-IOS-XE-l2vpn:evpn_cont/evpn"
+        ```
+
         :param str resource_name: The name of the resource.
         :param EvpnArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

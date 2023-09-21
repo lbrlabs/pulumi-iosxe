@@ -127,7 +127,14 @@ class SnmpServerGroup(pulumi.CustomResource):
                  v3_securities: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SnmpServerGroupV3SecurityArgs']]]]] = None,
                  __props__=None):
         """
-        Create a SnmpServerGroup resource with the given unique name, props, and options.
+        This resource can manage the SNMP Server Group configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/snmpServerGroup:SnmpServerGroup example "Cisco-IOS-XE-native:native/snmp-server/Cisco-IOS-XE-snmp:group=GROUP1"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] device: A device name from the provider configuration.
@@ -140,7 +147,14 @@ class SnmpServerGroup(pulumi.CustomResource):
                  args: Optional[SnmpServerGroupArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a SnmpServerGroup resource with the given unique name, props, and options.
+        This resource can manage the SNMP Server Group configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/snmpServerGroup:SnmpServerGroup example "Cisco-IOS-XE-native:native/snmp-server/Cisco-IOS-XE-snmp:group=GROUP1"
+        ```
+
         :param str resource_name: The name of the resource.
         :param SnmpServerGroupArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

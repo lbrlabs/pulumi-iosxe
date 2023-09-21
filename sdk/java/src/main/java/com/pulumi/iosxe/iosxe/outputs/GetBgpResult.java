@@ -14,28 +14,68 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetBgpResult {
     private String asn;
+    /**
+     * @return Activate ipv4-unicast for a peer by default
+     * 
+     */
     private Boolean defaultIpv4Unicast;
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
+    /**
+     * @return Log neighbor up/down and reset reason
+     * 
+     */
     private Boolean logNeighborChanges;
+    /**
+     * @return Loopback interface
+     * 
+     */
     private Integer routerIdLoopback;
 
     private GetBgpResult() {}
     public String asn() {
         return this.asn;
     }
+    /**
+     * @return Activate ipv4-unicast for a peer by default
+     * 
+     */
     public Boolean defaultIpv4Unicast() {
         return this.defaultIpv4Unicast;
     }
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
+    /**
+     * @return Log neighbor up/down and reset reason
+     * 
+     */
     public Boolean logNeighborChanges() {
         return this.logNeighborChanges;
     }
+    /**
+     * @return Loopback interface
+     * 
+     */
     public Integer routerIdLoopback() {
         return this.routerIdLoopback;
     }

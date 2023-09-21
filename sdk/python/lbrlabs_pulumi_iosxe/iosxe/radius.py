@@ -451,7 +451,34 @@ class Radius(pulumi.CustomResource):
                  timeout: Optional[pulumi.Input[int]] = None,
                  __props__=None):
         """
-        Create a Radius resource with the given unique name, props, and options.
+        This resource can manage the Radius configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.Radius("example",
+            accounting_port=1812,
+            authentication_port=1813,
+            automate_tester_ignore_acct_port=True,
+            automate_tester_probe_on_config=True,
+            automate_tester_username="dummy",
+            ipv4_address="10.10.15.12",
+            key="123",
+            pac_key="123",
+            pac_key_encryption="0",
+            retransmit=3,
+            timeout=4)
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/radius:Radius example "Cisco-IOS-XE-native:native/radius/Cisco-IOS-XE-aaa:server=radius_10.10.15.12"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[int] accounting_port: UDP port for RADIUS accounting server (default is 1813) - Range: `0`-`65534`
@@ -474,7 +501,34 @@ class Radius(pulumi.CustomResource):
                  args: Optional[RadiusArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a Radius resource with the given unique name, props, and options.
+        This resource can manage the Radius configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.Radius("example",
+            accounting_port=1812,
+            authentication_port=1813,
+            automate_tester_ignore_acct_port=True,
+            automate_tester_probe_on_config=True,
+            automate_tester_username="dummy",
+            ipv4_address="10.10.15.12",
+            key="123",
+            pac_key="123",
+            pac_key_encryption="0",
+            retransmit=3,
+            timeout=4)
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/radius:Radius example "Cisco-IOS-XE-native:native/radius/Cisco-IOS-XE-aaa:server=radius_10.10.15.12"
+        ```
+
         :param str resource_name: The name of the resource.
         :param RadiusArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

@@ -10,29 +10,77 @@ import java.util.Objects;
 
 @CustomType
 public final class GetCdpTlvList {
+    /**
+     * @return Select cos TLV
+     * 
+     */
     private Boolean cos;
+    /**
+     * @return Select duplex TLV
+     * 
+     */
     private Boolean duplex;
+    /**
+     * @return Tlv-list
+     * 
+     */
     private String name;
+    /**
+     * @return Select trust TLV
+     * 
+     */
     private Boolean trust;
+    /**
+     * @return Select version TLV
+     * 
+     */
     private Boolean version;
+    /**
+     * @return Select vtp mgmt domain TLV
+     * 
+     */
     private Boolean vtpMgmtDomain;
 
     private GetCdpTlvList() {}
+    /**
+     * @return Select cos TLV
+     * 
+     */
     public Boolean cos() {
         return this.cos;
     }
+    /**
+     * @return Select duplex TLV
+     * 
+     */
     public Boolean duplex() {
         return this.duplex;
     }
+    /**
+     * @return Tlv-list
+     * 
+     */
     public String name() {
         return this.name;
     }
+    /**
+     * @return Select trust TLV
+     * 
+     */
     public Boolean trust() {
         return this.trust;
     }
+    /**
+     * @return Select version TLV
+     * 
+     */
     public Boolean version() {
         return this.version;
     }
+    /**
+     * @return Select vtp mgmt domain TLV
+     * 
+     */
     public Boolean vtpMgmtDomain() {
         return this.vtpMgmtDomain;
     }

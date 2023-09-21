@@ -132,6 +132,9 @@ class GetBgpIpv4UnicastVrfNeighborResult:
     @property
     @pulumi.getter
     def activate(self) -> bool:
+        """
+        Enable the address family for this neighbor
+        """
         return pulumi.get(self, "activate")
 
     @property
@@ -147,21 +150,33 @@ class GetBgpIpv4UnicastVrfNeighborResult:
     @property
     @pulumi.getter
     def description(self) -> str:
+        """
+        Neighbor specific description
+        """
         return pulumi.get(self, "description")
 
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
     @pulumi.getter(name="disableConnectedCheck")
     def disable_connected_check(self) -> bool:
+        """
+        one-hop away EBGP peer using loopback address
+        """
         return pulumi.get(self, "disable_connected_check")
 
     @property
     @pulumi.getter(name="ebgpMultihop")
     def ebgp_multihop(self) -> bool:
+        """
+        Allow EBGP neighbors not on directly connected networks. For single-hop ebgp peers, delete ebgp-multihop directly.
+        """
         return pulumi.get(self, "ebgp_multihop")
 
     @property
@@ -172,21 +187,33 @@ class GetBgpIpv4UnicastVrfNeighborResult:
     @property
     @pulumi.getter(name="fallOverBfdCheckControlPlaneFailure")
     def fall_over_bfd_check_control_plane_failure(self) -> bool:
+        """
+        Retrieve control plane dependent failure info from BFD for BGP GR/NSR operation
+        """
         return pulumi.get(self, "fall_over_bfd_check_control_plane_failure")
 
     @property
     @pulumi.getter(name="fallOverBfdMultiHop")
     def fall_over_bfd_multi_hop(self) -> bool:
+        """
+        Force BFD multi-hop to detect failure
+        """
         return pulumi.get(self, "fall_over_bfd_multi_hop")
 
     @property
     @pulumi.getter(name="fallOverBfdSingleHop")
     def fall_over_bfd_single_hop(self) -> bool:
+        """
+        Force BFD single-hop to detect failure
+        """
         return pulumi.get(self, "fall_over_bfd_single_hop")
 
     @property
     @pulumi.getter(name="fallOverBfdStrictMode")
     def fall_over_bfd_strict_mode(self) -> bool:
+        """
+        Enable BFD strict-mode
+        """
         return pulumi.get(self, "fall_over_bfd_strict_mode")
 
     @property
@@ -202,6 +229,9 @@ class GetBgpIpv4UnicastVrfNeighborResult:
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
     @property
@@ -217,21 +247,33 @@ class GetBgpIpv4UnicastVrfNeighborResult:
     @property
     @pulumi.getter(name="localAsDualAs")
     def local_as_dual_as(self) -> bool:
+        """
+        Accept either real AS or local AS from the ebgp peer
+        """
         return pulumi.get(self, "local_as_dual_as")
 
     @property
     @pulumi.getter(name="localAsNoPrepend")
     def local_as_no_prepend(self) -> bool:
+        """
+        Do not prepend local-as to updates from ebgp peers
+        """
         return pulumi.get(self, "local_as_no_prepend")
 
     @property
     @pulumi.getter(name="localAsReplaceAs")
     def local_as_replace_as(self) -> bool:
+        """
+        Replace real AS with local AS in the EBGP updates
+        """
         return pulumi.get(self, "local_as_replace_as")
 
     @property
     @pulumi.getter(name="logNeighborChangesDisable")
     def log_neighbor_changes_disable(self) -> bool:
+        """
+        disable
+        """
         return pulumi.get(self, "log_neighbor_changes_disable")
 
     @property
@@ -242,21 +284,33 @@ class GetBgpIpv4UnicastVrfNeighborResult:
     @property
     @pulumi.getter(name="passwordType")
     def password_type(self) -> int:
+        """
+        Encryption type (0 to disable encryption, 7 for proprietary)
+        """
         return pulumi.get(self, "password_type")
 
     @property
     @pulumi.getter(name="remoteAs")
     def remote_as(self) -> str:
+        """
+        Specify a BGP peer-group remote-as
+        """
         return pulumi.get(self, "remote_as")
 
     @property
     @pulumi.getter(name="routeMaps")
     def route_maps(self) -> Sequence['outputs.GetBgpIpv4UnicastVrfNeighborRouteMapResult']:
+        """
+        Apply route map to neighbor
+        """
         return pulumi.get(self, "route_maps")
 
     @property
     @pulumi.getter(name="routeReflectorClient")
     def route_reflector_client(self) -> bool:
+        """
+        Configure a neighbor as Route Reflector client
+        """
         return pulumi.get(self, "route_reflector_client")
 
     @property
@@ -267,6 +321,9 @@ class GetBgpIpv4UnicastVrfNeighborResult:
     @property
     @pulumi.getter
     def shutdown(self) -> bool:
+        """
+        Administratively shut down this neighbor
+        """
         return pulumi.get(self, "shutdown")
 
     @property
@@ -287,16 +344,25 @@ class GetBgpIpv4UnicastVrfNeighborResult:
     @property
     @pulumi.getter(name="ttlSecurityHops")
     def ttl_security_hops(self) -> int:
+        """
+        IP hops
+        """
         return pulumi.get(self, "ttl_security_hops")
 
     @property
     @pulumi.getter(name="updateSourceLoopback")
     def update_source_loopback(self) -> str:
+        """
+        Loopback interface
+        """
         return pulumi.get(self, "update_source_loopback")
 
     @property
     @pulumi.getter
     def version(self) -> int:
+        """
+        Set the BGP version to match a neighbor
+        """
         return pulumi.get(self, "version")
 
     @property
@@ -354,7 +420,21 @@ def get_bgp_ipv4_unicast_vrf_neighbor(asn: Optional[str] = None,
                                       vrf: Optional[str] = None,
                                       opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetBgpIpv4UnicastVrfNeighborResult:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the BGP IPv4 Unicast VRF Neighbor configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_bgp_ipv4_unicast_vrf_neighbor(asn="65000",
+        ip="3.3.3.3",
+        vrf="VRF1")
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     __args__ = dict()
     __args__['asn'] = asn
@@ -409,6 +489,20 @@ def get_bgp_ipv4_unicast_vrf_neighbor_output(asn: Optional[pulumi.Input[str]] = 
                                              vrf: Optional[pulumi.Input[str]] = None,
                                              opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetBgpIpv4UnicastVrfNeighborResult]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the BGP IPv4 Unicast VRF Neighbor configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_bgp_ipv4_unicast_vrf_neighbor(asn="65000",
+        ip="3.3.3.3",
+        vrf="VRF1")
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     ...

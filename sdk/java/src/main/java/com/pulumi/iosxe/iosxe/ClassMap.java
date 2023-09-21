@@ -18,6 +18,62 @@ import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the Class Map configuration.
+ * 
+ * ## Example Usage
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.ClassMap;
+ * import com.pulumi.iosxe.iosxe.ClassMapArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.ClassMapMatchActivatedServiceTemplateArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ClassMap(&#34;example&#34;, ClassMapArgs.builder()        
+ *             .matchActivatedServiceTemplates(ClassMapMatchActivatedServiceTemplateArgs.builder()
+ *                 .service_name(&#34;CRITICAL_AUTH_ACCESS&#34;)
+ *                 .build())
+ *             .matchAuthorizationStatusAuthorized(true)
+ *             .matchAuthorizingMethodPriorityGreaterThans(20)
+ *             .matchMethodDot1x(true)
+ *             .matchMethodMab(true)
+ *             .matchResultTypeAaaTimeout(true)
+ *             .matchResultTypeMethodDot1xAgentNotFound(true)
+ *             .matchResultTypeMethodDot1xAuthoritative(true)
+ *             .matchResultTypeMethodDot1xMethodTimeout(true)
+ *             .matchResultTypeMethodMabAuthoritative(true)
+ *             .prematch(&#34;match-all&#34;)
+ *             .subscriber(true)
+ *             .type(&#34;control&#34;)
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/classMap:ClassMap example &#34;Cisco-IOS-XE-native:native/policy/Cisco-IOS-XE-policy:class-map=CM1&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/classMap:ClassMap")
 public class ClassMap extends com.pulumi.resources.CustomResource {
     /**

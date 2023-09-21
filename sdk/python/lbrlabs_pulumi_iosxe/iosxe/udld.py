@@ -240,7 +240,27 @@ class Udld(pulumi.CustomResource):
                  recovery_interval: Optional[pulumi.Input[int]] = None,
                  __props__=None):
         """
-        Create a Udld resource with the given unique name, props, and options.
+        This resource can manage the UDLD configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.Udld("example",
+            aggressive=True,
+            enable=True,
+            message_time=77,
+            recovery_interval=8640)
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/udld:Udld example "Cisco-IOS-XE-native:native/udld"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[bool] aggressive: Enable UDLD protocol in aggressive mode on fiber ports exceptwhere locally configured
@@ -259,7 +279,27 @@ class Udld(pulumi.CustomResource):
                  args: Optional[UdldArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a Udld resource with the given unique name, props, and options.
+        This resource can manage the UDLD configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.Udld("example",
+            aggressive=True,
+            enable=True,
+            message_time=77,
+            recovery_interval=8640)
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/udld:Udld example "Cisco-IOS-XE-native:native/udld"
+        ```
+
         :param str resource_name: The name of the resource.
         :param UdldArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

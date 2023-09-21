@@ -12,12 +12,20 @@ import java.util.Objects;
 
 @CustomType
 public final class GetRadiusServerAttribute {
+    /**
+     * @return Include attribute
+     * 
+     */
     private Boolean accessRequestInclude;
     private List<GetRadiusServerAttributeAttribute31Parameter> attribute31Parameters;
     private String number;
     private List<String> sendAttributes;
 
     private GetRadiusServerAttribute() {}
+    /**
+     * @return Include attribute
+     * 
+     */
     public Boolean accessRequestInclude() {
         return this.accessRequestInclude;
     }

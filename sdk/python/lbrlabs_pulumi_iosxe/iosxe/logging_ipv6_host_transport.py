@@ -233,7 +233,14 @@ class LoggingIpv6HostTransport(pulumi.CustomResource):
                  transport_udp_ports: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['LoggingIpv6HostTransportTransportUdpPortArgs']]]]] = None,
                  __props__=None):
         """
-        Create a LoggingIpv6HostTransport resource with the given unique name, props, and options.
+        This resource can manage the Logging IPv6 Host Transport configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/loggingIpv6HostTransport:LoggingIpv6HostTransport example "Cisco-IOS-XE-native:native/logging/host/ipv6/ipv6-host-transport-list=2001::1"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] delete_mode: Configure behavior when deleting/destroying the resource. Either delete the entire object (YANG container) being
@@ -251,7 +258,14 @@ class LoggingIpv6HostTransport(pulumi.CustomResource):
                  args: LoggingIpv6HostTransportArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a LoggingIpv6HostTransport resource with the given unique name, props, and options.
+        This resource can manage the Logging IPv6 Host Transport configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/loggingIpv6HostTransport:LoggingIpv6HostTransport example "Cisco-IOS-XE-native:native/logging/host/ipv6/ipv6-host-transport-list=2001::1"
+        ```
+
         :param str resource_name: The name of the resource.
         :param LoggingIpv6HostTransportArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

@@ -12,29 +12,77 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetTacacsServerResult {
+    /**
+     * @return IPv4 address or Hostname for tacacs server
+     * 
+     */
     private String addressIpv4;
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
+    /**
+     * @return The UNENCRYPTED (cleartext) server key
+     * 
+     */
     private String key;
+    /**
+     * @return Name for the tacacs server configuration
+     * 
+     */
     private String name;
+    /**
+     * @return Time to wait for this TACACS server to reply (overrides default)
+     * 
+     */
     private Integer timeout;
 
     private GetTacacsServerResult() {}
+    /**
+     * @return IPv4 address or Hostname for tacacs server
+     * 
+     */
     public String addressIpv4() {
         return this.addressIpv4;
     }
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
+    /**
+     * @return The UNENCRYPTED (cleartext) server key
+     * 
+     */
     public String key() {
         return this.key;
     }
+    /**
+     * @return Name for the tacacs server configuration
+     * 
+     */
     public String name() {
         return this.name;
     }
+    /**
+     * @return Time to wait for this TACACS server to reply (overrides default)
+     * 
+     */
     public Integer timeout() {
         return this.timeout;
     }

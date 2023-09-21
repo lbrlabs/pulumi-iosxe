@@ -5,724 +5,898 @@
 from . import _utilities
 import typing
 # Export this package's modules as members:
+from .aaa import *
+from .aaa_accounting import *
+from .aaa_authentication import *
+from .aaa_authorization import *
+from .access_list_extended import *
+from .access_list_standard import *
+from .arp import *
+from .banner import *
+from .bfd import *
+from .bfd_template_multi_hop import *
+from .bfd_template_single_hop import *
+from .bgp import *
+from .bgp_address_family_ipv4 import *
+from .bgp_address_family_ipv4_vrf import *
+from .bgp_address_family_ipv6 import *
+from .bgp_address_family_ipv6_vrf import *
+from .bgp_address_family_l2vpn import *
+from .bgp_ipv4_unicast_neighbor import *
+from .bgp_ipv4_unicast_vrf_neighbor import *
+from .bgp_ipv6_unicast_neighbor import *
+from .bgp_l2vpn_evpn_neighbor import *
+from .bgp_neighbor import *
+from .cdp import *
+from .class_map import *
+from .clock import *
+from .crypto_ikev2 import *
+from .crypto_ikev2_keyring import *
+from .crypto_ikev2_policy import *
+from .crypto_ikev2_profile import *
+from .crypto_ikev2_proposal import *
+from .crypto_ipsec_profile import *
+from .crypto_ipsec_transform_set import *
+from .cts import *
+from .dhcp import *
+from .dot1x import *
+from .errdisable import *
+from .evpn import *
+from .evpn_instance import *
+from .get_aaa import *
+from .get_aaa_accounting import *
+from .get_aaa_authentication import *
+from .get_aaa_authorization import *
+from .get_access_list_extended import *
+from .get_access_list_standard import *
+from .get_arp import *
+from .get_banner import *
+from .get_bfd import *
+from .get_bfd_template_multi_hop import *
+from .get_bfd_template_single_hop import *
+from .get_bgp import *
+from .get_bgp_address_family_ipv4 import *
+from .get_bgp_address_family_ipv4_vrf import *
+from .get_bgp_address_family_ipv6 import *
+from .get_bgp_address_family_ipv6_vrf import *
+from .get_bgp_address_family_l2vpn import *
+from .get_bgp_ipv4_unicast_neighbor import *
+from .get_bgp_ipv4_unicast_vrf_neighbor import *
+from .get_bgp_ipv6_unicast_neighbor import *
+from .get_bgp_l2vpn_evpn_neighbor import *
+from .get_bgp_neighbor import *
+from .get_cdp import *
+from .get_class_map import *
+from .get_clock import *
+from .get_crypto_ikev2 import *
+from .get_crypto_ikev2_keyring import *
+from .get_crypto_ikev2_policy import *
+from .get_crypto_ikev2_profile import *
+from .get_crypto_ikev2_proposal import *
+from .get_crypto_ipsec_profile import *
+from .get_crypto_ipsec_transform_set import *
+from .get_cts import *
+from .get_dhcp import *
+from .get_dot1x import *
+from .get_errdisable import *
+from .get_evpn import *
+from .get_evpn_instance import *
+from .get_interface_ethernet import *
+from .get_interface_loopback import *
+from .get_interface_mpls import *
+from .get_interface_nve import *
+from .get_interface_ospf import *
+from .get_interface_ospfv3 import *
+from .get_interface_pim import *
+from .get_interface_port_channel import *
+from .get_interface_port_channel_subinterface import *
+from .get_interface_switchport import *
+from .get_interface_tunnel import *
+from .get_interface_vlan import *
+from .get_line import *
+from .get_logging import *
+from .get_logging_ipv4_host_transport import *
+from .get_logging_ipv4_host_vrf_transport import *
+from .get_logging_ipv6_host_transport import *
+from .get_logging_ipv6_host_vrf_transport import *
+from .get_mdt_subscription import *
+from .get_msdp import *
+from .get_msdp_vrf import *
+from .get_ntp import *
+from .get_ospf import *
+from .get_ospf_vrf import *
+from .get_pim import *
+from .get_pim_vrf import *
+from .get_policy_map import *
+from .get_policy_map_event import *
+from .get_prefix_list import *
+from .get_radius import *
+from .get_radius_server import *
+from .get_restconf import *
+from .get_route_map import *
+from .get_service import *
+from .get_service_template import *
+from .get_snmp_server import *
+from .get_snmp_server_group import *
+from .get_snmp_server_user import *
+from .get_static_route import *
+from .get_static_route_vrf import *
+from .get_system import *
+from .get_tacacs_server import *
+from .get_template import *
+from .get_udld import *
+from .get_username import *
+from .get_vlan import *
+from .get_vlan_access_map import *
+from .get_vlan_configuration import *
+from .get_vrf import *
+from .get_vtp import *
+from .interface_ethernet import *
+from .interface_loopback import *
+from .interface_mpls import *
+from .interface_nve import *
+from .interface_ospf import *
+from .interface_ospfv3 import *
+from .interface_pim import *
+from .interface_port_channel import *
+from .interface_port_channel_subinterface import *
+from .interface_switchport import *
+from .interface_tunnel import *
+from .interface_vlan import *
+from .line import *
+from .logging import *
+from .logging_ipv4_host_transport import *
+from .logging_ipv4_host_vrf_transport import *
+from .logging_ipv6_host_transport import *
+from .logging_ipv6_host_vrf_transport import *
+from .mdt_subscription import *
+from .msdp import *
+from .msdp_vrf import *
+from .ntp import *
+from .ospf import *
+from .ospf_vrf import *
+from .pim import *
+from .pim_vrf import *
+from .policy_map import *
+from .policy_map_event import *
+from .prefix_list import *
 from .provider import *
+from .radius import *
+from .radius_server import *
+from .restconf import *
+from .route_map import *
+from .service import *
+from .service_template import *
+from .snmp_server import *
+from .snmp_server_group import *
+from .snmp_server_user import *
+from .static_route import *
+from .static_route_vrf import *
+from .system import *
+from .tacacs_server import *
+from .template import *
+from .udld import *
+from .username import *
+from .vlan import *
+from .vlan_access_map import *
+from .vlan_configuration import *
+from .vrf import *
+from .vtp import *
 from ._inputs import *
+from . import outputs
 
 # Make subpackages available:
 if typing.TYPE_CHECKING:
     import lbrlabs_pulumi_iosxe.config as __config
     config = __config
-    import lbrlabs_pulumi_iosxe.iosxe as __iosxe
-    iosxe = __iosxe
 else:
     config = _utilities.lazy_import('lbrlabs_pulumi_iosxe.config')
-    iosxe = _utilities.lazy_import('lbrlabs_pulumi_iosxe.iosxe')
 
 _utilities.register(
     resource_modules="""
 [
  {
   "pkg": "iosxe",
-  "mod": "iosxe/aaa",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/aaa",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/aaa:Aaa": "Aaa"
+   "iosxe:index/aaa:Aaa": "Aaa"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/aaaAccounting",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/aaaAccounting",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/aaaAccounting:AaaAccounting": "AaaAccounting"
+   "iosxe:index/aaaAccounting:AaaAccounting": "AaaAccounting"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/aaaAuthentication",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/aaaAuthentication",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/aaaAuthentication:AaaAuthentication": "AaaAuthentication"
+   "iosxe:index/aaaAuthentication:AaaAuthentication": "AaaAuthentication"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/aaaAuthorization",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/aaaAuthorization",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/aaaAuthorization:AaaAuthorization": "AaaAuthorization"
+   "iosxe:index/aaaAuthorization:AaaAuthorization": "AaaAuthorization"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/accessListExtended",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/accessListExtended",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/accessListExtended:AccessListExtended": "AccessListExtended"
+   "iosxe:index/accessListExtended:AccessListExtended": "AccessListExtended"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/accessListStandard",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/accessListStandard",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/accessListStandard:AccessListStandard": "AccessListStandard"
+   "iosxe:index/accessListStandard:AccessListStandard": "AccessListStandard"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/arp",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/arp",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/arp:Arp": "Arp"
+   "iosxe:index/arp:Arp": "Arp"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/banner",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/banner",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/banner:Banner": "Banner"
+   "iosxe:index/banner:Banner": "Banner"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/bfd",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/bfd",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/bfd:Bfd": "Bfd"
+   "iosxe:index/bfd:Bfd": "Bfd"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/bfdTemplateMultiHop",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/bfdTemplateMultiHop",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/bfdTemplateMultiHop:BfdTemplateMultiHop": "BfdTemplateMultiHop"
+   "iosxe:index/bfdTemplateMultiHop:BfdTemplateMultiHop": "BfdTemplateMultiHop"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/bfdTemplateSingleHop",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/bfdTemplateSingleHop",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/bfdTemplateSingleHop:BfdTemplateSingleHop": "BfdTemplateSingleHop"
+   "iosxe:index/bfdTemplateSingleHop:BfdTemplateSingleHop": "BfdTemplateSingleHop"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/bgp",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/bgp",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/bgp:Bgp": "Bgp"
+   "iosxe:index/bgp:Bgp": "Bgp"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/bgpAddressFamilyIpv4",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/bgpAddressFamilyIpv4",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/bgpAddressFamilyIpv4:BgpAddressFamilyIpv4": "BgpAddressFamilyIpv4"
+   "iosxe:index/bgpAddressFamilyIpv4:BgpAddressFamilyIpv4": "BgpAddressFamilyIpv4"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/bgpAddressFamilyIpv4Vrf",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/bgpAddressFamilyIpv4Vrf",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/bgpAddressFamilyIpv4Vrf:BgpAddressFamilyIpv4Vrf": "BgpAddressFamilyIpv4Vrf"
+   "iosxe:index/bgpAddressFamilyIpv4Vrf:BgpAddressFamilyIpv4Vrf": "BgpAddressFamilyIpv4Vrf"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/bgpAddressFamilyIpv6",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/bgpAddressFamilyIpv6",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/bgpAddressFamilyIpv6:BgpAddressFamilyIpv6": "BgpAddressFamilyIpv6"
+   "iosxe:index/bgpAddressFamilyIpv6:BgpAddressFamilyIpv6": "BgpAddressFamilyIpv6"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/bgpAddressFamilyIpv6Vrf",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/bgpAddressFamilyIpv6Vrf",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/bgpAddressFamilyIpv6Vrf:BgpAddressFamilyIpv6Vrf": "BgpAddressFamilyIpv6Vrf"
+   "iosxe:index/bgpAddressFamilyIpv6Vrf:BgpAddressFamilyIpv6Vrf": "BgpAddressFamilyIpv6Vrf"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/bgpAddressFamilyL2vpn",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/bgpAddressFamilyL2vpn",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/bgpAddressFamilyL2vpn:BgpAddressFamilyL2vpn": "BgpAddressFamilyL2vpn"
+   "iosxe:index/bgpAddressFamilyL2vpn:BgpAddressFamilyL2vpn": "BgpAddressFamilyL2vpn"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/bgpIpv4UnicastNeighbor",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/bgpIpv4UnicastNeighbor",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/bgpIpv4UnicastNeighbor:BgpIpv4UnicastNeighbor": "BgpIpv4UnicastNeighbor"
+   "iosxe:index/bgpIpv4UnicastNeighbor:BgpIpv4UnicastNeighbor": "BgpIpv4UnicastNeighbor"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/bgpIpv4UnicastVrfNeighbor",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/bgpIpv4UnicastVrfNeighbor",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/bgpIpv4UnicastVrfNeighbor:BgpIpv4UnicastVrfNeighbor": "BgpIpv4UnicastVrfNeighbor"
+   "iosxe:index/bgpIpv4UnicastVrfNeighbor:BgpIpv4UnicastVrfNeighbor": "BgpIpv4UnicastVrfNeighbor"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/bgpIpv6UnicastNeighbor",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/bgpIpv6UnicastNeighbor",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/bgpIpv6UnicastNeighbor:BgpIpv6UnicastNeighbor": "BgpIpv6UnicastNeighbor"
+   "iosxe:index/bgpIpv6UnicastNeighbor:BgpIpv6UnicastNeighbor": "BgpIpv6UnicastNeighbor"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/bgpL2vpnEvpnNeighbor",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/bgpL2vpnEvpnNeighbor",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/bgpL2vpnEvpnNeighbor:BgpL2vpnEvpnNeighbor": "BgpL2vpnEvpnNeighbor"
+   "iosxe:index/bgpL2vpnEvpnNeighbor:BgpL2vpnEvpnNeighbor": "BgpL2vpnEvpnNeighbor"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/bgpNeighbor",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/bgpNeighbor",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/bgpNeighbor:BgpNeighbor": "BgpNeighbor"
+   "iosxe:index/bgpNeighbor:BgpNeighbor": "BgpNeighbor"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/cdp",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/cdp",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/cdp:Cdp": "Cdp"
+   "iosxe:index/cdp:Cdp": "Cdp"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/classMap",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/classMap",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/classMap:ClassMap": "ClassMap"
+   "iosxe:index/classMap:ClassMap": "ClassMap"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/clock",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/clock",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/clock:Clock": "Clock"
+   "iosxe:index/clock:Clock": "Clock"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/cryptoIkev2",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/cryptoIkev2",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/cryptoIkev2:CryptoIkev2": "CryptoIkev2"
+   "iosxe:index/cryptoIkev2:CryptoIkev2": "CryptoIkev2"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/cryptoIkev2Keyring",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/cryptoIkev2Keyring",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/cryptoIkev2Keyring:CryptoIkev2Keyring": "CryptoIkev2Keyring"
+   "iosxe:index/cryptoIkev2Keyring:CryptoIkev2Keyring": "CryptoIkev2Keyring"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/cryptoIkev2Policy",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/cryptoIkev2Policy",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/cryptoIkev2Policy:CryptoIkev2Policy": "CryptoIkev2Policy"
+   "iosxe:index/cryptoIkev2Policy:CryptoIkev2Policy": "CryptoIkev2Policy"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/cryptoIkev2Profile",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/cryptoIkev2Profile",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/cryptoIkev2Profile:CryptoIkev2Profile": "CryptoIkev2Profile"
+   "iosxe:index/cryptoIkev2Profile:CryptoIkev2Profile": "CryptoIkev2Profile"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/cryptoIkev2Proposal",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/cryptoIkev2Proposal",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/cryptoIkev2Proposal:CryptoIkev2Proposal": "CryptoIkev2Proposal"
+   "iosxe:index/cryptoIkev2Proposal:CryptoIkev2Proposal": "CryptoIkev2Proposal"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/cryptoIpsecProfile",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/cryptoIpsecProfile",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/cryptoIpsecProfile:CryptoIpsecProfile": "CryptoIpsecProfile"
+   "iosxe:index/cryptoIpsecProfile:CryptoIpsecProfile": "CryptoIpsecProfile"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/cryptoIpsecTransformSet",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/cryptoIpsecTransformSet",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/cryptoIpsecTransformSet:CryptoIpsecTransformSet": "CryptoIpsecTransformSet"
+   "iosxe:index/cryptoIpsecTransformSet:CryptoIpsecTransformSet": "CryptoIpsecTransformSet"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/cts",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/cts",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/cts:Cts": "Cts"
+   "iosxe:index/cts:Cts": "Cts"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/dhcp",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/dhcp",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/dhcp:Dhcp": "Dhcp"
+   "iosxe:index/dhcp:Dhcp": "Dhcp"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/dot1x",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/dot1x",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/dot1x:Dot1x": "Dot1x"
+   "iosxe:index/dot1x:Dot1x": "Dot1x"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/errdisable",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/errdisable",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/errdisable:Errdisable": "Errdisable"
+   "iosxe:index/errdisable:Errdisable": "Errdisable"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/evpn",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/evpn",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/evpn:Evpn": "Evpn"
+   "iosxe:index/evpn:Evpn": "Evpn"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/evpnInstance",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/evpnInstance",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/evpnInstance:EvpnInstance": "EvpnInstance"
+   "iosxe:index/evpnInstance:EvpnInstance": "EvpnInstance"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/interfaceEthernet",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/interfaceEthernet",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/interfaceEthernet:InterfaceEthernet": "InterfaceEthernet"
+   "iosxe:index/interfaceEthernet:InterfaceEthernet": "InterfaceEthernet"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/interfaceLoopback",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/interfaceLoopback",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/interfaceLoopback:InterfaceLoopback": "InterfaceLoopback"
+   "iosxe:index/interfaceLoopback:InterfaceLoopback": "InterfaceLoopback"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/interfaceMpls",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/interfaceMpls",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/interfaceMpls:InterfaceMpls": "InterfaceMpls"
+   "iosxe:index/interfaceMpls:InterfaceMpls": "InterfaceMpls"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/interfaceNve",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/interfaceNve",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/interfaceNve:InterfaceNve": "InterfaceNve"
+   "iosxe:index/interfaceNve:InterfaceNve": "InterfaceNve"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/interfaceOspf",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/interfaceOspf",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/interfaceOspf:InterfaceOspf": "InterfaceOspf"
+   "iosxe:index/interfaceOspf:InterfaceOspf": "InterfaceOspf"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/interfaceOspfv3",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/interfaceOspfv3",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/interfaceOspfv3:InterfaceOspfv3": "InterfaceOspfv3"
+   "iosxe:index/interfaceOspfv3:InterfaceOspfv3": "InterfaceOspfv3"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/interfacePim",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/interfacePim",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/interfacePim:InterfacePim": "InterfacePim"
+   "iosxe:index/interfacePim:InterfacePim": "InterfacePim"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/interfacePortChannel",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/interfacePortChannel",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/interfacePortChannel:InterfacePortChannel": "InterfacePortChannel"
+   "iosxe:index/interfacePortChannel:InterfacePortChannel": "InterfacePortChannel"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/interfacePortChannelSubinterface",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/interfacePortChannelSubinterface",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/interfacePortChannelSubinterface:InterfacePortChannelSubinterface": "InterfacePortChannelSubinterface"
+   "iosxe:index/interfacePortChannelSubinterface:InterfacePortChannelSubinterface": "InterfacePortChannelSubinterface"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/interfaceSwitchport",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/interfaceSwitchport",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/interfaceSwitchport:InterfaceSwitchport": "InterfaceSwitchport"
+   "iosxe:index/interfaceSwitchport:InterfaceSwitchport": "InterfaceSwitchport"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/interfaceTunnel",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/interfaceTunnel",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/interfaceTunnel:InterfaceTunnel": "InterfaceTunnel"
+   "iosxe:index/interfaceTunnel:InterfaceTunnel": "InterfaceTunnel"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/interfaceVlan",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/interfaceVlan",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/interfaceVlan:InterfaceVlan": "InterfaceVlan"
+   "iosxe:index/interfaceVlan:InterfaceVlan": "InterfaceVlan"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/line",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/line",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/line:Line": "Line"
+   "iosxe:index/line:Line": "Line"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/logging",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/logging",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/logging:Logging": "Logging"
+   "iosxe:index/logging:Logging": "Logging"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/loggingIpv4HostTransport",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/loggingIpv4HostTransport",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/loggingIpv4HostTransport:LoggingIpv4HostTransport": "LoggingIpv4HostTransport"
+   "iosxe:index/loggingIpv4HostTransport:LoggingIpv4HostTransport": "LoggingIpv4HostTransport"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/loggingIpv4HostVrfTransport",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/loggingIpv4HostVrfTransport",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/loggingIpv4HostVrfTransport:LoggingIpv4HostVrfTransport": "LoggingIpv4HostVrfTransport"
+   "iosxe:index/loggingIpv4HostVrfTransport:LoggingIpv4HostVrfTransport": "LoggingIpv4HostVrfTransport"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/loggingIpv6HostTransport",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/loggingIpv6HostTransport",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/loggingIpv6HostTransport:LoggingIpv6HostTransport": "LoggingIpv6HostTransport"
+   "iosxe:index/loggingIpv6HostTransport:LoggingIpv6HostTransport": "LoggingIpv6HostTransport"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/loggingIpv6HostVrfTransport",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/loggingIpv6HostVrfTransport",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/loggingIpv6HostVrfTransport:LoggingIpv6HostVrfTransport": "LoggingIpv6HostVrfTransport"
+   "iosxe:index/loggingIpv6HostVrfTransport:LoggingIpv6HostVrfTransport": "LoggingIpv6HostVrfTransport"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/mdtSubscription",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/mdtSubscription",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/mdtSubscription:MdtSubscription": "MdtSubscription"
+   "iosxe:index/mdtSubscription:MdtSubscription": "MdtSubscription"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/msdp",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/msdp",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/msdp:Msdp": "Msdp"
+   "iosxe:index/msdp:Msdp": "Msdp"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/msdpVrf",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/msdpVrf",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/msdpVrf:MsdpVrf": "MsdpVrf"
+   "iosxe:index/msdpVrf:MsdpVrf": "MsdpVrf"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/ntp",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/ntp",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/ntp:Ntp": "Ntp"
+   "iosxe:index/ntp:Ntp": "Ntp"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/ospf",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/ospf",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/ospf:Ospf": "Ospf"
+   "iosxe:index/ospf:Ospf": "Ospf"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/ospfVrf",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/ospfVrf",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/ospfVrf:OspfVrf": "OspfVrf"
+   "iosxe:index/ospfVrf:OspfVrf": "OspfVrf"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/pim",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/pim",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/pim:Pim": "Pim"
+   "iosxe:index/pim:Pim": "Pim"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/pimVrf",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/pimVrf",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/pimVrf:PimVrf": "PimVrf"
+   "iosxe:index/pimVrf:PimVrf": "PimVrf"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/policyMap",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/policyMap",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/policyMap:PolicyMap": "PolicyMap"
+   "iosxe:index/policyMap:PolicyMap": "PolicyMap"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/policyMapEvent",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/policyMapEvent",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/policyMapEvent:PolicyMapEvent": "PolicyMapEvent"
+   "iosxe:index/policyMapEvent:PolicyMapEvent": "PolicyMapEvent"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/prefixList",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/prefixList",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/prefixList:PrefixList": "PrefixList"
+   "iosxe:index/prefixList:PrefixList": "PrefixList"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/radius",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/radius",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/radius:Radius": "Radius"
+   "iosxe:index/radius:Radius": "Radius"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/radiusServer",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/radiusServer",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/radiusServer:RadiusServer": "RadiusServer"
+   "iosxe:index/radiusServer:RadiusServer": "RadiusServer"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/restconf",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/restconf",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/restconf:Restconf": "Restconf"
+   "iosxe:index/restconf:Restconf": "Restconf"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/routeMap",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/routeMap",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/routeMap:RouteMap": "RouteMap"
+   "iosxe:index/routeMap:RouteMap": "RouteMap"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/service",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/service",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/service:Service": "Service"
+   "iosxe:index/service:Service": "Service"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/serviceTemplate",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/serviceTemplate",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/serviceTemplate:ServiceTemplate": "ServiceTemplate"
+   "iosxe:index/serviceTemplate:ServiceTemplate": "ServiceTemplate"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/snmpServer",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/snmpServer",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/snmpServer:SnmpServer": "SnmpServer"
+   "iosxe:index/snmpServer:SnmpServer": "SnmpServer"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/snmpServerGroup",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/snmpServerGroup",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/snmpServerGroup:SnmpServerGroup": "SnmpServerGroup"
+   "iosxe:index/snmpServerGroup:SnmpServerGroup": "SnmpServerGroup"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/snmpServerUser",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/snmpServerUser",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/snmpServerUser:SnmpServerUser": "SnmpServerUser"
+   "iosxe:index/snmpServerUser:SnmpServerUser": "SnmpServerUser"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/staticRoute",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/staticRoute",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/staticRoute:StaticRoute": "StaticRoute"
+   "iosxe:index/staticRoute:StaticRoute": "StaticRoute"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/staticRouteVrf",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/staticRouteVrf",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/staticRouteVrf:StaticRouteVrf": "StaticRouteVrf"
+   "iosxe:index/staticRouteVrf:StaticRouteVrf": "StaticRouteVrf"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/system",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/system",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/system:System": "System"
+   "iosxe:index/system:System": "System"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/tacacsServer",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/tacacsServer",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/tacacsServer:TacacsServer": "TacacsServer"
+   "iosxe:index/tacacsServer:TacacsServer": "TacacsServer"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/template",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/template",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/template:Template": "Template"
+   "iosxe:index/template:Template": "Template"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/udld",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/udld",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/udld:Udld": "Udld"
+   "iosxe:index/udld:Udld": "Udld"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/username",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/username",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/username:Username": "Username"
+   "iosxe:index/username:Username": "Username"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/vlan",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/vlan",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/vlan:Vlan": "Vlan"
+   "iosxe:index/vlan:Vlan": "Vlan"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/vlanAccessMap",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/vlanAccessMap",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/vlanAccessMap:VlanAccessMap": "VlanAccessMap"
+   "iosxe:index/vlanAccessMap:VlanAccessMap": "VlanAccessMap"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/vlanConfiguration",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/vlanConfiguration",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/vlanConfiguration:VlanConfiguration": "VlanConfiguration"
+   "iosxe:index/vlanConfiguration:VlanConfiguration": "VlanConfiguration"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/vrf",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/vrf",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/vrf:Vrf": "Vrf"
+   "iosxe:index/vrf:Vrf": "Vrf"
   }
  },
  {
   "pkg": "iosxe",
-  "mod": "iosxe/vtp",
-  "fqn": "lbrlabs_pulumi_iosxe.iosxe",
+  "mod": "index/vtp",
+  "fqn": "lbrlabs_pulumi_iosxe",
   "classes": {
-   "iosxe:iosxe/vtp:Vtp": "Vtp"
+   "iosxe:index/vtp:Vtp": "Vtp"
   }
  }
 ]

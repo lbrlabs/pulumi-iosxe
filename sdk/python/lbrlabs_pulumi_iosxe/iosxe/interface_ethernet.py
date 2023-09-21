@@ -1881,7 +1881,14 @@ class InterfaceEthernet(pulumi.CustomResource):
                  vrf_forwarding: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
-        Create a InterfaceEthernet resource with the given unique name, props, and options.
+        This resource can manage the Interface Ethernet configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/interfaceEthernet:InterfaceEthernet example "Cisco-IOS-XE-native:native/interface/GigabitEthernet=3"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[int] arp_timeout: Set ARP cache timeout - Range: `0`-`2147483`
@@ -1942,7 +1949,14 @@ class InterfaceEthernet(pulumi.CustomResource):
                  args: InterfaceEthernetArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a InterfaceEthernet resource with the given unique name, props, and options.
+        This resource can manage the Interface Ethernet configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/interfaceEthernet:InterfaceEthernet example "Cisco-IOS-XE-native:native/interface/GigabitEthernet=3"
+        ```
+
         :param str resource_name: The name of the resource.
         :param InterfaceEthernetArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

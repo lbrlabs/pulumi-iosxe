@@ -95,116 +95,185 @@ class GetVtpResult:
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
     @pulumi.getter
     def domain(self) -> str:
+        """
+        Set the name of the VTP administrative domain.
+        """
         return pulumi.get(self, "domain")
 
     @property
     @pulumi.getter
     def file(self) -> str:
+        """
+        Configure IFS filesystem file where VTP configuration is stored.
+        """
         return pulumi.get(self, "file")
 
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
     @property
     @pulumi.getter
     def interface(self) -> str:
+        """
+        The name of the interface providing the VTP updater ID for this device
+        """
         return pulumi.get(self, "interface")
 
     @property
     @pulumi.getter(name="interfaceOnly")
     def interface_only(self) -> bool:
+        """
+        Use only this interface's IP address as the VTP IP updater address
+        """
         return pulumi.get(self, "interface_only")
 
     @property
     @pulumi.getter(name="modeClientMst")
     def mode_client_mst(self) -> bool:
+        """
+        Set the mode for MST VTP instance
+        """
         return pulumi.get(self, "mode_client_mst")
 
     @property
     @pulumi.getter(name="modeClientUnknown")
     def mode_client_unknown(self) -> bool:
+        """
+        Set the mode for unknown VTP instances
+        """
         return pulumi.get(self, "mode_client_unknown")
 
     @property
     @pulumi.getter(name="modeClientVlan")
     def mode_client_vlan(self) -> bool:
+        """
+        Set the mode for VLAN VTP instance
+        """
         return pulumi.get(self, "mode_client_vlan")
 
     @property
     @pulumi.getter(name="modeOffMst")
     def mode_off_mst(self) -> bool:
+        """
+        Set the mode for MST VTP instance
+        """
         return pulumi.get(self, "mode_off_mst")
 
     @property
     @pulumi.getter(name="modeOffUnknown")
     def mode_off_unknown(self) -> bool:
+        """
+        Set the mode for unknown VTP instances
+        """
         return pulumi.get(self, "mode_off_unknown")
 
     @property
     @pulumi.getter(name="modeOffVlan")
     def mode_off_vlan(self) -> bool:
+        """
+        Set the mode for VLAN VTP instance
+        """
         return pulumi.get(self, "mode_off_vlan")
 
     @property
     @pulumi.getter(name="modeServerMst")
     def mode_server_mst(self) -> bool:
+        """
+        Set the mode for MST VTP instance
+        """
         return pulumi.get(self, "mode_server_mst")
 
     @property
     @pulumi.getter(name="modeServerUnknown")
     def mode_server_unknown(self) -> bool:
+        """
+        Set the mode for unknown VTP instances
+        """
         return pulumi.get(self, "mode_server_unknown")
 
     @property
     @pulumi.getter(name="modeServerVlan")
     def mode_server_vlan(self) -> bool:
+        """
+        Set the mode for VLAN VTP instance
+        """
         return pulumi.get(self, "mode_server_vlan")
 
     @property
     @pulumi.getter(name="modeTransparentMst")
     def mode_transparent_mst(self) -> bool:
+        """
+        Set the mode for MST VTP instance
+        """
         return pulumi.get(self, "mode_transparent_mst")
 
     @property
     @pulumi.getter(name="modeTransparentUnknown")
     def mode_transparent_unknown(self) -> bool:
+        """
+        Set the mode for unknown VTP instances
+        """
         return pulumi.get(self, "mode_transparent_unknown")
 
     @property
     @pulumi.getter(name="modeTransparentVlan")
     def mode_transparent_vlan(self) -> bool:
+        """
+        Set the mode for VLAN VTP instance
+        """
         return pulumi.get(self, "mode_transparent_vlan")
 
     @property
     @pulumi.getter
     def password(self) -> str:
+        """
+        The ascii password for the VTP administrative domain
+        """
         return pulumi.get(self, "password")
 
     @property
     @pulumi.getter(name="passwordHidden")
     def password_hidden(self) -> bool:
+        """
+        Set the VTP password hidden option
+        """
         return pulumi.get(self, "password_hidden")
 
     @property
     @pulumi.getter(name="passwordSecret")
     def password_secret(self) -> bool:
+        """
+        Specify the vtp password in encrypted form
+        """
         return pulumi.get(self, "password_secret")
 
     @property
     @pulumi.getter
     def pruning(self) -> bool:
+        """
+        Set the administrative domain to permit pruning
+        """
         return pulumi.get(self, "pruning")
 
     @property
     @pulumi.getter
     def version(self) -> int:
+        """
+        Set the administrative domain to VTP version
+        """
         return pulumi.get(self, "version")
 
 
@@ -242,7 +311,19 @@ class AwaitableGetVtpResult(GetVtpResult):
 def get_vtp(device: Optional[str] = None,
             opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetVtpResult:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the VTP configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_vtp()
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -279,6 +360,18 @@ def get_vtp(device: Optional[str] = None,
 def get_vtp_output(device: Optional[pulumi.Input[Optional[str]]] = None,
                    opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetVtpResult]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the VTP configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_vtp()
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     ...

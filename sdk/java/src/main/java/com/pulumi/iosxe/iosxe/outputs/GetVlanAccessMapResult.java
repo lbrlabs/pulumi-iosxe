@@ -13,33 +13,81 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetVlanAccessMapResult {
+    /**
+     * @return Take the action
+     * 
+     */
     private String action;
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
     private List<String> matchIpAddresses;
+    /**
+     * @return Match IPv6 address to access control.
+     * 
+     */
     private List<String> matchIpv6Addresses;
+    /**
+     * @return Vlan access map tag
+     * 
+     */
     private String name;
+    /**
+     * @return Sequence to insert to/delete from existing vlan access-map entry
+     * 
+     */
     private Integer sequence;
 
     private GetVlanAccessMapResult() {}
+    /**
+     * @return Take the action
+     * 
+     */
     public String action() {
         return this.action;
     }
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
     public List<String> matchIpAddresses() {
         return this.matchIpAddresses;
     }
+    /**
+     * @return Match IPv6 address to access control.
+     * 
+     */
     public List<String> matchIpv6Addresses() {
         return this.matchIpv6Addresses;
     }
+    /**
+     * @return Vlan access map tag
+     * 
+     */
     public String name() {
         return this.name;
     }
+    /**
+     * @return Sequence to insert to/delete from existing vlan access-map entry
+     * 
+     */
     public Integer sequence() {
         return this.sequence;
     }

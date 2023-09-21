@@ -9,9 +9,17 @@ import java.util.Objects;
 
 @CustomType
 public final class GetCryptoIkev2PolicyProposal {
+    /**
+     * @return Specify Proposal
+     * 
+     */
     private String proposals;
 
     private GetCryptoIkev2PolicyProposal() {}
+    /**
+     * @return Specify Proposal
+     * 
+     */
     public String proposals() {
         return this.proposals;
     }

@@ -14,16 +14,32 @@ public final class GetClassMapPlainArgs extends com.pulumi.resources.InvokeArgs 
 
     public static final GetClassMapPlainArgs Empty = new GetClassMapPlainArgs();
 
+    /**
+     * A device name from the provider configuration.
+     * 
+     */
     @Import(name="device")
     private @Nullable String device;
 
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
 
+    /**
+     * name of the class map
+     * 
+     */
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return name of the class map
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -53,11 +69,23 @@ public final class GetClassMapPlainArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetClassMapPlainArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param device A device name from the provider configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder device(@Nullable String device) {
             $.device = device;
             return this;
         }
 
+        /**
+         * @param name name of the class map
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

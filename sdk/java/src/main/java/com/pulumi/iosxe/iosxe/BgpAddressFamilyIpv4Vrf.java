@@ -16,6 +16,57 @@ import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the BGP Address Family IPv4 VRF configuration.
+ * 
+ * ## Example Usage
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.BgpAddressFamilyIpv4Vrf;
+ * import com.pulumi.iosxe.iosxe.BgpAddressFamilyIpv4VrfArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.BgpAddressFamilyIpv4VrfVrfArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new BgpAddressFamilyIpv4Vrf(&#34;example&#34;, BgpAddressFamilyIpv4VrfArgs.builder()        
+ *             .afName(&#34;unicast&#34;)
+ *             .asn(&#34;65000&#34;)
+ *             .vrfs(BgpAddressFamilyIpv4VrfVrfArgs.builder()
+ *                 .ipv4_unicast_advertise_l2vpn_evpn(true)
+ *                 .ipv4_unicast_networks(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
+ *                 .ipv4_unicast_networks_mask(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
+ *                 .ipv4_unicast_redistribute_connected(true)
+ *                 .ipv4_unicast_redistribute_static(true)
+ *                 .name(&#34;VRF1&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/bgpAddressFamilyIpv4Vrf:BgpAddressFamilyIpv4Vrf example &#34;Cisco-IOS-XE-native:native/router/Cisco-IOS-XE-bgp:bgp=65000/address-family/with-vrf/ipv4=unicast&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/bgpAddressFamilyIpv4Vrf:BgpAddressFamilyIpv4Vrf")
 public class BgpAddressFamilyIpv4Vrf extends com.pulumi.resources.CustomResource {
     /**

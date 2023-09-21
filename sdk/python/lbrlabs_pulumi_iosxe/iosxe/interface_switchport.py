@@ -574,7 +574,35 @@ class InterfaceSwitchport(pulumi.CustomResource):
                  type: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
-        Create a InterfaceSwitchport resource with the given unique name, props, and options.
+        This resource can manage the Interface Switchport configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.InterfaceSwitchport("example",
+            access_vlan="100",
+            host=False,
+            mode_access=False,
+            mode_dot1q_tunnel=False,
+            mode_private_vlan_host=False,
+            mode_private_vlan_promiscuous=False,
+            mode_private_vlan_trunk=False,
+            mode_trunk=True,
+            nonegotiate=False,
+            trunk_allowed_vlans="100,101",
+            trunk_native_vlan=100,
+            type="GigabitEthernet")
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/interfaceSwitchport:InterfaceSwitchport example "Cisco-IOS-XE-native:native/interface/GigabitEthernet=1/0/3/switchport-config/switchport"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] delete_mode: Configure behavior when deleting/destroying the resource. Either delete the entire object (YANG container) being
@@ -601,7 +629,35 @@ class InterfaceSwitchport(pulumi.CustomResource):
                  args: InterfaceSwitchportArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a InterfaceSwitchport resource with the given unique name, props, and options.
+        This resource can manage the Interface Switchport configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.InterfaceSwitchport("example",
+            access_vlan="100",
+            host=False,
+            mode_access=False,
+            mode_dot1q_tunnel=False,
+            mode_private_vlan_host=False,
+            mode_private_vlan_promiscuous=False,
+            mode_private_vlan_trunk=False,
+            mode_trunk=True,
+            nonegotiate=False,
+            trunk_allowed_vlans="100,101",
+            trunk_native_vlan=100,
+            type="GigabitEthernet")
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/interfaceSwitchport:InterfaceSwitchport example "Cisco-IOS-XE-native:native/interface/GigabitEthernet=1/0/3/switchport-config/switchport"
+        ```
+
         :param str resource_name: The name of the resource.
         :param InterfaceSwitchportArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

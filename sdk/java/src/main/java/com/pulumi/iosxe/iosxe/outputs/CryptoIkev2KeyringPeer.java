@@ -11,47 +11,123 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CryptoIkev2KeyringPeer {
+    /**
+     * @return Specify a description of this peer
+     * 
+     */
     private @Nullable String description;
+    /**
+     * @return Hostname of peer
+     * 
+     */
     private @Nullable String hostname;
+    /**
+     * @return IP address
+     * 
+     */
     private @Nullable String identityAddress;
+    /**
+     * @return email Domain Name
+     * 
+     */
     private @Nullable String identityEmailDomain;
+    /**
+     * @return Specify the name string
+     * 
+     */
     private @Nullable String identityEmailName;
+    /**
+     * @return email Domain Name
+     * 
+     */
     private @Nullable String identityFqdnDomain;
+    /**
+     * @return Specify the name string
+     * 
+     */
     private @Nullable String identityFqdnName;
+    /**
+     * @return proprietary types of identification (ID KEY ID)
+     * 
+     */
     private @Nullable String identityKeyId;
     private @Nullable String ipv4Address;
     private @Nullable String ipv4Mask;
     private @Nullable String ipv6Prefix;
     private String name;
     private @Nullable String preSharedKey;
+    /**
+     * @return - Choices: `0`, `6`
+     * 
+     */
     private @Nullable String preSharedKeyEncryption;
     private @Nullable String preSharedKeyLocal;
+    /**
+     * @return - Choices: `0`, `6`
+     * 
+     */
     private @Nullable String preSharedKeyLocalEncryption;
     private @Nullable String preSharedKeyRemote;
+    /**
+     * @return - Choices: `0`, `6`
+     * 
+     */
     private @Nullable String preSharedKeyRemoteEncryption;
 
     private CryptoIkev2KeyringPeer() {}
+    /**
+     * @return Specify a description of this peer
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
+    /**
+     * @return Hostname of peer
+     * 
+     */
     public Optional<String> hostname() {
         return Optional.ofNullable(this.hostname);
     }
+    /**
+     * @return IP address
+     * 
+     */
     public Optional<String> identityAddress() {
         return Optional.ofNullable(this.identityAddress);
     }
+    /**
+     * @return email Domain Name
+     * 
+     */
     public Optional<String> identityEmailDomain() {
         return Optional.ofNullable(this.identityEmailDomain);
     }
+    /**
+     * @return Specify the name string
+     * 
+     */
     public Optional<String> identityEmailName() {
         return Optional.ofNullable(this.identityEmailName);
     }
+    /**
+     * @return email Domain Name
+     * 
+     */
     public Optional<String> identityFqdnDomain() {
         return Optional.ofNullable(this.identityFqdnDomain);
     }
+    /**
+     * @return Specify the name string
+     * 
+     */
     public Optional<String> identityFqdnName() {
         return Optional.ofNullable(this.identityFqdnName);
     }
+    /**
+     * @return proprietary types of identification (ID KEY ID)
+     * 
+     */
     public Optional<String> identityKeyId() {
         return Optional.ofNullable(this.identityKeyId);
     }
@@ -70,18 +146,30 @@ public final class CryptoIkev2KeyringPeer {
     public Optional<String> preSharedKey() {
         return Optional.ofNullable(this.preSharedKey);
     }
+    /**
+     * @return - Choices: `0`, `6`
+     * 
+     */
     public Optional<String> preSharedKeyEncryption() {
         return Optional.ofNullable(this.preSharedKeyEncryption);
     }
     public Optional<String> preSharedKeyLocal() {
         return Optional.ofNullable(this.preSharedKeyLocal);
     }
+    /**
+     * @return - Choices: `0`, `6`
+     * 
+     */
     public Optional<String> preSharedKeyLocalEncryption() {
         return Optional.ofNullable(this.preSharedKeyLocalEncryption);
     }
     public Optional<String> preSharedKeyRemote() {
         return Optional.ofNullable(this.preSharedKeyRemote);
     }
+    /**
+     * @return - Choices: `0`, `6`
+     * 
+     */
     public Optional<String> preSharedKeyRemoteEncryption() {
         return Optional.ofNullable(this.preSharedKeyRemoteEncryption);
     }

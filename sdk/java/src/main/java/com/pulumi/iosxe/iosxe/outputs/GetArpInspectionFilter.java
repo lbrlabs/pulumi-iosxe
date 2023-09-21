@@ -12,12 +12,20 @@ import java.util.Objects;
 @CustomType
 public final class GetArpInspectionFilter {
     private String name;
+    /**
+     * @return Vlans to apply the filter
+     * 
+     */
     private List<GetArpInspectionFilterVlan> vlans;
 
     private GetArpInspectionFilter() {}
     public String name() {
         return this.name;
     }
+    /**
+     * @return Vlans to apply the filter
+     * 
+     */
     public List<GetArpInspectionFilterVlan> vlans() {
         return this.vlans;
     }

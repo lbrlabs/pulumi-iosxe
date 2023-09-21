@@ -255,7 +255,28 @@ class BgpL2vpnEvpnNeighbor(pulumi.CustomResource):
                  send_community: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
-        Create a BgpL2vpnEvpnNeighbor resource with the given unique name, props, and options.
+        This resource can manage the BGP L2VPN EVPN Neighbor configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.BgpL2vpnEvpnNeighbor("example",
+            activate=True,
+            asn="65000",
+            ip="3.3.3.3",
+            route_reflector_client=False,
+            send_community="both")
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/bgpL2vpnEvpnNeighbor:BgpL2vpnEvpnNeighbor example "Cisco-IOS-XE-native:native/router/Cisco-IOS-XE-bgp:bgp=65000/address-family/no-vrf/l2vpn=evpn/l2vpn-evpn/neighbor=3.3.3.3"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[bool] activate: Enable the address family for this neighbor - Default value: `true`
@@ -273,7 +294,28 @@ class BgpL2vpnEvpnNeighbor(pulumi.CustomResource):
                  args: BgpL2vpnEvpnNeighborArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a BgpL2vpnEvpnNeighbor resource with the given unique name, props, and options.
+        This resource can manage the BGP L2VPN EVPN Neighbor configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.BgpL2vpnEvpnNeighbor("example",
+            activate=True,
+            asn="65000",
+            ip="3.3.3.3",
+            route_reflector_client=False,
+            send_community="both")
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/bgpL2vpnEvpnNeighbor:BgpL2vpnEvpnNeighbor example "Cisco-IOS-XE-native:native/router/Cisco-IOS-XE-bgp:bgp=65000/address-family/no-vrf/l2vpn=evpn/l2vpn-evpn/neighbor=3.3.3.3"
+        ```
+
         :param str resource_name: The name of the resource.
         :param BgpL2vpnEvpnNeighborArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

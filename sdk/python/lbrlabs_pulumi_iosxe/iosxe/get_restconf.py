@@ -38,21 +38,33 @@ class GetRestconfResult:
     @property
     @pulumi.getter
     def attributes(self) -> Mapping[str, str]:
+        """
+        Map of key-value pairs which represents the attributes and its values.
+        """
         return pulumi.get(self, "attributes")
 
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
     @property
     @pulumi.getter
     def path(self) -> str:
+        """
+        A RESTCONF path, e.g. `openconfig-interfaces:interfaces`.
+        """
         return pulumi.get(self, "path")
 
 
@@ -72,7 +84,20 @@ def get_restconf(device: Optional[str] = None,
                  path: Optional[str] = None,
                  opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetRestconfResult:
     """
-    Use this data source to access information about an existing resource.
+    This data source can retrieve one or more attributes via RESTCONF.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_restconf(path="Cisco-IOS-XE-native:native/banner/login")
+    ```
+
+
+    :param str device: A device name from the provider configuration.
+    :param str path: A RESTCONF path, e.g. `openconfig-interfaces:interfaces`.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -92,6 +117,19 @@ def get_restconf_output(device: Optional[pulumi.Input[Optional[str]]] = None,
                         path: Optional[pulumi.Input[str]] = None,
                         opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetRestconfResult]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can retrieve one or more attributes via RESTCONF.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_restconf(path="Cisco-IOS-XE-native:native/banner/login")
+    ```
+
+
+    :param str device: A device name from the provider configuration.
+    :param str path: A RESTCONF path, e.g. `openconfig-interfaces:interfaces`.
     """
     ...

@@ -21,6 +21,86 @@ import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the OSPF VRF configuration.
+ * 
+ * ## Example Usage
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.OspfVrf;
+ * import com.pulumi.iosxe.iosxe.OspfVrfArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.OspfVrfAreaArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.OspfVrfNeighborArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.OspfVrfNetworkArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.OspfVrfSummaryAddressArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new OspfVrf(&#34;example&#34;, OspfVrfArgs.builder()        
+ *             .areas(OspfVrfAreaArgs.builder()
+ *                 .area_id(&#34;5&#34;)
+ *                 .authentication_message_digest(true)
+ *                 .nssa(true)
+ *                 .nssa_default_information_originate(true)
+ *                 .nssa_default_information_originate_metric(100)
+ *                 .nssa_default_information_originate_metric_type(1)
+ *                 .nssa_no_redistribution(true)
+ *                 .nssa_no_summary(true)
+ *                 .build())
+ *             .bfdAllInterfaces(true)
+ *             .defaultInformationOriginate(true)
+ *             .defaultInformationOriginateAlways(true)
+ *             .defaultMetric(21)
+ *             .distance(120)
+ *             .domainTag(10)
+ *             .neighbors(OspfVrfNeighborArgs.builder()
+ *                 .cost(100)
+ *                 .ip(&#34;2.2.2.2&#34;)
+ *                 .priority(10)
+ *                 .build())
+ *             .networks(OspfVrfNetworkArgs.builder()
+ *                 .area(&#34;0&#34;)
+ *                 .ip(&#34;3.3.3.0&#34;)
+ *                 .wildcard(&#34;0.0.0.255&#34;)
+ *                 .build())
+ *             .passiveInterfaceDefault(true)
+ *             .priority(100)
+ *             .processId(2)
+ *             .routerId(&#34;1.2.3.4&#34;)
+ *             .shutdown(false)
+ *             .summaryAddresses(OspfVrfSummaryAddressArgs.builder()
+ *                 .ip(&#34;3.3.3.0&#34;)
+ *                 .mask(&#34;255.255.255.0&#34;)
+ *                 .build())
+ *             .vrf(&#34;VRF1&#34;)
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/ospfVrf:OspfVrf example &#34;Cisco-IOS-XE-native:native/router/Cisco-IOS-XE-ospf:router-ospf/ospf/process-id-vrf=2,VRF1&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/ospfVrf:OspfVrf")
 public class OspfVrf extends com.pulumi.resources.CustomResource {
     /**

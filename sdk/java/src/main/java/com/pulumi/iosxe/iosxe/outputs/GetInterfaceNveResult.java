@@ -16,41 +16,97 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetInterfaceNveResult {
+    /**
+     * @return Interface specific description
+     * 
+     */
     private String description;
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
     private Boolean hostReachabilityProtocolBgp;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
     private Integer name;
+    /**
+     * @return Shutdown the selected interface
+     * 
+     */
     private Boolean shutdown;
+    /**
+     * @return Loopback interface
+     * 
+     */
     private Integer sourceInterfaceLoopback;
+    /**
+     * @return Configure VNI information
+     * 
+     */
     private List<GetInterfaceNveVniVrf> vniVrfs;
+    /**
+     * @return Configure VNI information
+     * 
+     */
     private List<GetInterfaceNveVni> vnis;
 
     private GetInterfaceNveResult() {}
+    /**
+     * @return Interface specific description
+     * 
+     */
     public String description() {
         return this.description;
     }
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
     public Boolean hostReachabilityProtocolBgp() {
         return this.hostReachabilityProtocolBgp;
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
     public Integer name() {
         return this.name;
     }
+    /**
+     * @return Shutdown the selected interface
+     * 
+     */
     public Boolean shutdown() {
         return this.shutdown;
     }
+    /**
+     * @return Loopback interface
+     * 
+     */
     public Integer sourceInterfaceLoopback() {
         return this.sourceInterfaceLoopback;
     }
+    /**
+     * @return Configure VNI information
+     * 
+     */
     public List<GetInterfaceNveVniVrf> vniVrfs() {
         return this.vniVrfs;
     }
+    /**
+     * @return Configure VNI information
+     * 
+     */
     public List<GetInterfaceNveVni> vnis() {
         return this.vnis;
     }

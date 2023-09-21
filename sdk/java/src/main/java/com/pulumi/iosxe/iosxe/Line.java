@@ -17,6 +17,68 @@ import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the Line configuration.
+ * 
+ * ## Example Usage
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.Line;
+ * import com.pulumi.iosxe.iosxe.LineArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.LineConsoleArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.LineVtyArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Line(&#34;example&#34;, LineArgs.builder()        
+ *             .consoles(LineConsoleArgs.builder()
+ *                 .exec_timeout_minutes(45)
+ *                 .exec_timeout_seconds(25)
+ *                 .first(&#34;0&#34;)
+ *                 .password(&#34;testpasswd&#34;)
+ *                 .password_type(&#34;0&#34;)
+ *                 .privilege_level(15)
+ *                 .stopbits(&#34;1&#34;)
+ *                 .build())
+ *             .vties(LineVtyArgs.builder()
+ *                 .access_classes(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
+ *                 .escape_character(&#34;27&#34;)
+ *                 .exec_timeout_minutes(45)
+ *                 .exec_timeout_seconds(25)
+ *                 .first(10)
+ *                 .last(27)
+ *                 .password(&#34;testpasswd&#34;)
+ *                 .password_type(&#34;0&#34;)
+ *                 .transport_preferred_protocol(&#34;none&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/line:Line example &#34;Cisco-IOS-XE-native:native/line&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/line:Line")
 public class Line extends com.pulumi.resources.CustomResource {
     /**

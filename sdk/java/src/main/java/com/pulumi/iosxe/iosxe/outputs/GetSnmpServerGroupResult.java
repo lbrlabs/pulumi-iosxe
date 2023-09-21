@@ -13,21 +13,45 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetSnmpServerGroupResult {
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
     private String name;
+    /**
+     * @return group using security Level
+     * 
+     */
     private List<GetSnmpServerGroupV3Security> v3Securities;
 
     private GetSnmpServerGroupResult() {}
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
     public String name() {
         return this.name;
     }
+    /**
+     * @return group using security Level
+     * 
+     */
     public List<GetSnmpServerGroupV3Security> v3Securities() {
         return this.v3Securities;
     }

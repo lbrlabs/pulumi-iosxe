@@ -14,21 +14,53 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetAaaAuthorizationResult {
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return For starting an exec (shell).
+     * 
+     */
     private List<GetAaaAuthorizationExec> execs;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
+    /**
+     * @return For network services. (PPP, SLIP, ARAP)
+     * 
+     */
     private List<GetAaaAuthorizationNetwork> networks;
 
     private GetAaaAuthorizationResult() {}
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return For starting an exec (shell).
+     * 
+     */
     public List<GetAaaAuthorizationExec> execs() {
         return this.execs;
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
+    /**
+     * @return For network services. (PPP, SLIP, ARAP)
+     * 
+     */
     public List<GetAaaAuthorizationNetwork> networks() {
         return this.networks;
     }

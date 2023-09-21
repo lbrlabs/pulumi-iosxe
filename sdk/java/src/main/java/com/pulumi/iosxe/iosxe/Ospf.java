@@ -21,6 +21,85 @@ import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the OSPF configuration.
+ * 
+ * ## Example Usage
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.Ospf;
+ * import com.pulumi.iosxe.iosxe.OspfArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.OspfAreaArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.OspfNeighborArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.OspfNetworkArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.OspfSummaryAddressArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Ospf(&#34;example&#34;, OspfArgs.builder()        
+ *             .areas(OspfAreaArgs.builder()
+ *                 .area_id(&#34;5&#34;)
+ *                 .authentication_message_digest(true)
+ *                 .nssa(true)
+ *                 .nssa_default_information_originate(true)
+ *                 .nssa_default_information_originate_metric(100)
+ *                 .nssa_default_information_originate_metric_type(1)
+ *                 .nssa_no_redistribution(true)
+ *                 .nssa_no_summary(true)
+ *                 .build())
+ *             .bfdAllInterfaces(true)
+ *             .defaultInformationOriginate(true)
+ *             .defaultInformationOriginateAlways(true)
+ *             .defaultMetric(21)
+ *             .distance(120)
+ *             .domainTag(10)
+ *             .neighbors(OspfNeighborArgs.builder()
+ *                 .cost(100)
+ *                 .ip(&#34;2.2.2.2&#34;)
+ *                 .priority(10)
+ *                 .build())
+ *             .networks(OspfNetworkArgs.builder()
+ *                 .area(&#34;0&#34;)
+ *                 .ip(&#34;3.3.3.0&#34;)
+ *                 .wildcard(&#34;0.0.0.255&#34;)
+ *                 .build())
+ *             .passiveInterfaceDefault(true)
+ *             .priority(100)
+ *             .processId(1)
+ *             .routerId(&#34;1.2.3.4&#34;)
+ *             .shutdown(false)
+ *             .summaryAddresses(OspfSummaryAddressArgs.builder()
+ *                 .ip(&#34;3.3.3.0&#34;)
+ *                 .mask(&#34;255.255.255.0&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/ospf:Ospf example &#34;Cisco-IOS-XE-native:native/router/Cisco-IOS-XE-ospf:router-ospf/ospf/process-id=1&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/ospf:Ospf")
 public class Ospf extends com.pulumi.resources.CustomResource {
     /**

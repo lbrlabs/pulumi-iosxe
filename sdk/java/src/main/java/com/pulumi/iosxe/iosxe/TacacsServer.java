@@ -15,6 +15,48 @@ import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the TACACS Server configuration.
+ * 
+ * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.TacacsServer;
+ * import com.pulumi.iosxe.iosxe.TacacsServerArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new TacacsServer(&#34;example&#34;, TacacsServerArgs.builder()        
+ *             .addressIpv4(&#34;10.10.15.13&#34;)
+ *             .key(&#34;123&#34;)
+ *             .timeout(4)
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/tacacsServer:TacacsServer example &#34;Cisco-IOS-XE-native:native/tacacs/Cisco-IOS-XE-aaa:server=tacacs_10.10.15.13&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/tacacsServer:TacacsServer")
 public class TacacsServer extends com.pulumi.resources.CustomResource {
     /**

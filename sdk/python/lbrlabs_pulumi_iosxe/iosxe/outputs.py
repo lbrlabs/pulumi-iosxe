@@ -964,6 +964,41 @@ class AccessListExtendedEntry(dict):
                  syn: Optional[bool] = None,
                  tos: Optional[str] = None,
                  urg: Optional[bool] = None):
+        """
+        :param int sequence: - Range: `1`-`2147483647`
+        :param str ace_rule_action: - Choices: `deny`, `permit`
+        :param bool ack: Match on the ACK bit
+        :param bool destination_any: Any destination host
+        :param str destination_host: A single destination host
+        :param str destination_object_group: Destination network object group
+        :param str destination_port_equal: Match only packets on a given port number up to 10 ports
+        :param str destination_port_greater_than: Match only packets with a greater port number
+        :param str destination_port_lesser_than: Match only packets with a lower port number
+        :param str destination_port_range_from: Match only packets in the range of port numbers
+        :param str destination_port_range_to: Match only packets in the range of port numbers
+        :param str dscp: Match packets with given dscp value
+        :param bool established: Match established connections
+        :param bool fin: Match on the FIN bit
+        :param bool fragments: Check non-initial fragments
+        :param bool log: Log matches against this entry
+        :param bool log_input: Log matches against this entry, including input interface
+        :param str precedence: Match packets with given precedence value
+        :param bool psh: Match on the PSH bit
+        :param str remark: Access list entry comment
+        :param bool rst: Match on the RST bit
+        :param str service_object_group: Service object group name
+        :param bool source_any: Any source host
+        :param str source_host: A single source host
+        :param str source_object_group: Source network object group
+        :param str source_port_equal: Match only packets on a given port number up to 10 ports
+        :param str source_port_greater_than: Match only packets with a greater port number
+        :param str source_port_lesser_than: Match only packets with a lower port number
+        :param str source_port_range_from: Match only packets in the range of port numbers
+        :param str source_port_range_to: Match only packets in the range of port numbers
+        :param bool syn: Match on the SYN bit
+        :param str tos: Match packets with given TOS value
+        :param bool urg: Match on the URG bit
+        """
         pulumi.set(__self__, "sequence", sequence)
         if ace_rule_action is not None:
             pulumi.set(__self__, "ace_rule_action", ace_rule_action)
@@ -1043,11 +1078,17 @@ class AccessListExtendedEntry(dict):
     @property
     @pulumi.getter
     def sequence(self) -> int:
+        """
+        - Range: `1`-`2147483647`
+        """
         return pulumi.get(self, "sequence")
 
     @property
     @pulumi.getter(name="aceRuleAction")
     def ace_rule_action(self) -> Optional[str]:
+        """
+        - Choices: `deny`, `permit`
+        """
         return pulumi.get(self, "ace_rule_action")
 
     @property
@@ -1058,46 +1099,73 @@ class AccessListExtendedEntry(dict):
     @property
     @pulumi.getter
     def ack(self) -> Optional[bool]:
+        """
+        Match on the ACK bit
+        """
         return pulumi.get(self, "ack")
 
     @property
     @pulumi.getter(name="destinationAny")
     def destination_any(self) -> Optional[bool]:
+        """
+        Any destination host
+        """
         return pulumi.get(self, "destination_any")
 
     @property
     @pulumi.getter(name="destinationHost")
     def destination_host(self) -> Optional[str]:
+        """
+        A single destination host
+        """
         return pulumi.get(self, "destination_host")
 
     @property
     @pulumi.getter(name="destinationObjectGroup")
     def destination_object_group(self) -> Optional[str]:
+        """
+        Destination network object group
+        """
         return pulumi.get(self, "destination_object_group")
 
     @property
     @pulumi.getter(name="destinationPortEqual")
     def destination_port_equal(self) -> Optional[str]:
+        """
+        Match only packets on a given port number up to 10 ports
+        """
         return pulumi.get(self, "destination_port_equal")
 
     @property
     @pulumi.getter(name="destinationPortGreaterThan")
     def destination_port_greater_than(self) -> Optional[str]:
+        """
+        Match only packets with a greater port number
+        """
         return pulumi.get(self, "destination_port_greater_than")
 
     @property
     @pulumi.getter(name="destinationPortLesserThan")
     def destination_port_lesser_than(self) -> Optional[str]:
+        """
+        Match only packets with a lower port number
+        """
         return pulumi.get(self, "destination_port_lesser_than")
 
     @property
     @pulumi.getter(name="destinationPortRangeFrom")
     def destination_port_range_from(self) -> Optional[str]:
+        """
+        Match only packets in the range of port numbers
+        """
         return pulumi.get(self, "destination_port_range_from")
 
     @property
     @pulumi.getter(name="destinationPortRangeTo")
     def destination_port_range_to(self) -> Optional[str]:
+        """
+        Match only packets in the range of port numbers
+        """
         return pulumi.get(self, "destination_port_range_to")
 
     @property
@@ -1113,96 +1181,153 @@ class AccessListExtendedEntry(dict):
     @property
     @pulumi.getter
     def dscp(self) -> Optional[str]:
+        """
+        Match packets with given dscp value
+        """
         return pulumi.get(self, "dscp")
 
     @property
     @pulumi.getter
     def established(self) -> Optional[bool]:
+        """
+        Match established connections
+        """
         return pulumi.get(self, "established")
 
     @property
     @pulumi.getter
     def fin(self) -> Optional[bool]:
+        """
+        Match on the FIN bit
+        """
         return pulumi.get(self, "fin")
 
     @property
     @pulumi.getter
     def fragments(self) -> Optional[bool]:
+        """
+        Check non-initial fragments
+        """
         return pulumi.get(self, "fragments")
 
     @property
     @pulumi.getter
     def log(self) -> Optional[bool]:
+        """
+        Log matches against this entry
+        """
         return pulumi.get(self, "log")
 
     @property
     @pulumi.getter(name="logInput")
     def log_input(self) -> Optional[bool]:
+        """
+        Log matches against this entry, including input interface
+        """
         return pulumi.get(self, "log_input")
 
     @property
     @pulumi.getter
     def precedence(self) -> Optional[str]:
+        """
+        Match packets with given precedence value
+        """
         return pulumi.get(self, "precedence")
 
     @property
     @pulumi.getter
     def psh(self) -> Optional[bool]:
+        """
+        Match on the PSH bit
+        """
         return pulumi.get(self, "psh")
 
     @property
     @pulumi.getter
     def remark(self) -> Optional[str]:
+        """
+        Access list entry comment
+        """
         return pulumi.get(self, "remark")
 
     @property
     @pulumi.getter
     def rst(self) -> Optional[bool]:
+        """
+        Match on the RST bit
+        """
         return pulumi.get(self, "rst")
 
     @property
     @pulumi.getter(name="serviceObjectGroup")
     def service_object_group(self) -> Optional[str]:
+        """
+        Service object group name
+        """
         return pulumi.get(self, "service_object_group")
 
     @property
     @pulumi.getter(name="sourceAny")
     def source_any(self) -> Optional[bool]:
+        """
+        Any source host
+        """
         return pulumi.get(self, "source_any")
 
     @property
     @pulumi.getter(name="sourceHost")
     def source_host(self) -> Optional[str]:
+        """
+        A single source host
+        """
         return pulumi.get(self, "source_host")
 
     @property
     @pulumi.getter(name="sourceObjectGroup")
     def source_object_group(self) -> Optional[str]:
+        """
+        Source network object group
+        """
         return pulumi.get(self, "source_object_group")
 
     @property
     @pulumi.getter(name="sourcePortEqual")
     def source_port_equal(self) -> Optional[str]:
+        """
+        Match only packets on a given port number up to 10 ports
+        """
         return pulumi.get(self, "source_port_equal")
 
     @property
     @pulumi.getter(name="sourcePortGreaterThan")
     def source_port_greater_than(self) -> Optional[str]:
+        """
+        Match only packets with a greater port number
+        """
         return pulumi.get(self, "source_port_greater_than")
 
     @property
     @pulumi.getter(name="sourcePortLesserThan")
     def source_port_lesser_than(self) -> Optional[str]:
+        """
+        Match only packets with a lower port number
+        """
         return pulumi.get(self, "source_port_lesser_than")
 
     @property
     @pulumi.getter(name="sourcePortRangeFrom")
     def source_port_range_from(self) -> Optional[str]:
+        """
+        Match only packets in the range of port numbers
+        """
         return pulumi.get(self, "source_port_range_from")
 
     @property
     @pulumi.getter(name="sourcePortRangeTo")
     def source_port_range_to(self) -> Optional[str]:
+        """
+        Match only packets in the range of port numbers
+        """
         return pulumi.get(self, "source_port_range_to")
 
     @property
@@ -1218,16 +1343,25 @@ class AccessListExtendedEntry(dict):
     @property
     @pulumi.getter
     def syn(self) -> Optional[bool]:
+        """
+        Match on the SYN bit
+        """
         return pulumi.get(self, "syn")
 
     @property
     @pulumi.getter
     def tos(self) -> Optional[str]:
+        """
+        Match packets with given TOS value
+        """
         return pulumi.get(self, "tos")
 
     @property
     @pulumi.getter
     def urg(self) -> Optional[bool]:
+        """
+        Match on the URG bit
+        """
         return pulumi.get(self, "urg")
 
 
@@ -1281,6 +1415,20 @@ class AccessListStandardEntry(dict):
                  permit_prefix: Optional[str] = None,
                  permit_prefix_mask: Optional[str] = None,
                  remark: Optional[str] = None):
+        """
+        :param int sequence: - Range: `1`-`2147483647`
+        :param bool deny_any: Any source prefix
+        :param str deny_host: A single source host
+        :param bool deny_log: Log matches against this entry
+        :param str deny_prefix: Network address prefix
+        :param str deny_prefix_mask: Wildcard bits
+        :param bool permit_any: Any source prefix
+        :param str permit_host: A single source host
+        :param bool permit_log: Log matches against this entry
+        :param str permit_prefix: Network address prefix
+        :param str permit_prefix_mask: Wildcard bits
+        :param str remark: Access list entry comment
+        """
         pulumi.set(__self__, "sequence", sequence)
         if deny_any is not None:
             pulumi.set(__self__, "deny_any", deny_any)
@@ -1308,61 +1456,97 @@ class AccessListStandardEntry(dict):
     @property
     @pulumi.getter
     def sequence(self) -> int:
+        """
+        - Range: `1`-`2147483647`
+        """
         return pulumi.get(self, "sequence")
 
     @property
     @pulumi.getter(name="denyAny")
     def deny_any(self) -> Optional[bool]:
+        """
+        Any source prefix
+        """
         return pulumi.get(self, "deny_any")
 
     @property
     @pulumi.getter(name="denyHost")
     def deny_host(self) -> Optional[str]:
+        """
+        A single source host
+        """
         return pulumi.get(self, "deny_host")
 
     @property
     @pulumi.getter(name="denyLog")
     def deny_log(self) -> Optional[bool]:
+        """
+        Log matches against this entry
+        """
         return pulumi.get(self, "deny_log")
 
     @property
     @pulumi.getter(name="denyPrefix")
     def deny_prefix(self) -> Optional[str]:
+        """
+        Network address prefix
+        """
         return pulumi.get(self, "deny_prefix")
 
     @property
     @pulumi.getter(name="denyPrefixMask")
     def deny_prefix_mask(self) -> Optional[str]:
+        """
+        Wildcard bits
+        """
         return pulumi.get(self, "deny_prefix_mask")
 
     @property
     @pulumi.getter(name="permitAny")
     def permit_any(self) -> Optional[bool]:
+        """
+        Any source prefix
+        """
         return pulumi.get(self, "permit_any")
 
     @property
     @pulumi.getter(name="permitHost")
     def permit_host(self) -> Optional[str]:
+        """
+        A single source host
+        """
         return pulumi.get(self, "permit_host")
 
     @property
     @pulumi.getter(name="permitLog")
     def permit_log(self) -> Optional[bool]:
+        """
+        Log matches against this entry
+        """
         return pulumi.get(self, "permit_log")
 
     @property
     @pulumi.getter(name="permitPrefix")
     def permit_prefix(self) -> Optional[str]:
+        """
+        Network address prefix
+        """
         return pulumi.get(self, "permit_prefix")
 
     @property
     @pulumi.getter(name="permitPrefixMask")
     def permit_prefix_mask(self) -> Optional[str]:
+        """
+        Wildcard bits
+        """
         return pulumi.get(self, "permit_prefix_mask")
 
     @property
     @pulumi.getter
     def remark(self) -> Optional[str]:
+        """
+        Access list entry comment
+        """
         return pulumi.get(self, "remark")
 
 
@@ -2601,6 +2785,19 @@ class CryptoIkev2KeyringPeer(dict):
                  pre_shared_key_local_encryption: Optional[str] = None,
                  pre_shared_key_remote: Optional[str] = None,
                  pre_shared_key_remote_encryption: Optional[str] = None):
+        """
+        :param str description: Specify a description of this peer
+        :param str hostname: Hostname of peer
+        :param str identity_address: IP address
+        :param str identity_email_domain: email Domain Name
+        :param str identity_email_name: Specify the name string
+        :param str identity_fqdn_domain: email Domain Name
+        :param str identity_fqdn_name: Specify the name string
+        :param str identity_key_id: proprietary types of identification (ID KEY ID)
+        :param str pre_shared_key_encryption: - Choices: `0`, `6`
+        :param str pre_shared_key_local_encryption: - Choices: `0`, `6`
+        :param str pre_shared_key_remote_encryption: - Choices: `0`, `6`
+        """
         pulumi.set(__self__, "name", name)
         if description is not None:
             pulumi.set(__self__, "description", description)
@@ -2645,41 +2842,65 @@ class CryptoIkev2KeyringPeer(dict):
     @property
     @pulumi.getter
     def description(self) -> Optional[str]:
+        """
+        Specify a description of this peer
+        """
         return pulumi.get(self, "description")
 
     @property
     @pulumi.getter
     def hostname(self) -> Optional[str]:
+        """
+        Hostname of peer
+        """
         return pulumi.get(self, "hostname")
 
     @property
     @pulumi.getter(name="identityAddress")
     def identity_address(self) -> Optional[str]:
+        """
+        IP address
+        """
         return pulumi.get(self, "identity_address")
 
     @property
     @pulumi.getter(name="identityEmailDomain")
     def identity_email_domain(self) -> Optional[str]:
+        """
+        email Domain Name
+        """
         return pulumi.get(self, "identity_email_domain")
 
     @property
     @pulumi.getter(name="identityEmailName")
     def identity_email_name(self) -> Optional[str]:
+        """
+        Specify the name string
+        """
         return pulumi.get(self, "identity_email_name")
 
     @property
     @pulumi.getter(name="identityFqdnDomain")
     def identity_fqdn_domain(self) -> Optional[str]:
+        """
+        email Domain Name
+        """
         return pulumi.get(self, "identity_fqdn_domain")
 
     @property
     @pulumi.getter(name="identityFqdnName")
     def identity_fqdn_name(self) -> Optional[str]:
+        """
+        Specify the name string
+        """
         return pulumi.get(self, "identity_fqdn_name")
 
     @property
     @pulumi.getter(name="identityKeyId")
     def identity_key_id(self) -> Optional[str]:
+        """
+        proprietary types of identification (ID KEY ID)
+        """
         return pulumi.get(self, "identity_key_id")
 
     @property
@@ -2705,6 +2926,9 @@ class CryptoIkev2KeyringPeer(dict):
     @property
     @pulumi.getter(name="preSharedKeyEncryption")
     def pre_shared_key_encryption(self) -> Optional[str]:
+        """
+        - Choices: `0`, `6`
+        """
         return pulumi.get(self, "pre_shared_key_encryption")
 
     @property
@@ -2715,6 +2939,9 @@ class CryptoIkev2KeyringPeer(dict):
     @property
     @pulumi.getter(name="preSharedKeyLocalEncryption")
     def pre_shared_key_local_encryption(self) -> Optional[str]:
+        """
+        - Choices: `0`, `6`
+        """
         return pulumi.get(self, "pre_shared_key_local_encryption")
 
     @property
@@ -2725,6 +2952,9 @@ class CryptoIkev2KeyringPeer(dict):
     @property
     @pulumi.getter(name="preSharedKeyRemoteEncryption")
     def pre_shared_key_remote_encryption(self) -> Optional[str]:
+        """
+        - Choices: `0`, `6`
+        """
         return pulumi.get(self, "pre_shared_key_remote_encryption")
 
 
@@ -2732,11 +2962,17 @@ class CryptoIkev2KeyringPeer(dict):
 class CryptoIkev2PolicyProposal(dict):
     def __init__(__self__, *,
                  proposals: str):
+        """
+        :param str proposals: Specify Proposal
+        """
         pulumi.set(__self__, "proposals", proposals)
 
     @property
     @pulumi.getter
     def proposals(self) -> str:
+        """
+        Specify Proposal
+        """
         return pulumi.get(self, "proposals")
 
 
@@ -5943,6 +6179,12 @@ class RestconfList(dict):
                  name: str,
                  items: Optional[Sequence[Mapping[str, str]]] = None,
                  values: Optional[Sequence[str]] = None):
+        """
+        :param str key: YANG list key attribute. In case of multiple keys, those should be separated by a comma (`,`).
+        :param str name: YANG list name.
+        :param Sequence[Mapping[str, str]] items: List of maps of key-value pairs which represents the YANG leafs and its values.
+        :param Sequence[str] values: YANG leaf-list values.
+        """
         pulumi.set(__self__, "key", key)
         pulumi.set(__self__, "name", name)
         if items is not None:
@@ -5953,21 +6195,33 @@ class RestconfList(dict):
     @property
     @pulumi.getter
     def key(self) -> str:
+        """
+        YANG list key attribute. In case of multiple keys, those should be separated by a comma (`,`).
+        """
         return pulumi.get(self, "key")
 
     @property
     @pulumi.getter
     def name(self) -> str:
+        """
+        YANG list name.
+        """
         return pulumi.get(self, "name")
 
     @property
     @pulumi.getter
     def items(self) -> Optional[Sequence[Mapping[str, str]]]:
+        """
+        List of maps of key-value pairs which represents the YANG leafs and its values.
+        """
         return pulumi.get(self, "items")
 
     @property
     @pulumi.getter
     def values(self) -> Optional[Sequence[str]]:
+        """
+        YANG leaf-list values.
+        """
         return pulumi.get(self, "values")
 
 
@@ -7781,6 +8035,9 @@ class GetAaaAccountingExecResult(dict):
     def __init__(__self__, *,
                  name: str,
                  start_stop_group1: str):
+        """
+        :param str start_stop_group1: Use Server-group
+        """
         pulumi.set(__self__, "name", name)
         pulumi.set(__self__, "start_stop_group1", start_stop_group1)
 
@@ -7792,6 +8049,9 @@ class GetAaaAccountingExecResult(dict):
     @property
     @pulumi.getter(name="startStopGroup1")
     def start_stop_group1(self) -> str:
+        """
+        Use Server-group
+        """
         return pulumi.get(self, "start_stop_group1")
 
 
@@ -7801,6 +8061,11 @@ class GetAaaAccountingNetworkResult(dict):
                  id: str,
                  start_stop_group1: str,
                  start_stop_group2: str):
+        """
+        :param str id: The path of the retrieved object.
+        :param str start_stop_group1: Use Server-group
+        :param str start_stop_group2: Use Server-group
+        """
         pulumi.set(__self__, "id", id)
         pulumi.set(__self__, "start_stop_group1", start_stop_group1)
         pulumi.set(__self__, "start_stop_group2", start_stop_group2)
@@ -7808,16 +8073,25 @@ class GetAaaAccountingNetworkResult(dict):
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
     @property
     @pulumi.getter(name="startStopGroup1")
     def start_stop_group1(self) -> str:
+        """
+        Use Server-group
+        """
         return pulumi.get(self, "start_stop_group1")
 
     @property
     @pulumi.getter(name="startStopGroup2")
     def start_stop_group2(self) -> str:
+        """
+        Use Server-group
+        """
         return pulumi.get(self, "start_stop_group2")
 
 
@@ -7845,6 +8119,25 @@ class GetAaaAuthenticationLoginResult(dict):
                  a4_local: bool,
                  a4_none: bool,
                  name: str):
+        """
+        :param bool a1_enable: Use enable password for authentication.
+        :param str a1_group: Use Server-group
+        :param bool a1_line: Use line password for authentication.
+        :param bool a1_local: Use local username authentication.
+        :param bool a1_none: NO authentication.
+        :param bool a2_enable: Use enable password for authentication.
+        :param str a2_group: Use Server-group
+        :param bool a2_line: Use line password for authentication.
+        :param bool a2_none: NO authentication.
+        :param bool a3_enable: Use enable password for authentication.
+        :param str a3_group: Use Server-group
+        :param bool a3_line: Use line password for authentication.
+        :param bool a3_none: NO authentication.
+        :param bool a4_enable: Use enable password for authentication.
+        :param str a4_group: Use Server-group
+        :param bool a4_line: Use line password for authentication.
+        :param bool a4_none: NO authentication.
+        """
         pulumi.set(__self__, "a1_enable", a1_enable)
         pulumi.set(__self__, "a1_group", a1_group)
         pulumi.set(__self__, "a1_line", a1_line)
@@ -7870,41 +8163,65 @@ class GetAaaAuthenticationLoginResult(dict):
     @property
     @pulumi.getter(name="a1Enable")
     def a1_enable(self) -> bool:
+        """
+        Use enable password for authentication.
+        """
         return pulumi.get(self, "a1_enable")
 
     @property
     @pulumi.getter(name="a1Group")
     def a1_group(self) -> str:
+        """
+        Use Server-group
+        """
         return pulumi.get(self, "a1_group")
 
     @property
     @pulumi.getter(name="a1Line")
     def a1_line(self) -> bool:
+        """
+        Use line password for authentication.
+        """
         return pulumi.get(self, "a1_line")
 
     @property
     @pulumi.getter(name="a1Local")
     def a1_local(self) -> bool:
+        """
+        Use local username authentication.
+        """
         return pulumi.get(self, "a1_local")
 
     @property
     @pulumi.getter(name="a1None")
     def a1_none(self) -> bool:
+        """
+        NO authentication.
+        """
         return pulumi.get(self, "a1_none")
 
     @property
     @pulumi.getter(name="a2Enable")
     def a2_enable(self) -> bool:
+        """
+        Use enable password for authentication.
+        """
         return pulumi.get(self, "a2_enable")
 
     @property
     @pulumi.getter(name="a2Group")
     def a2_group(self) -> str:
+        """
+        Use Server-group
+        """
         return pulumi.get(self, "a2_group")
 
     @property
     @pulumi.getter(name="a2Line")
     def a2_line(self) -> bool:
+        """
+        Use line password for authentication.
+        """
         return pulumi.get(self, "a2_line")
 
     @property
@@ -7915,21 +8232,33 @@ class GetAaaAuthenticationLoginResult(dict):
     @property
     @pulumi.getter(name="a2None")
     def a2_none(self) -> bool:
+        """
+        NO authentication.
+        """
         return pulumi.get(self, "a2_none")
 
     @property
     @pulumi.getter(name="a3Enable")
     def a3_enable(self) -> bool:
+        """
+        Use enable password for authentication.
+        """
         return pulumi.get(self, "a3_enable")
 
     @property
     @pulumi.getter(name="a3Group")
     def a3_group(self) -> str:
+        """
+        Use Server-group
+        """
         return pulumi.get(self, "a3_group")
 
     @property
     @pulumi.getter(name="a3Line")
     def a3_line(self) -> bool:
+        """
+        Use line password for authentication.
+        """
         return pulumi.get(self, "a3_line")
 
     @property
@@ -7940,21 +8269,33 @@ class GetAaaAuthenticationLoginResult(dict):
     @property
     @pulumi.getter(name="a3None")
     def a3_none(self) -> bool:
+        """
+        NO authentication.
+        """
         return pulumi.get(self, "a3_none")
 
     @property
     @pulumi.getter(name="a4Enable")
     def a4_enable(self) -> bool:
+        """
+        Use enable password for authentication.
+        """
         return pulumi.get(self, "a4_enable")
 
     @property
     @pulumi.getter(name="a4Group")
     def a4_group(self) -> str:
+        """
+        Use Server-group
+        """
         return pulumi.get(self, "a4_group")
 
     @property
     @pulumi.getter(name="a4Line")
     def a4_line(self) -> bool:
+        """
+        Use line password for authentication.
+        """
         return pulumi.get(self, "a4_line")
 
     @property
@@ -7965,6 +8306,9 @@ class GetAaaAuthenticationLoginResult(dict):
     @property
     @pulumi.getter(name="a4None")
     def a4_none(self) -> bool:
+        """
+        NO authentication.
+        """
         return pulumi.get(self, "a4_none")
 
     @property
@@ -7981,6 +8325,11 @@ class GetAaaAuthorizationExecResult(dict):
                  a1_local: bool,
                  a2_local: bool,
                  name: str):
+        """
+        :param str a1_group: Use Server-group
+        :param bool a1_if_authenticated: Succeed if user has authenticated.
+        :param bool a1_local: Use local database
+        """
         pulumi.set(__self__, "a1_group", a1_group)
         pulumi.set(__self__, "a1_if_authenticated", a1_if_authenticated)
         pulumi.set(__self__, "a1_local", a1_local)
@@ -7990,16 +8339,25 @@ class GetAaaAuthorizationExecResult(dict):
     @property
     @pulumi.getter(name="a1Group")
     def a1_group(self) -> str:
+        """
+        Use Server-group
+        """
         return pulumi.get(self, "a1_group")
 
     @property
     @pulumi.getter(name="a1IfAuthenticated")
     def a1_if_authenticated(self) -> bool:
+        """
+        Succeed if user has authenticated.
+        """
         return pulumi.get(self, "a1_if_authenticated")
 
     @property
     @pulumi.getter(name="a1Local")
     def a1_local(self) -> bool:
+        """
+        Use local database
+        """
         return pulumi.get(self, "a1_local")
 
     @property
@@ -8018,17 +8376,27 @@ class GetAaaAuthorizationNetworkResult(dict):
     def __init__(__self__, *,
                  a1_group: str,
                  id: str):
+        """
+        :param str a1_group: Use Server-group
+        :param str id: The path of the retrieved object.
+        """
         pulumi.set(__self__, "a1_group", a1_group)
         pulumi.set(__self__, "id", id)
 
     @property
     @pulumi.getter(name="a1Group")
     def a1_group(self) -> str:
+        """
+        Use Server-group
+        """
         return pulumi.get(self, "a1_group")
 
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
 
@@ -8038,6 +8406,11 @@ class GetAaaGroupServerRadiusResult(dict):
                  ip_radius_source_interface_loopback: int,
                  name: str,
                  server_names: Sequence['outputs.GetAaaGroupServerRadiusServerNameResult']):
+        """
+        :param int ip_radius_source_interface_loopback: Loopback interface
+        :param str name: Radius Server-group name with max string length 32
+        :param Sequence['GetAaaGroupServerRadiusServerNameArgs'] server_names: Name of radius server
+        """
         pulumi.set(__self__, "ip_radius_source_interface_loopback", ip_radius_source_interface_loopback)
         pulumi.set(__self__, "name", name)
         pulumi.set(__self__, "server_names", server_names)
@@ -8045,16 +8418,25 @@ class GetAaaGroupServerRadiusResult(dict):
     @property
     @pulumi.getter(name="ipRadiusSourceInterfaceLoopback")
     def ip_radius_source_interface_loopback(self) -> int:
+        """
+        Loopback interface
+        """
         return pulumi.get(self, "ip_radius_source_interface_loopback")
 
     @property
     @pulumi.getter
     def name(self) -> str:
+        """
+        Radius Server-group name with max string length 32
+        """
         return pulumi.get(self, "name")
 
     @property
     @pulumi.getter(name="serverNames")
     def server_names(self) -> Sequence['outputs.GetAaaGroupServerRadiusServerNameResult']:
+        """
+        Name of radius server
+        """
         return pulumi.get(self, "server_names")
 
 
@@ -8075,17 +8457,27 @@ class GetAaaGroupServerTacacsplusResult(dict):
     def __init__(__self__, *,
                  name: str,
                  server_names: Sequence['outputs.GetAaaGroupServerTacacsplusServerNameResult']):
+        """
+        :param str name: Server-group name with max string length 32
+        :param Sequence['GetAaaGroupServerTacacsplusServerNameArgs'] server_names: Name of tacacs server
+        """
         pulumi.set(__self__, "name", name)
         pulumi.set(__self__, "server_names", server_names)
 
     @property
     @pulumi.getter
     def name(self) -> str:
+        """
+        Server-group name with max string length 32
+        """
         return pulumi.get(self, "name")
 
     @property
     @pulumi.getter(name="serverNames")
     def server_names(self) -> Sequence['outputs.GetAaaGroupServerTacacsplusServerNameResult']:
+        """
+        Name of tacacs server
+        """
         return pulumi.get(self, "server_names")
 
 
@@ -8168,6 +8560,39 @@ class GetAccessListExtendedEntryResult(dict):
                  syn: bool,
                  tos: str,
                  urg: bool):
+        """
+        :param bool ack: Match on the ACK bit
+        :param bool destination_any: Any destination host
+        :param str destination_host: A single destination host
+        :param str destination_object_group: Destination network object group
+        :param str destination_port_equal: Match only packets on a given port number up to 10 ports
+        :param str destination_port_greater_than: Match only packets with a greater port number
+        :param str destination_port_lesser_than: Match only packets with a lower port number
+        :param str destination_port_range_from: Match only packets in the range of port numbers
+        :param str destination_port_range_to: Match only packets in the range of port numbers
+        :param str dscp: Match packets with given dscp value
+        :param bool established: Match established connections
+        :param bool fin: Match on the FIN bit
+        :param bool fragments: Check non-initial fragments
+        :param bool log: Log matches against this entry
+        :param bool log_input: Log matches against this entry, including input interface
+        :param str precedence: Match packets with given precedence value
+        :param bool psh: Match on the PSH bit
+        :param str remark: Access list entry comment
+        :param bool rst: Match on the RST bit
+        :param str service_object_group: Service object group name
+        :param bool source_any: Any source host
+        :param str source_host: A single source host
+        :param str source_object_group: Source network object group
+        :param str source_port_equal: Match only packets on a given port number up to 10 ports
+        :param str source_port_greater_than: Match only packets with a greater port number
+        :param str source_port_lesser_than: Match only packets with a lower port number
+        :param str source_port_range_from: Match only packets in the range of port numbers
+        :param str source_port_range_to: Match only packets in the range of port numbers
+        :param bool syn: Match on the SYN bit
+        :param str tos: Match packets with given TOS value
+        :param bool urg: Match on the URG bit
+        """
         pulumi.set(__self__, "ace_rule_action", ace_rule_action)
         pulumi.set(__self__, "ace_rule_protocol", ace_rule_protocol)
         pulumi.set(__self__, "ack", ack)
@@ -8220,46 +8645,73 @@ class GetAccessListExtendedEntryResult(dict):
     @property
     @pulumi.getter
     def ack(self) -> bool:
+        """
+        Match on the ACK bit
+        """
         return pulumi.get(self, "ack")
 
     @property
     @pulumi.getter(name="destinationAny")
     def destination_any(self) -> bool:
+        """
+        Any destination host
+        """
         return pulumi.get(self, "destination_any")
 
     @property
     @pulumi.getter(name="destinationHost")
     def destination_host(self) -> str:
+        """
+        A single destination host
+        """
         return pulumi.get(self, "destination_host")
 
     @property
     @pulumi.getter(name="destinationObjectGroup")
     def destination_object_group(self) -> str:
+        """
+        Destination network object group
+        """
         return pulumi.get(self, "destination_object_group")
 
     @property
     @pulumi.getter(name="destinationPortEqual")
     def destination_port_equal(self) -> str:
+        """
+        Match only packets on a given port number up to 10 ports
+        """
         return pulumi.get(self, "destination_port_equal")
 
     @property
     @pulumi.getter(name="destinationPortGreaterThan")
     def destination_port_greater_than(self) -> str:
+        """
+        Match only packets with a greater port number
+        """
         return pulumi.get(self, "destination_port_greater_than")
 
     @property
     @pulumi.getter(name="destinationPortLesserThan")
     def destination_port_lesser_than(self) -> str:
+        """
+        Match only packets with a lower port number
+        """
         return pulumi.get(self, "destination_port_lesser_than")
 
     @property
     @pulumi.getter(name="destinationPortRangeFrom")
     def destination_port_range_from(self) -> str:
+        """
+        Match only packets in the range of port numbers
+        """
         return pulumi.get(self, "destination_port_range_from")
 
     @property
     @pulumi.getter(name="destinationPortRangeTo")
     def destination_port_range_to(self) -> str:
+        """
+        Match only packets in the range of port numbers
+        """
         return pulumi.get(self, "destination_port_range_to")
 
     @property
@@ -8275,51 +8727,81 @@ class GetAccessListExtendedEntryResult(dict):
     @property
     @pulumi.getter
     def dscp(self) -> str:
+        """
+        Match packets with given dscp value
+        """
         return pulumi.get(self, "dscp")
 
     @property
     @pulumi.getter
     def established(self) -> bool:
+        """
+        Match established connections
+        """
         return pulumi.get(self, "established")
 
     @property
     @pulumi.getter
     def fin(self) -> bool:
+        """
+        Match on the FIN bit
+        """
         return pulumi.get(self, "fin")
 
     @property
     @pulumi.getter
     def fragments(self) -> bool:
+        """
+        Check non-initial fragments
+        """
         return pulumi.get(self, "fragments")
 
     @property
     @pulumi.getter
     def log(self) -> bool:
+        """
+        Log matches against this entry
+        """
         return pulumi.get(self, "log")
 
     @property
     @pulumi.getter(name="logInput")
     def log_input(self) -> bool:
+        """
+        Log matches against this entry, including input interface
+        """
         return pulumi.get(self, "log_input")
 
     @property
     @pulumi.getter
     def precedence(self) -> str:
+        """
+        Match packets with given precedence value
+        """
         return pulumi.get(self, "precedence")
 
     @property
     @pulumi.getter
     def psh(self) -> bool:
+        """
+        Match on the PSH bit
+        """
         return pulumi.get(self, "psh")
 
     @property
     @pulumi.getter
     def remark(self) -> str:
+        """
+        Access list entry comment
+        """
         return pulumi.get(self, "remark")
 
     @property
     @pulumi.getter
     def rst(self) -> bool:
+        """
+        Match on the RST bit
+        """
         return pulumi.get(self, "rst")
 
     @property
@@ -8330,46 +8812,73 @@ class GetAccessListExtendedEntryResult(dict):
     @property
     @pulumi.getter(name="serviceObjectGroup")
     def service_object_group(self) -> str:
+        """
+        Service object group name
+        """
         return pulumi.get(self, "service_object_group")
 
     @property
     @pulumi.getter(name="sourceAny")
     def source_any(self) -> bool:
+        """
+        Any source host
+        """
         return pulumi.get(self, "source_any")
 
     @property
     @pulumi.getter(name="sourceHost")
     def source_host(self) -> str:
+        """
+        A single source host
+        """
         return pulumi.get(self, "source_host")
 
     @property
     @pulumi.getter(name="sourceObjectGroup")
     def source_object_group(self) -> str:
+        """
+        Source network object group
+        """
         return pulumi.get(self, "source_object_group")
 
     @property
     @pulumi.getter(name="sourcePortEqual")
     def source_port_equal(self) -> str:
+        """
+        Match only packets on a given port number up to 10 ports
+        """
         return pulumi.get(self, "source_port_equal")
 
     @property
     @pulumi.getter(name="sourcePortGreaterThan")
     def source_port_greater_than(self) -> str:
+        """
+        Match only packets with a greater port number
+        """
         return pulumi.get(self, "source_port_greater_than")
 
     @property
     @pulumi.getter(name="sourcePortLesserThan")
     def source_port_lesser_than(self) -> str:
+        """
+        Match only packets with a lower port number
+        """
         return pulumi.get(self, "source_port_lesser_than")
 
     @property
     @pulumi.getter(name="sourcePortRangeFrom")
     def source_port_range_from(self) -> str:
+        """
+        Match only packets in the range of port numbers
+        """
         return pulumi.get(self, "source_port_range_from")
 
     @property
     @pulumi.getter(name="sourcePortRangeTo")
     def source_port_range_to(self) -> str:
+        """
+        Match only packets in the range of port numbers
+        """
         return pulumi.get(self, "source_port_range_to")
 
     @property
@@ -8385,16 +8894,25 @@ class GetAccessListExtendedEntryResult(dict):
     @property
     @pulumi.getter
     def syn(self) -> bool:
+        """
+        Match on the SYN bit
+        """
         return pulumi.get(self, "syn")
 
     @property
     @pulumi.getter
     def tos(self) -> str:
+        """
+        Match packets with given TOS value
+        """
         return pulumi.get(self, "tos")
 
     @property
     @pulumi.getter
     def urg(self) -> bool:
+        """
+        Match on the URG bit
+        """
         return pulumi.get(self, "urg")
 
 
@@ -8413,6 +8931,19 @@ class GetAccessListStandardEntryResult(dict):
                  permit_prefix_mask: str,
                  remark: str,
                  sequence: int):
+        """
+        :param bool deny_any: Any source prefix
+        :param str deny_host: A single source host
+        :param bool deny_log: Log matches against this entry
+        :param str deny_prefix: Network address prefix
+        :param str deny_prefix_mask: Wildcard bits
+        :param bool permit_any: Any source prefix
+        :param str permit_host: A single source host
+        :param bool permit_log: Log matches against this entry
+        :param str permit_prefix: Network address prefix
+        :param str permit_prefix_mask: Wildcard bits
+        :param str remark: Access list entry comment
+        """
         pulumi.set(__self__, "deny_any", deny_any)
         pulumi.set(__self__, "deny_host", deny_host)
         pulumi.set(__self__, "deny_log", deny_log)
@@ -8429,56 +8960,89 @@ class GetAccessListStandardEntryResult(dict):
     @property
     @pulumi.getter(name="denyAny")
     def deny_any(self) -> bool:
+        """
+        Any source prefix
+        """
         return pulumi.get(self, "deny_any")
 
     @property
     @pulumi.getter(name="denyHost")
     def deny_host(self) -> str:
+        """
+        A single source host
+        """
         return pulumi.get(self, "deny_host")
 
     @property
     @pulumi.getter(name="denyLog")
     def deny_log(self) -> bool:
+        """
+        Log matches against this entry
+        """
         return pulumi.get(self, "deny_log")
 
     @property
     @pulumi.getter(name="denyPrefix")
     def deny_prefix(self) -> str:
+        """
+        Network address prefix
+        """
         return pulumi.get(self, "deny_prefix")
 
     @property
     @pulumi.getter(name="denyPrefixMask")
     def deny_prefix_mask(self) -> str:
+        """
+        Wildcard bits
+        """
         return pulumi.get(self, "deny_prefix_mask")
 
     @property
     @pulumi.getter(name="permitAny")
     def permit_any(self) -> bool:
+        """
+        Any source prefix
+        """
         return pulumi.get(self, "permit_any")
 
     @property
     @pulumi.getter(name="permitHost")
     def permit_host(self) -> str:
+        """
+        A single source host
+        """
         return pulumi.get(self, "permit_host")
 
     @property
     @pulumi.getter(name="permitLog")
     def permit_log(self) -> bool:
+        """
+        Log matches against this entry
+        """
         return pulumi.get(self, "permit_log")
 
     @property
     @pulumi.getter(name="permitPrefix")
     def permit_prefix(self) -> str:
+        """
+        Network address prefix
+        """
         return pulumi.get(self, "permit_prefix")
 
     @property
     @pulumi.getter(name="permitPrefixMask")
     def permit_prefix_mask(self) -> str:
+        """
+        Wildcard bits
+        """
         return pulumi.get(self, "permit_prefix_mask")
 
     @property
     @pulumi.getter
     def remark(self) -> str:
+        """
+        Access list entry comment
+        """
         return pulumi.get(self, "remark")
 
     @property
@@ -8492,6 +9056,9 @@ class GetArpInspectionFilterResult(dict):
     def __init__(__self__, *,
                  name: str,
                  vlans: Sequence['outputs.GetArpInspectionFilterVlanResult']):
+        """
+        :param Sequence['GetArpInspectionFilterVlanArgs'] vlans: Vlans to apply the filter
+        """
         pulumi.set(__self__, "name", name)
         pulumi.set(__self__, "vlans", vlans)
 
@@ -8503,6 +9070,9 @@ class GetArpInspectionFilterResult(dict):
     @property
     @pulumi.getter
     def vlans(self) -> Sequence['outputs.GetArpInspectionFilterVlanResult']:
+        """
+        Vlans to apply the filter
+        """
         return pulumi.get(self, "vlans")
 
 
@@ -8533,6 +9103,13 @@ class GetBfdIpv4BothVrfResult(dict):
                  src_ip: str,
                  src_vrf: str,
                  template_name: str):
+        """
+        :param str dest_ip: Destination IP prefix/len
+        :param str dst_vrf: Destination VRF instance name
+        :param str src_ip: Source IP prefix/len
+        :param str src_vrf: source VRF instance name
+        :param str template_name: BFD template name
+        """
         pulumi.set(__self__, "dest_ip", dest_ip)
         pulumi.set(__self__, "dst_vrf", dst_vrf)
         pulumi.set(__self__, "src_ip", src_ip)
@@ -8542,26 +9119,41 @@ class GetBfdIpv4BothVrfResult(dict):
     @property
     @pulumi.getter(name="destIp")
     def dest_ip(self) -> str:
+        """
+        Destination IP prefix/len
+        """
         return pulumi.get(self, "dest_ip")
 
     @property
     @pulumi.getter(name="dstVrf")
     def dst_vrf(self) -> str:
+        """
+        Destination VRF instance name
+        """
         return pulumi.get(self, "dst_vrf")
 
     @property
     @pulumi.getter(name="srcIp")
     def src_ip(self) -> str:
+        """
+        Source IP prefix/len
+        """
         return pulumi.get(self, "src_ip")
 
     @property
     @pulumi.getter(name="srcVrf")
     def src_vrf(self) -> str:
+        """
+        source VRF instance name
+        """
         return pulumi.get(self, "src_vrf")
 
     @property
     @pulumi.getter(name="templateName")
     def template_name(self) -> str:
+        """
+        BFD template name
+        """
         return pulumi.get(self, "template_name")
 
 
@@ -8572,6 +9164,12 @@ class GetBfdIpv4WithDstVrfResult(dict):
                  dst_vrf: str,
                  src_ip: str,
                  template_name: str):
+        """
+        :param str dest_ip: Destination IP prefix/len
+        :param str dst_vrf: Destination VRF instance name
+        :param str src_ip: Source IP prefix/len
+        :param str template_name: BFD template name
+        """
         pulumi.set(__self__, "dest_ip", dest_ip)
         pulumi.set(__self__, "dst_vrf", dst_vrf)
         pulumi.set(__self__, "src_ip", src_ip)
@@ -8580,21 +9178,33 @@ class GetBfdIpv4WithDstVrfResult(dict):
     @property
     @pulumi.getter(name="destIp")
     def dest_ip(self) -> str:
+        """
+        Destination IP prefix/len
+        """
         return pulumi.get(self, "dest_ip")
 
     @property
     @pulumi.getter(name="dstVrf")
     def dst_vrf(self) -> str:
+        """
+        Destination VRF instance name
+        """
         return pulumi.get(self, "dst_vrf")
 
     @property
     @pulumi.getter(name="srcIp")
     def src_ip(self) -> str:
+        """
+        Source IP prefix/len
+        """
         return pulumi.get(self, "src_ip")
 
     @property
     @pulumi.getter(name="templateName")
     def template_name(self) -> str:
+        """
+        BFD template name
+        """
         return pulumi.get(self, "template_name")
 
 
@@ -8605,6 +9215,12 @@ class GetBfdIpv4WithSrcVrfResult(dict):
                  src_ip: str,
                  src_vrf: str,
                  template_name: str):
+        """
+        :param str dest_ip: Destination IP prefix/len
+        :param str src_ip: Source IP prefix/len
+        :param str src_vrf: source VRF instance name
+        :param str template_name: BFD template name
+        """
         pulumi.set(__self__, "dest_ip", dest_ip)
         pulumi.set(__self__, "src_ip", src_ip)
         pulumi.set(__self__, "src_vrf", src_vrf)
@@ -8613,21 +9229,33 @@ class GetBfdIpv4WithSrcVrfResult(dict):
     @property
     @pulumi.getter(name="destIp")
     def dest_ip(self) -> str:
+        """
+        Destination IP prefix/len
+        """
         return pulumi.get(self, "dest_ip")
 
     @property
     @pulumi.getter(name="srcIp")
     def src_ip(self) -> str:
+        """
+        Source IP prefix/len
+        """
         return pulumi.get(self, "src_ip")
 
     @property
     @pulumi.getter(name="srcVrf")
     def src_vrf(self) -> str:
+        """
+        source VRF instance name
+        """
         return pulumi.get(self, "src_vrf")
 
     @property
     @pulumi.getter(name="templateName")
     def template_name(self) -> str:
+        """
+        BFD template name
+        """
         return pulumi.get(self, "template_name")
 
 
@@ -8637,6 +9265,11 @@ class GetBfdIpv4WithoutVrfResult(dict):
                  dest_ip: str,
                  src_ip: str,
                  template_name: str):
+        """
+        :param str dest_ip: Destination IP prefix/len
+        :param str src_ip: Source IP prefix/len
+        :param str template_name: BFD template name
+        """
         pulumi.set(__self__, "dest_ip", dest_ip)
         pulumi.set(__self__, "src_ip", src_ip)
         pulumi.set(__self__, "template_name", template_name)
@@ -8644,16 +9277,25 @@ class GetBfdIpv4WithoutVrfResult(dict):
     @property
     @pulumi.getter(name="destIp")
     def dest_ip(self) -> str:
+        """
+        Destination IP prefix/len
+        """
         return pulumi.get(self, "dest_ip")
 
     @property
     @pulumi.getter(name="srcIp")
     def src_ip(self) -> str:
+        """
+        Source IP prefix/len
+        """
         return pulumi.get(self, "src_ip")
 
     @property
     @pulumi.getter(name="templateName")
     def template_name(self) -> str:
+        """
+        BFD template name
+        """
         return pulumi.get(self, "template_name")
 
 
@@ -8665,6 +9307,13 @@ class GetBfdIpv6WithBothVrfResult(dict):
                  src_ipv6: str,
                  src_vrf: str,
                  template_name: str):
+        """
+        :param str dest_ipv6: Destination IPv6 prefix/len
+        :param str dst_vrf: Destination VRF instance name
+        :param str src_ipv6: Source IPv6 prefix/len
+        :param str src_vrf: source VRF instance name
+        :param str template_name: BFD template name
+        """
         pulumi.set(__self__, "dest_ipv6", dest_ipv6)
         pulumi.set(__self__, "dst_vrf", dst_vrf)
         pulumi.set(__self__, "src_ipv6", src_ipv6)
@@ -8674,26 +9323,41 @@ class GetBfdIpv6WithBothVrfResult(dict):
     @property
     @pulumi.getter(name="destIpv6")
     def dest_ipv6(self) -> str:
+        """
+        Destination IPv6 prefix/len
+        """
         return pulumi.get(self, "dest_ipv6")
 
     @property
     @pulumi.getter(name="dstVrf")
     def dst_vrf(self) -> str:
+        """
+        Destination VRF instance name
+        """
         return pulumi.get(self, "dst_vrf")
 
     @property
     @pulumi.getter(name="srcIpv6")
     def src_ipv6(self) -> str:
+        """
+        Source IPv6 prefix/len
+        """
         return pulumi.get(self, "src_ipv6")
 
     @property
     @pulumi.getter(name="srcVrf")
     def src_vrf(self) -> str:
+        """
+        source VRF instance name
+        """
         return pulumi.get(self, "src_vrf")
 
     @property
     @pulumi.getter(name="templateName")
     def template_name(self) -> str:
+        """
+        BFD template name
+        """
         return pulumi.get(self, "template_name")
 
 
@@ -8704,6 +9368,12 @@ class GetBfdIpv6WithDstVrfResult(dict):
                  dst_vrf: str,
                  src_ipv6: str,
                  template_name: str):
+        """
+        :param str dest_ipv6: Destination IPv6 prefix/len
+        :param str dst_vrf: Destination VRF instance name
+        :param str src_ipv6: Source IPv6 prefix/len
+        :param str template_name: BFD template name
+        """
         pulumi.set(__self__, "dest_ipv6", dest_ipv6)
         pulumi.set(__self__, "dst_vrf", dst_vrf)
         pulumi.set(__self__, "src_ipv6", src_ipv6)
@@ -8712,21 +9382,33 @@ class GetBfdIpv6WithDstVrfResult(dict):
     @property
     @pulumi.getter(name="destIpv6")
     def dest_ipv6(self) -> str:
+        """
+        Destination IPv6 prefix/len
+        """
         return pulumi.get(self, "dest_ipv6")
 
     @property
     @pulumi.getter(name="dstVrf")
     def dst_vrf(self) -> str:
+        """
+        Destination VRF instance name
+        """
         return pulumi.get(self, "dst_vrf")
 
     @property
     @pulumi.getter(name="srcIpv6")
     def src_ipv6(self) -> str:
+        """
+        Source IPv6 prefix/len
+        """
         return pulumi.get(self, "src_ipv6")
 
     @property
     @pulumi.getter(name="templateName")
     def template_name(self) -> str:
+        """
+        BFD template name
+        """
         return pulumi.get(self, "template_name")
 
 
@@ -8737,6 +9419,12 @@ class GetBfdIpv6WithSrcVrfResult(dict):
                  src_ipv6: str,
                  src_vrf: str,
                  template_name: str):
+        """
+        :param str dest_ipv6: Destination IPv6 prefix/len
+        :param str src_ipv6: Source IPv6 prefix/len
+        :param str src_vrf: source VRF instance name
+        :param str template_name: BFD template name
+        """
         pulumi.set(__self__, "dest_ipv6", dest_ipv6)
         pulumi.set(__self__, "src_ipv6", src_ipv6)
         pulumi.set(__self__, "src_vrf", src_vrf)
@@ -8745,21 +9433,33 @@ class GetBfdIpv6WithSrcVrfResult(dict):
     @property
     @pulumi.getter(name="destIpv6")
     def dest_ipv6(self) -> str:
+        """
+        Destination IPv6 prefix/len
+        """
         return pulumi.get(self, "dest_ipv6")
 
     @property
     @pulumi.getter(name="srcIpv6")
     def src_ipv6(self) -> str:
+        """
+        Source IPv6 prefix/len
+        """
         return pulumi.get(self, "src_ipv6")
 
     @property
     @pulumi.getter(name="srcVrf")
     def src_vrf(self) -> str:
+        """
+        source VRF instance name
+        """
         return pulumi.get(self, "src_vrf")
 
     @property
     @pulumi.getter(name="templateName")
     def template_name(self) -> str:
+        """
+        BFD template name
+        """
         return pulumi.get(self, "template_name")
 
 
@@ -8769,6 +9469,11 @@ class GetBfdIpv6WithoutVrfResult(dict):
                  dest_ipv6: str,
                  src_ipv6: str,
                  template_name: str):
+        """
+        :param str dest_ipv6: Destination IPv6 prefix/len
+        :param str src_ipv6: Source IPv6 prefix/len
+        :param str template_name: BFD template name
+        """
         pulumi.set(__self__, "dest_ipv6", dest_ipv6)
         pulumi.set(__self__, "src_ipv6", src_ipv6)
         pulumi.set(__self__, "template_name", template_name)
@@ -8776,16 +9481,25 @@ class GetBfdIpv6WithoutVrfResult(dict):
     @property
     @pulumi.getter(name="destIpv6")
     def dest_ipv6(self) -> str:
+        """
+        Destination IPv6 prefix/len
+        """
         return pulumi.get(self, "dest_ipv6")
 
     @property
     @pulumi.getter(name="srcIpv6")
     def src_ipv6(self) -> str:
+        """
+        Source IPv6 prefix/len
+        """
         return pulumi.get(self, "src_ipv6")
 
     @property
     @pulumi.getter(name="templateName")
     def template_name(self) -> str:
+        """
+        BFD template name
+        """
         return pulumi.get(self, "template_name")
 
 
@@ -8795,6 +9509,10 @@ class GetBgpAddressFamilyIpv4Ipv4UnicastNetworkResult(dict):
                  backdoor: bool,
                  network: str,
                  route_map: str):
+        """
+        :param bool backdoor: Specify a BGP backdoor route
+        :param str route_map: Route-map to modify the attributes
+        """
         pulumi.set(__self__, "backdoor", backdoor)
         pulumi.set(__self__, "network", network)
         pulumi.set(__self__, "route_map", route_map)
@@ -8802,6 +9520,9 @@ class GetBgpAddressFamilyIpv4Ipv4UnicastNetworkResult(dict):
     @property
     @pulumi.getter
     def backdoor(self) -> bool:
+        """
+        Specify a BGP backdoor route
+        """
         return pulumi.get(self, "backdoor")
 
     @property
@@ -8812,6 +9533,9 @@ class GetBgpAddressFamilyIpv4Ipv4UnicastNetworkResult(dict):
     @property
     @pulumi.getter(name="routeMap")
     def route_map(self) -> str:
+        """
+        Route-map to modify the attributes
+        """
         return pulumi.get(self, "route_map")
 
 
@@ -8822,6 +9546,11 @@ class GetBgpAddressFamilyIpv4Ipv4UnicastNetworksMaskResult(dict):
                  mask: str,
                  network: str,
                  route_map: str):
+        """
+        :param bool backdoor: Specify a BGP backdoor route
+        :param str mask: Network mask
+        :param str route_map: Route-map to modify the attributes
+        """
         pulumi.set(__self__, "backdoor", backdoor)
         pulumi.set(__self__, "mask", mask)
         pulumi.set(__self__, "network", network)
@@ -8830,11 +9559,17 @@ class GetBgpAddressFamilyIpv4Ipv4UnicastNetworksMaskResult(dict):
     @property
     @pulumi.getter
     def backdoor(self) -> bool:
+        """
+        Specify a BGP backdoor route
+        """
         return pulumi.get(self, "backdoor")
 
     @property
     @pulumi.getter
     def mask(self) -> str:
+        """
+        Network mask
+        """
         return pulumi.get(self, "mask")
 
     @property
@@ -8845,6 +9580,9 @@ class GetBgpAddressFamilyIpv4Ipv4UnicastNetworksMaskResult(dict):
     @property
     @pulumi.getter(name="routeMap")
     def route_map(self) -> str:
+        """
+        Route-map to modify the attributes
+        """
         return pulumi.get(self, "route_map")
 
 
@@ -8857,6 +9595,13 @@ class GetBgpAddressFamilyIpv4VrfVrfResult(dict):
                  ipv4_unicast_redistribute_connected: bool,
                  ipv4_unicast_redistribute_static: bool,
                  name: str):
+        """
+        :param bool ipv4_unicast_advertise_l2vpn_evpn: Advertise/export prefixes to l2vpn evpn table
+        :param Sequence['GetBgpAddressFamilyIpv4VrfVrfIpv4UnicastNetworkArgs'] ipv4_unicast_networks: Specify a network to announce via BGP
+        :param Sequence['GetBgpAddressFamilyIpv4VrfVrfIpv4UnicastNetworksMaskArgs'] ipv4_unicast_networks_masks: Specify a network to announce via BGP
+        :param bool ipv4_unicast_redistribute_connected: Connected
+        :param bool ipv4_unicast_redistribute_static: Static routes
+        """
         pulumi.set(__self__, "ipv4_unicast_advertise_l2vpn_evpn", ipv4_unicast_advertise_l2vpn_evpn)
         pulumi.set(__self__, "ipv4_unicast_networks", ipv4_unicast_networks)
         pulumi.set(__self__, "ipv4_unicast_networks_masks", ipv4_unicast_networks_masks)
@@ -8867,26 +9612,41 @@ class GetBgpAddressFamilyIpv4VrfVrfResult(dict):
     @property
     @pulumi.getter(name="ipv4UnicastAdvertiseL2vpnEvpn")
     def ipv4_unicast_advertise_l2vpn_evpn(self) -> bool:
+        """
+        Advertise/export prefixes to l2vpn evpn table
+        """
         return pulumi.get(self, "ipv4_unicast_advertise_l2vpn_evpn")
 
     @property
     @pulumi.getter(name="ipv4UnicastNetworks")
     def ipv4_unicast_networks(self) -> Sequence['outputs.GetBgpAddressFamilyIpv4VrfVrfIpv4UnicastNetworkResult']:
+        """
+        Specify a network to announce via BGP
+        """
         return pulumi.get(self, "ipv4_unicast_networks")
 
     @property
     @pulumi.getter(name="ipv4UnicastNetworksMasks")
     def ipv4_unicast_networks_masks(self) -> Sequence['outputs.GetBgpAddressFamilyIpv4VrfVrfIpv4UnicastNetworksMaskResult']:
+        """
+        Specify a network to announce via BGP
+        """
         return pulumi.get(self, "ipv4_unicast_networks_masks")
 
     @property
     @pulumi.getter(name="ipv4UnicastRedistributeConnected")
     def ipv4_unicast_redistribute_connected(self) -> bool:
+        """
+        Connected
+        """
         return pulumi.get(self, "ipv4_unicast_redistribute_connected")
 
     @property
     @pulumi.getter(name="ipv4UnicastRedistributeStatic")
     def ipv4_unicast_redistribute_static(self) -> bool:
+        """
+        Static routes
+        """
         return pulumi.get(self, "ipv4_unicast_redistribute_static")
 
     @property
@@ -8974,6 +9734,10 @@ class GetBgpAddressFamilyIpv6Ipv6UnicastNetworkResult(dict):
                  backdoor: bool,
                  network: str,
                  route_map: str):
+        """
+        :param bool backdoor: Specify a BGP backdoor route
+        :param str route_map: Route-map to modify the attributes
+        """
         pulumi.set(__self__, "backdoor", backdoor)
         pulumi.set(__self__, "network", network)
         pulumi.set(__self__, "route_map", route_map)
@@ -8981,6 +9745,9 @@ class GetBgpAddressFamilyIpv6Ipv6UnicastNetworkResult(dict):
     @property
     @pulumi.getter
     def backdoor(self) -> bool:
+        """
+        Specify a BGP backdoor route
+        """
         return pulumi.get(self, "backdoor")
 
     @property
@@ -8991,6 +9758,9 @@ class GetBgpAddressFamilyIpv6Ipv6UnicastNetworkResult(dict):
     @property
     @pulumi.getter(name="routeMap")
     def route_map(self) -> str:
+        """
+        Route-map to modify the attributes
+        """
         return pulumi.get(self, "route_map")
 
 
@@ -9002,6 +9772,12 @@ class GetBgpAddressFamilyIpv6VrfVrfResult(dict):
                  ipv6_unicast_redistribute_connected: bool,
                  ipv6_unicast_redistribute_static: bool,
                  name: str):
+        """
+        :param bool ipv6_unicast_advertise_l2vpn_evpn: Advertise/export prefixes to l2vpn evpn table
+        :param Sequence['GetBgpAddressFamilyIpv6VrfVrfIpv6UnicastNetworkArgs'] ipv6_unicast_networks: Specify a network to announce via BGP
+        :param bool ipv6_unicast_redistribute_connected: Connected
+        :param bool ipv6_unicast_redistribute_static: Static routes
+        """
         pulumi.set(__self__, "ipv6_unicast_advertise_l2vpn_evpn", ipv6_unicast_advertise_l2vpn_evpn)
         pulumi.set(__self__, "ipv6_unicast_networks", ipv6_unicast_networks)
         pulumi.set(__self__, "ipv6_unicast_redistribute_connected", ipv6_unicast_redistribute_connected)
@@ -9011,21 +9787,33 @@ class GetBgpAddressFamilyIpv6VrfVrfResult(dict):
     @property
     @pulumi.getter(name="ipv6UnicastAdvertiseL2vpnEvpn")
     def ipv6_unicast_advertise_l2vpn_evpn(self) -> bool:
+        """
+        Advertise/export prefixes to l2vpn evpn table
+        """
         return pulumi.get(self, "ipv6_unicast_advertise_l2vpn_evpn")
 
     @property
     @pulumi.getter(name="ipv6UnicastNetworks")
     def ipv6_unicast_networks(self) -> Sequence['outputs.GetBgpAddressFamilyIpv6VrfVrfIpv6UnicastNetworkResult']:
+        """
+        Specify a network to announce via BGP
+        """
         return pulumi.get(self, "ipv6_unicast_networks")
 
     @property
     @pulumi.getter(name="ipv6UnicastRedistributeConnected")
     def ipv6_unicast_redistribute_connected(self) -> bool:
+        """
+        Connected
+        """
         return pulumi.get(self, "ipv6_unicast_redistribute_connected")
 
     @property
     @pulumi.getter(name="ipv6UnicastRedistributeStatic")
     def ipv6_unicast_redistribute_static(self) -> bool:
+        """
+        Static routes
+        """
         return pulumi.get(self, "ipv6_unicast_redistribute_static")
 
     @property
@@ -9133,6 +9921,14 @@ class GetCdpTlvListResult(dict):
                  trust: bool,
                  version: bool,
                  vtp_mgmt_domain: bool):
+        """
+        :param bool cos: Select cos TLV
+        :param bool duplex: Select duplex TLV
+        :param str name: Tlv-list
+        :param bool trust: Select trust TLV
+        :param bool version: Select version TLV
+        :param bool vtp_mgmt_domain: Select vtp mgmt domain TLV
+        """
         pulumi.set(__self__, "cos", cos)
         pulumi.set(__self__, "duplex", duplex)
         pulumi.set(__self__, "name", name)
@@ -9143,31 +9939,49 @@ class GetCdpTlvListResult(dict):
     @property
     @pulumi.getter
     def cos(self) -> bool:
+        """
+        Select cos TLV
+        """
         return pulumi.get(self, "cos")
 
     @property
     @pulumi.getter
     def duplex(self) -> bool:
+        """
+        Select duplex TLV
+        """
         return pulumi.get(self, "duplex")
 
     @property
     @pulumi.getter
     def name(self) -> str:
+        """
+        Tlv-list
+        """
         return pulumi.get(self, "name")
 
     @property
     @pulumi.getter
     def trust(self) -> bool:
+        """
+        Select trust TLV
+        """
         return pulumi.get(self, "trust")
 
     @property
     @pulumi.getter
     def version(self) -> bool:
+        """
+        Select version TLV
+        """
         return pulumi.get(self, "version")
 
     @property
     @pulumi.getter(name="vtpMgmtDomain")
     def vtp_mgmt_domain(self) -> bool:
+        """
+        Select vtp mgmt domain TLV
+        """
         return pulumi.get(self, "vtp_mgmt_domain")
 
 
@@ -9175,11 +9989,17 @@ class GetCdpTlvListResult(dict):
 class GetClassMapMatchActivatedServiceTemplateResult(dict):
     def __init__(__self__, *,
                  service_name: str):
+        """
+        :param str service_name: Enter service name
+        """
         pulumi.set(__self__, "service_name", service_name)
 
     @property
     @pulumi.getter(name="serviceName")
     def service_name(self) -> str:
+        """
+        Enter service name
+        """
         return pulumi.get(self, "service_name")
 
 
@@ -9204,6 +10024,16 @@ class GetCryptoIkev2KeyringPeerResult(dict):
                  pre_shared_key_local_encryption: str,
                  pre_shared_key_remote: str,
                  pre_shared_key_remote_encryption: str):
+        """
+        :param str description: Specify a description of this peer
+        :param str hostname: Hostname of peer
+        :param str identity_address: IP address
+        :param str identity_email_domain: email Domain Name
+        :param str identity_email_name: Specify the name string
+        :param str identity_fqdn_domain: email Domain Name
+        :param str identity_fqdn_name: Specify the name string
+        :param str identity_key_id: proprietary types of identification (ID KEY ID)
+        """
         pulumi.set(__self__, "description", description)
         pulumi.set(__self__, "hostname", hostname)
         pulumi.set(__self__, "identity_address", identity_address)
@@ -9226,41 +10056,65 @@ class GetCryptoIkev2KeyringPeerResult(dict):
     @property
     @pulumi.getter
     def description(self) -> str:
+        """
+        Specify a description of this peer
+        """
         return pulumi.get(self, "description")
 
     @property
     @pulumi.getter
     def hostname(self) -> str:
+        """
+        Hostname of peer
+        """
         return pulumi.get(self, "hostname")
 
     @property
     @pulumi.getter(name="identityAddress")
     def identity_address(self) -> str:
+        """
+        IP address
+        """
         return pulumi.get(self, "identity_address")
 
     @property
     @pulumi.getter(name="identityEmailDomain")
     def identity_email_domain(self) -> str:
+        """
+        email Domain Name
+        """
         return pulumi.get(self, "identity_email_domain")
 
     @property
     @pulumi.getter(name="identityEmailName")
     def identity_email_name(self) -> str:
+        """
+        Specify the name string
+        """
         return pulumi.get(self, "identity_email_name")
 
     @property
     @pulumi.getter(name="identityFqdnDomain")
     def identity_fqdn_domain(self) -> str:
+        """
+        email Domain Name
+        """
         return pulumi.get(self, "identity_fqdn_domain")
 
     @property
     @pulumi.getter(name="identityFqdnName")
     def identity_fqdn_name(self) -> str:
+        """
+        Specify the name string
+        """
         return pulumi.get(self, "identity_fqdn_name")
 
     @property
     @pulumi.getter(name="identityKeyId")
     def identity_key_id(self) -> str:
+        """
+        proprietary types of identification (ID KEY ID)
+        """
         return pulumi.get(self, "identity_key_id")
 
     @property
@@ -9318,11 +10172,17 @@ class GetCryptoIkev2KeyringPeerResult(dict):
 class GetCryptoIkev2PolicyProposalResult(dict):
     def __init__(__self__, *,
                  proposals: str):
+        """
+        :param str proposals: Specify Proposal
+        """
         pulumi.set(__self__, "proposals", proposals)
 
     @property
     @pulumi.getter
     def proposals(self) -> str:
+        """
+        Specify Proposal
+        """
         return pulumi.get(self, "proposals")
 
 
@@ -9349,11 +10209,17 @@ class GetCryptoIkev2ProfileMatchIdentityRemoteIpv4AddressResult(dict):
 class GetDhcpSnoopingVlanResult(dict):
     def __init__(__self__, *,
                  vlan_id: str):
+        """
+        :param str vlan_id: DHCP Snooping vlan first number or vlan range,example: 1,3-5,7,9-11
+        """
         pulumi.set(__self__, "vlan_id", vlan_id)
 
     @property
     @pulumi.getter(name="vlanId")
     def vlan_id(self) -> str:
+        """
+        DHCP Snooping vlan first number or vlan range,example: 1,3-5,7,9-11
+        """
         return pulumi.get(self, "vlan_id")
 
 
@@ -9367,6 +10233,13 @@ class GetDot1xCredentialResult(dict):
                  pki_trustpoint: str,
                  profile_name: str,
                  username: str):
+        """
+        :param str anonymous_id: Set the anonymous userid
+        :param str description: Provide a description for the credentials profile
+        :param str pki_trustpoint: Set the default pki trustpoint
+        :param str profile_name: Specify a profile name
+        :param str username: Set the authentication userid
+        """
         pulumi.set(__self__, "anonymous_id", anonymous_id)
         pulumi.set(__self__, "description", description)
         pulumi.set(__self__, "password", password)
@@ -9378,11 +10251,17 @@ class GetDot1xCredentialResult(dict):
     @property
     @pulumi.getter(name="anonymousId")
     def anonymous_id(self) -> str:
+        """
+        Set the anonymous userid
+        """
         return pulumi.get(self, "anonymous_id")
 
     @property
     @pulumi.getter
     def description(self) -> str:
+        """
+        Provide a description for the credentials profile
+        """
         return pulumi.get(self, "description")
 
     @property
@@ -9398,16 +10277,25 @@ class GetDot1xCredentialResult(dict):
     @property
     @pulumi.getter(name="pkiTrustpoint")
     def pki_trustpoint(self) -> str:
+        """
+        Set the default pki trustpoint
+        """
         return pulumi.get(self, "pki_trustpoint")
 
     @property
     @pulumi.getter(name="profileName")
     def profile_name(self) -> str:
+        """
+        Specify a profile name
+        """
         return pulumi.get(self, "profile_name")
 
     @property
     @pulumi.getter
     def username(self) -> str:
+        """
+        Set the authentication userid
+        """
         return pulumi.get(self, "username")
 
 
@@ -9417,6 +10305,10 @@ class GetInterfaceEthernetHelperAddressResult(dict):
                  address: str,
                  global_: bool,
                  vrf: str):
+        """
+        :param bool global_: Helper-address is global
+        :param str vrf: VRF name for helper-address (if different from interface VRF)
+        """
         pulumi.set(__self__, "address", address)
         pulumi.set(__self__, "global_", global_)
         pulumi.set(__self__, "vrf", vrf)
@@ -9429,11 +10321,17 @@ class GetInterfaceEthernetHelperAddressResult(dict):
     @property
     @pulumi.getter(name="global")
     def global_(self) -> bool:
+        """
+        Helper-address is global
+        """
         return pulumi.get(self, "global_")
 
     @property
     @pulumi.getter
     def vrf(self) -> str:
+        """
+        VRF name for helper-address (if different from interface VRF)
+        """
         return pulumi.get(self, "vrf")
 
 
@@ -9442,12 +10340,18 @@ class GetInterfaceEthernetIpv6AddressResult(dict):
     def __init__(__self__, *,
                  eui64: bool,
                  prefix: str):
+        """
+        :param bool eui64: Use eui-64 interface identifier
+        """
         pulumi.set(__self__, "eui64", eui64)
         pulumi.set(__self__, "prefix", prefix)
 
     @property
     @pulumi.getter
     def eui64(self) -> bool:
+        """
+        Use eui-64 interface identifier
+        """
         return pulumi.get(self, "eui64")
 
     @property
@@ -9461,6 +10365,9 @@ class GetInterfaceEthernetIpv6LinkLocalAddressResult(dict):
     def __init__(__self__, *,
                  address: str,
                  link_local: bool):
+        """
+        :param bool link_local: Use link-local address
+        """
         pulumi.set(__self__, "address", address)
         pulumi.set(__self__, "link_local", link_local)
 
@@ -9472,6 +10379,9 @@ class GetInterfaceEthernetIpv6LinkLocalAddressResult(dict):
     @property
     @pulumi.getter(name="linkLocal")
     def link_local(self) -> bool:
+        """
+        Use link-local address
+        """
         return pulumi.get(self, "link_local")
 
 
@@ -9480,12 +10390,18 @@ class GetInterfaceEthernetSourceTemplateResult(dict):
     def __init__(__self__, *,
                  merge: bool,
                  template_name: str):
+        """
+        :param bool merge: merge option of binding
+        """
         pulumi.set(__self__, "merge", merge)
         pulumi.set(__self__, "template_name", template_name)
 
     @property
     @pulumi.getter
     def merge(self) -> bool:
+        """
+        merge option of binding
+        """
         return pulumi.get(self, "merge")
 
     @property
@@ -9499,12 +10415,18 @@ class GetInterfaceLoopbackIpv6AddressResult(dict):
     def __init__(__self__, *,
                  eui64: bool,
                  prefix: str):
+        """
+        :param bool eui64: Use eui-64 interface identifier
+        """
         pulumi.set(__self__, "eui64", eui64)
         pulumi.set(__self__, "prefix", prefix)
 
     @property
     @pulumi.getter
     def eui64(self) -> bool:
+        """
+        Use eui-64 interface identifier
+        """
         return pulumi.get(self, "eui64")
 
     @property
@@ -9518,6 +10440,9 @@ class GetInterfaceLoopbackIpv6LinkLocalAddressResult(dict):
     def __init__(__self__, *,
                  address: str,
                  link_local: bool):
+        """
+        :param bool link_local: Use link-local address
+        """
         pulumi.set(__self__, "address", address)
         pulumi.set(__self__, "link_local", link_local)
 
@@ -9529,6 +10454,9 @@ class GetInterfaceLoopbackIpv6LinkLocalAddressResult(dict):
     @property
     @pulumi.getter(name="linkLocal")
     def link_local(self) -> bool:
+        """
+        Use link-local address
+        """
         return pulumi.get(self, "link_local")
 
 
@@ -9538,6 +10466,11 @@ class GetInterfaceNveVniResult(dict):
                  ingress_replication: bool,
                  ipv4_multicast_group: str,
                  vni_range: str):
+        """
+        :param bool ingress_replication: Ingress Replication control-plane (BGP) signaling
+        :param str ipv4_multicast_group: Starting Multicast Group IPv4 Address
+        :param str vni_range: VNI range or instance between 4096-16777215, example: 6010-6030 or 7115
+        """
         pulumi.set(__self__, "ingress_replication", ingress_replication)
         pulumi.set(__self__, "ipv4_multicast_group", ipv4_multicast_group)
         pulumi.set(__self__, "vni_range", vni_range)
@@ -9545,16 +10478,25 @@ class GetInterfaceNveVniResult(dict):
     @property
     @pulumi.getter(name="ingressReplication")
     def ingress_replication(self) -> bool:
+        """
+        Ingress Replication control-plane (BGP) signaling
+        """
         return pulumi.get(self, "ingress_replication")
 
     @property
     @pulumi.getter(name="ipv4MulticastGroup")
     def ipv4_multicast_group(self) -> str:
+        """
+        Starting Multicast Group IPv4 Address
+        """
         return pulumi.get(self, "ipv4_multicast_group")
 
     @property
     @pulumi.getter(name="vniRange")
     def vni_range(self) -> str:
+        """
+        VNI range or instance between 4096-16777215, example: 6010-6030 or 7115
+        """
         return pulumi.get(self, "vni_range")
 
 
@@ -9563,17 +10505,27 @@ class GetInterfaceNveVniVrfResult(dict):
     def __init__(__self__, *,
                  vni_range: str,
                  vrf: str):
+        """
+        :param str vni_range: VNI range or instance between 4096-16777215, example: 6010-6030 or 7115
+        :param str vrf: Specify a particular VRF
+        """
         pulumi.set(__self__, "vni_range", vni_range)
         pulumi.set(__self__, "vrf", vrf)
 
     @property
     @pulumi.getter(name="vniRange")
     def vni_range(self) -> str:
+        """
+        VNI range or instance between 4096-16777215, example: 6010-6030 or 7115
+        """
         return pulumi.get(self, "vni_range")
 
     @property
     @pulumi.getter
     def vrf(self) -> str:
+        """
+        Specify a particular VRF
+        """
         return pulumi.get(self, "vrf")
 
 
@@ -9583,6 +10535,11 @@ class GetInterfaceOspfMessageDigestKeyResult(dict):
                  id: int,
                  md5_auth_key: str,
                  md5_auth_type: int):
+        """
+        :param int id: Key ID
+        :param str md5_auth_key: The OSPF password (key) (only the first 16 characters are used)
+        :param int md5_auth_type: Encryption type (0 for not yet encrypted, 7 for proprietary)
+        """
         pulumi.set(__self__, "id", id)
         pulumi.set(__self__, "md5_auth_key", md5_auth_key)
         pulumi.set(__self__, "md5_auth_type", md5_auth_type)
@@ -9590,16 +10547,25 @@ class GetInterfaceOspfMessageDigestKeyResult(dict):
     @property
     @pulumi.getter
     def id(self) -> int:
+        """
+        Key ID
+        """
         return pulumi.get(self, "id")
 
     @property
     @pulumi.getter(name="md5AuthKey")
     def md5_auth_key(self) -> str:
+        """
+        The OSPF password (key) (only the first 16 characters are used)
+        """
         return pulumi.get(self, "md5_auth_key")
 
     @property
     @pulumi.getter(name="md5AuthType")
     def md5_auth_type(self) -> int:
+        """
+        Encryption type (0 for not yet encrypted, 7 for proprietary)
+        """
         return pulumi.get(self, "md5_auth_type")
 
 
@@ -9608,6 +10574,9 @@ class GetInterfaceOspfProcessIdResult(dict):
     def __init__(__self__, *,
                  areas: Sequence['outputs.GetInterfaceOspfProcessIdAreaResult'],
                  id: int):
+        """
+        :param int id: Process ID
+        """
         pulumi.set(__self__, "areas", areas)
         pulumi.set(__self__, "id", id)
 
@@ -9619,6 +10588,9 @@ class GetInterfaceOspfProcessIdResult(dict):
     @property
     @pulumi.getter
     def id(self) -> int:
+        """
+        Process ID
+        """
         return pulumi.get(self, "id")
 
 
@@ -9640,6 +10612,10 @@ class GetInterfacePortChannelHelperAddressResult(dict):
                  address: str,
                  global_: bool,
                  vrf: str):
+        """
+        :param bool global_: Helper-address is global
+        :param str vrf: VRF name for helper-address (if different from interface VRF)
+        """
         pulumi.set(__self__, "address", address)
         pulumi.set(__self__, "global_", global_)
         pulumi.set(__self__, "vrf", vrf)
@@ -9652,11 +10628,17 @@ class GetInterfacePortChannelHelperAddressResult(dict):
     @property
     @pulumi.getter(name="global")
     def global_(self) -> bool:
+        """
+        Helper-address is global
+        """
         return pulumi.get(self, "global_")
 
     @property
     @pulumi.getter
     def vrf(self) -> str:
+        """
+        VRF name for helper-address (if different from interface VRF)
+        """
         return pulumi.get(self, "vrf")
 
 
@@ -9665,12 +10647,18 @@ class GetInterfacePortChannelIpv6AddressResult(dict):
     def __init__(__self__, *,
                  eui64: bool,
                  prefix: str):
+        """
+        :param bool eui64: Use eui-64 interface identifier
+        """
         pulumi.set(__self__, "eui64", eui64)
         pulumi.set(__self__, "prefix", prefix)
 
     @property
     @pulumi.getter
     def eui64(self) -> bool:
+        """
+        Use eui-64 interface identifier
+        """
         return pulumi.get(self, "eui64")
 
     @property
@@ -9684,6 +10672,9 @@ class GetInterfacePortChannelIpv6LinkLocalAddressResult(dict):
     def __init__(__self__, *,
                  address: str,
                  link_local: bool):
+        """
+        :param bool link_local: Use link-local address
+        """
         pulumi.set(__self__, "address", address)
         pulumi.set(__self__, "link_local", link_local)
 
@@ -9695,6 +10686,9 @@ class GetInterfacePortChannelIpv6LinkLocalAddressResult(dict):
     @property
     @pulumi.getter(name="linkLocal")
     def link_local(self) -> bool:
+        """
+        Use link-local address
+        """
         return pulumi.get(self, "link_local")
 
 
@@ -9704,6 +10698,10 @@ class GetInterfacePortChannelSubinterfaceHelperAddressResult(dict):
                  address: str,
                  global_: bool,
                  vrf: str):
+        """
+        :param bool global_: Helper-address is global
+        :param str vrf: VRF name for helper-address (if different from interface VRF)
+        """
         pulumi.set(__self__, "address", address)
         pulumi.set(__self__, "global_", global_)
         pulumi.set(__self__, "vrf", vrf)
@@ -9716,11 +10714,17 @@ class GetInterfacePortChannelSubinterfaceHelperAddressResult(dict):
     @property
     @pulumi.getter(name="global")
     def global_(self) -> bool:
+        """
+        Helper-address is global
+        """
         return pulumi.get(self, "global_")
 
     @property
     @pulumi.getter
     def vrf(self) -> str:
+        """
+        VRF name for helper-address (if different from interface VRF)
+        """
         return pulumi.get(self, "vrf")
 
 
@@ -9729,12 +10733,18 @@ class GetInterfacePortChannelSubinterfaceIpv6AddressResult(dict):
     def __init__(__self__, *,
                  eui64: bool,
                  prefix: str):
+        """
+        :param bool eui64: Use eui-64 interface identifier
+        """
         pulumi.set(__self__, "eui64", eui64)
         pulumi.set(__self__, "prefix", prefix)
 
     @property
     @pulumi.getter
     def eui64(self) -> bool:
+        """
+        Use eui-64 interface identifier
+        """
         return pulumi.get(self, "eui64")
 
     @property
@@ -9748,6 +10758,9 @@ class GetInterfacePortChannelSubinterfaceIpv6LinkLocalAddressResult(dict):
     def __init__(__self__, *,
                  address: str,
                  link_local: bool):
+        """
+        :param bool link_local: Use link-local address
+        """
         pulumi.set(__self__, "address", address)
         pulumi.set(__self__, "link_local", link_local)
 
@@ -9759,6 +10772,9 @@ class GetInterfacePortChannelSubinterfaceIpv6LinkLocalAddressResult(dict):
     @property
     @pulumi.getter(name="linkLocal")
     def link_local(self) -> bool:
+        """
+        Use link-local address
+        """
         return pulumi.get(self, "link_local")
 
 
@@ -9768,6 +10784,10 @@ class GetInterfaceTunnelHelperAddressResult(dict):
                  address: str,
                  global_: bool,
                  vrf: str):
+        """
+        :param bool global_: Helper-address is global
+        :param str vrf: VRF name for helper-address (if different from interface VRF)
+        """
         pulumi.set(__self__, "address", address)
         pulumi.set(__self__, "global_", global_)
         pulumi.set(__self__, "vrf", vrf)
@@ -9780,11 +10800,17 @@ class GetInterfaceTunnelHelperAddressResult(dict):
     @property
     @pulumi.getter(name="global")
     def global_(self) -> bool:
+        """
+        Helper-address is global
+        """
         return pulumi.get(self, "global_")
 
     @property
     @pulumi.getter
     def vrf(self) -> str:
+        """
+        VRF name for helper-address (if different from interface VRF)
+        """
         return pulumi.get(self, "vrf")
 
 
@@ -9793,12 +10819,18 @@ class GetInterfaceTunnelIpv6AddressResult(dict):
     def __init__(__self__, *,
                  eui64: bool,
                  prefix: str):
+        """
+        :param bool eui64: Use eui-64 interface identifier
+        """
         pulumi.set(__self__, "eui64", eui64)
         pulumi.set(__self__, "prefix", prefix)
 
     @property
     @pulumi.getter
     def eui64(self) -> bool:
+        """
+        Use eui-64 interface identifier
+        """
         return pulumi.get(self, "eui64")
 
     @property
@@ -9812,6 +10844,9 @@ class GetInterfaceTunnelIpv6LinkLocalAddressResult(dict):
     def __init__(__self__, *,
                  address: str,
                  link_local: bool):
+        """
+        :param bool link_local: Use link-local address
+        """
         pulumi.set(__self__, "address", address)
         pulumi.set(__self__, "link_local", link_local)
 
@@ -9823,6 +10858,9 @@ class GetInterfaceTunnelIpv6LinkLocalAddressResult(dict):
     @property
     @pulumi.getter(name="linkLocal")
     def link_local(self) -> bool:
+        """
+        Use link-local address
+        """
         return pulumi.get(self, "link_local")
 
 
@@ -9832,6 +10870,10 @@ class GetInterfaceVlanHelperAddressResult(dict):
                  address: str,
                  global_: bool,
                  vrf: str):
+        """
+        :param bool global_: Helper-address is global
+        :param str vrf: VRF name for helper-address (if different from interface VRF)
+        """
         pulumi.set(__self__, "address", address)
         pulumi.set(__self__, "global_", global_)
         pulumi.set(__self__, "vrf", vrf)
@@ -9844,11 +10886,17 @@ class GetInterfaceVlanHelperAddressResult(dict):
     @property
     @pulumi.getter(name="global")
     def global_(self) -> bool:
+        """
+        Helper-address is global
+        """
         return pulumi.get(self, "global_")
 
     @property
     @pulumi.getter
     def vrf(self) -> str:
+        """
+        VRF name for helper-address (if different from interface VRF)
+        """
         return pulumi.get(self, "vrf")
 
 
@@ -9857,12 +10905,18 @@ class GetInterfaceVlanIpv6AddressResult(dict):
     def __init__(__self__, *,
                  eui64: bool,
                  prefix: str):
+        """
+        :param bool eui64: Use eui-64 interface identifier
+        """
         pulumi.set(__self__, "eui64", eui64)
         pulumi.set(__self__, "prefix", prefix)
 
     @property
     @pulumi.getter
     def eui64(self) -> bool:
+        """
+        Use eui-64 interface identifier
+        """
         return pulumi.get(self, "eui64")
 
     @property
@@ -9876,6 +10930,9 @@ class GetInterfaceVlanIpv6LinkLocalAddressResult(dict):
     def __init__(__self__, *,
                  address: str,
                  link_local: bool):
+        """
+        :param bool link_local: Use link-local address
+        """
         pulumi.set(__self__, "address", address)
         pulumi.set(__self__, "link_local", link_local)
 
@@ -9887,6 +10944,9 @@ class GetInterfaceVlanIpv6LinkLocalAddressResult(dict):
     @property
     @pulumi.getter(name="linkLocal")
     def link_local(self) -> bool:
+        """
+        Use link-local address
+        """
         return pulumi.get(self, "link_local")
 
 
@@ -9903,6 +10963,12 @@ class GetLineConsoleResult(dict):
                  password_type: str,
                  privilege_level: int,
                  stopbits: str):
+        """
+        :param int exec_timeout_minutes: \\n\\n;;Timeout in minutes
+        :param int exec_timeout_seconds: \\n\\n;;Timeout in seconds
+        :param int password_level: Set exec level password
+        :param str stopbits: Set async line stop bits
+        """
         pulumi.set(__self__, "exec_timeout_minutes", exec_timeout_minutes)
         pulumi.set(__self__, "exec_timeout_seconds", exec_timeout_seconds)
         pulumi.set(__self__, "first", first)
@@ -9917,11 +10983,17 @@ class GetLineConsoleResult(dict):
     @property
     @pulumi.getter(name="execTimeoutMinutes")
     def exec_timeout_minutes(self) -> int:
+        """
+        \\n\\n;;Timeout in minutes
+        """
         return pulumi.get(self, "exec_timeout_minutes")
 
     @property
     @pulumi.getter(name="execTimeoutSeconds")
     def exec_timeout_seconds(self) -> int:
+        """
+        \\n\\n;;Timeout in seconds
+        """
         return pulumi.get(self, "exec_timeout_seconds")
 
     @property
@@ -9947,6 +11019,9 @@ class GetLineConsoleResult(dict):
     @property
     @pulumi.getter(name="passwordLevel")
     def password_level(self) -> int:
+        """
+        Set exec level password
+        """
         return pulumi.get(self, "password_level")
 
     @property
@@ -9962,6 +11037,9 @@ class GetLineConsoleResult(dict):
     @property
     @pulumi.getter
     def stopbits(self) -> str:
+        """
+        Set async line stop bits
+        """
         return pulumi.get(self, "stopbits")
 
 
@@ -9979,6 +11057,11 @@ class GetLineVtyResult(dict):
                  password_level: int,
                  password_type: str,
                  transport_preferred_protocol: str):
+        """
+        :param int exec_timeout_minutes: \\n\\n;;Timeout in minutes
+        :param int exec_timeout_seconds: \\n\\n;;Timeout in seconds
+        :param int password_level: Set exec level password
+        """
         pulumi.set(__self__, "access_classes", access_classes)
         pulumi.set(__self__, "escape_character", escape_character)
         pulumi.set(__self__, "exec_timeout_minutes", exec_timeout_minutes)
@@ -10004,11 +11087,17 @@ class GetLineVtyResult(dict):
     @property
     @pulumi.getter(name="execTimeoutMinutes")
     def exec_timeout_minutes(self) -> int:
+        """
+        \\n\\n;;Timeout in minutes
+        """
         return pulumi.get(self, "exec_timeout_minutes")
 
     @property
     @pulumi.getter(name="execTimeoutSeconds")
     def exec_timeout_seconds(self) -> int:
+        """
+        \\n\\n;;Timeout in seconds
+        """
         return pulumi.get(self, "exec_timeout_seconds")
 
     @property
@@ -10034,6 +11123,9 @@ class GetLineVtyResult(dict):
     @property
     @pulumi.getter(name="passwordLevel")
     def password_level(self) -> int:
+        """
+        Set exec level password
+        """
         return pulumi.get(self, "password_level")
 
     @property
@@ -10089,11 +11181,17 @@ class GetLoggingIpv4HostResult(dict):
 class GetLoggingIpv4HostTransportTransportTcpPortResult(dict):
     def __init__(__self__, *,
                  port_number: int):
+        """
+        :param int port_number: Specify the TCP port number (default=601)
+        """
         pulumi.set(__self__, "port_number", port_number)
 
     @property
     @pulumi.getter(name="portNumber")
     def port_number(self) -> int:
+        """
+        Specify the TCP port number (default=601)
+        """
         return pulumi.get(self, "port_number")
 
 
@@ -10102,17 +11200,27 @@ class GetLoggingIpv4HostTransportTransportTlsPortResult(dict):
     def __init__(__self__, *,
                  port_number: int,
                  profile: str):
+        """
+        :param int port_number: Specify the TLS port number (default=6514)
+        :param str profile: Specify the TLS profile
+        """
         pulumi.set(__self__, "port_number", port_number)
         pulumi.set(__self__, "profile", profile)
 
     @property
     @pulumi.getter(name="portNumber")
     def port_number(self) -> int:
+        """
+        Specify the TLS port number (default=6514)
+        """
         return pulumi.get(self, "port_number")
 
     @property
     @pulumi.getter
     def profile(self) -> str:
+        """
+        Specify the TLS profile
+        """
         return pulumi.get(self, "profile")
 
 
@@ -10120,11 +11228,17 @@ class GetLoggingIpv4HostTransportTransportTlsPortResult(dict):
 class GetLoggingIpv4HostTransportTransportUdpPortResult(dict):
     def __init__(__self__, *,
                  port_number: int):
+        """
+        :param int port_number: Specify the UDP port number (default=514)
+        """
         pulumi.set(__self__, "port_number", port_number)
 
     @property
     @pulumi.getter(name="portNumber")
     def port_number(self) -> int:
+        """
+        Specify the UDP port number (default=514)
+        """
         return pulumi.get(self, "port_number")
 
 
@@ -10132,11 +11246,17 @@ class GetLoggingIpv4HostTransportTransportUdpPortResult(dict):
 class GetLoggingIpv4HostVrfTransportTransportTcpPortResult(dict):
     def __init__(__self__, *,
                  port_number: int):
+        """
+        :param int port_number: Specify the TCP port number (default=601)
+        """
         pulumi.set(__self__, "port_number", port_number)
 
     @property
     @pulumi.getter(name="portNumber")
     def port_number(self) -> int:
+        """
+        Specify the TCP port number (default=601)
+        """
         return pulumi.get(self, "port_number")
 
 
@@ -10145,17 +11265,27 @@ class GetLoggingIpv4HostVrfTransportTransportTlsPortResult(dict):
     def __init__(__self__, *,
                  port_number: int,
                  profile: str):
+        """
+        :param int port_number: Specify the TLS port number (default=6514)
+        :param str profile: Specify the TLS profile
+        """
         pulumi.set(__self__, "port_number", port_number)
         pulumi.set(__self__, "profile", profile)
 
     @property
     @pulumi.getter(name="portNumber")
     def port_number(self) -> int:
+        """
+        Specify the TLS port number (default=6514)
+        """
         return pulumi.get(self, "port_number")
 
     @property
     @pulumi.getter
     def profile(self) -> str:
+        """
+        Specify the TLS profile
+        """
         return pulumi.get(self, "profile")
 
 
@@ -10163,11 +11293,17 @@ class GetLoggingIpv4HostVrfTransportTransportTlsPortResult(dict):
 class GetLoggingIpv4HostVrfTransportTransportUdpPortResult(dict):
     def __init__(__self__, *,
                  port_number: int):
+        """
+        :param int port_number: Specify the UDP port number (default=514)
+        """
         pulumi.set(__self__, "port_number", port_number)
 
     @property
     @pulumi.getter(name="portNumber")
     def port_number(self) -> int:
+        """
+        Specify the UDP port number (default=514)
+        """
         return pulumi.get(self, "port_number")
 
 
@@ -10176,6 +11312,9 @@ class GetLoggingIpv4VrfHostResult(dict):
     def __init__(__self__, *,
                  ipv4_host: str,
                  vrf: str):
+        """
+        :param str vrf: Set VRF option
+        """
         pulumi.set(__self__, "ipv4_host", ipv4_host)
         pulumi.set(__self__, "vrf", vrf)
 
@@ -10187,6 +11326,9 @@ class GetLoggingIpv4VrfHostResult(dict):
     @property
     @pulumi.getter
     def vrf(self) -> str:
+        """
+        Set VRF option
+        """
         return pulumi.get(self, "vrf")
 
 
@@ -10206,11 +11348,17 @@ class GetLoggingIpv6HostResult(dict):
 class GetLoggingIpv6HostTransportTransportTcpPortResult(dict):
     def __init__(__self__, *,
                  port_number: int):
+        """
+        :param int port_number: Specify the TCP port number (default=601)
+        """
         pulumi.set(__self__, "port_number", port_number)
 
     @property
     @pulumi.getter(name="portNumber")
     def port_number(self) -> int:
+        """
+        Specify the TCP port number (default=601)
+        """
         return pulumi.get(self, "port_number")
 
 
@@ -10219,17 +11367,27 @@ class GetLoggingIpv6HostTransportTransportTlsPortResult(dict):
     def __init__(__self__, *,
                  port_number: int,
                  profile: str):
+        """
+        :param int port_number: Specify the TLS port number (default=6514)
+        :param str profile: Specify the TLS profile
+        """
         pulumi.set(__self__, "port_number", port_number)
         pulumi.set(__self__, "profile", profile)
 
     @property
     @pulumi.getter(name="portNumber")
     def port_number(self) -> int:
+        """
+        Specify the TLS port number (default=6514)
+        """
         return pulumi.get(self, "port_number")
 
     @property
     @pulumi.getter
     def profile(self) -> str:
+        """
+        Specify the TLS profile
+        """
         return pulumi.get(self, "profile")
 
 
@@ -10237,11 +11395,17 @@ class GetLoggingIpv6HostTransportTransportTlsPortResult(dict):
 class GetLoggingIpv6HostTransportTransportUdpPortResult(dict):
     def __init__(__self__, *,
                  port_number: int):
+        """
+        :param int port_number: Specify the UDP port number (default=514)
+        """
         pulumi.set(__self__, "port_number", port_number)
 
     @property
     @pulumi.getter(name="portNumber")
     def port_number(self) -> int:
+        """
+        Specify the UDP port number (default=514)
+        """
         return pulumi.get(self, "port_number")
 
 
@@ -10249,11 +11413,17 @@ class GetLoggingIpv6HostTransportTransportUdpPortResult(dict):
 class GetLoggingIpv6HostVrfTransportTransportTcpPortResult(dict):
     def __init__(__self__, *,
                  port_number: int):
+        """
+        :param int port_number: Specify the TCP port number (default=601)
+        """
         pulumi.set(__self__, "port_number", port_number)
 
     @property
     @pulumi.getter(name="portNumber")
     def port_number(self) -> int:
+        """
+        Specify the TCP port number (default=601)
+        """
         return pulumi.get(self, "port_number")
 
 
@@ -10262,17 +11432,27 @@ class GetLoggingIpv6HostVrfTransportTransportTlsPortResult(dict):
     def __init__(__self__, *,
                  port_number: int,
                  profile: str):
+        """
+        :param int port_number: Specify the TLS port number (default=6514)
+        :param str profile: Specify the TLS profile
+        """
         pulumi.set(__self__, "port_number", port_number)
         pulumi.set(__self__, "profile", profile)
 
     @property
     @pulumi.getter(name="portNumber")
     def port_number(self) -> int:
+        """
+        Specify the TLS port number (default=6514)
+        """
         return pulumi.get(self, "port_number")
 
     @property
     @pulumi.getter
     def profile(self) -> str:
+        """
+        Specify the TLS profile
+        """
         return pulumi.get(self, "profile")
 
 
@@ -10280,11 +11460,17 @@ class GetLoggingIpv6HostVrfTransportTransportTlsPortResult(dict):
 class GetLoggingIpv6HostVrfTransportTransportUdpPortResult(dict):
     def __init__(__self__, *,
                  port_number: int):
+        """
+        :param int port_number: Specify the UDP port number (default=514)
+        """
         pulumi.set(__self__, "port_number", port_number)
 
     @property
     @pulumi.getter(name="portNumber")
     def port_number(self) -> int:
+        """
+        Specify the UDP port number (default=514)
+        """
         return pulumi.get(self, "port_number")
 
 
@@ -10293,6 +11479,9 @@ class GetLoggingIpv6VrfHostResult(dict):
     def __init__(__self__, *,
                  ipv6_host: str,
                  vrf: str):
+        """
+        :param str vrf: Set VRF option
+        """
         pulumi.set(__self__, "ipv6_host", ipv6_host)
         pulumi.set(__self__, "vrf", vrf)
 
@@ -10304,6 +11493,9 @@ class GetLoggingIpv6VrfHostResult(dict):
     @property
     @pulumi.getter
     def vrf(self) -> str:
+        """
+        Set VRF option
+        """
         return pulumi.get(self, "vrf")
 
 
@@ -10312,6 +11504,9 @@ class GetLoggingSourceInterfacesVrfResult(dict):
     def __init__(__self__, *,
                  interface_name: str,
                  vrf: str):
+        """
+        :param str vrf: Specify the vrf of source interface for logging transactions
+        """
         pulumi.set(__self__, "interface_name", interface_name)
         pulumi.set(__self__, "vrf", vrf)
 
@@ -10323,6 +11518,9 @@ class GetLoggingSourceInterfacesVrfResult(dict):
     @property
     @pulumi.getter
     def vrf(self) -> str:
+        """
+        Specify the vrf of source interface for logging transactions
+        """
         return pulumi.get(self, "vrf")
 
 
@@ -10332,6 +11530,11 @@ class GetMdtSubscriptionReceiverResult(dict):
                  address: str,
                  port: int,
                  protocol: str):
+        """
+        :param str address: IP address of the receiver
+        :param int port: Network port of the receiver
+        :param str protocol: Receiver transport protocol.
+        """
         pulumi.set(__self__, "address", address)
         pulumi.set(__self__, "port", port)
         pulumi.set(__self__, "protocol", protocol)
@@ -10339,16 +11542,25 @@ class GetMdtSubscriptionReceiverResult(dict):
     @property
     @pulumi.getter
     def address(self) -> str:
+        """
+        IP address of the receiver
+        """
         return pulumi.get(self, "address")
 
     @property
     @pulumi.getter
     def port(self) -> int:
+        """
+        Network port of the receiver
+        """
         return pulumi.get(self, "port")
 
     @property
     @pulumi.getter
     def protocol(self) -> str:
+        """
+        Receiver transport protocol.
+        """
         return pulumi.get(self, "protocol")
 
 
@@ -10384,6 +11596,10 @@ class GetMsdpPeerResult(dict):
                  addr: str,
                  connect_source_loopback: int,
                  remote_as: int):
+        """
+        :param int connect_source_loopback: Loopback interface
+        :param int remote_as: Configured AS number
+        """
         pulumi.set(__self__, "addr", addr)
         pulumi.set(__self__, "connect_source_loopback", connect_source_loopback)
         pulumi.set(__self__, "remote_as", remote_as)
@@ -10396,11 +11612,17 @@ class GetMsdpPeerResult(dict):
     @property
     @pulumi.getter(name="connectSourceLoopback")
     def connect_source_loopback(self) -> int:
+        """
+        Loopback interface
+        """
         return pulumi.get(self, "connect_source_loopback")
 
     @property
     @pulumi.getter(name="remoteAs")
     def remote_as(self) -> int:
+        """
+        Configured AS number
+        """
         return pulumi.get(self, "remote_as")
 
 
@@ -10436,6 +11658,10 @@ class GetMsdpVrfPeerResult(dict):
                  addr: str,
                  connect_source_loopback: int,
                  remote_as: int):
+        """
+        :param int connect_source_loopback: Loopback interface
+        :param int remote_as: Configured AS number
+        """
         pulumi.set(__self__, "addr", addr)
         pulumi.set(__self__, "connect_source_loopback", connect_source_loopback)
         pulumi.set(__self__, "remote_as", remote_as)
@@ -10448,11 +11674,17 @@ class GetMsdpVrfPeerResult(dict):
     @property
     @pulumi.getter(name="connectSourceLoopback")
     def connect_source_loopback(self) -> int:
+        """
+        Loopback interface
+        """
         return pulumi.get(self, "connect_source_loopback")
 
     @property
     @pulumi.getter(name="remoteAs")
     def remote_as(self) -> int:
+        """
+        Configured AS number
+        """
         return pulumi.get(self, "remote_as")
 
 
@@ -10467,6 +11699,15 @@ class GetNtpAuthenticationKeyResult(dict):
                  number: int,
                  sha1: str,
                  sha2: str):
+        """
+        :param str cmac_aes128: CMAC-AES-128 (digest length = 128 bits,  key length = [16 or 32] bytes)
+        :param int encryption_type: Authentication key encryption type
+        :param str hmac_sha1: HMAC-SHA1 (digest length = 160 bits,  key length = [1-32] bytes)
+        :param str hmac_sha2256: HMAC-SHA2-256 (digest length = 256 bits,  key length = [1-32] bytes)
+        :param str md5: MD5 authentication
+        :param str sha1: SHA1 (digest length = 160 bits,  key length = [1-32] bytes)
+        :param str sha2: SHA-256 (digest length = 256 bits,  key length = [1-32] bytes)
+        """
         pulumi.set(__self__, "cmac_aes128", cmac_aes128)
         pulumi.set(__self__, "encryption_type", encryption_type)
         pulumi.set(__self__, "hmac_sha1", hmac_sha1)
@@ -10479,26 +11720,41 @@ class GetNtpAuthenticationKeyResult(dict):
     @property
     @pulumi.getter(name="cmacAes128")
     def cmac_aes128(self) -> str:
+        """
+        CMAC-AES-128 (digest length = 128 bits,  key length = [16 or 32] bytes)
+        """
         return pulumi.get(self, "cmac_aes128")
 
     @property
     @pulumi.getter(name="encryptionType")
     def encryption_type(self) -> int:
+        """
+        Authentication key encryption type
+        """
         return pulumi.get(self, "encryption_type")
 
     @property
     @pulumi.getter(name="hmacSha1")
     def hmac_sha1(self) -> str:
+        """
+        HMAC-SHA1 (digest length = 160 bits,  key length = [1-32] bytes)
+        """
         return pulumi.get(self, "hmac_sha1")
 
     @property
     @pulumi.getter(name="hmacSha2256")
     def hmac_sha2256(self) -> str:
+        """
+        HMAC-SHA2-256 (digest length = 256 bits,  key length = [1-32] bytes)
+        """
         return pulumi.get(self, "hmac_sha2256")
 
     @property
     @pulumi.getter
     def md5(self) -> str:
+        """
+        MD5 authentication
+        """
         return pulumi.get(self, "md5")
 
     @property
@@ -10509,11 +11765,17 @@ class GetNtpAuthenticationKeyResult(dict):
     @property
     @pulumi.getter
     def sha1(self) -> str:
+        """
+        SHA1 (digest length = 160 bits,  key length = [1-32] bytes)
+        """
         return pulumi.get(self, "sha1")
 
     @property
     @pulumi.getter
     def sha2(self) -> str:
+        """
+        SHA-256 (digest length = 256 bits,  key length = [1-32] bytes)
+        """
         return pulumi.get(self, "sha2")
 
 
@@ -10525,6 +11787,12 @@ class GetNtpPeerResult(dict):
                  prefer: bool,
                  source: str,
                  version: int):
+        """
+        :param int key: Configure peer authentication key
+        :param bool prefer: Prefer this peer when possible
+        :param str source: Interface for source address
+        :param int version: Configure NTP version
+        """
         pulumi.set(__self__, "ip_address", ip_address)
         pulumi.set(__self__, "key", key)
         pulumi.set(__self__, "prefer", prefer)
@@ -10539,21 +11807,33 @@ class GetNtpPeerResult(dict):
     @property
     @pulumi.getter
     def key(self) -> int:
+        """
+        Configure peer authentication key
+        """
         return pulumi.get(self, "key")
 
     @property
     @pulumi.getter
     def prefer(self) -> bool:
+        """
+        Prefer this peer when possible
+        """
         return pulumi.get(self, "prefer")
 
     @property
     @pulumi.getter
     def source(self) -> str:
+        """
+        Interface for source address
+        """
         return pulumi.get(self, "source")
 
     @property
     @pulumi.getter
     def version(self) -> int:
+        """
+        Configure NTP version
+        """
         return pulumi.get(self, "version")
 
 
@@ -10583,6 +11863,11 @@ class GetNtpPeerVrfPeerResult(dict):
                  key: int,
                  prefer: bool,
                  version: int):
+        """
+        :param int key: Configure peer authentication key
+        :param bool prefer: Prefer this peer when possible
+        :param int version: Configure NTP version
+        """
         pulumi.set(__self__, "ip_address", ip_address)
         pulumi.set(__self__, "key", key)
         pulumi.set(__self__, "prefer", prefer)
@@ -10596,16 +11881,25 @@ class GetNtpPeerVrfPeerResult(dict):
     @property
     @pulumi.getter
     def key(self) -> int:
+        """
+        Configure peer authentication key
+        """
         return pulumi.get(self, "key")
 
     @property
     @pulumi.getter
     def prefer(self) -> bool:
+        """
+        Prefer this peer when possible
+        """
         return pulumi.get(self, "prefer")
 
     @property
     @pulumi.getter
     def version(self) -> int:
+        """
+        Configure NTP version
+        """
         return pulumi.get(self, "version")
 
 
@@ -10617,6 +11911,12 @@ class GetNtpServerResult(dict):
                  prefer: bool,
                  source: str,
                  version: int):
+        """
+        :param int key: Configure peer authentication key
+        :param bool prefer: Prefer this peer when possible
+        :param str source: Interface for source address
+        :param int version: Configure NTP version
+        """
         pulumi.set(__self__, "ip_address", ip_address)
         pulumi.set(__self__, "key", key)
         pulumi.set(__self__, "prefer", prefer)
@@ -10631,21 +11931,33 @@ class GetNtpServerResult(dict):
     @property
     @pulumi.getter
     def key(self) -> int:
+        """
+        Configure peer authentication key
+        """
         return pulumi.get(self, "key")
 
     @property
     @pulumi.getter
     def prefer(self) -> bool:
+        """
+        Prefer this peer when possible
+        """
         return pulumi.get(self, "prefer")
 
     @property
     @pulumi.getter
     def source(self) -> str:
+        """
+        Interface for source address
+        """
         return pulumi.get(self, "source")
 
     @property
     @pulumi.getter
     def version(self) -> int:
+        """
+        Configure NTP version
+        """
         return pulumi.get(self, "version")
 
 
@@ -10675,6 +11987,11 @@ class GetNtpServerVrfServerResult(dict):
                  key: int,
                  prefer: bool,
                  version: int):
+        """
+        :param int key: Configure peer authentication key
+        :param bool prefer: Prefer this peer when possible
+        :param int version: Configure NTP version
+        """
         pulumi.set(__self__, "ip_address", ip_address)
         pulumi.set(__self__, "key", key)
         pulumi.set(__self__, "prefer", prefer)
@@ -10688,16 +12005,25 @@ class GetNtpServerVrfServerResult(dict):
     @property
     @pulumi.getter
     def key(self) -> int:
+        """
+        Configure peer authentication key
+        """
         return pulumi.get(self, "key")
 
     @property
     @pulumi.getter
     def prefer(self) -> bool:
+        """
+        Prefer this peer when possible
+        """
         return pulumi.get(self, "prefer")
 
     @property
     @pulumi.getter
     def version(self) -> int:
+        """
+        Configure NTP version
+        """
         return pulumi.get(self, "version")
 
 
@@ -10712,6 +12038,16 @@ class GetOspfAreaResult(dict):
                  nssa_default_information_originate_metric_type: int,
                  nssa_no_redistribution: bool,
                  nssa_no_summary: bool):
+        """
+        :param str area_id: OSPF area ID
+        :param bool authentication_message_digest: Use message-digest authentication
+        :param bool nssa: Specify a NSSA area
+        :param bool nssa_default_information_originate: Originate Type 7 default into NSSA area
+        :param int nssa_default_information_originate_metric: OSPF default metric
+        :param int nssa_default_information_originate_metric_type: OSPF metric type for default routes
+        :param bool nssa_no_redistribution: No redistribution into this NSSA area
+        :param bool nssa_no_summary: Do not send summary LSA into NSSA
+        """
         pulumi.set(__self__, "area_id", area_id)
         pulumi.set(__self__, "authentication_message_digest", authentication_message_digest)
         pulumi.set(__self__, "nssa", nssa)
@@ -10724,41 +12060,65 @@ class GetOspfAreaResult(dict):
     @property
     @pulumi.getter(name="areaId")
     def area_id(self) -> str:
+        """
+        OSPF area ID
+        """
         return pulumi.get(self, "area_id")
 
     @property
     @pulumi.getter(name="authenticationMessageDigest")
     def authentication_message_digest(self) -> bool:
+        """
+        Use message-digest authentication
+        """
         return pulumi.get(self, "authentication_message_digest")
 
     @property
     @pulumi.getter
     def nssa(self) -> bool:
+        """
+        Specify a NSSA area
+        """
         return pulumi.get(self, "nssa")
 
     @property
     @pulumi.getter(name="nssaDefaultInformationOriginate")
     def nssa_default_information_originate(self) -> bool:
+        """
+        Originate Type 7 default into NSSA area
+        """
         return pulumi.get(self, "nssa_default_information_originate")
 
     @property
     @pulumi.getter(name="nssaDefaultInformationOriginateMetric")
     def nssa_default_information_originate_metric(self) -> int:
+        """
+        OSPF default metric
+        """
         return pulumi.get(self, "nssa_default_information_originate_metric")
 
     @property
     @pulumi.getter(name="nssaDefaultInformationOriginateMetricType")
     def nssa_default_information_originate_metric_type(self) -> int:
+        """
+        OSPF metric type for default routes
+        """
         return pulumi.get(self, "nssa_default_information_originate_metric_type")
 
     @property
     @pulumi.getter(name="nssaNoRedistribution")
     def nssa_no_redistribution(self) -> bool:
+        """
+        No redistribution into this NSSA area
+        """
         return pulumi.get(self, "nssa_no_redistribution")
 
     @property
     @pulumi.getter(name="nssaNoSummary")
     def nssa_no_summary(self) -> bool:
+        """
+        Do not send summary LSA into NSSA
+        """
         return pulumi.get(self, "nssa_no_summary")
 
 
@@ -10768,6 +12128,11 @@ class GetOspfNeighborResult(dict):
                  cost: int,
                  ip: str,
                  priority: int):
+        """
+        :param int cost: OSPF cost for point-to-multipoint neighbor
+        :param str ip: Neighbor address
+        :param int priority: OSPF priority of non-broadcast neighbor
+        """
         pulumi.set(__self__, "cost", cost)
         pulumi.set(__self__, "ip", ip)
         pulumi.set(__self__, "priority", priority)
@@ -10775,16 +12140,25 @@ class GetOspfNeighborResult(dict):
     @property
     @pulumi.getter
     def cost(self) -> int:
+        """
+        OSPF cost for point-to-multipoint neighbor
+        """
         return pulumi.get(self, "cost")
 
     @property
     @pulumi.getter
     def ip(self) -> str:
+        """
+        Neighbor address
+        """
         return pulumi.get(self, "ip")
 
     @property
     @pulumi.getter
     def priority(self) -> int:
+        """
+        OSPF priority of non-broadcast neighbor
+        """
         return pulumi.get(self, "priority")
 
 
@@ -10794,6 +12168,11 @@ class GetOspfNetworkResult(dict):
                  area: str,
                  ip: str,
                  wildcard: str):
+        """
+        :param str area: Set the OSPF area ID
+        :param str ip: Network number
+        :param str wildcard: OSPF wild card bits
+        """
         pulumi.set(__self__, "area", area)
         pulumi.set(__self__, "ip", ip)
         pulumi.set(__self__, "wildcard", wildcard)
@@ -10801,16 +12180,25 @@ class GetOspfNetworkResult(dict):
     @property
     @pulumi.getter
     def area(self) -> str:
+        """
+        Set the OSPF area ID
+        """
         return pulumi.get(self, "area")
 
     @property
     @pulumi.getter
     def ip(self) -> str:
+        """
+        Network number
+        """
         return pulumi.get(self, "ip")
 
     @property
     @pulumi.getter
     def wildcard(self) -> str:
+        """
+        OSPF wild card bits
+        """
         return pulumi.get(self, "wildcard")
 
 
@@ -10819,17 +12207,27 @@ class GetOspfSummaryAddressResult(dict):
     def __init__(__self__, *,
                  ip: str,
                  mask: str):
+        """
+        :param str ip: IP summary address
+        :param str mask: Summary mask
+        """
         pulumi.set(__self__, "ip", ip)
         pulumi.set(__self__, "mask", mask)
 
     @property
     @pulumi.getter
     def ip(self) -> str:
+        """
+        IP summary address
+        """
         return pulumi.get(self, "ip")
 
     @property
     @pulumi.getter
     def mask(self) -> str:
+        """
+        Summary mask
+        """
         return pulumi.get(self, "mask")
 
 
@@ -10844,6 +12242,16 @@ class GetOspfVrfAreaResult(dict):
                  nssa_default_information_originate_metric_type: int,
                  nssa_no_redistribution: bool,
                  nssa_no_summary: bool):
+        """
+        :param str area_id: OSPF area ID
+        :param bool authentication_message_digest: Use message-digest authentication
+        :param bool nssa: Specify a NSSA area
+        :param bool nssa_default_information_originate: Originate Type 7 default into NSSA area
+        :param int nssa_default_information_originate_metric: OSPF default metric
+        :param int nssa_default_information_originate_metric_type: OSPF metric type for default routes
+        :param bool nssa_no_redistribution: No redistribution into this NSSA area
+        :param bool nssa_no_summary: Do not send summary LSA into NSSA
+        """
         pulumi.set(__self__, "area_id", area_id)
         pulumi.set(__self__, "authentication_message_digest", authentication_message_digest)
         pulumi.set(__self__, "nssa", nssa)
@@ -10856,41 +12264,65 @@ class GetOspfVrfAreaResult(dict):
     @property
     @pulumi.getter(name="areaId")
     def area_id(self) -> str:
+        """
+        OSPF area ID
+        """
         return pulumi.get(self, "area_id")
 
     @property
     @pulumi.getter(name="authenticationMessageDigest")
     def authentication_message_digest(self) -> bool:
+        """
+        Use message-digest authentication
+        """
         return pulumi.get(self, "authentication_message_digest")
 
     @property
     @pulumi.getter
     def nssa(self) -> bool:
+        """
+        Specify a NSSA area
+        """
         return pulumi.get(self, "nssa")
 
     @property
     @pulumi.getter(name="nssaDefaultInformationOriginate")
     def nssa_default_information_originate(self) -> bool:
+        """
+        Originate Type 7 default into NSSA area
+        """
         return pulumi.get(self, "nssa_default_information_originate")
 
     @property
     @pulumi.getter(name="nssaDefaultInformationOriginateMetric")
     def nssa_default_information_originate_metric(self) -> int:
+        """
+        OSPF default metric
+        """
         return pulumi.get(self, "nssa_default_information_originate_metric")
 
     @property
     @pulumi.getter(name="nssaDefaultInformationOriginateMetricType")
     def nssa_default_information_originate_metric_type(self) -> int:
+        """
+        OSPF metric type for default routes
+        """
         return pulumi.get(self, "nssa_default_information_originate_metric_type")
 
     @property
     @pulumi.getter(name="nssaNoRedistribution")
     def nssa_no_redistribution(self) -> bool:
+        """
+        No redistribution into this NSSA area
+        """
         return pulumi.get(self, "nssa_no_redistribution")
 
     @property
     @pulumi.getter(name="nssaNoSummary")
     def nssa_no_summary(self) -> bool:
+        """
+        Do not send summary LSA into NSSA
+        """
         return pulumi.get(self, "nssa_no_summary")
 
 
@@ -10900,6 +12332,11 @@ class GetOspfVrfNeighborResult(dict):
                  cost: int,
                  ip: str,
                  priority: int):
+        """
+        :param int cost: OSPF cost for point-to-multipoint neighbor
+        :param str ip: Neighbor address
+        :param int priority: OSPF priority of non-broadcast neighbor
+        """
         pulumi.set(__self__, "cost", cost)
         pulumi.set(__self__, "ip", ip)
         pulumi.set(__self__, "priority", priority)
@@ -10907,16 +12344,25 @@ class GetOspfVrfNeighborResult(dict):
     @property
     @pulumi.getter
     def cost(self) -> int:
+        """
+        OSPF cost for point-to-multipoint neighbor
+        """
         return pulumi.get(self, "cost")
 
     @property
     @pulumi.getter
     def ip(self) -> str:
+        """
+        Neighbor address
+        """
         return pulumi.get(self, "ip")
 
     @property
     @pulumi.getter
     def priority(self) -> int:
+        """
+        OSPF priority of non-broadcast neighbor
+        """
         return pulumi.get(self, "priority")
 
 
@@ -10926,6 +12372,11 @@ class GetOspfVrfNetworkResult(dict):
                  area: str,
                  ip: str,
                  wildcard: str):
+        """
+        :param str area: Set the OSPF area ID
+        :param str ip: Network number
+        :param str wildcard: OSPF wild card bits
+        """
         pulumi.set(__self__, "area", area)
         pulumi.set(__self__, "ip", ip)
         pulumi.set(__self__, "wildcard", wildcard)
@@ -10933,16 +12384,25 @@ class GetOspfVrfNetworkResult(dict):
     @property
     @pulumi.getter
     def area(self) -> str:
+        """
+        Set the OSPF area ID
+        """
         return pulumi.get(self, "area")
 
     @property
     @pulumi.getter
     def ip(self) -> str:
+        """
+        Network number
+        """
         return pulumi.get(self, "ip")
 
     @property
     @pulumi.getter
     def wildcard(self) -> str:
+        """
+        OSPF wild card bits
+        """
         return pulumi.get(self, "wildcard")
 
 
@@ -10951,17 +12411,27 @@ class GetOspfVrfSummaryAddressResult(dict):
     def __init__(__self__, *,
                  ip: str,
                  mask: str):
+        """
+        :param str ip: IP summary address
+        :param str mask: Summary mask
+        """
         pulumi.set(__self__, "ip", ip)
         pulumi.set(__self__, "mask", mask)
 
     @property
     @pulumi.getter
     def ip(self) -> str:
+        """
+        IP summary address
+        """
         return pulumi.get(self, "ip")
 
     @property
     @pulumi.getter
     def mask(self) -> str:
+        """
+        Summary mask
+        """
         return pulumi.get(self, "mask")
 
 
@@ -10972,6 +12442,12 @@ class GetPimRpAddressResult(dict):
                  bidir: bool,
                  override: bool,
                  rp_address: str):
+        """
+        :param str access_list: IP Access-list
+        :param bool bidir: Group range treated in bidirectional shared-tree mode
+        :param bool override: Overrides dynamically learnt RP mappings
+        :param str rp_address: IP address of Rendezvous-point for group
+        """
         pulumi.set(__self__, "access_list", access_list)
         pulumi.set(__self__, "bidir", bidir)
         pulumi.set(__self__, "override", override)
@@ -10980,21 +12456,33 @@ class GetPimRpAddressResult(dict):
     @property
     @pulumi.getter(name="accessList")
     def access_list(self) -> str:
+        """
+        IP Access-list
+        """
         return pulumi.get(self, "access_list")
 
     @property
     @pulumi.getter
     def bidir(self) -> bool:
+        """
+        Group range treated in bidirectional shared-tree mode
+        """
         return pulumi.get(self, "bidir")
 
     @property
     @pulumi.getter
     def override(self) -> bool:
+        """
+        Overrides dynamically learnt RP mappings
+        """
         return pulumi.get(self, "override")
 
     @property
     @pulumi.getter(name="rpAddress")
     def rp_address(self) -> str:
+        """
+        IP address of Rendezvous-point for group
+        """
         return pulumi.get(self, "rp_address")
 
 
@@ -11006,6 +12494,13 @@ class GetPimRpCandidateResult(dict):
                  interface: str,
                  interval: int,
                  priority: int):
+        """
+        :param bool bidir: Group range treated in bidirectional shared-tree mode
+        :param str group_list: IP Access list
+        :param str interface: Autonomic-Networking virtual interface
+        :param int interval: RP candidate advertisement interval
+        :param int priority: RP candidate priority
+        """
         pulumi.set(__self__, "bidir", bidir)
         pulumi.set(__self__, "group_list", group_list)
         pulumi.set(__self__, "interface", interface)
@@ -11015,26 +12510,41 @@ class GetPimRpCandidateResult(dict):
     @property
     @pulumi.getter
     def bidir(self) -> bool:
+        """
+        Group range treated in bidirectional shared-tree mode
+        """
         return pulumi.get(self, "bidir")
 
     @property
     @pulumi.getter(name="groupList")
     def group_list(self) -> str:
+        """
+        IP Access list
+        """
         return pulumi.get(self, "group_list")
 
     @property
     @pulumi.getter
     def interface(self) -> str:
+        """
+        Autonomic-Networking virtual interface
+        """
         return pulumi.get(self, "interface")
 
     @property
     @pulumi.getter
     def interval(self) -> int:
+        """
+        RP candidate advertisement interval
+        """
         return pulumi.get(self, "interval")
 
     @property
     @pulumi.getter
     def priority(self) -> int:
+        """
+        RP candidate priority
+        """
         return pulumi.get(self, "priority")
 
 
@@ -11045,6 +12555,12 @@ class GetPimVrfRpAddressResult(dict):
                  bidir: bool,
                  override: bool,
                  rp_address: str):
+        """
+        :param str access_list: IP Access-list
+        :param bool bidir: Group range treated in bidirectional shared-tree mode
+        :param bool override: Overrides dynamically learnt RP mappings
+        :param str rp_address: IP address of Rendezvous-point for group
+        """
         pulumi.set(__self__, "access_list", access_list)
         pulumi.set(__self__, "bidir", bidir)
         pulumi.set(__self__, "override", override)
@@ -11053,21 +12569,33 @@ class GetPimVrfRpAddressResult(dict):
     @property
     @pulumi.getter(name="accessList")
     def access_list(self) -> str:
+        """
+        IP Access-list
+        """
         return pulumi.get(self, "access_list")
 
     @property
     @pulumi.getter
     def bidir(self) -> bool:
+        """
+        Group range treated in bidirectional shared-tree mode
+        """
         return pulumi.get(self, "bidir")
 
     @property
     @pulumi.getter
     def override(self) -> bool:
+        """
+        Overrides dynamically learnt RP mappings
+        """
         return pulumi.get(self, "override")
 
     @property
     @pulumi.getter(name="rpAddress")
     def rp_address(self) -> str:
+        """
+        IP address of Rendezvous-point for group
+        """
         return pulumi.get(self, "rp_address")
 
 
@@ -11079,6 +12607,13 @@ class GetPimVrfRpCandidateResult(dict):
                  interface: str,
                  interval: int,
                  priority: int):
+        """
+        :param bool bidir: Group range treated in bidirectional shared-tree mode
+        :param str group_list: IP Access list
+        :param str interface: Autonomic-Networking virtual interface
+        :param int interval: RP candidate advertisement interval
+        :param int priority: RP candidate priority
+        """
         pulumi.set(__self__, "bidir", bidir)
         pulumi.set(__self__, "group_list", group_list)
         pulumi.set(__self__, "interface", interface)
@@ -11088,26 +12623,41 @@ class GetPimVrfRpCandidateResult(dict):
     @property
     @pulumi.getter
     def bidir(self) -> bool:
+        """
+        Group range treated in bidirectional shared-tree mode
+        """
         return pulumi.get(self, "bidir")
 
     @property
     @pulumi.getter(name="groupList")
     def group_list(self) -> str:
+        """
+        IP Access list
+        """
         return pulumi.get(self, "group_list")
 
     @property
     @pulumi.getter
     def interface(self) -> str:
+        """
+        Autonomic-Networking virtual interface
+        """
         return pulumi.get(self, "interface")
 
     @property
     @pulumi.getter
     def interval(self) -> int:
+        """
+        RP candidate advertisement interval
+        """
         return pulumi.get(self, "interval")
 
     @property
     @pulumi.getter
     def priority(self) -> int:
+        """
+        RP candidate priority
+        """
         return pulumi.get(self, "priority")
 
 
@@ -11118,6 +12668,10 @@ class GetPolicyMapEventClassNumberResult(dict):
                  class_: str,
                  execution_type: str,
                  number: int):
+        """
+        :param Sequence['GetPolicyMapEventClassNumberActionNumberArgs'] action_numbers: action number, 1 for 1st class, 2 for 2nd...
+        :param str class_: The class type this control policy-map triggers upon
+        """
         pulumi.set(__self__, "action_numbers", action_numbers)
         pulumi.set(__self__, "class_", class_)
         pulumi.set(__self__, "execution_type", execution_type)
@@ -11126,11 +12680,17 @@ class GetPolicyMapEventClassNumberResult(dict):
     @property
     @pulumi.getter(name="actionNumbers")
     def action_numbers(self) -> Sequence['outputs.GetPolicyMapEventClassNumberActionNumberResult']:
+        """
+        action number, 1 for 1st class, 2 for 2nd...
+        """
         return pulumi.get(self, "action_numbers")
 
     @property
     @pulumi.getter(name="class")
     def class_(self) -> str:
+        """
+        The class type this control policy-map triggers upon
+        """
         return pulumi.get(self, "class_")
 
     @property
@@ -11221,6 +12781,14 @@ class GetPrefixListPrefixResult(dict):
                  le: int,
                  name: str,
                  seq: int):
+        """
+        :param str action: Specify deny or permit action
+        :param int ge: Minimum prefix length to be matched
+        :param str ip: IPv4 Prefix
+        :param int le: Maximum prefix length to be matched
+        :param str name: Name of the prefix-list
+        :param int seq: Seq Number of the prefix-list
+        """
         pulumi.set(__self__, "action", action)
         pulumi.set(__self__, "ge", ge)
         pulumi.set(__self__, "ip", ip)
@@ -11231,31 +12799,49 @@ class GetPrefixListPrefixResult(dict):
     @property
     @pulumi.getter
     def action(self) -> str:
+        """
+        Specify deny or permit action
+        """
         return pulumi.get(self, "action")
 
     @property
     @pulumi.getter
     def ge(self) -> int:
+        """
+        Minimum prefix length to be matched
+        """
         return pulumi.get(self, "ge")
 
     @property
     @pulumi.getter
     def ip(self) -> str:
+        """
+        IPv4 Prefix
+        """
         return pulumi.get(self, "ip")
 
     @property
     @pulumi.getter
     def le(self) -> int:
+        """
+        Maximum prefix length to be matched
+        """
         return pulumi.get(self, "le")
 
     @property
     @pulumi.getter
     def name(self) -> str:
+        """
+        Name of the prefix-list
+        """
         return pulumi.get(self, "name")
 
     @property
     @pulumi.getter
     def seq(self) -> int:
+        """
+        Seq Number of the prefix-list
+        """
         return pulumi.get(self, "seq")
 
 
@@ -11266,6 +12852,9 @@ class GetRadiusServerAttributeResult(dict):
                  attribute31_parameters: Sequence['outputs.GetRadiusServerAttributeAttribute31ParameterResult'],
                  number: str,
                  send_attributes: Sequence[str]):
+        """
+        :param bool access_request_include: Include attribute
+        """
         pulumi.set(__self__, "access_request_include", access_request_include)
         pulumi.set(__self__, "attribute31_parameters", attribute31_parameters)
         pulumi.set(__self__, "number", number)
@@ -11274,6 +12863,9 @@ class GetRadiusServerAttributeResult(dict):
     @property
     @pulumi.getter(name="accessRequestInclude")
     def access_request_include(self) -> bool:
+        """
+        Include attribute
+        """
         return pulumi.get(self, "access_request_include")
 
     @property
@@ -11433,6 +13025,73 @@ class GetRouteMapEntryResult(dict):
                  set_vrf: str,
                  set_weight: int,
                  set_weight_legacy: int):
+        """
+        :param bool continue_: Continue on a different entry within the route-map
+        :param int continue_sequence_number: Route-map entry sequence number
+        :param str description: Route-map comment
+        :param Sequence[int] match_as_paths: AS path access-list
+        :param Sequence[int] match_as_paths_legacies: AS path access-list (DEPRECATED - please use route-map configuration in Cisco-IOS-XE-bgp.yang)
+        :param bool match_community_list_exact_match: Do exact matching of communities
+        :param Sequence[str] match_community_lists: Named Access List
+        :param Sequence[str] match_community_lists_legacies: Named Access List (DEPRECATED- please use community-list in Cisco-IOS-XE-bgp.yang)
+        :param Sequence[str] match_extcommunity_lists: Named Access List
+        :param Sequence[str] match_extcommunity_lists_legacies: Named Access List (DEPRECATED- please use extcommunity-list in Cisco-IOS-XE-bgp.yang)
+        :param Sequence[str] match_ip_address_prefix_lists: Match entries of prefix-lists
+        :param Sequence[str] match_ip_next_hop_prefix_lists: Match entries of prefix-lists
+        :param str match_ipv6_address_prefix_lists: IPv6 prefix-list
+        :param str match_ipv6_next_hop_prefix_lists: IPv6 prefix-list
+        :param bool match_route_type_external: external route (BGP, EIGRP and OSPF type 1/2)
+        :param bool match_route_type_external_type1: OSPF external type 1 route
+        :param bool match_route_type_external_type2: OSPF external type 2 route
+        :param bool match_route_type_internal: internal route (including OSPF intra/inter area)
+        :param bool match_route_type_level1: IS-IS level-1 route
+        :param bool match_route_type_level2: IS-IS level-2 route
+        :param bool match_route_type_local: locally generated route (DEPRECATED - please use route-map configuration in Cisco-IOS-XE-bgp.yang)
+        :param Sequence[str] match_source_protocol_bgps: Border Gateway Protocol (BGP)
+        :param bool match_source_protocol_connected: Connected
+        :param Sequence[str] match_source_protocol_eigrps: Border Gateway Protocol (BGP)
+        :param bool match_source_protocol_isis: ISO IS-IS
+        :param bool match_source_protocol_lisp: Locator ID Separation Protocol (LISP)
+        :param Sequence[str] match_source_protocol_ospfs: Open Shortest Path First (OSPF)
+        :param Sequence[str] match_source_protocol_ospfv3s: OSPFv3
+        :param bool match_source_protocol_rip: Routing Information Protocol (RIP)
+        :param bool match_source_protocol_static: Static routes
+        :param Sequence[int] match_tags: Tag value
+        :param int match_track: tracking object
+        :param str set_as_path_prepend_as: \\n\\n;;AS number
+        :param str set_as_path_prepend_as_legacy: \\n\\n;;AS number (DEPRECATED - please use route-map configuration in Cisco-IOS-XE-bgp.yang)
+        :param bool set_as_path_tag: Set the tag as an AS-path attribute
+        :param bool set_as_path_tag_legacy: Set the tag as an AS-path attribute (DEPRECATED - please use route-map configuration in Cisco-IOS-XE-bgp.yang)
+        :param bool set_community_list_delete: Delete matching communities
+        :param bool set_community_list_delete_legacy: Delete matching communities (DEPRECATED - please use route-map configuration in Cisco-IOS-XE-bgp.yang)
+        :param bool set_community_none: No community attribute
+        :param bool set_community_none_legacy: No community attribute (DEPRECATED - please use route-map configuration in Cisco-IOS-XE-bgp.yang)
+        :param Sequence[str] set_default_interfaces: SPAN source interface
+        :param str set_extcomunity_vpn_distinguisher: VPN Distinguisher Extended Community
+        :param Sequence[str] set_interfaces: Interface specific information
+        :param str set_ip_address: Specify prefix-list
+        :param bool set_ip_next_hop_self: Use self address (for BGP only)
+        :param Sequence[str] set_ipv6_addresses: IPv6 prefix-list
+        :param str set_ipv6_default_global_next_hop: Next hop along path
+        :param Sequence[str] set_ipv6_default_next_hops: Default next hop IPv6 address
+        :param Sequence[str] set_ipv6_next_hops: Next hop IPv6 address
+        :param bool set_level1: Import into a level-1 area
+        :param bool set_level12: Import into level-1 and level-2
+        :param bool set_level2: Import into level-2 sub-domain
+        :param int set_local_preference: Preference value
+        :param int set_local_preference_legacy: Preference value (DEPRECATED - please use route-map configuration in Cisco-IOS-XE-bgp.yang)
+        :param str set_metric_change: +/-\\n\\n;;Add or subtract metric
+        :param str set_metric_delay: EIGRP delay metric, in 10 microsecond units
+        :param int set_metric_loading: EIGRP Effective bandwidth metric (Loading) where 255 is 100% loaded
+        :param int set_metric_mtu: EIGRP MTU of the path
+        :param int set_metric_reliability: EIGRP reliability metric where 255 is 100% reliable
+        :param str set_metric_type: Type of metric for destination routing protocol
+        :param int set_metric_value: Metric value or Bandwidth in Kbits per second
+        :param int set_tag: Tag value
+        :param str set_vrf: VPN Routing/Forwarding instance name
+        :param int set_weight: BGP weight for routing table
+        :param int set_weight_legacy: BGP weight for routing table (DEPRECATED - please use route-map configuration in Cisco-IOS-XE-bgp.yang)
+        """
         pulumi.set(__self__, "continue_", continue_)
         pulumi.set(__self__, "continue_sequence_number", continue_sequence_number)
         pulumi.set(__self__, "description", description)
@@ -11535,51 +13194,81 @@ class GetRouteMapEntryResult(dict):
     @property
     @pulumi.getter(name="continue")
     def continue_(self) -> bool:
+        """
+        Continue on a different entry within the route-map
+        """
         return pulumi.get(self, "continue_")
 
     @property
     @pulumi.getter(name="continueSequenceNumber")
     def continue_sequence_number(self) -> int:
+        """
+        Route-map entry sequence number
+        """
         return pulumi.get(self, "continue_sequence_number")
 
     @property
     @pulumi.getter
     def description(self) -> str:
+        """
+        Route-map comment
+        """
         return pulumi.get(self, "description")
 
     @property
     @pulumi.getter(name="matchAsPaths")
     def match_as_paths(self) -> Sequence[int]:
+        """
+        AS path access-list
+        """
         return pulumi.get(self, "match_as_paths")
 
     @property
     @pulumi.getter(name="matchAsPathsLegacies")
     def match_as_paths_legacies(self) -> Sequence[int]:
+        """
+        AS path access-list (DEPRECATED - please use route-map configuration in Cisco-IOS-XE-bgp.yang)
+        """
         return pulumi.get(self, "match_as_paths_legacies")
 
     @property
     @pulumi.getter(name="matchCommunityListExactMatch")
     def match_community_list_exact_match(self) -> bool:
+        """
+        Do exact matching of communities
+        """
         return pulumi.get(self, "match_community_list_exact_match")
 
     @property
     @pulumi.getter(name="matchCommunityLists")
     def match_community_lists(self) -> Sequence[str]:
+        """
+        Named Access List
+        """
         return pulumi.get(self, "match_community_lists")
 
     @property
     @pulumi.getter(name="matchCommunityListsLegacies")
     def match_community_lists_legacies(self) -> Sequence[str]:
+        """
+        Named Access List (DEPRECATED- please use community-list in Cisco-IOS-XE-bgp.yang)
+        """
         return pulumi.get(self, "match_community_lists_legacies")
 
     @property
     @pulumi.getter(name="matchExtcommunityLists")
     def match_extcommunity_lists(self) -> Sequence[str]:
+        """
+        Named Access List
+        """
         return pulumi.get(self, "match_extcommunity_lists")
 
     @property
     @pulumi.getter(name="matchExtcommunityListsLegacies")
     def match_extcommunity_lists_legacies(self) -> Sequence[str]:
+        """
+        Named Access List (DEPRECATED- please use extcommunity-list in Cisco-IOS-XE-bgp.yang)
+        """
         return pulumi.get(self, "match_extcommunity_lists_legacies")
 
     @property
@@ -11595,6 +13284,9 @@ class GetRouteMapEntryResult(dict):
     @property
     @pulumi.getter(name="matchIpAddressPrefixLists")
     def match_ip_address_prefix_lists(self) -> Sequence[str]:
+        """
+        Match entries of prefix-lists
+        """
         return pulumi.get(self, "match_ip_address_prefix_lists")
 
     @property
@@ -11605,6 +13297,9 @@ class GetRouteMapEntryResult(dict):
     @property
     @pulumi.getter(name="matchIpNextHopPrefixLists")
     def match_ip_next_hop_prefix_lists(self) -> Sequence[str]:
+        """
+        Match entries of prefix-lists
+        """
         return pulumi.get(self, "match_ip_next_hop_prefix_lists")
 
     @property
@@ -11615,6 +13310,9 @@ class GetRouteMapEntryResult(dict):
     @property
     @pulumi.getter(name="matchIpv6AddressPrefixLists")
     def match_ipv6_address_prefix_lists(self) -> str:
+        """
+        IPv6 prefix-list
+        """
         return pulumi.get(self, "match_ipv6_address_prefix_lists")
 
     @property
@@ -11625,6 +13323,9 @@ class GetRouteMapEntryResult(dict):
     @property
     @pulumi.getter(name="matchIpv6NextHopPrefixLists")
     def match_ipv6_next_hop_prefix_lists(self) -> str:
+        """
+        IPv6 prefix-list
+        """
         return pulumi.get(self, "match_ipv6_next_hop_prefix_lists")
 
     @property
@@ -11640,91 +13341,145 @@ class GetRouteMapEntryResult(dict):
     @property
     @pulumi.getter(name="matchRouteTypeExternal")
     def match_route_type_external(self) -> bool:
+        """
+        external route (BGP, EIGRP and OSPF type 1/2)
+        """
         return pulumi.get(self, "match_route_type_external")
 
     @property
     @pulumi.getter(name="matchRouteTypeExternalType1")
     def match_route_type_external_type1(self) -> bool:
+        """
+        OSPF external type 1 route
+        """
         return pulumi.get(self, "match_route_type_external_type1")
 
     @property
     @pulumi.getter(name="matchRouteTypeExternalType2")
     def match_route_type_external_type2(self) -> bool:
+        """
+        OSPF external type 2 route
+        """
         return pulumi.get(self, "match_route_type_external_type2")
 
     @property
     @pulumi.getter(name="matchRouteTypeInternal")
     def match_route_type_internal(self) -> bool:
+        """
+        internal route (including OSPF intra/inter area)
+        """
         return pulumi.get(self, "match_route_type_internal")
 
     @property
     @pulumi.getter(name="matchRouteTypeLevel1")
     def match_route_type_level1(self) -> bool:
+        """
+        IS-IS level-1 route
+        """
         return pulumi.get(self, "match_route_type_level1")
 
     @property
     @pulumi.getter(name="matchRouteTypeLevel2")
     def match_route_type_level2(self) -> bool:
+        """
+        IS-IS level-2 route
+        """
         return pulumi.get(self, "match_route_type_level2")
 
     @property
     @pulumi.getter(name="matchRouteTypeLocal")
     def match_route_type_local(self) -> bool:
+        """
+        locally generated route (DEPRECATED - please use route-map configuration in Cisco-IOS-XE-bgp.yang)
+        """
         return pulumi.get(self, "match_route_type_local")
 
     @property
     @pulumi.getter(name="matchSourceProtocolBgps")
     def match_source_protocol_bgps(self) -> Sequence[str]:
+        """
+        Border Gateway Protocol (BGP)
+        """
         return pulumi.get(self, "match_source_protocol_bgps")
 
     @property
     @pulumi.getter(name="matchSourceProtocolConnected")
     def match_source_protocol_connected(self) -> bool:
+        """
+        Connected
+        """
         return pulumi.get(self, "match_source_protocol_connected")
 
     @property
     @pulumi.getter(name="matchSourceProtocolEigrps")
     def match_source_protocol_eigrps(self) -> Sequence[str]:
+        """
+        Border Gateway Protocol (BGP)
+        """
         return pulumi.get(self, "match_source_protocol_eigrps")
 
     @property
     @pulumi.getter(name="matchSourceProtocolIsis")
     def match_source_protocol_isis(self) -> bool:
+        """
+        ISO IS-IS
+        """
         return pulumi.get(self, "match_source_protocol_isis")
 
     @property
     @pulumi.getter(name="matchSourceProtocolLisp")
     def match_source_protocol_lisp(self) -> bool:
+        """
+        Locator ID Separation Protocol (LISP)
+        """
         return pulumi.get(self, "match_source_protocol_lisp")
 
     @property
     @pulumi.getter(name="matchSourceProtocolOspfs")
     def match_source_protocol_ospfs(self) -> Sequence[str]:
+        """
+        Open Shortest Path First (OSPF)
+        """
         return pulumi.get(self, "match_source_protocol_ospfs")
 
     @property
     @pulumi.getter(name="matchSourceProtocolOspfv3s")
     def match_source_protocol_ospfv3s(self) -> Sequence[str]:
+        """
+        OSPFv3
+        """
         return pulumi.get(self, "match_source_protocol_ospfv3s")
 
     @property
     @pulumi.getter(name="matchSourceProtocolRip")
     def match_source_protocol_rip(self) -> bool:
+        """
+        Routing Information Protocol (RIP)
+        """
         return pulumi.get(self, "match_source_protocol_rip")
 
     @property
     @pulumi.getter(name="matchSourceProtocolStatic")
     def match_source_protocol_static(self) -> bool:
+        """
+        Static routes
+        """
         return pulumi.get(self, "match_source_protocol_static")
 
     @property
     @pulumi.getter(name="matchTags")
     def match_tags(self) -> Sequence[int]:
+        """
+        Tag value
+        """
         return pulumi.get(self, "match_tags")
 
     @property
     @pulumi.getter(name="matchTrack")
     def match_track(self) -> int:
+        """
+        tracking object
+        """
         return pulumi.get(self, "match_track")
 
     @property
@@ -11740,11 +13495,17 @@ class GetRouteMapEntryResult(dict):
     @property
     @pulumi.getter(name="setAsPathPrependAs")
     def set_as_path_prepend_as(self) -> str:
+        """
+        \\n\\n;;AS number
+        """
         return pulumi.get(self, "set_as_path_prepend_as")
 
     @property
     @pulumi.getter(name="setAsPathPrependAsLegacy")
     def set_as_path_prepend_as_legacy(self) -> str:
+        """
+        \\n\\n;;AS number (DEPRECATED - please use route-map configuration in Cisco-IOS-XE-bgp.yang)
+        """
         return pulumi.get(self, "set_as_path_prepend_as_legacy")
 
     @property
@@ -11760,11 +13521,17 @@ class GetRouteMapEntryResult(dict):
     @property
     @pulumi.getter(name="setAsPathTag")
     def set_as_path_tag(self) -> bool:
+        """
+        Set the tag as an AS-path attribute
+        """
         return pulumi.get(self, "set_as_path_tag")
 
     @property
     @pulumi.getter(name="setAsPathTagLegacy")
     def set_as_path_tag_legacy(self) -> bool:
+        """
+        Set the tag as an AS-path attribute (DEPRECATED - please use route-map configuration in Cisco-IOS-XE-bgp.yang)
+        """
         return pulumi.get(self, "set_as_path_tag_legacy")
 
     @property
@@ -11790,11 +13557,17 @@ class GetRouteMapEntryResult(dict):
     @property
     @pulumi.getter(name="setCommunityListDelete")
     def set_community_list_delete(self) -> bool:
+        """
+        Delete matching communities
+        """
         return pulumi.get(self, "set_community_list_delete")
 
     @property
     @pulumi.getter(name="setCommunityListDeleteLegacy")
     def set_community_list_delete_legacy(self) -> bool:
+        """
+        Delete matching communities (DEPRECATED - please use route-map configuration in Cisco-IOS-XE-bgp.yang)
+        """
         return pulumi.get(self, "set_community_list_delete_legacy")
 
     @property
@@ -11830,16 +13603,25 @@ class GetRouteMapEntryResult(dict):
     @property
     @pulumi.getter(name="setCommunityNone")
     def set_community_none(self) -> bool:
+        """
+        No community attribute
+        """
         return pulumi.get(self, "set_community_none")
 
     @property
     @pulumi.getter(name="setCommunityNoneLegacy")
     def set_community_none_legacy(self) -> bool:
+        """
+        No community attribute (DEPRECATED - please use route-map configuration in Cisco-IOS-XE-bgp.yang)
+        """
         return pulumi.get(self, "set_community_none_legacy")
 
     @property
     @pulumi.getter(name="setDefaultInterfaces")
     def set_default_interfaces(self) -> Sequence[str]:
+        """
+        SPAN source interface
+        """
         return pulumi.get(self, "set_default_interfaces")
 
     @property
@@ -11865,6 +13647,9 @@ class GetRouteMapEntryResult(dict):
     @property
     @pulumi.getter(name="setExtcomunityVpnDistinguisher")
     def set_extcomunity_vpn_distinguisher(self) -> str:
+        """
+        VPN Distinguisher Extended Community
+        """
         return pulumi.get(self, "set_extcomunity_vpn_distinguisher")
 
     @property
@@ -11885,11 +13670,17 @@ class GetRouteMapEntryResult(dict):
     @property
     @pulumi.getter(name="setInterfaces")
     def set_interfaces(self) -> Sequence[str]:
+        """
+        Interface specific information
+        """
         return pulumi.get(self, "set_interfaces")
 
     @property
     @pulumi.getter(name="setIpAddress")
     def set_ip_address(self) -> str:
+        """
+        Specify prefix-list
+        """
         return pulumi.get(self, "set_ip_address")
 
     @property
@@ -11915,6 +13706,9 @@ class GetRouteMapEntryResult(dict):
     @property
     @pulumi.getter(name="setIpNextHopSelf")
     def set_ip_next_hop_self(self) -> bool:
+        """
+        Use self address (for BGP only)
+        """
         return pulumi.get(self, "set_ip_next_hop_self")
 
     @property
@@ -11925,101 +13719,161 @@ class GetRouteMapEntryResult(dict):
     @property
     @pulumi.getter(name="setIpv6Addresses")
     def set_ipv6_addresses(self) -> Sequence[str]:
+        """
+        IPv6 prefix-list
+        """
         return pulumi.get(self, "set_ipv6_addresses")
 
     @property
     @pulumi.getter(name="setIpv6DefaultGlobalNextHop")
     def set_ipv6_default_global_next_hop(self) -> str:
+        """
+        Next hop along path
+        """
         return pulumi.get(self, "set_ipv6_default_global_next_hop")
 
     @property
     @pulumi.getter(name="setIpv6DefaultNextHops")
     def set_ipv6_default_next_hops(self) -> Sequence[str]:
+        """
+        Default next hop IPv6 address
+        """
         return pulumi.get(self, "set_ipv6_default_next_hops")
 
     @property
     @pulumi.getter(name="setIpv6NextHops")
     def set_ipv6_next_hops(self) -> Sequence[str]:
+        """
+        Next hop IPv6 address
+        """
         return pulumi.get(self, "set_ipv6_next_hops")
 
     @property
     @pulumi.getter(name="setLevel1")
     def set_level1(self) -> bool:
+        """
+        Import into a level-1 area
+        """
         return pulumi.get(self, "set_level1")
 
     @property
     @pulumi.getter(name="setLevel12")
     def set_level12(self) -> bool:
+        """
+        Import into level-1 and level-2
+        """
         return pulumi.get(self, "set_level12")
 
     @property
     @pulumi.getter(name="setLevel2")
     def set_level2(self) -> bool:
+        """
+        Import into level-2 sub-domain
+        """
         return pulumi.get(self, "set_level2")
 
     @property
     @pulumi.getter(name="setLocalPreference")
     def set_local_preference(self) -> int:
+        """
+        Preference value
+        """
         return pulumi.get(self, "set_local_preference")
 
     @property
     @pulumi.getter(name="setLocalPreferenceLegacy")
     def set_local_preference_legacy(self) -> int:
+        """
+        Preference value (DEPRECATED - please use route-map configuration in Cisco-IOS-XE-bgp.yang)
+        """
         return pulumi.get(self, "set_local_preference_legacy")
 
     @property
     @pulumi.getter(name="setMetricChange")
     def set_metric_change(self) -> str:
+        """
+        +/-\\n\\n;;Add or subtract metric
+        """
         return pulumi.get(self, "set_metric_change")
 
     @property
     @pulumi.getter(name="setMetricDelay")
     def set_metric_delay(self) -> str:
+        """
+        EIGRP delay metric, in 10 microsecond units
+        """
         return pulumi.get(self, "set_metric_delay")
 
     @property
     @pulumi.getter(name="setMetricLoading")
     def set_metric_loading(self) -> int:
+        """
+        EIGRP Effective bandwidth metric (Loading) where 255 is 100% loaded
+        """
         return pulumi.get(self, "set_metric_loading")
 
     @property
     @pulumi.getter(name="setMetricMtu")
     def set_metric_mtu(self) -> int:
+        """
+        EIGRP MTU of the path
+        """
         return pulumi.get(self, "set_metric_mtu")
 
     @property
     @pulumi.getter(name="setMetricReliability")
     def set_metric_reliability(self) -> int:
+        """
+        EIGRP reliability metric where 255 is 100% reliable
+        """
         return pulumi.get(self, "set_metric_reliability")
 
     @property
     @pulumi.getter(name="setMetricType")
     def set_metric_type(self) -> str:
+        """
+        Type of metric for destination routing protocol
+        """
         return pulumi.get(self, "set_metric_type")
 
     @property
     @pulumi.getter(name="setMetricValue")
     def set_metric_value(self) -> int:
+        """
+        Metric value or Bandwidth in Kbits per second
+        """
         return pulumi.get(self, "set_metric_value")
 
     @property
     @pulumi.getter(name="setTag")
     def set_tag(self) -> int:
+        """
+        Tag value
+        """
         return pulumi.get(self, "set_tag")
 
     @property
     @pulumi.getter(name="setVrf")
     def set_vrf(self) -> str:
+        """
+        VPN Routing/Forwarding instance name
+        """
         return pulumi.get(self, "set_vrf")
 
     @property
     @pulumi.getter(name="setWeight")
     def set_weight(self) -> int:
+        """
+        BGP weight for routing table
+        """
         return pulumi.get(self, "set_weight")
 
     @property
     @pulumi.getter(name="setWeightLegacy")
     def set_weight_legacy(self) -> int:
+        """
+        BGP weight for routing table (DEPRECATED - please use route-map configuration in Cisco-IOS-XE-bgp.yang)
+        """
         return pulumi.get(self, "set_weight_legacy")
 
 
@@ -12027,11 +13881,17 @@ class GetRouteMapEntryResult(dict):
 class GetServiceTemplateAccessGroupResult(dict):
     def __init__(__self__, *,
                  name: str):
+        """
+        :param str name: Specify the access list name
+        """
         pulumi.set(__self__, "name", name)
 
     @property
     @pulumi.getter
     def name(self) -> str:
+        """
+        Specify the access list name
+        """
         return pulumi.get(self, "name")
 
 
@@ -12039,11 +13899,17 @@ class GetServiceTemplateAccessGroupResult(dict):
 class GetServiceTemplateInterfaceTemplateResult(dict):
     def __init__(__self__, *,
                  name: str):
+        """
+        :param str name: Enter name of interface template
+        """
         pulumi.set(__self__, "name", name)
 
     @property
     @pulumi.getter
     def name(self) -> str:
+        """
+        Enter name of interface template
+        """
         return pulumi.get(self, "name")
 
 
@@ -12051,11 +13917,17 @@ class GetServiceTemplateInterfaceTemplateResult(dict):
 class GetServiceTemplateTagResult(dict):
     def __init__(__self__, *,
                  name: str):
+        """
+        :param str name: Specify the Tag name
+        """
         pulumi.set(__self__, "name", name)
 
     @property
     @pulumi.getter
     def name(self) -> str:
+        """
+        Specify the Tag name
+        """
         return pulumi.get(self, "name")
 
 
@@ -12083,6 +13955,17 @@ class GetSnmpServerGroupV3SecurityResult(dict):
                  read_node: str,
                  security_level: str,
                  write_node: str):
+        """
+        :param str access_acl_name: Access-list name
+        :param str access_ipv6_acl: Specify IPv6 Named Access-List
+        :param int access_standard_acl: Standard IP Access-list allowing access with this community string
+        :param str context_node: specify a context to associate these views for the group
+        :param str match_node: context name match criteria
+        :param str notify_node: specify a notify view for the group
+        :param str read_node: specify a read view for the group
+        :param str security_level: security level type
+        :param str write_node: specify a write view for the group
+        """
         pulumi.set(__self__, "access_acl_name", access_acl_name)
         pulumi.set(__self__, "access_ipv6_acl", access_ipv6_acl)
         pulumi.set(__self__, "access_standard_acl", access_standard_acl)
@@ -12096,46 +13979,73 @@ class GetSnmpServerGroupV3SecurityResult(dict):
     @property
     @pulumi.getter(name="accessAclName")
     def access_acl_name(self) -> str:
+        """
+        Access-list name
+        """
         return pulumi.get(self, "access_acl_name")
 
     @property
     @pulumi.getter(name="accessIpv6Acl")
     def access_ipv6_acl(self) -> str:
+        """
+        Specify IPv6 Named Access-List
+        """
         return pulumi.get(self, "access_ipv6_acl")
 
     @property
     @pulumi.getter(name="accessStandardAcl")
     def access_standard_acl(self) -> int:
+        """
+        Standard IP Access-list allowing access with this community string
+        """
         return pulumi.get(self, "access_standard_acl")
 
     @property
     @pulumi.getter(name="contextNode")
     def context_node(self) -> str:
+        """
+        specify a context to associate these views for the group
+        """
         return pulumi.get(self, "context_node")
 
     @property
     @pulumi.getter(name="matchNode")
     def match_node(self) -> str:
+        """
+        context name match criteria
+        """
         return pulumi.get(self, "match_node")
 
     @property
     @pulumi.getter(name="notifyNode")
     def notify_node(self) -> str:
+        """
+        specify a notify view for the group
+        """
         return pulumi.get(self, "notify_node")
 
     @property
     @pulumi.getter(name="readNode")
     def read_node(self) -> str:
+        """
+        specify a read view for the group
+        """
         return pulumi.get(self, "read_node")
 
     @property
     @pulumi.getter(name="securityLevel")
     def security_level(self) -> str:
+        """
+        security level type
+        """
         return pulumi.get(self, "security_level")
 
     @property
     @pulumi.getter(name="writeNode")
     def write_node(self) -> str:
+        """
+        specify a write view for the group
+        """
         return pulumi.get(self, "write_node")
 
 
@@ -12146,6 +14056,11 @@ class GetSnmpServerHostResult(dict):
                  encryption: str,
                  ip_address: str,
                  version: str):
+        """
+        :param str community_or_user: SNMPv1/v2c community string or SNMPv3 user name
+        :param str encryption: Specifies an encryption type for community string
+        :param str version: SNMP version to use for notification messages
+        """
         pulumi.set(__self__, "community_or_user", community_or_user)
         pulumi.set(__self__, "encryption", encryption)
         pulumi.set(__self__, "ip_address", ip_address)
@@ -12154,11 +14069,17 @@ class GetSnmpServerHostResult(dict):
     @property
     @pulumi.getter(name="communityOrUser")
     def community_or_user(self) -> str:
+        """
+        SNMPv1/v2c community string or SNMPv3 user name
+        """
         return pulumi.get(self, "community_or_user")
 
     @property
     @pulumi.getter
     def encryption(self) -> str:
+        """
+        Specifies an encryption type for community string
+        """
         return pulumi.get(self, "encryption")
 
     @property
@@ -12169,6 +14090,9 @@ class GetSnmpServerHostResult(dict):
     @property
     @pulumi.getter
     def version(self) -> str:
+        """
+        SNMP version to use for notification messages
+        """
         return pulumi.get(self, "version")
 
 
@@ -12180,6 +14104,11 @@ class GetSnmpServerSnmpCommunityResult(dict):
                  name: str,
                  permission: str,
                  view: str):
+        """
+        :param str access_list_name: Access-list name
+        :param str ipv6: Specify IPv6 Named Access-List
+        :param str view: Restrict this community to a named MIB view
+        """
         pulumi.set(__self__, "access_list_name", access_list_name)
         pulumi.set(__self__, "ipv6", ipv6)
         pulumi.set(__self__, "name", name)
@@ -12189,11 +14118,17 @@ class GetSnmpServerSnmpCommunityResult(dict):
     @property
     @pulumi.getter(name="accessListName")
     def access_list_name(self) -> str:
+        """
+        Access-list name
+        """
         return pulumi.get(self, "access_list_name")
 
     @property
     @pulumi.getter
     def ipv6(self) -> str:
+        """
+        Specify IPv6 Named Access-List
+        """
         return pulumi.get(self, "ipv6")
 
     @property
@@ -12209,6 +14144,9 @@ class GetSnmpServerSnmpCommunityResult(dict):
     @property
     @pulumi.getter
     def view(self) -> str:
+        """
+        Restrict this community to a named MIB view
+        """
         return pulumi.get(self, "view")
 
 
@@ -12247,6 +14185,12 @@ class GetStaticRouteNextHopResult(dict):
                  next_hop: str,
                  permanent: bool,
                  tag: int):
+        """
+        :param bool global_: Next hop address is global
+        :param str name: Specify name of the next hop
+        :param bool permanent: permanent route
+        :param int tag: Set tag for this route
+        """
         pulumi.set(__self__, "global_", global_)
         pulumi.set(__self__, "metric", metric)
         pulumi.set(__self__, "name", name)
@@ -12257,6 +14201,9 @@ class GetStaticRouteNextHopResult(dict):
     @property
     @pulumi.getter(name="global")
     def global_(self) -> bool:
+        """
+        Next hop address is global
+        """
         return pulumi.get(self, "global_")
 
     @property
@@ -12267,6 +14214,9 @@ class GetStaticRouteNextHopResult(dict):
     @property
     @pulumi.getter
     def name(self) -> str:
+        """
+        Specify name of the next hop
+        """
         return pulumi.get(self, "name")
 
     @property
@@ -12277,11 +14227,17 @@ class GetStaticRouteNextHopResult(dict):
     @property
     @pulumi.getter
     def permanent(self) -> bool:
+        """
+        permanent route
+        """
         return pulumi.get(self, "permanent")
 
     @property
     @pulumi.getter
     def tag(self) -> int:
+        """
+        Set tag for this route
+        """
         return pulumi.get(self, "tag")
 
 
@@ -12363,12 +14319,18 @@ class GetSystemMulticastRoutingVrfResult(dict):
     def __init__(__self__, *,
                  distributed: bool,
                  vrf: str):
+        """
+        :param bool distributed: Distributed multicast switching
+        """
         pulumi.set(__self__, "distributed", distributed)
         pulumi.set(__self__, "vrf", vrf)
 
     @property
     @pulumi.getter
     def distributed(self) -> bool:
+        """
+        Distributed multicast switching
+        """
         return pulumi.get(self, "distributed")
 
     @property
@@ -12382,6 +14344,9 @@ class GetTemplateDeviceTrackingAttachPolicyResult(dict):
     def __init__(__self__, *,
                  policy_name: str,
                  vlan_range: str):
+        """
+        :param str vlan_range: VLAN IDs of the VLANs for which this policy applies
+        """
         pulumi.set(__self__, "policy_name", policy_name)
         pulumi.set(__self__, "vlan_range", vlan_range)
 
@@ -12393,6 +14358,9 @@ class GetTemplateDeviceTrackingAttachPolicyResult(dict):
     @property
     @pulumi.getter(name="vlanRange")
     def vlan_range(self) -> str:
+        """
+        VLAN IDs of the VLANs for which this policy applies
+        """
         return pulumi.get(self, "vlan_range")
 
 
@@ -12401,17 +14369,27 @@ class GetTemplateIpAccessGroupResult(dict):
     def __init__(__self__, *,
                  access_list: str,
                  direction: str):
+        """
+        :param str access_list: Access control list name
+        :param str direction: packet flow direction
+        """
         pulumi.set(__self__, "access_list", access_list)
         pulumi.set(__self__, "direction", direction)
 
     @property
     @pulumi.getter(name="accessList")
     def access_list(self) -> str:
+        """
+        Access control list name
+        """
         return pulumi.get(self, "access_list")
 
     @property
     @pulumi.getter
     def direction(self) -> str:
+        """
+        packet flow direction
+        """
         return pulumi.get(self, "direction")
 
 
@@ -12421,6 +14399,11 @@ class GetTemplateSwitchportPortSecurityMaximumRangeResult(dict):
                  range: int,
                  vlan: bool,
                  vlan_access: bool):
+        """
+        :param int range: Maximum addresses
+        :param bool vlan: Max secure addresses per vlan
+        :param bool vlan_access: access vlan
+        """
         pulumi.set(__self__, "range", range)
         pulumi.set(__self__, "vlan", vlan)
         pulumi.set(__self__, "vlan_access", vlan_access)
@@ -12428,16 +14411,25 @@ class GetTemplateSwitchportPortSecurityMaximumRangeResult(dict):
     @property
     @pulumi.getter
     def range(self) -> int:
+        """
+        Maximum addresses
+        """
         return pulumi.get(self, "range")
 
     @property
     @pulumi.getter
     def vlan(self) -> bool:
+        """
+        Max secure addresses per vlan
+        """
         return pulumi.get(self, "vlan")
 
     @property
     @pulumi.getter(name="vlanAccess")
     def vlan_access(self) -> bool:
+        """
+        access vlan
+        """
         return pulumi.get(self, "vlan_access")
 
 
@@ -12445,11 +14437,17 @@ class GetTemplateSwitchportPortSecurityMaximumRangeResult(dict):
 class GetVrfIpv4RouteTargetExportResult(dict):
     def __init__(__self__, *,
                  value: str):
+        """
+        :param str value: Value
+        """
         pulumi.set(__self__, "value", value)
 
     @property
     @pulumi.getter
     def value(self) -> str:
+        """
+        Value
+        """
         return pulumi.get(self, "value")
 
 
@@ -12458,17 +14456,27 @@ class GetVrfIpv4RouteTargetExportStitchingResult(dict):
     def __init__(__self__, *,
                  stitching: bool,
                  value: str):
+        """
+        :param bool stitching: VXLAN route target set
+        :param str value: Value
+        """
         pulumi.set(__self__, "stitching", stitching)
         pulumi.set(__self__, "value", value)
 
     @property
     @pulumi.getter
     def stitching(self) -> bool:
+        """
+        VXLAN route target set
+        """
         return pulumi.get(self, "stitching")
 
     @property
     @pulumi.getter
     def value(self) -> str:
+        """
+        Value
+        """
         return pulumi.get(self, "value")
 
 
@@ -12476,11 +14484,17 @@ class GetVrfIpv4RouteTargetExportStitchingResult(dict):
 class GetVrfIpv4RouteTargetImportResult(dict):
     def __init__(__self__, *,
                  value: str):
+        """
+        :param str value: Value
+        """
         pulumi.set(__self__, "value", value)
 
     @property
     @pulumi.getter
     def value(self) -> str:
+        """
+        Value
+        """
         return pulumi.get(self, "value")
 
 
@@ -12489,17 +14503,27 @@ class GetVrfIpv4RouteTargetImportStitchingResult(dict):
     def __init__(__self__, *,
                  stitching: bool,
                  value: str):
+        """
+        :param bool stitching: VXLAN route target set
+        :param str value: Value
+        """
         pulumi.set(__self__, "stitching", stitching)
         pulumi.set(__self__, "value", value)
 
     @property
     @pulumi.getter
     def stitching(self) -> bool:
+        """
+        VXLAN route target set
+        """
         return pulumi.get(self, "stitching")
 
     @property
     @pulumi.getter
     def value(self) -> str:
+        """
+        Value
+        """
         return pulumi.get(self, "value")
 
 
@@ -12507,11 +14531,17 @@ class GetVrfIpv4RouteTargetImportStitchingResult(dict):
 class GetVrfIpv6RouteTargetExportResult(dict):
     def __init__(__self__, *,
                  value: str):
+        """
+        :param str value: Value
+        """
         pulumi.set(__self__, "value", value)
 
     @property
     @pulumi.getter
     def value(self) -> str:
+        """
+        Value
+        """
         return pulumi.get(self, "value")
 
 
@@ -12520,17 +14550,27 @@ class GetVrfIpv6RouteTargetExportStitchingResult(dict):
     def __init__(__self__, *,
                  stitching: bool,
                  value: str):
+        """
+        :param bool stitching: VXLAN route target set
+        :param str value: Value
+        """
         pulumi.set(__self__, "stitching", stitching)
         pulumi.set(__self__, "value", value)
 
     @property
     @pulumi.getter
     def stitching(self) -> bool:
+        """
+        VXLAN route target set
+        """
         return pulumi.get(self, "stitching")
 
     @property
     @pulumi.getter
     def value(self) -> str:
+        """
+        Value
+        """
         return pulumi.get(self, "value")
 
 
@@ -12538,11 +14578,17 @@ class GetVrfIpv6RouteTargetExportStitchingResult(dict):
 class GetVrfIpv6RouteTargetImportResult(dict):
     def __init__(__self__, *,
                  value: str):
+        """
+        :param str value: Value
+        """
         pulumi.set(__self__, "value", value)
 
     @property
     @pulumi.getter
     def value(self) -> str:
+        """
+        Value
+        """
         return pulumi.get(self, "value")
 
 
@@ -12551,17 +14597,27 @@ class GetVrfIpv6RouteTargetImportStitchingResult(dict):
     def __init__(__self__, *,
                  stitching: bool,
                  value: str):
+        """
+        :param bool stitching: VXLAN route target set
+        :param str value: Value
+        """
         pulumi.set(__self__, "stitching", stitching)
         pulumi.set(__self__, "value", value)
 
     @property
     @pulumi.getter
     def stitching(self) -> bool:
+        """
+        VXLAN route target set
+        """
         return pulumi.get(self, "stitching")
 
     @property
     @pulumi.getter
     def value(self) -> str:
+        """
+        Value
+        """
         return pulumi.get(self, "value")
 
 
@@ -12570,17 +14626,27 @@ class GetVrfRouteTargetExportResult(dict):
     def __init__(__self__, *,
                  stitching: bool,
                  value: str):
+        """
+        :param bool stitching: VXLAN route target set
+        :param str value: Value
+        """
         pulumi.set(__self__, "stitching", stitching)
         pulumi.set(__self__, "value", value)
 
     @property
     @pulumi.getter
     def stitching(self) -> bool:
+        """
+        VXLAN route target set
+        """
         return pulumi.get(self, "stitching")
 
     @property
     @pulumi.getter
     def value(self) -> str:
+        """
+        Value
+        """
         return pulumi.get(self, "value")
 
 
@@ -12589,17 +14655,27 @@ class GetVrfRouteTargetImportResult(dict):
     def __init__(__self__, *,
                  stitching: bool,
                  value: str):
+        """
+        :param bool stitching: VXLAN route target set
+        :param str value: Value
+        """
         pulumi.set(__self__, "stitching", stitching)
         pulumi.set(__self__, "value", value)
 
     @property
     @pulumi.getter
     def stitching(self) -> bool:
+        """
+        VXLAN route target set
+        """
         return pulumi.get(self, "stitching")
 
     @property
     @pulumi.getter
     def value(self) -> str:
+        """
+        Value
+        """
         return pulumi.get(self, "value")
 
 

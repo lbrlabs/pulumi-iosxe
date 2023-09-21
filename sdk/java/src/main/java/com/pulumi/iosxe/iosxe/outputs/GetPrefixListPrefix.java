@@ -10,29 +10,77 @@ import java.util.Objects;
 
 @CustomType
 public final class GetPrefixListPrefix {
+    /**
+     * @return Specify deny or permit action
+     * 
+     */
     private String action;
+    /**
+     * @return Minimum prefix length to be matched
+     * 
+     */
     private Integer ge;
+    /**
+     * @return IPv4 Prefix
+     * 
+     */
     private String ip;
+    /**
+     * @return Maximum prefix length to be matched
+     * 
+     */
     private Integer le;
+    /**
+     * @return Name of the prefix-list
+     * 
+     */
     private String name;
+    /**
+     * @return Seq Number of the prefix-list
+     * 
+     */
     private Integer seq;
 
     private GetPrefixListPrefix() {}
+    /**
+     * @return Specify deny or permit action
+     * 
+     */
     public String action() {
         return this.action;
     }
+    /**
+     * @return Minimum prefix length to be matched
+     * 
+     */
     public Integer ge() {
         return this.ge;
     }
+    /**
+     * @return IPv4 Prefix
+     * 
+     */
     public String ip() {
         return this.ip;
     }
+    /**
+     * @return Maximum prefix length to be matched
+     * 
+     */
     public Integer le() {
         return this.le;
     }
+    /**
+     * @return Name of the prefix-list
+     * 
+     */
     public String name() {
         return this.name;
     }
+    /**
+     * @return Seq Number of the prefix-list
+     * 
+     */
     public Integer seq() {
         return this.seq;
     }

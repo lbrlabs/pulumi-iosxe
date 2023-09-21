@@ -15,58 +15,122 @@ public final class CryptoIkev2KeyringPeerArgs extends com.pulumi.resources.Resou
 
     public static final CryptoIkev2KeyringPeerArgs Empty = new CryptoIkev2KeyringPeerArgs();
 
+    /**
+     * Specify a description of this peer
+     * 
+     */
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Specify a description of this peer
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
 
+    /**
+     * Hostname of peer
+     * 
+     */
     @Import(name="hostname")
     private @Nullable Output<String> hostname;
 
+    /**
+     * @return Hostname of peer
+     * 
+     */
     public Optional<Output<String>> hostname() {
         return Optional.ofNullable(this.hostname);
     }
 
+    /**
+     * IP address
+     * 
+     */
     @Import(name="identityAddress")
     private @Nullable Output<String> identityAddress;
 
+    /**
+     * @return IP address
+     * 
+     */
     public Optional<Output<String>> identityAddress() {
         return Optional.ofNullable(this.identityAddress);
     }
 
+    /**
+     * email Domain Name
+     * 
+     */
     @Import(name="identityEmailDomain")
     private @Nullable Output<String> identityEmailDomain;
 
+    /**
+     * @return email Domain Name
+     * 
+     */
     public Optional<Output<String>> identityEmailDomain() {
         return Optional.ofNullable(this.identityEmailDomain);
     }
 
+    /**
+     * Specify the name string
+     * 
+     */
     @Import(name="identityEmailName")
     private @Nullable Output<String> identityEmailName;
 
+    /**
+     * @return Specify the name string
+     * 
+     */
     public Optional<Output<String>> identityEmailName() {
         return Optional.ofNullable(this.identityEmailName);
     }
 
+    /**
+     * email Domain Name
+     * 
+     */
     @Import(name="identityFqdnDomain")
     private @Nullable Output<String> identityFqdnDomain;
 
+    /**
+     * @return email Domain Name
+     * 
+     */
     public Optional<Output<String>> identityFqdnDomain() {
         return Optional.ofNullable(this.identityFqdnDomain);
     }
 
+    /**
+     * Specify the name string
+     * 
+     */
     @Import(name="identityFqdnName")
     private @Nullable Output<String> identityFqdnName;
 
+    /**
+     * @return Specify the name string
+     * 
+     */
     public Optional<Output<String>> identityFqdnName() {
         return Optional.ofNullable(this.identityFqdnName);
     }
 
+    /**
+     * proprietary types of identification (ID KEY ID)
+     * 
+     */
     @Import(name="identityKeyId")
     private @Nullable Output<String> identityKeyId;
 
+    /**
+     * @return proprietary types of identification (ID KEY ID)
+     * 
+     */
     public Optional<Output<String>> identityKeyId() {
         return Optional.ofNullable(this.identityKeyId);
     }
@@ -106,9 +170,17 @@ public final class CryptoIkev2KeyringPeerArgs extends com.pulumi.resources.Resou
         return Optional.ofNullable(this.preSharedKey);
     }
 
+    /**
+     * - Choices: `0`, `6`
+     * 
+     */
     @Import(name="preSharedKeyEncryption")
     private @Nullable Output<String> preSharedKeyEncryption;
 
+    /**
+     * @return - Choices: `0`, `6`
+     * 
+     */
     public Optional<Output<String>> preSharedKeyEncryption() {
         return Optional.ofNullable(this.preSharedKeyEncryption);
     }
@@ -120,9 +192,17 @@ public final class CryptoIkev2KeyringPeerArgs extends com.pulumi.resources.Resou
         return Optional.ofNullable(this.preSharedKeyLocal);
     }
 
+    /**
+     * - Choices: `0`, `6`
+     * 
+     */
     @Import(name="preSharedKeyLocalEncryption")
     private @Nullable Output<String> preSharedKeyLocalEncryption;
 
+    /**
+     * @return - Choices: `0`, `6`
+     * 
+     */
     public Optional<Output<String>> preSharedKeyLocalEncryption() {
         return Optional.ofNullable(this.preSharedKeyLocalEncryption);
     }
@@ -134,9 +214,17 @@ public final class CryptoIkev2KeyringPeerArgs extends com.pulumi.resources.Resou
         return Optional.ofNullable(this.preSharedKeyRemote);
     }
 
+    /**
+     * - Choices: `0`, `6`
+     * 
+     */
     @Import(name="preSharedKeyRemoteEncryption")
     private @Nullable Output<String> preSharedKeyRemoteEncryption;
 
+    /**
+     * @return - Choices: `0`, `6`
+     * 
+     */
     public Optional<Output<String>> preSharedKeyRemoteEncryption() {
         return Optional.ofNullable(this.preSharedKeyRemoteEncryption);
     }
@@ -182,74 +270,170 @@ public final class CryptoIkev2KeyringPeerArgs extends com.pulumi.resources.Resou
             $ = new CryptoIkev2KeyringPeerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Specify a description of this peer
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Specify a description of this peer
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param hostname Hostname of peer
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostname(@Nullable Output<String> hostname) {
             $.hostname = hostname;
             return this;
         }
 
+        /**
+         * @param hostname Hostname of peer
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostname(String hostname) {
             return hostname(Output.of(hostname));
         }
 
+        /**
+         * @param identityAddress IP address
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityAddress(@Nullable Output<String> identityAddress) {
             $.identityAddress = identityAddress;
             return this;
         }
 
+        /**
+         * @param identityAddress IP address
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityAddress(String identityAddress) {
             return identityAddress(Output.of(identityAddress));
         }
 
+        /**
+         * @param identityEmailDomain email Domain Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityEmailDomain(@Nullable Output<String> identityEmailDomain) {
             $.identityEmailDomain = identityEmailDomain;
             return this;
         }
 
+        /**
+         * @param identityEmailDomain email Domain Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityEmailDomain(String identityEmailDomain) {
             return identityEmailDomain(Output.of(identityEmailDomain));
         }
 
+        /**
+         * @param identityEmailName Specify the name string
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityEmailName(@Nullable Output<String> identityEmailName) {
             $.identityEmailName = identityEmailName;
             return this;
         }
 
+        /**
+         * @param identityEmailName Specify the name string
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityEmailName(String identityEmailName) {
             return identityEmailName(Output.of(identityEmailName));
         }
 
+        /**
+         * @param identityFqdnDomain email Domain Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityFqdnDomain(@Nullable Output<String> identityFqdnDomain) {
             $.identityFqdnDomain = identityFqdnDomain;
             return this;
         }
 
+        /**
+         * @param identityFqdnDomain email Domain Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityFqdnDomain(String identityFqdnDomain) {
             return identityFqdnDomain(Output.of(identityFqdnDomain));
         }
 
+        /**
+         * @param identityFqdnName Specify the name string
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityFqdnName(@Nullable Output<String> identityFqdnName) {
             $.identityFqdnName = identityFqdnName;
             return this;
         }
 
+        /**
+         * @param identityFqdnName Specify the name string
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityFqdnName(String identityFqdnName) {
             return identityFqdnName(Output.of(identityFqdnName));
         }
 
+        /**
+         * @param identityKeyId proprietary types of identification (ID KEY ID)
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityKeyId(@Nullable Output<String> identityKeyId) {
             $.identityKeyId = identityKeyId;
             return this;
         }
 
+        /**
+         * @param identityKeyId proprietary types of identification (ID KEY ID)
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityKeyId(String identityKeyId) {
             return identityKeyId(Output.of(identityKeyId));
         }
@@ -299,11 +483,23 @@ public final class CryptoIkev2KeyringPeerArgs extends com.pulumi.resources.Resou
             return preSharedKey(Output.of(preSharedKey));
         }
 
+        /**
+         * @param preSharedKeyEncryption - Choices: `0`, `6`
+         * 
+         * @return builder
+         * 
+         */
         public Builder preSharedKeyEncryption(@Nullable Output<String> preSharedKeyEncryption) {
             $.preSharedKeyEncryption = preSharedKeyEncryption;
             return this;
         }
 
+        /**
+         * @param preSharedKeyEncryption - Choices: `0`, `6`
+         * 
+         * @return builder
+         * 
+         */
         public Builder preSharedKeyEncryption(String preSharedKeyEncryption) {
             return preSharedKeyEncryption(Output.of(preSharedKeyEncryption));
         }
@@ -317,11 +513,23 @@ public final class CryptoIkev2KeyringPeerArgs extends com.pulumi.resources.Resou
             return preSharedKeyLocal(Output.of(preSharedKeyLocal));
         }
 
+        /**
+         * @param preSharedKeyLocalEncryption - Choices: `0`, `6`
+         * 
+         * @return builder
+         * 
+         */
         public Builder preSharedKeyLocalEncryption(@Nullable Output<String> preSharedKeyLocalEncryption) {
             $.preSharedKeyLocalEncryption = preSharedKeyLocalEncryption;
             return this;
         }
 
+        /**
+         * @param preSharedKeyLocalEncryption - Choices: `0`, `6`
+         * 
+         * @return builder
+         * 
+         */
         public Builder preSharedKeyLocalEncryption(String preSharedKeyLocalEncryption) {
             return preSharedKeyLocalEncryption(Output.of(preSharedKeyLocalEncryption));
         }
@@ -335,11 +543,23 @@ public final class CryptoIkev2KeyringPeerArgs extends com.pulumi.resources.Resou
             return preSharedKeyRemote(Output.of(preSharedKeyRemote));
         }
 
+        /**
+         * @param preSharedKeyRemoteEncryption - Choices: `0`, `6`
+         * 
+         * @return builder
+         * 
+         */
         public Builder preSharedKeyRemoteEncryption(@Nullable Output<String> preSharedKeyRemoteEncryption) {
             $.preSharedKeyRemoteEncryption = preSharedKeyRemoteEncryption;
             return this;
         }
 
+        /**
+         * @param preSharedKeyRemoteEncryption - Choices: `0`, `6`
+         * 
+         * @return builder
+         * 
+         */
         public Builder preSharedKeyRemoteEncryption(String preSharedKeyRemoteEncryption) {
             return preSharedKeyRemoteEncryption(Output.of(preSharedKeyRemoteEncryption));
         }

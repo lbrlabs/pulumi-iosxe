@@ -12,33 +12,81 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetVlanConfigurationResult {
+    /**
+     * @return Enter VFI name
+     * 
+     */
     private String accessVfi;
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
     private Integer evpnInstance;
+    /**
+     * @return VxLAN VNI value
+     * 
+     */
     private Integer evpnInstanceVni;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
+    /**
+     * @return VLAN ID List Eg. 1-10,15
+     * 
+     */
     private Integer vlanId;
+    /**
+     * @return VxLAN VNI value
+     * 
+     */
     private Integer vni;
 
     private GetVlanConfigurationResult() {}
+    /**
+     * @return Enter VFI name
+     * 
+     */
     public String accessVfi() {
         return this.accessVfi;
     }
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
     public Integer evpnInstance() {
         return this.evpnInstance;
     }
+    /**
+     * @return VxLAN VNI value
+     * 
+     */
     public Integer evpnInstanceVni() {
         return this.evpnInstanceVni;
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
+    /**
+     * @return VLAN ID List Eg. 1-10,15
+     * 
+     */
     public Integer vlanId() {
         return this.vlanId;
     }
+    /**
+     * @return VxLAN VNI value
+     * 
+     */
     public Integer vni() {
         return this.vni;
     }

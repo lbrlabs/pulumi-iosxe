@@ -1671,7 +1671,14 @@ class InterfacePortChannel(pulumi.CustomResource):
                  vrf_forwarding: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
-        Create a InterfacePortChannel resource with the given unique name, props, and options.
+        This resource can manage the Interface Port Channel configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/interfacePortChannel:InterfacePortChannel example "Cisco-IOS-XE-native:native/interface/Port-channel=10"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[int] arp_timeout: Set ARP cache timeout - Range: `0`-`2147483`
@@ -1728,7 +1735,14 @@ class InterfacePortChannel(pulumi.CustomResource):
                  args: Optional[InterfacePortChannelArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a InterfacePortChannel resource with the given unique name, props, and options.
+        This resource can manage the Interface Port Channel configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/interfacePortChannel:InterfacePortChannel example "Cisco-IOS-XE-native:native/interface/Port-channel=10"
+        ```
+
         :param str resource_name: The name of the resource.
         :param InterfacePortChannelArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

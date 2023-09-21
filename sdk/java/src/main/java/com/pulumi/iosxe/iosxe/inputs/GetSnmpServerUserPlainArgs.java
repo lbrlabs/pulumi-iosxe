@@ -14,23 +14,47 @@ public final class GetSnmpServerUserPlainArgs extends com.pulumi.resources.Invok
 
     public static final GetSnmpServerUserPlainArgs Empty = new GetSnmpServerUserPlainArgs();
 
+    /**
+     * A device name from the provider configuration.
+     * 
+     */
     @Import(name="device")
     private @Nullable String device;
 
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
 
+    /**
+     * Group to which the user belongs
+     * 
+     */
     @Import(name="grpname", required=true)
     private String grpname;
 
+    /**
+     * @return Group to which the user belongs
+     * 
+     */
     public String grpname() {
         return this.grpname;
     }
 
+    /**
+     * Name of the user
+     * 
+     */
     @Import(name="username", required=true)
     private String username;
 
+    /**
+     * @return Name of the user
+     * 
+     */
     public String username() {
         return this.username;
     }
@@ -61,16 +85,34 @@ public final class GetSnmpServerUserPlainArgs extends com.pulumi.resources.Invok
             $ = new GetSnmpServerUserPlainArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param device A device name from the provider configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder device(@Nullable String device) {
             $.device = device;
             return this;
         }
 
+        /**
+         * @param grpname Group to which the user belongs
+         * 
+         * @return builder
+         * 
+         */
         public Builder grpname(String grpname) {
             $.grpname = grpname;
             return this;
         }
 
+        /**
+         * @param username Name of the user
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(String username) {
             $.username = username;
             return this;

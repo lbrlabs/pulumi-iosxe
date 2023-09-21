@@ -17,106 +17,298 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetInterfaceTunnelResult {
+    /**
+     * @return Set ARP cache timeout
+     * 
+     */
     private Integer arpTimeout;
+    /**
+     * @return Use echo adjunct as bfd detection mechanism
+     * 
+     */
     private Boolean bfdEcho;
+    /**
+     * @return Enable BFD under the interface
+     * 
+     */
     private Boolean bfdEnable;
     private Integer bfdInterval;
+    /**
+     * @return Minimum receive interval capability
+     * 
+     */
     private Integer bfdIntervalMinRx;
+    /**
+     * @return Multiplier value used to compute holddown
+     * 
+     */
     private Integer bfdIntervalMultiplier;
+    /**
+     * @return The Source IP address to be used for BFD sessions over this interface.
+     * 
+     */
     private String bfdLocalAddress;
+    /**
+     * @return BFD template
+     * 
+     */
     private String bfdTemplate;
+    /**
+     * @return Handling of encapsulated DF bit.
+     * 
+     */
     private String cryptoIpsecDfBit;
+    /**
+     * @return Interface specific description
+     * 
+     */
     private String description;
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return Specify a destination address for UDP broadcasts
+     * 
+     */
     private List<GetInterfaceTunnelHelperAddress> helperAddresses;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
     private String ipAccessGroupIn;
+    /**
+     * @return inbound packets
+     * 
+     */
     private Boolean ipAccessGroupInEnable;
     private String ipAccessGroupOut;
+    /**
+     * @return outbound packets
+     * 
+     */
     private Boolean ipAccessGroupOutEnable;
+    /**
+     * @return Set source interface for relayed messages
+     * 
+     */
     private String ipDhcpRelaySourceInterface;
+    /**
+     * @return Enable proxy ARP
+     * 
+     */
     private Boolean ipProxyArp;
+    /**
+     * @return Enable sending ICMP Redirect messages
+     * 
+     */
     private Boolean ipRedirects;
+    /**
+     * @return Enable sending ICMP Unreachable messages
+     * 
+     */
     private Boolean ipUnreachables;
     private String ipv4Address;
     private String ipv4AddressMask;
+    /**
+     * @return Insert default route
+     * 
+     */
     private Boolean ipv6AddressAutoconfigDefault;
+    /**
+     * @return Obtain IPv6 address from DHCP server
+     * 
+     */
     private Boolean ipv6AddressDhcp;
     private List<GetInterfaceTunnelIpv6Address> ipv6Addresses;
+    /**
+     * @return Enable IPv6 on interface
+     * 
+     */
     private Boolean ipv6Enable;
     private List<GetInterfaceTunnelIpv6LinkLocalAddress> ipv6LinkLocalAddresses;
+    /**
+     * @return Set IPv6 Maximum Transmission Unit
+     * 
+     */
     private Integer ipv6Mtu;
+    /**
+     * @return Suppress all IPv6 RA
+     * 
+     */
     private Boolean ipv6NdRaSuppressAll;
     private Integer name;
+    /**
+     * @return Shutdown the selected interface
+     * 
+     */
     private Boolean shutdown;
+    /**
+     * @return ip address or host name
+     * 
+     */
     private String tunnelDestinationIpv4;
+    /**
+     * @return over IPv4
+     * 
+     */
     private Boolean tunnelModeIpsecIpv4;
+    /**
+     * @return Determine the ipsec policy profile to use.
+     * 
+     */
     private String tunnelProtectionIpsecProfile;
+    /**
+     * @return source of tunnel packets
+     * 
+     */
     private String tunnelSource;
+    /**
+     * @return Enable IP processing without an explicit address
+     * 
+     */
     private String unnumbered;
+    /**
+     * @return Configure forwarding table
+     * 
+     */
     private String vrfForwarding;
 
     private GetInterfaceTunnelResult() {}
+    /**
+     * @return Set ARP cache timeout
+     * 
+     */
     public Integer arpTimeout() {
         return this.arpTimeout;
     }
+    /**
+     * @return Use echo adjunct as bfd detection mechanism
+     * 
+     */
     public Boolean bfdEcho() {
         return this.bfdEcho;
     }
+    /**
+     * @return Enable BFD under the interface
+     * 
+     */
     public Boolean bfdEnable() {
         return this.bfdEnable;
     }
     public Integer bfdInterval() {
         return this.bfdInterval;
     }
+    /**
+     * @return Minimum receive interval capability
+     * 
+     */
     public Integer bfdIntervalMinRx() {
         return this.bfdIntervalMinRx;
     }
+    /**
+     * @return Multiplier value used to compute holddown
+     * 
+     */
     public Integer bfdIntervalMultiplier() {
         return this.bfdIntervalMultiplier;
     }
+    /**
+     * @return The Source IP address to be used for BFD sessions over this interface.
+     * 
+     */
     public String bfdLocalAddress() {
         return this.bfdLocalAddress;
     }
+    /**
+     * @return BFD template
+     * 
+     */
     public String bfdTemplate() {
         return this.bfdTemplate;
     }
+    /**
+     * @return Handling of encapsulated DF bit.
+     * 
+     */
     public String cryptoIpsecDfBit() {
         return this.cryptoIpsecDfBit;
     }
+    /**
+     * @return Interface specific description
+     * 
+     */
     public String description() {
         return this.description;
     }
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return Specify a destination address for UDP broadcasts
+     * 
+     */
     public List<GetInterfaceTunnelHelperAddress> helperAddresses() {
         return this.helperAddresses;
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
     public String ipAccessGroupIn() {
         return this.ipAccessGroupIn;
     }
+    /**
+     * @return inbound packets
+     * 
+     */
     public Boolean ipAccessGroupInEnable() {
         return this.ipAccessGroupInEnable;
     }
     public String ipAccessGroupOut() {
         return this.ipAccessGroupOut;
     }
+    /**
+     * @return outbound packets
+     * 
+     */
     public Boolean ipAccessGroupOutEnable() {
         return this.ipAccessGroupOutEnable;
     }
+    /**
+     * @return Set source interface for relayed messages
+     * 
+     */
     public String ipDhcpRelaySourceInterface() {
         return this.ipDhcpRelaySourceInterface;
     }
+    /**
+     * @return Enable proxy ARP
+     * 
+     */
     public Boolean ipProxyArp() {
         return this.ipProxyArp;
     }
+    /**
+     * @return Enable sending ICMP Redirect messages
+     * 
+     */
     public Boolean ipRedirects() {
         return this.ipRedirects;
     }
+    /**
+     * @return Enable sending ICMP Unreachable messages
+     * 
+     */
     public Boolean ipUnreachables() {
         return this.ipUnreachables;
     }
@@ -126,48 +318,96 @@ public final class GetInterfaceTunnelResult {
     public String ipv4AddressMask() {
         return this.ipv4AddressMask;
     }
+    /**
+     * @return Insert default route
+     * 
+     */
     public Boolean ipv6AddressAutoconfigDefault() {
         return this.ipv6AddressAutoconfigDefault;
     }
+    /**
+     * @return Obtain IPv6 address from DHCP server
+     * 
+     */
     public Boolean ipv6AddressDhcp() {
         return this.ipv6AddressDhcp;
     }
     public List<GetInterfaceTunnelIpv6Address> ipv6Addresses() {
         return this.ipv6Addresses;
     }
+    /**
+     * @return Enable IPv6 on interface
+     * 
+     */
     public Boolean ipv6Enable() {
         return this.ipv6Enable;
     }
     public List<GetInterfaceTunnelIpv6LinkLocalAddress> ipv6LinkLocalAddresses() {
         return this.ipv6LinkLocalAddresses;
     }
+    /**
+     * @return Set IPv6 Maximum Transmission Unit
+     * 
+     */
     public Integer ipv6Mtu() {
         return this.ipv6Mtu;
     }
+    /**
+     * @return Suppress all IPv6 RA
+     * 
+     */
     public Boolean ipv6NdRaSuppressAll() {
         return this.ipv6NdRaSuppressAll;
     }
     public Integer name() {
         return this.name;
     }
+    /**
+     * @return Shutdown the selected interface
+     * 
+     */
     public Boolean shutdown() {
         return this.shutdown;
     }
+    /**
+     * @return ip address or host name
+     * 
+     */
     public String tunnelDestinationIpv4() {
         return this.tunnelDestinationIpv4;
     }
+    /**
+     * @return over IPv4
+     * 
+     */
     public Boolean tunnelModeIpsecIpv4() {
         return this.tunnelModeIpsecIpv4;
     }
+    /**
+     * @return Determine the ipsec policy profile to use.
+     * 
+     */
     public String tunnelProtectionIpsecProfile() {
         return this.tunnelProtectionIpsecProfile;
     }
+    /**
+     * @return source of tunnel packets
+     * 
+     */
     public String tunnelSource() {
         return this.tunnelSource;
     }
+    /**
+     * @return Enable IP processing without an explicit address
+     * 
+     */
     public String unnumbered() {
         return this.unnumbered;
     }
+    /**
+     * @return Configure forwarding table
+     * 
+     */
     public String vrfForwarding() {
         return this.vrfForwarding;
     }

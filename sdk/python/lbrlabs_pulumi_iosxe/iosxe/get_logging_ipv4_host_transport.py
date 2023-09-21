@@ -45,11 +45,17 @@ class GetLoggingIpv4HostTransportResult:
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
     @property
@@ -60,16 +66,25 @@ class GetLoggingIpv4HostTransportResult:
     @property
     @pulumi.getter(name="transportTcpPorts")
     def transport_tcp_ports(self) -> Sequence['outputs.GetLoggingIpv4HostTransportTransportTcpPortResult']:
+        """
+        Port Number List
+        """
         return pulumi.get(self, "transport_tcp_ports")
 
     @property
     @pulumi.getter(name="transportTlsPorts")
     def transport_tls_ports(self) -> Sequence['outputs.GetLoggingIpv4HostTransportTransportTlsPortResult']:
+        """
+        Port Number List
+        """
         return pulumi.get(self, "transport_tls_ports")
 
     @property
     @pulumi.getter(name="transportUdpPorts")
     def transport_udp_ports(self) -> Sequence['outputs.GetLoggingIpv4HostTransportTransportUdpPortResult']:
+        """
+        Port Number List
+        """
         return pulumi.get(self, "transport_udp_ports")
 
 
@@ -91,7 +106,19 @@ def get_logging_ipv4_host_transport(device: Optional[str] = None,
                                     ipv4_host: Optional[str] = None,
                                     opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetLoggingIpv4HostTransportResult:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Logging IPv4 Host Transport configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_logging_ipv4_host_transport(ipv4_host="2.2.2.2")
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -113,6 +140,18 @@ def get_logging_ipv4_host_transport_output(device: Optional[pulumi.Input[Optiona
                                            ipv4_host: Optional[pulumi.Input[str]] = None,
                                            opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetLoggingIpv4HostTransportResult]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the Logging IPv4 Host Transport configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_logging_ipv4_host_transport(ipv4_host="2.2.2.2")
+    ```
+
+
+    :param str device: A device name from the provider configuration.
     """
     ...

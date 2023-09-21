@@ -702,7 +702,14 @@ class OspfVrf(pulumi.CustomResource):
                  vrf: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
-        Create a OspfVrf resource with the given unique name, props, and options.
+        This resource can manage the OSPF VRF configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/ospfVrf:OspfVrf example "Cisco-IOS-XE-native:native/router/Cisco-IOS-XE-ospf:router-ospf/ospf/process-id-vrf=2,VRF1"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['OspfVrfAreaArgs']]]] areas: OSPF area parameters
@@ -735,7 +742,14 @@ class OspfVrf(pulumi.CustomResource):
                  args: OspfVrfArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a OspfVrf resource with the given unique name, props, and options.
+        This resource can manage the OSPF VRF configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/ospfVrf:OspfVrf example "Cisco-IOS-XE-native:native/router/Cisco-IOS-XE-ospf:router-ospf/ospf/process-id-vrf=2,VRF1"
+        ```
+
         :param str resource_name: The name of the resource.
         :param OspfVrfArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

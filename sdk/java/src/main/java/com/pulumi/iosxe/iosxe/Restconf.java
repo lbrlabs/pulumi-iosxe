@@ -18,6 +18,58 @@ import java.util.Map;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * Manages IOS-XE objects via RESTCONF calls. This resource can only manage a single object. It is able to read the state and therefore reconcile configuration drift.
+ * 
+ * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.Restconf;
+ * import com.pulumi.iosxe.iosxe.RestconfArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.RestconfListArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var simple = new Restconf(&#34;simple&#34;, RestconfArgs.builder()        
+ *             .attributes(Map.of(&#34;banner&#34;, &#34;My Banner&#34;))
+ *             .path(&#34;Cisco-IOS-XE-native:native/banner/login&#34;)
+ *             .build());
+ * 
+ *         var nestedList = new Restconf(&#34;nestedList&#34;, RestconfArgs.builder()        
+ *             .attributes(Map.of(&#34;source-route&#34;, &#34;true&#34;))
+ *             .lists(RestconfListArgs.builder()
+ *                 .items(Map.of(&#34;name&#34;, &#34;VRF1&#34;))
+ *                 .key(&#34;name&#34;)
+ *                 .name(&#34;vrf&#34;)
+ *                 .build())
+ *             .path(&#34;Cisco-IOS-XE-native:native/ip&#34;)
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/restconf:Restconf example &#34;Cisco-IOS-XE-native:native/banner/login&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/restconf:Restconf")
 public class Restconf extends com.pulumi.resources.CustomResource {
     /**

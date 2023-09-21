@@ -12,17 +12,41 @@ import java.util.Objects;
 
 @CustomType
 public final class GetAaaGroupServerRadius {
+    /**
+     * @return Loopback interface
+     * 
+     */
     private Integer ipRadiusSourceInterfaceLoopback;
+    /**
+     * @return Radius Server-group name with max string length 32
+     * 
+     */
     private String name;
+    /**
+     * @return Name of radius server
+     * 
+     */
     private List<GetAaaGroupServerRadiusServerName> serverNames;
 
     private GetAaaGroupServerRadius() {}
+    /**
+     * @return Loopback interface
+     * 
+     */
     public Integer ipRadiusSourceInterfaceLoopback() {
         return this.ipRadiusSourceInterfaceLoopback;
     }
+    /**
+     * @return Radius Server-group name with max string length 32
+     * 
+     */
     public String name() {
         return this.name;
     }
+    /**
+     * @return Name of radius server
+     * 
+     */
     public List<GetAaaGroupServerRadiusServerName> serverNames() {
         return this.serverNames;
     }

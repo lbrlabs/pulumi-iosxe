@@ -15,29 +15,69 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetLoggingIpv4HostTransportResult {
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
     private String ipv4Host;
+    /**
+     * @return Port Number List
+     * 
+     */
     private List<GetLoggingIpv4HostTransportTransportTcpPort> transportTcpPorts;
+    /**
+     * @return Port Number List
+     * 
+     */
     private List<GetLoggingIpv4HostTransportTransportTlsPort> transportTlsPorts;
+    /**
+     * @return Port Number List
+     * 
+     */
     private List<GetLoggingIpv4HostTransportTransportUdpPort> transportUdpPorts;
 
     private GetLoggingIpv4HostTransportResult() {}
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
     public String ipv4Host() {
         return this.ipv4Host;
     }
+    /**
+     * @return Port Number List
+     * 
+     */
     public List<GetLoggingIpv4HostTransportTransportTcpPort> transportTcpPorts() {
         return this.transportTcpPorts;
     }
+    /**
+     * @return Port Number List
+     * 
+     */
     public List<GetLoggingIpv4HostTransportTransportTlsPort> transportTlsPorts() {
         return this.transportTlsPorts;
     }
+    /**
+     * @return Port Number List
+     * 
+     */
     public List<GetLoggingIpv4HostTransportTransportUdpPort> transportUdpPorts() {
         return this.transportUdpPorts;
     }

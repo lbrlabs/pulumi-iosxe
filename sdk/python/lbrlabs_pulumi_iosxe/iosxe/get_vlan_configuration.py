@@ -47,11 +47,17 @@ class GetVlanConfigurationResult:
     @property
     @pulumi.getter(name="accessVfi")
     def access_vfi(self) -> str:
+        """
+        Enter VFI name
+        """
         return pulumi.get(self, "access_vfi")
 
     @property
     @pulumi.getter
     def device(self) -> Optional[str]:
+        """
+        A device name from the provider configuration.
+        """
         return pulumi.get(self, "device")
 
     @property
@@ -62,21 +68,33 @@ class GetVlanConfigurationResult:
     @property
     @pulumi.getter(name="evpnInstanceVni")
     def evpn_instance_vni(self) -> int:
+        """
+        VxLAN VNI value
+        """
         return pulumi.get(self, "evpn_instance_vni")
 
     @property
     @pulumi.getter
     def id(self) -> str:
+        """
+        The path of the retrieved object.
+        """
         return pulumi.get(self, "id")
 
     @property
     @pulumi.getter(name="vlanId")
     def vlan_id(self) -> int:
+        """
+        VLAN ID List Eg. 1-10,15
+        """
         return pulumi.get(self, "vlan_id")
 
     @property
     @pulumi.getter
     def vni(self) -> int:
+        """
+        VxLAN VNI value
+        """
         return pulumi.get(self, "vni")
 
 
@@ -99,7 +117,20 @@ def get_vlan_configuration(device: Optional[str] = None,
                            vlan_id: Optional[int] = None,
                            opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetVlanConfigurationResult:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the VLAN Configuration configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_vlan_configuration(vlan_id=123)
+    ```
+
+
+    :param str device: A device name from the provider configuration.
+    :param int vlan_id: VLAN ID List Eg. 1-10,15
     """
     __args__ = dict()
     __args__['device'] = device
@@ -122,6 +153,19 @@ def get_vlan_configuration_output(device: Optional[pulumi.Input[Optional[str]]] 
                                   vlan_id: Optional[pulumi.Input[int]] = None,
                                   opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetVlanConfigurationResult]:
     """
-    Use this data source to access information about an existing resource.
+    This data source can read the VLAN Configuration configuration.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_iosxe as iosxe
+
+    example = iosxe.iosxe.get_vlan_configuration(vlan_id=123)
+    ```
+
+
+    :param str device: A device name from the provider configuration.
+    :param int vlan_id: VLAN ID List Eg. 1-10,15
     """
     ...

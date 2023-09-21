@@ -191,7 +191,25 @@ class CryptoIpsecProfile(pulumi.CustomResource):
                  set_transform_sets: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  __props__=None):
         """
-        Create a CryptoIpsecProfile resource with the given unique name, props, and options.
+        This resource can manage the Crypto IPSec Profile configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.CryptoIpsecProfile("example",
+            set_isakmp_profile_ikev2_profile_ikev2_profile_case_ikev2_profile="vpn300",
+            set_transform_sets=["TS1"])
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/cryptoIpsecProfile:CryptoIpsecProfile example "Cisco-IOS-XE-native:native/crypto/Cisco-IOS-XE-crypto:ipsec/profile=vpn200"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] device: A device name from the provider configuration.
@@ -206,7 +224,25 @@ class CryptoIpsecProfile(pulumi.CustomResource):
                  args: Optional[CryptoIpsecProfileArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a CryptoIpsecProfile resource with the given unique name, props, and options.
+        This resource can manage the Crypto IPSec Profile configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.CryptoIpsecProfile("example",
+            set_isakmp_profile_ikev2_profile_ikev2_profile_case_ikev2_profile="vpn300",
+            set_transform_sets=["TS1"])
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/cryptoIpsecProfile:CryptoIpsecProfile example "Cisco-IOS-XE-native:native/crypto/Cisco-IOS-XE-crypto:ipsec/profile=vpn200"
+        ```
+
         :param str resource_name: The name of the resource.
         :param CryptoIpsecProfileArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

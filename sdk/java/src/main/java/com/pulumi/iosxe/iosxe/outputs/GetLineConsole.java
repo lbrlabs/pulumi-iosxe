@@ -11,21 +11,45 @@ import java.util.Objects;
 
 @CustomType
 public final class GetLineConsole {
+    /**
+     * @return \n\n;;Timeout in minutes
+     * 
+     */
     private Integer execTimeoutMinutes;
+    /**
+     * @return \n\n;;Timeout in seconds
+     * 
+     */
     private Integer execTimeoutSeconds;
     private String first;
     private String loginAuthentication;
     private Boolean loginLocal;
     private String password;
+    /**
+     * @return Set exec level password
+     * 
+     */
     private Integer passwordLevel;
     private String passwordType;
     private Integer privilegeLevel;
+    /**
+     * @return Set async line stop bits
+     * 
+     */
     private String stopbits;
 
     private GetLineConsole() {}
+    /**
+     * @return \n\n;;Timeout in minutes
+     * 
+     */
     public Integer execTimeoutMinutes() {
         return this.execTimeoutMinutes;
     }
+    /**
+     * @return \n\n;;Timeout in seconds
+     * 
+     */
     public Integer execTimeoutSeconds() {
         return this.execTimeoutSeconds;
     }
@@ -41,6 +65,10 @@ public final class GetLineConsole {
     public String password() {
         return this.password;
     }
+    /**
+     * @return Set exec level password
+     * 
+     */
     public Integer passwordLevel() {
         return this.passwordLevel;
     }
@@ -50,6 +78,10 @@ public final class GetLineConsole {
     public Integer privilegeLevel() {
         return this.privilegeLevel;
     }
+    /**
+     * @return Set async line stop bits
+     * 
+     */
     public String stopbits() {
         return this.stopbits;
     }

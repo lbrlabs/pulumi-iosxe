@@ -15,23 +15,47 @@ public final class GetVlanAccessMapPlainArgs extends com.pulumi.resources.Invoke
 
     public static final GetVlanAccessMapPlainArgs Empty = new GetVlanAccessMapPlainArgs();
 
+    /**
+     * A device name from the provider configuration.
+     * 
+     */
     @Import(name="device")
     private @Nullable String device;
 
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
 
+    /**
+     * Vlan access map tag
+     * 
+     */
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Vlan access map tag
+     * 
+     */
     public String name() {
         return this.name;
     }
 
+    /**
+     * Sequence to insert to/delete from existing vlan access-map entry
+     * 
+     */
     @Import(name="sequence", required=true)
     private Integer sequence;
 
+    /**
+     * @return Sequence to insert to/delete from existing vlan access-map entry
+     * 
+     */
     public Integer sequence() {
         return this.sequence;
     }
@@ -62,16 +86,34 @@ public final class GetVlanAccessMapPlainArgs extends com.pulumi.resources.Invoke
             $ = new GetVlanAccessMapPlainArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param device A device name from the provider configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder device(@Nullable String device) {
             $.device = device;
             return this;
         }
 
+        /**
+         * @param name Vlan access map tag
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param sequence Sequence to insert to/delete from existing vlan access-map entry
+         * 
+         * @return builder
+         * 
+         */
         public Builder sequence(Integer sequence) {
             $.sequence = sequence;
             return this;

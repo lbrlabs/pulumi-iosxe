@@ -11,37 +11,101 @@ import java.util.Objects;
 
 @CustomType
 public final class GetOspfVrfArea {
+    /**
+     * @return OSPF area ID
+     * 
+     */
     private String areaId;
+    /**
+     * @return Use message-digest authentication
+     * 
+     */
     private Boolean authenticationMessageDigest;
+    /**
+     * @return Specify a NSSA area
+     * 
+     */
     private Boolean nssa;
+    /**
+     * @return Originate Type 7 default into NSSA area
+     * 
+     */
     private Boolean nssaDefaultInformationOriginate;
+    /**
+     * @return OSPF default metric
+     * 
+     */
     private Integer nssaDefaultInformationOriginateMetric;
+    /**
+     * @return OSPF metric type for default routes
+     * 
+     */
     private Integer nssaDefaultInformationOriginateMetricType;
+    /**
+     * @return No redistribution into this NSSA area
+     * 
+     */
     private Boolean nssaNoRedistribution;
+    /**
+     * @return Do not send summary LSA into NSSA
+     * 
+     */
     private Boolean nssaNoSummary;
 
     private GetOspfVrfArea() {}
+    /**
+     * @return OSPF area ID
+     * 
+     */
     public String areaId() {
         return this.areaId;
     }
+    /**
+     * @return Use message-digest authentication
+     * 
+     */
     public Boolean authenticationMessageDigest() {
         return this.authenticationMessageDigest;
     }
+    /**
+     * @return Specify a NSSA area
+     * 
+     */
     public Boolean nssa() {
         return this.nssa;
     }
+    /**
+     * @return Originate Type 7 default into NSSA area
+     * 
+     */
     public Boolean nssaDefaultInformationOriginate() {
         return this.nssaDefaultInformationOriginate;
     }
+    /**
+     * @return OSPF default metric
+     * 
+     */
     public Integer nssaDefaultInformationOriginateMetric() {
         return this.nssaDefaultInformationOriginateMetric;
     }
+    /**
+     * @return OSPF metric type for default routes
+     * 
+     */
     public Integer nssaDefaultInformationOriginateMetricType() {
         return this.nssaDefaultInformationOriginateMetricType;
     }
+    /**
+     * @return No redistribution into this NSSA area
+     * 
+     */
     public Boolean nssaNoRedistribution() {
         return this.nssaNoRedistribution;
     }
+    /**
+     * @return Do not send summary LSA into NSSA
+     * 
+     */
     public Boolean nssaNoSummary() {
         return this.nssaNoSummary;
     }

@@ -9,13 +9,29 @@ import java.util.Objects;
 
 @CustomType
 public final class GetOspfVrfSummaryAddress {
+    /**
+     * @return IP summary address
+     * 
+     */
     private String ip;
+    /**
+     * @return Summary mask
+     * 
+     */
     private String mask;
 
     private GetOspfVrfSummaryAddress() {}
+    /**
+     * @return IP summary address
+     * 
+     */
     public String ip() {
         return this.ip;
     }
+    /**
+     * @return Summary mask
+     * 
+     */
     public String mask() {
         return this.mask;
     }

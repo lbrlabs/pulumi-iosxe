@@ -15,6 +15,49 @@ import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the Username configuration.
+ * 
+ * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.Username;
+ * import com.pulumi.iosxe.iosxe.UsernameArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Username(&#34;example&#34;, UsernameArgs.builder()        
+ *             .description(&#34;User1 description&#34;)
+ *             .password(&#34;MyPassword&#34;)
+ *             .passwordEncryption(&#34;0&#34;)
+ *             .privilege(15)
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/username:Username example &#34;Cisco-IOS-XE-native:native/username=user1&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/username:Username")
 public class Username extends com.pulumi.resources.CustomResource {
     /**

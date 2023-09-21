@@ -16,6 +16,113 @@ import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the Route Map configuration.
+ * 
+ * ## Example Usage
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.RouteMap;
+ * import com.pulumi.iosxe.iosxe.RouteMapArgs;
+ * import com.pulumi.iosxe.iosxe.inputs.RouteMapEntryArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new RouteMap(&#34;example&#34;, RouteMapArgs.builder()        
+ *             .entries(RouteMapEntryArgs.builder()
+ *                 .continue_(false)
+ *                 .description(&#34;Entry 10&#34;)
+ *                 .match_as_paths_legacy(10)
+ *                 .match_community_lists_legacy(&#34;COMM1&#34;)
+ *                 .match_extcommunity_lists_legacy(&#34;EXTCOMM1&#34;)
+ *                 .match_interfaces(&#34;Loopback1&#34;)
+ *                 .match_ip_address_access_lists(&#34;ACL1&#34;)
+ *                 .match_ip_next_hop_access_lists(&#34;ACL1&#34;)
+ *                 .match_ipv6_address_access_lists(&#34;ACL1&#34;)
+ *                 .match_ipv6_next_hop_access_lists(&#34;ACL1&#34;)
+ *                 .match_local_preferences_legacy(100)
+ *                 .match_route_type_external(true)
+ *                 .match_route_type_external_type_1(true)
+ *                 .match_route_type_external_type_2(true)
+ *                 .match_route_type_internal(true)
+ *                 .match_route_type_level_1(true)
+ *                 .match_route_type_level_2(true)
+ *                 .match_route_type_local(true)
+ *                 .match_source_protocol_bgp(&#34;65000&#34;)
+ *                 .match_source_protocol_connected(true)
+ *                 .match_source_protocol_eigrp(&#34;10&#34;)
+ *                 .match_source_protocol_isis(true)
+ *                 .match_source_protocol_lisp(true)
+ *                 .match_source_protocol_ospf(&#34;10&#34;)
+ *                 .match_source_protocol_ospfv3(&#34;10&#34;)
+ *                 .match_source_protocol_rip(true)
+ *                 .match_source_protocol_static(true)
+ *                 .match_tags(100)
+ *                 .match_track(1)
+ *                 .operation(&#34;permit&#34;)
+ *                 .seq(10)
+ *                 .set_as_path_prepend_as_legacy(&#34;65001 65001&#34;)
+ *                 .set_as_path_prepend_last_as_legacy(5)
+ *                 .set_as_path_tag_legacy(true)
+ *                 .set_communities_additive_legacy(true)
+ *                 .set_communities_legacy(&#34;1:2&#34;)
+ *                 .set_community_list_delete_legacy(true)
+ *                 .set_community_list_name_legacy(&#34;COMML1&#34;)
+ *                 .set_default_interfaces(&#34;Loopback1&#34;)
+ *                 .set_extcomunity_rt_legacy(&#34;10:10&#34;)
+ *                 .set_extcomunity_soo_legacy(&#34;10:10&#34;)
+ *                 .set_extcomunity_vpn_distinguisher_legacy(&#34;10:10&#34;)
+ *                 .set_global(false)
+ *                 .set_interfaces(&#34;Loopback1&#34;)
+ *                 .set_ip_address(&#34;PFL1&#34;)
+ *                 .set_ip_default_global_next_hop_address(&#34;1.2.3.4&#34;)
+ *                 .set_ip_default_next_hop_address(&#34;1.2.3.4&#34;)
+ *                 .set_ip_global_next_hop_address(&#34;1.2.3.4&#34;)
+ *                 .set_ip_next_hop_address(&#34;1.2.3.4&#34;)
+ *                 .set_ip_qos_group(1)
+ *                 .set_ipv6_address(&#34;PFL2&#34;)
+ *                 .set_ipv6_default_global_next_hop(&#34;2001::1&#34;)
+ *                 .set_ipv6_default_next_hop(&#34;2001::1&#34;)
+ *                 .set_ipv6_next_hop(&#34;2001::1&#34;)
+ *                 .set_level_1(true)
+ *                 .set_local_preference_legacy(110)
+ *                 .set_metric_delay(&#34;10&#34;)
+ *                 .set_metric_loading(10)
+ *                 .set_metric_mtu(1500)
+ *                 .set_metric_reliability(90)
+ *                 .set_metric_type(&#34;external&#34;)
+ *                 .set_metric_value(110)
+ *                 .set_tag(100)
+ *                 .set_weight_legacy(10000)
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/routeMap:RouteMap example &#34;Cisco-IOS-XE-native:native/route-map=RM1&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/routeMap:RouteMap")
 public class RouteMap extends com.pulumi.resources.CustomResource {
     /**

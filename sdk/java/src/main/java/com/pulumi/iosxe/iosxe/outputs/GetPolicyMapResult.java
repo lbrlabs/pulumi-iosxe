@@ -12,25 +12,65 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetPolicyMapResult {
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
+    /**
+     * @return Name of the policy map
+     * 
+     */
     private String name;
+    /**
+     * @return Domain name of the policy map
+     * 
+     */
     private Boolean subscriber;
+    /**
+     * @return type of the policy-map
+     * 
+     */
     private String type;
 
     private GetPolicyMapResult() {}
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
+    /**
+     * @return Name of the policy map
+     * 
+     */
     public String name() {
         return this.name;
     }
+    /**
+     * @return Domain name of the policy map
+     * 
+     */
     public Boolean subscriber() {
         return this.subscriber;
     }
+    /**
+     * @return type of the policy-map
+     * 
+     */
     public String type() {
         return this.type;
     }

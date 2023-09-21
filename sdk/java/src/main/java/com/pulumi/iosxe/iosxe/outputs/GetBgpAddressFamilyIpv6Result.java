@@ -16,10 +16,30 @@ import javax.annotation.Nullable;
 public final class GetBgpAddressFamilyIpv6Result {
     private String afName;
     private String asn;
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
+    /**
+     * @return Specify a network to announce via BGP
+     * 
+     */
     private List<GetBgpAddressFamilyIpv6Ipv6UnicastNetwork> ipv6UnicastNetworks;
+    /**
+     * @return Connected
+     * 
+     */
     private Boolean ipv6UnicastRedistributeConnected;
+    /**
+     * @return Static routes
+     * 
+     */
     private Boolean ipv6UnicastRedistributeStatic;
 
     private GetBgpAddressFamilyIpv6Result() {}
@@ -29,18 +49,38 @@ public final class GetBgpAddressFamilyIpv6Result {
     public String asn() {
         return this.asn;
     }
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
+    /**
+     * @return Specify a network to announce via BGP
+     * 
+     */
     public List<GetBgpAddressFamilyIpv6Ipv6UnicastNetwork> ipv6UnicastNetworks() {
         return this.ipv6UnicastNetworks;
     }
+    /**
+     * @return Connected
+     * 
+     */
     public Boolean ipv6UnicastRedistributeConnected() {
         return this.ipv6UnicastRedistributeConnected;
     }
+    /**
+     * @return Static routes
+     * 
+     */
     public Boolean ipv6UnicastRedistributeStatic() {
         return this.ipv6UnicastRedistributeStatic;
     }

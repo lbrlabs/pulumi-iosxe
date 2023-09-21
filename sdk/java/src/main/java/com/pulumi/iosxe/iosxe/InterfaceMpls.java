@@ -15,6 +15,48 @@ import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the Interface MPLS configuration.
+ * 
+ * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.InterfaceMpls;
+ * import com.pulumi.iosxe.iosxe.InterfaceMplsArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new InterfaceMpls(&#34;example&#34;, InterfaceMplsArgs.builder()        
+ *             .ip(true)
+ *             .mtu(&#34;1200&#34;)
+ *             .type(&#34;Loopback&#34;)
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/interfaceMpls:InterfaceMpls example &#34;Cisco-IOS-XE-native:native/interface/Loopback=1/mpls&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/interfaceMpls:InterfaceMpls")
 public class InterfaceMpls extends com.pulumi.resources.CustomResource {
     /**

@@ -16,16 +16,32 @@ public final class GetVlanArgs extends com.pulumi.resources.InvokeArgs {
 
     public static final GetVlanArgs Empty = new GetVlanArgs();
 
+    /**
+     * A device name from the provider configuration.
+     * 
+     */
     @Import(name="device")
     private @Nullable Output<String> device;
 
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<Output<String>> device() {
         return Optional.ofNullable(this.device);
     }
 
+    /**
+     * a single VLAN id (allowed value range 1-4094)or Comma-separated VLAN id range.e.g. 99 or 1-30 or  1-20,30,40-50
+     * 
+     */
     @Import(name="vlanId", required=true)
     private Output<Integer> vlanId;
 
+    /**
+     * @return a single VLAN id (allowed value range 1-4094)or Comma-separated VLAN id range.e.g. 99 or 1-30 or  1-20,30,40-50
+     * 
+     */
     public Output<Integer> vlanId() {
         return this.vlanId;
     }
@@ -55,20 +71,44 @@ public final class GetVlanArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetVlanArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param device A device name from the provider configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder device(@Nullable Output<String> device) {
             $.device = device;
             return this;
         }
 
+        /**
+         * @param device A device name from the provider configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder device(String device) {
             return device(Output.of(device));
         }
 
+        /**
+         * @param vlanId a single VLAN id (allowed value range 1-4094)or Comma-separated VLAN id range.e.g. 99 or 1-30 or  1-20,30,40-50
+         * 
+         * @return builder
+         * 
+         */
         public Builder vlanId(Output<Integer> vlanId) {
             $.vlanId = vlanId;
             return this;
         }
 
+        /**
+         * @param vlanId a single VLAN id (allowed value range 1-4094)or Comma-separated VLAN id range.e.g. 99 or 1-30 or  1-20,30,40-50
+         * 
+         * @return builder
+         * 
+         */
         public Builder vlanId(Integer vlanId) {
             return vlanId(Output.of(vlanId));
         }

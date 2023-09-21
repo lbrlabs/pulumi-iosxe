@@ -506,7 +506,25 @@ class Arp(pulumi.CustomResource):
                  proxy_disable: Optional[pulumi.Input[bool]] = None,
                  __props__=None):
         """
-        Create a Arp resource with the given unique name, props, and options.
+        This resource can manage the ARP configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.Arp("example",
+            incomplete_entries=10,
+            proxy_disable=True)
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/arp:Arp example "Cisco-IOS-XE-native:native/ip/arp"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] delete_mode: Configure behavior when deleting/destroying the resource. Either delete the entire object (YANG container) being
@@ -533,7 +551,25 @@ class Arp(pulumi.CustomResource):
                  args: Optional[ArpArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a Arp resource with the given unique name, props, and options.
+        This resource can manage the ARP configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.Arp("example",
+            incomplete_entries=10,
+            proxy_disable=True)
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/arp:Arp example "Cisco-IOS-XE-native:native/ip/arp"
+        ```
+
         :param str resource_name: The name of the resource.
         :param ArpArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

@@ -13,18 +13,34 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetAccessListStandardResult {
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
     private List<GetAccessListStandardEntry> entries;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
     private String name;
 
     private GetAccessListStandardResult() {}
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
     public List<GetAccessListStandardEntry> entries() {
         return this.entries;
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }

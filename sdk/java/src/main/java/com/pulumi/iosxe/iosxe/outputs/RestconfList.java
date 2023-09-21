@@ -12,21 +12,53 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RestconfList {
+    /**
+     * @return List of maps of key-value pairs which represents the YANG leafs and its values.
+     * 
+     */
     private @Nullable List<Map<String,String>> items;
+    /**
+     * @return YANG list key attribute. In case of multiple keys, those should be separated by a comma (`,`).
+     * 
+     */
     private String key;
+    /**
+     * @return YANG list name.
+     * 
+     */
     private String name;
+    /**
+     * @return YANG leaf-list values.
+     * 
+     */
     private @Nullable List<String> values;
 
     private RestconfList() {}
+    /**
+     * @return List of maps of key-value pairs which represents the YANG leafs and its values.
+     * 
+     */
     public List<Map<String,String>> items() {
         return this.items == null ? List.of() : this.items;
     }
+    /**
+     * @return YANG list key attribute. In case of multiple keys, those should be separated by a comma (`,`).
+     * 
+     */
     public String key() {
         return this.key;
     }
+    /**
+     * @return YANG list name.
+     * 
+     */
     public String name() {
         return this.name;
     }
+    /**
+     * @return YANG leaf-list values.
+     * 
+     */
     public List<String> values() {
         return this.values == null ? List.of() : this.values;
     }

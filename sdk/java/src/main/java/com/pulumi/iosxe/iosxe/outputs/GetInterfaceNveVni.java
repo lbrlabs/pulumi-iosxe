@@ -10,17 +10,41 @@ import java.util.Objects;
 
 @CustomType
 public final class GetInterfaceNveVni {
+    /**
+     * @return Ingress Replication control-plane (BGP) signaling
+     * 
+     */
     private Boolean ingressReplication;
+    /**
+     * @return Starting Multicast Group IPv4 Address
+     * 
+     */
     private String ipv4MulticastGroup;
+    /**
+     * @return VNI range or instance between 4096-16777215, example: 6010-6030 or 7115
+     * 
+     */
     private String vniRange;
 
     private GetInterfaceNveVni() {}
+    /**
+     * @return Ingress Replication control-plane (BGP) signaling
+     * 
+     */
     public Boolean ingressReplication() {
         return this.ingressReplication;
     }
+    /**
+     * @return Starting Multicast Group IPv4 Address
+     * 
+     */
     public String ipv4MulticastGroup() {
         return this.ipv4MulticastGroup;
     }
+    /**
+     * @return VNI range or instance between 4096-16777215, example: 6010-6030 or 7115
+     * 
+     */
     public String vniRange() {
         return this.vniRange;
     }

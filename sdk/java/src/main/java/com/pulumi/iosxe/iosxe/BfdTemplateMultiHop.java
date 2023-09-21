@@ -16,6 +16,51 @@ import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the BFD Template Multi Hop configuration.
+ * 
+ * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.BfdTemplateMultiHop;
+ * import com.pulumi.iosxe.iosxe.BfdTemplateMultiHopArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new BfdTemplateMultiHop(&#34;example&#34;, BfdTemplateMultiHopArgs.builder()        
+ *             .authenticationMd5Keychain(&#34;KEYNAME&#34;)
+ *             .dampeningHalfTime(21)
+ *             .dampeningMaxSuppressingTime(70)
+ *             .dampeningSuppressTime(1900)
+ *             .dampeningUnsuppressTime(1800)
+ *             .echo(true)
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/bfdTemplateMultiHop:BfdTemplateMultiHop example &#34;Cisco-IOS-XE-native:native/bfd-template/Cisco-IOS-XE-bfd:multi-hop=T11&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/bfdTemplateMultiHop:BfdTemplateMultiHop")
 public class BfdTemplateMultiHop extends com.pulumi.resources.CustomResource {
     /**

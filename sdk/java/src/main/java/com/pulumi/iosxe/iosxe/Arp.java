@@ -18,6 +18,47 @@ import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the ARP configuration.
+ * 
+ * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.Arp;
+ * import com.pulumi.iosxe.iosxe.ArpArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Arp(&#34;example&#34;, ArpArgs.builder()        
+ *             .incompleteEntries(10)
+ *             .proxyDisable(true)
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/arp:Arp example &#34;Cisco-IOS-XE-native:native/ip/arp&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/arp:Arp")
 public class Arp extends com.pulumi.resources.CustomResource {
     /**

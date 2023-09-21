@@ -14,25 +14,65 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetMsdpResult {
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     private @Nullable String device;
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     private String id;
+    /**
+     * @return Configure MSDP Originator ID
+     * 
+     */
     private String originatorId;
+    /**
+     * @return MSDP peer on which the password is to be set
+     * 
+     */
     private List<GetMsdpPassword> passwords;
+    /**
+     * @return Configure an MSDP peer
+     * 
+     */
     private List<GetMsdpPeer> peers;
 
     private GetMsdpResult() {}
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
+    /**
+     * @return The path of the retrieved object.
+     * 
+     */
     public String id() {
         return this.id;
     }
+    /**
+     * @return Configure MSDP Originator ID
+     * 
+     */
     public String originatorId() {
         return this.originatorId;
     }
+    /**
+     * @return MSDP peer on which the password is to be set
+     * 
+     */
     public List<GetMsdpPassword> passwords() {
         return this.passwords;
     }
+    /**
+     * @return Configure an MSDP peer
+     * 
+     */
     public List<GetMsdpPeer> peers() {
         return this.peers;
     }

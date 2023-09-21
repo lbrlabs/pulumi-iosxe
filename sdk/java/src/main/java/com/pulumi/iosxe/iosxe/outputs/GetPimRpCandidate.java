@@ -11,25 +11,65 @@ import java.util.Objects;
 
 @CustomType
 public final class GetPimRpCandidate {
+    /**
+     * @return Group range treated in bidirectional shared-tree mode
+     * 
+     */
     private Boolean bidir;
+    /**
+     * @return IP Access list
+     * 
+     */
     private String groupList;
+    /**
+     * @return Autonomic-Networking virtual interface
+     * 
+     */
     private String interface_;
+    /**
+     * @return RP candidate advertisement interval
+     * 
+     */
     private Integer interval;
+    /**
+     * @return RP candidate priority
+     * 
+     */
     private Integer priority;
 
     private GetPimRpCandidate() {}
+    /**
+     * @return Group range treated in bidirectional shared-tree mode
+     * 
+     */
     public Boolean bidir() {
         return this.bidir;
     }
+    /**
+     * @return IP Access list
+     * 
+     */
     public String groupList() {
         return this.groupList;
     }
+    /**
+     * @return Autonomic-Networking virtual interface
+     * 
+     */
     public String interface_() {
         return this.interface_;
     }
+    /**
+     * @return RP candidate advertisement interval
+     * 
+     */
     public Integer interval() {
         return this.interval;
     }
+    /**
+     * @return RP candidate priority
+     * 
+     */
     public Integer priority() {
         return this.priority;
     }

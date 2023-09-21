@@ -12,22 +12,54 @@ import java.util.Objects;
 
 @CustomType
 public final class GetBgpAddressFamilyIpv6VrfVrf {
+    /**
+     * @return Advertise/export prefixes to l2vpn evpn table
+     * 
+     */
     private Boolean ipv6UnicastAdvertiseL2vpnEvpn;
+    /**
+     * @return Specify a network to announce via BGP
+     * 
+     */
     private List<GetBgpAddressFamilyIpv6VrfVrfIpv6UnicastNetwork> ipv6UnicastNetworks;
+    /**
+     * @return Connected
+     * 
+     */
     private Boolean ipv6UnicastRedistributeConnected;
+    /**
+     * @return Static routes
+     * 
+     */
     private Boolean ipv6UnicastRedistributeStatic;
     private String name;
 
     private GetBgpAddressFamilyIpv6VrfVrf() {}
+    /**
+     * @return Advertise/export prefixes to l2vpn evpn table
+     * 
+     */
     public Boolean ipv6UnicastAdvertiseL2vpnEvpn() {
         return this.ipv6UnicastAdvertiseL2vpnEvpn;
     }
+    /**
+     * @return Specify a network to announce via BGP
+     * 
+     */
     public List<GetBgpAddressFamilyIpv6VrfVrfIpv6UnicastNetwork> ipv6UnicastNetworks() {
         return this.ipv6UnicastNetworks;
     }
+    /**
+     * @return Connected
+     * 
+     */
     public Boolean ipv6UnicastRedistributeConnected() {
         return this.ipv6UnicastRedistributeConnected;
     }
+    /**
+     * @return Static routes
+     * 
+     */
     public Boolean ipv6UnicastRedistributeStatic() {
         return this.ipv6UnicastRedistributeStatic;
     }

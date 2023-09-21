@@ -216,7 +216,14 @@ class PolicyMapEvent(pulumi.CustomResource):
                  name: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
-        Create a PolicyMapEvent resource with the given unique name, props, and options.
+        This resource can manage the Policy Map Event configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/policyMapEvent:PolicyMapEvent example "Cisco-IOS-XE-native:native/policy/Cisco-IOS-XE-policy:policy-map=dot1x_policy/event=authentication-success"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['PolicyMapEventClassNumberArgs']]]] class_numbers: class number, 1 for 1st class, 2 for 2nd...
@@ -236,7 +243,14 @@ class PolicyMapEvent(pulumi.CustomResource):
                  args: PolicyMapEventArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a PolicyMapEvent resource with the given unique name, props, and options.
+        This resource can manage the Policy Map Event configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/policyMapEvent:PolicyMapEvent example "Cisco-IOS-XE-native:native/policy/Cisco-IOS-XE-policy:policy-map=dot1x_policy/event=authentication-success"
+        ```
+
         :param str resource_name: The name of the resource.
         :param PolicyMapEventArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

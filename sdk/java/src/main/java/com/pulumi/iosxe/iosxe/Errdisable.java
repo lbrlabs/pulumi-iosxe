@@ -16,6 +16,71 @@ import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * This resource can manage the Errdisable configuration.
+ * 
+ * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.iosxe.iosxe.Errdisable;
+ * import com.pulumi.iosxe.iosxe.ErrdisableArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Errdisable(&#34;example&#34;, ErrdisableArgs.builder()        
+ *             .detectCauseAll(true)
+ *             .detectCauseDhcpRateLimit(true)
+ *             .detectCauseDtpFlap(true)
+ *             .detectCauseL2ptguard(true)
+ *             .detectCauseLinkFlap(true)
+ *             .detectCausePppoeIaRateLimit(true)
+ *             .flapSettingCauseDtpFlapMaxFlaps(80)
+ *             .flapSettingCauseDtpFlapTime(90)
+ *             .flapSettingCauseLinkFlapMaxFlaps(80)
+ *             .flapSettingCauseLinkFlapTime(90)
+ *             .flapSettingCausePagpFlapMaxFlaps(80)
+ *             .flapSettingCausePagpFlapTime(90)
+ *             .recoveryCauseAll(true)
+ *             .recoveryCauseArpInspection(true)
+ *             .recoveryCauseBpduguard(true)
+ *             .recoveryCauseDhcpRateLimit(true)
+ *             .recoveryCauseDtpFlap(true)
+ *             .recoveryCauseL2ptguard(true)
+ *             .recoveryCauseLinkFlap(true)
+ *             .recoveryCausePortModeFailure(true)
+ *             .recoveryCausePppoeIaRateLimit(true)
+ *             .recoveryCausePsecureViolation(true)
+ *             .recoveryCausePsp(true)
+ *             .recoveryCauseSecurityViolation(true)
+ *             .recoveryCauseUdld(true)
+ *             .recoveryInterval(855)
+ *             .build());
+ * 
+ *     }
+ * }
+ * ```
+ * 
+ * ## Import
+ * 
+ * ```sh
+ *  $ pulumi import iosxe:iosxe/errdisable:Errdisable example &#34;Cisco-IOS-XE-native:native/errdisable&#34;
+ * ```
+ * 
+ */
 @ResourceType(type="iosxe:iosxe/errdisable:Errdisable")
 public class Errdisable extends com.pulumi.resources.CustomResource {
     /**

@@ -16,23 +16,47 @@ public final class GetOspfVrfArgs extends com.pulumi.resources.InvokeArgs {
 
     public static final GetOspfVrfArgs Empty = new GetOspfVrfArgs();
 
+    /**
+     * A device name from the provider configuration.
+     * 
+     */
     @Import(name="device")
     private @Nullable Output<String> device;
 
+    /**
+     * @return A device name from the provider configuration.
+     * 
+     */
     public Optional<Output<String>> device() {
         return Optional.ofNullable(this.device);
     }
 
+    /**
+     * Process ID
+     * 
+     */
     @Import(name="processId", required=true)
     private Output<Integer> processId;
 
+    /**
+     * @return Process ID
+     * 
+     */
     public Output<Integer> processId() {
         return this.processId;
     }
 
+    /**
+     * VPN Routing/Forwarding Instance
+     * 
+     */
     @Import(name="vrf", required=true)
     private Output<String> vrf;
 
+    /**
+     * @return VPN Routing/Forwarding Instance
+     * 
+     */
     public Output<String> vrf() {
         return this.vrf;
     }
@@ -63,29 +87,65 @@ public final class GetOspfVrfArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetOspfVrfArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param device A device name from the provider configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder device(@Nullable Output<String> device) {
             $.device = device;
             return this;
         }
 
+        /**
+         * @param device A device name from the provider configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder device(String device) {
             return device(Output.of(device));
         }
 
+        /**
+         * @param processId Process ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder processId(Output<Integer> processId) {
             $.processId = processId;
             return this;
         }
 
+        /**
+         * @param processId Process ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder processId(Integer processId) {
             return processId(Output.of(processId));
         }
 
+        /**
+         * @param vrf VPN Routing/Forwarding Instance
+         * 
+         * @return builder
+         * 
+         */
         public Builder vrf(Output<String> vrf) {
             $.vrf = vrf;
             return this;
         }
 
+        /**
+         * @param vrf VPN Routing/Forwarding Instance
+         * 
+         * @return builder
+         * 
+         */
         public Builder vrf(String vrf) {
             return vrf(Output.of(vrf));
         }

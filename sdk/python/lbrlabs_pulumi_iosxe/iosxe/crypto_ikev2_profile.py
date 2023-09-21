@@ -664,7 +664,39 @@ class CryptoIkev2Profile(pulumi.CustomResource):
                  name: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
-        Create a CryptoIkev2Profile resource with the given unique name, props, and options.
+        This resource can manage the Crypto IKEv2 Profile configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.CryptoIkev2Profile("example",
+            authentication_local_pre_share=True,
+            authentication_remote_pre_share=True,
+            config_exchange_request=False,
+            description="My description",
+            dpd_interval=10,
+            dpd_query="periodic",
+            dpd_retry=2,
+            identity_local_key_id="key1",
+            keyring_local="test",
+            match_address_local_ip="1.2.3.4",
+            match_fvrf_any=True,
+            match_identity_remote_ipv4_addresses=[iosxe.iosxe.CryptoIkev2ProfileMatchIdentityRemoteIpv4AddressArgs(
+                address="1.2.3.4",
+                mask="255.255.255.0",
+            )],
+            match_identity_remote_keys=["key1"])
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/cryptoIkev2Profile:CryptoIkev2Profile example "Cisco-IOS-XE-native:native/crypto/Cisco-IOS-XE-crypto:ikev2/profile=profile1"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[bool] authentication_local_pre_share: Pre-Shared Key
@@ -692,7 +724,39 @@ class CryptoIkev2Profile(pulumi.CustomResource):
                  args: Optional[CryptoIkev2ProfileArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a CryptoIkev2Profile resource with the given unique name, props, and options.
+        This resource can manage the Crypto IKEv2 Profile configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.CryptoIkev2Profile("example",
+            authentication_local_pre_share=True,
+            authentication_remote_pre_share=True,
+            config_exchange_request=False,
+            description="My description",
+            dpd_interval=10,
+            dpd_query="periodic",
+            dpd_retry=2,
+            identity_local_key_id="key1",
+            keyring_local="test",
+            match_address_local_ip="1.2.3.4",
+            match_fvrf_any=True,
+            match_identity_remote_ipv4_addresses=[iosxe.iosxe.CryptoIkev2ProfileMatchIdentityRemoteIpv4AddressArgs(
+                address="1.2.3.4",
+                mask="255.255.255.0",
+            )],
+            match_identity_remote_keys=["key1"])
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/cryptoIkev2Profile:CryptoIkev2Profile example "Cisco-IOS-XE-native:native/crypto/Cisco-IOS-XE-crypto:ikev2/profile=profile1"
+        ```
+
         :param str resource_name: The name of the resource.
         :param CryptoIkev2ProfileArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

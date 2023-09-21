@@ -12,24 +12,56 @@ import java.util.Objects;
 @CustomType
 public final class GetNtpPeer {
     private String ipAddress;
+    /**
+     * @return Configure peer authentication key
+     * 
+     */
     private Integer key;
+    /**
+     * @return Prefer this peer when possible
+     * 
+     */
     private Boolean prefer;
+    /**
+     * @return Interface for source address
+     * 
+     */
     private String source;
+    /**
+     * @return Configure NTP version
+     * 
+     */
     private Integer version;
 
     private GetNtpPeer() {}
     public String ipAddress() {
         return this.ipAddress;
     }
+    /**
+     * @return Configure peer authentication key
+     * 
+     */
     public Integer key() {
         return this.key;
     }
+    /**
+     * @return Prefer this peer when possible
+     * 
+     */
     public Boolean prefer() {
         return this.prefer;
     }
+    /**
+     * @return Interface for source address
+     * 
+     */
     public String source() {
         return this.source;
     }
+    /**
+     * @return Configure NTP version
+     * 
+     */
     public Integer version() {
         return this.version;
     }

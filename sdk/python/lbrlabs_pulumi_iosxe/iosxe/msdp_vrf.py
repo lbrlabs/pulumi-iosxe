@@ -233,7 +233,14 @@ class MsdpVrf(pulumi.CustomResource):
                  vrf: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
-        Create a MsdpVrf resource with the given unique name, props, and options.
+        This resource can manage the MSDP VRF configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/msdpVrf:MsdpVrf example "Cisco-IOS-XE-native:native/ip/Cisco-IOS-XE-multicast:msdp/vrf=VRF1"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] delete_mode: Configure behavior when deleting/destroying the resource. Either delete the entire object (YANG container) being
@@ -251,7 +258,14 @@ class MsdpVrf(pulumi.CustomResource):
                  args: MsdpVrfArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a MsdpVrf resource with the given unique name, props, and options.
+        This resource can manage the MSDP VRF configuration.
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/msdpVrf:MsdpVrf example "Cisco-IOS-XE-native:native/ip/Cisco-IOS-XE-multicast:msdp/vrf=VRF1"
+        ```
+
         :param str resource_name: The name of the resource.
         :param MsdpVrfArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

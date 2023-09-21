@@ -786,7 +786,35 @@ class Clock(pulumi.CustomResource):
                  summer_time_zone: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
-        Create a Clock resource with the given unique name, props, and options.
+        This resource can manage the Clock configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.Clock("example",
+            calendar_valid=True,
+            summer_time_recurring=True,
+            summer_time_recurring_end_month="Dec",
+            summer_time_recurring_end_time="00:00",
+            summer_time_recurring_end_week="1",
+            summer_time_recurring_end_weekday="Mon",
+            summer_time_recurring_offset=60,
+            summer_time_recurring_start_month="Jan",
+            summer_time_recurring_start_time="00:00",
+            summer_time_recurring_start_week="1",
+            summer_time_recurring_start_weekday="Mon",
+            summer_time_zone="CET")
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/clock:Clock example "Cisco-IOS-XE-native:native/clock"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[bool] calendar_valid: Calendar time is authoritative
@@ -817,7 +845,35 @@ class Clock(pulumi.CustomResource):
                  args: Optional[ClockArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a Clock resource with the given unique name, props, and options.
+        This resource can manage the Clock configuration.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import lbrlabs_pulumi_iosxe as iosxe
+
+        example = iosxe.iosxe.Clock("example",
+            calendar_valid=True,
+            summer_time_recurring=True,
+            summer_time_recurring_end_month="Dec",
+            summer_time_recurring_end_time="00:00",
+            summer_time_recurring_end_week="1",
+            summer_time_recurring_end_weekday="Mon",
+            summer_time_recurring_offset=60,
+            summer_time_recurring_start_month="Jan",
+            summer_time_recurring_start_time="00:00",
+            summer_time_recurring_start_week="1",
+            summer_time_recurring_start_weekday="Mon",
+            summer_time_zone="CET")
+        ```
+
+        ## Import
+
+        ```sh
+         $ pulumi import iosxe:iosxe/clock:Clock example "Cisco-IOS-XE-native:native/clock"
+        ```
+
         :param str resource_name: The name of the resource.
         :param ClockArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.
